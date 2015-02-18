@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">Mission</h1>
+
+  OpenAstronomy is a collaboration between different open source astronomy and astrophysics
+  related projects, to share ideas and improve code.
+  Join us on IRC at {{site.irc_channel}} or write to {{site.email}}.
+  
+  <h2 class="page-heading">Missions</h2>
+
+  <ul class="post-list">
+    {% for mission in site.missions %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ mission.url | prepend: site.baseurl }}">{{ mission.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

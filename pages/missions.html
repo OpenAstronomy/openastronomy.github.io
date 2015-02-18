@@ -1,0 +1,16 @@
+---
+layout: default
+root: ..
+title: Missions
+nocomments: 1
+---
+<h1> Our Missions </h1>
+<div class="row-fluid">
+{% for mission in site.missions %}
+<h2>{{mission.title}}</h2>
+{{mission.content}}
+
+{% cycle '', '</div>' %}
+{% cycle '', '<div class="row-fluid">' %}
+  {% endfor %}
+</div>
