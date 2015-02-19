@@ -2,7 +2,7 @@
 layout: default
 title:  "Ideas for yt"
 show_main: false
-ideas_team: yt-project
+ideas_team: yt
 ---
 
 
