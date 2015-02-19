@@ -414,13 +414,31 @@ footer .container .links{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body {
   padding-bottom: 100px;
 }
 
+header.site-header {
+  style="background-color: #292929;"
+}
 
 header.site-header div.wrapper a.site-title, header.site-header div.wrapper nav.site-nav div.trigger a{
   color: white;
+  background-color: #292929;
 }
 
 header.site-header div.wrapper a.site-title:hover, header.site-header div.wrapper nav.site-nav div.trigger a:hover{
@@ -430,6 +448,8 @@ header.site-header div.wrapper a.site-title:hover, header.site-header div.wrappe
 }
 
 footer.site-footer {
+padding-top: 10px;
+padding-bottom: 10px;
 }
 
 footer.site-footer div.wrapper {
@@ -439,6 +459,7 @@ footer.site-footer div.wrapper {
 footer.site-footer div.wrapper a {
   color: white;
   text-decoration: none;
+  padding-left: 0;
 }
 
 footer.site-footer div.wrapper a:hover {
@@ -450,4 +471,19 @@ footer.site-footer div.wrapper a:hover {
 img.media-object{
 	width: 120px;
 }
+
+
+footer.site-footer div.wrapper p.tagline {
+  color: white;
+}
+
+
+  @media screen and (max-width: 600px) {
+    footer.site-footer div.wrapper p.tagline {
+  display: none;
+}
+}
+
+
+
 
