@@ -2,7 +2,7 @@
 layout: default
 title:  "Ideas for Astropy"
 show_main: false
-ideas_team: astropy
+ideas_team: Astropy
 ---
 
 
