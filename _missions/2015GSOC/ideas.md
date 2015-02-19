@@ -4,10 +4,24 @@ title:  "Ideas page for Google Summer of Code 2015"
 show_main: false
 ---
 
-##Ideas for Astropy
+#Ideas page for GSoC 2015
 
-##Ideas for ChiantiPy
+{% for mission in site.missions %}
+ {% if mission.ideas_team %}
+   <a href="#{{ mission.ideas_team }}">
+    <img class="media-object pull-left"  height="80" width="80" src="{{page.root}}/img/members/{{ mission.ideas_team }}.png" alt="{{ mission.ideas_team }}" />
+   </a>
+ {% endif %}
+{% endfor %}
 
-##Ideas for Sunpy
+<br><br><br><br>
 
-##Ideas for yt
+{% for mission in site.missions %}
+ {% if mission.ideas_team %}
+
+## {{ mission.ideas_team }}
+
+{{ mission.content }}   
+
+{% endif %}
+{% endfor %}
