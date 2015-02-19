@@ -49,6 +49,11 @@ blockquote.testimonial cite {
 body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     color: rgb(03, 03, 03);
+	background-image: url("background_ap.jpg");
+	/* background-image: url("background_sp.jpg"); */
+	background-size: 100%;
+	background-repeat:  no-repeat;
+	background-colur: white
 }
 
 /* Styling for editorial stylesheet */
@@ -334,10 +339,13 @@ a:hover {
 }
 
 footer {
-    background:#2b3990;
-    padding:20px 0;
+    background: #2b3990;
+    padding: 20px 0;
     font-size: 10pt;
-    margin-top:10px;
+    margin-top: 10px;
+	width: 100%;
+	bottom: 0;
+	position: fixed;
 }
 
 footer a, footer a:hover{
@@ -401,3 +409,45 @@ footer .container .links{
 #ss-form .ss-choice-item-control {
   padding-right: 4px;
 }
+
+
+
+
+
+body {
+  padding-bottom: 100px;
+}
+
+
+header.site-header div.wrapper a.site-title, header.site-header div.wrapper nav.site-nav div.trigger a{
+  color: white;
+}
+
+header.site-header div.wrapper a.site-title:hover, header.site-header div.wrapper nav.site-nav div.trigger a:hover{
+  transition: all 0.5s ease;
+  color: red;
+  text-decoration: none;
+}
+
+footer.site-footer {
+}
+
+footer.site-footer div.wrapper {
+  color: white;
+}
+
+footer.site-footer div.wrapper a {
+  color: white;
+  text-decoration: none;
+}
+
+footer.site-footer div.wrapper a:hover {
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: gray;
+}
+
+img.media-object{
+	width: 120px;
+}
+
