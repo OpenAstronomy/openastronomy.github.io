@@ -12,7 +12,6 @@ layout: default
     {{site.irc_channel}} or by contributing to our discussion list: {{site.email}}.
     </p>
 
-    <h2 class="page-heading">Missions</h2>
     <ul class="post-list">
       {% for mission in site.missions %}
       {% if mission.show_main %}
@@ -25,6 +24,4 @@ layout: default
       {% endfor %}
     </ul>
   
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
 </div>
