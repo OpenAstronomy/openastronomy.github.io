@@ -6,11 +6,13 @@ nocomments: 1
 ---
 <h1> Our Missions </h1>
 <div class="row-fluid">
-{% for mission in site.missions %}
-<h2>{{mission.title}}</h2>
-{{mission.content}}
+  {% for mission in site.missions %}
+   {% if mission.show_main %}
+    <h2>{{mission.title}}</h2>
+    {{mission.content}}
 
-{% cycle '', '</div>' %}
-{% cycle '', '<div class="row-fluid">' %}
+    {% cycle '', '</div>' %}
+    {% cycle '', '<div class="row-fluid">' %}
+    {% endif %}
   {% endfor %}
 </div>

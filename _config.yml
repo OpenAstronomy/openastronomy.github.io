@@ -13,9 +13,29 @@ irc_channel: openastronomy@freenode
 # Build settings
 markdown: kramdown
 
-members: [members/astropy.html, members/sunpy.html]
+members: [members/astropy.html, members/sunpy.html, members/chiantipy.html, members/yt-project.html]
 
-#missions: [missions/gsoc2015.html]
 collections:
   missions:
      output: true
+
+irc_freenode: irc://irc.freenode.net/
+
+astropy_url: http://www.astropy.org/
+astropy_mailinglist_user: http://groups.google.com/group/astropy
+astropy_mailinglist_dev: http://groups.google.com/group/astropy-dev
+astropy_irc: astropy
+
+sunpy_url: http://sunpy.org
+sunpy_mailinglist_user: http://groups.google.com/group/sunpy
+sunpy_mailinglist_dev: http://groups.google.com/group/sunpy-dev
+sunpy_irc: sunpy
+
+chianti_url: http://www.chiantidatabase.org/
+chiantipy_url: http://chiantipy.sourceforge.net/welcome.html
+chiantipy_mailinglist_user: https://lists.sourceforge.net/lists/listinfo/chiantipy-users
+
+yt_url: http://yt-project.org/
+yt_mailinglist_user: http://lists.spacepope.org/listinfo.cgi/yt-users-spacepope.org
+yt_mailinglist_dev: http://lists.spacepope.org/listinfo.cgi/yt-dev-spacepope.org
+yt_irc: yt
