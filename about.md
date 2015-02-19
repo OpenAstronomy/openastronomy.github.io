@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is where all the news about the efforts from the different groups as a single organisation is taking place.
-
 ##Who is part of OpenAstronomy?
 
 <div class="row-fluid">
