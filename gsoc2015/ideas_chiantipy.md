@@ -7,7 +7,7 @@ ideas_team: ChiantiPy
 
 ### GUI Spectral Explorer
 
-*Suggested Mentor(s):* Ken Dere
+*Suggested Mentor(s):* [Ken Dere](http://sourceforge.net/u/kdere/profile/)
 
 *Difficulty:* Intermediate
 

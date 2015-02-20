@@ -32,7 +32,7 @@ There are various other maintenance tasks which need undertaking (https://github
 
 ### Integrating ChiantiPy and SunPy
 
-*Suggested Mentor(s):* Dan Ryan, Ken Dere
+*Suggested Mentor(s):* [Dan Ryan](https://github.com/DanRyanIrish), [Ken Dere](http://sourceforge.net/u/kdere/profile/)
 
 *Difficulty:* Beginner
 
@@ -59,7 +59,7 @@ Other potential application of ChiantiPy in SunPy include:
 
 ### Support for analysis of Solar Energetic Particles
 
-*Suggested Mentor(s):* [David Perez-Suraez](http://github.com/dpshelio)
+*Suggested Mentor(s):* [David Pérez-Suárez](http://github.com/dpshelio)
 
 *Difficulty:* Beginner
 
@@ -69,18 +69,20 @@ Other potential application of ChiantiPy in SunPy include:
 
 ####Description
 
-SunPy is able to read lightcurve from different sources (GOES x-ray, Lyra, Norh,...), however these are not all.
+SunPy is able to read a lightcurve from different sources (GOES x-ray, Lyra, Norh,...), however these are not all.
 SoHO/ERNE (Energetic and Relativistic Nuclei and Electron experiment on board SoHO) measures
 one of the important effects in Space Weather, [Solar Energetic Particles](https://en.wikipedia.org/wiki/Solar_energetic_particles) (SEP).
 The data of such instrument (as for GOES particle measurements) comes as plaintext csv files with header information.
-This project should be able to read these in as a lightcurve object and allow to perform the basic operations used
-when such data is analysed: eg. energy ranges binning, visualisation, ...
+This project should add ERNE to the SunPy supported instruments by being
+able to read these files in as a lightcurve object and allow to perform
+the basic operations used when such data is analysed:
+eg. energy ranges binning, visualisation, ...
 
 
 
 ### Lightcurve Refactor
 
-*Suggested Mentor(s):* [Stuart Mumford](http://github.com/Cadair), Dan Ryan Andrew Inglis
+*Suggested Mentor(s):* [Stuart Mumford](http://github.com/Cadair), [Dan Ryan](https://github.com/DanRyanIrish), [Andrew Inglis](https://github.com/aringlis)
 
 *Difficulty:* Intermediate
 
@@ -119,7 +121,7 @@ Someone under taking this project will complete the following tasks:
 
 ### IRIS, 4D Cubes and GUI
 
-*Suggested Mentors:* [Steven Christe](http://github.com/ehsteve) (NASA GSFC, SunPy), Nabil Freij (Sheffield University)
+*Suggested Mentors:* [Steven Christe](http://github.com/ehsteve) (NASA GSFC, SunPy), [Nabil Freij](https://github.com/nabobalis) (Sheffield University)
 
 *Difficulty:* Intermediate to Expert
 
