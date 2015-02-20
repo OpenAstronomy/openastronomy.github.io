@@ -132,3 +132,35 @@ motion. This project could be:
 2. developing a trial implementation of an API,
 3. actually doing core development to implement the new features, or 
 4. some combination of all of the above. 
+
+
+### Add indexing capability to Table object
+
+*Suggested Mentor(s):* Tom Aldcroft, Stuart Mumford
+
+*Difficulty:* Intermediate
+
+*Astronomy knowledge needed:* none
+
+*Programming skills:* Python, Cython, familiarity with database algorithms
+
+#### Description
+
+The [Table](http://docs.astropy.org/en/stable/table/index.html) class is the
+core astropy class for storing and manipulating tabular data.  Currently it
+supports a limited set of database-like capabilities including table joins and
+grouping.  A natural extension of this is to provide the ability to create and
+maintain an index on one or more columns as well as a table primary key.  With
+these indexed columns available then certain selection and query operations
+could be highly optimized.  The challenge is to maintain the integrity of the
+indexes as column or table properties change, using state of the art algorithms
+for high performance.
+
+To summarize:
+
+- Add method to create an index for a specified column
+- Add code to maintain these indexes when the table is modified
+- Add method to designate a column as a primary key (possibly maintaining
+  table in sort order for that key)
+- Optimize existing table operations to use indexes where possible
+- Add new methods to select table rows based on column values
