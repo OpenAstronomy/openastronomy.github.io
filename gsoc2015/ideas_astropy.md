@@ -7,7 +7,7 @@ ideas_team: Astropy core package
 
 ### Implement Distribution Support for Quantity
 
-*Suggested Mentor(s):* Erik Tollerud
+*Suggested Mentor(s):* [Erik Tollerud](http://github.com/eteq)
 
 *Difficulty:* Beginner to Intermediate
 
@@ -32,7 +32,7 @@ Poisson distributions.
 
 ### Implement image rasterization methods for models
 
-*Suggested Mentor(s):* Christoph Deil
+*Suggested Mentor(s):* [Christoph Deil](http://github.com/cdeil)
 
 *Difficulty:* Intermediate
 
@@ -64,7 +64,7 @@ the end user.
 
 ### Unify and improve file handling
 
-*Suggested Mentor(s):* Michael Droettboom
+*Suggested Mentor(s):* [Michael Droettboom](http://github.com/mdboom)
 
 *Difficulty:* Intermediate to Expert
 
@@ -89,7 +89,7 @@ files more robust.
 
 ### Implement missing astropy.modeling functionality
 
-*Suggested Mentor(s):* Christoph Deil
+*Suggested Mentor(s):* [Christoph Deil](http://github.com/cdeil)
 
 *Difficulty:* Intermediate to expert
 
@@ -112,7 +112,7 @@ An optional fun application at the end of this project (if model and fit result 
 
 ### Implement framework for handling velocities and velocity transforms in astropy.coordinates
 
-*Suggested Mentor(s):* Adrian Price-Whelan & Erik Tollerud
+*Suggested Mentor(s):* [Adrian Price-Whelan](http://github.com/adrn) & [Erik Tollerud](http://github.com/eteq)
 
 *Difficulty:* Intermediate to Expert
 

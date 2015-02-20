@@ -7,7 +7,7 @@ ideas_team: SunPy
 
 ### Improvements to the SunPy Database
 
-*Suggested Mentor(s):* Stuart Mumford, Steven Christe
+*Suggested Mentor(s):* [Stuart Mumford](http://github.com/Cadair), [Steven Christe](http://github.com/ehsteve)
 
 *Difficulty:* Beginner
 
@@ -59,7 +59,7 @@ Other potential application of ChiantiPy in SunPy include:
 
 ### Support for analysis of Solar Energetic Particles
 
-*Suggested Mentor(s):* David Perez-Suraez
+*Suggested Mentor(s):* [David Perez-Suraez](http://github.com/dpshelio)
 
 *Difficulty:* Beginner
 
@@ -80,7 +80,7 @@ when such data is analysed: eg. energy ranges binning, visualisation, ...
 
 ### Lightcurve Refactor
 
-*Suggested Mentor(s):* Stuart Mumford, Dan Ryan Andrew Inglis
+*Suggested Mentor(s):* [Stuart Mumford](http://github.com/Cadair), Dan Ryan Andrew Inglis
 
 *Difficulty:* Intermediate
 
@@ -119,7 +119,7 @@ Someone under taking this project will complete the following tasks:
 
 ### IRIS, 4D Cubes and GUI
 
-*Suggested Mentors:* Steven Christe (NASA GSFC, SunPy), Nabil Freij (Sheffield University)
+*Suggested Mentors:* [Steven Christe](http://github.com/ehsteve) (NASA GSFC, SunPy), Nabil Freij (Sheffield University)
 
 *Difficulty:* Intermediate to Expert
 

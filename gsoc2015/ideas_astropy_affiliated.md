@@ -7,7 +7,7 @@ ideas_team: Packages affiliated with Astropy
 
 ### Develop an affiliated package for observation planning / scheduling
 
-*Suggested Mentor(s):* Christoph Deil
+*Suggested Mentor(s):* [Christoph Deil](http://github.com/cdeil)
 
 *Difficulty:* Beginner
 
@@ -38,7 +38,7 @@ planning / scheduling and plotting / GUIs.
 
 ### Contribute gamma-ray data analysis methods to Gammapy
 
-*Suggested Mentor(s):* Christoph Deil, Axel Donath
+*Suggested Mentor(s):* [Christoph Deil](http://github.com/cdeil), [Axel Donath](http://github.com/adonath)
 
 *Difficulty:* Beginner to intermediate
 
@@ -53,7 +53,7 @@ planning / scheduling and plotting / GUIs.
 
 ### Astropy Acknowledgement/Citation Generator
 
-*Suggested Mentor(s):* Erik Tollerud
+*Suggested Mentor(s):* [Erik Tollerud](http://github.com/eteq)
 
 *Difficulty:* Beginner to Intermediate
 
@@ -88,7 +88,7 @@ Currently, we are able to read and write a subset of standards that are out ther
 
 ### Improve pyregion and pyds9
 
-*Suggested Mentor(s):* Christoph Deil
+*Suggested Mentor(s):* [Christoph Deil](http://github.com/cdeil)
 
 *Difficulty:* Intermediate
 
