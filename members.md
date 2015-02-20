@@ -1,10 +1,8 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Members
+permalink: /members/
 ---
-
-This is where all the news about the efforts from the different groups as a single organisation is taking place.
 
 ##Who is part of OpenAstronomy?
 
