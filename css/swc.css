@@ -456,6 +456,12 @@ header.site-header div.wrapper nav.site-nav div.trigger{
   margin-top: 12px;
 }
 
+header.site-header div.wrapper nav.site-nav nav.site-nav a.menu-icon{
+  margin-top: 120px;
+  padding-top: 100px;
+  
+}
+
 
 header.site-header div.wrapper a.site-title:hover, header.site-header div.wrapper nav.site-nav div.trigger a:hover{
   transition: all 0.5s ease;
@@ -502,7 +508,7 @@ footer.site-footer div.wrapper p.tagline {
 }
 
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 670px) {
     footer.site-footer div.wrapper p.tagline {
   display: none;
 }
@@ -522,4 +528,16 @@ footer.site-footer div.wrapper p.tagline {
 
 
 
-
+/* hoping these override */
+  @media screen and (max-width: 600px) {
+    .site-nav {
+      position: absolute;
+      top: 15px;}
+      .site-nav .menu-icon {
+        width: 46px;
+        height: 36px;}
+        .site-nav .menu-icon > svg {
+          width: 28px;
+          height: 25px; }
+          .site-nav .menu-icon > svg path {
+            fill: #f9f9f9; }
