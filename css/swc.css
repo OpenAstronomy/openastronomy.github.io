@@ -339,8 +339,8 @@ a:hover {
 }
 
 footer {
-    background: #2b3990;
-	/* background-color: #292929; */
+    /* background: #2b3990; */
+	background-color: #292929;
     padding: 20px 0;
     font-size: 10pt;
     margin-top: 10px;
@@ -513,6 +513,14 @@ footer.site-footer div.wrapper p.tagline {
   display: none;
 }
 
+    footer.site-footer div.wrapper a .icon > svg path {
+  fill: #f9f9f9 !important;
+}
+
+.icon > svg path {
+  fill: #f9f9f9 !important;
+}
+
 /* Remove comments to enable icon-only mobile footer.
 
 	footer.site-footer div.wrapper a img {
@@ -541,3 +549,4 @@ footer.site-footer div.wrapper p.tagline {
           height: 25px; }
           .site-nav .menu-icon > svg path {
             fill: #f9f9f9; }
+			
