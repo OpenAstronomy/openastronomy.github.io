@@ -432,6 +432,10 @@ body {
   padding-bottom: 100px;
 }
 
+body a:hover {
+  text-decoration: none;
+}
+
 header.site-header {
   style="background-color: #292929;"
 }
@@ -460,6 +464,8 @@ footer.site-footer div.wrapper a {
   color: white;
   text-decoration: none;
   padding-left: 0;
+  padding-right: 8px;
+  display: inline-block;
 }
 
 footer.site-footer div.wrapper a:hover {
@@ -467,6 +473,12 @@ footer.site-footer div.wrapper a:hover {
   transition: all 0.5s ease;
   color: gray;
 }
+
+footer.site-footer div.wrapper a img {
+  height: 16px;
+  width: 16px;
+}
+
 
 img.media-object{
 	width: 120px;
@@ -482,6 +494,18 @@ footer.site-footer div.wrapper p.tagline {
     footer.site-footer div.wrapper p.tagline {
   display: none;
 }
+
+/* Remove comments to enable icon-only mobile footer.
+
+	footer.site-footer div.wrapper a img {
+  height: 60px;
+  width: 60px;
+  padding-right: 20px;
+}
+	footer.site-footer div.wrapper a span {
+  display: none;
+}
+*/
 }
 
 
