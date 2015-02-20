@@ -36,6 +36,21 @@ wants. The student should have an interest in coordinates, observations
 planning / scheduling and plotting / GUIs.
 
 
+### Contribute gamma-ray data analysis methods to Gammapy
+
+*Suggested Mentor(s):* Christoph Deil, Axel Donath
+
+*Difficulty:* Beginner to intermediate
+
+*Astronomy knowledge needed:* Basic
+
+*Programming skills:* Python
+
+#### Description
+
+[Gammapy](https://gammapy.readthedocs.org/en/latest/) is an Astropy-affiliated package to simulate and analyse data from gamma-ray telescopes such as Fermi, H.E.S.S. and CTA. A lot of basic functionality is still missing, specifically we think that contributing to one of the sub-packages gammapy.background (background modeling), gammapy.detect (source detection methods) or gammapy.spectrum (spectral analysis methods) would be a good GSoC project if you are interested in implementing specific established data analysis algorithms (e.g. adaptive-ring or reflected region or template background estimation, or spectrum forward-folding or unfolding methods) used in gamma-ray astronomy (but no prior gamma-ray data experience / knowledge needed).
+
+
 ### Astropy Acknowledgement/Citation Generator
 
 *Suggested Mentor(s):* Erik Tollerud
@@ -56,6 +71,20 @@ allow a user to simply run a function along the lines of “write_citations” a
 have it print or write a file that tells them what papers to cite. Bonus points
 if this actually can show BibTeX or LaTeX bibliography entries that can be just
 dropped into papers with minimal effort on the part of the user.
+
+#### Adding further spectral standards to specutils
+
+*Suggested Mentor(s)*: Adam Ginsburg & Wolfgang Kerzendorf
+
+*Difficulty*: Intermediate
+
+*Programming skills*: Python
+
+#### Description
+
+Specutils is a package within the astropy collection that deals with operations with spectra. Apart from imaging, spectra are the second main data product in astronomy. While imaging data is collected by hooking a giant DSLR at the end of telescope and sticking coloured glass between telescope and DSLR (a filter), spectra are obtained by breaking light up into its components and then observing the resulting distribution. These data are saved in a variety of formats. 
+
+Currently, we are able to read and write a subset of standards that are out there. As a project, we suggest to implement the remaining unsupported standards. All of the code is in Python and a good understanding of classes is needed for this project. 
 
 ### Improve pyregion and pyds9
 
@@ -109,4 +138,6 @@ bloggart engine. Currently it is getting a bit stale for a few reasons:
 * The website code itself is convoluted and difficult to maintain / improve
 
 The proposal is to start over with all modern tools to bring fresh energy and involvement into this project.  All details of how to do this to be determined, but one requirement is to migrate all the current content.  Part of this would be re-evaluating current resources as well as digging around to freshen up the resource list.
+
+
 
