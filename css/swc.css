@@ -49,6 +49,11 @@ blockquote.testimonial cite {
 body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     color: rgb(03, 03, 03);
+	background-image: url("background_ap.jpg");
+	/* background-image: url("background_sp.jpg"); */
+	background-size: 100%;
+	background-repeat:  no-repeat;
+	background-colur: white
 }
 
 /* Styling for editorial stylesheet */
@@ -334,10 +339,14 @@ a:hover {
 }
 
 footer {
-    background:#aaaaaa;
-    padding:20px 0;
+    /* background: #2b3990; */
+	background-color: #292929;
+    padding: 20px 0;
     font-size: 10pt;
-    margin-top:10px;
+    margin-top: 10px;
+	width: 100%;
+	bottom: 0;
+	position: fixed;
 }
 
 footer a, footer a:hover{
@@ -401,3 +410,143 @@ footer .container .links{
 #ss-form .ss-choice-item-control {
   padding-right: 4px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  padding-bottom: 100px;
+}
+
+body a:hover {
+  text-decoration: none;
+}
+
+header.site-header {
+  style="background-color: #292929;"
+}
+
+header.site-header div.wrapper .logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 125px;
+}
+
+header.site-header div.wrapper a.site-title, header.site-header div.wrapper nav.site-nav div.trigger a{
+  color: white;
+  background-color: #292929;
+}
+
+header.site-header div.wrapper nav.site-nav div.trigger{
+  margin-top: 12px;
+}
+
+header.site-header div.wrapper nav.site-nav nav.site-nav a.menu-icon{
+  margin-top: 120px;
+  padding-top: 100px;
+  
+}
+
+
+header.site-header div.wrapper a.site-title:hover, header.site-header div.wrapper nav.site-nav div.trigger a:hover{
+  transition: all 0.5s ease;
+  color: red;
+  text-decoration: none;
+}
+
+footer.site-footer {
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+footer.site-footer div.wrapper {
+  color: white;
+}
+
+footer.site-footer div.wrapper a {
+  color: white;
+  text-decoration: none;
+  padding-left: 0;
+  padding-right: 8px;
+  display: inline-block;
+}
+
+footer.site-footer div.wrapper a:hover {
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: gray;
+}
+
+footer.site-footer div.wrapper a img {
+  height: 16px;
+  width: 16px;
+}
+
+
+div.page-content div.wrapper div.post article.post-content img.media-object{
+	width: 120px;
+}
+
+
+footer.site-footer div.wrapper p.tagline {
+  color: white;
+}
+
+
+  @media screen and (max-width: 670px) {
+    footer.site-footer div.wrapper p.tagline {
+  display: none;
+}
+
+    footer.site-footer div.wrapper a .icon > svg path {
+  fill: #f9f9f9 !important;
+}
+
+.icon > svg path {
+  fill: #f9f9f9 !important;
+}
+
+/* Remove comments to enable icon-only mobile footer.
+
+	footer.site-footer div.wrapper a img {
+  height: 60px;
+  width: 60px;
+  padding-right: 20px;
+}
+	footer.site-footer div.wrapper a span {
+  display: none;
+}
+*/
+}
+
+
+
+/* hoping these override */
+  @media screen and (max-width: 600px) {
+    .site-nav {
+      position: absolute;
+      top: 15px;}
+      .site-nav .menu-icon {
+        width: 46px;
+        height: 36px;}
+        .site-nav .menu-icon > svg {
+          width: 28px;
+          height: 25px; }
+          .site-nav .menu-icon > svg path {
+            fill: #f9f9f9; }
+			
