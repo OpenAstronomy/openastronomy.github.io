@@ -44,8 +44,8 @@ developers guides are great reads no matter what project you are thinking of wor
 
 4. **Start to be a developer.**
 Checkout the issue lists of the projects to see if there is something that you could do.
-You will be expected to submit a PR to one of the OpenAstronomy projects before
-you submit your application (it does not have to be accepted).
+**You will be expected to submit a PR to one of the OpenAstronomy projects before
+you submit your application (it does not have to be accepted).**
 
 5. **Plan your application.**
 Think which is your favourite project from the [ideas page](/gsoc2015/ideas.html) or think
