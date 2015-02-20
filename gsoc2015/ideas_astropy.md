@@ -2,7 +2,7 @@
 layout: default
 title:  "Ideas for Astropy and Astropy-affiliated packages"
 show_main: false
-ideas_team: Astropy
+ideas_team: Astropy and affiliated packages
 ---
 
 ## Develop an affiliated package for observation planning / scheduling
