@@ -59,7 +59,7 @@ Don't be shy when describing yourself!
 6. **Submit your application.**
 Don't forget to [submit your application](http://www.google-melange.com) before the deadline.  
 We are also happy to give comments on your proposal if you like.  Feel free to 
-add your application to the wiki following this format: "GSoC-2015 Application \<Your Name\>:\<Project Name\>"
+add your application to the wiki following this format: "GSoC-2015 Application \<sub-org\> \<Your Name\>:\<Project Name\>"
 and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
 
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2015-Application-Template 
