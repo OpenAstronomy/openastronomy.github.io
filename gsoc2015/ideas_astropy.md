@@ -87,6 +87,29 @@ fetching (see [astropy/#3446](https://github.com/astropy/astropy/issues/3446),
 and OS-level file locking to make multiprocessing applications that write to
 files more robust.
 
+### Implement missing astropy.modeling functionality
+
+*Suggested Mentor(s):* Christoph Deil
+
+*Difficulty:* Intermediate to expert
+
+*Astronomy knowledge needed:* Basic
+
+*Programming skills:* Python
+
+#### Description
+
+Implement some basic features are still missing in the astropy.modeling package:
+
+* Fit parameter errors (symmetric and profile likelihood)
+* Poisson fit statistic
+* PSF-convolved models
+* model parameter and fit result serialisation, e.g. to YAML or JSON or XML (e.g. some astronomers use [XML](http://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/source_models.html))
+
+For the parameter error and Poisson fit statistic part some statistics background is needed, as well as interest in discussing and finding a good API for these things.
+
+An optional fun application at the end of this project (if model and fit result serialisation is implemented) could be to develop an interactive image fitting GUI (e.g. with IPython widgets in the web browser) for common 2D Astropy models, showing data, model and residual images and letting the user adjust model parameters and display fit statistics and results interactively.
+
 ### Implement framework for handling velocities and velocity transforms in astropy.coordinates
 
 *Suggested Mentor(s):* Adrian Price-Whelan & Erik Tollerud
