@@ -9,7 +9,7 @@ ideas_team: SunPy
 
 *Suggested Mentor(s):* Stuart Mumford, Steven Christe
 
-*Difficulty:* Easy
+*Difficulty:* Beginner
 
 *Astronomy knowledge needed:* None
 
@@ -28,11 +28,13 @@ The improvements to the database functionality that would be implemented by this
 
 There are various other maintenance tasks which need undertaking (https://github.com/sunpy/sunpy/labels/Database) which would be a good way for someone interested in this project to familiarise themselves with the codebase.
 
-## Integrating ChiantiPy and SunPy
+
+
+### Integrating ChiantiPy and SunPy
 
 *Suggested Mentor(s):* Dan Ryan, Ken Dere
 
-*Difficulty:* Easy
+*Difficulty:* Beginner
 
 *Astronomy knowledge needed:* Some knowledge of spectra.
 
@@ -53,11 +55,13 @@ Other potential application of ChiantiPy in SunPy include:
 
 **Expected Outcomes**: This project would facilitate SunPy becoming independent from Solar SoftWare (SSW) in producing and maintaining files required by the sunpy.instr.goes module for determining the thermodynamic properties of the emitting plasma observed by GOES.  It would also allow SunPy users to calculate spectra and exclusively through Python without relying on SSW.
 
+
+
 ### Support for analysis of Solar Energetic Particles
 
 *Suggested Mentor(s):* David Perez-Suraez
 
-*Difficulty:* Easy
+*Difficulty:* Beginner
 
 *Astronomy knowledge needed:* None
 
@@ -71,6 +75,8 @@ one of the important effects in Space Weather, [Solar Energetic Particles](https
 The data of such instrument (as for GOES particle measurements) comes as plaintext csv files with header information.
 This project should be able to read these in as a lightcurve object and allow to perform the basic operations used
 when such data is analysed: eg. energy ranges binning, visualisation, ...
+
+
 
 ### Lightcurve Refactor
 
@@ -87,7 +93,7 @@ The `Lightcurve` class is one of the three core datatypes in SunPy, along with M
 `Lightcurve` is designed to read in, process and store meta data related to solar physics time series data.
 Currently, `Lightcurve` uses the pandas library as its underlying data structure, however, this is subject to change in the future.
 
-Much like the `map` submodule, `lightcurve` needs to be able to read in various supported data formats (such as FITS, ascii and others in the future), store their meta data and give users easy and unified access to this metadata independently of the original source of the data.
+Much like the `map` submodule, `lightcurve` needs to be able to read in various supported data formats (such as FITS, ascii and others in the future), store their meta data and give users Beginner and unified access to this metadata independently of the original source of the data.
 
 As currently implemented (as of 0.5) the `lightcurve` module performs three core tasks:
 
@@ -108,6 +114,8 @@ Someone under taking this project will complete the following tasks:
 1. Re-write any new lightcurve sources that were not included in the `UnifiedDownloader` code as sources for `UnifiedDownloader`.
 1. Write a factory class for `lightcurve` similar to the `sunpy.map.Map` class. This class will be a generic constructor for `lightcurve` allowing the user to instantiate any one of the many subclasses of `GenericLightcurve` present in `sunpy.lightcurve.sources`. The API design for the factory class is here: https://github.com/sunpy/sunpy-SEP/pull/6
 1. Design and develop a robust method of dealing with lightcurve meta data, which can handle joining different parts of timeseries from different files, each with their own meta data. (See [#1122](https://github.com/sunpy/sunpy/issues/1122))
+
+
 
 ### IRIS, 4D Cubes and GUI
 

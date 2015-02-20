@@ -5,9 +5,17 @@ show_main: false
 ideas_team: ChiantiPy
 ---
 
-## GUI Spectral Explorer
+### GUI Spectral Explorer
 
-### Description
+*Suggested Mentor(s):* Ken Dere
+
+*Difficulty:* Intermediate
+
+*Astronomy knowledge needed:* A basic understand of astrophysical spectroscopy
+
+*Programming skills:* Python
+
+#### Description
 
 The goal of this project is to provide a graphical user interface to
 enable a user to explore observed spectra and compare it with
@@ -34,7 +42,3 @@ It will be necessary to develop techniques to import observed
 spectra from a variety sources.  Typical sources are in FITS files,
 HDF5 files, or csv files.  It will also be important to allow users
 import their data through modules of their own.
-
-**Requirements:**  Python, a basic understand of astrophysical spectroscopy
-
-**Mentors:**  Ken Dere
