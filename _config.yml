@@ -13,11 +13,7 @@ irc_channel: openastronomy
 # Build settings
 markdown: kramdown
 
-members: [members/astropy.html, members/sunpy.html, members/chiantipy.html, members/yt-project.html]
-
-collections:
-  missions:
-     output: true
+members: [Astropy, SunPy, chiantipy, yt-project]
 
 irc_freenode: irc://irc.freenode.net/
 
