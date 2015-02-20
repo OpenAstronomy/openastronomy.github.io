@@ -5524,6 +5524,14 @@ a.thumbnail:hover {
   margin-left: 10px;
 }
 
+.media-object.logo {
+    margin-top: 20px;
+    margin-bottom: -40px;
+    width: 48%;
+    margin-left: 0px;
+    vertical-align: bottom;
+}
+
 .media-list {
   margin-left: 0;
   list-style: none;

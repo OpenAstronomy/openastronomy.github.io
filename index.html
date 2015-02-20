@@ -4,25 +4,13 @@ layout: default
 
 <div class="home">
     <p>
-    OpenAstronomy is a collaboration between different open source astronomy 
-    and astrophysics projects, to share ideas and improve code.
+    OpenAstronomy is a collaboration between open source astronomy 
+    and astrophysics projects to share resources, ideas, and to improve code.
     </p>
     <p>
     You can get involved with OpenAstronomy by joining us on IRC at 
     <a href="{{ site.irc_freenode }}#{{ site.irc_channel }}">#openastronomy@freenode</a>
     or by contributing to our discussion list: <a href="mailto:{{site.email}}">{{site.email}}</a>.
     </p>
-
-    <ul class="post-list">
-      {% for mission in site.missions %}
-      {% if mission.show_main %}
-      <li>
-          <h2>
-            <a class="post-link" href="{{ mission.url | prepend: site.baseurl }}">{{ mission.title }}</a>
-          </h2>
-        </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-  
+ 
 </div>
