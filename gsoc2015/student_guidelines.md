@@ -33,7 +33,7 @@ volume render a simulation of the galaxy with yt, there are loads of things to
 do with all the projects involved with OpenAstronomy, get involed!
 
 3. **Set yourself up as a developer.**
-Create yourself an account in [GitHub](http://github.com) or [BitBucket](http://bitbucket.org).
+Create yourself an account on [GitHub](http://github.com) or [BitBucket](http://bitbucket.org).
 Don't know how to use [git](http://www.git-scm.com/) or [Mercurial](http://mercurial.selenic.com/)?
 Don't worry, it's easy and there are lots of git [tutorials](http://try.github.com) [online](http://gitimmersion.com/) 
 and many [Mercurial](http://hginit.com/) [ones](http://hgbook.red-bean.com/read/)
