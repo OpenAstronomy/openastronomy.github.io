@@ -5,7 +5,7 @@ show_main: false
 ideas_team: Astropy and affiliated packages
 ---
 
-## Develop an affiliated package for observation planning / scheduling
+### Develop an affiliated package for observation planning / scheduling
 
 *Suggested Mentor(s):* Christoph Deil
 
@@ -15,7 +15,7 @@ ideas_team: Astropy and affiliated packages
 
 *Programming skills:* Python
 
-### Description
+#### Description
 
 Now that Astropy can transform from horizontal (altitude/azimuth) to sky
 coordinates it’s possible to develop tools for observation planning /
@@ -35,7 +35,7 @@ and then gather some input on the astropy mailing list what the community
 wants. The student should have an interest in coordinates, observations
 planning / scheduling and plotting / GUIs.
 
-## Implement Distribution Support for Quantity
+### Implement Distribution Support for Quantity
 
 *Suggested Mentor(s):* Erik Tollerud
 
@@ -45,7 +45,7 @@ planning / scheduling and plotting / GUIs.
 
 *Programming skills:* Python
 
-### Description
+#### Description
 
 The [Quantity](http://docs.astropy.org/en/stable/units/index.html) class is
 powerful but doesn’t have particularly useful support for uncertainties on
@@ -59,7 +59,7 @@ distributions. If there is time, this could also involve expanding this system
 to support common analytically-representable distributions such as Gaussian and
 Poisson distributions.
 
-## Astropy Acknowledgement/Citation Generator
+### Astropy Acknowledgement/Citation Generator
 
 *Suggested Mentor(s):* Erik Tollerud
 
@@ -69,7 +69,7 @@ Poisson distributions.
 
 *Programming skills:* Python and LaTeX/BibTeX
 
-### Description
+#### Description
 
 Some parts of Astropy and affiliated packages use algorithms or tools that have
 been published in the scientific literature (this includes Astropy itself). To
@@ -80,7 +80,7 @@ have it print or write a file that tells them what papers to cite. Bonus points
 if this actually can show BibTeX or LaTeX bibliography entries that can be just
 dropped into papers with minimal effort on the part of the user.
 
-## Improve pyregion and pyds9
+### Improve pyregion and pyds9
 
 *Suggested Mentor(s):* Christoph Deil
 
@@ -90,7 +90,7 @@ dropped into papers with minimal effort on the part of the user.
 
 *Programming skills:* Python
 
-### Description
+#### Description
 
 The pyregion package is very useful to work with ds9 and CIAO region files. It
 is now at
@@ -109,7 +109,7 @@ interested in sky coordinates and regions, parsing, visualisation, writing
 tests and docs, and for the ds9 interfaces some Cython coding is probably
 needed.
 
-## Revamp astropython.org web site
+### Revamp astropython.org web site
 
 *Suggested Mentor(s):* Tom Aldcroft
 
@@ -119,7 +119,7 @@ needed.
 
 *Programming skills:* Python, web development (javascript etc)
 
-### Description
+#### Description
 
 The [http://www.astropython.org](http://www.astropython.org) site is one of the
 top two generic informational / resource sites about Python in astronomy. This
@@ -133,7 +133,7 @@ bloggart engine. Currently it is getting a bit stale for a few reasons:
 
 The proposal is to start over with all modern tools to bring fresh energy and involvement into this project.  All details of how to do this to be determined, but one requirement is to migrate all the current content.  Part of this would be re-evaluating current resources as well as digging around to freshen up the resource list.
 
-## Implement image rasterization methods for models
+### Implement image rasterization methods for models
 
 *Suggested Mentor(s):* Christoph Deil
 
@@ -143,7 +143,7 @@ The proposal is to start over with all modern tools to bring fresh energy and in
 
 *Programming skills:* Python, Cython
 
-### Description
+#### Description
 
 When fitting models to binned data, evaluating the model at the bin centers leads to incorrect results if the model changes significantly within a bin. E.g. think of an image where the point spread function (PSF) only has a width slightly above the pixel size and you want to distinguish small Galaxies from stars.
 
@@ -165,7 +165,7 @@ should be interested in model fitting and image rasterisation as well as
 profiling and extensive testing of a given method to make it “just work” for
 the end user.
 
-## Unify and improve file handling
+### Unify and improve file handling
 
 *Suggested Mentor(s):* Michael Droettboom
 
@@ -175,7 +175,7 @@ the end user.
 
 *Programming skills:* Python, Unix features
 
-### Description
+#### Description
 
 We have a number of packages that read and write data to files and file-like
 objects. While there was some initial effort to unify this code in
@@ -190,7 +190,7 @@ fetching (see [astropy/#3446](https://github.com/astropy/astropy/issues/3446),
 and OS-level file locking to make multiprocessing applications that write to
 files more robust.
 
-## Implement framework for handling velocities and velocity transforms in astropy.coordinates
+### Implement framework for handling velocities and velocity transforms in astropy.coordinates
 
 *Suggested Mentor(s):* Adrian Price-Whelan & Erik Tollerud
 
@@ -200,7 +200,7 @@ files more robust.
 
 *Programming skills:* Python
 
-### Description
+#### Description
 
 The coordinates subpackage currently only supports transforming positional
 coordinates, but it would be useful to develop a consistent framework for also
@@ -212,6 +212,3 @@ motion. This project could be:
 2. developing a trial implementation of an API,
 3. actually doing core development to implement the new features, or 
 4. some combination of all of the above. 
-
-
-
