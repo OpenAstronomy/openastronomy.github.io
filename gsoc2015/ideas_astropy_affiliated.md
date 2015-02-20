@@ -72,7 +72,7 @@ have it print or write a file that tells them what papers to cite. Bonus points
 if this actually can show BibTeX or LaTeX bibliography entries that can be just
 dropped into papers with minimal effort on the part of the user.
 
-#### Adding further spectral standards to specutils
+### Adding further spectral standards to specutils
 
 *Suggested Mentor(s)*: Adam Ginsburg & Wolfgang Kerzendorf
 
