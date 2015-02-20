@@ -423,7 +423,10 @@ footer .container .links{
 
 
 
-
+div.page-content div.wrapper div.home img.large-logo {
+	padding-top: 20px;
+	padding-bottom: 30px;
+}
 
 
 
@@ -536,6 +539,7 @@ footer.site-footer div.wrapper p.tagline {
 
 
 
+
 /* hoping these override */
   @media screen and (max-width: 600px) {
     .site-nav {
@@ -549,4 +553,10 @@ footer.site-footer div.wrapper p.tagline {
           height: 25px; }
           .site-nav .menu-icon > svg path {
             fill: #f9f9f9; }
+
+			div.page-content div.wrapper div.home img.large-logo {
+	display: none;
+}
+
 			
+}
