@@ -516,13 +516,9 @@ footer.site-footer div.wrapper p.tagline {
   display: none;
 }
 
-    footer.site-footer div.wrapper a .icon > svg path {
-  fill: #f9f9f9 !important;
-}
 
-.icon > svg path {
-  fill: #f9f9f9 !important;
-}
+
+
 
 /* Remove comments to enable icon-only mobile footer.
 
