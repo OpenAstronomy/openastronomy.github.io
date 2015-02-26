@@ -172,4 +172,26 @@ motion. This project could be:
 3. actually doing core development to implement the new features, or 
 4. some combination of all of the above. 
 
+### Implement Public API for ERFA
+
+*Suggested Mentor(s):* [Erik Tollerud](http://github.com/eteq)
+
+*Difficulty:* Intermediate to Expert
+
+*Astronomy knowledge needed:* None required, but may be helpful for understanding ERFA functionality
+
+*Programming skills:* Python, Cython, C
+
+#### Description
+
+Some of the major functionality for Astropy uses the ERFA C library (adapted from the IAU SOFA library) as the back-end for
+computational "heavy-lifting".  Members of the community have expressed a desire to use this lower-level python wrapper
+around ERFA for other purposes that may not be directly relevant for Astropy.  So this project would involve making the
+necessary changes to make the ERFA python API public.  This includes:
+
+* Getting the documentation up to the astropy standard (currently it is mostly auto-generated verbatim from the C comments).
+* Implementing a more complete test suite for the python side of the code.
+* Possibly moving it to a separate package as part of the liberfa GitHub organization.  This would also include making the necessary
+  changes to ensure everything continues to work in Astropy.
+* Any other steps necessary to ensure the resulting package (or sub-package of Astropy) is stable and relatively easy to use.
 
