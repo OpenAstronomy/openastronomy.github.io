@@ -9,6 +9,7 @@ url: "http://openastronomy.github.io" # the base hostname & protocol for your si
 #twitter_username: None
 github_username:  openastronomy
 irc_channel: openastronomy
+discussiongroup_url: "https://groups.google.com/forum/#!forum/openastronomy"
 
 # Build settings
 markdown: kramdown
