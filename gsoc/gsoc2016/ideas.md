@@ -10,7 +10,7 @@ show_main: false
 Browse ideas for the following projects:
 
 {% for page in site.pages %}
-{% if page.ideas_team %} 
+{% if page.ideas_team and page.path contains 'gsoc2016' %}
 * [{{ page.ideas_team }}](#{{ page.ideas_team }})
 {% endif %}
 {% endfor %}
@@ -18,7 +18,7 @@ Browse ideas for the following projects:
 For each participating project, the ideas are organized from easiest to hardest.
 
 {% for page in site.pages %}
-{% if page.ideas_team %} 
+{% if page.ideas_team and page.path contains 'gsoc2016' %} 
 
 
 # <a name="{{ page.ideas_team }}"></a>{{ page.ideas_team }}
