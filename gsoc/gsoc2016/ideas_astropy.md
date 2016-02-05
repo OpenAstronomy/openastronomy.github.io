@@ -2,7 +2,7 @@
 layout: default
 title:  "Ideas for Astropy"
 show_main: false
-ideas_team: Astropy core package
+ideas_team: Astropy
 ---
 
 ### Implement Scheduling capabilities for Astroplan
