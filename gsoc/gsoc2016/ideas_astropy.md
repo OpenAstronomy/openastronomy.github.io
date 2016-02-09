@@ -7,7 +7,7 @@ ideas_team: Astropy
 
 ### Implement Scheduling capabilities for Astroplan
 
-*Suggested Mentor(s):* TBD
+*Suggested Mentor(s):* Brett Morris, Eric Jeshke, Christoph Deil, Erik Tollerud
 
 *Difficulty:* Beginner to Intermediate
 
