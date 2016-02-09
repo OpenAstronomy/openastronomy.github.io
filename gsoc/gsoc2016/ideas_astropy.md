@@ -114,3 +114,25 @@ We are looking for someone that's interested to work on a few small tasks, each 
 Gammapy is a very young project, and there's a lot to do.
 Examples of what needs to be done include implementing new algorithms (e.g. image reprojection, source detection, region-based analysis), bringing existing prototype algorithms to production (improve API and implementation, add tests and docs) as well as grunt work that's needed to go towards production quality and a Gammapy 1.0 release this fall (e.g. set up continuous integration for example IPython notebooks or adding more tests).
 To get an idea of what is going on in Gammapy and what still needs to be done, please check out the project on Github (https://github.com/gammapy/gammapy) and browse the documentation a bit (or try out the examples) and if this looks interesting to you, send us an email and let us know what your skills and interests are.
+
+
+### Implement PSF photometry for fitting several overlapping objects at once
+
+*Suggested Mentor(s):* Moritz Guenther, Brigitta Sipocz
+
+*Difficulty:* Intermediate to Expert
+
+*Astronomy knowledge needed:* basic understanding of what photometry is
+
+*Programming skills:* Python
+
+#### Description
+
+The [photutils](http://photutils.readthedocs.org/en/latest/) package is an Astropy affiliated package that provides tools for photometry (measuring how bright a source is).
+
+There are several ways to do photometry and the package currently implements aperture photometry (just add up all the flux in an image in some some area) and single source point-spread-function (PSF) fitting (fit a function such as a Gaussian to the image). In many situations, sources may overlap in the image, e.g. when observing a dense star cluster, so that we need to fit many functions at once. However, the simple brute-force approach "just fit a model with hundreds of parameters" if there are hundreds of stars usually fails. 
+
+This project includes looking at other astronomy codes to see how they tackle the problem; select, modify and improve an algorithm that fits into the astropy modelling framework; implement this in python; and, if it turns out that speed is a problem, move speed-critical parts to Cython. To verify that the new code works, we will compare it to the solutions of established PSF photometry codes.
+
+See https://github.com/OpenAstronomy/openastronomy.github.io/pull/27 for a discussion of some problems and possible solutions that will be addressed in this project.
+
