@@ -74,3 +74,43 @@ necessary changes to make the ERFA python API public.  This includes:
   changes to ensure everything continues to work in Astropy.
 * Any other steps necessary to ensure the resulting package (or sub-package of Astropy) is stable and relatively easy to use.
 
+
+### Web development for Gammapy
+
+*Suggested Mentor(s):* Christoph Deil, Johannes King
+
+*Difficulty:* Intermediate to Expert
+
+*Astronomy knowledge needed:* None.
+
+*Programming skills:* Scientific python (Numpy, Scipy, Astropy), Web development (Python backend, Javascript frontend)
+
+#### Description
+
+[Gammapy](https://gammapy.readthedocs.org/en/latest/) is a Python package for professional gamma-ray astronomers.
+We are looking for a web developer with good Python, HTML and Javascript skills that is interested in building web pages and apps to display and browse gamma-ray data and maybe even launch Gammapy analyses.
+There's a few different projects we'd like to see realised, depending on your interests and skills.
+One option is to build a much-improved version of [TeVCat](http://tevcat.uchicago.edu/), that includes more image and catalog data and interactivity (maps that pan & zoom, search field for source name) with the general public as well as professional gamma-ray astronomers as the target. This project would mostly be front-end development, plus Python scripts to prepare the images and catalogs in suitable formats.
+Another option is to write several small static site generator scripts or Python web apps that let us browse the gamma-ray data and analysis results, basically a web GUI for Gammapy. That project would mostly be Python web app development, and you have to learn a bit more about Gammapy before GSoC starts.
+
+
+### Data analysis for Gammapy
+
+*Suggested Mentor(s):* Christoph Deil, Johannes King
+
+*Difficulty:* Intermediate to Expert
+
+*Astronomy knowledge needed:* Some, e.g. sky coordinates and projections.
+Experience with X-ray or gamma-ray data analysis (e.g. Fermi-LAT) is a plus, but not a requirement.
+
+*Method knowledge needed:* Some experience in data analysis (e.g. images, regions) and statistics (e.g. Poisson noise). 
+
+*Programming skills:* Python (including pytest and Sphinx) and scientific python (Numpy, Scipy, Astropy)
+
+#### Description
+
+[Gammapy](https://gammapy.readthedocs.org/en/latest/) is a Python package for professional gamma-ray astronomers.
+We are looking for someone that's interested to work on a few small tasks, each taking a few weeks of the GSoC total time.
+Gammapy is a very young project, and there's a lot to do.
+Examples of what needs to be done include implementing new algorithms (e.g. image reprojection, source detection, region-based analysis), bringing existing prototype algorithms to production (improve API and implementation, add tests and docs) as well as grunt work that's needed to go towards production quality and a Gammapy 1.0 release this fall (e.g. set up continuous integration for example IPython notebooks or adding more tests).
+To get an idea of what is going on in Gammapy and what still needs to be done, please check out the project on Github (https://github.com/gammapy/gammapy) and browse the documentation a bit (or try out the examples) and if this looks interesting to you, send us an email and let us know what your skills and interests are.
