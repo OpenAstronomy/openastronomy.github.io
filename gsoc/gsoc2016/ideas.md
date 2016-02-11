@@ -4,7 +4,7 @@ title:  "Ideas page for Google Summer of Code 2016"
 show_main: false
 ---
 
-#Ideas page for GSoC 2016
+# Ideas page for GSoC 2016
 
 
 Browse ideas for the following projects:
