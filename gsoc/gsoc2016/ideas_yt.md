@@ -87,16 +87,24 @@ This project could go in a number of directions:
 
 *Difficulty:* Beginner to Intermediate
 
-*Knowledge needed*: Undergrad level Physics knowledge. More specific domain-specific knowledge of Astronomy, hydrodynamics, finite-element methods, GIS, meteorology, geophysics, oceanography a plus
+*Knowledge needed*: Undergrad level Physics knowledge. More specific domain-specific knowledge of astronomy, hydrodynamics, finite-element methods, GIS, meteorology, geophysics, oceanography a plus
 
 *Programming skills:* Python
 
-Right now all fields defined internally by yt are loaded for all datasets where
-the fields are valid. This is suboptimal since yt ships with a number of
-domain-specific fields (primarily fields that are useful for astrophysics or
-cosmology simulations). This confuses new users coming from outside astronomy.
+The original focus of yt was to analyze datasets from astrophysical
+simulations.  However, use of yt has been expanding to other
+scientific domains, such as nuclear physics, meteorology, and
+geophysics.  Still, much of the infrastructure within yt is built upon
+the assumption that the datasets being loaded are astrophysical and
+hydrodynamic in nature.  This assumption informs the choice of derived
+fields made available to the user as well as the default unit system.
+For example, fields such as "Jeans mass" and "X-ray emissivity" in CGS
+units are of little use to an earthquake simulation.
 
-This project would have a student develop a system for "domain contexts": sets
-of fields that are useful for certain scientific domains. Ideally, when, for
-example, a nuclear engineering dataset is loaded, the astronomy-specific fields
-should not be created.
+The goal of this project is to develop a system for domain contexts,
+sets of fields and unit systems associated with specific scientific
+domains.  Rather than having all fields be made available to all
+datasets, each dataset is given a domain context, which specifies the
+relevant fields and most meaningful unit system.  Domain contexts
+could also be subclassed to provide further specificity, for example,
+cosmology as a subclass of astrophysics.
