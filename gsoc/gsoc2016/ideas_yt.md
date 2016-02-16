@@ -5,6 +5,25 @@ show_main: false
 ideas_team: yt
 ---
 
+All projects on this page are for [yt](https://yt-project.org), an analysis and
+visualization environment for particle and mesh-based volumetric data. It has
+readers for most astrophysical simulation codes, as well as a few nuclear
+engineering simulation codes. It can handle data produced by particle-based
+codes, as well data produced by codes that use various types of mesh structures,
+including uniform and adaptively refined meshes as well as unstructured and
+semistructured meshes.
+
+To learn more about how to use yt to interact with simulation data, take a look
+at the [quickstart guide](http://yt-project.org/doc/quickstart/index.html), as
+well as the rest of [the yt documentation](http://yt-project.org/doc). We also
+provide [a listing of sample test datasets](http://yt-project.org/data) that can
+be loaded by yt.
+
+For more information about contributing to yt, take a look at our
+[developer guide](http://yt-project.org/docs/dev/developing/index.html). To see
+discussions about past yt projects, take a look at the yt enhancement proposal
+(YTEP) [listing](https://ytep.readthedocs.org).
+
 ### Integrate yt plots with interactive matplotlib backends
 
 *Suggested Mentor(s):* Nathan Goldbaum
