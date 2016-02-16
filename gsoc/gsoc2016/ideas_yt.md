@@ -26,11 +26,13 @@ discussions about past yt projects, take a look at the yt enhancement proposal
 
 ### Integrate yt plots with interactive matplotlib backends
 
-*Suggested Mentor(s):* Nathan Goldbaum
+*Suggested Mentor(s):* [Nathan Goldbaum](https://bitbucket.org/ngoldbaum),
+ [Matthew Turk](https://bitbucket.org/MatthewTurk/)
 
 *Difficulty:* Intermediate
 
-*Knowledge needed:* Familiarity with matplotlib. Knowledge of matplotlib internals a plus
+*Knowledge needed:* Familiarity with matplotlib. Knowledge of matplotlib's
+ object oriented API a plus.
 
 *Programming skills:* Python. GUI programming.
 
@@ -60,9 +62,11 @@ SSH to a supercomputer).
 
 ### Testing improvements
 
-*Suggested Mentor(s)"* Kacper Kowalik, Nathan Goldbaum
+*Suggested Mentor(s):* [Kacper Kowalik](https://bitbucket.org/xarthisius),
+ [Nathan Goldbaum](https://bitbucket.org/ngoldbaum)
 
-*Difficulty:* Beginner to Advanced, depending on where the student takes the project
+*Difficulty:* Beginner to Advanced, depending on where the student takes the
+ project
 
 *Knowledge needed*: Familiarity with the `nose` testing package.
 
@@ -102,11 +106,14 @@ This project could go in a number of directions:
 
 ### Domain contexts and domain-specific fields
 
-*Suggested Mentor(s)"* Britton Smith
+*Suggested Mentor(s)"* [Britton Smith](https://bitbucket.org/brittonsmith),
+ [Matthew Turk](https://bitbucket.org/matthewturk)
 
 *Difficulty:* Beginner to Intermediate
 
-*Knowledge needed*: Undergrad level Physics knowledge. More specific domain-specific knowledge of astronomy, hydrodynamics, finite-element methods, GIS, meteorology, geophysics, oceanography a plus
+*Knowledge needed*: Undergrad level Physics knowledge. More specific
+ domain-specific knowledge of astronomy, hydrodynamics, finite-element methods,
+ GIS, meteorology, geophysics, oceanography a plus
 
 *Programming skills:* Python
 
