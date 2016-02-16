@@ -58,7 +58,17 @@ This is constrained by maintaining backward compatibility: by default yt should
 not fail when generating plots on headless devices (e.g. when connecting over
 SSH to a supercomputer).
 
+*Deliverables:*
 
+* A proof of concept demonstrating how to hook into matplotlib's interactive
+  backends using the matplotlib object-oriented API, or a way to show how to
+  gracefully fall back to using pyplot instead of the object oriented API.
+
+* A YTEP describing the proposed approach for modifying yt's plotting
+  infrastructure to support matplotlib's interactive plotting backends.
+
+* The implementation for the YTEP submitted as a bitbucket pull request to the
+  main yt repository.
 
 ### Testing improvements
 
@@ -104,6 +114,17 @@ This project could go in a number of directions:
   compared with a predicted answer using some sort of simplified geometry or via
   introspection.
 
+*Deliverables*:
+
+* Develop a framework for measuring test covering in yt's python and cython
+  components. Triage the reports to look for areas that are user facing and have
+  poor test coverage.
+
+* Make a number of pull requests adding tests across the yt codebase.
+
+* Modify existing testing infrastructure or develop new test infrastructure to
+  improve testing of yt functionality on different data types.
+
 ### Domain contexts and domain-specific fields
 
 *Suggested Mentor(s)"* [Britton Smith](https://bitbucket.org/brittonsmith),
@@ -134,3 +155,12 @@ datasets, each dataset is given a domain context, which specifies the
 relevant fields and most meaningful unit system.  Domain contexts
 could also be subclassed to provide further specificity, for example,
 cosmology as a subclass of astrophysics.
+
+*Deliverables:*
+
+* A YTEP describing the proposed design and ideas for implementation. Should
+  identify an initial set of domain contexts, sort fields into domain contexts,
+  and sketch how frontends should declare needed domain contexts.
+
+* A single or multiple pull requests to the main yt repository including the
+  implementation of the YTEP.
