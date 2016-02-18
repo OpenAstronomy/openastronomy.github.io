@@ -5,6 +5,7 @@ show_main: false
 ideas_team: Astropy
 ---
 
+
 ### Implement Scheduling capabilities for Astroplan
 
 *Suggested Mentor(s):* Erik Tollerud, Eric Jeschke
@@ -23,6 +24,19 @@ Many large observatories have their own schedulers, but this package would be ta
 While some initial efforts have occurred, this project would involve expanding those efforts into a full-fledged API and implementing both the interface and the actual scheduler(s).
 
 
+### Ephemerides for Solar System objects in Astropy
+
+*Suggested Mentor(s):* Marten van Kerkwijk, Erik Tollerud
+
+*Difficulty:* Beginner to Intermediate
+
+*Astronomy knowledge needed:* Some understanding of astronomical coordinate systems, basic knowledge of solar system dynamics (or ability to learn as-needed to implement the specific algorithms required)
+
+*Programming skills:* Python, some knowledge of C might be helpful
+
+#### Description
+
+An often-requested missing feature in Astropy is the ability to compute ephemerides: the on-sky location of Solar System objects like the planets, asteroids, or artificial satellites.  This project would involve implementing just this feature. This will likely *start* with implementing a `get_moon` function similar to the existing `get_sun` to familiarize the student with the important concepts in the `astropy.coordinates` subpackage.  The larger part of the project will likely involve using the orbital elements that the JPL Solar System dynamics group has already complied (there is already a package to read these files: [JPLEphem](https://pypi.python.org/pypi/jplephem)), and translate those into  the Astropy coordinates framework.  The student will implement these algorithms and also collaborate with the mentors and Astropy community to develop an API to access this machinery.
 
 
 ### Unify and improve file handling
