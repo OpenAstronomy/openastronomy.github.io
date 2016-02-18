@@ -70,7 +70,7 @@ SSH to a supercomputer).
 * The implementation for the YTEP submitted as a bitbucket pull request to the
   main yt repository.
 
-### Testing improvements
+### Improve test coverage and test performance
 
 *Suggested Mentor(s):* [Kacper Kowalik](https://bitbucket.org/xarthisius),
  [Nathan Goldbaum](https://bitbucket.org/ngoldbaum)
