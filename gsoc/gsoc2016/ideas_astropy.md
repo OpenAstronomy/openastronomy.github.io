@@ -153,7 +153,7 @@ See https://github.com/OpenAstronomy/openastronomy.github.io/pull/27 for a discu
 
 ### Bridge sherpa and astropy fitting
 
-*Suggested Mentor(s):* D. Bourke, T. Aldcroft, H. M. Guenther
+*Suggested Mentor(s):* D. Burke, T. Aldcroft, H. M. Guenther
 
 *Difficulty:* Expert or better
 
@@ -167,12 +167,11 @@ See https://github.com/OpenAstronomy/openastronomy.github.io/pull/27 for a discu
 Both astropy and Sherpa (https://github.com/sherpa/sherpa/) provide modelling and fitting capabilities; however, Sherpa's features are way
 more advanced. Sherpa provides far more build-in models, a larger choice of optimizers and a real variety
 of fit statistics.
-Unfortunately, Sherpa is less well known and (for partly historical reasons), the interface to do
-fitting of non-X-ray data is cumbersome.
+Unfortunately Sherpa is less well known and for historical reasons the object-oriented user interface is less polished than the functional state-based interface.
 The main goal is the bring Sherpa's optimizers and fit statistic functions to astropy; the stretch goal is 
 to develop a bridge between both packages such that a user can use a astropy models completely
 interchangably with Sherpa models and fitters. Sherpa models should look like astropy models to astropy
-to enable situations where the models is combined from three components (a user defined model, an astropy model
+to enable situations where the model can be made out of three components (a user defined model, an astropy model
 and a Sherpa model) and this is then fitted to astropy data using the Sherpa fitters.
 
 This project requires the student to get proficient in two major packages (Not an easy task!), but with code written in
