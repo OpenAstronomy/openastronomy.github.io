@@ -7,7 +7,7 @@ ideas_team: JuliaAstro
 
 ### Image compression and efficient table reading in FITSIO.jl
 
-*Suggested Mentor(s):* [Kyle Barbary](http://github.com/kbarbary)
+*Suggested Mentor(s):* [Kyle Barbary](http://github.com/kbarbary), [Ryan Giordan](https://github.com/rgiordan)
 
 *Difficulty:* Intermediate to Expert
 
