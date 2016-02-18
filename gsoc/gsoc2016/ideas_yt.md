@@ -104,7 +104,7 @@ This project could go in a number of directions:
 * Identify areas of the code that are not well tested and devise tests for
   them. This will require measuring the test coverage of yt's Python and
   Cython components. The student working on this will need to gain familiarity
-  with untested or udnertested parts of the codebase and add new
+  with untested or undertested parts of the codebase and add new
   tests. Optimally the new tests will make use of new reusable infrastructure
   that will be helpful for tests across the yt codebase.
 
