@@ -8,7 +8,7 @@ ideas_team: Astropy
 
 ### Implement Scheduling capabilities for Astroplan
 
-*Suggested Mentor(s):* Erik Tollerud, Eric Jeschke
+*Suggested Mentor(s):* [Erik Tollerud](http://github.com/eteq), [Eric Jeschke](https://github.com/ejeschke)
 
 *Difficulty:* Beginner to Intermediate
 
@@ -26,7 +26,7 @@ While some initial efforts have occurred, this project would involve expanding t
 
 ### Ephemerides for Solar System objects in Astropy
 
-*Suggested Mentor(s):* Marten van Kerkwijk, Erik Tollerud
+*Suggested Mentor(s):* [Marten van Kerkwijk](mhvk), [Erik Tollerud](http://github.com/eteq)
 
 *Difficulty:* Beginner to Intermediate
 
@@ -41,7 +41,7 @@ An often-requested missing feature in Astropy is the ability to compute ephemeri
 
 ### Unify and improve file handling
 
-*Suggested Mentor(s):* TBD
+*Suggested Mentor(s):* [Tom Aldcroft](http://github.com/taldcroft), [Thomas Robitaille](http://github.com/astrofrog)
 
 *Difficulty:* Intermediate to Expert
 
@@ -67,7 +67,7 @@ files more robust.
 
 ### Implement Public API for ERFA
 
-*Suggested Mentor(s):* [Erik Tollerud](http://github.com/eteq)
+*Suggested Mentor(s):* [Erik Tollerud](http://github.com/eteq), [Tom Aldcroft](http://github.com/taldcroft)
 
 *Difficulty:* Intermediate to Expert
 
@@ -91,7 +91,7 @@ necessary changes to make the ERFA python API public.  This includes:
 
 ### Web development for Gammapy
 
-*Suggested Mentor(s):* Christoph Deil, Johannes King
+*Suggested Mentor(s):* [Christoph Deil](https://github.com/cdeil), [Johannes King](https://github.com/joleroi)
 
 *Difficulty:* Intermediate to Expert
 
@@ -110,7 +110,7 @@ Another option is to write several small static site generator scripts or Python
 
 ### Data analysis for Gammapy
 
-*Suggested Mentor(s):* Christoph Deil, Johannes King
+*Suggested Mentor(s):* [Christoph Deil](https://github.com/cdeil), [Johannes King](https://github.com/joleroi)
 
 *Difficulty:* Intermediate to Expert
 
@@ -132,7 +132,7 @@ To get an idea of what is going on in Gammapy and what still needs to be done, p
 
 ### Implement PSF photometry for fitting several overlapping objects at once
 
-*Suggested Mentor(s):* Moritz Guenther, Brigitta Sipocz
+*Suggested Mentor(s):* [Moritz Guenther](https://github.com/hamogu), [Brigitta Sipocz](https://github.com/bsipocz)
 
 *Difficulty:* Intermediate to Expert
 
