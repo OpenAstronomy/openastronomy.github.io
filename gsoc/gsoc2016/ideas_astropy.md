@@ -8,7 +8,7 @@ ideas_team: Astropy
 
 ### Implement Scheduling capabilities for Astroplan
 
-*Suggested Mentor(s):* [Erik Tollerud](http://github.com/eteq), [Eric Jeschke](https://github.com/ejeschke)
+*Suggested Mentor(s):* [Erik Tollerud](http://github.com/eteq), [Eric Jeschke](https://github.com/ejeschke), [Josh Walawender](https://github.com/joshwalawender)
 
 *Difficulty:* Beginner to Intermediate
 
