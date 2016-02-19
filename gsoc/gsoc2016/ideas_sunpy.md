@@ -82,44 +82,6 @@ A successful proposal will outline a schedule for implementing at least a single
 Familiarity with CHIANTI, ChiantiPy and SSW's implementation of the response functions will help to properly assess how long will be required to recreate them in SunPy.
 
 
-### Improvements to the SunPy Database
-
-*Suggested Mentor(s):* [Stuart Mumford](http://github.com/Cadair), [Simon Liedtke](http://github.com/derdon), [Steven Christe](http://github.com/ehsteve)
-
-*Difficulty:* Intermediate
-
-*Astronomy knowledge needed:* None
-
-*Programming skills:* Python, some database design knowledge would be helpful.
-
-#### Description
-
-The `database` module provides functionality to users to manage collections of files on disk in a way not reliant upon folder structure and file name.
-The database allows users to find files on disk by either physical parameters, such as wavelength and time or properties of the instrument such as name and spacecraft.
-It also allows more complex queries by enabling searches of the raw meta data associated with the files.
-
-The SunPy database will also act as a proxy for some web services supported by SunPy. When used like this, the database module takes a user query, downloads the data from the web service and then stores it in the database, and then returns the query to the user. SunPy contains clients to various web services, the first and primary web service SunPy supported was the Virtual Solar Observatory (VSO), this is the web service the database was originally designed to support. Since the original development of the database module, the database has also been extended to support the HEK client.
-
-The SunPy web clients, use a system named `attrs` (an abbreviation for attributes) to compose queries, this attrs system is also used by the database to perform queries on the database, with some of the attrs shared between the VSO client and the database.
-Recently, a new downloader front end (originally named `UnifiedDownloader`, now affectionately known as `Fido`) has been developed, this provides a Factory Class, with which various download clients (such as the VSO) can register with, providing information about which attrs and attr values that client supports. Using this approach, the `Fido` downloader provides a single interface to the many different services SunPy supports.
-The first part of this project will be to update the database module to support the new `Fido` interface, specifically by using `Fido` inside the database to retrieve data.
-
-The second part of the project will be to update the caching mechanism implemented in the database module. The current caching system serialises the users VSO query and stores it as JSON, upon the user requesting another query, the query will be compared to the cache of serialised queries and if a match is found, the results from the cached query returned.
-This mechanism is limiting in that if the user requests 100 records in query A and 100 records in query B, but 50 of the records requested in both queries are the same (i.e. two overlapping time windows) then the 50 records will be re-downloaded as the cache of query A will not match query B.
-The updated caching system will store the records a query returns (before the data is downloaded) and then link the results of a query to the records in the database (once the data has been downloaded). Then when records are retrieved from a web service, any records that are stored in the cache table can be skipped for retrieval from the web service and returned from the records in the database.
-This will allow the caching of partial queries rather than whole queries as is currently implemented.
-
-This project aims to achieve the following things:
-
-1. Update the current implementation of the database using the VSO attributes to use the slightly refactored `Fido` attributes and use `Fido` inside the database to download data from the VSO.
-1. Implement a new caching mechanism bases of the results of Queries with `Fido` rather than the current caching which is based upon the VSO query.
-
-A successful proposal will schedule updates to the database package in small sections, rather than in one large pull request. The work should be understood and broken down into individual sections.
-
-There are various other maintenance tasks which need undertaking (https://github.com/sunpy/sunpy/labels/Database) which would be a good way for someone interested in this project to familiarise themselves with the codebase.
-
-
-
 ### Real time data access and visualisation tools
 
 *Suggested Mentor(s):* [David Perez-Suarez](http://github.com/dpshelio), [Jack Ireland](https://github.com/wafels)
@@ -162,6 +124,41 @@ timeline on how much time will take to implement, test and document each part of
 the project.
 
 
+### Improvements to the SunPy Database
+
+*Suggested Mentor(s):* [Stuart Mumford](http://github.com/Cadair), [Simon Liedtke](http://github.com/derdon), [Steven Christe](http://github.com/ehsteve)
+
+*Difficulty:* Intermediate
+
+*Astronomy knowledge needed:* None
+
+*Programming skills:* Python, some database design knowledge would be helpful.
+
+#### Description
+
+The `database` module provides functionality to users to manage collections of files on disk in a way not reliant upon folder structure and file name.
+The database allows users to find files on disk by either physical parameters, such as wavelength and time or properties of the instrument such as name and spacecraft.
+It also allows more complex queries by enabling searches of the raw meta data associated with the files.
+
+The SunPy database will also act as a proxy for some web services supported by SunPy. When used like this, the database module takes a user query, downloads the data from the web service and then stores it in the database, and then returns the query to the user. SunPy contains clients to various web services, the first and primary web service SunPy supported was the Virtual Solar Observatory (VSO), this is the web service the database was originally designed to support. Since the original development of the database module, the database has also been extended to support the HEK client.
+
+The SunPy web clients, use a system named `attrs` (an abbreviation for attributes) to compose queries, this attrs system is also used by the database to perform queries on the database, with some of the attrs shared between the VSO client and the database.
+Recently, a new downloader front end (originally named `UnifiedDownloader`, now affectionately known as `Fido`) has been developed, this provides a Factory Class, with which various download clients (such as the VSO) can register with, providing information about which attrs and attr values that client supports. Using this approach, the `Fido` downloader provides a single interface to the many different services SunPy supports.
+The first part of this project will be to update the database module to support the new `Fido` interface, specifically by using `Fido` inside the database to retrieve data.
+
+The second part of the project will be to update the caching mechanism implemented in the database module. The current caching system serialises the users VSO query and stores it as JSON, upon the user requesting another query, the query will be compared to the cache of serialised queries and if a match is found, the results from the cached query returned.
+This mechanism is limiting in that if the user requests 100 records in query A and 100 records in query B, but 50 of the records requested in both queries are the same (i.e. two overlapping time windows) then the 50 records will be re-downloaded as the cache of query A will not match query B.
+The updated caching system will store the records a query returns (before the data is downloaded) and then link the results of a query to the records in the database (once the data has been downloaded). Then when records are retrieved from a web service, any records that are stored in the cache table can be skipped for retrieval from the web service and returned from the records in the database.
+This will allow the caching of partial queries rather than whole queries as is currently implemented.
+
+This project aims to achieve the following things:
+
+1. Update the current implementation of the database using the VSO attributes to use the slightly refactored `Fido` attributes and use `Fido` inside the database to download data from the VSO.
+1. Implement a new caching mechanism bases of the results of Queries with `Fido` rather than the current caching which is based upon the VSO query.
+
+A successful proposal will schedule updates to the database package in small sections, rather than in one large pull request. The work should be understood and broken down into individual sections.
+
+There are various other maintenance tasks which need undertaking (https://github.com/sunpy/sunpy/labels/Database) which would be a good way for someone interested in this project to familiarise themselves with the codebase.
 
 
 ### GUI to use LCT tools
