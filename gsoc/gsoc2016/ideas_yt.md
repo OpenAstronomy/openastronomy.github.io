@@ -5,19 +5,23 @@ show_main: false
 ideas_team: yt
 ---
 
-All projects on this page are for [yt](https://yt-project.org), an analysis and
-visualization environment for particle and mesh-based volumetric data. It has
-readers for most astrophysical simulation codes, as well as a few nuclear
+All projects in this section are for [yt](https://yt-project.org), an analysis
+and visualization environment for particle and mesh-based volumetric data. It
+has readers for most astrophysical simulation codes, as well as a few nuclear
 engineering simulation codes. It can handle data produced by particle-based
 codes, as well data produced by codes that use various types of mesh structures,
 including uniform and adaptively refined meshes as well as unstructured and
-semistructured meshes.
+semistructured meshes. yt is able to analyze and visualize these datasets with
+substantially different on-disk and in memory formats using a common language.
 
 To learn more about how to use yt to interact with simulation data, take a look
 at the [quickstart guide](http://yt-project.org/doc/quickstart/index.html), as
 well as the rest of [the yt documentation](http://yt-project.org/doc). We also
 provide [a listing of sample test datasets](http://yt-project.org/data) that can
-be loaded by yt.
+be loaded by yt. We use a variety of
+[public communication channels](http://yt-project.org/community.html), including
+mailing lists, IRC, and a slack channel that can be joined by anyone interested
+in yt development.
 
 For more information about contributing to yt, take a look at our
 [developer guide](http://yt-project.org/docs/dev/developing/index.html). To see
@@ -38,8 +42,8 @@ discussions about past yt projects, take a look at the yt enhancement proposal
 
 #### Description
 
-Currently, all yt plotting objects have a `show()` method that currently
-displays a version of the plot in Jupyter notebooks. This works for the most
+Currently, all yt plotting objects have a `show()` method that
+displays [a version of the plot in Jupyter notebooks](https://gist.github.com/f36b29c340e8516eeae2). This works for the most
 part and is relatively simple due to Jupyter's data model. However, this
 reliance on the notebook fails for users who work primarily from the command
 line, either in the vanilla python interpreter or the IPython command line
@@ -64,8 +68,9 @@ SSH to a supercomputer).
   backends using the matplotlib object-oriented API, or a way to show how to
   gracefully fall back to using pyplot instead of the object oriented API.
 
-* A YTEP describing the proposed approach for modifying yt's plotting
-  infrastructure to support matplotlib's interactive plotting backends.
+* A [YTEP](https://ytep.readthedocs.org) describing the proposed approach for
+  modifying yt's plotting infrastructure to support matplotlib's interactive
+  plotting backends.
 
 * The implementation for the YTEP submitted as a bitbucket pull request to the
   main yt repository.
@@ -169,10 +174,10 @@ cosmology as a subclass of astrophysics.
   set of attributes that minimally describe a scientific domain, i.e., list of
   field plugins, unit system, etc.
 
-* Write up a YTEP describing the proposed design and ideas for
-  implementation. Should identify an initial set of domain contexts, sort fields
-  into domain contexts, and sketch how frontends should declare needed domain
-  contexts.
+* Write up a [YTEP](https://ytep.readthedocs.org) describing the proposed design
+  and ideas for implementation. Should identify an initial set of domain
+  contexts, sort fields into domain contexts, and sketch how frontends should
+  declare needed domain contexts.
 
 * Create a domain context class with the identified attributes. Implement an
   Base, astronomy, and possibly a nuclear engineering domain context and
