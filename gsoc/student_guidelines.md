@@ -4,7 +4,9 @@ title:  "GSoC Student Application Guidelines"
 show_main: false 
 ---
 
-If you want to apply to OpenAstronomy to participate in GSoC 2015
+# GSoC Student Application Guidelines
+
+If you want to apply to OpenAstronomy to participate in GSoC
 there are many things you can do to improve your application.
 Many of OpenAstronomy's admins and mentors have participated in
 previous editions of GSoC with their projects, so will be able to
@@ -48,7 +50,7 @@ Checkout the issue lists of the projects to see if there is something that you c
 you submit your application (it does not have to be accepted).**
 
 5. **Plan your application.**
-Think which is your favourite project from the [ideas page](/gsoc2015/ideas.html) or think
+Think which is your favourite project from the [ideas page](/gsoc/gsoc2016/ideas.html) or think
 of a new one that will help out one of the OpenAstronomy members.
 Prepare a plan on how you will tackle that project and the time it will take you to solve it.
 Do not worry much in providing exact dates, but plan it as best as you can 
@@ -59,7 +61,7 @@ Don't be shy when describing yourself!
 6. **Submit your application.**
 Don't forget to [submit your application](http://www.google-melange.com) before the deadline.  
 We are also happy to give comments on your proposal if you like.  Feel free to 
-add your application to the wiki following this format: "GSoC-2015 Application \<sub-org\> \<Your Name\>:\<Project Name\>"
+add your application to the wiki following this format: "GSoC-2016 Application \<sub-org\> \<Your Name\>:\<Project Name\>"
 and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
 
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2015-Application-Template 
