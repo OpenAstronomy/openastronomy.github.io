@@ -55,7 +55,7 @@ A successful proposal for this project will demonstrate that the applicant has u
 
 *Programming skills:* Python.
 
-####Description
+#### Description
 
 The [CHIANTI](http://www.chiantidatabase.org/) atomic physics database is a valuable resource for solar physics.
 The CHIANTI database holds a large amount of information on the physical properties of different elements in different ionisation states and enables the calculation of various parameters from this information.
