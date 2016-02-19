@@ -158,9 +158,22 @@ cosmology as a subclass of astrophysics.
 
 *Deliverables:*
 
-* A YTEP describing the proposed design and ideas for implementation. Should
-  identify an initial set of domain contexts, sort fields into domain contexts,
-  and sketch how frontends should declare needed domain contexts.
+* For each of the existing frontends, identify the relevant field
+  plugins. Create a data structure to associate with each frontend that lists
+  only the relevant plugins. Take the field plugin loading machinery, which
+  currently just loops over all plugins, and have it only load plugins relevant
+  to the loaded frontend.
 
-* A single or multiple pull requests to the main yt repository including the
-  implementation of the YTEP.
+* With the above as an example, identify and document all of the places in the
+  code where the domain is assumed to be astronomy. Use this to come up with a
+  set of attributes that minimally describe a scientific domain, i.e., list of
+  field plugins, unit system, etc.
+
+* Write up a YTEP describing the proposed design and ideas for
+  implementation. Should identify an initial set of domain contexts, sort fields
+  into domain contexts, and sketch how frontends should declare needed domain
+  contexts.
+
+* Create a domain context class with the identified attributes. Implement an
+  Base, astronomy, and possibly a nuclear engineering domain context and
+  associate it with the existing frontends.
