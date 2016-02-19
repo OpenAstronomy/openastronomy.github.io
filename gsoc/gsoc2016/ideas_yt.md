@@ -132,7 +132,7 @@ This project could go in a number of directions:
 
 ### Domain contexts and domain-specific fields
 
-*Suggested Mentor(s)"* [Britton Smith](https://bitbucket.org/brittonsmith),
+*Suggested Mentor(s):* [Britton Smith](https://bitbucket.org/brittonsmith),
  [Matthew Turk](https://bitbucket.org/matthewturk)
 
 *Difficulty:* Beginner to Intermediate
