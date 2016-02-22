@@ -168,3 +168,30 @@ This project includes looking at other astronomy codes to see how they tackle th
 
 See https://github.com/OpenAstronomy/openastronomy.github.io/pull/27 for a discussion of some problems and possible solutions that will be addressed in this project.
 
+
+### Bridge sherpa and astropy fitting
+
+*Suggested Mentor(s):* D. Burke, T. Aldcroft, H. M. Guenther
+
+*Difficulty:* Expert or better
+
+*Astronomy knowledge needed:* fitting functions and statistics
+
+*Programming skills:* Python, C, Cython
+
+#### Description
+
+
+Both astropy and Sherpa (https://github.com/sherpa/sherpa/) provide modelling and fitting capabilities; however, Sherpa's features are way
+more advanced. Sherpa provides far more build-in models, a larger choice of optimizers and a real variety
+of fit statistics.
+Unfortunately Sherpa is less well known and for historical reasons the object-oriented user interface is less polished than the functional state-based interface.
+The main goal is the bring Sherpa's optimizers and fit statistic functions to astropy; the stretch goal is 
+to develop a bridge between both packages such that a user can use a astropy models completely
+interchangably with Sherpa models and fitters. Sherpa models should look like astropy models to astropy
+to enable situations where the model can be made out of three components (a user defined model, an astropy model
+and a Sherpa model) and this is then fitted to astropy data using the Sherpa fitters.
+
+This project requires the student to get proficient in two major packages (Not an easy task!), but with code written in
+just a few weeks of GSoC it will give astropy users access to fitting capabilites that required many years of developer time
+and that are unfeasable redevelop from scratch. 
