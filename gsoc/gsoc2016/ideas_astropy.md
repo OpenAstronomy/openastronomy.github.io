@@ -5,6 +5,9 @@ show_main: false
 ideas_team: Astropy
 ---
 
+If you are interested in one of the following Astropy Project ideas please see
+the [Astropy GSoC 2016 Guidelines](https://github.com/astropy/astropy/wiki/GSoC-2016-Guidelines)
+for additional information that is specific to Astropy.
 
 ### Implement Scheduling capabilities for Astroplan
 
