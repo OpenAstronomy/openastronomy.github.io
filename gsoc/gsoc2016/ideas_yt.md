@@ -5,6 +5,10 @@ show_main: false
 ideas_team: yt
 ---
 
+If you are interested in one of the yt ideas, please see the
+[GSoC 2016 Guidelines](https://bitbucket.org/yt_analysis/yt/wiki/Google%20Summer%20of%20Code%202016%20Guidelines)
+on the yt bitbucket wiki.
+
 All projects in this section are for [yt](https://yt-project.org), an analysis
 and visualization environment for particle and mesh-based volumetric data. It
 has readers for most astrophysical simulation codes, as well as a few nuclear
