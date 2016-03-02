@@ -198,3 +198,44 @@ and a Sherpa model) and this is then fitted to astropy data using the Sherpa fit
 This project requires the student to get proficient in two major packages (Not an easy task!), but with code written in
 just a few weeks of GSoC it will give astropy users access to fitting capabilites that required many years of developer time
 and that are unfeasable redevelop from scratch. 
+
+
+### Enhancements to Ginga, a Toolkit for Building Scientific Image Viewers
+
+*Suggested Mentor(s):* [Eric Jeschke](https://github.com/ejeschke), [Pey-Lian Lim](https://github.com/pllim), [Nabil Freij](https://github.com/nabobalis)
+
+*Difficulty:* Beginning to Advanced, depending on project choices
+
+*Astronomy knowledge needed:* Some, depending on project choices
+
+*Programming skills:* Python and scientific python (Numpy, Scipy, Astropy), git version control
+
+*Desirable:* OpenCL, Javascript/web sockets, C/C++ programming, experience in image or array processing, concurrent programming, github-based workflow
+
+#### Description
+
+[Ginga](https://ejeschke.github.io/ginga/) is a toolkit for constructing scientific image viewers in Python, with an emphasis toward astronomy.  Ginga is being used at a number of observatories and institutes for observation and instrument control, quick look, custom data reduction and analysis tasks, etc. 
+
+We are looking for individuals to work on a few select project areas, depending on skill level and interest:
+
+Beginning-level:
+* Improve and expand Ginga's unit test suite and coverage
+* Improve documentation and tutorials, including via Jupyter notebooks and video voice-overs
+* Improve our "native app" packaging for Mac, Unix and Windows 
+* Improving LineProfile and Slit plugins
+* Enhance existing plugins by adding GUIs for some common tasks like configuring catalog sources, which are currently done by editing config files
+* Add support for loading broken FITS files by ["fingerprinting" them] (https://github.com/ejeschke/ginga/issues/205)
+
+Intermediate-level:
+* Improve Ginga backends for web browsers (native javascript/web sockets and/or Jupyter notebooks and/or Bokeh server)
+* Enhancements to "traditional" GUI backends (e.g. add support for gtk3, AGG support for python 3, improvements to Qt-based widgets)
+* Graft the astropy-helpers package into Ginga
+* Adding support for rough line-of-sight velocity
+* Enhance existing plugins for data analysis tasks, usually featuring astropy or affiliated packages
+
+Advanced-level:
+* Implement an OpenCL module that leverages CPU and GPU resources for accelerating some common image processing operations (scaling, transformations, rotations) on numpy image arrays. Benchmark against current CPU based solutions.
+* Improving IO speeds by optimizing use of astropy.fits.io/cfitsio/numpy, lazy reads, file caching hints, optimizing concurrency, etc.
+* Support for Stokes
+
+If you are interested in working on any of these aspects, or want to propose some other work on Ginga, please sign in to Github and comment on [Assist the Ginga Project](https://github.com/ejeschke/ginga/issues/287)
