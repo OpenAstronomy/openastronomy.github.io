@@ -39,10 +39,10 @@ Create yourself an account on [GitHub](http://github.com) or [BitBucket](http://
 Don't know how to use [git](http://www.git-scm.com/) or [Mercurial](http://mercurial.selenic.com/)?
 Don't worry, it's easy and there are lots of git [tutorials](http://try.github.com) [online](http://gitimmersion.com/) 
 and many [Mercurial](http://hginit.com/) [ones](http://hgbook.red-bean.com/read/)
-[aswell](http://mercurial.selenic.com/) that will help you to get quite confident with it in a short time.
+[as well](http://mercurial.selenic.com/) that will help you to get quite confident with it in a short time.
 Also both the [Astropy](http://docs.astropy.org/en/stable/index.html#developer-documentation)
 and [yt](http://yt-project.org/docs/dev/developing/developing.html)
-developers guides are great reads no matter what project you are thinking of working on.
+developer guides are great reads no matter what project you are thinking of working on.
 
 4. **Start to be a developer.**
 Checkout the issue lists of the projects to see if there is something that you could do.
