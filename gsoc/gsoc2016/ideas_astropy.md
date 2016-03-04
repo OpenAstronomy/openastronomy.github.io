@@ -130,7 +130,7 @@ development, and you have to learn a bit more about Gammapy before GSoC starts.
 *Astronomy knowledge needed:* Some, e.g. sky coordinates and projections.
 Experience with X-ray or gamma-ray data analysis (e.g. Fermi-LAT) is a plus, but not a requirement.
 
-*Method knowledge needed:* Some experience in data analysis (e.g. images, regions) and statistics (e.g. Poisson noise). 
+*Method knowledge needed:* Some experience in data analysis (e.g. images, regions) and statistics (e.g. Poisson noise).
 
 *Programming skills:* Python (including pytest and Sphinx) and scientific python (Numpy, Scipy, Astropy)
 
@@ -165,7 +165,7 @@ and let us know what your skills and interests are.
 
 The [photutils](http://photutils.readthedocs.org/en/latest/) package is an Astropy affiliated package that provides tools for photometry (measuring how bright a source is).
 
-There are several ways to do photometry and the package currently implements aperture photometry (just add up all the flux in an image in some some area) and single source point-spread-function (PSF) fitting (fit a function such as a Gaussian to the image). In many situations, sources may overlap in the image, e.g. when observing a dense star cluster, so that we need to fit many functions at once. However, the simple brute-force approach "just fit a model with hundreds of parameters" if there are hundreds of stars usually fails. 
+There are several ways to do photometry and the package currently implements aperture photometry (just add up all the flux in an image in some some area) and single source point-spread-function (PSF) fitting (fit a function such as a Gaussian to the image). In many situations, sources may overlap in the image, e.g. when observing a dense star cluster, so that we need to fit many functions at once. However, the simple brute-force approach "just fit a model with hundreds of parameters" if there are hundreds of stars usually fails.
 
 This project includes looking at other astronomy codes to see how they tackle the problem; select, modify and improve an algorithm that fits into the astropy modelling framework; implement this in python; and, if it turns out that speed is a problem, move speed-critical parts to Cython. To verify that the new code works, we will compare it to the solutions of established PSF photometry codes.
 
@@ -189,7 +189,7 @@ Both astropy and Sherpa (https://github.com/sherpa/sherpa/) provide modelling an
 more advanced. Sherpa provides far more build-in models, a larger choice of optimizers and a real variety
 of fit statistics.
 Unfortunately Sherpa is less well known and for historical reasons the object-oriented user interface is less polished than the functional state-based interface.
-The main goal is the bring Sherpa's optimizers and fit statistic functions to astropy; the stretch goal is 
+The main goal is the bring Sherpa's optimizers and fit statistic functions to astropy; the stretch goal is
 to develop a bridge between both packages such that a user can use a astropy models completely
 interchangably with Sherpa models and fitters. Sherpa models should look like astropy models to astropy
 to enable situations where the model can be made out of three components (a user defined model, an astropy model
@@ -197,7 +197,7 @@ and a Sherpa model) and this is then fitted to astropy data using the Sherpa fit
 
 This project requires the student to get proficient in two major packages (Not an easy task!), but with code written in
 just a few weeks of GSoC it will give astropy users access to fitting capabilites that required many years of developer time
-and that are unfeasable redevelop from scratch. 
+and that are unfeasable redevelop from scratch.
 
 
 ### Enhancements to Ginga, a Toolkit for Building Scientific Image Viewers
@@ -210,18 +210,18 @@ and that are unfeasable redevelop from scratch.
 
 *Programming skills:* Python and scientific python (Numpy, Scipy, Astropy), git version control
 
-*Desirable:* OpenCL, Javascript/web sockets, C/C++ programming, experience in image or array processing, concurrent programming, github-based workflow
+*Desirable:* OpenCL, Javascript/web sockets, C/C++ programming, experience in image or array processing, concurrent programming, experience in using GUI toolkits, github-based workflow
 
 #### Description
 
-[Ginga](https://ejeschke.github.io/ginga/) is a toolkit for constructing scientific image viewers in Python, with an emphasis toward astronomy.  Ginga is being used at a number of observatories and institutes for observation and instrument control, quick look, custom data reduction and analysis tasks, etc. 
+[Ginga](https://ejeschke.github.io/ginga/) is a toolkit for constructing scientific image viewers in Python, with an emphasis toward astronomy. Ginga is being used at a number of observatories and institutes for observation and instrument control, quick look, custom data reduction and analysis tasks. The general aim is to build upon this toolkit improving its current features and to expand this toolkit in order for scientists to be able to easily accomplish preliminary data analysis.
 
-We are looking for individuals to work on a few select project areas, depending on skill level and interest:
+We are looking for an individual to work on a few select project areas, depending on skill level and interest. Each project area itself would form a small part of the overall GSOC project. Essentially it would be a large pick and mix but do not let this put you off. This method would allow a range of different contributions to be made the Ginga toolkit that are for your choosing.
 
 Beginning-level:
 * Improve and expand Ginga's unit test suite and coverage
 * Improve documentation and tutorials, including via Jupyter notebooks and video voice-overs
-* Improve our "native app" packaging for Mac, Unix and Windows 
+* Improve our "native app" packaging for Mac, Unix and Windows
 * Improving LineProfile and Slit plugins
 * Enhance existing plugins by adding GUIs for some common tasks like configuring catalog sources, which are currently done by editing config files
 * Add support for loading broken FITS files by ["fingerprinting" them] (https://github.com/ejeschke/ginga/issues/205)
@@ -230,12 +230,12 @@ Intermediate-level:
 * Improve Ginga backends for web browsers (native javascript/web sockets and/or Jupyter notebooks and/or Bokeh server)
 * Enhancements to "traditional" GUI backends (e.g. add support for gtk3, AGG support for python 3, improvements to Qt-based widgets)
 * Graft the astropy-helpers package into Ginga
-* Adding support for rough line-of-sight velocity
+* Adding support for calculating approximate line-of-sight velocities
 * Enhance existing plugins for data analysis tasks, usually featuring astropy or affiliated packages
 
 Advanced-level:
 * Implement an OpenCL module that leverages CPU and GPU resources for accelerating some common image processing operations (scaling, transformations, rotations) on numpy image arrays. Benchmark against current CPU based solutions.
 * Improving IO speeds by optimizing use of astropy.fits.io/cfitsio/numpy, lazy reads, file caching hints, optimizing concurrency, etc.
-* Support for Stokes
+* Adding support for a binary file format used by a very popular ground-based solar telescope and extending it to support Stokes data products
 
-If you are interested in working on any of these aspects, or want to propose some other work on Ginga, please sign in to Github and comment on [Assist the Ginga Project](https://github.com/ejeschke/ginga/issues/287)
+If you are interested in working on any of these aspects, or want to propose some other work on Ginga, please sign in to Github and comment on [Assist the Ginga Project](https://github.com/ejeschke/ginga/issues/287).
