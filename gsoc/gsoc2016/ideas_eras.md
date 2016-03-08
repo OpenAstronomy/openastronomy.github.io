@@ -2,11 +2,11 @@
 
 ## Sub-Org Details ##
 
-Sub-org admin: [Antonio Del Mastro](gsoc@marssociety.it)
+Sub-org admin: Antonio Del Mastro - <gsoc@marssociety.it>
 
-Main repository: [ERAS on Bitbucket](https://bitbucket.org/italianmarssociety/eras/src)
+Main repository: <https://bitbucket.org/italianmarssociety/eras/src>
 
-Mailing list: [ERAS on Google Groups](https://groups.google.com/forum/#!forum/it-mars-society)
+Mailing list: <https://groups.google.com/forum/#!forum/it-mars-society>
 
 
 ## Ideas ##
@@ -17,7 +17,11 @@ DIFFICULTY LEVEL: INTERMEDIATE / HARD
 
 MENTORS: [@aldebran](https://bitbucket.org/aldebran/) , [@OPersian](https://bitbucket.org/OPersian/)
 
-Solar storms are responsible for disruption of satellite communication, and damage to space electronical equipments. Prediction of these storms are essential to prevent damage. A lot of astronomical data is generated on a daily basis, and this can be used for machine learning to predict solar storms
+DESCRIPTION:
+
+Solar storms are responsible for disruption of satellite communication, and damage to space electronical equipments. The storms have to be taken into account also for EVA and habitat maintenance activities, as the higher levels of radiation brought by them have a detrimental effect on the crew member's health.
+
+Prediction of these storms are essential to prevent said damage. A lot of astronomical data is generated on a daily basis, and this could be used in conjunction with machine learning methods to predict solar storms.
 
 In this project, the student will be required to:
 
