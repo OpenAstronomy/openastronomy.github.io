@@ -6,7 +6,7 @@ Sub-org admin: Antonio Del Mastro - <gsoc@marssociety.it>
 
 Main repository: <https://bitbucket.org/italianmarssociety/eras/src>
 
-Mailing list: <https://groups.google.com/forum/#!forum/it-mars-society>
+Mailing list: <https://groups.google.com/forum/#!forum/erasproject>
 
 
 ## Ideas ##
