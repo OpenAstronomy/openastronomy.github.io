@@ -25,7 +25,7 @@ In this project, the student will be required to:
 
 * Using a machine learning approach, predict the *duration* and *intensity* solar storms:
   * The student should use preferably an artificial neural networks approach (although alternatives, such as random forests, SVM, bayesian models or HMMs, can be considered).
-  * The predictions should be given with 1-3 weeks in advance of a storm (depending on viability).
+  * The predictions should be given with 24-48 hs in advance of a storm (depending on viability).
   * The student should evaluate training and test data provided by IMS, or find a suitable datasaet, if the data provided is unsuitable.
   * The student should evaluate an approach suggested by the IMS to test the model's performance, or propose a testing procedure of his/her own.
 * Provide information on a dynamically updated web page, using preferably Django or Flask, which should at least include:
