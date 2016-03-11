@@ -5,7 +5,7 @@ show_main: false
 ideas_team: IMS
 ---
 
-### 1 – SOLAR STORMS FORECASTING SERVER ###
+### Solar Storms forecasting server
 
 *Suggested Mentors:* [Antonio del Mastro](https://bitbucket.org/aldebran/) , [Olena Persianova](https://bitbucket.org/OPersian/)
 
@@ -49,3 +49,5 @@ Some other resources to get started:
 [NASA's Solar Storm and Space Weather FAQ](http://www.nasa.gov/mission_pages/sunearth/spaceweather/index.html)
 
 [Space Weather Prediction Center's Historical SWPC Products and Data Displays](ftp://ftp.swpc.noaa.gov/pub/warehouse/)
+
+**Note**: If you are interested in this project, please apply via the [Python Software Fundation](https://wiki.python.org/moin/SummerOfCode/2016)
