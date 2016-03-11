@@ -42,32 +42,6 @@ While some initial efforts have occurred, this project would involve expanding t
 An often-requested missing feature in Astropy is the ability to compute ephemerides: the on-sky location of Solar System objects like the planets, asteroids, or artificial satellites.  This project would involve implementing just this feature. This will likely *start* with implementing a `get_moon` function similar to the existing `get_sun` to familiarize the student with the important concepts in the `astropy.coordinates` subpackage.  The larger part of the project will likely involve using the orbital elements that the JPL Solar System dynamics group has already complied (there is already a package to read these files: [JPLEphem](https://pypi.python.org/pypi/jplephem)), and translate those into  the Astropy coordinates framework.  The student will implement these algorithms and also collaborate with the mentors and Astropy community to develop an API to access this machinery.
 
 
-### Unify and improve file handling
-
-*Suggested Mentor(s):* [Tom Aldcroft](http://github.com/taldcroft), [Thomas Robitaille](http://github.com/astrofrog)
-
-*Difficulty:* Intermediate to Expert
-
-*Astronomy knowledge needed:* none
-
-*Programming skills:* Python, Unix features
-
-#### Description
-
-We have a number of packages that read and write data to files and file-like
-objects. While there was some initial effort to unify this code in
-[get_readable_fileobj](http://docs.astropy.org/en/stable/api/astropy.utils.data.get_readable_fileobj.html#astropy.utils.data.get_readable_fileobj) and others, in general each package
-is handling its own file I/O. This sort of code is notoriously difficult to get
-right across versions of Python and the different platforms we support, so it
-would be beneficial to remove this duplication. This also means that some
-features, such as gzip handling or URL handling, are not universally available
-or inconsistent across packages. Once this is unified, we can move on to some
-more advanced features that don’t exist anywhere in astropy, such as HTTP Range
-fetching (see [astropy/#3446](https://github.com/astropy/astropy/issues/3446),
-and OS-level file locking to make multiprocessing applications that write to
-files more robust.
-
-
 ### Implement Public API for ERFA
 
 *Suggested Mentor(s):* [Erik Tollerud](http://github.com/eteq), [Tom Aldcroft](http://github.com/taldcroft)
