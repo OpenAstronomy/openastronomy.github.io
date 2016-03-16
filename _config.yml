@@ -15,7 +15,7 @@ discussiongroup_url: "https://groups.google.com/forum/#!forum/openastronomy"
 # Build settings
 markdown: kramdown
 
-members: [Astropy, SunPy, chiantipy, yt-project, JuliaAstro, Casacore, IMS]
+members: [Astropy, SunPy, chiantipy, yt-project, JuliaAstro, Casacore, IMS, COIN]
 
 irc_freenode: irc://irc.freenode.net/
 
