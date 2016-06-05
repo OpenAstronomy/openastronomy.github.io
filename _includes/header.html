@@ -1,5 +1,8 @@
 <header class="site-header" style="background-color: #292929;">
 
+  {% if page.redirect %} <meta http-equiv="refresh" content="0; url={{ page.redirect }}"> {% endif %}
+
+
   <div class="wrapper">
 
     <a class="site-title" href="{{ site.baseurl }}/">
