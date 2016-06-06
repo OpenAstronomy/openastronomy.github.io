@@ -6,10 +6,10 @@ permalink: /gsoc/
 
 A major way OpenAstronomy aims to work together is through Google Summer of Code.
 
-Student applications to OpenAstronomy projects will follow the same
+Student applications to OpenAstronomy projects follows the same
 rules as the [Python Software Foundation] and the [GSoC Student Guide].
 
-We will also host blogs for OpenAstronomy GSoC students on this site.
+The updates of each of the projects are available on the [OpenAstronomy Universe].
 
 
 ## Ideas Pages
@@ -24,14 +24,7 @@ We will also host blogs for OpenAstronomy GSoC students on this site.
 * [GSoC Student Guide]
 
 
-## Blog Entries 2016
-
-{% for post in site.posts %}
-{% if post.categories contains "gsoc2016" %}
-[{{ post.date | date: "%F"}}: {{ post.categories[1] }}: {{ post.title }}]({{ post.url }})
-{% endif %}
-{% endfor %}
-
 
 [Python Software Foundation]: https://wiki.python.org/moin/SummerOfCode/2016
 [GSoC Student Guide]: http://en.flossmanuals.net/GSoCStudentGuide/
+[OpenAstronomy Universe]: http://openastronomy.org/Universe_OA/
