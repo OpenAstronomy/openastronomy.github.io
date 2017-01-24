@@ -12,6 +12,10 @@ github_username:  openastronomy
 irc_channel: openastronomy
 discussiongroup_url: "https://groups.google.com/forum/#!forum/openastronomy"
 
+# Extra Nav Links
+nav_links:
+  PyAstro: http://openastronomy.org/pyastro
+
 # Build settings
 markdown: kramdown
 

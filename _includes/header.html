@@ -23,7 +23,11 @@
           {% if page.title and page.layout == 'page' %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
-        {% endfor %}	
+        {% endfor %}
+
+        {% for page in site.nav_links %}
+          <a class="page-link" href="{{ page[1] }}">{{ page[0] }}</a>
+        {% endfor %}
       </div>
     </nav>
 
