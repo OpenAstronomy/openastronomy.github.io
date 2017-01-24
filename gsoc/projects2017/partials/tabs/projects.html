@@ -1,0 +1,121 @@
+<section>
+  <div class="main-content container">
+
+    <div class="col-md-8 col-md-offset-2">
+      <div class="input-field col-md-10">
+        <input ng-model="searchText" placeholder="Search for a project" id="search" type="text" class="validate">
+      </div>
+      <div class="input-field col-md-2">
+        <center>
+          <div><a class="explore waves-effect waves-light btn">Explore</a>
+          </div>
+        </center>
+      </div>
+    </div>
+  </div>
+  <section>
+    <div class="container">
+      <div class="row showcase">
+        <div ng-repeat="project in projectList | filter: searchText" class="card card-main showcase-card">
+          <div class="project-card-detail waves-effect" ng-click="lc.showProject(project)">
+            <div class="card-title name-bear">{{ project.name }}</div>
+            <div btf-markdown="project.desc | format_desc" class="card-content markdown"></div>
+          </div>  
+          <div ng-show="project.mentors.length>0" class="card-action">
+            <span ng-repeat="mentor in project.mentors | limitTo:4"><a ng-href="https://github.com/{{mentor}}" class="mentors-github-id" target="_blank">{{mentor}}</a></span>
+          </div>
+
+
+        <div ng-show="project.initiatives.length>0" class="project-overview-element clickable card-action">
+          <span ng-click="search(initiative)" class="pr-element-detail chip" ng-repeat="initiative in project.initiatives">{{ initiative }}</span><br>
+        </div>
+
+         <div ng-show="project.collaborating_projects.length>0" class="project-overview-element clickable card-action">
+          <span ng-click="search(project)" class="pr-element-detail chip" ng-repeat="project in project.collaborating_projects">{{ project }}</span><br>
+        </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="modal1" class="modal">
+    <div  class="modal-content-bear">
+      <div class="col-md-4 profile">
+        <div class="project-name">
+        {{ currentProject.name }}
+        </div>
+        <div ng-show="currentProject.requirements.length>0" class="project-detail-element  reqs-proj">
+          <div class="small-heading">Requirements</div>
+          <ul class="req-ul">
+          <li btf-markdown="req" class="pr-element-detail milestones markdown-reqs" ng-repeat="req in currentProject.requirements"></li>
+          </ul>
+          <br>
+        </div>
+
+        <div ng-show="currentProject.initiatives.length>0" class="project-detail-element">
+          <div class="small-heading">Initiatives</div>
+          <span class="pr-element-detail chip" ng-repeat="initiative in currentProject.initiatives">{{ initiative }}</span><br>
+        </div>
+
+        <div ng-show="currentProject.collaborating_projects.length>0" class="project-detail-element">
+          <div class="small-heading">Collaborating Projects</div>
+          <span class="pr-element-detail chip" ng-repeat="project in currentProject.collaborating_projects">{{ project }}</span><br>
+        </div>
+
+        <div ng-show="currentProject.tags.length>0" class="project-detail-element">
+          <div class="small-heading">Tags</div>
+          <span class="pr-element-detail chip" ng-repeat="tags in currentProject.tags">{{ tags }}</span>
+        </div>
+
+        <div ng-show="currentProject.difficulty" class="project-detail-element">
+          <div class="small-heading">Difficulty</div>
+          <span class="pr-element-detail chip">{{ currentProject.difficulty }}</span>
+        </div>
+
+        <div ng-show="currentProject.mentors.length>0" class="project-detail-element">
+          <div class="small-heading">Mentors</div>
+          <span class="pr-element-detail chip" ng-repeat="mentor in currentProject.mentors">@{{mentor}}</span>
+        </div>
+
+        <div ng-show="currentProject.issues.length>0" class="project-detail-element">
+          <div class="small-heading">Related Issues</div>
+          <span ng-click="redirect(issue)" class="pr-element-detail chip clickable" ng-repeat="issue in currentProject.issues">{{ issue | format_issue }}</span>
+        </div>
+        <br>
+      </div>
+
+      <div class="col-md-8 dashboard">
+        <div btf-markdown ng-include="'data/projects/' + currentProject.markdown" class="project-description markdown">
+        </div>
+      </div>  
+
+      </div>
+ </div>
+</section>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+
+
+
+    $('.explore').click(function () {
+      $('html,body').animate({
+        scrollTop: $(".showcase").offset().top},
+        'slow');
+    })
+
+    $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: 0.8, // Opacity of modal background
+      in_duration: 300, // Transition in duration
+      out_duration: 200, // Transition out duration
+      starting_top: '10%', // Starting top style attribute
+      ending_top: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+      },
+      complete: function() {  } // Callback for Modal close
+    }
+    );
+  })
+</script>
