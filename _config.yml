@@ -64,3 +64,15 @@ sf_logo: m0.10973,10.304c-0.063715-0.064-0.10973-0.3695-0.10973-0.7287,0-0.518,0
 
 irc_logo: M30,12V8h-5.004l1-8h-4l-1,8h-7.998l1-8h-4l-1,8H2v4h6.498L7.5,20H2v4h5l-1,8h4l1-8h8l-1.002,8H22l1-8h7v-4h-6.5l0.996-8H30z M19.5,20h-8l0.998-8h7.998L19.5,20z
 
+
+
+collections:
+  projects:
+    output: true
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout:
+
