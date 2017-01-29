@@ -11,19 +11,20 @@
     <script type="text/javascript" src="./data/faq.js"></script>
     <script>
      {% assign groups = site.projects %}
+     {% assign notwanted = "next,content,previous,output,excerpt,draft" %}
      {% capture year %}{{ page.season }}{% endcapture %}
      var year = {{ page.season }}
      var projects = [
-       {% for project in groups %}
-         {% if project.relative_path contains year %}
-          {
-           {% for item in project %}
-             {% if item[0] == "output" or item[0] == "content" %} {% continue %}{% endif %}
-             "{{ item[0] }}": {{ item[1] | jsonify }}{% unless forloop.last %},{% endunless %}
-           {% endfor %}
-          }{% unless forloop.last %},{% endunless %}
-         {% endif %}
-       {% endfor %}
+         {% for project in groups %}{%
+             if project.relative_path contains year %}
+             {
+             {%
+               for item in project %}{% if notwanted contains item %}{% continue %}{% endif %}
+                  "{{ item }}": {{ project[item] | jsonify }}{% unless forloop.last %},{% endunless %}{%
+               endfor %}
+             }{% unless forloop.last %},{% endunless %}{%
+             endif %}{%
+            endfor %}
      ];
     </script>
     <script type="text/javascript" src="./data/admins.js"></script>
