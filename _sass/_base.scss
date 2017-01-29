@@ -9,6 +9,9 @@ dl, dd, ol, ul, figure {
 }
 
 
+html {
+    height:80%;
+}
 
 /**
  * Basic styling
@@ -20,6 +23,7 @@ body {
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
+    height:100%;
 }
 
 
@@ -153,8 +157,9 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
-    max-width:         calc(800px - (#{$spacing-unit} * 2));
+    height: 100%;
+    max-width: -webkit-calc(1100px - (#{$spacing-unit} * 2));
+    max-width:         calc(1100px - (#{$spacing-unit} * 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -162,8 +167,8 @@ pre {
     @extend %clearfix;
 
     @include media-query($on-laptop) {
-        max-width: -webkit-calc(800px - (#{$spacing-unit}));
-        max-width:         calc(800px - (#{$spacing-unit}));
+        max-width: -webkit-calc(1100px - (#{$spacing-unit}));
+        max-width:         calc(1100px - (#{$spacing-unit}));
         padding-right: $spacing-unit / 2;
         padding-left: $spacing-unit / 2;
     }
@@ -200,4 +205,12 @@ pre {
             fill: $grey-color;
         }
     }
+}
+
+
+iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+    margin-top: -30px;
 }
