@@ -2,10 +2,14 @@
 
 Please, if you have any issue with the following steps contact your org admin or
 ask in the multi-client real-time
-[chat platform we have](http://openastronomy.org/contact.html) (Thanks @Cadair!).
+[chat platform we have](http://openastronomy.org/) (Thanks @Cadair!).
 The steps are set up from the point of view of I have an idea, what do I need so
 it's online - so the hardest steps are towards the bottom, and you read only up
 to the point you feel confident.
+
+*TLDR - Are you an expert?* Fork the repo and modify
+the [template file](./_template.md) according to your idea, save it under
+`_projects/YYYY/sub-org/` with a meaningful filename and do a Pull-request.
 
 ## What to I need to have an idea?
 
