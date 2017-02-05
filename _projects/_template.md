@@ -50,8 +50,8 @@ quam.
 
 ##### GSOC 2017 MIDTERM
 
-* Have done awesome shit
+* Have done awesome stuff.
 
 ##### GSOC 2017 FINAL
 
-* Finished the awesome shit.
+* Finished the awesome stuff.
