@@ -1,6 +1,6 @@
 faq = {
 
-"I want to do a GSoC!" : "i_want_to_do_a_gsoc.md",
+"I want to do a GSoC with OpenAstronomy!" : "i_want_to_do_a_gsoc.md",
 
 "What are the requirements to be accepted for GSoC?" : "gsoc_requirements.md",
 
@@ -12,7 +12,6 @@ faq = {
 
 "When should I start working out the proposal?" : "working_out_the_proposal.md",
 
-"What are my obligations as a student during the GSoC?" : "student_obligations.md",
+"What are my obligations as a student during the GSoC?" : "student_obligations.md"
 
-"What are my obligations as a mentor during the GSoC?" : "mentor_obligations.md"
 }

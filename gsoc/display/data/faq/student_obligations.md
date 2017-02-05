@@ -1,9 +1,8 @@
 We expect you to:
 
-* Be active on [gitter](https://coala.io/chat).
-* Blog at least once per week (this will be aggregated on
-[blog.coala.io](https://blog.coala.io)).
+* Be online and active during your working hours in your sub-organisation chat system.
+* Blog at least once every two weeks (this will be aggregated on
+[Universe Open Astronomy](http://openastronomy.org/Universe_OA/)).
 * Participate in weekly meetings with your mentor.
-* Get stuff merged, before the deadlines!
 * Get in contact with your mentors or the admins if any even remotely
 potential problems arise.
