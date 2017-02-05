@@ -11,7 +11,7 @@ to the point you feel confident.
 the [template file](./_template.md) according to your idea, save it under
 `_projects/YYYY/sub-org/` with a meaningful filename and do a Pull-request.
 
-## What to I need to have an idea?
+## What do I need to have an idea?
 
 You are here, so that's the first step!
 
@@ -34,17 +34,20 @@ Cool,  you've got already all the above?
 All you need now is to put it in a plain text file following
 the [template file](./_template.md) (you may click in raw to see how it looks).
 
-The file is composed in two parts (separated by a `---`), the top is like a yaml
-file, the bottom is in markdown format. Change the text in the template keeping
+The file is composed in two parts (separated by a `---`).
+Change the text in the template keeping
 special care of the structure of the yaml file and the headings on the markdown
 part (_e.g._, the top level starts with a 4 level title: `####`).
 
 
-## How do I do so it appears online?
+## What do I do so it appears online?
 
-Are you familiar with git/github? If you are not contact us and share the above
-file with us, we will take care to put it in place.
+Are you familiar with git/github? If you are
+not [contact us](openastronomy.organization@gmail.com) and send the above file,
+we will take care to put it in place.
 If, in the other hand, you are feel confident with github: go ahead, fork this
-repository, create a subdirectory for your sub-organisation (if that doesn't
-exist yet) under the year of the GSOC edition you want to put your idea in and
-add your previously created file there. Create a pull-request and that's it!
+repository, find the subdirectory for your sub-organisation and the year of the
+project (for example, if you are submitting an astropy project, go to
+`/_projects/2017/astropy`). If your organization does not exist, create it
+following the form of one of the other sub-organizations. Create a pull-request
+and that's it!

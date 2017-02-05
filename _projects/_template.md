@@ -1,23 +1,30 @@
 ---
 name: Example Astropy
 desc: This is the first idea for astropy
-# add a description of your project
+# add a short one line description of your project
 requirements:
- - The proposal has to contain a clear concept.
- - patch on any astropy affiliated package.
+# Student requirements:
+ - Knowledge on spherical astronomy.
+ - Familiar with numerical methods
 difficulty: low
 issues:
+# Related issues (if any)  to this project.
  - https://github.com/astropy/astropy/issue/4444
  - https://github.com/astropy/astropy/issue/5555
 mentors:
+# First person in contact; mentors may change before project starts.
  - astrofrog
 initiatives:
  - GSOC
  - SOCIS
 tags:
+# Different technologies needed
  - python
+ - GUI
 collaborating_projects:
+# suborganisation(s) to which this project belongs.
  - astropy
+ - ginga
 ---
 This is an awesome project idea for Astropy.
 
@@ -35,7 +42,7 @@ vitae velit scelerisque volutpat ut nec ex. Sed in velit tincidunt, volutpat
 turpis sit amet, dignissim nisi. Donec a mattis eros. Pellentesque vitae leo
 quam.
 
-#### Milestones
+#### Milestones (if any)
 
 ##### GSOC 2017 CODING STARTS
 
