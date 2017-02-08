@@ -18,9 +18,9 @@ which is good place to introduce yourself.
 
 You can also get involved by joining our chat either via
 Matrix
-[#openastronomy:matrix.org](https://riot.im/app/#/room/#openastronomy:matrix.org) or
-via IRC (<a href="{{ site.irc_freenode }}#{{site.irc_channel }}">#openastronomy
-on freenode.net</a>), which regularly has a number of people in it, if you want
+([#openastronomy:matrix.org](https://riot.im/app/#/room/#openastronomy:matrix.org)),
+IRC (<a href="{{ site.irc_freenode }}#{{site.irc_channel }}">#openastronomy
+on freenode.net</a>), [gitter](https://gitter.im/OpenAstronomy/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link) or [slack](openastronomy.slack.com) which regularly has a number of people in it, if you want
 to pop in for an astronomy related conversation.
 
 ## Contact the OpenAstronomy Members

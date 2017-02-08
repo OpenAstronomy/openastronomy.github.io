@@ -76,4 +76,7 @@ defaults:
       type: projects
     values:
       layout:
+exclude:
+  - _projects/_template.md
+  - _projects/README.md
 
