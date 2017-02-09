@@ -1,6 +1,6 @@
 ---
 name: New glue widgets
-desc: Develop new widgets for glue
+desc: Expand the functionality of glue by developing a range of new widgets, including to better read in and edit data.
 # add a description of your project
 requirements:
  - Proficiency in Python
