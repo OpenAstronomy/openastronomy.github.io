@@ -40,7 +40,7 @@ the following goals (roughly in this order):
 2. Convert the [differential rotation code](https://github.com/sunpy/sunpy/blob/master/sunpy/physics/differential_rotation.py) in SunPy to use `sunpy.coordinates`.
 3. Implement image warping for solar differential rotation. [#1876](https://github.com/sunpy/sunpy/pull/1876).
 4. Implement the [OCCULT-2 algorithm](http://arxiv.org/abs/1307.5046) for coronal loop tracing.
-5. Implement running and base difference functionality and the persistence transform.
+5. Implement running and base difference functionality and the persistence transform. See Figure 2 in [this paper](http://iopscience.iop.org/article/10.1088/0004-637X/736/2/102/pdf) for some ideas.
 
 optional extras:
 
