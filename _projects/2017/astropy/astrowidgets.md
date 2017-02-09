@@ -1,6 +1,6 @@
 ---
 name: Jupyter widgets for Astropy
-desc: Create "astrowidgets": Jupyter widgets for Astropy.
+desc: Create "astrowidgets" - Jupyter widgets for Astropy.
 requirements:
  - Python
  - Very basic knowledge of CSS.
