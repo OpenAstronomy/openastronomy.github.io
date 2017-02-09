@@ -17,8 +17,9 @@ initiatives:
  - SOCIS
 tags:
  - python
+ - sunpy
 collaborating_projects:
- - SunPy
+ - sunpy
 ---
 
 In this project you would create the foundations of the 'sunkit-image' SunPy
