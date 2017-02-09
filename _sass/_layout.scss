@@ -45,7 +45,7 @@
         position: absolute;
         top: 9px;
         right: 30px;
-        background-color: $background-color;
+        background-color: $menu-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
         text-align: right;
@@ -164,6 +164,7 @@
 .page-content {
     margin-bottom: 75px;
     padding: $spacing-unit 0 10px;
+    height: 100%;
 }
 
 .page-heading {
