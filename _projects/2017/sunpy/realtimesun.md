@@ -1,11 +1,12 @@
 ---
-name: RealTime solar web.
-desc: Back & Front end for a Real Time solar viewer
+name: Sun, Right now!
+desc: How does the sun looks in real-time? Build a website to show it.
 # add a description of your project
 requirements:
  - Familiarity with Python
  - Understanding of databases
  - Basic web development
+ - Familiarity with Flask
 difficulty: Medium
 issues:
  - https://github.com/sunpy/sunpy/issues/1442

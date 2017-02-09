@@ -21,15 +21,16 @@ collaborating_projects:
 
 #### Description
 
-This project aims to plan and implement a object that could be used to
-define a region of interest and interact with the rest of data types used
+This project aims to plan and implement an object that could be used to define a
+region of interest (ROI) in any physical dimension (such as spatial area,
+temporal range or spectral window) and interact with the rest of data types used
 in sunpy.
 
-For example, a region of interest could be a particular are in the sun 
+For example, a region of interest could be a particular area in the Sun 
 on a particular moment in time. Therefore, that object should contain the limits
 of such area, its contour and the time when it was observed.
 It also needs other information, such as the coordinate system that it
-uses (notice that chaincode needs of a image pixel size too) and the wavelength
+uses, the image from which it was created and the wavelength
 in which was observed.
 
 That region of interest should interact with the data types available in sunpy
