@@ -69,8 +69,31 @@ function.  This already exists in IDL but not Python.
 * IRISRaster class
 * IRISObservation class
 
+#### Milestones
+
+##### GSOC 2017 CODING STARTS
+
+* Have familiarised yourself with the basics of IRIS data through the
+resources below and Python classes.
+* Have worked with the mentors to get the package repository setup on
+GitHub.
+
+##### GSOC 2017 MIDTERM
+
+* Have developed an IRISMapSequence object and submitted a PR.
+* Have started work on an IRISRaster object.
+
+##### GSOC 2017 FINAL 
+
+* Have got IRISMapSequence PR accepted.
+* Have completed development of an IRISRaster object and have a PR
+ready submitted and ready to be accepted.
+* Have completed development of an IRISObservation object and have
+opened a PR.
+
 ##### Additional Resources
 
+* IRIS website: http://iris.lmsal.com/
 * IRIS instrument paper:
 https://www.lmsal.com/iris_science/doc?cmd=dcur&proj_num=IS0196&file_type=pdf
 * Guide to IRIS data analysis: http://iris.lmsal.com/itn26/itn26.pdf
