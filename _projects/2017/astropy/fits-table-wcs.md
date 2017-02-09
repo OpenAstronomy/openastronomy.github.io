@@ -8,7 +8,9 @@ difficulty: intermediate
 issues:
  - https://github.com/astropy/astropy/issue/5626
 mentors: 
- - ghost
+ - hamogu
+ - taldcroft
+ - eteq
 initiatives:
  - GSOC
 tags:
