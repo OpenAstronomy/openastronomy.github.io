@@ -2,9 +2,8 @@
  * Site header
  */
 .site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
+    height: 80px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -157,14 +156,20 @@
 }
 
 
+.fixed-wrap {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    bottom: 80px;
+    width: 100%;
+}
 
 /**
  * Page content
  */
 .page-content {
-    margin-bottom: 75px;
-    padding: $spacing-unit 0 10px;
     height: 100%;
+    overflow-y:auto;
 }
 
 .page-heading {
