@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script type="text/javascript" src="./data/faq.js"></script>
     <script>
-     {% assign groups = site.projects %}
+     {% assign groups = site.projects | shuffle %}
      {% assign notwanted = "next,content,previous,output,excerpt,draft" %}
      {% capture year %}{{ page.season }}{% endcapture %}
      var year = {{ page.season }}
