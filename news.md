@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Blog
+title: News and Events
 ---
 <div>
   {% for post in site.posts %}

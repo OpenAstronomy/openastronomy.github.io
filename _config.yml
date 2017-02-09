@@ -14,7 +14,7 @@ discussiongroup_url: "https://groups.google.com/forum/#!forum/openastronomy"
 
 # Extra Nav Links
 nav_links:
-  Universe: http://openastronomy.org/Universe_OA
+  Student Blogs: http://openastronomy.org/Universe_OA
   PyAstro Conference: http://openastronomy.org/pyastro
 
 # Build settings
