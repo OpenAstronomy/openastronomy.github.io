@@ -386,11 +386,15 @@ a:hover > .card{
   color: lightgoldenrodyellow;
   letter-spacing: 0.1em;
 }
+div.mentors{
+  text-align: center;
+}
 .mentors-github-id{
   font-size: 1.2em ;
   color: darkcyan !important;
   text-transform: none !important;
   font-family: 'Roboto Mono', menlo, monospace;
+  display: inline-block;
 }
 .mentors-github-id:hover{
   color: black !important;
