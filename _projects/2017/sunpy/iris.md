@@ -64,6 +64,9 @@ function.  This already exists in IDL but not Python.
    convert IRIS data into physical units.  This already exists in IDL
    but not Python.
 
+A good proposal would demonstrate that the student is familiar with
+the Xarray package.
+
 #### Expected Outcomes
 * IRIS MapSequence class
 * IRISRaster class
@@ -74,7 +77,7 @@ function.  This already exists in IDL but not Python.
 ##### GSOC 2017 CODING STARTS
 
 * Have familiarised yourself with the basics of IRIS data through the
-resources below and Python classes.
+resources below and Python classes nd the Xarray package.
 * Have worked with the mentors to get the package repository setup on
 GitHub.
 
