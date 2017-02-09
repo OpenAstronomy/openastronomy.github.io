@@ -2,8 +2,9 @@
 name: Velocities in Astropy coordinates
 desc: Implement framework for handling velocities and velocity transforms in astropy.coordinates.
 requirements:
+ - Python
  - Some knowledge of coordinate transformations.
- - Background in astronomical transformations would be advantageous.
+ - Background in astronomical velocity frames and how they are used (helpful but not necessarily a strict requirement).
 difficulty: Expert
 mentors: 
  - mhvk

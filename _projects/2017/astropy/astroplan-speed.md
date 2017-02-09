@@ -1,6 +1,9 @@
 ---
-name: Pedal to the metal
-desc: Profiling and speeding up observation scheduling with astroplan
+name: Pedal to the metal for astroplan
+desc: Profiling and speeding up observation scheduling with astroplan and astropy
+requirements:
+ - Python
+ - Observational astronomy experience may be helpful, but not required
 difficulty: Intermediate
 mentors: 
  - bmorris3

@@ -1,10 +1,10 @@
 ---
 name: Seamless Combination of SkyCoord, Table, WCS, and FITS
-desc: This is the first idea for astropy
+desc: 
 requirements:
  - Python
  - Some familiarity with FITS files
-difficulty: low
+difficulty: intermediate
 issues:
  - https://github.com/astropy/astropy/issue/5626
 mentors: 
@@ -26,11 +26,11 @@ Once I write my publication, I need to store that table as a fits file and print
 Astropy grew out of several independent pacakges (pyfits, asciitable) that each did one thing well, but were not very easy to interoperate. Astropy has (mostly) unified the interface, but functionally components still work separately. In this project, you will makes things interoperable. For the example above, you need to develop a protocol that allows storage of coordinates and times in fits and ascii tables.
 There is some discussion about this in [issue 5625](https://github.com/astropy/astropy/issues/5626).
 
-This project includes:
+This project the following stages:
 
 - Find breaks in the workflow as described in the example above.
 - Define protocols for meta data that make it work between different packages.
 - Solicit feedback from the community on those protocols.
 - Implement code and test cases. 
 - Test and document the steps above.
-- Update documentation and examples to show the new capabilities.
+- Add an [astropy tutorials](http://tutorials.astropy.org) and update Astropy core package documentation to show the new capabilities.
