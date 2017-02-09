@@ -1,6 +1,6 @@
 ---
 name: Glue notebook viewers
-desc: Develop Jupyter notebook viewers for glue
+desc: Make it possible to use glue from the Jupyter notebook by developing notebook-based data viewers. This will make it possible to also use glue remotely, and will be a widely used feature!
 # add a description of your project
 requirements:
  - Proficiency in Python
