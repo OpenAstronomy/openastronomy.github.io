@@ -42,6 +42,12 @@ the following goals (roughly in this order):
 4. Implement the [OCCULT-2 algorithm](http://arxiv.org/abs/1307.5046) for coronal loop tracing.
 5. Implement running and base difference functionality and the persistence transform.
 
+optional extras:
+
+6. Refactor and write a Python wrapper for [FLCT](https://arxiv.org/abs/0712.4289) [code](http://solarmuri.ssl.berkeley.edu/overview/publicdownloads/software.html).
+8. Implement image alignment using feature detection and tracking. [Example](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_brief.html)
+
+
 #### Milestones
 
 ##### GSOC 2017 CODING STARTS
