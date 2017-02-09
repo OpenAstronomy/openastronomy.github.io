@@ -1,11 +1,9 @@
 ---
 name: SunPy IRIS Data class
-desc: Develop tools to read in and analyze IRIS image and spectral
-data using SunPy.
+desc: Develop tools to read in and analyze IRIS image and spectral data using SunPy.
 requirements:
  - Familiarity with Python class development.
- - (Optional) A knowledge of the Interactive Data Language (IDL) would
- be useful, but not requried.
+ - (Optional) A knowledge of the Interactive Data Language (IDL) would be useful, but not requried.
 difficulty: medium
 issues:
 mentors: 
@@ -13,6 +11,7 @@ mentors:
  - DanRyanIrish
 initiatives:
  - GSOC
+ - SoCiS
 tags:
 - sunpy
 - python
