@@ -1,6 +1,6 @@
 ---
-name: Field Extrapolation in Spherical Coordinates
-desc: Generalize magnetic field extrapolation to spherical coordinates in `solarbextrapolation` package.
+name: Map3D Class for Field Extrapolations in Spherical Coordinates
+desc: Generalize magnetic field extrapolation to spherical coordinates in `solarbextrapolation` package with a "coordinate-aware" 3D Map-like object.
 # add a short one line description of your project
 requirements:
 # Student requirements:
@@ -13,8 +13,8 @@ issues:
  - https://github.com/sunpy/solarbextrapolation/issues/12
 mentors:
 # First person in contact; mentors may change before project starts.
- - wtbarnes
  - Alex-Ian-Hamilton
+ - wtbarnes
 initiatives:
  - GSOC
  - SOCIS
@@ -32,9 +32,11 @@ Determining the 3D geometry of the tangled and dynamic coronal magnetic field is
 
 This project aims to improve the `solarbextrapolation` package by relaxing the small-angle approximation and allowing for extrapolation of global magnetic fields, i.e. 3D vector fields on a scale larger than an active region. This will involve extensive modifications to the numerical method used to perform the field extrapolation as well as developing methods for coordinate transformations between the magnetogram coordinate system and the spherical coordinate system of the derived vector field.
 
+The main challenge of this project will be creating a general Map3D class capable of performing the needed coordinate transformations. Currently, the `solarbextrapolation` package uses a Map3D class that is limited to Cartesian coordinates and has no support for coordinate transformations. It is expected that this new object will serve as a prototype for a first-class data type in the core SunPy package.
+
 #### Primary Goals
+* Develop 3D Map class capable of transformation between heliographic coordinates and Sun-centered spherical coordinates
 * Extrapolation of global magnetic fields
-* 3D Map class capable of transformation between heliographic coordinates and Sun-centered spherical coordinates.
 
 #### Possible Secondary Goals
 * Performance improvements
@@ -44,5 +46,7 @@ This project aims to improve the `solarbextrapolation` package by relaxing the s
 
 #### Additional Resources
 * [`solarbextrapolation` package ](https://github.com/sunpy/solarbextrapolation)
+* [Maps in SunPy](http://docs.sunpy.org/en/stable/code_ref/map.html)
+* [Coordinates in SunPy](http://docs.sunpy.org/en/stable/code_ref/coordinates.html)
 * [IDL package for global potential field extrapolations](http://www.lmsal.com/~derosa/pfsspack/)
 * [Review of Magnetic Field Extrapolation Techniques -- T. Neukirch](http://adsabs.harvard.edu/abs/2005ESASP.596E..12N)
