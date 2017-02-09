@@ -28,11 +28,17 @@ collaborating_projects:
 ---
 #### Description
 
-Determining the 3D geometry of the tangled and dynamic coronal magnetic field is an open research problem in solar physics. A common technique for deriving the 3D vector field from a photospheric magnetogram is to assume a *potential* field such that it can be derived by solving Laplace's equation. The SunPy-affiliated [`solarbextrapolation`](https://github.com/sunpy/solarbextrapolation) package solves Laplace's equation using the method of [Sakurai (1982)](http://adsabs.harvard.edu/abs/1982SoPh...76..301S). However, when constructing the 3D field from the magnetogram, the "small-angle" approximation is used such that the curvature of the Sun is ignored, a valid approximation on the scale of an active region.
+Determining the 3D geometry of the tangled and dynamic coronal magnetic field is an open research problem in solar physics.
+A common technique for deriving the 3D vector field from a photospheric magnetogram is to assume a *potential* field such that it can be derived by solving Laplace's equation.
+The SunPy-affiliated [`solarbextrapolation`](https://github.com/sunpy/solarbextrapolation) package solves Laplace's equation using the method of [Sakurai (1982)](http://adsabs.harvard.edu/abs/1982SoPh...76..301S).
+However, when constructing the 3D field from the magnetogram, the "small-angle" approximation is used such that the curvature of the Sun is ignored, a valid approximation on the scale of an active region.
 
-This project aims to improve the `solarbextrapolation` package by relaxing the small-angle approximation and allowing for extrapolation of global magnetic fields, i.e. 3D vector fields on a scale larger than an active region. This will involve extensive modifications to the numerical method used to perform the field extrapolation as well as developing methods for coordinate transformations between the magnetogram coordinate system and the spherical coordinate system of the derived vector field.
+This project aims to improve the `solarbextrapolation` package by relaxing the small-angle approximation and allowing for extrapolation of global magnetic fields, i.e. 3D vector fields on a scale larger than an active region.
+This will involve extensive modifications to the numerical method used to perform the field extrapolation as well as developing methods for coordinate transformations between the magnetogram coordinate system and the spherical coordinate system of the derived vector field.
 
-The main challenge of this project will be creating a general Map3D class capable of performing the needed coordinate transformations. Currently, the `solarbextrapolation` package uses a Map3D class that is limited to Cartesian coordinates and has no support for coordinate transformations. It is expected that this new object will serve as a prototype for a first-class data type in the core SunPy package.
+The main challenge of this project will be creating a general Map3D class capable of performing the needed coordinate transformations.
+Currently, the `solarbextrapolation` package uses a Map3D class that is limited to Cartesian coordinates and has no support for coordinate transformations.
+It is expected that this new object will serve as a prototype for a first-class data type in the core SunPy package.
 
 #### Primary Goals
 * Develop 3D Map class capable of transformation between heliographic coordinates and Sun-centered spherical coordinates
