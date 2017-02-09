@@ -1,6 +1,6 @@
 ---
 name: Seamless Combination of SkyCoord, Table, WCS, and FITS
-desc: This is the first idea for astropy
+desc: Adding support to Table and FITS to support more Astropy objects.
 requirements:
  - Python
  - Some familiarity with FITS files
