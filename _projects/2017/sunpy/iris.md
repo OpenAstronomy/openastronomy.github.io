@@ -66,10 +66,12 @@ function.  This already exists in IDL but not Python.
 A good proposal would demonstrate that the student is familiar with
 the Xarray package.
 
-#### Expected Outcomes
+##### Expected Outcomes
+
 * IRIS MapSequence class
 * IRISRaster class
 * IRISObservation class
+
 
 #### Milestones
 
@@ -95,7 +97,6 @@ opened a PR.
 
 ##### Additional Resources
 
-* IRIS website: http://iris.lmsal.com/
-* IRIS instrument paper:
-https://www.lmsal.com/iris_science/doc?cmd=dcur&proj_num=IS0196&file_type=pdf
-* Guide to IRIS data analysis: http://iris.lmsal.com/itn26/itn26.pdf
+* [IRIS website](http://iris.lmsal.com/)
+* [IRIS instrument paper](https://www.lmsal.com/iris_science/doc?cmd=dcur&proj_num=IS0196&file_type=pdf)
+* [Guide to IRIS data analysis](http://iris.lmsal.com/itn26/itn26.pdf)

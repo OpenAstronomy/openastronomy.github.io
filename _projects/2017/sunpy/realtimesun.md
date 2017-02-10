@@ -1,19 +1,19 @@
 ---
 name: Sun, Right now!
-desc: How does the sun looks in real-time? Build a website to show it.
+desc: Build a website to display what the Sun looks like in real time
 # add a description of your project
 requirements:
  - Familiarity with Python
  - Understanding of databases
  - Basic web development
  - Familiarity with Flask
-difficulty: Medium
+difficulty: Intermediate
 issues:
  - https://github.com/sunpy/sunpy/issues/1442
  - https://github.com/sunpy/sunpy/pull/1852
 mentors: 
- - Cadair
  - dpshelio
+ - Cadair
 initiatives:
  - GSOC
 tags:
@@ -32,6 +32,6 @@ The project should have three parts:
 
 - Add missing data sources like [DISCOVR](http://www.swpc.noaa.gov/products/real-time-solar-wind)
 - Download, visualise (and probably annotate) and save real time data.
-- Save the result product into a database containing metadata of these images.
+- Save these data and visualisations into a database containing metadata of these images.
 - Create a web application that shows latest images and allows browsing and
   querying the database for old images.
