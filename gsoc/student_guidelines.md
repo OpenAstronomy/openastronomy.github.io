@@ -29,10 +29,7 @@ more about certain project. As well as that, when you have particular idea in
 mind, get in touch with that project and introduce yourself.
 
 2. **Be a user!**
-Download one or more of the OpenAstronomy projects and start experimenting with 
-the code. Look at the latest pictures of the million degree Sun with SunPy,
-volume render a simulation of the galaxy with yt, or plan some astronomical observations with Astropy.  
-There are loads of things to do with all the projects involved with OpenAstronomy, get involved!
+Download one or more of the OpenAstronomy projects and start experimenting with the code. Look at the latest pictures of the million degree Sun with [SunPy](http://sunpy.org/), volume render a simulation of the galaxy with [yt](http://yt-project.org/), or plan some astronomical observations with [Astropy](http://www.astropy.org) - There are loads of things to do with all the projects involved with OpenAstronomy, get involved!
 
 3. **Set yourself up as a developer.**
 Create yourself an account on [GitHub](http://github.com) or [BitBucket](http://bitbucket.org).
