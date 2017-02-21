@@ -30,9 +30,9 @@ mind, get in touch with that project and introduce yourself.
 
 2. **Be a user!**
 Download one or more of the OpenAstronomy projects and start experimenting with 
-the code. Look at the latest pictures of the million degree Sun with SunPy or 
-volume render a simulation of the galaxy with yt, there are loads of things to
-do with all the projects involved with OpenAstronomy, get involved!
+the code. Look at the latest pictures of the million degree Sun with SunPy,
+volume render a simulation of the galaxy with yt, or plan some astronomical observations with Astropy.  
+There are loads of things to do with all the projects involved with OpenAstronomy, get involved!
 
 3. **Set yourself up as a developer.**
 Create yourself an account on [GitHub](http://github.com) or [BitBucket](http://bitbucket.org).
@@ -62,7 +62,7 @@ Don't be shy when describing yourself!
 6. **Submit your application.**
 Don't forget to [submit your application](https://summerofcode.withgoogle.com/) before the deadline.
 We are also happy to give comments on your proposal if you like.  Feel free to 
-add your application to the member's wiki following this format: "GSoC-<YEAR> Application \<sub-org\> \<Your Name\>:\<Project Name\>"
+add your application to the member's wiki following this format: "GSoC-\<YEAR\> Application \<sub-org\> \<Your Name\>:\<Project Name\>"
 and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
 
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template 
