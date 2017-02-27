@@ -1,6 +1,6 @@
 ---
-name: Add MAST Functionality to astroquery
-desc: Implement a module to access Space Telescope datasets from the MAST
+name: Add additional archives to astroquery
+desc: Implement module(s) to access currently unsupported astronomical archives using astroquery.
 requirements:
  - Python
  - Basic understanding of web queries and APIs
