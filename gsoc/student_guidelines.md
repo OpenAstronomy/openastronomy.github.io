@@ -24,7 +24,7 @@ Some general pointers to follow are:
 
 1. **The better we know you, the better we can judge you.**
 There are many ways to get yourself known by the community, you can introduce yourself through the 
-mailing list, chat with us in the IRC channel and even contact the mentors to know
+OpenAstronomy mailing list, chat with us in the IRC channel and even contact the mentors to know
 more about certain project. As well as that, when you have particular idea in 
 mind, get in touch with that project and introduce yourself.
 
