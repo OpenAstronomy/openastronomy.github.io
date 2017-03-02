@@ -2,8 +2,11 @@
 name: Python HIPS client
 desc: Write a Python client for Hierarchical Progressive Surveys (HIPS)
 requirements:
- - Python
- - Observational astronomy experience may be helpful, but not required
+ - Have Python / Numpy / Astropy skills
+ - Know how to write tests with pytest and docs with Sphinx
+ - Some open source experience
+ - Some image processing experience
+ - Interest in spherical geometry ans HEALPIX / HIPS
 difficulty: Intermediate to high
 mentors: 
  - cdeil
@@ -20,9 +23,6 @@ collaborating_projects:
 ---
 
 #### Description
-
-
-
 
 [Hierarchical Progressive Surveys (HIPS)](http://aladin.u-strasbg.fr/hips/) has become a standard to share large survey data.
 So far, a Java client (Aladin) and a JavaScript client ([AladinLite](http://aladin.u-strasbg.fr/AladinLite/) exists.
