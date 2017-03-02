@@ -16,7 +16,7 @@ mailing list.
 There are many guidelines on writing a good application and how to
 increase your chances, this guide covers the most important things
 to OpenAstronomy, however, you should also checkout the [GSoC Student
-Guide], the [Python Software Foundation] guide and the [SymPy
+Guide], the [Python Software Foundation] guide, the [Astropy GSoC guidelines] and the [SymPy
 Guidelines] to name but a few. 
 
 Some general pointers to follow are:
@@ -27,6 +27,9 @@ There are many ways to get yourself known by the community, you can introduce yo
 OpenAstronomy mailing list, chat with us in the IRC channel and even contact the mentors to know
 more about certain project. As well as that, when you have particular idea in 
 mind, get in touch with that project and introduce yourself.
+For `astropy` projects you can do this via the
+[astropy-gsoc-applications](astropy-gsoc-applications@googlegroups.com) mailing list
+(please do not send to the `astropy-dev` list).
 
 2. **Be a user!**
 Download one or more of the OpenAstronomy projects and start experimenting with the code. Look at the latest pictures of the million degree Sun with [SunPy](http://sunpy.org/), volume render a simulation of the galaxy with [yt](http://yt-project.org/), or plan some astronomical observations with [Astropy](http://www.astropy.org) - There are loads of things to do with all the projects involved with OpenAstronomy, get involved!
@@ -65,3 +68,4 @@ and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template 
 [Python Software Foundation]: http://python-gsoc.org/
 [GSoC Student Guide]: http://en.flossmanuals.net/GSoCStudentGuide/
+[Astropy GSoC guidelines]: https://github.com/astropy/astropy/wiki/GSoC-2017-Guidelines
