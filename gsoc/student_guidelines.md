@@ -28,7 +28,7 @@ OpenAstronomy mailing list, chat with us in the IRC channel and even contact the
 more about certain project. As well as that, when you have particular idea in 
 mind, get in touch with that project and introduce yourself.
 For `astropy` projects you can do this via the
-[astropy-gsoc-applications](astropy-gsoc-applications@googlegroups.com) mailing list
+[astropy-gsoc-applications](<mailto:astropy-gsoc-applications@googlegroups.com>) mailing list
 (please do not send to the `astropy-dev` list).
 
 2. **Be a user!**
