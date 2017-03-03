@@ -29,7 +29,7 @@ new Python package to work with [Hierarchical Progressive Surveys (HIPS)](http:/
 
 HIPS has become a standard to share large astronomical survey images, using multi-resolution image tiles
 that can be fetched by a client, similar to Google maps.
-So far, a Java client (Aladin) and a JavaScript client ([AladinLite](http://aladin.u-strasbg.fr/AladinLite/) exist,
+So far, a Java client (Aladin) and a JavaScript client ([AladinLite](http://aladin.u-strasbg.fr/AladinLite/)) exist,
 but there's no easy way to fetch HIPS data and make images from Python.
 
 This project would build on [Astropy coordinates](http://docs.astropy.org/en/stable/coordinates/index.html),
