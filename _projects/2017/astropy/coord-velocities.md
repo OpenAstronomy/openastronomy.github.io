@@ -9,6 +9,7 @@ difficulty: Expert
 mentors: 
  - mhvk
  - eteq
+ - adrn
 initiatives:
  - GSOC
 tags:
