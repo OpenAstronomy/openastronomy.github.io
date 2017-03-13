@@ -38,8 +38,15 @@ Once the drms package has been well tested, CI added and a conda package
 created, the SunPy JSOC client could be improved and extended to enable use of
 the majority of the drms functionality through the unified search API of SunPy.
 While the SunPy implementation would not need to provide all the features of the
-drms library, it would strive to provide a simple API for most queries
-supported by drms.
+drms library, it would strive to provide a simple API for most queries supported
+by drms. One high-priority feature that should be availble in SunPy is the
+ability to query drms series for which the prime key is not ``T_REC``, also it
+should be possible to download only the metadata from drms without downloading
+the associated image data.
+
+Finally, documentation in SunPy should be improved to detail much more of the
+JSOC functionality. This should include API documentation, narrative
+documentation in the guide and examples in the gallery.
 
 
 #### Milestones
@@ -58,3 +65,9 @@ supported by drms.
 
 * Have completed a rework of the `sunpy.net.jsoc` module to use the features of drms.
 
+
+##### Additional Resources
+
+* [drms Tutorial](https://drms.readthedocs.io/en/stable/tutorial.html)
+* [SHARP Example](https://nbviewer.jupyter.org/github/kbg/ipynbs/blob/master/hminuggets/sharp_imgdata.ipynb)
+* [Metadata example](https://nbviewer.jupyter.org/github/mbobra/calculating-spaceweather-keywords/blob/master/plot_swx_d3.ipynb)
