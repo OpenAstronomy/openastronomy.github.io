@@ -20,7 +20,7 @@ nav_links:
 # Build settings
 markdown: kramdown
 
-members: [Astropy, SunPy, chiantipy, yt-project, JuliaAstro, Casacore, IMS, COIN, Glue]
+members: [Astropy, SunPy, chiantipy, yt-project, JuliaAstro, Casacore, IMS, COIN, Glue, poliastro]
 
 irc_freenode: irc://irc.freenode.net/
 
