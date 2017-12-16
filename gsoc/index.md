@@ -4,8 +4,8 @@ title: Google Summer of Code
 permalink: /gsoc/
 ---
 
-OpenAstronomy was a GSOC mentoring organisation in 2016 and is applying again
-in 2017. OpenAstronomy is an umbrella organisation which collects project ideas
+OpenAstronomy was a GSOC mentoring organisation in 2016 and 2017 and is applying again
+in 2018. OpenAstronomy is an umbrella organisation which collects project ideas
 from any of it's members.
 
 Student applications to OpenAstronomy projects follows the same
@@ -16,6 +16,7 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 ## Ideas Pages
 
+* [2018](/gsoc/gsoc2018/)
 * [2017](/gsoc/gsoc2017/)
 * [2016](/gsoc/gsoc2016/ideas.html)
 * [2015](/gsoc/gsoc2015/ideas.html)
