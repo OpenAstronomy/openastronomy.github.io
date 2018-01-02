@@ -1,6 +1,6 @@
 ---
 name: 3D Map Class for Field Extrapolations in Spherical Coordinates
-desc: Generalize magnetic field extrapolation to spherical coordinates in `solarbextrapolation` package with a "coordinate-aware" 3D Map-like object.
+desc: Generalize magnetic field extrapolation to spherical coordinates.
 # add a short one line description of your project
 requirements:
 # Student requirements:
