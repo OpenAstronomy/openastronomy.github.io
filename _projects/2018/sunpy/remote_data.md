@@ -11,6 +11,7 @@ issues:
 mentors:
  - Cadair
  - wtbarnes
+ - dpshelio
 initiatives:
  - GSOC
  - SOCIS
