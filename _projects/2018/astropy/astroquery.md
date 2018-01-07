@@ -15,7 +15,8 @@ initiatives:
  - GSOC
 tags:
  - python
- - astropquery
+ - astroquery
+ - astropy
 collaborating_projects:
  - astropy
  - astroquery
@@ -25,11 +26,11 @@ collaborating_projects:
 
 [astroquery](http://astroquery.readthedocs.io/), an astropy
 affiliated package, is a package to place modules that access astronomical data
-that is onlone. The aim of this project will be to implement just such modules,
+that is online. The aim of this project will be to implement just such modules,
 for a variety of astronomical archives that are currently lacking astroquery modules.
-A list of new services that have been suggested by our users
-[can be found here](https://github.com/astropy/astroquery/issues?q=is%3Aissue+is%3Aopen+label%3A%22New+Service%22) and
-in [this summary issue](https://github.com/astropy/astroquery/issues/226).
+A full list of new services that have been suggested by our users
+[can be found in these issues](https://github.com/astropy/astroquery/issues?q=is%3Aissue+is%3Aopen+label%3A%22New+Service%22),
+and a summary [in this issue](https://github.com/astropy/astroquery/issues/226).
 
 
 A *possible* set of milestones for any particular one of these modules  might be:
