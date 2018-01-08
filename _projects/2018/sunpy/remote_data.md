@@ -6,7 +6,7 @@ requirements:
  - Familiar with checksumming and caches.
 difficulty: low
 issues:
- - https://github.com/sunpy/sunpy/issues/1938
+ - https://github.com/sunpy/sunpy/issues/1939
  - https://github.com/sunpy/sunpy/issues/1897
 mentors:
  - Cadair
@@ -35,7 +35,7 @@ functionality will therefore have to validate the retrieved files have the
 expected hashes, while providing ways for users to override this hash if they
 are aware of changes on the remote server.
 
-See [issue #1938](https://github.com/sunpy/sunpy/issues/1938) for more details.
+See [issue #1939](https://github.com/sunpy/sunpy/issues/1939) for more details.
 
 #### Milestones (if any)
 
