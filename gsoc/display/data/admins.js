@@ -1,1 +1,1 @@
-admins = ["dpshelio", "Cadair", "taldcroft", "eteq"]
+admins = ["dpshelio", "bsipocz"]
