@@ -1,5 +1,5 @@
 ---
-name: Add seamlessly compatibility between astropy.modeling.models and emcee
+name: A compatibility protocol for astropy models and emcee
 desc: Implement a protocol to enable astropy.modeling.models to be used in emcee
 requirements:
  - Python
