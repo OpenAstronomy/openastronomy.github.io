@@ -1,6 +1,6 @@
 ---
 name: A compatibility protocol for astropy models and emcee
-desc: Implement a protocol to enable astropy.modeling.models to be used in emcee
+desc: Implement a protocol to enable astropy models to be used in emcee
 requirements:
  - Python
  - Solid understanding of probability (likelihood functions, Bayes' theorem, etc)
