@@ -54,3 +54,6 @@ to ensure the implementations are operational.
 extensive look at*
 [this](https://github.com/astropy/astropy-model-ideas/blob/master/MCMCWithAstropyModels.ipynb)
 *IPython notebook.*
+
+*Might be worth to look at* [oktopus](https://github.com/KeplerGO/oktopus)
+*for inspiration on step 2.*
