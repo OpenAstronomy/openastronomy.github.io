@@ -10,7 +10,7 @@ issues:
  -
 mentors:
  - mirca
- - pllim
+ - karllark
 initiatives:
  - GSOC
 tags:
