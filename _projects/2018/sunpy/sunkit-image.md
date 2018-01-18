@@ -50,19 +50,21 @@ optional extras:
 
 #### Milestones
 
-##### GSOC 2018 CODING STARTS
+##### GSOC 2018 Official Coding Start
 
 * Have familiarised yourself with the algorithms and with Python packaging. Have worked with the mentors to get the package repository setup on GitHub and the CI and documentation running.
 
-##### GSOC 2018 MIDTERM
+##### To be completed by the GSOC 2018 Phase 1 Evaluation Deadline
 
 * Have implemented, tested and documented the NRGF code.
 * Have implemented, tested and documented the MGN code.
-* Have implemented OCCULT-2.
 
-
-##### GSOC 2018 FINAL 
+##### To be completed by the GSOC 2018 Phase 2 Evaluation Deadline
 
 * Have successfully merged the NRGF and MGN code.
+* Have implemented OCCULT-2.
+
+##### To be completed by the end of the GSOC 2018 Final Week 
+
 * Have tested, documented and merged the OCCULT-2 code.
 * Have developed an outline of the implementation of the image resampling code in the context of the Astropy reproject module.
