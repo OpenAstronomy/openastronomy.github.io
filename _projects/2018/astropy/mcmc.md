@@ -11,6 +11,7 @@ issues:
 mentors:
  - mirca
  - karllark
+ - eteq
 initiatives:
  - GSOC
 tags:
