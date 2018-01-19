@@ -30,8 +30,8 @@ This will mean finding out ways of automatically detecting the correct units
 from raw data, and then converting current code to using the astropy
 units system.
 
-For more information on HelioPy see http://docs.heliopy.org/en/stable/
-For more information on astropy units see http://docs.astropy.org/en/stable/units/index.html
+Find more information about [HelioPy](http://docs.heliopy.org/en/stable/) and 
+[astropy units](http://docs.astropy.org/en/stable/units/index.html)
 
 #### Milestones (if any)
 
