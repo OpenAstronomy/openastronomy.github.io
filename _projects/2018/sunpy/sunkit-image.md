@@ -10,7 +10,7 @@ issues:
 mentors:
  - Cadair
  - wafels
- - Nabobalis
+ - nabobalis
 initiatives:
  - GSOC
  - SOCIS
