@@ -32,7 +32,9 @@ The `Plasma` metaclass itself would create the appropriate subclass when instant
 #### Primary Goals
 
 - Write the `Plasma` metaclass
+- Write appropriate tests and documentation
 
 #### Secondary Goals
 
 - Write one or more subclasses to load and store plasma data
+- Write appropriate tests and documentation for each subclass
