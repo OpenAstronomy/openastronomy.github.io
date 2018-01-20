@@ -56,6 +56,9 @@ ims_repository: https://bitbucket.org/italianmarssociety/eras/src
 coin_url: https://asaip.psu.edu/organizations/iaa/iaa-working-group-of-cosmostatistics/
 coin_repository: https://github.com/COINtoolbox/
 
+timelab_repository: https://github.com/StingraySoftware/
+timelab_url: http://www.timelabtechnologies.com/ideas.html
+
 glue_url: http://www.glueviz.org/
 glue_mailinglist_user: http://groups.google.com/group/glue-viz
 glue_mailinglist_dev: http://groups.google.com/group/glue-viz-dev
