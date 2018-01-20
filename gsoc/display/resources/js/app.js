@@ -93,7 +93,9 @@
 					});
 				});
 
-				angular.forEach(admins, function(value, key){
+        var url_array = window.location.href.split('/');
+        var year = url_array[url_array.length - 1].replace('.html','')
+				angular.forEach(admins[year], function(value, key){
 						self.adminsList[value] = {
 							"github_handle" : value,
 							"github_avatar_url": "https://avatars.githubusercontent.com/" +value
