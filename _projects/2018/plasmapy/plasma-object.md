@@ -16,7 +16,7 @@ tags:
  - python
  - 
 collaborating_projects:
- - 
+ - PlasmaPy
 ---
 
 #### Description
@@ -28,6 +28,4 @@ Given the broad purview of plasma physics, PlasmaPy will need to be able to hand
 The aim of this project would therefore be to implement a new `Plasma` metaclass and a number of subclasses, similar to SunPy's use of [`Map`s](http://docs.sunpy.org/en/stable/code_ref/map.html) for solar observations from different instruments.
 These subclasses would handle respresenting and storing different kinds of plasmas using appropriate structures; for instance a `yt` data object would be ideal for 3D simulation data but not for a 1D observational timeseries.
 The `Plasma` metaclass itself would provide the user interface to these and create the appropriate subclass when instantiated.
-
-Some milestones for this project will be:
 
