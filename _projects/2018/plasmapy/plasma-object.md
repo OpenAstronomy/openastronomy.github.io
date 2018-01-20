@@ -29,3 +29,10 @@ The aim of this project would therefore be to implement a new `Plasma` metaclass
 These subclasses would handle respresenting and storing different kinds of plasmas using appropriate structures; for instance a `yt` data object would be ideal for 3D simulation data but not for a 1D observational timeseries.
 The `Plasma` metaclass itself would create the appropriate subclass when instantiated, and provide a single data-agnostic user interface.
 
+#### Primary Goals
+
+- Write the `Plasma` metaclass
+
+#### Secondary Goals
+
+- Write one or more subclasses to load and store plasma data
