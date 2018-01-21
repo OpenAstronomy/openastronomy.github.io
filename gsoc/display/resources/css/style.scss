@@ -1,0 +1,530 @@
+// File generated from style.css using: http://sebastianpontow.de/css2compass/
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i|Roboto:100,200,300,400,500,600,700,800,900|Ubuntu+Mono|Overpass+Mono|Inconsolata);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+//colors
+$black: black;
+$color_waterloo__approx: lightslategrey;
+$color_froly_70_approx: rgba(238, 110, 115, 0.7);
+$color_quill_gray_approx:  lightgrey;
+$white: #fff;
+$color_cape_cod_approx: #424242;
+$color_star_dust_approx: #9e9e9e;
+$color_celeste_approx: #d1d1d1;
+$color_plantation_approx: darkslategrey;
+$color_half_dutch_white_approx: cornsilk;
+$color_twilight_blue_approx: azure;
+$color_mimosa_approx: lightgoldenrodyellow;
+$wheat: wheat;
+$color_athens_gray_approx: #eceff1;
+$color_outer_space_approx: #263238;
+$color_blue_chill_approx: darkcyan;
+$color_tradewind_approx: mediumaquamarine;
+
+//fonts
+$font_0: Roboto;
+$font_1: Roboto !important;
+$font_2: Roboto Mono;
+$font_3: menlo;
+$font_4: monospace;
+$font_5:  -apple-system, BlinkMacSystemFont, $font_0, sans-serif;
+
+.tabs {
+	font-family: $font_0;
+	font-size: 1em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	.tab {
+		display: inline-block;
+		text-align: center;
+		line-height: 48px;
+		height: 48px;
+		padding: 0;
+		margin: 0;
+		cursor: pointer;
+		text-transform: uppercase;
+		a {
+			color: $color_waterloo__approx !important;
+			display: block;
+			width: 100%;
+			height: 100%;
+			padding: 0 24px;
+			font-size: 14px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			//Instead of the line below you could use @include transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+			transition: color .28s ease;
+			&:hover {
+				background-color: transparent;
+				color: $black !important;
+			}
+			&.active {
+				background-color: transparent;
+				color: $black !important;
+			}
+		}
+		&.disabled a {
+			color: $color_froly_70_approx;
+			cursor: default;
+			&:hover {
+				color: $color_froly_70_approx;
+				cursor: default;
+			}
+		}
+	}
+	.indicator {
+		position: absolute;
+		bottom: 0;
+		height: 2px;
+		background-color: $black !important;
+		will-change: left, right;
+		margin-left: 3em;
+		margin-right: 3em;
+	}
+	.col-md-4 {
+		position: initial !important;
+	}
+}
+.title {
+  font-family: $font_5;
+	font-size: 14em;
+	font-weight: 100;
+	text-align: center;
+}
+.title-get-involved {
+  font-family: $font_5;
+	font-size: 5em;
+	font-weight: 100;
+	text-align: center;
+}
+.main-content {
+	margin-top: 2em;
+}
+.logo2 {
+	height: 15em;
+	margin-top: 4em;
+}
+.description {
+	font-family: $font_0;
+	font-size: 1.6em;
+	text-align: center;
+	font-weight: 300;
+	text-transform: none !important;
+}
+pre {
+	padding: 0;
+}
+.tip {
+	font-size: 1.2em;
+}
+.tip-small {
+	font-size: 1em;
+}
+.terminal-install {
+	margin-top: 1em;
+}
+.dev-row {
+	border-top: 1px solid $color_quill_gray_approx;
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 0 !important;
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+.no-border {
+	border-top: 0 !important;
+}
+.example-card {
+	padding: 2em;
+}
+.example-select {
+	padding: 2em;
+}
+.footer-text {
+	text-align: center;
+	color: $color_waterloo__approx;
+	font-family: $font_0;
+	padding: 1em;
+}
+.ft-span {
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+}
+.container-title {
+	font-size: 3em;
+	font-weight: 100;
+}
+body {
+	  display: flex !important;
+	  min-height: 100vh !important;
+	  flex-direction: column !important;
+    font-family: $font_0;
+}
+.page-content {
+	display: flex !important;
+	min-height: 100vh !important;
+	flex-direction: column !important;
+  font-family: $font_0;
+  line-height: 1.5;
+}
+main {
+	flex: 1 0 auto;
+}
+#search {
+	font-size: 24px !important;
+	border: none !important;
+	font-family: $font_1;
+	font-weight: 500;
+	color: $black !important;
+	//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+	box-shadow: none !important;
+}
+.btn {
+	background-color: $black !important;
+	&:hover {
+		background-color: $color_cape_cod_approx !important;
+	}
+}
+.btn-large {
+	background-color: $black !important;
+	&:hover {
+		background-color: $color_cape_cod_approx !important;
+	}
+}
+::-webkit-input-placeholder {
+	font-weight: 200;
+	color: $color_star_dust_approx;
+}
+:-moz-placeholder {
+	font-weight: 200;
+	color: $color_celeste_approx;
+}
+::-moz-placeholder {
+	font-weight: 200;
+	color: $color_celeste_approx;
+}
+:-ms-input-placeholder {
+	font-weight: 200;
+	color: $color_celeste_approx;
+}
+.card-title {
+	overflow-wrap: break-word !important;
+	padding: 0.5em;
+	text-align: center;
+}
+.footer-coala {
+	font-size: 42px;
+	font-weight: 100;
+	vertical-align: text-bottom;
+}
+.footer-coala-row {
+	margin: 0 !important;
+}
+.snippet-card {
+	white-space: pre-line !important;
+}
+.showcase {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 4em;
+}
+.showcase-card {
+	width: 300px;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+.name-bear {
+	font-size: 22px !important;
+}
+.markdown {
+	p {
+		display: block !important;
+	}
+	a {
+		color: $color_twilight_blue_approx;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	h4 {
+		font-size: 1.1em;
+		letter-spacing: 0.1em;
+		color: $wheat;
+		text-transform: uppercase;
+	}
+	h5 {
+		font-size: 1em;
+		letter-spacing: 0.1em;
+		color: $wheat;
+	}
+	li {
+		list-style-type: disc !important;
+	}
+	ul li {
+		margin-left: 1em;
+	}
+}
+a {
+	> .card {
+		color: $black !important;
+	}
+	&:hover > .card {
+		color: $black !important;
+	}
+}
+.modal {
+	width: 90% !important;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0 !important;
+	top: 25% !important;
+  bottom:25%;
+}
+.profile {
+	background-color: $black;
+	color: $white;
+}
+.dashboard {
+	background-color: $color_plantation_approx;
+}
+.modal-content-bear {
+	  display: flex;
+}
+.project-name {
+	font-size: 2em;
+	text-align: center;
+	padding-right: 1em;
+	padding-top: 1em;
+	padding-bottom: 0.1em;
+	font-weight: 100;
+	overflow-wrap: break-word;
+}
+.project-description {
+	color: $color_quill_gray_approx;
+	text-align: justify;
+	font-size: 1.1em;
+	font-family: $font_0;
+	font-weight: 300;
+	padding: 1em;
+	> p > a {
+		color: $color_half_dutch_white_approx;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+.project-card-detail {
+	cursor: pointer;
+	height: 200px;
+}
+.pr-element-detail {
+	font-size: 1em;
+}
+.small-heading {
+	font-size: 0.9em;
+	padding: 0.5em;
+	font-weight: 400;
+	color: $color_mimosa_approx;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+.authors {
+	font-size: 14px;
+	color: $wheat;
+	font-weight: 400;
+}
+.author-row {
+	padding-top: 20%;
+}
+.showcase-gi {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 1em;
+	.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
+		margin-right: 0 !important;
+	}
+}
+.showcase-card-gi {
+	width: 220px;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+.profile-img {
+  margin-top: -5em;
+  width: 100px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 100%;
+}
+.empty {
+	background-color: $color_athens_gray_approx !important;
+	height: 5em;
+}
+.profile-data {
+	background-color: $color_outer_space_approx !important;
+	color: $white;
+}
+.person-name {
+	font-size: 1.1em;
+	font-weight: 300;
+	text-align: center;
+}
+.small-heading-light {
+	font-size: 12px;
+	letter-spacing: 0.1em;
+	text-align: center;
+	color: $color_quill_gray_approx;
+	font-weight: 500;
+	opacity: 0.2;
+}
+.person-contributions {
+	margin-top: 2em;
+	text-align: center;
+	letter-spacing: 0.1em;
+}
+.person-github-id {
+	font-size: 1.2em;
+	text-align: center;
+	padding: 0.5em;
+	text-transform: none !important;
+	font-family: $font_2, $font_3, $font_4;
+}
+.person-github-bio {
+	font-size: 0.8em;
+	text-align: center;
+	padding-top: 0.5em;
+}
+.person-github-id-div {
+	padding: 0.5em;
+	text-align: center !important;
+}
+.github-link {
+	bottom: 0;
+	margin-top: 1em;
+}
+.gi-container-title {
+	font-size: 5em;
+	font-weight: 100;
+	text-align: center;
+}
+.main-content-faq {
+	padding: 4em;
+}
+.gi-container-title-header {
+	font-size: 6em;
+	font-weight: 200;
+	text-align: center;
+}
+.contributions-row {
+	margin-bottom: 0 !important;
+	position: absolute;
+	text-align: center;
+	width: 180px;
+	bottom: 0;
+	padding-bottom: 1em;
+}
+.medium-heading {
+	font-size: 1.3em;
+	padding: 0.5em;
+	font-weight: 400;
+	color: $color_mimosa_approx;
+	letter-spacing: 0.1em;
+}
+.mentors-github-id {
+	font-size: 1.2em;
+	color: $color_blue_chill_approx !important;
+	text-transform: none !important;
+	font-family: $font_2, $font_3, $font_4;
+	display: inline-block;
+	&:hover {
+		color: $black !important;
+	}
+}
+input {
+	background-color: $color_quill_gray_approx !important;
+	padding-left: 0.5em !important;
+}
+@media only screen and(max-width: 500px) {
+	.tabs .indicator {
+		position: absolute;
+		bottom: 0;
+		height: 2px;
+		background-color: $black !important;
+		will-change: left, right;
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
+}
+.explore {
+	text-transform: uppercase;
+}
+.markdown-reqs {
+	p {
+		display: initial !important;
+	}
+	a {
+		color: $color_tradewind_approx;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+}
+.project-overview-element {
+	padding: 10px !important;
+}
+.collapsible-body {
+	p {
+		margin: 0;
+		padding: 0.5em !important;
+	}
+	li {
+		list-style-type: disc !important;
+	}
+}
+.clickable {
+	cursor: pointer;
+}
+span.caret {
+	color: initial;
+	position: absolute;
+	right: 0;
+	top: 16px;
+	font-size: 10px;
+	padding-left: 10px;
+}
+footer.page-footer {
+	margin-top: 20px;
+	padding-top: 20px;
+	background-color: $white !important;
+	.footer-copyright {
+		overflow: hidden;
+		height: 50px;
+		line-height: 50px;
+		color: $color_waterloo__approx !important;
+		background-color: $white !important;
+	}
+}
+.reqs-proj > .chip {
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0 !important;
+}
+div.mentors {
+	text-align: center;
+}
+input:not([type]) {
+	background-color: $color_quill_gray_approx;
+	padding-left: 0.5em !important;
+}
+textarea.materialize-textarea {
+	background-color: $color_quill_gray_approx;
+	padding-left: 0.5em !important;
+}
+ul:not(.browser-default) {
+	margin-left: 1em !important;
+	li {
+		margin-left: 1em;
+	}
+}
+.req-ul li {
+	list-style-type: disc !important;
+}
