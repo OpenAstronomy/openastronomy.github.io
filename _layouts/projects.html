@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
     <script type="text/javascript" src="./data/faq.js"></script>
     <script>
      {% assign groups = site.projects | shuffle %}
@@ -52,32 +53,20 @@
 </head>
 <body>
     <div class="page-content">
-    <main>
+    <main ng-app="gsoc">
     <div ng-controller="TabController as tc">
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <ul class="tabs">
-                        <li class="tab col-md-4"><a ng-click="tc.setTab(1)" ng-class="{active:tc.isSet(1)}">Projects</a></li>
-                        <li class="tab col-md-4"><a ng-click="tc.setTab(2)" ng-class="{active:tc.isSet(2)}">Mentors</a></li>
-                        <li class="tab col-md-4"><a ng-click="tc.setTab(3)" ng-class="{active:tc.isSet(3)}">FAQ</a></li>
+                    <ul class="tabs uppercase">
+                        <li class="tab col-md-4"><a ng-click="tc.setTab('/projects')" " ng-class="{active:tc.isSet('/projects')}">Projects</a></li>
+                        <li class="tab col-md-4"><a ng-click="tc.setTab('/mentors')" ng-class="{active:tc.isSet('/mentors')}">Mentors</a></li>
+                        <li class="tab col-md-4"><a ng-click="tc.setTab('/faq')" ng-class="{active:tc.isSet('/faq')}">FAQ</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-
-    <div ng-show="tc.isSet(1)">
-    <projects></projects>
-    </div>
-
-    <div ng-show="tc.isSet(2)">
-    <mentors></mentors>
-    </div>
-
-    <div ng-show="tc.isSet(3)">
-    <faq></faq>
-    </div>
-
+        <div ng-view=""></div>
     </div>
     </main>
     </div>

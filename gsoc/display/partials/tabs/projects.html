@@ -1,4 +1,4 @@
-<section>
+<section id="projectCtrl">
   <div class="main-content container">
 
     <div class="col-md-8 col-md-offset-2">
@@ -113,8 +113,12 @@
       starting_top: '10%', // Starting top style attribute
       ending_top: '10%', // Ending top style attribute
       ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        $(this).focus()
       },
-      complete: function() {  } // Callback for Modal close
+      complete: function() {
+      angular.element('#projectCtrl').scope().updateLink();
+      angular.element('#projectCtrl').scope().$apply();
+     } // Callback for Modal close
     }
     );
   })
