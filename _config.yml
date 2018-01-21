@@ -57,7 +57,8 @@ coin_url: https://asaip.psu.edu/organizations/iaa/iaa-working-group-of-cosmostat
 coin_repository: https://github.com/COINtoolbox/
 
 timelab_repository: https://github.com/StingraySoftware/
-timelab_url: http://www.timelabtechnologies.com/ideas.html
+timelab_url: http://www.timelabtechnologies.com
+timelab_slack: http://slack-invite.timelabtechnologies.com
 
 glue_url: http://www.glueviz.org/
 glue_mailinglist_user: http://groups.google.com/group/glue-viz
