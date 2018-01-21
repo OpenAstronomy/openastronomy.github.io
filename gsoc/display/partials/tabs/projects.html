@@ -1,8 +1,8 @@
 <section id="projectCtrl">
   <div class="main-content container">
 
-    <div class="col-md-8 col-md-offset-2">
-      <div class="input-field col-md-10">
+    <div class="col-md-10 col-md-offset-2">
+      <div class="input-field col-md-8">
         <input ng-model="searchText" placeholder="Search for a project" id="search" type="text" class="validate">
       </div>
       <div class="input-field col-md-2">
@@ -37,6 +37,7 @@
         </div>
       </div>
     </div>
+    <br/><br/><br/><br/>
   </section>
 
   <div id="modal1" class="modal">
@@ -100,18 +101,17 @@
 
 
     $('.explore').click(function () {
-      $('html,body').animate({
+      $('html,body,main').animate({
         scrollTop: $(".showcase").offset().top},
         'slow');
     })
 
+    // #modal1 (id), .modal (class)
     $('.modal').modal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
       opacity: 0.8, // Opacity of modal background
       in_duration: 300, // Transition in duration
       out_duration: 200, // Transition out duration
-      starting_top: '10%', // Starting top style attribute
-      ending_top: '10%', // Ending top style attribute
       ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
         $(this).focus()
       },
