@@ -28,12 +28,18 @@ The aim of this project would therefore be to implement a new `Plasma` metaclass
 These subclasses would handle respresenting and storing different kinds of plasmas using appropriate structures; for instance a `yt` data object would be ideal for 3D simulation data but not for a 1D observational timeseries.
 The `Plasma` metaclass itself would create the appropriate subclass when instantiated, and provide a single data-agnostic user interface.
 
-#### Primary Goals
+#### Milestones
 
-- Write the `Plasma` metaclass
-- Write appropriate tests and documentation
+##### To be completed by the GSOC 2018 Phase 1 Evaluation Deadline
 
-#### Secondary Goals
+- Write appropriate tests and basic documentation for the a new `Plasma` metaclass
 
-- Write one or more subclasses to load and store plasma data
-- Write appropriate tests and documentation for each subclass
+##### To be completed by the GSOC 2018 Phase 2 Evaluation Deadline
+
+- Implement the `Plasma` metaclass
+
+##### To be completed by the GSOC 2018 Final Week
+
+- Update tests and documentation as necessary
+- Remove any bugs in `Plasma` implementation
+- If the above are done ahead of schedule, also implement, test and document one or more subclasses to load and store plasma data in commonly used formats
