@@ -7,6 +7,7 @@ difficulty: medium
 issues:
  - https://github.com/StingraySoftware/stingray/issues/293
 mentors:
+ - abigailStev
  - matteobachetti
 initiatives:
  - GSOC
@@ -29,9 +30,9 @@ This is highly non-trivial: one cannot follow easily the single "heartbeat", but
 the signal first, and then calculate the average spectrum during the oscillation. 
 The reward for this scientific approach can be very high, and people have implemented a few different approaches to the problem, e.g.:
 
-+ [Ingram et al. 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=EJOURNAL)
++ Ingram et al. 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=EJOURNAL) ([open-access preprint](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=PREPRINT)
 
-+ [Stevens & Uttley 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&link_type=ARTICLE)
++ [Stevens & Uttley 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&link_type=ARTICLE) ([open-access preprint](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&link_type=PREPRINT)
 
 In this Project, the student will work with the mentor to implement the full chain of denoising and 
 phase-resolved spectroscopy of quasi-periodic oscillations, in such a way that
@@ -45,12 +46,20 @@ Both methods can actually be used for pulsars too (it is the trivial case!).
 #### Deliverables
 Deliverables for this project will be
 
-+ a semi-automated procedure to follow the frequency of oscillations as they vary
-
-+ the de-noising function that leads to the oscillation average profile ("heartbeat" shape) at different energies
+##### To complete each milestone
 
 + working unit tests for each piece of code
 
 + documentation for each class, method and function implemented
+
+##### Milestone 1
+
++ a semi-automated procedure to follow the frequency of oscillations as they vary
+
+##### Milestone 2
+
++ the de-noising function that leads to the oscillation average profile ("heartbeat" shape) at different energies
+
+##### Final
 
 + a suite of scripts outlining workflows useful to scientists in practice
