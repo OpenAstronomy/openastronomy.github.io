@@ -19,7 +19,8 @@ collaborating_projects:
 
 #### Description
 
-PlasmaPy uses a single basic `Plasma` class to represent plasmas.
+Plasma physics is an important and wide-ranging field of research with applications from astrophysics to fusion power, and PlasmaPy is a Python package which provides aims to provide tools for this research.
+Currently PlasmaPy uses a single basic `Plasma` class to represent plasmas.
 This class works well enough for the moment, but lacks a significant amount of flexibility that will be needed as PlasmaPy grows.
 Given the broad purview of plasma physics, PlasmaPy will need to be able to handle observational data, simulation results and theoretical plasmas, but should ideally provide a single user experience for working with any of these.
 
