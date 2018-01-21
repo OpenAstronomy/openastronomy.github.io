@@ -6,8 +6,6 @@ requirements:
  - Some background of physics preferred, especially electromagnetism, flulid mechanics and/or plasma physics
  - Some experience with scientific data formats, especially plasma physics data formats, is preferred
 difficulty: High
-issues:
- - 
 mentors:
  - SolarDrew
  - namurphy
@@ -15,7 +13,6 @@ initiatives:
  - GSOC
 tags:
  - python
- - 
 collaborating_projects:
  - PlasmaPy
 ---
