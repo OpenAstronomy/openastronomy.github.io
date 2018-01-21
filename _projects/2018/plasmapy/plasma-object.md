@@ -3,8 +3,8 @@ name: Plasma class
 desc: Devlop a new Plasma class for loading and storing multiple types of plasma physics data.
 requirements:
  - Good knowledge of Python, including object-oriented programming
- - Familiarity with basics of plasma physics
- - Some experience with plasma physics data formats
+ - Some background of physics preferred, especially electromagnetism, flulid mechanics and/or plasma physics
+ - Some experience with scientific data formats, especially plasma physics data formats, is preferred
 difficulty: High
 issues:
  - 
