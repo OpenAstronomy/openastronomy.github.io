@@ -9,6 +9,7 @@ difficulty: High
 mentors:
  - SolarDrew
  - namurphy
+ - StanczakDominik
 initiatives:
  - GSOC
 tags:
