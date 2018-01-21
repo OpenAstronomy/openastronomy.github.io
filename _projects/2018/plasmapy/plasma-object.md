@@ -10,6 +10,7 @@ issues:
  - 
 mentors:
  - SolarDrew
+ - namurphy
 initiatives:
  - GSOC
 tags:
