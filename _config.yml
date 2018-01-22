@@ -38,20 +38,19 @@ chianti_url: http://www.chiantidatabase.org/
 chiantipy_url: http://chiantipy.sourceforge.net/welcome.html
 chiantipy_mailinglist_user: https://lists.sourceforge.net/lists/listinfo/chiantipy-users
 
-yt_url: http://yt-project.org/
+yt_url: https://yt-project.org/
 yt_mailinglist_user: http://lists.spacepope.org/listinfo.cgi/yt-users-spacepope.org
 yt_mailinglist_dev: http://lists.spacepope.org/listinfo.cgi/yt-dev-spacepope.org
 yt_irc: yt
 
-juliaastro_url: http://juliaastro.github.io/
+juliaastro_url: https://juliaastro.github.io/
 juliaastro_mailinglist_user: https://groups.google.com/forum/#!forum/julia-astro
 
-casacore_url: http://www.github.com/casacore/casacore/
+casacore_url: https://www.github.com/casacore/casacore/
 
 ims_url: http://www.marssociety.it/?lang=en
-ims_eras_url: http://erasproject.org/
-ims_mailinglist: https://groups.google.com/forum/#!forum/erasproject
-ims_repository: https://bitbucket.org/italianmarssociety/eras/src
+ims_eras_url: http://www.mars-city.org/
+ims_repository: https://bitbucket.org/italianmarssociety/
 
 coin_url: https://asaip.psu.edu/organizations/iaa/iaa-working-group-of-cosmostatistics/
 coin_repository: https://github.com/COINtoolbox/
@@ -61,19 +60,19 @@ timelab_url: http://www.timelabtechnologies.com
 timelab_slack: http://slack-invite.timelabtechnologies.com
 
 glue_url: http://www.glueviz.org/
-glue_mailinglist_user: http://groups.google.com/group/glue-viz
-glue_mailinglist_dev: http://groups.google.com/group/glue-viz-dev
+glue_mailinglist_user: https://groups.google.com/group/glue-viz
+glue_mailinglist_dev: https://groups.google.com/group/glue-viz-dev
 
-poliastro_url: http://poliastro.readthedocs.io/
+poliastro_url: https://poliastro.readthedocs.io/
 poliastro_mailinglist_dev: https://groups.io/g/poliastro-dev
 poliastro_riot: https://riot.im/app/#/room/#poliastro:matrix.org
 
-plasmapy_url: http://plasmapy.org
-plasmapy_mailinglist: http://groups.google.com/group/plasmapy
+plasmapy_url: http://www.plasmapy.org
+plasmapy_mailinglist: https://groups.google.com/group/plasmapy
 plasmapy_riot: https://riot.im/app/#/room/#plasmapy:matrix.org
 
 heliopy_url: http://heliopy.org
-heliopy_mailinglist: http://groups.google.com/group/plasmapy
+heliopy_mailinglist: https://groups.google.com/group/plasmapy
 heliopy_riot: https://riot.im/app/#/room/#heliopy:matrix.org
 
 sherpa_repo: https://www.github.com/sherpa/sherpa/
