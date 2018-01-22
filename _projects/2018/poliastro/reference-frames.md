@@ -11,6 +11,7 @@ issues:
  - https://github.com/poliastro/poliastro/issues/288
 mentors:
  - juanlu001
+ - newlawrence
 initiatives:
  - GSOC
  - SOCIS
