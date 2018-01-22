@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="coala">
 <head>
-
-    <title>{{ page.title }}</title>
+    {% include head.html %}
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script type="text/javascript" src="./data/faq.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+    <script type="text/javascript" src="/gsoc/display/data/faq.js"></script>
     <script>
      {% assign groups = site.projects | shuffle %}
      {% assign notwanted = "next,content,previous,output,excerpt,draft" %}
@@ -27,60 +27,42 @@
             endfor %}
      ];
     </script>
-    <script type="text/javascript" src="./data/admins.js"></script>
-    <script type="text/javascript" src="./vendors/angular-sanitize/angular-sanitize.js"></script>
-    <script type="text/javascript" src="./vendors/showdown/showdown.js"></script>
-    <script type="text/javascript" src="./vendors/markdown/markdown.js"></script>
-    <script type="text/javascript" src="./resources/js/app.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="./vendors/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./vendors/materialize/css/materialize.css">
-    <link rel="stylesheet" type="text/css" href="./resources/css/style.css">
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,300i,400,400i,700,700i|Roboto:100,200,300,400,500,600,700,800,900|Ubuntu+Mono|Overpass+Mono|Inconsolata" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="/gsoc/display/data/admins.js"></script>
+    <script type="text/javascript" src="/gsoc/display/vendors/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="/gsoc/display/vendors/showdown/showdown.js"></script>
+    <script type="text/javascript" src="/gsoc/display/vendors/markdown/markdown.js"></script>
+    <script type="text/javascript" src="/gsoc/display/resources/js/app.js"></script>
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <style>
-        .container {
-            width: 95%;
-        }
-    </style>
-    <base target="_blank" />
 </head>
 <body>
+
+    {% include header.html %}
+
+    <div class="projects" > <!-- To keep the css separated -->
     <div class="page-content">
-    <main>
+    <main ng-app="gsoc">
     <div ng-controller="TabController as tc">
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <ul class="tabs">
-                        <li class="tab col-md-4"><a ng-click="tc.setTab(1)" ng-class="{active:tc.isSet(1)}">Projects</a></li>
-                        <li class="tab col-md-4"><a ng-click="tc.setTab(2)" ng-class="{active:tc.isSet(2)}">Mentors</a></li>
-                        <li class="tab col-md-4"><a ng-click="tc.setTab(3)" ng-class="{active:tc.isSet(3)}">FAQ</a></li>
+                    <ul class="tabs uppercase">
+                        <li class="tab col-md-4"><a ng-click="tc.setTab('/projects')" " ng-class="{active:tc.isSet('/projects')}">Projects</a></li>
+                        <li class="tab col-md-4"><a ng-click="tc.setTab('/mentors')" ng-class="{active:tc.isSet('/mentors')}">Mentors</a></li>
+                        <li class="tab col-md-4"><a ng-click="tc.setTab('/faq')" ng-class="{active:tc.isSet('/faq')}">FAQ</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-
-    <div ng-show="tc.isSet(1)">
-    <projects></projects>
-    </div>
-
-    <div ng-show="tc.isSet(2)">
-    <mentors></mentors>
-    </div>
-
-    <div ng-show="tc.isSet(3)">
-    <faq></faq>
-    </div>
-
+        <div ng-view=""></div>
     </div>
     </main>
     </div>
+    </div>
+
+    {% include footer.html %}
 
 </body>
 </html>
