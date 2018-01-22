@@ -26,13 +26,13 @@ irc_freenode: irc://irc.freenode.net/
 
 astropy_url: http://www.astropy.org/
 astropy_mailinglist_user: http://mail.scipy.org/mailman/listinfo/astropy
-astropy_mailinglist_dev: https://groups.google.com/group/astropy-dev
-astropy_irc: astropy
+astropy_mailinglist_dev: http://groups.google.com/group/astropy-dev
+astropy_slack: http://joinslack.astropy.org/
 
 sunpy_url: http://sunpy.org
-sunpy_mailinglist_user: https://groups.google.com/group/sunpy
-sunpy_mailinglist_dev: https://groups.google.com/group/sunpy-dev
-sunpy_irc: sunpy
+sunpy_mailinglist_user: http://groups.google.com/group/sunpy
+sunpy_mailinglist_dev: http://groups.google.com/group/sunpy-dev
+sunpy_riot: https://riot.im/app/#/room/#sunpy:matrix.org
 
 chianti_url: http://www.chiantidatabase.org/
 chiantipy_url: http://chiantipy.sourceforge.net/welcome.html
@@ -54,6 +54,10 @@ ims_repository: https://bitbucket.org/italianmarssociety/
 
 coin_url: https://asaip.psu.edu/organizations/iaa/iaa-working-group-of-cosmostatistics/
 coin_repository: https://github.com/COINtoolbox/
+
+timelab_repository: https://github.com/StingraySoftware/
+timelab_url: http://www.timelabtechnologies.com
+timelab_slack: http://slack-invite.timelabtechnologies.com
 
 glue_url: http://www.glueviz.org/
 glue_mailinglist_user: https://groups.google.com/group/glue-viz
