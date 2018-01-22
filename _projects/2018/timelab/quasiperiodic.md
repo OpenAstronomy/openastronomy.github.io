@@ -30,36 +30,36 @@ This is highly non-trivial: one cannot follow easily the single "heartbeat", but
 the signal first, and then calculate the average spectrum during the oscillation. 
 The reward for this scientific approach can be very high, and people have implemented a few different approaches to the problem, e.g.:
 
-+ Ingram et al. 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=EJOURNAL) ([open-access preprint](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=PREPRINT)
++ [Ingram et al. 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=EJOURNAL) [open-access preprint](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=PREPRINT)
 
-+ [Stevens & Uttley 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&link_type=ARTICLE) ([open-access preprint](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&link_type=PREPRINT)
++ [Stevens & Uttley 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&link_type=ARTICLE) [open-access preprint](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&link_type=PREPRINT)
 
-In this Project, the student will work with the mentor to implement the full chain of denoising and 
+In this Project, the student will work with the mentor to implement the full chain of de-noising and 
 phase-resolved spectroscopy of quasi-periodic oscillations, in such a way that
 
-Any user with proper data sets can easily get a result
++ Any user with proper data sets can easily get a result
 
-If datasets do not allow a solution (e.g. the modulation is not strong enough) warnings have to be sent.
++ If datasets do not allow a solution (e.g., the modulation is not strong enough) warnings have to be sent.
 
-Both methods can actually be used for pulsars too (it is the trivial case!).
++ Both methods can actually be used for pulsars too (it is the trivial case!).
 
 #### Deliverables
 Deliverables for this project will be
 
 ##### To complete each milestone
 
-+ working unit tests for each piece of code
++ Working unit tests for each piece of code
 
-+ documentation for each class, method and function implemented
++ Documentation for each class, method and function implemented
 
 ##### Milestone 1
 
-+ a semi-automated procedure to follow the frequency of oscillations as they vary
++ A semi-automated procedure to follow the frequency of oscillations as they vary
 
 ##### Milestone 2
 
-+ the de-noising function that leads to the oscillation average profile ("heartbeat" shape) at different energies
++ The de-noising function that leads to the oscillation average profile ("heartbeat" shape) at different energies
 
 ##### Final
 
-+ a suite of scripts outlining workflows useful to scientists in practice
++ A suite of scripts outlining workflows useful to scientists in practice
