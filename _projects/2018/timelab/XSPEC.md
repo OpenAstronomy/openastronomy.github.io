@@ -7,9 +7,8 @@ difficulty: hard
 issues:
 - https://github.com/StingraySoftware/stingray/issues/294
 mentors:
- - abigailStev
- - matteobachetti
  - dhuppenkothen
+ - abigailStev
 initiatives:
  - GSOC
 tags:
