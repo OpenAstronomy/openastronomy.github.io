@@ -30,7 +30,7 @@ This is highly non-trivial: one cannot follow easily the single "heartbeat", but
 the signal first, and then calculate the average spectrum during the oscillation. 
 The reward for this scientific approach can be very high, and people have implemented a few different approaches to the problem, e.g.:
 
-+ Ingram et al. 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=EJOURNAL) [open-access preprint](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=PREPRINT)
++ [Ingram et al. 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=EJOURNAL) [open-access preprint](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&link_type=PREPRINT)
 
 + [Stevens & Uttley 2016](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&link_type=ARTICLE) [open-access preprint](http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&link_type=PREPRINT)
 
