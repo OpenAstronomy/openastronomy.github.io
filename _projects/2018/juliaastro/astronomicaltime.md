@@ -56,4 +56,4 @@ the
 [performance tips](http://docs.julialang.org/en/latest/manual/performance-tips.html) and
 the
 [style guide](http://docs.julialang.org/en/latest/manual/style-guide.html).
-[Here](http://julialang.org/learning/) you may find other useful resources.
+You may also find [other useful resources](http://julialang.org/learning/).
