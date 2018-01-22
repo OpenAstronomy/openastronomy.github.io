@@ -2,7 +2,7 @@
 name: Python API for XSPEC
 desc: Develop a modular python API to use XSPEC (a popular X-ray astronomy tool) in python workflows
 requirements:
-- familiar with Fortran and/or C++
+- Familiar with Fortran and/or C++
 difficulty: hard
 issues:
 - https://github.com/StingraySoftware/stingray/issues/294
@@ -52,8 +52,7 @@ For a test of this project by one of our Stingray leads, see
 [(dhuppenkothen/clarsach)](https://github.com/dhuppenkothen/clarsach).
 
 #### Deliverables
-Deliverables for this project will be
-
+Deliverables for this project will be:
 
 ##### To complete each milestone
 
