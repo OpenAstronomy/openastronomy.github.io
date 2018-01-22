@@ -1,6 +1,6 @@
 ---
-name: Benchmark several propagators
-desc: Implement other orbit propagation algorithms to improve current error rates and performance
+name: Benchmark orbit propagators
+desc: Implement several orbit propagation algorithms to improve current error rates and performance
 requirements:
  - Familiar with numerical analysis
 difficulty: medium
@@ -34,10 +34,8 @@ have to be developed. The process has to be both fast (since a program
 might need to propagate thousands of orbits) and robust (converge in as
 many cases as possible).
 
-In poliastro we already have a propagator that has served us well for years,
-but it has some convergence problems:
-
-https://github.com/poliastro/poliastro/issues/265
+In poliastro we already have a propagator that has served us well for years, but
+[it has some convergence problems](https://github.com/poliastro/poliastro/issues/265).
 
 On the other hand, among the many propagation algorithms that exist,
 we haven't benchmarked our propagator against others, so we might be missing
@@ -54,17 +52,21 @@ choose the best that suits their needs.
 * Have set up a development environment and reproduced the existing propagation
   issues.
 
-##### Midterm
+##### 1st evaluation
 
-* Fix https://github.com/poliastro/poliastro/issues/265, either with a new
-  propagator or fixing the current one
+* Fix [convergence problems (#265)](https://github.com/poliastro/poliastro/issues/265),
+  either with a new propagator or fixing the current one
+* Have all code, tests and documentation in GitHub
+
+##### 2nd evaluation
+
+* Add time and accuracy benchmarks for the propagators that can be easily
+  reproducible
 * Have all code, tests and documentation in GitHub
 
 ##### Final
 
 * Have at least two new propagators
-* Add time and accuracy benchmarks for all the propagators that can be easily
-  reproducible
 * Have all code, tests and documentation in GitHub
 
 #### Secondary goals

@@ -23,17 +23,11 @@ collaborating_projects:
 
 #### Description
 
-Since 2017 poliastro features 3D plotting using Plotly, as can be seen in this
-notebook:
-
-http://docs.poliastro.space/en/latest/examples/Plotting%20in%203D.html
-
+Since 2017 [poliastro features 3d plotting using Plotly](http://docs.poliastro.space/en/latest/examples/Plotting%20in%203D.html).
 However, it would be nice to use other popular orbit visualization solutions
 such as Cesium.js. Although it is meant to create visualizations for Earth
 orbits, there are ways to extend it to visualize interplanetary maneuvers,
-as the developers explained in this thread:
-
-https://groups.google.com/d/msg/cesium-dev/_zKyk0fRd-g/oTpRyuo8BgAJ
+[as the developers explained](https://groups.google.com/d/msg/cesium-dev/_zKyk0fRd-g/oTpRyuo8BgAJ).
 
 Cesium.js uses a JSON format called CZML, and this project aims to add
 support for CZML export for poliastro `Orbit` objects. For that, the
@@ -50,14 +44,18 @@ understand our output.
 * Have set up a development environment and get familiar with the Cesium
   Sandcastle (see "Additional resources")
 
-##### Midterm
+##### 1st evaluation
 
 * Have basic export for an orbit around the Earth
 * Have all code, tests and documentation in GitHub
 
-##### Final
+##### 2nd evaluation
 
 * Have complex export that includes attractors and target bodies, if any
+* Have all code, tests and documentation in GitHub
+
+##### Final
+
 * Have created a Cesium application that understand the necessary metadata
 * Have all code, tests and documentation in GitHub
 

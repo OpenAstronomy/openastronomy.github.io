@@ -36,15 +36,13 @@ results if not done carefully.
 This project aims to resolve this difficulty by incorporating reference
 frames to poliastro `Orbit` objects. astropy already has `SkyCoord`
 objects that contain all the necessary information, but it's not clear
-how to leverage them from poliastro (see discussion in
-https://github.com/poliastro/poliastro/issues/257).
+how to leverage them from poliastro (see
+[the relevant discussion](https://github.com/poliastro/poliastro/issues/257)).
 
 On the other hand, validating all these algorithms cannot be done using
 textbook examples anymore and more complex strategies have to be found,
-for instance using the SPICE toolkit by NASA. Here is an example on
-how to run it from Python using the third party library SpiceyPy:
-
-https://gist.github.com/Juanlu001/3ba5f97928da923889b4201a94d1daa0
+for instance using the SPICE toolkit by NASA. Check out
+[the example on how to run it from Python using the third party library SpiceyPy](https://gist.github.com/Juanlu001/3ba5f97928da923889b4201a94d1daa0).
 
 #### Milestones
 
@@ -55,9 +53,14 @@ https://gist.github.com/Juanlu001/3ba5f97928da923889b4201a94d1daa0
 * Have set up a development environment and run a basic example using SPICE
   kernels.
 
-##### Midterm
+##### 1st evaluation
 
 * Have all the current reference frames conversion validated against SpiceyPy
+* Have all code, tests and documentation in GitHub
+
+##### 2nd evaluation
+
+* Have a working prototype on how to add reference frames to `Orbit` objects
 * Have all code, tests and documentation in GitHub
 
 ##### Final
