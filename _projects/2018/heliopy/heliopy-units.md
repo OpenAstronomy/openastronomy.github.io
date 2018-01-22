@@ -3,11 +3,14 @@ name: Using physical units with HelioPy
 desc: Convert HelioPy's data import methods to return data that has units attached.
 requirements:
  - Some experience using python
+ - Some knowledge about different physical units and their use in science
+   (e.g. time, distance, velocity)
 difficulty: low
 issues:
  - https://github.com/heliopython/heliopy/issues/291
 mentors:
  - dstansby
+ - dpshelio
 initiatives:
  - GSOC
  - SOCIS
@@ -30,7 +33,7 @@ This will mean finding out ways of automatically detecting the correct units
 from raw data, and then converting current code to using the astropy
 units system.
 
-Find more information about [HelioPy](http://docs.heliopy.org/en/stable/) and 
+Find more information about [HelioPy](http://docs.heliopy.org/en/stable/) and
 [astropy units](http://docs.astropy.org/en/stable/units/index.html)
 
 #### Milestones (if any)
@@ -39,7 +42,8 @@ Find more information about [HelioPy](http://docs.heliopy.org/en/stable/) and
 
 * Have installed HelioPy and used it to download and plot some data to get a
   feel of how it currently works.
-* Have setup GitHub and are comfortable with submitting pull requests.
+* Have read the documentation on astropy units and know how they work,
+  and what their advantages are over using data without units.
 
 ##### GSOC 2018 1ST EVALUATION
 
@@ -50,7 +54,6 @@ Find more information about [HelioPy](http://docs.heliopy.org/en/stable/) and
 
 * Have written code to make at least one data import function return data
   with units attached.
-
 
 ##### GSOC 2018 FINAL EVALUATION
 
