@@ -44,8 +44,9 @@ junior graduate students with experience developing software for astronomy in
 Python and other languages. We are looking for students who have or are pursuing
 degrees in astronomy (or physics), who are interested in developing open source 
 software. You don't need to be a Python guru or an astronomical coordinate 
-system expert to be eligible -- projects. Underrepresented students are especially
-encouraged to apply.
+system expert to be eligible -- projects are available that cover a range of 
+previous experience in Python and/or astronomy. Underrepresented students are 
+especially encouraged to apply.
 
 ### Testimonials
 
