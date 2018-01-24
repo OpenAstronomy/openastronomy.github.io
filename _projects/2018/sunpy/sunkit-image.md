@@ -4,7 +4,7 @@ desc: Create and develop a package for solar image analysis.
 requirements:
  - Good understanding of Python.
  - Enthusiasm to learn solar image processing.
-difficulty: low
+difficulty: medium to low
 issues:
  - https://github.com/sunpy/sunpy/pull/1899
 mentors:
@@ -41,7 +41,7 @@ the following goals (roughly in this order):
 3. Implement the [OCCULT-2 algorithm](http://arxiv.org/abs/1307.5046) for coronal loop tracing.
 4. Implement image re-sampling as described [here](https://link.springer.com/content/pdf/10.1023/B:SOLA.0000021743.24248.b0.pdf) through updating [this pull request](https://github.com/astrofrog/reproject/pull/52) to the Astropy [image resampling](https://reproject.readthedocs.io/en/stable/) repository.
 
-optional extras:
+Optional extras:
 
 5. Implement the [soft morphological filtering of solar images](https://www.aanda.org/articles/aa/pdf/2006/38/aa4852-06.pdf)
 6. Refactor and write a Python wrapper for [FLCT](https://arxiv.org/abs/0712.4289) [code](http://solarmuri.ssl.berkeley.edu/overview/publicdownloads/software.html).
