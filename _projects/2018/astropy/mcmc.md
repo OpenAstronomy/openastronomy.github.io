@@ -6,8 +6,6 @@ requirements:
  - Solid understanding of probability (likelihood functions, Bayes' theorem, etc)
  - Working knowledge on Markov Chain Monte Carlo
 difficulty: medium
-issues:
- -
 mentors:
  - mirca
  - karllark
