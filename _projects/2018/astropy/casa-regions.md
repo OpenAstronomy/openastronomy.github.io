@@ -16,6 +16,7 @@ tags:
  - astropy
 collaborating_projects:
  - astropy
+ - regions
 ---
 
 #### Description
