@@ -1,6 +1,6 @@
 ---
-name: Optimizing performance of `ccdproc`
-desc: The package [ccdproc](https://ccdproc.readthedocs.io) has a stable API but little effort has been put in to optimizing its speed or memory use. The project is to do both optimizations.
+name: Optimizing performance of ccdproc
+desc: Optimize both the speed and memory use of the package ccdproc.
 # add a short one line description of your project
 requirements:
 # Student requirements:
@@ -24,11 +24,11 @@ collaborating_projects:
  - astropy
  - ccdproc
 ---
-Optimizing performance of `ccdproc`
+Optimizing performance of ccdproc
 
 #### Description
 
-The `ccdproc` package contains functions for reducing and combining optical/IR image data and for managing collections of FITS files. The package API is mature and is close to feature-complete. Limited effort has been put into trying to optimize `ccdproc` for speed and memory use but users have reported that it runs slowly. The first stage of this project is identifying which parts of the code are bottlenecks; the remainder of the project is fixing those bottlenecks and setting up regular monitoring using `asv`.
+The [ccdproc](https://ccdproc.readthedocs.io) package contains functions for reducing and combining optical/IR image data and for managing collections of FITS files. The package API is mature and is close to feature-complete. Limited effort has been put into trying to optimize `ccdproc` for speed and memory use but users have reported that it runs slowly. The first stage of this project is identifying which parts of the code are bottlenecks; the remainder of the project is fixing those bottlenecks and setting up regular monitoring using [asv](https://asv.readthedocs.io/).
 
 #### Milestones (if any)
 
