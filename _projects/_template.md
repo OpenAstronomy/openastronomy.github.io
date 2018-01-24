@@ -9,8 +9,8 @@ requirements:
 difficulty: low
 issues:
 # Related issues (if any)  to this project.
- - https://github.com/astropy/astropy/issue/4444
- - https://github.com/astropy/astropy/issue/5555
+ - https://github.com/astropy/astropy/issues/4444
+ - https://github.com/astropy/astropy/issues/5555
 mentors:
 # First person in contact; mentors may change before project starts.
  - astrofrog
@@ -44,14 +44,14 @@ quam.
 
 #### Milestones (if any)
 
-##### GSOC 2017 CODING STARTS
+##### GSOC CODING STARTS
 
 * Be awesome
 
-##### GSOC 2017 MIDTERM
+##### GSOC MIDTERM
 
 * Have done awesome stuff.
 
-##### GSOC 2017 FINAL
+##### GSOC FINAL
 
 * Finished the awesome stuff.
