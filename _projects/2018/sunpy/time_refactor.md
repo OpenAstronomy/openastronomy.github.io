@@ -10,6 +10,8 @@ issues:
  - https://github.com/sunpy/sunpy/issues/994
  - https://github.com/sunpy/sunpy/issues/2383
  - https://github.com/sunpy/sunpy/issues/2155
+pull_requests:
+ - https://github.com/sunpy/sunpy/pull/2260
 mentors:
  - Cadair
  - nabobalis
