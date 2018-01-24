@@ -8,6 +8,7 @@ requirements:
 difficulty: intermediate
 mentors:
  - mwcraig
+ - astrofrog
 initiatives:
  - GSOC
 tags:
