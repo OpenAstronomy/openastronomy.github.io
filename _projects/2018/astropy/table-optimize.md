@@ -47,7 +47,7 @@ some fixes
 * Install Python profiling tools.
 * Study astropy and the table package capabilities.
 
-##### GSOC 2017 MIDTERM
+##### GSOC 2018 MIDTERM
 
 * Install and run `asv`.
 * Examine existing `asv` benchmarks and identify areas for improved benchmarking.
@@ -55,7 +55,7 @@ some fixes
 * Identify strategies for improved speed performance.
 * Implement initial performance improvements.
 
-##### GSOC 2017 FINAL
+##### GSOC 2018 FINAL
 
 * Continue and finalize implementation of performance improvements.
 * Contine and finalize additional `asv` benchmark tests.
