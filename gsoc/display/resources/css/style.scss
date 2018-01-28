@@ -275,10 +275,12 @@ a {
 }
 .modal {
 	width: 90% !important;
+  max-height: 90% !important;
 	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
 	border-radius: 0 !important;
-	top: 25% !important;
-  bottom:25%;
+	top: 10% !important;
+  bottom: 10%;
+  background-color: $black !important;
 }
 .profile {
 	background-color: $black;
