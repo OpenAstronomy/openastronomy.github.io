@@ -11,6 +11,8 @@ mentors:
  - keflavich
  - bsipocz
  - pllim
+ - migueldvb
+ - stargaser
 initiatives:
  - GSOC
 tags:
