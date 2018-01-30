@@ -62,6 +62,21 @@ testing, and packaging. Do you have a summer without research funding? Apply!
 
 Brett Morris, GSoC student 2015
 
+> After spending the summer of 2015 as an intern at NIST, I got really
+fascinated by how much Python aided scientists get the best out their data.
+Then, while looking for Python projects to perform data fitting and modeling,
+I found AstroPy. I got really surprised by how easy and intuitive data fitting
+can be done with the astropy API. That motivated me to start learning git and
+later contributing code and documentation for the project. Then in the summer
+of 2016 I to applied to the GSoC to work on PSF photometry for
+[photutils](https://www.github.com/astropy/photutils) and got selected! :)
+One of the best parts of the GSoC was the amount of learning I got by being
+mentored by experts in software development and astronomy! If you want to know
+more about my journey during the GSoC 2016 see my
+[blog posts](https://mirca.github.io/posts). Also check out some
+[tips](https://mirca.github.io/gsoc-application/) before applying.
+
+Zé Vinícius, GSoC student 2016
 
 ### Apply! 
 
