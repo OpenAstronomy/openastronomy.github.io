@@ -8,6 +8,7 @@ issues:
  - https://github.com/astropy/regions/issues/119
 mentors:
  - keflavich
+ - migueldvb
 initiatives:
  - GSOC
 tags:
