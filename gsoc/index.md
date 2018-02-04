@@ -6,7 +6,7 @@ permalink: /gsoc/
 
 ## New to GSoC? 
  
-[Background on GSoC: start here!]
+[Background on GSoC: start here!](./background.html)
 
 ## GSoC/Open Astronomy 2018
 
@@ -35,5 +35,5 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 [OpenAstronomy Student Guide]: /gsoc/student_guidelines.html
 [Python Software Foundation]: https://wiki.python.org/moin/SummerOfCode/2016
-[GSoC Student Guide]: http://en.flossmanuals.net/GSoCStudentGuide/
+[GSoC Student Guide]: https://google.github.io/gsocguides/student/
 [OpenAstronomy Universe]: http://openastronomy.org/Universe_OA/
