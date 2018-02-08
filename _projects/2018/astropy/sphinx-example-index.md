@@ -12,11 +12,11 @@ issues:
  - https://github.com/astropy/astropy/issues/6589
 mentors:
 # First person in contact; mentors may change before project starts.
- - Erik Tollerud
- -
+ - eteq
+ - adrn
+ - bsipocz
 initiatives:
  - GSOC
- - SOCIS
 tags:
 # Different technologies needed
  - python
@@ -33,14 +33,14 @@ from my memory from Sept, the goal is to identify code snippets within the docs,
 
 #### Milestones (if any)
 
-##### GSOC 2017 CODING STARTS
+##### GSOC 2018 CODING STARTS
 
 * Be awesome
 
-##### GSOC 2017 MIDTERM
+##### GSOC 2018 MIDTERM
 
 * Have done awesome stuff.
 
-##### GSOC 2017 FINAL
+##### GSOC 2018 FINAL
 
 * Finished the awesome stuff.

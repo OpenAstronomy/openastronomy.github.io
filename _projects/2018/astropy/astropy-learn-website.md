@@ -11,13 +11,12 @@ issues:
 # Related issues (if any)  to this project.
 mentors:
 # First person in contact; mentors may change before project starts.
- - Kelle Cruz
- - Lia Corrales
- - Adrian Price-Whelan
- - Erik Tollerud
+ - kelle
+ - eblur
+ - adrn
+ - eteq
 initiatives:
  - GSOC
- - SOCIS
 tags:
 # Different technologies needed
  - python
@@ -34,14 +33,14 @@ create webpage front end for the Astropy Learn ecosystem which includes docs, ex
 
 #### Milestones (if any)
 
-##### GSOC 2017 CODING STARTS
+##### GSOC 2018 CODING STARTS
 
 * Be awesome
 
-##### GSOC 2017 MIDTERM
+##### GSOC 2018 MIDTERM
 
 * Have done awesome stuff.
 
-##### GSOC 2017 FINAL
+##### GSOC 2018 FINAL
 
 * Finished the awesome stuff.

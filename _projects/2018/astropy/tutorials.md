@@ -12,13 +12,12 @@ issues:
  - https://github.com/astropy/astropy-tutorials/issues?q=is%3Aissue+is%3Aopen+label%3Acontent-new
 mentors:
 # First person in contact; mentors may change before project starts.
- - Kelle Cruz
- - Lia Corrales
- - Adrian Price-Whelan
- - Erik Tollerud
+ - kelle
+ - eblur
+ - adrn
+ - eteq
 initiatives:
  - GSOC
- - SOCIS
 tags:
 # Different technologies needed
  - python
@@ -36,14 +35,14 @@ Mentee would work closely with Tutorial Leads to identify tutorial topics, tutor
 
 #### Milestones (if any)
 
-##### GSOC 2017 CODING STARTS
+##### GSOC 2018 CODING STARTS
 
 * Be awesome
 
-##### GSOC 2017 MIDTERM
+##### GSOC 2018 MIDTERM
 
 * Have done awesome stuff.
 
-##### GSOC 2017 FINAL
+##### GSOC 2018 FINAL
 
 * Finished the awesome stuff.
