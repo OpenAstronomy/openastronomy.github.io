@@ -34,16 +34,8 @@ Generate content used to demonstrate advanced functionality of Astropy
 Create tutorials and/or guides which demonstrate more complex uses of astropy and affiliate package functionality. E.g., use of classes and object-oriented programming for astronomical data analysis with Astropy, usage of astroquery and ccdproc together to download and reduce an image, etc. 
 Must would work closely with Astropy Tutorial Leads to identify tutorial topics, as well as a tutorial flow/narrative. The student will primarily be mostly responsible for writing the code, but not the pedagogy.
 
-#### Milestones (if any)
-
-##### GSOC 2018 CODING STARTS
+#### Possible Milestones
 
 * Have a list of possible tutorials to develop
-
-##### GSOC 2018 MIDTERM
-
 * Have an outline of selected tutorial(s) for review by the Learn team and/or an astropy package maintainer.
-
-##### GSOC 2018 FINAL
-
 * Complete the tutorial by getting it merged in the [astropy-tutorials repository](https://github.com/astropy/astropy-tutorials).
