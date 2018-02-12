@@ -14,6 +14,7 @@ issues:
 mentors:
  - Cadair
  - nabobalis
+ - Punyaslok
 initiatives:
  - GSOC
  - SOCIS
