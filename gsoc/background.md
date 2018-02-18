@@ -48,8 +48,8 @@ for students who have or are pursuing degrees in astronomy or physics, more
 importantly who are interested in developing open source software. You don't
 need to be a Python guru or an astronomical coordinate system expert to be
 eligible -- projects are available that cover a range of previous experience
-in Python and astronomy. Underrepresented students from anywhere around
-the world are especially encouraged to apply.
+in Python and astronomy. Students from any background from anywhere around 
+the world is very welcome to apply.
 
 ### Testimonials
 
