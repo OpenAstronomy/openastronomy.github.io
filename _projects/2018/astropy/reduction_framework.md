@@ -97,12 +97,17 @@ The complete design includes an user interface to link input files and to launch
 #### References
 
 [1] Doug Tody. The IRAF data reduction and analysis system. page 733–748, 1986.
+
 [2] Philip Massey and Margaret M. Hanson. Astronomical spectroscopy. arXiv:1010.5270 [astro-ph], October 2010.
+
 [3] W. Freudling, M. Romaniello, D. M. Bramich, P. Ballester, V. Forchi, C. E. García-Dabló, S. Moehler, and
 M. J. Neeser. Automated data reduction workflows for astronomy - the ESO reflex environment. Astronomy &
 Astrophysics, 559:A96, 2013.
+
 [4] Pieter G. van Dokkum. Cosmic-Ray rejection by laplacian edge detection. pages 1420–1427, November 2001.
+
 [5] Nicolas Cardiel, Javier Gorgas, Jess Gallego, Angel Serrano, Jaime Zamorano, Maria-Luisa Garcia-Vargas, Pedro
 Gomez-Cambronero, and Jose M. Filgueira. Proper handling of random errors and distortions in astronomical
 data analysis. volume 4847, pages 297–304, December 2002.
+
 
