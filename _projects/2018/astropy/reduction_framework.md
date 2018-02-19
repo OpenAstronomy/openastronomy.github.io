@@ -78,23 +78,31 @@ which may be imported from PyRaf, ccdproc or third party libraries, with the des
 sequence and their configuration is stored into data container, for which we can use a pandas dataframe. Once the
 current algorithm is executed the output data is also stored within the calibration data container. Finally, using
 this information the same algorithm is executed on the uncertainty frame to propagate the error.
-Within this milestone work, no feedback is provided to the user. However, using tools such as pylatex, it is
-possible to generate a log to print the output, and hence, check the output quality. For example, in the case of
-the lacosmic task, an algorithm developed to remove cosmic rays, we may include a frame before and after the
-treatment, as well as, the cosmic rays mask. This is displayed in Fig.2.
+Within this milestone work, no feedback is provided to the user. However, using tools such as [Pylatex](https://github.com/JelteF/PyLaTeX/), it is possible to generate a log to print the output, and hence, check the output quality. For example, in the case of the lacosmic task, an algorithm developed to remove cosmic rays, we may include a frame before and after the treatment, as well as, the cosmic rays mask. This is displayed in Fig.2.
 
-
-
+![alt text](https://github.com/Vital-Fernandez/openastronomy.github.io/blob/master/_projects/2018/astropy/Diagram2.png
+ "Sample treatment log output")
+ 
 ##### User feedback framework:
 
-* Have done awesome stuff.
+At this design layer, the project includes functions to bring some feedback to the user. Going back to the previous example the plot in Fig.2 would be displayed in a [matplotlib](https://github.com/matplotlib) window. The algorithm would require the user input at this point: For a valid treatment, the output would be saved, otherwise a new configuration has to be introduce to repeat the algorithm on the observational frame.
 
 ##### GUI:
 
+![alt text](https://github.com/Vital-Fernandez/openastronomy.github.io/blob/master/_projects/2018/astropy/Diagram3.png
+ "Sketch of project GUI")
+ 
+The complete design includes an user interface to link input files and to launch the calibration algorithms. The sketch in Fig.3 displays the widgets on the main window: A region, which lists the treatments so far performed and provides the option to select tem, adding more, or deleting them. In the central region, we can adjust the configuration of the treatment currently selected. The number of arguments depend on the task selected. Below there is an inbuilt terminal to display output information from the executed task. Finally, on the right there is a window with all files belonging to the current observation. In this region shortcuts may be added to display these files such as [matplotlib] or (https://github.com/matplotlib) or [pyds9]https://github.com/ericmandel/pyds9).
+
 #### References
 
+[1] Doug Tody. The IRAF data reduction and analysis system. page 733–748, 1986.
+[2] Philip Massey and Margaret M. Hanson. Astronomical spectroscopy. arXiv:1010.5270 [astro-ph], October 2010.
+[3] W. Freudling, M. Romaniello, D. M. Bramich, P. Ballester, V. Forchi, C. E. García-Dabló, S. Moehler, and
+M. J. Neeser. Automated data reduction workflows for astronomy - the ESO reflex environment. Astronomy &
+Astrophysics, 559:A96, 2013.
+[4] Pieter G. van Dokkum. Cosmic-Ray rejection by laplacian edge detection. pages 1420–1427, November 2001.
+[5] Nicolas Cardiel, Javier Gorgas, Jess Gallego, Angel Serrano, Jaime Zamorano, Maria-Luisa Garcia-Vargas, Pedro
+Gomez-Cambronero, and Jose M. Filgueira. Proper handling of random errors and distortions in astronomical
+data analysis. volume 4847, pages 297–304, December 2002.
 
-
-
-
-* Finished the awesome stuff.
