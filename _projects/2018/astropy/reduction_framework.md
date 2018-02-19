@@ -1,32 +1,30 @@
 ---
-name: Example Astropy
-desc: This is the first idea for astropy
+name: Reduction framework
+desc: Reduction pipeline capable to store the calibration steps and propagate the error.
 # add a short one line description of your project
 requirements:
 # Student requirements:
- - Knowledge on spherical astronomy.
- - Familiar with numerical methods
-difficulty: low
+ - Some Experience with astronomical data reduction.
+ - Expericence with python scientific programing.
+difficulty: intermediate.
 issues:
 # Related issues (if any)  to this project.
- - https://github.com/astropy/astropy/issues/4444
- - https://github.com/astropy/astropy/issues/5555
 mentors:
 # First person in contact; mentors may change before project starts.
- - astrofrog
 initiatives:
- - GSOC
- - SOCIS
 tags:
 # Different technologies needed
  - python
- - GUI
+ - pandas
+ - numpy
+ - matplotlib
+ - astropy
+ - pyraf
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
- - astropy
- - ginga
 ---
-This is an awesome project idea for Astropy.
+This project proposes the design of a reduction pipeline for astronomical data capable to store the calibration steps configuration. This scheme would make possible an error propagation along the calibration process. Finally, this reduction pipeline would encourage sharing methodologies between users. 
+
 
 #### Description
 
