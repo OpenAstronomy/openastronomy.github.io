@@ -43,6 +43,7 @@ use the available astronomical data have two options: Develop their own solution
 or relaying on the patronage of a previous user pipeline (either in IRAF [2] or, if available, the tools provided by
 the telescope instrument [3]). Both of these scenarios contribute to a segmentation on the development, due to
 different scientific objectives, instead of encouraging a convergence based on the algorithm purpose.
+
 The python community has attempted to provide a more universal solution to the astronomical data calibration.
 The STScI (Space Telescope Science Institute, an american university association working for NASA) developed
 PyRaf . This library gives the ability to run IRAF functions in an environment that has all the power and flexibility
