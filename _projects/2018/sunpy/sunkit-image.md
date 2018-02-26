@@ -11,6 +11,7 @@ mentors:
  - Cadair
  - wafels
  - nabobalis
+ - mbobra
 initiatives:
  - GSOC
  - SOCIS
