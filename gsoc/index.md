@@ -10,9 +10,9 @@ permalink: /gsoc/
 
 ## GSoC/Open Astronomy 2018
 
-OpenAstronomy was a GSOC mentoring organisation in 2016 and 2017 and is applying again
-in 2018. OpenAstronomy is an umbrella organisation which collects project ideas
-from any of it's members.
+OpenAstronomy is an umbrella organisation which collects project ideas
+from any of its members. OpenAstronomy was a GSOC mentoring organisation in 2016 and 2017 and is participating again
+in 2018. 
 
 Student applications to OpenAstronomy projects follows the same
 rules as the [Python Software Foundation] and the [GSoC Student Guide], our guide to a good application is the [OpenAstronomy Student Guide].
