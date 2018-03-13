@@ -1,48 +1,35 @@
 ---
-name: Example Astropy
-desc: This is the first idea for astropy
+name: Galaxy Cluster Visualization and Fitting
+desc: This is the development of a GUI for plotting, fitting, and data wrangling of galaxy cluster datasets.
 # add a short one line description of your project
 requirements:
-# Student requirements:
- - Knowledge on spherical astronomy.
- - Familiar with numerical methods
-difficulty: low
+# Requirements:
+ - Basic knowledge of cosmology (calculation of constants) 
+ - Familiarity with statistical methods of fitting
+difficulty: intermediate
 issues:
 # Related issues (if any)  to this project.
- - https://github.com/astropy/astropy/issues/4444
- - https://github.com/astropy/astropy/issues/5555
 mentors:
 # First person in contact; mentors may change before project starts.
- - astrofrog
 initiatives:
  - GSOC
- - SOCIS
 tags:
 # Different technologies needed
  - python
- - GUI
+ - GUI (tkInter)
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
  - astropy
- - ginga
+ - sherpa
 ---
-This is an awesome project idea for Astropy.
+Particularly beneficial for extra-galactical astronomers interested in a user friendly enviorment to view and fit models galaxy cluster data ranging from celestial coordinates and redshift to x-ray surface brightness.
 
 #### Description
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam
-turpis neque, vel fermentum diam gravida id. Maecenas tempor magna libero, non
-faucibus dolor tincidunt non. Sed condimentum imperdiet odio sed volutpat.
-Mauris imperdiet viverra turpis a porttitor. Duis laoreet leo sit amet odio
-suscipit aliquet. Etiam vel malesuada est, in molestie nibh. Sed efficitur
-pharetra lorem, sed tempor sapien commodo ac. Vivamus sollicitudin pretium erat.
-Pellentesque luctus vehicula tortor, nec volutpat turpis euismod vel. Sed neque
-ipsum, imperdiet nec massa sit amet, accumsan lobortis augue. Donec luctus massa
-vitae velit scelerisque volutpat ut nec ex. Sed in velit tincidunt, volutpat
-turpis sit amet, dignissim nisi. Donec a mattis eros. Pellentesque vitae leo
-quam.
+Galaxt Cluster Data Visualization and Fitting was conceived after countless hours were spent hardcoding plotting and fitting functions to SDSS data. Initially written as a headless program that can plot and fit any function to galaxy cluster data using least squares, the latest version has become a much more visual tool for plotting and fitting of 
+.
 
 #### Milestones (if any)
+  - Finalized first page of the GUI for data visualization of 
 
 ##### GSOC CODING STARTS
 
