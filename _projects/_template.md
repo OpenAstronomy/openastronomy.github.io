@@ -20,7 +20,8 @@ tags:
  - GUI (tkInter)
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
- - None
+ - None; this is a new idea
+ - Could interest Astropy or Glue
 ---
 This GUI is intended for extra-galactical astronomers interested in a user friendly tool that allows for flexible viewing, model fitting, and mining of galaxy cluster data. Using a myriad of widgets and functions, the astronomer will be able to make sense of a particular galaxy cluster's dynamics by using interactive plots, numerous widgets, a fitting tool, as well as a cosmology calculator.
 
