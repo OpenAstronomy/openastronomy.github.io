@@ -56,5 +56,5 @@ The GUI will include a tool for mining cluster data from various SDSS websites u
   * Fix any bugs and implement new ideas.
 
 ###### References
-Sarazin, C. L. 1988, X-ray emission from clusters of galaxies
-Sarazin, C. L. et al 2016, DEEP XMM-NEWTON OBSERVATIONS OF THE NW RADIO RELIC REGION OF ABELL 3667
+- Sarazin, C. L. 1988, X-ray emission from clusters of galaxies
+- Sarazin, C. L. et al 2016, DEEP XMM-NEWTON OBSERVATIONS OF THE NW RADIO RELIC REGION OF ABELL 3667
