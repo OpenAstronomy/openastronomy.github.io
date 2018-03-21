@@ -74,7 +74,7 @@ and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template 
 [Python Software Foundation]: http://python-gsoc.org/
 [GSoC Student Guide]: http://en.flossmanuals.net/GSoCStudentGuide/
-[Astropy GSoC guidelines]: https://github.com/astropy/astropy/wiki/GSoC-2017-Guidelines
+[Astropy GSoC guidelines]: https://github.com/astropy/astropy/wiki/GSoC-2018-Guidelines
 [latest pictures of the million degree Sun]: http://docs.sunpy.org/en/stable/generated/gallery/aia_example.html#sphx-glr-generated-gallery-aia-example-py
 [volume render a simulation of the galaxy]: http://yt-project.org/docs/dev/quickstart/volume_rendering.html
 [plan some astronomical observations]: http://www.astropy.org/astropy-tutorials/Coordinates.html
