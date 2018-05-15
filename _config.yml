@@ -16,6 +16,7 @@ discussiongroup_url: "https://groups.google.com/forum/#!forum/openastronomy"
 nav_links:
   Student Blogs: http://openastronomy.org/Universe_OA
   PyAstro Conference: http://openastronomy.org/pyastro
+  Events Calendar: https://calendar.google.com/calendar/b/1?cid=YmxoZzd0MG9zbjhscm50ZDcwOXFoZzFtaXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
 
 # Build settings
 markdown: kramdown
