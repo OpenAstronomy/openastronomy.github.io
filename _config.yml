@@ -11,6 +11,7 @@ twitter_username: Open_Astronomy
 github_username:  openastronomy
 irc_channel: openastronomy
 discussiongroup_url: "https://groups.google.com/forum/#!forum/openastronomy"
+include: [".well-known"]
 
 # Extra Nav Links
 nav_links:
