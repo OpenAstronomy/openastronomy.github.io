@@ -26,6 +26,7 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 ## Ideas Pages
 
+* [2019](/gsoc/gsoc2019/)
 * [2018](/gsoc/gsoc2018/)
 * [2017](/gsoc/gsoc2017/)
 * [2016](/gsoc/gsoc2016/ideas.html)
