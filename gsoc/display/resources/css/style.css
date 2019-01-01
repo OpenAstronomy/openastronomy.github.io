@@ -253,6 +253,20 @@ a:hover > .card{
   cursor: pointer;
   height: 200px;
 }
+
+.projects-code {
+  padding: 2px 10px;
+  font-size: 0.9em;
+  color: #ffffff;
+  background-color: #194242;
+  border-radius: 11px;
+}
+
+
+
+
+
+
 .project-description > p > a{
   color: cornsilk
 }
