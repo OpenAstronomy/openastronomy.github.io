@@ -37,8 +37,7 @@ JWST.
 In order to support both FITS-WCS and gWCS and hence support more
 future and current missions, this project aims to convert the ndcube
 package to a common WCS API.  The new API has already been outlined by
-astropy's [APE 14]
-(https://zenodo.org/record/1188875#.XBE3S1JRcWo). Implementing support
+astropy's [APE 14](https://zenodo.org/record/1188875#.XBE3S1JRcWo). Implementing support
 for APE 14 will enable ndcube to use FITS-WCS and gWCS agnostically
 and hence increase the power and scope of the ndcube package.  With
 this new feature ndcube will become better placed to serve a wider
