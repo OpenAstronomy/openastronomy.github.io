@@ -34,13 +34,6 @@ jobs:
           name: Jekyll build
           command: bundle exec jekyll build
 
-      - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer ./_site \
-              --allow-hash-href \
-               --check-html \
-              --disable-external
 
       - run:
           name: Jekyll re-build for local
