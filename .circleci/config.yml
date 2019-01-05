@@ -1,0 +1,54 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+       - image: circleci/ruby:2.5
+    environment:
+      BUNDLE_PATH: ~/vendor/bundle
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: fetch submodules
+          command: git submodule init && git submodule update
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - rubygems-v1-{{ checksum "Gemfile.lock" }}
+          # fallback to using the latest cache if no exact match is found
+          - rubygems-v1-fallback
+
+      - run:
+          name: install dependencies
+          command: bundle check || bundle install --jobs=4 --retry=3
+
+      - run:
+          name: Jekyll build
+          command: bundle exec jekyll build
+
+      - run:
+          name: HTMLProofer tests
+          command: |
+            bundle exec htmlproofer ./_site \
+              --allow-hash-href \
+              --check-favicon  \
+              --check-html \
+              --disable-external
+
+      - save_cache:
+          paths:
+            - ~/vendor/bundle
+          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+
+      # collect reports
+      - store_artifacts:
+          path: ~/repo/_site
+          destination: site
