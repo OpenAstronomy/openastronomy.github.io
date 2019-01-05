@@ -37,7 +37,7 @@ jobs:
 
       - run:
           name: Jekyll re-build for local
-          command: bundle exec jekyll build -b "${CIRCLE_BUILD_NUM}-30926520-gh.circle-artifacts.com/0/site"
+          command: echo "url: https://${CIRCLE_BUILD_NUM}-30926520-gh.circle-artifacts.com" > circle.yml && bundle exec jekyll build -b "/0/site"  --config _config.yml,circle.yml
 
       - save_cache:
           paths:
