@@ -43,6 +43,10 @@ jobs:
               --check-html \
               --disable-external
 
+      - run:
+          name: Jekyll re-build for local
+          command: bundle exec jekyll build -b "${CIRCLE_BUILD_NUM}-30926520-gh.circle-artifacts.com/0/site"
+
       - save_cache:
           paths:
             - ~/vendor/bundle
