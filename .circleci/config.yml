@@ -22,9 +22,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - rubygems-v1-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - rubygems-v1-fallback
+          - rubygems-v1-latest
 
       - run:
           name: install dependencies
@@ -66,7 +64,7 @@ jobs:
       - save_cache:
           paths:
             - ~/vendor/bundle
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          key: rubygems-v1-latest
 
       # collect reports
       - store_artifacts:
