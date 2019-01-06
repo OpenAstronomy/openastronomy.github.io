@@ -51,7 +51,7 @@
                  {
                  {%
                    for item in project %}{% if notwanted contains item %}{% continue %}{% endif %}
-                      "{{ item }}": {{ project[item] | jsonify }}{% unless forloop.last %},{% endunless %}{%
+                      "{{ item }}": {% if item == "url" %}{{ project[item] | prepend: site.baseurl | jsonify }}{% else %}{{ project[item] | jsonify }}{% endif %}{% unless forloop.last %},{% endunless %}{%
                    endfor %}
                  }{% unless forloop.last %},{% endunless %}{%
                  endif %}{%
