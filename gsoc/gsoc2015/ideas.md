@@ -11,7 +11,7 @@ Browse ideas for the following projects:
 
 {% for page in site.pages %}
 {% if page.ideas_team and page.path contains 'gsoc2015' %}
-* [{{ page.ideas_team }}](#{{ page.ideas_team }})
+* [{{ page.ideas_team }}](#{{ page.ideas_team | slugify }})
 {% endif %}
 {% endfor %}
 
@@ -21,7 +21,7 @@ For each participating project, the ideas are organized from easiest to hardest.
 {% if page.ideas_team and page.path contains 'gsoc2015' %}
 
 
-# <a name="{{ page.ideas_team }}"></a>{{ page.ideas_team }}
+# {{ page.ideas_team }}
 
 {{ page.content }}  
 
