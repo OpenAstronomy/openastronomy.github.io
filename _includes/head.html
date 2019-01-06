@@ -28,7 +28,7 @@
          // list of filenames endings
          var backgrounds = ['ap', 'sp'];
          var selected = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-         var bgpath = '/css/background_' + selected + '.jpg';
+         var bgpath = "{{ site.baseurl }}/css/background_" + selected + '.jpg';
          $('body').css('background-image', 'url(' + bgpath + ')');
      });
     </script>

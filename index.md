@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<img class="large-logo" src="/img/logo/logoOA_svg.png" alt="Open Astronomy Logo">
+<img class="large-logo" src="{{ '/img/logo/logoOA_svg.png' | prepend: site.baseurl }}" alt="Open Astronomy Logo">
 
 OpenAstronomy is a collaboration between open source astronomy and astrophysics
 projects to share resources, ideas, and to improve code.
