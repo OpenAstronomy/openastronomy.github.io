@@ -26,15 +26,15 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 ## Ideas Pages
 
-* [2019](/gsoc/gsoc2019/)
-* [2018](/gsoc/gsoc2018/)
-* [2017](/gsoc/gsoc2017/)
-* [2016](/gsoc/gsoc2016/ideas.html)
-* [2015](/gsoc/gsoc2015/ideas.html)
+* [2019](./gsoc2019/)
+* [2018](./gsoc2018/)
+* [2017](./gsoc2017/)
+* [2016](./gsoc2016/ideas.html)
+* [2015](./gsoc2015/ideas.html)
 
 
 
-[OpenAstronomy Student Guide]: /gsoc/student_guidelines.html
+[OpenAstronomy Student Guide]: ./student_guidelines.html
 [Python Software Foundation]: https://wiki.python.org/moin/SummerOfCode/2016
 [GSoC Student Guide]: https://google.github.io/gsocguides/student/
 [OpenAstronomy Universe]: http://openastronomy.org/Universe_OA/
