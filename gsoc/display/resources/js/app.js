@@ -1,3 +1,5 @@
+---
+---
 (function(){
 	var app = angular.module('coala', ['ngSanitize','btford.markdown', 'ngRoute']);
 
@@ -33,7 +35,7 @@
 	app.directive('projects',  ['$http', '$timeout', '$location', function ($http, $timeout, $location) {
 		return {
 			restrict: 'E',
-			templateUrl: '/gsoc/display/partials/tabs/projects.html',
+			  templateUrl: "{{ '/gsoc/display/partials/tabs/projects.html' | prepend: site.baseurl }}",
 			controller: function ($scope, $location) {
 				self = this;
 				$scope.projectList = projects;

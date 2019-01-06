@@ -39,7 +39,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
-        <script type="text/javascript" src="/gsoc/display/data/faq.js"></script>
+        <script type="text/javascript" src="{{ '/gsoc/display/data/faq.js' | prepend: site.baseurl }}"></script>
         <script>
          {% assign groups = site.projects | shuffle %}
          {% assign notwanted = "next,content,previous,output,excerpt,draft" %}
