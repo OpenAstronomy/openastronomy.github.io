@@ -40,8 +40,21 @@ jobs:
             bundle exec htmlproofer ./_site \
               --allow-hash-href \
               --check-html \
-              --disable-external --file-ignore "/.+\/gsoc\/display\/partials.+/"
+              --disable-external \
+              --file-ignore "/.+\/gsoc\/display\/partials.+/"
               # Ignores the path for the angular magic
+
+      - run:
+          name: HTMLProofer with external
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+             bundle exec htmlproofer ./_site \
+               --allow-hash-href \
+               --check-html \
+               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-6].+/"  \
+               --http-status-ignore 302
+               # Ignore old ideas pages and ssl certificates that error.
+            fi
 
 
       - run:
