@@ -59,7 +59,11 @@ jobs:
           name: Jekyll re-build for local
           command: |
             echo "url: https://${CIRCLE_BUILD_NUM}-30926520-gh.circle-artifacts.com" > circle.yml && \
-            bundle exec jekyll build -b "/0/site"  --config _config.yml,circle.yml
+            bundle exec jekyll build -b "/0/site"  --config _config.yml,circle.yml && \
+            find ./_site/ -iname '*html' | xargs -I{} sed -i \
+              -e 's|href="\(\.\/.*\/\)"|href="\1index.html"|g' \
+              -e '/0\/site/ s|href="\(\/.*\/\)"|href="\1index.html"|g' {}
+            # Replace pages ending on `/` from our site to direct to index.html
 
       - save_cache:
           paths:
