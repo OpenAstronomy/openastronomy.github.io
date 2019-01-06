@@ -37,7 +37,7 @@ This project aims to improve the `solarbextrapolation` package by relaxing the s
 This will involve extensive modifications to the numerical method used to perform the field extrapolation as well as developing methods for coordinate transformations between the magnetogram coordinate system and the spherical coordinate system of the derived vector field.
 
 The main challenge of this project will be creating a general 3D Map class similar to [`Map`](http://docs.sunpy.org/en/stable/code_ref/map.html) in SunPy.
-Currently, the `solarbextrapolation` package uses a Map3D class that is limited to Cartesian coordinates and has no support for coordinate transformations. This new Map3D class will have support for 3D coordinates through the use of the [SunPy coordinates module]()
+Currently, the `solarbextrapolation` package uses a Map3D class that is limited to Cartesian coordinates and has no support for coordinate transformations. This new Map3D class will have support for 3D coordinates through the use of the [SunPy coordinates module](http://docs.sunpy.org/en/stable/guide/units-coordinates.html#physical-coordinates-in-sunpy)
 It is expected that this new object will serve as a prototype for a first-class data type in the core SunPy package.
 
 #### Primary Goals
