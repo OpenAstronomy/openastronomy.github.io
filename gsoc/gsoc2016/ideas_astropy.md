@@ -29,7 +29,7 @@ While some initial efforts have occurred, this project would involve expanding t
 
 ### Ephemerides for Solar System objects in Astropy
 
-*Suggested Mentor(s):* [Marten van Kerkwijk](mhvk), [Erik Tollerud](http://github.com/eteq)
+*Suggested Mentor(s):* [Marten van Kerkwijk](http://github.com/mhvk), [Erik Tollerud](http://github.com/eteq)
 
 *Difficulty:* Beginner to Intermediate
 
