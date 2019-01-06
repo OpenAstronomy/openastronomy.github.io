@@ -43,7 +43,7 @@ get involved!
 Create an account on [GitHub](http://github.com) or [BitBucket](http://bitbucket.org).
 Don't know how to use [git](http://www.git-scm.com/) or [Mercurial](http://mercurial.selenic.com/)?
 Don't worry, it's easy and there are lots of git [tutorials](http://try.github.com) [online](http://gitimmersion.com/) 
-and many [Mercurial](http://hginit.com/) [ones](http://hgbook.red-bean.com/read/)
+and many [Mercurial](https://www.mercurial-scm.org/wiki/Tutorial) [ones](http://hgbook.red-bean.com/read/)
 [as well](http://mercurial.selenic.com/) that will help you to get quite confident with it in a short time.
 Also both the [Astropy](http://docs.astropy.org/en/stable/index.html#developer-documentation)
 and [yt](http://yt-project.org/docs/dev/developing/developing.html)
@@ -73,8 +73,8 @@ and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/
 [Matrix]: https://riot.im/app/#/room/#openastronomy:matrix.org
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template 
 [Python Software Foundation]: http://python-gsoc.org/
-[GSoC Student Guide]: http://en.flossmanuals.net/GSoCStudentGuide/
+[GSoC Student Guide]: https://google.github.io/gsocguides/student/
 [Astropy GSoC guidelines]: https://github.com/astropy/astropy/wiki/GSoC-2018-Guidelines
-[latest pictures of the million degree Sun]: http://docs.sunpy.org/en/stable/generated/gallery/aia_example.html#sphx-glr-generated-gallery-aia-example-py
+[latest pictures of the million degree Sun]: http://docs.sunpy.org/en/stable/generated/gallery/plotting/aia_example.html
 [volume render a simulation of the galaxy]: http://yt-project.org/docs/dev/quickstart/volume_rendering.html
 [plan some astronomical observations]: http://www.astropy.org/astropy-tutorials/Coordinates.html

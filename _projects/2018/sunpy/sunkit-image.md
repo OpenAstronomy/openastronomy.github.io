@@ -40,7 +40,7 @@ the following goals (roughly in this order):
 1. Implement the [normalizing-radial-graded filter (NRGF)](http://adsabs.harvard.edu/abs/2006SoPh..236..263M).
 2. Port the Multi-Scale Gaussian Normalisation (MGN) code from [#1899](https://github.com/sunpy/sunpy/pull/1899).
 3. Implement the [OCCULT-2 algorithm](http://arxiv.org/abs/1307.5046) for coronal loop tracing.
-4. Implement image re-sampling as described [here](https://link.springer.com/content/pdf/10.1023/B:SOLA.0000021743.24248.b0.pdf) through updating [this pull request](https://github.com/astrofrog/reproject/pull/52) to the Astropy [image resampling](https://reproject.readthedocs.io/en/stable/) repository.
+4. Implement image re-sampling as described [here](https://link.springer.com/content/pdf/10.1023/B:SOLA.0000021743.24248.b0.pdf) through updating [this pull request](https://github.com/astropy/reproject/pull/52) to the Astropy [image resampling](https://reproject.readthedocs.io/en/stable/) repository.
 
 Optional extras:
 

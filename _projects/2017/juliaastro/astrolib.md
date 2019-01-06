@@ -52,7 +52,7 @@ necessary, but you should get acquainted with the language before the coding
 period.  If you are a Julia newbie, check out
 the [Manual](http://docs.julialang.org/en/latest/index.html), in particular
 the
-[performance tips](http://docs.julialang.org/en/latest/manual/performance-tips.html) and
+[performance tips](https://docs.julialang.org/en/latest/manual/performance-tips/) and
 the
-[style guide](http://docs.julialang.org/en/latest/manual/style-guide.html).
+[style guide](https://docs.julialang.org/en/latest/manual/style-guide/).
 [Here](http://julialang.org/learning/) you may find other useful resources.

@@ -27,7 +27,7 @@ members: [Astropy, SunPy, chiantipy, yt-project, JuliaAstro, Casacore, IMS, COIN
 irc_freenode: irc://irc.freenode.net/
 
 astropy_url: http://www.astropy.org/
-astropy_mailinglist_user: http://mail.scipy.org/mailman/listinfo/astropy
+astropy_mailinglist_user: http://mail.python.org/mailman/listinfo/astropy
 astropy_mailinglist_dev: http://groups.google.com/group/astropy-dev
 astropy_slack: http://joinslack.astropy.org/
 
