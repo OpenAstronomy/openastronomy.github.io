@@ -39,8 +39,10 @@ jobs:
           command: |
             bundle exec htmlproofer ./_site \
               --allow-hash-href \
-               --check-html \
-              --disable-external
+              --check-html \
+              --disable-external --file-ignore "/.+\/gsoc\/display\/partials.+/"
+              # Ignores the path for the angular magic
+
 
       - run:
           name: Jekyll re-build for local
