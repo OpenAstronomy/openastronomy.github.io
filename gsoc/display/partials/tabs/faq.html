@@ -1,8 +1,10 @@
+---
+---
 <div class="main-content-faq container-fluid">
   <ul class="collapsible" data-collapsible="accordion">
     <li ng-repeat="(ques,ans) in toc.faqs">
      <div class="collapsible-header"><i class="fa fa-question" aria-hidden="true"></i><p btf-markdown="ques"></p></div>
-      <div class="collapsible-body"><p btf-markdown ng-include="'/gsoc/display/data/faq/' + ans"></p>
+      <div class="collapsible-body"><p btf-markdown ng-include="'{{ '/gsoc/display/data/faq/' | prepend: site.baseurl }}' + ans"></p>
       </div>
     </li>
   </ul>
