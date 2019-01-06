@@ -89,7 +89,7 @@
 	app.directive('faq',[ '$http', function ($http) {
 		return {
 			restrict: 'E',
-			templateUrl: '/gsoc/display/partials/tabs/faq.html',
+			templateUrl: "{{ '/gsoc/display/partials/tabs/faq.html' | prepend: site.baseurl }}",
 			controller: function () {
 				self = this
 				self.faqs = faq
@@ -126,7 +126,7 @@
 	app.directive('mentors', ['$http', function ($http) {
 		return {
 			restrict: 'E',
-			templateUrl: '/gsoc/display/partials/tabs/mentors.html',
+			templateUrl: "{{ '/gsoc/display/partials/tabs/mentors.html' | prepend: site.baseurl }}",
 			controller: function ($scope) {
 				self = this
 				self.mentorsList = {}
