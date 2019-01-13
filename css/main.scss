@@ -56,4 +56,14 @@ $on-laptop:        800px;
     .container {
         width: 95%;
     }
+    code {
+        padding: 2px 4px;
+        font-size: 0.9em;
+        color: #ffffff;
+        background-color: #194242;
+        border-radius: 11px;
+    }
+    li {
+        line-height:1.5;
+    }
 }
