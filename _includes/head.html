@@ -21,7 +21,6 @@
     {% include style.html %}
 
     <link rel="alternate" type="application/rss+xml" title="The OpenAstronomy Blog" href="{{config.site}}/feed.xml"/>
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript">
      // change background images from a list.
@@ -29,9 +28,44 @@
          // list of filenames endings
          var backgrounds = ['ap', 'sp'];
          var selected = backgrounds[Math.floor(Math.random() * backgrounds.length)];
-         var bgpath = '/css/background_' + selected + '.jpg';
+         var bgpath = "{{ site.baseurl }}/css/background_" + selected + '.jpg';
          $('body').css('background-image', 'url(' + bgpath + ')');
      });
     </script>
+
+    {% if include.project == "true" %}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js"></script>
+        <script type="text/javascript" src="{{ '/gsoc/display/data/faq.js' | prepend: site.baseurl }}"></script>
+        <script>
+         {% assign groups = site.projects | shuffle %}
+         {% assign notwanted = "next,content,previous,output,excerpt,draft" %}
+         {% capture year %}{{ page.season }}{% endcapture %}
+         var year = {{ page.season }}
+         var projects = [
+             {% for project in groups %}{%
+                 if project.relative_path contains year %}
+                 {
+                 {%
+                   for item in project %}{% if notwanted contains item %}{% continue %}{% endif %}
+                      "{{ item }}": {% if item == "url" %}{{ project[item] | prepend: site.baseurl | jsonify }}{% else %}{{ project[item] | jsonify }}{% endif %}{% unless forloop.last %},{% endunless %}{%
+                   endfor %}
+                 }{% unless forloop.last %},{% endunless %}{%
+                 endif %}{%
+              endfor %}
+        ];
+        </script>
+        <script type="text/javascript" src="{{ '/gsoc/display/data/admins.js' | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ '/gsoc/display/vendors/angular-sanitize/angular-sanitize.js' | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ '/gsoc/display/vendors/showdown/showdown.js' | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ '/gsoc/display/vendors/markdown/markdown.js' | prepend: site.baseurl }}"></script>
+        <script type="text/javascript" src="{{ '/gsoc/display/resources/js/app.js' | prepend: site.baseurl }}"></script>
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    {% endif %}
 
 </head>

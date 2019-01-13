@@ -1,10 +1,10 @@
 <div class="media">
   <a href="{{ site.chiantipy_url }}">
-  <img class="media-object pull-left" src="{{page.root}}/img/members/chiantipy.png" alt="Chiantipy" />
+  <img class="media-object pull-left" src="{{ '/img/members/chiantipy.png' | prepend: site.baseurl }}" alt="Chiantipy" />
   </a>
-  <div id="astropy" class="media-body">
+  <div id="chiantipy" class="media-body">
     <a href="{{ site.chiantipy_url }}" class="project" target="_blank">ChiantiPy</a>
-    is a Python interface to the <a href=" {{ site.chianti_url }}">
+    is a Python interface to the <a href="{{ site.chianti_url }}">
       CHIANTI atomic database </a> for
     astrophysical spectroscopy.
     CHIANTI consists of a database of atomic data that can be

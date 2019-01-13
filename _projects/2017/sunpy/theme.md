@@ -17,7 +17,7 @@ collaborating_projects:
  - sunpy
 ---
 
-The SunPy [website](sunpy.org) and the SunPy [documentation](docs.sunpy.org) do
+The SunPy [website](http://sunpy.org) and the SunPy [documentation](http://docs.sunpy.org) do
 not have a consistent theme. This project would design a new look for both the
 website and the documentation and then implement this as a general website theme
 and as a sphinx theme for the documentation.

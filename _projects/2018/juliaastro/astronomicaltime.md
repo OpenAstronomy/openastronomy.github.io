@@ -31,7 +31,7 @@ to astronomers the tools to work with the Julia language: there are libraries fo
 manipulation of FITS files, transformation of coordinates, cosmological
 calculations, time system conversions, and computation of dust extinction laws.
 
-The [AstronomicalTime.jl](https://github.com/JuliaAstro/AstronomicalTime.jl)
+The [AstroTime.jl](https://github.com/JuliaAstro/AstroTime.jl)
 package provides a new `Epoch` data type that handles conversions between all
 commonly used astronomical time scales. The code currently calls the tried and
 tested C function for time scale conversions from
@@ -42,8 +42,8 @@ the new implementation against ERFA.
 If you don't know where to start from, have a look at:
 
 * the
-  [AstronomicalTime.jl manual](https://juliaastro.github.io/AstronomicalTime.jl/latest/index.html),
-* the [TODO list](https://github.com/JuliaAstro/AstronomicalTime.jl/issues/1)
+  [AstroTime.jl manual](https://juliaastro.github.io/AstroTime.jl/latest/index.html),
+* the [TODO list](https://github.com/JuliaAstro/AstroTime.jl/issues/1)
   of the project, with the list of *all* functions not yet ported,
 * the [SOFA Time Scale and Calendar Tools](http://www.iausofa.org/2017_0420_C/sofa/sofa_ts_c.pdf)
   manual.
@@ -53,7 +53,7 @@ required. You should get acquainted with the language before the coding
 period nevertheless. If you are a Julia newbie, check out
 the [Manual](http://docs.julialang.org/en/latest/index.html), in particular
 the
-[performance tips](http://docs.julialang.org/en/latest/manual/performance-tips.html) and
+[performance tips](https://docs.julialang.org/en/latest/manual/performance-tips/) and
 the
-[style guide](http://docs.julialang.org/en/latest/manual/style-guide.html).
+[style guide](https://docs.julialang.org/en/latest/manual/style-guide/).
 You may also find [other useful resources](http://julialang.org/learning/).

@@ -16,15 +16,21 @@ jobs:
     steps:
       - checkout
       - run:
+          name: a merge PR
+          command: |
+            if [[ -n "${CIRCLE_PR_NUMBER}" ]]; then
+              git fetch origin +refs/pull/$CIRCLE_PR_NUMBER/merge:pr/$CIRCLE_PR_NUMBER/merge
+              git checkout -qf pr/$CIRCLE_PR_NUMBER/merge
+            fi
+
+      - run:
           name: fetch submodules
           command: git submodule init && git submodule update
 
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - rubygems-v1-{{ checksum "Gemfile.lock" }}
-          # fallback to using the latest cache if no exact match is found
-          - rubygems-v1-fallback
+          - rubygems-v1-latest
 
       - run:
           name: install dependencies
@@ -39,14 +45,38 @@ jobs:
           command: |
             bundle exec htmlproofer ./_site \
               --allow-hash-href \
-              --check-favicon  \
               --check-html \
-              --disable-external
+              --disable-external \
+              --file-ignore "/.+\/gsoc\/display\/partials.+/"
+              # Ignores the path for the angular magic
+
+      - run:
+          name: HTMLProofer with external
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+             bundle exec htmlproofer ./_site \
+               --allow-hash-href \
+               --check-html \
+               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-6].+/"  \
+               --http-status-ignore 302
+               # Ignore old ideas pages and ssl certificates that error.
+            fi
+
+
+      - run:
+          name: Jekyll re-build for local
+          command: |
+            echo "url: https://${CIRCLE_BUILD_NUM}-30926520-gh.circle-artifacts.com" > circle.yml && \
+            bundle exec jekyll build -b "/0/site"  --config _config.yml,circle.yml && \
+            find ./_site/ -iname '*html' | xargs -I{} sed -i \
+              -e 's|href="\(\.\/.*\/\)"|href="\1index.html"|g' \
+              -e '/0\/site/ s|href="\(\/.*\/\)"|href="\1index.html"|g' {}
+            # Replace pages ending on `/` from our site to direct to index.html
 
       - save_cache:
           paths:
             - ~/vendor/bundle
-          key: rubygems-v1-{{ checksum "Gemfile.lock" }}
+          key: rubygems-v1-latest
 
       # collect reports
       - store_artifacts:

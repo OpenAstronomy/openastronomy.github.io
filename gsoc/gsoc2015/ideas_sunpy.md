@@ -40,7 +40,7 @@ There are various other maintenance tasks which need undertaking (https://github
 
 *Programming skills:* Python.
 
-####Description
+#### Description
 
 The [CHIANTI](http://www.chiantidatabase.org/) atomic physics database is a valuable resource for solar physics. The CHIANTI database holds a large amount of information on the physical properties of different elements in different ionisation states and enabled the calculation of various parameters from this information. Using CHIANTI it is possible to calculate the spectra of various types of solar plasma (e.g., flare, quiet sun, etc.) from the observed elemental abundances and ionisation states.
 These synthetic spectra are essential for comparing to the data observed by various instruments to calculate the response functions of the instruments and to compare to the properties of observed plasma to allow the calculation of physical parameters such as temperature.
@@ -67,7 +67,7 @@ Other potential application of ChiantiPy in SunPy include:
 
 *Programming skills:* Python.
 
-####Description
+#### Description
 
 SunPy is able to read a lightcurve from different sources (GOES x-ray, Lyra, Norh,...), however these are not all.
 SoHO/ERNE (Energetic and Relativistic Nuclei and Electron experiment on board SoHO) measures

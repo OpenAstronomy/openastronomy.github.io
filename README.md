@@ -14,11 +14,10 @@ bundler install
 or use:
 
 ```shell
-bundle install --path ../vendor/bundle
+bundle install --path vendor/bundle
 ```
 
-to install the dependencies locally at `../vendor/bundle`. Note that if you build it inside
-*i.e.*, `./vendor/bundle`, Jekyll will try to build also Jekylls examples.
+to install the dependencies locally at `vendor/bundle`.
 
 You can then build the website with:
 

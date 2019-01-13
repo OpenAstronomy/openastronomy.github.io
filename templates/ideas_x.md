@@ -7,7 +7,7 @@ ideas_team: X core package
 
 ### Implement x support for y
 
-*Suggested Mentor(s):* [Name Surname](http://github.com/my_username)
+*Suggested Mentor(s):* [Name Surname](http://github.com/octocat)
 
 *Difficulty:* Beginner, Intermediate or Expert
 
@@ -22,7 +22,7 @@ powerful but ...
 
 ### Implement m support for n
 
-*Suggested Mentor(s):* [Nombre Apellido](http://github.com/mi_usuario)
+*Suggested Mentor(s):* [Nombre Apellido](http://github.com/octocat)
 
 *Difficulty:* Beginner, Intermediate or Expert
 
