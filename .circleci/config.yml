@@ -73,6 +73,11 @@ jobs:
               -e '/0\/site/ s|href="\(\/.*\/\)"|href="\1index.html"|g' {}
             # Replace pages ending on `/` from our site to direct to index.html
 
+      - run:
+          name: "Built documentation is available at:"
+          command: DOCS_URL="${CIRCLE_BUILD_URL}/artifacts/${CIRCLE_NODE_INDEX}/${CIRCLE_WORKING_DIRECTORY/#\~/$HOME}/site/index.html"; echo $DOCS_URL
+
+
       - save_cache:
           paths:
             - ~/vendor/bundle
