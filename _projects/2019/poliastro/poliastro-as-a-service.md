@@ -31,7 +31,7 @@ There have been several ideas to create web applications using poliastro, but on
 limitation has been the installation itself. poliastro dependencies are complex and somewhat
 heavy, and there is also dependence on external data for things like planetary ephemerides.
 This sole thing prevents the deployment of poliastro in services like Amazon Web Services Lambda,
-as evidenced in [this issue](https://github.com/poliastro/poliastro/issues/444).
+as evidenced in [the issue #444](https://github.com/poliastro/poliastro/issues/444).
 
 The goal of the project would be to make a slimmer or lighter version of poliastro by declaring
 some dependencies optional, creating recipes to deploy poliastro in cloud services and PaaS

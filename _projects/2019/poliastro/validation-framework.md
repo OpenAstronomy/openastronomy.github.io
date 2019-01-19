@@ -20,7 +20,7 @@ collaborating_projects:
 
 #### Description
 
-_Validation is hard._ The current approach in poliastro is to add unit tests that check whether poliastro gives the same result as the solved examples of popular Astrodynamics textbooks (see and [http://docs.poliastro.space/en/latest/references.html#books-and-papers](http://docs.poliastro.space/en/latest/references.html#books-and-papers)).
+_Validation is hard._ The current approach in poliastro is to add unit tests that check whether poliastro gives the same result as the solved examples of [popular Astrodynamics textbooks](http://docs.poliastro.space/en/latest/references.html#books-and-papers).
 
 However, poliastro is now a mature project and validating against textbook examples is not enough anymore,
 for several reasons:
@@ -29,7 +29,7 @@ for several reasons:
 * It has grown in feature set and can do more complicated things, which are out of the scope of undergraduate textbooks
 
 One example of this is the tests covering perturbations and low-thrust guidance laws
-(see https://blog.poliastro.space/2018/08/05/2018-08-05-google-summer-of-code-2018/
+(see [last year results](https://blog.poliastro.space/2018/08/05/2018-08-05-google-summer-of-code-2018/)
 for a summary and a list of links). These tests use research papers to validate poliastro code,
 but in some cases we were not able to reproduce the original results and conclusions,
 resulting in half-baked validations and experimental features.
@@ -56,7 +56,7 @@ much further than that.
 
 ##### 2nd evaluation
 
-* Have produced a table similar to http://www.astropy.org/coordinates-benchmark/summary.html for our planetary reference frames
+* Have produced a table similar to [astropy's](http://www.astropy.org/coordinates-benchmark/summary.html) for our planetary reference frames
 * Have all code, tests and documentation in GitHub
 
 ##### Final
@@ -69,7 +69,7 @@ much further than that.
 
 * Fix any bugs that might appear regarding visualization, hyperbolic orbits and so forth
 * Review pull requests from other poliastro contributors, including the mentor
-* Maintain poliastro benchmarks https://blog.poliastro.space/poliastro-benchmarks/
+* Maintain [poliastro benchmarks](https://blog.poliastro.space/poliastro-benchmarks/)
 * Give a talk about the work at some Python event
 
 #### Additional resources
