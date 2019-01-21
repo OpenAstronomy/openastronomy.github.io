@@ -1,5 +1,5 @@
 ---
-name: earth-specific-capabilities
+name: Earth-specific capabilities
 desc: Add more Earth-specific capabilities to poliastro to make it more attractive for non-interplanetary use cases
 requirements:
  - Basic notions of orbital mechanics
