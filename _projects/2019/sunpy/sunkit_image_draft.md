@@ -16,7 +16,8 @@ issues:
  - https://github.com/sunpy/sunkit-image/issues/10
  - https://github.com/sunpy/sunkit-image/issues/13
 mentors:
- - FIND SOMEONE MAYBE
+ - nabobalis
+ - SOMEONE ELSE
 initiatives:
  - GSOC
  - SOCIS
