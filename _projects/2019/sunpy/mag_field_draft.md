@@ -10,7 +10,8 @@ issues:
  - https://groups.google.com/forum/#!topic/sunpy/ZLu_HoX_lbc
  - https://github.com/sunpy/solarbextrapolation/issues/12
 mentors:
- - FIND SOMEONE MAYBE
+ - Alex-Ian-Hamilton
+ - FIND SOMEONE TO SUPPORT
 initiatives:
  - GSOC
  - SOCIS
