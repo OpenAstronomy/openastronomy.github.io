@@ -6,6 +6,7 @@ requirements:
 difficulty: easy
 mentors:
  - juanlu001
+ - AunSiro
 initiatives:
  - GSOC
  - SOCIS

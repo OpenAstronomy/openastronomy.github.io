@@ -10,6 +10,7 @@ issues:
  - https://github.com/poliastro/poliastro/issues/444
 mentors:
  - juanlu001
+ - AunSiro
 initiatives:
  - GSOC
  - SOCIS
