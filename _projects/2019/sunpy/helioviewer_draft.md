@@ -11,7 +11,9 @@ issues:
  - https://github.com/sunpy/sunpy/issues/2762
  - https://github.com/sunpy/sunpy/issues/2878
 mentors:
- - FIND SOMEONE MAYBE
+ - wafels
+ - cadair
+ - TO BE FILLED
 initiatives:
  - GSOC
  - SOCIS
