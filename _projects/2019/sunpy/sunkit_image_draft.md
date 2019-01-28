@@ -17,7 +17,7 @@ issues:
  - https://github.com/sunpy/sunkit-image/issues/13
 mentors:
  - nabobalis
- - SOMEONE ELSE
+ - wafels
 initiatives:
  - GSOC
  - SOCIS
