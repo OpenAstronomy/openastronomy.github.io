@@ -11,7 +11,7 @@ issues:
  - https://github.com/sunpy/solarbextrapolation/issues/12
 mentors:
  - Alex-Ian-Hamilton
- - FIND SOMEONE TO SUPPORT
+ - cadair
 initiatives:
  - GSOC
  - SOCIS
