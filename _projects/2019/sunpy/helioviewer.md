@@ -12,7 +12,7 @@ issues:
 mentors:
  - wafels
  - Cadair
- - Potentially the API creator/maintainer
+ #- Potentially the API creator/maintainer
 initiatives:
  - GSOC
  - SOCIS
