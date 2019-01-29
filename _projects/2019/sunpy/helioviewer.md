@@ -13,7 +13,6 @@ issues:
 mentors:
  - wafels
  - cadair
- - TO BE FILLED
 initiatives:
  - GSOC
  - SOCIS

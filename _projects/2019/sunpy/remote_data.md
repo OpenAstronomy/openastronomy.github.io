@@ -10,7 +10,6 @@ issues:
  - https://github.com/sunpy/sunpy/issues/1897
 mentors:
  - Cadair
- - wtbarnes
  - dpshelio
 initiatives:
  - GSOC
