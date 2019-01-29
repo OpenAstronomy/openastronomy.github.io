@@ -13,6 +13,7 @@ issues:
 mentors:
 # First person in contact; mentors may change before project starts.
  - DanRyanIrish
+ - Cadair
 initiatives:
  - GSOC
  - SOCIS
