@@ -38,6 +38,8 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 Whether you have been participating for years or this is your first time
 read our guide for [sub-org admins](./suborg_guidelines.html).
+
+
 [OpenAstronomy Student Guide]: ./student_guidelines.html
 [Python Software Foundation]: https://wiki.python.org/moin/SummerOfCode/2016
 [GSoC Student Guide]: https://google.github.io/gsocguides/student/
