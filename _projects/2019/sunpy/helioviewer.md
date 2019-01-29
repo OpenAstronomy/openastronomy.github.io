@@ -12,8 +12,7 @@ issues:
  - https://github.com/sunpy/sunpy/issues/2878
 mentors:
  - wafels
- - cadair
- - TO BE FILLED
+ - Cadair
 initiatives:
  - GSOC
  - SOCIS
