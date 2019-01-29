@@ -36,11 +36,12 @@ are aware of changes on the remote server.
 
 See [issue #1939](https://github.com/sunpy/sunpy/issues/1939) for more details.
 
-#### Milestones (if any)
+#### Milestones
 
 ##### Coding Starts
 
 * Engaged with the community and understand the motivation and challenges of the project.
+* Have set up a development environment.
 
 ##### To be completed by the Phase 1 Evaluation Deadline
 

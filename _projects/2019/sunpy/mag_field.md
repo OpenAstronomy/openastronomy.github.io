@@ -15,22 +15,18 @@ mentors:
 initiatives:
  - GSOC
  - SOCIS
-initiatives:
- - GSOC
- - SOCIS
 tags:
  - python
  - cython
  - numpy
- - numba
 collaborating_projects:
  - sunpy
 ---
 
 #### Description
 
-This project aims to improve the `solarbextrapolation` package by relaxing the small-angle approximation and allowing for extrapolation of global magnetic fields, i.e. 3D vector fields on a scale larger than an active region.
-Furthermore, we want to add support for another numerical model called Potential Field Source Surface ([PFSS](https://github.com/antyeates1983/pfss)).
+This project aims to improve the `solarbextrapolation` (maybe renamed in the future) package by relaxing the small-angle approximation and allowing for extrapolation of global magnetic fields, i.e. 3D vector fields on a scale larger than an active region.
+Furthermore, we want to add support for other numerical models with the first one being Potential Field Source Surface ([PFSS](https://github.com/antyeates1983/pfss)).
 
 This will involve extensive modifications to the numerical method used to perform the field extrapolation as well as developing methods for coordinate transformations between the magnetogram coordinate system and the spherical coordinate system of the derived vector field.
 
@@ -44,6 +40,7 @@ It is expected that this new object will serve as a prototype for a first-class 
 
 * Engaged with the community and understand the motivation and challenges of the project.
 * Have set up a development environment.
+* Some understanding of what `solarbextrapolation` does and how.
 
 ##### To be completed by the Phase 1 Evaluation Deadline
 
@@ -61,8 +58,8 @@ It is expected that this new object will serve as a prototype for a first-class 
 * Have all code, tests and documentation in GitHub.
 * Improvements to the documentation and examples
 
-##### Secondary goals
+##### Additional Aims (time permitting)
 
 * Performance improvements
-* Addition of more advanced extrapolators, e.g. non-linear force-free field
 * Better visualization methods
+* Addition of more advanced extrapolators, e.g. non-linear force-free field
