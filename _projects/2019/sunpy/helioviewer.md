@@ -12,7 +12,6 @@ issues:
 mentors:
  - wafels
  - Cadair
- #- Potentially the API creator/maintainer
 initiatives:
  - GSOC
  - SOCIS
@@ -33,7 +32,7 @@ What we want to do is to create a new Python package that will lightly wrap ever
 
 #### Milestones
 
-##### Coding starts (time table might be too slow)
+##### Coding starts
 
 * Engaged with the community and understand the motivation and challenges of the project.
 * Have set up a development environment.
