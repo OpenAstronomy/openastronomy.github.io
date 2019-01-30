@@ -12,6 +12,7 @@ issues:
 mentors:
 # First person in contact; mentors may change before project starts.
  - taldcroft
+ - mhvk
 initiatives:
  - GSOC
 tags:
@@ -37,7 +38,8 @@ For a simple operation like slicing, astropy Table is currently about
 a factor of 10 slower than Pandas.  This project will focus on identifying
 performance bottlenecks, writing performance tests for astropy-benchmarks,
 and then developing code to improve the performance.  It is possible that
-some fixes
+some fixes will require the use of Cython so previous experience is
+desirable though not absolutely required.
 
 #### Milestones (if any)
 
