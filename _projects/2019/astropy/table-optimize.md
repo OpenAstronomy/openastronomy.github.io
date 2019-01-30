@@ -12,6 +12,7 @@ issues:
 mentors:
 # First person in contact; mentors may change before project starts.
  - taldcroft
+ - mhvk
 initiatives:
  - GSOC
 tags:
