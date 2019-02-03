@@ -38,7 +38,7 @@ jobs:
 
       - run:
           name: Jekyll build
-          command: bundle exec jekyll build 2&> std.err
+          command: bundle exec jekyll build 2> std.err
 
       - run:
           name: Check Jekyll build
