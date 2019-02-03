@@ -42,7 +42,7 @@ jobs:
 
       - run:
           name: Check Jekyll build
-          command: return $(wc -l std.err | awk '{print $1}')
+          command: test $(wc -l std.err | awk '{print $1}') = 0
 
       - run:
           name: HTMLProofer tests
