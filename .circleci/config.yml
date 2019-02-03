@@ -38,7 +38,11 @@ jobs:
 
       - run:
           name: Jekyll build
-          command: bundle exec jekyll build
+          command: bundle exec jekyll build 2&> std.err
+
+      - run:
+          name: Check Jekyll build
+          command: return $(wc -l std.err | awk '{print $1}')
 
       - run:
           name: HTMLProofer tests
