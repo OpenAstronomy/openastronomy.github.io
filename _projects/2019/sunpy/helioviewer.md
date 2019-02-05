@@ -12,7 +12,7 @@ issues:
 mentors:
  - wafels
  - Cadair
- #- Potentially the API creator/maintainer
+ - Helioviewer-Kirill
 initiatives:
  - GSOC
  - SOCIS
