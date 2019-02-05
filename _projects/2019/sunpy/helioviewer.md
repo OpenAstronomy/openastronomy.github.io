@@ -12,6 +12,7 @@ issues:
 mentors:
  - wafels
  - Cadair
+ - Helioviewer-Kirill
 initiatives:
  - GSOC
  - SOCIS
