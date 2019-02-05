@@ -2,8 +2,7 @@
 name: Feature and Event Objects in SunPy
 desc: Implements a feature/event object in SunPy.
 requirements:
- - Familiar with methods for creating classes, objects and
- subclasses. 
+ - Familiar with methods for creating classes, objects and subclasses. 
 difficulty: medium
 issues:
  - https://github.com/sunpy/sunpy/pull/2759
