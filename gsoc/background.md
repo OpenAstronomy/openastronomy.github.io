@@ -61,7 +61,7 @@ the world is very welcome to apply.
 > my coding style, taught me loads about managing large projects, version control,
 > testing, and packaging. Do you have a summer without research funding? Apply!
 
-[Brett Morris][bmorris3], GSoC student 2015
+[Brett Morris][bmorris3], Astro PhD student, GSoC 2015
 
 > After spending the summer of 2015 as an intern at NIST, I got really
 > fascinated by how much Python aided scientists get the best out their data.
@@ -77,7 +77,7 @@ the world is very welcome to apply.
 > [blog posts](https://mirca.github.io/posts). Also check out some
 > [tips](https://mirca.github.io/gsoc-application/) before applying.
 
-[Zé Vinícius][mirca], GSoC student 2016
+[Zé Vinícius][mirca], EE undergraduate student, GSoC 2016
 
 ### Apply!
 
