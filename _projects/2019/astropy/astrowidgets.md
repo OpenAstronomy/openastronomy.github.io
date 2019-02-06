@@ -10,6 +10,7 @@ difficulty: intermediate
 mentors:
  - mwcraig
  - astrofrog
+ - pllim
  - eteq
 initiatives:
  - GSOC
