@@ -10,6 +10,7 @@ difficulty: intermediate
 mentors:
  - mwcraig
  - astrofrog
+ - eteq
 initiatives:
  - GSOC
 tags:
@@ -28,7 +29,7 @@ The final deliverable for the project will be a version of the [astrowidgets](ht
 
 Some of the deliverables for this project would be:
 
-+ Develop of the remaining unimplemented features in the
++ Development of the remaining unimplemented features in the
   [target API](https://github.com/eteq/nb-astroimage-api) using ginga as the backend.
 + Develop an implementation using [bqplot](https://github.com/bloomberg/bqplot) and
   the [ipyastroimage](https://github.com/glue-viz/ipyastroimage) mark for
@@ -37,7 +38,8 @@ Some of the deliverables for this project would be:
   The non-interactive version would implement as much of the API as possible in a
   non-interactive format.
 + Develop a method for identifying the nearest point source to a click on an image
-  (very preliminary work on this is available).
+  (very preliminary work on this is available) by combining the above with astropy
+  and its affiliated packages (particularly photutils).
 + Documentation for the implemented backends.
 + More extensive test suite.
 
