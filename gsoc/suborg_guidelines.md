@@ -19,7 +19,7 @@ First you need to be a member of the OpenAstronomy team. That process
 is simple (and free!). You need to be an open-development organisation
 and be related with astronomy. Then make a pull-request to [our repository][OA repository]
 adding a logo, a short description, etc. 
-Look [how one of our newer members did it](https://github.com/OpenAstronomy/openastronomy.github.io/pull/166/files).
+Follow the instructions in the example at the bottom of [the `memembers.yaml` file][members PR].
 The steering council will review your application and give you feedback.
 
 Once a member you can start the path to participate on GSoC! 
@@ -167,3 +167,4 @@ they are not followed the administrators will fail the students.
 [student guidelines]: ./student_guidelines.html
 [Google's mentor guide]: https://google.github.io/gsocguides/mentor/
 [GSOC]: https://summerofcode.withgoogle.com/
+[members PR]: https://github.com/OpenAstronomy/openastronomy.github.io/blob/master/_data/members.yaml
