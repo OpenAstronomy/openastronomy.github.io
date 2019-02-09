@@ -52,7 +52,7 @@ yt:
   logo: yt.png
   url: https://yt-project.org/
   repositories:
-    github:
+    github: yt-project/yt
   mailinglist:
     users: http://lists.spacepope.org/listinfo.cgi/yt-users-spacepope.org
     devs: http://lists.spacepope.org/listinfo.cgi/yt-dev-spacepope.org
@@ -99,7 +99,7 @@ ims:
   logo: ims.png
   url: http://www.marssociety.it/?lang=en
   repositories:
-    bitbucket: https://bitbucket.org/italianmarssociety/
+    bitbucket: italianmarssociety/
   mailinglist:
     admin: mailto:gsoc@marssociety.it
   description: >-
@@ -263,7 +263,7 @@ gnuastro:
 #   chat:
 #     slack: http://slackurl.com
 #     matrix: http://riot.url
-#     irc: http://irc.freenode/channel
+#     irc: http://irc.freenode/#channel
 #   description: >-
 #     Multiline description that will start with name org. html links are
 #     allowed as <a href="http://superpage.com/">normal links</a>.

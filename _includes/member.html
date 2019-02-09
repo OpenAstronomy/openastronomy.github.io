@@ -14,7 +14,7 @@
             <a href="{{ 'https://github.com/' | append: repo[1] }}" target="_blank">
                 <span class="icon  icon--github">
                     <svg viewBox="0 0 16 16">
-                        <path fill="#333333" d="{{ site.gh_logo }}"/>
+                        <path fill="#333333" d="{{ site.data.icons.gh_logo }}"/>
                     </svg>
                 </span>
         {% elsif repo[0] == "bitbucket" %}
@@ -22,9 +22,17 @@
             <a href="{{ 'https://bitbucket.com/' | append: repo[1] }}" target="_blank">
                 <span class="icon  icon--github">
                     <svg height="50%" viewBox="0 0 30 30">
-                        <path fill="#333333" d="{{ site.bb_logo }}"/>
+                        <path fill="#333333" d="{{ site.data.icons.bb_logo }}"/>
                     </svg>
                 </span>
+        {% elsif repo[0] == "sourceforge" %}
+                {% assign name = repo[1] %}
+                <a href="{{ 'https://sourceforge.net/projects/' | append: repo[1] }}" target="_blank">
+                    <span class="icon  icon--github">
+                        <svg height="50%" viewBox="0 0 15 10">
+                            <path fill="#333333" d="{{ site.data.icons.sf_logo }}"/>
+                        </svg>
+                    </span>
         {% else %}
             {% assign name = member[0] %}
             <a href="{{ repo[1] }}" target="_blank">
@@ -47,7 +55,7 @@
     {% if details.chat %}
         <span class="icon  icon--github">
             <svg viewBox="0 0 40 40" height="50%">
-                <path fill="#333333" d="{{ site.irc_logo }}"/>
+                <path fill="#333333" d="{{ site.data.icons.irc_logo }}"/>
             </svg>
         </span>
         {% for chat in details.chat %}
