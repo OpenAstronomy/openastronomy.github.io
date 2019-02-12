@@ -244,6 +244,22 @@ gnuastro:
     <a href="https://www.gnu.org/software/gnuastro/manual/html_node/Tutorials.html"
     target="_blank">tutorials</a> is the best place to start using it.
 
+ctlearn:
+   name: CTLearn
+   logo: ctlearn.png   
+   url: https://github.com/ctlearn-project
+   repositories:
+     github: https://github.com/ctlearn-project/ctlearn.git
+   description: >-
+      is a package under active development that pursues the
+      application of deep-learning based methods to the analysis of
+      data from imaging atmospheric Cherenkov telescopes (IACTs). <a
+      href="https://github.com/ctlearn-project">CTLearn</a> includes
+      modules for loading and manipulating IACT data and for running
+      machine learning models using pixel-wise camera data as
+      input. Its high-level interface provides a
+      configuration-file-based workflow to drive reproducible training
+      and prediction.
 
 # Are you a new org? copy the fragment below above this line and fill it up
 # with your organisation details. Don't forget to add your logo to the img/members
