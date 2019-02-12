@@ -249,7 +249,7 @@ ctlearn:
    logo: ctlearn.png   
    url: https://github.com/ctlearn-project
    repositories:
-     github: https://github.com/ctlearn-project/ctlearn.git
+     github: ctlearn-project/ctlearn
    description: >-
       is a package under active development that pursues the
       application of deep-learning based methods to the analysis of
@@ -260,6 +260,8 @@ ctlearn:
       input. Its high-level interface provides a
       configuration-file-based workflow to drive reproducible training
       and prediction.
+   chat:
+     slack: https://ctlearn.slack.com
 
 # Are you a new org? copy the fragment below above this line and fill it up
 # with your organisation details. Don't forget to add your logo to the img/members
