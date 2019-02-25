@@ -6,8 +6,8 @@ requirements:
 # Student requirements:
  - Python
  - Moderate familiarity with neural networks (specifically 3D CNNs)
- - Some familiarity with 3D geometry/linear algebra implementation in Python
-difficulty: medium
+ - Some familiarity with 3D geometry/linear algebra implementation in Python (optional)
+difficulty: hard
 issues:
 # Related issues (if any)  to this project.
 mentors:
@@ -20,7 +20,7 @@ tags:
 # Different technologies needed
  - python
  - tensorflow
- - pyeuclid (optional, or some other geometry package)
+ - pyeuclid (optional)
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
  - ctlearn
