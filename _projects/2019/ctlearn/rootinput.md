@@ -1,7 +1,7 @@
 ---
-name: Optimization
+name: ROOT input
+desc: Enable input of data in ROOT format from current-generation imaging atmospheric Cherenkov telescopes 
 # add a short one line description of your project
-desc: Implement a framework for model optimization
 requirements:
 # Student requirements:
  - Python
@@ -9,7 +9,7 @@ requirements:
 difficulty: medium
 issues:
 # Related issues (if any)  to this project.
- - https://github.com/ctlearn-project/ctlearn/issues/89
+
 mentors:
 # First person in contact; mentors may change before project starts.
  - rlopezcoto
