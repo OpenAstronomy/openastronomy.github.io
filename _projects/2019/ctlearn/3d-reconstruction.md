@@ -28,11 +28,11 @@ collaborating_projects:
 
 #### Description
 
-One of the main goals of CTLearn is developing and implementing methods to perform classification/regression on *multiple images simultaneously*. Most ground-based imaging air Cherenkov telescope (IACT) experiments use an array of multiple telescopes to image each shower from multiple angles. Stereo imaging makes it possible to achieve a better shower reconstruction and is particularly important for a good reconstruction of arrival direction.
+One of the main goals of CTLearn is developing and implementing methods to perform classification/regression on **multiple images simultaneously**. Most ground-based imaging air Cherenkov telescope (IACT) experiments use an array of multiple telescopes to image each shower stereoscopically. Stereo imaging makes it possible to achieve a better shower reconstruction and is particularly important for a good reconstruction of arrival direction.
 
-When it comes to event reconstruction with convolutional neural networks (CNNs), it seems natural that in order to improve upon existing reconstruction methods, it will be necessary for CNN-based methods to make full use of this stereo information. The current methods implemented in CTLearn, like the convolutional-recurrent (CRNN) model do not take full advantage of this information, as they handle each input image of an event without any reference to the geometrical relationship between all of the images.
+When it comes to event reconstruction with convolutional neural networks (CNNs), it likely that in order to improve noticeably on existing reconstruction methods, it will be necessary for CNN-based methods to make full use of this stereo information. The current methods implemented in CTLearn, like the convolutional recurrent neural network (CRNN) model do not take full advantage of this information, as they handle each input image of an event without any explicit reference to the geometrical relationship between all of the images.
 
-The idea behind this project is to implement a pre-processing stage which does a preliminary geometric reconstruction before passing the data to a CNN. A purely geometric method, based on photon back-tracing coupled with information about the telescope positions and pointings, is used to reconstruct a 3D voxel input representing the shower. In this 3D array, unlike the original images, locality is preserved, as information about the same part of the shower (in three dimensions) will be combined in the same local 3D region of the input. Ideally, this should result in the locality and hierarchicality assumptions of the CNN being better satsified and therefore the CNN being better able to extract and use low-level shower information/features from all images together.
+The idea behind this project is to implement a pre-processing stage which does a preliminary geometric reconstruction before passing the data to a CNN. A purely geometric method, based on photon back-tracing coupled with information about the telescope positions and pointings, is used to reconstruct a 3D array input representing the shower. In this 3D array, unlike the original images, locality is preserved, as information about the same part of the shower (in three dimensions) will be combined in the same local 3D region of the input. Ideally, this should result in the locality and hierarchicality assumptions of CNNs being better satisfied, the CNN being better able to extract and use low-level shower information/features, and a more powerful classifier.
  
 #### Milestones
 
@@ -45,12 +45,12 @@ The idea behind this project is to implement a pre-processing stage which does a
 ##### GSOC MIDTERM
 
 * Implement the 3D reconstruction method and present example outputs (w/ visualization so they can be validated).
-* Present a design for a minimal 3D convolutional neural network (based on a review of the literature).
+* Present a design for a minimal 3D convolutional neural network for classification (based on a review of the literature).
 * Have all code and documentation in GitHub.
 
 ##### GSOC FINAL
 
-* Preprocess a small dataset using the 3D reconstruction code and write code in TensorFlow to train the 3D model on it (should be based on the existing CTLearn framework and only involve definining a new model).
+* Preprocess a small dataset using the 3D reconstruction code and write code in TensorFlow to train the 3D model on it (should be based on the existing CTLearn framework and only involve definining a new model + any modifications to data loading code required to load 3D data).
 * Further optimize/improve implementation of 3D reconstruction method.
 * Prepare a report on method feasibility: training time/speed, dataset size/reduction factors, dataset processing time, GPU memory limitations, preliminary performance/observations about training.
 * Have all code, documentation, and final configuration files and plots in GitHub.
