@@ -45,10 +45,10 @@ In this project, the student will first learn how to use CTLearn to
 train classification models that tell gamma-ray images from cosmic-ray
 images apart and why this is important in the context of IACTs. Then,
 the student will implement tools that will enable automated model
-optimization in CTLearn, and will implement simple grid searches as a
-basic optimization procedure. Finally, the student will run
-grid-search based optimizations for two of the currently implemented
-models.
+optimization in CTLearn, and will implement iterative grid and random
+searches as a basic optimization procedure. Finally, the student will
+run iterative, grid and random-search based optimizations for two of the
+currently implemented models.
 
 #### Milestones
 
@@ -59,15 +59,13 @@ models.
 
 ##### GSOC MIDTERM
 
-* Automate the generation/update of configuration files.
 * Implement the calculation of useful metrics from a prediction file.
-* Implement grid searches in (a)the hyperparameter (sub)space making use of the two tools above.
+* Implement iterative grid and random searches in (a)the hyperparameter (sub)space.  
 * Have all code and documentation in GitHub.
 
 ##### GSOC FINAL
 
-* Complete a coarse grid search for the single_tel model.
-* Complete a coarse grid search for the cnn_rnn model.  
+* Complete coarse iterative grid and random searches for the single_tel model.
+* Complete coarse iterative grid and random searches for the cnn_rnn model.  
 * Implement other optimization searches, e.g., random search, genetic algorithms, Bayesian optimization, etc. (time permitting).  
 * Have all code, documentation, and plots in GitHub.
-
