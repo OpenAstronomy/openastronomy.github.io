@@ -7,8 +7,6 @@ requirements:
  - Python
  - Basic familiarity with neural networks
 difficulty: medium
-issues:
-# Related issues (if any)  to this project.
 
 mentors:
 # First person in contact; mentors may change before project starts.
