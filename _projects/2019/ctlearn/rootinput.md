@@ -19,10 +19,10 @@ initiatives:
  - GSOC
 tags:
 # Different technologies needed
- - [python](https://www.python.org/)
- - [tensorflow](https://www.tensorflow.org/)
- - [uproot](https://github.com/scikit-hep/uproot/)
- - [dl1-data-handler](https://github.com/cta-observatory/dl1-data-handler/)
+ - python
+ - tensorflow
+ - uproot
+ - dl1-data-handler
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
  - [ctlearn](https://github.com/ctlearn-project/ctlearn)
