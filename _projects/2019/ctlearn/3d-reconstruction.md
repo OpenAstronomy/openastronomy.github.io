@@ -14,6 +14,7 @@ mentors:
 # First person in contact; mentors may change before project starts.
  - aribrill
  - bryankim96
+ - qi-feng
 initiatives:
  - GSOC
 tags:
@@ -28,11 +29,11 @@ collaborating_projects:
 
 #### Description
 
-One of the main goals of CTLearn is developing and implementing methods to perform classification/regression on **multiple images simultaneously**. Most ground-based imaging air Cherenkov telescope (IACT) experiments use an array of multiple telescopes to image each shower stereoscopically. Stereo imaging makes it possible to achieve a better shower reconstruction and is particularly important for a good reconstruction of arrival direction.
+One of the main goals of CTLearn is developing and implementing methods to perform classification/regression on **multiple images simultaneously**. Most ground-based imaging air Cherenkov telescope (IACT) experiments use an array of multiple telescopes to image each shower stereoscopically. Stereo imaging is the main reason for the breakthrough of ground based gamma-ray astronomy a decade ago, making it possible to achieve a better shower reconstruction, in particular the reconstruction of arrival direction.
 
 When it comes to event reconstruction with convolutional neural networks (CNNs), it likely that in order to improve noticeably on existing reconstruction methods, it will be necessary for CNN-based methods to make full use of this stereo information. The current methods implemented in CTLearn, like the convolutional recurrent neural network (CRNN) model do not take full advantage of this information, as they handle each input image of an event without any explicit reference to the geometrical relationship between all of the images.
 
-The idea behind this project is to implement a pre-processing stage which does a preliminary geometric reconstruction before passing the data to a CNN. A purely geometric method, based on photon back-tracing coupled with information about the telescope positions and pointings, is used to reconstruct a 3D array input representing the shower. In this 3D array, unlike the original images, locality is preserved, as information about the same part of the shower (in three dimensions) will be combined in the same local 3D region of the input. Ideally, this should result in the locality and hierarchicality assumptions of CNNs being better satisfied, the CNN being better able to extract and use low-level shower information/features, and a more powerful classifier.
+The idea behind this project is to implement a pre-processing stage which does a preliminary geometric reconstruction before passing the data to a CNN. A purely geometric method, based on photon back-tracing coupled with information about the telescope positions and pointings, is used to reconstruct a 3D array input representing the shower. In this 3D array, unlike the original images (which is only a projection of the 3D shower onto the camera), locality is preserved, as information about the same part of the shower (in three dimensions) will be combined from all telescopes. Ideally, this should result in the locality and hierarchicality assumptions of CNNs being better satisfied, the CNN being better able to extract and use low-level shower information/features, and a more powerful classifier. 
  
 #### Milestones
 
@@ -45,7 +46,7 @@ The idea behind this project is to implement a pre-processing stage which does a
 ##### GSOC MIDTERM
 
 * Implement the 3D reconstruction method and present example outputs (w/ visualization so they can be validated).
-* Present a design for a minimal 3D convolutional neural network for classification (based on a review of the literature).
+* Present a design for a minimal 3D convolutional neural network for classification (based on a review of the literature). 
 * Have all code and documentation in GitHub.
 
 ##### GSOC FINAL
