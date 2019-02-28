@@ -3,7 +3,7 @@ name: ROOT input
 desc: Enable input of data in ROOT format from current-generation imaging atmospheric Cherenkov telescopes 
 # add a short one line description of your project
 requirements:
-# Student requirements:
+# Student requirements
  - Python
  - Basic familiarity with neural networks
 difficulty: medium
@@ -22,7 +22,7 @@ tags:
  - dl1-data-handler
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
- - [ctlearn](https://github.com/ctlearn-project/ctlearn)
+ - ctlearn
 ---
 
 #### Description
