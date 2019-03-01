@@ -36,6 +36,7 @@ It is similar to ds9 and CASA regions in that it has a well-defined standard.
 The goal of this project is simply to implement this language into astropy-regions.
 The complete project will involve writing input-output tools including a parser and a serializer.
 It will include a suite of tests, including round-trip tests to and from the CRTF and ds9 region formats.
+There is a good deal of code [already written](https://github.com/at88mph/opencadc_stc/tree/master/opencadc_stc) that may be portable into astropy-regions.
 
 #### Milestones (if any)
 
