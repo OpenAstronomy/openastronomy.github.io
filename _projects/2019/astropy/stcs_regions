@@ -9,11 +9,9 @@ difficulty: low
 issues:
 # Related issues (if any)  to this project.
  - https://github.com/astropy/regions/issues/21
- mentors:
+mentors:
 # First person in contact; mentors may change before project starts.
  - keflavich
- - miguelvdb
- - cdeil
 initiatives:
  - GSOC
 tags:
@@ -26,7 +24,6 @@ collaborating_projects:
  - astropy
  - regions
 ---
-Implement the STC-S region type for astropy
 
 #### Description
 
