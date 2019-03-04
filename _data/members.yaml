@@ -70,7 +70,9 @@ juliaastro:
   repositories:
     github: juliaastro
   mailinglist:
-    users: https://groups.google.com/forum/#!forum/julia-astro
+    users: https://discourse.julialang.org/c/domain/astro
+  chat:
+    matrix: https://riot.im/app/#/room/#JuliaAstro:openastronomy.org
   description: >-
     is an organization that shepherds the development of community astronomy and
     astrophysics packages for Julia. These include packages for widely used
