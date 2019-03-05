@@ -41,6 +41,6 @@ read our guide for [sub-org admins](./suborg_guidelines.html).
 
 
 [OpenAstronomy Student Guide]: ./student_guidelines.html
-[Python Software Foundation]: https://wiki.python.org/moin/SummerOfCode/2016
+[Python Software Foundation]: http://python-gsoc.org/
 [GSoC Student Guide]: https://google.github.io/gsocguides/student/
 [OpenAstronomy Universe]: http://openastronomy.org/Universe_OA/
