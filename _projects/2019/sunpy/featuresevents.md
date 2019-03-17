@@ -11,7 +11,7 @@ issues:
  - https://github.com/sunpy/sunpy/issues/164
 mentors:
  - wafels
- - cadair
+ - Cadair
  - dpshelio
 initiatives:
  - GSOC
