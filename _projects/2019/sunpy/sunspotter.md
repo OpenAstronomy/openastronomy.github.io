@@ -8,7 +8,7 @@ difficulty: medium
 issues:
 mentors:
  - dpshelio
- - sophiemurray
+ - drsophiemurray
  - samaloney
  - mbobra
 initiatives:
