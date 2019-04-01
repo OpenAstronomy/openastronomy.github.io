@@ -7,17 +7,39 @@ This is the source for the openastronomy.github.io website
 To build the site locally, you will need [jekyll](https://jekyllrb.com) to be installed.
 Clone this repository locally, then inside it, type:
 
-    gem install bundler
-    bundler install
+```shell
+gem install bundler
+bundler install
+```
+or use:
+
+```shell
+bundle install --path vendor/bundle
+```
+
+to install the dependencies locally at `vendor/bundle`.
 
 You can then build the website with:
 
-    jekyll build
+```shell
+bundle exec jekyll build
+```
 
 To view the site locally, you will then need to run:
 
-    jekyll serve
+```shell
+bundle exec jekyll serve
+```
 
-Note that you can watch for changes and automatically rebuild using
+this will track the changes and rebuild automatically. However, it won't reflect changes on `_config.yaml` 
 
-    jekyll serve --incremental
+
+### Submodule
+
+Note that this uses a submodule to complete the build process of the site.  So you may need to do:
+
+```shell
+git submodule init
+git submodule update
+```
+in a fresh clone, or just the second line to update the submodule.

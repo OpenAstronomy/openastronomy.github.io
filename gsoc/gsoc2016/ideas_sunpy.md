@@ -47,7 +47,7 @@ A successful proposal for this project will demonstrate that the applicant has u
 
 ### Implementing AIA response functions in SunPy
 
-*Suggested Mentor(s):* [Drew Leonard](https://github.com/drewleonard42), [Will Barnes](https://github.com/wtbarnes)
+*Suggested Mentor(s):* [Drew Leonard](https://github.com/SolarDrew), [Will Barnes](https://github.com/wtbarnes)
 
 *Difficulty:* Beginner
 
@@ -68,7 +68,7 @@ These response functions play a vital role in correctly interpreting observation
 Currently, SunPy has no implementation of instrument response functions.
 This project would develop the routines necessary to calculate response functions using the Python interface to the CHIANTI database, [ChiantiPy](http://chiantipy.sourceforge.net/).
 The primary implementation of this would be to produce default wavelength and temperature response functions for the [Atmospheric Imaging Assembly](http://aia.lmsal.com/) instrument.
-A detailed discussion of the AIA response functions can be found in [Boerner et al 2012](http://adslabs.org/adsabs/abs/2012SoPh..275...41B/).
+A detailed discussion of the AIA response functions can be found in [Boerner et al 2012](https://ui.adsabs.harvard.edu/#abs/2012SoPh..275...41B).
 
 Other potential applications of ChiantiPy in SunPy include:
 

@@ -1,0 +1,99 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+       - image: circleci/ruby:2.5
+    environment:
+      BUNDLE_PATH: ~/vendor/bundle
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - run:
+          name: a merge PR
+          command: |
+            if [[ -n "${CIRCLE_PR_NUMBER}" ]]; then
+              git fetch origin +refs/pull/$CIRCLE_PR_NUMBER/merge:pr/$CIRCLE_PR_NUMBER/merge
+              git checkout -qf pr/$CIRCLE_PR_NUMBER/merge
+            fi
+
+      - run:
+          name: fetch submodules
+          command: git submodule init && git submodule update
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - rubygems-v1-latest
+
+      - run:
+          name: install dependencies
+          command: bundle check || bundle install --jobs=4 --retry=3
+
+      - run:
+          name: Jekyll build
+          command: bundle exec jekyll build 2> std.err
+
+      - run:
+          name: Check Jekyll build
+          command: |
+            cat std.err
+            exit $(wc -l std.err | awk '{print $1}')
+
+      - run:
+          name: HTMLProofer tests
+          command: |
+            bundle exec htmlproofer ./_site \
+              --allow-hash-href \
+              --check-html \
+              --disable-external \
+              --file-ignore "/.+\/gsoc\/display\/partials.+/"
+              # Ignores the path for the angular magic
+
+      - run:
+          name: HTMLProofer with external
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+             bundle exec htmlproofer ./_site \
+               --allow-hash-href \
+               --check-html \
+               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-6].+/"  \
+               --http-status-ignore 302
+               # Ignore old ideas pages and ssl certificates that error.
+            fi
+
+
+      - run:
+          name: Jekyll re-build for local
+          command: |
+            echo "url: https://${CIRCLE_BUILD_NUM}-30926520-gh.circle-artifacts.com" > circle.yml && \
+            bundle exec jekyll build -b "/0/site"  --config _config.yml,circle.yml && \
+            find ./_site/ -iname '*html' | xargs -I{} sed -i \
+              -e 's|href="\(\.\/.*\/\)"|href="\1index.html"|g' \
+              -e '/0\/site/ s|href="\(\/.*\/\)"|href="\1index.html"|g' {}
+            # Replace pages ending on `/` from our site to direct to index.html
+
+      - run:
+          name: "Built documentation is available at:"
+          command: DOCS_URL="${CIRCLE_BUILD_URL}/artifacts/${CIRCLE_NODE_INDEX}/site/index.html"; echo $DOCS_URL
+
+
+      - save_cache:
+          paths:
+            - ~/vendor/bundle
+          key: rubygems-v1-latest
+
+      # collect reports
+      - store_artifacts:
+          path: ~/repo/_site
+          destination: site
+
+notify:
+  webhooks:
+    - url: https://giles.cadair.com/circleci

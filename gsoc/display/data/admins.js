@@ -1,1 +1,3 @@
-admins = ["dpshelio", "Cadair", "taldcroft", "eteq"]
+admins = {2017: ["dpshelio", "Cadair", "taldcroft", "eteq"],
+          2018: ["dpshelio", "bsipocz"],
+          2019: ["dpshelio", "bsipocz", "mirca"]};
