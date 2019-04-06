@@ -17,7 +17,6 @@ mentors:
  - Punyaslok
 initiatives:
  - GSOC
- - SOCIS
 tags:
  - Python
 collaborating_projects:

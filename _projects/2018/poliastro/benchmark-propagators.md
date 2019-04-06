@@ -15,7 +15,6 @@ mentors:
  - aunsiro
 initiatives:
  - GSOC
- - SOCIS
 tags:
  - python
  - scipy
