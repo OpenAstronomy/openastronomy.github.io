@@ -16,7 +16,6 @@ mentors:
  - Cadair
 initiatives:
  - GSOC
- - SOCIS
 tags:
 # Different technologies needed
  - python

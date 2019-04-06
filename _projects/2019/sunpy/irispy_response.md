@@ -16,7 +16,6 @@ mentors:
  - asainz-solarphysics
 initiatives:
  - GSOC
- - SOCIS
 tags:
 # Different technologies needed
  - python

@@ -14,7 +14,6 @@ mentors:
  - mbobra
 initiatives:
  - GSOC
- - SOCIS
 tags:
  - python
  - sunpy

@@ -17,7 +17,6 @@ mentors:
  - wtbarnes
 initiatives:
  - GSOC
- - SOCIS
 tags:
  - python
  - numba

@@ -14,7 +14,6 @@ mentors:
  - newlawrence
 initiatives:
  - GSOC
- - SOCIS
 tags:
  - python
  - astropy
