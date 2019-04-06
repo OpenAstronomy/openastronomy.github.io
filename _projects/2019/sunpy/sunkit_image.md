@@ -20,7 +20,6 @@ mentors:
  - wafels
 initiatives:
  - GSOC
- - SOCIS
 tags:
  - python
  - numpy

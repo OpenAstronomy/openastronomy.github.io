@@ -15,7 +15,6 @@ mentors:
  - Helioviewer-Kirill
 initiatives:
  - GSOC
- - SOCIS
 tags:
  - python
 collaborating_projects:

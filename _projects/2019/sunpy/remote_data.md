@@ -13,7 +13,6 @@ mentors:
  - dpshelio
 initiatives:
  - GSOC
- - SOCIS
 tags:
  - Python
 collaborating_projects:

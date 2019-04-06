@@ -13,7 +13,6 @@ mentors:
  - AunSiro
 initiatives:
  - GSOC
- - SOCIS
 tags:
  - python
  - javascript
