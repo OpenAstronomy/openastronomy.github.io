@@ -34,6 +34,9 @@ The main challenge of this project will be creating a general 3D Map class simil
 Currently, the `solarbextrapolation` package uses a Map3D class that is limited to Cartesian coordinates and has no support for coordinate transformations. This new Map3D class will have support for 3D coordinates through the use of the [SunPy coordinates module](http://docs.sunpy.org/en/stable/guide/units-coordinates.html#physical-coordinates-in-sunpy)
 It is expected that this new object will serve as a prototype for a first-class data type in the core SunPy package.
 
+More information may be added to the [wiki page](https://github.com/sunpy/sunpy/wiki/SOCIS-2019-Ideas-Information#expand-the-scope-of-solarbextrapolation).
+Though this idea is for SOCIS, [same GSOC rules apply](https://github.com/sunpy/sunpy/wiki/SOCIS-2019).
+
 #### Milestones
 
 ##### Coding starts
