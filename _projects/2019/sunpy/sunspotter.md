@@ -38,6 +38,9 @@ This project will need to create components within SunPy that will interact with
 other libraries ([scikit-image](https://scikit-image.org/),
 [scikit-learn](https://scikit-learn.org), etc.) to create such model.
 
+Read more information at the [wiki page](https://github.com/sunpy/sunpy/wiki/SOCIS-2019-Ideas-Information#space-weather-forecasting-using-machine-learning).
+Though this idea is for SOCIS, [same GSOC rules apply](https://github.com/sunpy/sunpy/wiki/SOCIS-2019).
+
 #### Milestones
 
 ##### 1st Month
