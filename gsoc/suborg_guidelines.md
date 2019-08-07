@@ -13,10 +13,11 @@ slots we will get till the student selection process ends. However,
 it's our intention to keep the process fair for the suborganisations
 and students.
 
-## I want to become a sub-org admin, what do I do?
+## I want to propose a new sub-org, what do I do?
 
-First, we recommend you to carefully read [Google's notes for first year organizations][Google-notes],
-which provides a general idea about the goals and concepts underpinning the Google Summer of Code program.
+First, we recommend you to carefully read [Google's notes for first year organizations][Google-notes] and
+[the PSF guidelines for sub orgs][PSF-sub-orgs], which provide a general idea about the goals
+and concepts underpinning the Google Summer of Code program.
 Then, you need to be a member of the OpenAstronomy team. That process
 is simple (and free!). You need to be an open-development organisation
 and be related with astronomy. Then make a pull-request to [our repository][OA repository]
@@ -72,9 +73,9 @@ in the programme. The mentors need most importantly be familiar with the reposit
 normally they are real core-contributors, they need to be familiar with the idea and
 have some idea on how that could be implemented.
 
-The mentors also need to have time for this!!! a lot of time!! We expect around
+The mentors also need to have time for the project. We expect around
 10 hours per week (not only to mentoring, but to the organisation in itself). That
-time varies (a lot!) depending from project to project. But a minimum they should
+time varies depending from project to project. But a minimum they should
 have a hour per week to discuss with the student their progress. This can be done
 as a 10 minutes per day, or as 1 hour video-call. Additionally, they will need
 to review the student code, discuss with other core-members to tell how the project
@@ -159,8 +160,9 @@ involved in the selection. Remember, we cannot disclose any information on stude
 selection to the students before Google announces the selected students
 
 Note that OpenAstronomy usually assigns one slot for first year sub-orgs.
-That may change in a case-by-case basis, e.g., the sub-organisation already has
-experience with similar coding outreach programmes, such as [ESA-SOCIS][ESA-SOCIS].
+That may change in a case-by-case basis, e.g., the sub-organisation already participated
+in previous editions of the GSoC (either by itself or with another umbrella organization),
+or has experience with similar coding outreach programmes, such as [ESA-SOCIS][ESA-SOCIS].
 
 ### Evaluations
 
@@ -180,3 +182,4 @@ If they are not followed the administrators will fail the students.
 [members PR]: https://github.com/OpenAstronomy/openastronomy.github.io/blob/master/_data/members.yaml
 [ESA-SOCIS]: https://socis.esa.int
 [Google-notes]: https://google.github.io/gsocguides/mentor/notes-for-first-year-organizations
+[PSF-sub-orgs]: https://python-gsoc.org/mentors.html#sub-orgs
