@@ -25,6 +25,7 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 * [OpenAstronomy Student Guide]
 * [GSoC Student Guide]
+* [Now You Know It!: Getting selected in Outreachy by Kriti Singh]
 
 ## Ideas Pages
 
@@ -44,3 +45,4 @@ read our guide for [sub-org admins](./suborg_guidelines.html).
 [Python Software Foundation]: http://python-gsoc.org/
 [GSoC Student Guide]: https://google.github.io/gsocguides/student/
 [OpenAstronomy Universe]: http://openastronomy.org/Universe_OA/
+[Now You Know It!: Getting selected in Outreachy by Kriti Singh]: https://github.com/kritisingh1/numpy/wiki/Now-You-Know-It!-:-Getting-selected-in-Outreachy
