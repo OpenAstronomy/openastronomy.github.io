@@ -86,7 +86,7 @@ casacore:
   repositories:
     github: casacore
   description: >-
-    is a suite of c++ libraries for radio astronomy data processing. Casacore
+    is a suite of C++ libraries for radio astronomy data processing. Casacore
     underlies <a href="https://casa.nrao.edu/">CASA</a>, the Common Astronomy
     Software Applications developed by an international consortium of scientists
     at various institutes. Python bindings exist in <a
