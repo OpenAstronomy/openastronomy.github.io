@@ -1,19 +1,20 @@
 ---
-name: Example Astropy
-desc: This is the first idea for astropy
+name: Example project
+desc: This is the first idea for suborg
 # add a short one line description of your project
 requirements:
 # Student requirements:
- - Knowledge on spherical astronomy.
+ - Knowledge on pythonic physics.
  - Familiar with numerical methods
 difficulty: low
 issues:
 # Related issues (if any)  to this project.
- - https://github.com/astropy/astropy/issues/4444
- - https://github.com/astropy/astropy/issues/5555
+ - https://github.com/org/org_repo/issues/4444
+ - https://github.com/org/org_repo/issues/5555
 mentors:
 # First person in contact; mentors may change before project starts.
- - astrofrog
+# GitHub handles
+ - astrorobot
 initiatives:
  - GSOC
  - SOCIS
@@ -24,9 +25,9 @@ tags:
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
  - astropy
- - ginga
+ - juliaAstro
 ---
-This is an awesome project idea for Astropy.
+This is an awesome project idea for suborg.
 
 #### Description
 
@@ -44,14 +45,18 @@ quam.
 
 #### Milestones (if any)
 
-##### GSOC CODING STARTS
+##### Coding starts
 
 * Be awesome
 
-##### GSOC MIDTERM
+##### 1st evaluation
 
 * Have done awesome stuff.
 
-##### GSOC FINAL
+##### 2nd evaluation
+
+* Have done awesome stuff.
+
+##### Final
 
 * Finished the awesome stuff.
