@@ -13,6 +13,8 @@ mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub handles
  - mileslucas
+ - giordano
+ - yashrsharma44
 initiatives:
  - GSOC
 tags:
