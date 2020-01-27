@@ -268,7 +268,7 @@ ctlearn:
 radis:
    name: radis
    logo: radis_ico.png # name of the logo as saved on img/members
-   url: radis.readthedocs.io/
+   url: https://radis.readthedocs.io/
    repositories:
      github: https://github.com/radis/radis
    mailinglist:
