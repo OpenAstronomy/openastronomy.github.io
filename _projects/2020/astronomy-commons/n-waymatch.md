@@ -3,6 +3,7 @@ name: Developing an n-way matcher for Astropy
 desc: Develop an Astropy Table compatible n-way matcher of astronomical catalogues
 requirements:
  - Python
+ - Cython
 difficulty: medium
 issues:
  - https://groups.google.com/forum/#!topic/astropy-dev/Y8qHC9_I0VI
