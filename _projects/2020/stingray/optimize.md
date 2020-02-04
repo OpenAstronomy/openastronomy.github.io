@@ -22,7 +22,7 @@ collaborating_projects:
 ---
 
 #### Description
-This project is about making the [Stingray spectral timing library](stingraysoftware.readthedocs.io) ready for the data coming from high-sensitivity X-ray detectors like NICER (and, in the future, eXTP and/or Strobe-X), or other kinds of high-throughput photon counters (i.e. in the optical).
+This project is about making the [Stingray spectral timing library](https://stingray.readthedocs.io) ready for the data coming from high-sensitivity X-ray detectors like NICER (and, in the future, eXTP and/or Strobe-X), or other kinds of high-throughput photon counters (i.e. in the optical).
 The student will start by benchmarking the code through simulated data, address a few known bottlenecks of the code (for example, the need for loading full dataset into the RAM), and explore alternative technologies (memory mapping, parallel computing) to speed up the computation and the data retrieval for larger-than-memory datasets.
 
 #### Milestones (if any)
