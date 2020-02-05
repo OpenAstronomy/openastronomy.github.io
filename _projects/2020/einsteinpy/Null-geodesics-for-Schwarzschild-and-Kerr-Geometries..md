@@ -10,10 +10,11 @@ requirements:
 difficulty: medium
 issues:
 # Related issues (if any)  to this project.
- - https://github.com/einsteinpy/einsteinpy/issues/316
- - https://github.com/einsteinpy/einsteinpy/issues/233
- - https://github.com/einsteinpy/einsteinpy/issues/223
- - https://github.com/einsteinpy/einsteinpy/issues/164
+ - https://github.com/einsteinpy/einsteinpy/issues/105
+ - https://github.com/einsteinpy/einsteinpy/issues/106
+ - https://github.com/einsteinpy/einsteinpy/issues/275
+ - https://github.com/einsteinpy/einsteinpy/issues/144
+ - https://github.com/einsteinpy/einsteinpy/issues/145
 mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub handles
