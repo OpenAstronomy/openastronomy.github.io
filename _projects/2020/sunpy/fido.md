@@ -1,6 +1,6 @@
 ---
 name: Fido
-desc: Improving Fido's User Experience
+desc: Towards metadata only searches with Fido
 requirements:
  - Quite familiar with Python.
 difficulty: Medium
@@ -23,19 +23,22 @@ collaborating_projects:
  - SunPy
 ---
 
-Improving Fido's User Experience
-
 #### Description
 
-The ability to download data via SunPy is provided by the Federated Internet Data Obtainer or more usually referred to as Fido.
-This forms an unified client that abstracts out away the intricacies of who or where you area downloading data from as long as it is the correct request.
 
+SunPy provides a Python interface to many different sources of solar data.
+These data are generally of two forms, file based downloads where observations are downloaded as FITS files or other files, and metadata only searches such as event lists or spatial location of features.
+Currently in sunpy the file based downloads are all accessible in one single search interface called "Fido", this project would provide the foundations needed to extend Fido to include metadata only searches.
 [An overview of fido is located in our documentation.](https://docs.sunpy.org/en/latest/guide/acquiring_data/fido.html)
 
-While it is quite mature, it still has a range of features and clients missing as well bugs.
-You can find a list of these in the issues section (to the left).
-The biggest bugbears are how Fido deals with failed downloads, it is not integrated with two large metadata clients and the shear amount of old clients that were never migrated to Fido.
+Fido is backed by many different client classes, all which implement an interface to different webservices to search for and retrieve data.
+The search flow is that the user specifies a search to `Fido.search`, which dispatches to the correct client, which returns a response object, which is combined into a `UnifiedResponse` object with any other results from other clients, this is then returned to the user.
+The fetch flow is the `UnifiedResponse` object is parsed by `Fido.fetch` and the `.fetch()` methods of the appropriate clients is called and paths to the files are returned to the user.
 
-This project will also touching the library sunpy uses to do the file download known as [parfive](https://github.com/Cadair/parfive).
-Some of the features we require for Fido would need to be added there and not in sunpy.
-A minor roadblock if you are interested in this project is that parfive is asynchronous which means you will need to get familiar with that paradigm of python programming.
+The first goal of this project is to standardize the response object returned from all the clients `search()` method.
+This would involve implement an [Abstract Base Class](https://docs.python.org/3/library/abc.html) and transitioning all the current response implementations to it.
+Having done this, the next objective would be to extend the ability for `dataretriever` clients (simple clients) to specify what metadata about the results should be displayed in their QueryResponse objects.
+Finally, work should commence on extending the the ABC to allow the flexibility of returning and inspecting metadata only queries, from the JSOC client and then clients like the HEK and HELIO clients.
+
+The Fido codebase is complex and not very well documented from a developer perspective.
+Anyone taking on this project should be willing and able to learn the layout of the code, to spend a lot of time designing the future API, and to always consider the end user.
