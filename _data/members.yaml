@@ -265,6 +265,24 @@ ctlearn:
    chat:
      slack: https://ctlearn.slack.com
 
+
+radis:
+   name: radis
+   logo: radis_ico.png # name of the logo as saved on img/members
+   url: https://radis.readthedocs.io/
+   repositories:
+     github: radis/radis
+   mailinglist:
+     users: https://groups.google.com/forum/#!forum/radis-radiation
+   chat:
+     gitter: https://gitter.im/radis-radiation/community
+   description: >-
+     A fast line-by-line code for high-resolution infrared molecular spectra.
+     RADIS can compute spectra of millions of lines within seconds. Also 
+     includes a post-processing tools to compare experimental spectra with
+     spectra calculated in RADIS or other spectral codes.
+
+
 einsteinpy:
   name: EinsteinPy
   logo: einsteinpy.png
@@ -281,6 +299,7 @@ einsteinpy:
     relativistic orbits, advancement of perihelion can be simulated in seconds.
     See <a href="https://docs.einsteinpy.org/">documentation</a> for more
     information.
+
 
 # Are you a new org? copy the fragment below above this line and fill it up
 # with your organisation details. Don't forget to add your logo to the img/members
