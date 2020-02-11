@@ -135,7 +135,7 @@ coin:
 
 glue:
   name: Glue
-  logo: glue.png 
+  logo: glue.png
   url: http://www.glueviz.org/
   repositories:
     github: glue-viz/glue
@@ -248,7 +248,7 @@ gnuastro:
 
 ctlearn:
    name: CTLearn
-   logo: ctlearn.png   
+   logo: ctlearn.png
    url: https://github.com/ctlearn-project
    repositories:
      github: ctlearn-project/ctlearn
@@ -265,6 +265,7 @@ ctlearn:
    chat:
      slack: https://ctlearn.slack.com
 
+
 radis:
    name: radis
    logo: radis_ico.png # name of the logo as saved on img/members
@@ -280,6 +281,25 @@ radis:
      RADIS can compute spectra of millions of lines within seconds. Also 
      includes a post-processing tools to compare experimental spectra with
      spectra calculated in RADIS or other spectral codes.
+
+
+einsteinpy:
+  name: EinsteinPy
+  logo: einsteinpy.png
+  url: https://einsteinpy.org
+  repositories:
+    github: einsteinpy/einsteinpy
+  mailinglist:
+    devs: https://groups.io/g/einsteinpy-dev
+  chat:
+    matrix: https://riot.im/app/#/room/#einsteinpy:matrix.org
+  description: >-
+    is a python package for solving problems in general relativity. Computations
+    can be done for Schwarzschild, Kerr and Kerr-Newman geometries. Visualising
+    relativistic orbits, advancement of perihelion can be simulated in seconds.
+    See <a href="https://docs.einsteinpy.org/">documentation</a> for more
+    information.
+
 
 # Are you a new org? copy the fragment below above this line and fill it up
 # with your organisation details. Don't forget to add your logo to the img/members

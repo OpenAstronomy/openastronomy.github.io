@@ -8,12 +8,11 @@ permalink: /gsoc/
  
 [Background on GSoC: start here!](./background.html)
 
-## GSoC/Open Astronomy 2019
+## GSoC/Open Astronomy 2020
 
 OpenAstronomy is an umbrella organisation which collects project ideas
 from any of its members. OpenAstronomy was a GSOC mentoring organisation since 2016 and
-it's applying to participate
-in 2019.
+it's applying to participate in 2020.
 
 Student applications to OpenAstronomy projects follows the same
 rules as the [Python Software Foundation] and the [GSoC Student Guide],
@@ -29,6 +28,7 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 ## Ideas Pages
 
+* [2020](./gsoc2020/)
 * [2019](./gsoc2019/)
 * [2018](./gsoc2018/)
 * [2017](./gsoc2017/)
