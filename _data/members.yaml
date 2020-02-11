@@ -270,7 +270,7 @@ radis:
    logo: radis_ico.png # name of the logo as saved on img/members
    url: https://radis.readthedocs.io/
    repositories:
-     github: https://github.com/radis/radis
+     github: radis/radis
    mailinglist:
      users: https://groups.google.com/forum/#!forum/radis-radiation
    chat:
