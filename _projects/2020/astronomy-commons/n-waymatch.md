@@ -4,7 +4,7 @@ desc: Develop an Astropy Table compatible n-way matcher of astronomical catalogu
 requirements:
  - Python
  - Cython
-difficulty: medium
+difficulty: Medium to High
 issues:
  - https://groups.google.com/forum/#!topic/astropy-dev/Y8qHC9_I0VI
 mentors:
