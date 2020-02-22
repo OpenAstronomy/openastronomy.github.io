@@ -14,124 +14,54 @@ astropy:
     functionality and some common tools needed for performing
     astronomy and astrophysics with Python.
 
-sunpy:
-  name: SunPy
-  logo: sunpy.png
-  url: http://sunpy.org
+astronomy-commons:
+  name: Astronomy Data Commons
+  logo: astronomy-commons.png
+  url: https://dirac.astro.washington.edu/data-engineering/
   repositories:
-    github: sunpy/sunpy
+    github: astronomy-commons/
   mailinglist:
-    users: http://groups.google.com/group/sunpy
-    devs: http://groups.google.com/group/sunpy-dev
+    devs: https://groups.google.com/forum/#!forum/astronomy-commons
+  description: >-
+    is an initiative for software infrastructure for science platforms and
+    scalable astronomy on cloud resources. Astronomy Data Commons is lead by
+    researchers at the DiRAC Institute at the University of Washington.
+
+ctlearn:
+   name: CTLearn
+   logo: ctlearn.png
+   url: https://github.com/ctlearn-project
+   repositories:
+     github: ctlearn-project/ctlearn
+   description: >-
+      is a package under active development that pursues the
+      application of deep-learning based methods to the analysis of
+      data from imaging atmospheric Cherenkov telescopes (IACTs). <a
+      href="https://github.com/ctlearn-project">CTLearn</a> includes
+      modules for loading and manipulating IACT data and for running
+      machine learning models using pixel-wise camera data as
+      input. Its high-level interface provides a
+      configuration-file-based workflow to drive reproducible training
+      and prediction.
+   chat:
+     slack: https://ctlearn.slack.com
+
+einsteinpy:
+  name: EinsteinPy
+  logo: einsteinpy.png
+  url: https://einsteinpy.org
+  repositories:
+    github: einsteinpy/einsteinpy
+  mailinglist:
+    devs: https://groups.io/g/einsteinpy-dev
   chat:
-    matrix: https://riot.im/app/#/room/#sunpy:matrix.org
+    matrix: https://riot.im/app/#/room/#einsteinpy:matrix.org
   description: >-
-    is a community-developed free and open-source software package for solar
-    physics. SunPy is meant to be a free alternative to the
-    <a href="http://www.lmsal.com/solarsoft/" target="_blank">SolarSoft</a>
-    and its aim is to provide the software tools necessary so that anyone can
-    analyze solar data.
-
-chiantipy:
-  name: ChiantiPy
-  logo: chiantipy.png
-  url: http://chiantipy.sourceforge.net/welcome.html
-  repositories:
-    github: chianti-atomic/ChiantiPy
-  mailinglist:
-    users: https://lists.sourceforge.net/lists/listinfo/chiantipy-users
-  description: >-
-    is a Python interface to the <a href="http://www.chiantidatabase.org/"
-    target="_blank"> CHIANTI atomic database </a> for astrophysical
-    spectroscopy. CHIANTI consists of a database of atomic data that can be used
-    to interpret spectral lines and continua emitted from high-temperature,
-    optically-thin astrophysical sources.
-
-yt:
-  name: yt
-  logo: yt.png
-  url: https://yt-project.org/
-  repositories:
-    github: yt-project/yt
-  mailinglist:
-    users: http://lists.spacepope.org/listinfo.cgi/yt-users-spacepope.org
-    devs: http://lists.spacepope.org/listinfo.cgi/yt-dev-spacepope.org
-  chat:
-    irc: irc://irc.freenode.net/#yt
-  description: >-
-    is a python package for analyzing and visualizing volumetric,
-    multi-resolution data from astrophysical simulations,
-    radio telescopes, and a burgeoning interdisciplinary community.
-
-juliaastro:
-  name: JuliaAstro
-  logo: juliaastro.svg
-  url: https://juliaastro.github.io/
-  repositories:
-    github: juliaastro
-  mailinglist:
-    users: https://discourse.julialang.org/c/domain/astro
-  chat:
-    matrix: https://riot.im/app/#/room/#JuliaAstro:openastronomy.org
-  description: >-
-    is an organization that shepherds the development of community astronomy and
-    astrophysics packages for Julia. These include packages for widely used
-    functionality such as FITS file I/O, world coordinate systems and
-    cosmological distance calculations.
-
-casacore:
-  name: Casacore
-  logo: casacore.svg
-  url: https://www.github.com/casacore/casacore/
-  repositories:
-    github: casacore
-  description: >-
-    is a suite of C++ libraries for radio astronomy data processing. Casacore
-    underlies <a href="https://casa.nrao.edu/">CASA</a>, the Common Astronomy
-    Software Applications developed by an international consortium of scientists
-    at various institutes. Python bindings exist in <a
-    href="https://github.com/casacore/python-casacore">Python-casacore</a>.
-    Casacore also underlies other radio astronomy software such as <a
-    href="https://sourceforge.net/projects/wsclean/">WSClean</a>, and LOFAR
-    tools. Casacore is developed by the radio astro organizations around the
-    world. It is open source and will happily merge any (good) pull requests.
-
-ims:
-  name: The Italian Mars Society
-  logo: ims.png
-  url: http://www.marssociety.it/?lang=en
-  repositories:
-    bitbucket: italianmarssociety/
-  mailinglist:
-    admin: mailto:gsoc@marssociety.it
-  description: >-
-    (IMS) is a non-profit organization, existing from 2004, as Italian branch of
-    the International Mars Society, created in the USA by Robert Zubrin. IMS is
-    a member of the Mars Society European network. The foundation scope of the
-    Italian Mars Society is to promote research projects devoted to Mars
-    Exploration and the involvement of SMEs and large enterprises in the new
-    economy related to space exploration. <br/> IMS is currently spearheading
-    the <a href="http://www.mars-city.org/" _target="_blank">MARS CITY</a>
-    project. The project aims to address the major issues that could jeopardize
-    a crewed mission to Mars and are not adequately being addressed at existing
-    terrestrial Mars analogs.
-
-coin:
-  name: COIN
-  logo: coin.png
-  url: https://asaip.psu.edu/organizations/iaa/iaa-working-group-of-cosmostatistics/
-  repositories:
-    github: COINtoolbox
-  mailinglist:
-    admin (Rafael S. de Souza): mailto:rafael.2706@gmail.com
-  description: >-
-    (COsmostatistics INitiative) is an international working group built under
-    the auspices of the International Astrostatistics Association (<a
-    href="https://asaip.psu.edu/organizations/iaa" target="_blank">IAA</a>). It
-    aims to create an interdisciplinary environment where collaborations between
-    astronomers, statisticians and machine learning experts can flourish. COIN
-    is designed to promote the development of a new family of tools for data
-    exploration in astrophysics and cosmology.
+    is a python package for solving problems in general relativity. Computations
+    can be done for Schwarzschild, Kerr and Kerr-Newman geometries. Visualising
+    relativistic orbits, advancement of perihelion can be simulated in seconds.
+    See <a href="https://docs.einsteinpy.org/">documentation</a> for more
+    information.
 
 glue:
   name: Glue
@@ -163,20 +93,72 @@ poliastro:
     as orbital elements conversion, orbital propagation, plotting, planetary
     ephemerides computation, and more.
 
-plasmapy:
-  name: PlasmaPy
-  logo: plasmapy.png
-  url: http://www.plasmapy.org
+sunpy:
+  name: SunPy
+  logo: sunpy.png
+  url: http://sunpy.org
   repositories:
-    github: plasmapy/plasmapy
+    github: sunpy/sunpy
   mailinglist:
-    general: https://groups.google.com/group/plasmapy
+    users: http://groups.google.com/group/sunpy
+    devs: http://groups.google.com/group/sunpy-dev
   chat:
-    matrix: https://riot.im/app/#/room/#plasmapy:matrix.org
+    matrix: https://riot.im/app/#/room/#sunpy:matrix.org
   description: >-
-    aims to be a collection of functionality commonly used and shared between
-    plasma physicists and researchers globally, running within and leveraging
-    the open source scientific Python ecosystem.
+    is a community-developed free and open-source software package for solar
+    physics. SunPy is meant to be a free alternative to the
+    <a href="http://www.lmsal.com/solarsoft/" target="_blank">SolarSoft</a>
+    and its aim is to provide the software tools necessary so that anyone can
+    analyze solar data.
+
+casacore:
+  name: Casacore
+  logo: casacore.svg
+  url: https://www.github.com/casacore/casacore/
+  repositories:
+    github: casacore
+  description: >-
+    is a suite of C++ libraries for radio astronomy data processing. Casacore
+    underlies <a href="https://casa.nrao.edu/">CASA</a>, the Common Astronomy
+    Software Applications developed by an international consortium of scientists
+    at various institutes. Python bindings exist in <a
+    href="https://github.com/casacore/python-casacore">Python-casacore</a>.
+    Casacore also underlies other radio astronomy software such as <a
+    href="https://sourceforge.net/projects/wsclean/">WSClean</a>, and LOFAR
+    tools. Casacore is developed by the radio astro organizations around the
+    world. It is open source and will happily merge any (good) pull requests.
+
+chiantipy:
+  name: ChiantiPy
+  logo: chiantipy.png
+  url: http://chiantipy.sourceforge.net/welcome.html
+  repositories:
+    github: chianti-atomic/ChiantiPy
+  mailinglist:
+    users: https://lists.sourceforge.net/lists/listinfo/chiantipy-users
+  description: >-
+    is a Python interface to the <a href="http://www.chiantidatabase.org/"
+    target="_blank"> CHIANTI atomic database </a> for astrophysical
+    spectroscopy. CHIANTI consists of a database of atomic data that can be used
+    to interpret spectral lines and continua emitted from high-temperature,
+    optically-thin astrophysical sources.
+
+coin:
+  name: COIN
+  logo: coin.png
+  url: https://asaip.psu.edu/organizations/iaa/iaa-working-group-of-cosmostatistics/
+  repositories:
+    github: COINtoolbox
+  mailinglist:
+    admin (Rafael S. de Souza): mailto:rafael.2706@gmail.com
+  description: >-
+    (COsmostatistics INitiative) is an international working group built under
+    the auspices of the International Astrostatistics Association (<a
+    href="https://asaip.psu.edu/organizations/iaa" target="_blank">IAA</a>). It
+    aims to create an interdisciplinary environment where collaborations between
+    astronomers, statisticians and machine learning experts can flourish. COIN
+    is designed to promote the development of a new family of tools for data
+    exploration in astrophysics and cosmology.
 
 heliopy:
   name: HelioPy
@@ -192,32 +174,6 @@ heliopy:
     is a python package for space physics, that aims to provide the tools to
     find, download and analyse spacecraft data from across the whole solar
     system.
-
-sherpa:
-  name: Sherpa
-  logo: sherpa_logo.gif
-  url: http://cxc.cfa.harvard.edu/contrib/sherpa/
-  repositories:
-    github: sherpa/sherpa/
-  description: >-
-    is a modeling and fitting application for Python. It contains a powerful
-    language for combining simple models into complex expressions that can be
-    fit to the data using a variety of statistics and optimization methods. It
-    is easily extensible to include user models, statistics and optimization
-    methods.
-
-timelab:
-  name: TimeLab
-  logo: timelab.png
-  url: http://www.timelabtechnologies.com
-  repositories:
-    github: StingraySoftware
-  chat:
-    slack: http://slack-invite.timelabtechnologies.com
-  description: >-
-    : we are a team of astrophysicists and software developers working together
-    to build a variability analysis software to study black holes and
-    fundamental physics under extreme conditions.
 
 gnuastro:
   name: GNU Astronomy Utilities
@@ -246,25 +202,56 @@ gnuastro:
     <a href="https://www.gnu.org/software/gnuastro/manual/html_node/Tutorials.html"
     target="_blank">tutorials</a> is the best place to start using it.
 
-ctlearn:
-   name: CTLearn
-   logo: ctlearn.png
-   url: https://github.com/ctlearn-project
-   repositories:
-     github: ctlearn-project/ctlearn
-   description: >-
-      is a package under active development that pursues the
-      application of deep-learning based methods to the analysis of
-      data from imaging atmospheric Cherenkov telescopes (IACTs). <a
-      href="https://github.com/ctlearn-project">CTLearn</a> includes
-      modules for loading and manipulating IACT data and for running
-      machine learning models using pixel-wise camera data as
-      input. Its high-level interface provides a
-      configuration-file-based workflow to drive reproducible training
-      and prediction.
-   chat:
-     slack: https://ctlearn.slack.com
+ims:
+  name: The Italian Mars Society
+  logo: ims.png
+  url: http://www.marssociety.it/?lang=en
+  repositories:
+    bitbucket: italianmarssociety/
+  mailinglist:
+    admin: mailto:gsoc@marssociety.it
+  description: >-
+    (IMS) is a non-profit organization, existing from 2004, as Italian branch of
+    the International Mars Society, created in the USA by Robert Zubrin. IMS is
+    a member of the Mars Society European network. The foundation scope of the
+    Italian Mars Society is to promote research projects devoted to Mars
+    Exploration and the involvement of SMEs and large enterprises in the new
+    economy related to space exploration. <br/> IMS is currently spearheading
+    the <a href="http://www.mars-city.org/" _target="_blank">MARS CITY</a>
+    project. The project aims to address the major issues that could jeopardize
+    a crewed mission to Mars and are not adequately being addressed at existing
+    terrestrial Mars analogs.
 
+juliaastro:
+  name: JuliaAstro
+  logo: juliaastro.svg
+  url: https://juliaastro.github.io/
+  repositories:
+    github: juliaastro
+  mailinglist:
+    users: https://discourse.julialang.org/c/domain/astro
+  chat:
+    matrix: https://riot.im/app/#/room/#JuliaAstro:openastronomy.org
+  description: >-
+    is an organization that shepherds the development of community astronomy and
+    astrophysics packages for Julia. These include packages for widely used
+    functionality such as FITS file I/O, world coordinate systems and
+    cosmological distance calculations.
+
+plasmapy:
+  name: PlasmaPy
+  logo: plasmapy.png
+  url: http://www.plasmapy.org
+  repositories:
+    github: plasmapy/plasmapy
+  mailinglist:
+    general: https://groups.google.com/group/plasmapy
+  chat:
+    matrix: https://riot.im/app/#/room/#plasmapy:matrix.org
+  description: >-
+    aims to be a collection of functionality commonly used and shared between
+    plasma physicists and researchers globally, running within and leveraging
+    the open source scientific Python ecosystem.
 
 radis:
    name: radis
@@ -282,38 +269,47 @@ radis:
      includes a post-processing tools to compare experimental spectra with
      spectra calculated in RADIS or other spectral codes.
 
-
-einsteinpy:
-  name: EinsteinPy
-  logo: einsteinpy.png
-  url: https://einsteinpy.org
+sherpa:
+  name: Sherpa
+  logo: sherpa_logo.gif
+  url: http://cxc.cfa.harvard.edu/contrib/sherpa/
   repositories:
-    github: einsteinpy/einsteinpy
-  mailinglist:
-    devs: https://groups.io/g/einsteinpy-dev
+    github: sherpa/sherpa/
+  description: >-
+    is a modeling and fitting application for Python. It contains a powerful
+    language for combining simple models into complex expressions that can be
+    fit to the data using a variety of statistics and optimization methods. It
+    is easily extensible to include user models, statistics and optimization
+    methods.
+
+timelab:
+  name: TimeLab
+  logo: timelab.png
+  url: http://www.timelabtechnologies.com
+  repositories:
+    github: StingraySoftware
   chat:
-    matrix: https://riot.im/app/#/room/#einsteinpy:matrix.org
+    slack: http://slack-invite.timelabtechnologies.com
   description: >-
-    is a python package for solving problems in general relativity. Computations
-    can be done for Schwarzschild, Kerr and Kerr-Newman geometries. Visualising
-    relativistic orbits, advancement of perihelion can be simulated in seconds.
-    See <a href="https://docs.einsteinpy.org/">documentation</a> for more
-    information.
+    : we are a team of astrophysicists and software developers working together
+    to build a variability analysis software to study black holes and
+    fundamental physics under extreme conditions.
 
-
-astronomy-commons:
-  name: Astronomy Data Commons
-  logo: astronomy-commons.png
-  url: https://dirac.astro.washington.edu/data-engineering/
+yt:
+  name: yt
+  logo: yt.png
+  url: https://yt-project.org/
   repositories:
-    github: astronomy-commons/
+    github: yt-project/yt
   mailinglist:
-    devs: https://groups.google.com/forum/#!forum/astronomy-commons
+    users: http://lists.spacepope.org/listinfo.cgi/yt-users-spacepope.org
+    devs: http://lists.spacepope.org/listinfo.cgi/yt-dev-spacepope.org
+  chat:
+    irc: irc://irc.freenode.net/#yt
   description: >-
-    is an initiative for software infrastructure for science platforms and
-    scalable astronomy on cloud resources. Astronomy Data Commons is lead by
-    researchers at the DiRAC Institute at the University of Washington.
-
+    is a python package for analyzing and visualizing volumetric,
+    multi-resolution data from astrophysical simulations,
+    radio telescopes, and a burgeoning interdisciplinary community.
 
 # Are you a new org? copy the fragment below above this line and fill it up
 # with your organisation details. Don't forget to add your logo to the img/members
