@@ -278,7 +278,7 @@ radis:
      gitter: https://gitter.im/radis-radiation/community
    description: >-
      A fast line-by-line code for high-resolution infrared molecular spectra.
-     RADIS can compute spectra of millions of lines within seconds. Also 
+     RADIS can compute spectra of millions of lines within seconds. Also
      includes a post-processing tools to compare experimental spectra with
      spectra calculated in RADIS or other spectral codes.
 
@@ -299,6 +299,20 @@ einsteinpy:
     relativistic orbits, advancement of perihelion can be simulated in seconds.
     See <a href="https://docs.einsteinpy.org/">documentation</a> for more
     information.
+
+
+astronomy-commons:
+  name: Astronomy Data Commons
+  logo: astronomy-commons.png
+  url: https://dirac.astro.washington.edu/data-engineering/
+  repositories:
+    github: astronomy-commons/
+  mailinglist:
+    devs: https://groups.google.com/forum/#!forum/astronomy-commons
+  description: >-
+    is an initiative for software infrastructure for science platforms and
+    scalable astronomy on cloud resources. Astronomy Data Commons is lead by
+    researchers at the DiRAC Institute at the University of Washington.
 
 
 # Are you a new org? copy the fragment below above this line and fill it up
