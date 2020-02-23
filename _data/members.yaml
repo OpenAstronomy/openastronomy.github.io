@@ -78,6 +78,22 @@ glue:
     statistical graphs, flexible linking across data, and full Python scripting
     capability.
 
+juliaastro:
+  name: JuliaAstro
+  logo: juliaastro.svg
+  url: https://juliaastro.github.io/
+  repositories:
+    github: juliaastro
+  mailinglist:
+    users: https://discourse.julialang.org/c/domain/astro
+  chat:
+    matrix: https://riot.im/app/#/room/#JuliaAstro:openastronomy.org
+  description: >-
+    is an organization that shepherds the development of community astronomy and
+    astrophysics packages for Julia. These include packages for widely used
+    functionality such as FITS file I/O, world coordinate systems and
+    cosmological distance calculations.
+
 poliastro:
   name: poliastro
   logo: poliastro.png
@@ -110,6 +126,19 @@ sunpy:
     <a href="http://www.lmsal.com/solarsoft/" target="_blank">SolarSoft</a>
     and its aim is to provide the software tools necessary so that anyone can
     analyze solar data.
+
+timelab:
+  name: TimeLab
+  logo: timelab.png
+  url: http://www.timelabtechnologies.com
+  repositories:
+    github: StingraySoftware
+  chat:
+    slack: http://slack-invite.timelabtechnologies.com
+  description: >-
+    : we are a team of astrophysicists and software developers working together
+    to build a variability analysis software to study black holes and
+    fundamental physics under extreme conditions.
 
 casacore:
   name: Casacore
@@ -222,22 +251,6 @@ ims:
     a crewed mission to Mars and are not adequately being addressed at existing
     terrestrial Mars analogs.
 
-juliaastro:
-  name: JuliaAstro
-  logo: juliaastro.svg
-  url: https://juliaastro.github.io/
-  repositories:
-    github: juliaastro
-  mailinglist:
-    users: https://discourse.julialang.org/c/domain/astro
-  chat:
-    matrix: https://riot.im/app/#/room/#JuliaAstro:openastronomy.org
-  description: >-
-    is an organization that shepherds the development of community astronomy and
-    astrophysics packages for Julia. These include packages for widely used
-    functionality such as FITS file I/O, world coordinate systems and
-    cosmological distance calculations.
-
 plasmapy:
   name: PlasmaPy
   logo: plasmapy.png
@@ -281,19 +294,6 @@ sherpa:
     fit to the data using a variety of statistics and optimization methods. It
     is easily extensible to include user models, statistics and optimization
     methods.
-
-timelab:
-  name: TimeLab
-  logo: timelab.png
-  url: http://www.timelabtechnologies.com
-  repositories:
-    github: StingraySoftware
-  chat:
-    slack: http://slack-invite.timelabtechnologies.com
-  description: >-
-    : we are a team of astrophysicists and software developers working together
-    to build a variability analysis software to study black holes and
-    fundamental physics under extreme conditions.
 
 yt:
   name: yt
