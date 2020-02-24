@@ -14,6 +14,103 @@ astropy:
     functionality and some common tools needed for performing
     astronomy and astrophysics with Python.
 
+astronomy-commons:
+  name: Astronomy Data Commons
+  logo: astronomy-commons.png
+  url: https://dirac.astro.washington.edu/data-engineering/
+  repositories:
+    github: astronomy-commons/
+  mailinglist:
+    devs: https://groups.google.com/forum/#!forum/astronomy-commons
+  chat:
+    matrix: https://riot.im/app/#/room/#astronomy-commons:matrix.org 
+  description: >-
+    is an initiative for software infrastructure for science platforms and
+    scalable astronomy on cloud resources. Astronomy Data Commons is lead by
+    researchers at the DiRAC Institute at the University of Washington.
+
+ctlearn:
+   name: CTLearn
+   logo: ctlearn.png
+   url: https://github.com/ctlearn-project
+   repositories:
+     github: ctlearn-project/ctlearn
+   description: >-
+      is a package under active development that pursues the
+      application of deep-learning based methods to the analysis of
+      data from imaging atmospheric Cherenkov telescopes (IACTs). <a
+      href="https://github.com/ctlearn-project">CTLearn</a> includes
+      modules for loading and manipulating IACT data and for running
+      machine learning models using pixel-wise camera data as
+      input. Its high-level interface provides a
+      configuration-file-based workflow to drive reproducible training
+      and prediction.
+   chat:
+     slack: https://ctlearn.slack.com
+
+einsteinpy:
+  name: EinsteinPy
+  logo: einsteinpy.png
+  url: https://einsteinpy.org
+  repositories:
+    github: einsteinpy/einsteinpy
+  mailinglist:
+    devs: https://groups.io/g/einsteinpy-dev
+  chat:
+    matrix: https://riot.im/app/#/room/#einsteinpy:matrix.org
+  description: >-
+    is a python package for solving problems in general relativity. Computations
+    can be done for Schwarzschild, Kerr and Kerr-Newman geometries. Visualising
+    relativistic orbits, advancement of perihelion can be simulated in seconds.
+    See <a href="https://docs.einsteinpy.org/">documentation</a> for more
+    information.
+
+glue:
+  name: Glue
+  logo: glue.png
+  url: http://www.glueviz.org/
+  repositories:
+    github: glue-viz/glue
+  mailinglist:
+    users: https://groups.google.com/group/glue-viz
+    devs: https://groups.google.com/group/glue-viz-dev
+  description: >-
+    is a data visualization application and library to explore relationships
+    within and among related datasets. Its main features include linked
+    statistical graphs, flexible linking across data, and full Python scripting
+    capability.
+
+juliaastro:
+  name: JuliaAstro
+  logo: juliaastro.svg
+  url: https://juliaastro.github.io/
+  repositories:
+    github: juliaastro
+  mailinglist:
+    users: https://discourse.julialang.org/c/domain/astro
+  chat:
+    matrix: https://riot.im/app/#/room/#JuliaAstro:openastronomy.org
+  description: >-
+    is an organization that shepherds the development of community astronomy and
+    astrophysics packages for Julia. These include packages for widely used
+    functionality such as FITS file I/O, world coordinate systems and
+    cosmological distance calculations.
+
+poliastro:
+  name: poliastro
+  logo: poliastro.png
+  url: https://poliastro.readthedocs.io/
+  repositories:
+    github: poliastro/poliastro
+  mailinglist:
+    devs: https://groups.io/g/poliastro-dev
+  chat:
+    matrix: https://riot.im/app/#/room/#poliastro:matrix.org
+  description: >-
+    is a python package for Astrodynamics and Orbital Mechanics problems, such
+    as orbital elements conversion, orbital propagation, plotting, planetary
+    ephemerides computation, and more.
+
 sunpy:
   name: SunPy
   logo: sunpy.png
@@ -32,52 +129,18 @@ sunpy:
     and its aim is to provide the software tools necessary so that anyone can
     analyze solar data.
 
-chiantipy:
-  name: ChiantiPy
-  logo: chiantipy.png
-  url: http://chiantipy.sourceforge.net/welcome.html
+timelab:
+  name: TimeLab
+  logo: timelab.png
+  url: http://www.timelabtechnologies.com
   repositories:
-    github: chianti-atomic/ChiantiPy
-  mailinglist:
-    users: https://lists.sourceforge.net/lists/listinfo/chiantipy-users
-  description: >-
-    is a Python interface to the <a href="http://www.chiantidatabase.org/"
-    target="_blank"> CHIANTI atomic database </a> for astrophysical
-    spectroscopy. CHIANTI consists of a database of atomic data that can be used
-    to interpret spectral lines and continua emitted from high-temperature,
-    optically-thin astrophysical sources.
-
-yt:
-  name: yt
-  logo: yt.png
-  url: https://yt-project.org/
-  repositories:
-    github: yt-project/yt
-  mailinglist:
-    users: http://lists.spacepope.org/listinfo.cgi/yt-users-spacepope.org
-    devs: http://lists.spacepope.org/listinfo.cgi/yt-dev-spacepope.org
+    github: StingraySoftware
   chat:
-    irc: irc://irc.freenode.net/#yt
+    slack: http://slack-invite.timelabtechnologies.com
   description: >-
-    is a python package for analyzing and visualizing volumetric,
-    multi-resolution data from astrophysical simulations,
-    radio telescopes, and a burgeoning interdisciplinary community.
-
-juliaastro:
-  name: JuliaAstro
-  logo: juliaastro.svg
-  url: https://juliaastro.github.io/
-  repositories:
-    github: juliaastro
-  mailinglist:
-    users: https://discourse.julialang.org/c/domain/astro
-  chat:
-    matrix: https://riot.im/app/#/room/#JuliaAstro:openastronomy.org
-  description: >-
-    is an organization that shepherds the development of community astronomy and
-    astrophysics packages for Julia. These include packages for widely used
-    functionality such as FITS file I/O, world coordinate systems and
-    cosmological distance calculations.
+    : we are a team of astrophysicists and software developers working together
+    to build a variability analysis software to study black holes and
+    fundamental physics under extreme conditions.
 
 casacore:
   name: Casacore
@@ -96,25 +159,20 @@ casacore:
     tools. Casacore is developed by the radio astro organizations around the
     world. It is open source and will happily merge any (good) pull requests.
 
-ims:
-  name: The Italian Mars Society
-  logo: ims.png
-  url: http://www.marssociety.it/?lang=en
+chiantipy:
+  name: ChiantiPy
+  logo: chiantipy.png
+  url: http://chiantipy.sourceforge.net/welcome.html
   repositories:
-    bitbucket: italianmarssociety/
+    github: chianti-atomic/ChiantiPy
   mailinglist:
-    admin: mailto:gsoc@marssociety.it
+    users: https://lists.sourceforge.net/lists/listinfo/chiantipy-users
   description: >-
-    (IMS) is a non-profit organization, existing from 2004, as Italian branch of
-    the International Mars Society, created in the USA by Robert Zubrin. IMS is
-    a member of the Mars Society European network. The foundation scope of the
-    Italian Mars Society is to promote research projects devoted to Mars
-    Exploration and the involvement of SMEs and large enterprises in the new
-    economy related to space exploration. <br/> IMS is currently spearheading
-    the <a href="http://www.mars-city.org/" _target="_blank">MARS CITY</a>
-    project. The project aims to address the major issues that could jeopardize
-    a crewed mission to Mars and are not adequately being addressed at existing
-    terrestrial Mars analogs.
+    is a Python interface to the <a href="http://www.chiantidatabase.org/"
+    target="_blank"> CHIANTI atomic database </a> for astrophysical
+    spectroscopy. CHIANTI consists of a database of atomic data that can be used
+    to interpret spectral lines and continua emitted from high-temperature,
+    optically-thin astrophysical sources.
 
 coin:
   name: COIN
@@ -133,51 +191,6 @@ coin:
     is designed to promote the development of a new family of tools for data
     exploration in astrophysics and cosmology.
 
-glue:
-  name: Glue
-  logo: glue.png
-  url: http://www.glueviz.org/
-  repositories:
-    github: glue-viz/glue
-  mailinglist:
-    users: https://groups.google.com/group/glue-viz
-    devs: https://groups.google.com/group/glue-viz-dev
-  description: >-
-    is a data visualization application and library to explore relationships
-    within and among related datasets. Its main features include linked
-    statistical graphs, flexible linking across data, and full Python scripting
-    capability.
-
-poliastro:
-  name: poliastro
-  logo: poliastro.png
-  url: https://poliastro.readthedocs.io/
-  repositories:
-    github: poliastro/poliastro
-  mailinglist:
-    devs: https://groups.io/g/poliastro-dev
-  chat:
-    matrix: https://riot.im/app/#/room/#poliastro:matrix.org
-  description: >-
-    is a python package for Astrodynamics and Orbital Mechanics problems, such
-    as orbital elements conversion, orbital propagation, plotting, planetary
-    ephemerides computation, and more.
-
-plasmapy:
-  name: PlasmaPy
-  logo: plasmapy.png
-  url: http://www.plasmapy.org
-  repositories:
-    github: plasmapy/plasmapy
-  mailinglist:
-    general: https://groups.google.com/group/plasmapy
-  chat:
-    matrix: https://riot.im/app/#/room/#plasmapy:matrix.org
-  description: >-
-    aims to be a collection of functionality commonly used and shared between
-    plasma physicists and researchers globally, running within and leveraging
-    the open source scientific Python ecosystem.
-
 heliopy:
   name: HelioPy
   logo: heliopy.png
@@ -192,32 +205,6 @@ heliopy:
     is a python package for space physics, that aims to provide the tools to
     find, download and analyse spacecraft data from across the whole solar
     system.
-
-sherpa:
-  name: Sherpa
-  logo: sherpa_logo.gif
-  url: http://cxc.cfa.harvard.edu/contrib/sherpa/
-  repositories:
-    github: sherpa/sherpa/
-  description: >-
-    is a modeling and fitting application for Python. It contains a powerful
-    language for combining simple models into complex expressions that can be
-    fit to the data using a variety of statistics and optimization methods. It
-    is easily extensible to include user models, statistics and optimization
-    methods.
-
-timelab:
-  name: TimeLab
-  logo: timelab.png
-  url: http://www.timelabtechnologies.com
-  repositories:
-    github: StingraySoftware
-  chat:
-    slack: http://slack-invite.timelabtechnologies.com
-  description: >-
-    : we are a team of astrophysicists and software developers working together
-    to build a variability analysis software to study black holes and
-    fundamental physics under extreme conditions.
 
 gnuastro:
   name: GNU Astronomy Utilities
@@ -246,25 +233,40 @@ gnuastro:
     <a href="https://www.gnu.org/software/gnuastro/manual/html_node/Tutorials.html"
     target="_blank">tutorials</a> is the best place to start using it.
 
-ctlearn:
-   name: CTLearn
-   logo: ctlearn.png
-   url: https://github.com/ctlearn-project
-   repositories:
-     github: ctlearn-project/ctlearn
-   description: >-
-      is a package under active development that pursues the
-      application of deep-learning based methods to the analysis of
-      data from imaging atmospheric Cherenkov telescopes (IACTs). <a
-      href="https://github.com/ctlearn-project">CTLearn</a> includes
-      modules for loading and manipulating IACT data and for running
-      machine learning models using pixel-wise camera data as
-      input. Its high-level interface provides a
-      configuration-file-based workflow to drive reproducible training
-      and prediction.
-   chat:
-     slack: https://ctlearn.slack.com
+ims:
+  name: The Italian Mars Society
+  logo: ims.png
+  url: http://www.marssociety.it/?lang=en
+  repositories:
+    bitbucket: italianmarssociety/
+  mailinglist:
+    admin: mailto:gsoc@marssociety.it
+  description: >-
+    (IMS) is a non-profit organization, existing from 2004, as Italian branch of
+    the International Mars Society, created in the USA by Robert Zubrin. IMS is
+    a member of the Mars Society European network. The foundation scope of the
+    Italian Mars Society is to promote research projects devoted to Mars
+    Exploration and the involvement of SMEs and large enterprises in the new
+    economy related to space exploration. <br/> IMS is currently spearheading
+    the <a href="http://www.mars-city.org/" _target="_blank">MARS CITY</a>
+    project. The project aims to address the major issues that could jeopardize
+    a crewed mission to Mars and are not adequately being addressed at existing
+    terrestrial Mars analogs.
 
+plasmapy:
+  name: PlasmaPy
+  logo: plasmapy.png
+  url: http://www.plasmapy.org
+  repositories:
+    github: plasmapy/plasmapy
+  mailinglist:
+    general: https://groups.google.com/group/plasmapy
+  chat:
+    matrix: https://riot.im/app/#/room/#plasmapy:matrix.org
+  description: >-
+    aims to be a collection of functionality commonly used and shared between
+    plasma physicists and researchers globally, running within and leveraging
+    the open source scientific Python ecosystem.
 
 radis:
    name: radis
@@ -282,38 +284,34 @@ radis:
      includes a post-processing tools to compare experimental spectra with
      spectra calculated in RADIS or other spectral codes.
 
-
-einsteinpy:
-  name: EinsteinPy
-  logo: einsteinpy.png
-  url: https://einsteinpy.org
+sherpa:
+  name: Sherpa
+  logo: sherpa_logo.gif
+  url: http://cxc.cfa.harvard.edu/contrib/sherpa/
   repositories:
-    github: einsteinpy/einsteinpy
+    github: sherpa/sherpa/
+  description: >-
+    is a modeling and fitting application for Python. It contains a powerful
+    language for combining simple models into complex expressions that can be
+    fit to the data using a variety of statistics and optimization methods. It
+    is easily extensible to include user models, statistics and optimization
+    methods.
+
+yt:
+  name: yt
+  logo: yt.png
+  url: https://yt-project.org/
+  repositories:
+    github: yt-project/yt
   mailinglist:
-    devs: https://groups.io/g/einsteinpy-dev
+    users: http://lists.spacepope.org/listinfo.cgi/yt-users-spacepope.org
+    devs: http://lists.spacepope.org/listinfo.cgi/yt-dev-spacepope.org
   chat:
-    matrix: https://riot.im/app/#/room/#einsteinpy:matrix.org
+    irc: irc://irc.freenode.net/#yt
   description: >-
-    is a python package for solving problems in general relativity. Computations
-    can be done for Schwarzschild, Kerr and Kerr-Newman geometries. Visualising
-    relativistic orbits, advancement of perihelion can be simulated in seconds.
-    See <a href="https://docs.einsteinpy.org/">documentation</a> for more
-    information.
-
-
-astronomy-commons:
-  name: Astronomy Data Commons
-  logo: astronomy-commons.png
-  url: https://dirac.astro.washington.edu/data-engineering/
-  repositories:
-    github: astronomy-commons/
-  mailinglist:
-    devs: https://groups.google.com/forum/#!forum/astronomy-commons
-  description: >-
-    is an initiative for software infrastructure for science platforms and
-    scalable astronomy on cloud resources. Astronomy Data Commons is lead by
-    researchers at the DiRAC Institute at the University of Washington.
-
+    is a python package for analyzing and visualizing volumetric,
+    multi-resolution data from astrophysical simulations,
+    radio telescopes, and a burgeoning interdisciplinary community.
 
 # Are you a new org? copy the fragment below above this line and fill it up
 # with your organisation details. Don't forget to add your logo to the img/members
