@@ -22,6 +22,8 @@ astronomy-commons:
     github: astronomy-commons/
   mailinglist:
     devs: https://groups.google.com/forum/#!forum/astronomy-commons
+  chat:
+    matrix: https://riot.im/app/#/room/#astronomy-commons:matrix.org 
   description: >-
     is an initiative for software infrastructure for science platforms and
     scalable astronomy on cloud resources. Astronomy Data Commons is lead by
