@@ -43,7 +43,7 @@ The project has roughly the following objectives :
   - Calculate redshifts in photon rays due to space-time curvature.
   - Visualization of Keplerian disc/shell in around it.
   - In short, we aim to replicate one of the few papers available with proper coding paradigms like OOPs, good documentation and unit tests.
-  - If required due to perfromance issues, python wrappers over native C/C++ have to be written.
+  - If required due to performance issues, python wrappers over native C/C++ have to be written.
 
 This project also aims at fixing the problem of natural units introduced due to the research papers and books and to give native support to MKS units.
 
