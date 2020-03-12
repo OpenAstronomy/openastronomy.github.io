@@ -177,7 +177,6 @@ chiantipy:
 coin:
   name: COIN
   logo: coin.png
-  url: https://asaip.psu.edu/organizations/iaa/iaa-working-group-of-cosmostatistics/
   repositories:
     github: COINtoolbox
   mailinglist:
