@@ -63,7 +63,7 @@ jobs:
              bundle exec htmlproofer ./_site \
                --allow-hash-href \
                --check-html \
-               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-6].+/"  \
+               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-9].+/"  \
                --http-status-ignore 302
                # Ignore old ideas pages and ssl certificates that error.
             fi
