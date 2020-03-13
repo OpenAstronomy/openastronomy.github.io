@@ -38,7 +38,7 @@ jobs:
 
       - run:
           name: Jekyll build
-          command: bundle exec jekyll build 2> std.err
+          command: bundle exec jekyll build -d html 2> std.err
 
       - run:
           name: Check Jekyll build
@@ -49,7 +49,7 @@ jobs:
       - run:
           name: HTMLProofer tests
           command: |
-            bundle exec htmlproofer ./_site \
+            bundle exec htmlproofer ./html \
               --allow-hash-href \
               --check-html \
               --disable-external \
@@ -60,10 +60,10 @@ jobs:
           name: HTMLProofer with external
           command: |
             if [ "${CIRCLE_BRANCH}" = "master" ]; then
-             bundle exec htmlproofer ./_site \
+             bundle exec htmlproofer ./html \
                --allow-hash-href \
                --check-html \
-               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-6].+/"  \
+               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-9].+/"  \
                --http-status-ignore 302
                # Ignore old ideas pages and ssl certificates that error.
             fi
@@ -73,15 +73,15 @@ jobs:
           name: Jekyll re-build for local
           command: |
             echo "url: https://${CIRCLE_BUILD_NUM}-30926520-gh.circle-artifacts.com" > circle.yml && \
-            bundle exec jekyll build -b "/0/site"  --config _config.yml,circle.yml && \
-            find ./_site/ -iname '*html' | xargs -I{} sed -i \
+            bundle exec jekyll build -d html -b "/0/html"  --config _config.yml,circle.yml && \
+            find ./html/ -type f -iname '*html' | xargs -I{} sed -i \
               -e 's|href="\(\.\/.*\/\)"|href="\1index.html"|g' \
-              -e '/0\/site/ s|href="\(\/.*\/\)"|href="\1index.html"|g' {}
+              -e '/0\/html/ s|href="\(\/.*\/\)"|href="\1index.html"|g' {}
             # Replace pages ending on `/` from our site to direct to index.html
 
       - run:
           name: "Built documentation is available at:"
-          command: DOCS_URL="${CIRCLE_BUILD_URL}/artifacts/${CIRCLE_NODE_INDEX}/site/index.html"; echo $DOCS_URL
+          command: DOCS_URL="${CIRCLE_BUILD_URL}/artifacts/${CIRCLE_NODE_INDEX}/html/index.html"; echo $DOCS_URL
 
 
       - save_cache:
@@ -91,8 +91,8 @@ jobs:
 
       # collect reports
       - store_artifacts:
-          path: ~/repo/_site
-          destination: site
+          path: ~/repo/html
+          destination: html
 
 notify:
   webhooks:
