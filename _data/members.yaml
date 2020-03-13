@@ -177,6 +177,7 @@ chiantipy:
 coin:
   name: COIN
   logo: coin.png
+  url: https://cosmostatistics-initiative.org/
   repositories:
     github: COINtoolbox
   mailinglist:
