@@ -35,6 +35,8 @@ ctlearn:
    url: https://github.com/ctlearn-project
    repositories:
      github: ctlearn-project/ctlearn
+   chat:
+     matrix: https://riot.im/app/#/room/#ctlearn:matrix.org
    description: >-
       is a package under active development that pursues the
       application of deep-learning based methods to the analysis of
@@ -45,8 +47,6 @@ ctlearn:
       input. Its high-level interface provides a
       configuration-file-based workflow to drive reproducible training
       and prediction.
-   chat:
-     slack: https://ctlearn.slack.com
 
 einsteinpy:
   name: EinsteinPy
