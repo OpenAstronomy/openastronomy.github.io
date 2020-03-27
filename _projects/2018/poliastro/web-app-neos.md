@@ -5,7 +5,7 @@ requirements:
  - Experience in web or interface design
 difficulty: medium
 mentors:
- - juanlu001
+ - astrojuanlu
  - anhiga
 initiatives:
  - GSOC

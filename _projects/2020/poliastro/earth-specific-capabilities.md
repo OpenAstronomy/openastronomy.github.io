@@ -5,7 +5,7 @@ requirements:
  - Basic notions of orbital mechanics
 difficulty: medium
 mentors:
- - juanlu001
+ - astrojuanlu
  - jorgepiloto
 initiatives:
  - GSOC
