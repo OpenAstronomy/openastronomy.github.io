@@ -27,7 +27,7 @@ issues:
 
 The presence and concentration of molecules in a gas can be measured by comparing absorption and emission experimental spectra to synthetic spectra. However, under high-temperature conditions, the synthetic spectra contain dozens of millions of lines, which require long computational times (up to several minutes).
  
-The RADIS code was recently developed for the characterization of plasmas and flames. It uses a new approach to quickly calculate high-temperature infrared spectra. The latest developments already make it of the fastest spectral codes in the world. The goal of this project is to push further and implement two new techniques to gain another orders of magnitude, by two means:
+The RADIS code was recently developed for the characterization of plasmas and flames. It uses a new approach to quickly calculate high-temperature infrared spectra. The latest developments already make it one the fastest spectral codes in the world. The goal of this project is to push further and implement two new techniques to gain another orders of magnitude, by two means:
 - Implementing GPU acceleration (proof-of-concept example has shown we can compute 250 millions lines in 150 ms!)
 - Implementing a new technique to compute line-of-sight spectra (i.e., a column of heterogeneous gas) 
 
