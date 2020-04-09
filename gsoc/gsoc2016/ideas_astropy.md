@@ -29,7 +29,7 @@ While some initial efforts have occurred, this project would involve expanding t
 
 ### Ephemerides for Solar System objects in Astropy
 
-*Suggested Mentor(s):* [Marten van Kerkwijk](mhvk), [Erik Tollerud](http://github.com/eteq)
+*Suggested Mentor(s):* [Marten van Kerkwijk](http://github.com/mhvk), [Erik Tollerud](http://github.com/eteq)
 
 *Difficulty:* Beginner to Intermediate
 
@@ -78,7 +78,7 @@ necessary changes to make the ERFA python API public.  This includes:
 
 #### Description
 
-[Gammapy](https://gammapy.readthedocs.org/en/latest/) is a Python package for
+[Gammapy](https://docs.gammapy.org/) is a Python package for
 professional gamma-ray astronomers. We are looking for a web developer with good
 Python, HTML and Javascript skills that is interested in building web pages and
 apps to display and browse gamma-ray data and maybe even launch Gammapy
@@ -110,7 +110,7 @@ Experience with X-ray or gamma-ray data analysis (e.g. Fermi-LAT) is a plus, but
 
 #### Description
 
-[Gammapy](https://gammapy.readthedocs.org/en/latest/) is a Python package for
+[Gammapy](https://docs.gammapy.org/) is a Python package for
 professional gamma-ray astronomers. We are looking for someone that's interested
 towork on a few distinct data analysis tasks, each taking a few weeks of the
 GSoC total time. Gammapy is a very young project, and there's a lot to do.

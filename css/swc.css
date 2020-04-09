@@ -49,8 +49,7 @@ blockquote.testimonial cite {
 body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
     color: rgb(03, 03, 03);
-	background-image: url("background_ap.jpg");
-	/* background-image: url("background_sp.jpg"); */
+	/* background-image: set by the javascript on head.html */
 	background-size: 100%;
 	background-repeat:  no-repeat;
 	background-colur: white
@@ -477,6 +476,7 @@ header.site-header div.wrapper a.site-title:hover, header.site-header div.wrappe
 footer.site-footer {
 padding-top: 10px;
 padding-bottom: 10px;
+text-align: center;
 }
 
 footer.site-footer div.wrapper {

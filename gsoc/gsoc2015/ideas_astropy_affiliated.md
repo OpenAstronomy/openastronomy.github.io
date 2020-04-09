@@ -48,7 +48,7 @@ planning / scheduling and plotting / GUIs.
 
 #### Description
 
-[Gammapy](https://gammapy.readthedocs.org/en/latest/) is an Astropy-affiliated package to simulate and analyse data from gamma-ray telescopes such as Fermi, H.E.S.S. and CTA. A lot of basic functionality is still missing, specifically we think that contributing to one of the sub-packages gammapy.background (background modeling), gammapy.detect (source detection methods) or gammapy.spectrum (spectral analysis methods) would be a good GSoC project if you are interested in implementing specific established data analysis algorithms (e.g. adaptive-ring or reflected region or template background estimation, or spectrum forward-folding or unfolding methods) used in gamma-ray astronomy (but no prior gamma-ray data experience / knowledge needed).
+[Gammapy](https://docs.gammapy.org/) is an Astropy-affiliated package to simulate and analyse data from gamma-ray telescopes such as Fermi, H.E.S.S. and CTA. A lot of basic functionality is still missing, specifically we think that contributing to one of the sub-packages gammapy.background (background modeling), gammapy.detect (source detection methods) or gammapy.spectrum (spectral analysis methods) would be a good GSoC project if you are interested in implementing specific established data analysis algorithms (e.g. adaptive-ring or reflected region or template background estimation, or spectrum forward-folding or unfolding methods) used in gamma-ray astronomy (but no prior gamma-ray data experience / knowledge needed).
 
 
 ### Astropy Acknowledgement/Citation Generator

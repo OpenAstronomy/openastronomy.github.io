@@ -16,6 +16,7 @@ $spacing-unit:     30px;
 $text-color:       #111;
 $background-color: #ffffff;
 $brand-color:      #2a7ae2;
+$menu-color:       #292929;
 
 $grey-color:       #333333;
 $grey-color-light: lighten($grey-color, 40%);
@@ -47,3 +48,22 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+.projects {
+    @import "../_sass/bootstrap-sass-3.3.7/assets/stylesheets/_bootstrap.scss";
+    @import "../gsoc/display/resources/css/style.scss";
+    @import "../_sass/materialize-src/sass/materialize.scss";
+    .container {
+        width: 95%;
+    }
+    code {
+        padding: 2px 4px;
+        font-size: 0.9em;
+        color: #ffffff;
+        background-color: #194242;
+        border-radius: 11px;
+    }
+    li {
+        line-height:1.5;
+    }
+}

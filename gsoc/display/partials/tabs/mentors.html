@@ -1,0 +1,56 @@
+<div class="main-content container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="title-get-involved" >Hello there!</div>
+            <br>
+            <div class="description">
+                We are the mentors for OpenAstronomy in GSoC {{ gic.year }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <div class="row showcase-gi">
+            <div  ng-repeat="member in gic.mentorsList" class="card card-main showcase-card-gi">
+                <div class="empty"></div>
+                <div class="card-action profile-data" >
+                  <center><img class="profile-img" height="100" ng-src="{{ member.github_avatar_url }}" alt="{{member.github_handle}}'s avatar"></center>
+                  <div class="person-name">{{ member.name }}</div>
+                  <div class="person-github-id-div"><a class="person-github-id" ng-href="https://github.com/{{member.github_handle}}">@{{ member.github_handle }}</a></div>
+                  <div class="person-github-bio">{{ member.bio }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="main-content container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="title-get-involved" >Admins</div>
+            <br>
+            <div class="description">
+                We are the admins for OpenAstronomy.
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <div class="row showcase-gi">
+            <div  ng-repeat="member in gic.adminsList" class="card card-main showcase-card-gi">
+                <div class="empty"></div>
+                <div class="card-action profile-data" >
+                  <center><img class="profile-img" height="100" ng-src="{{ member.github_avatar_url }}" alt="{{member.github_handle}}'s avatar"></center>
+                  <div class="person-name">{{ member.name }}</div>
+                  <div class="person-github-id-div"><a class="person-github-id" ng-href="https://github.com/{{member.github_handle}}">@{{ member.github_handle }}</a></div>
+                  <div class="person-github-bio">{{ member.bio }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br/><br/><br/><br/>

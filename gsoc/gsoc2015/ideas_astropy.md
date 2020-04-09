@@ -57,7 +57,7 @@ add optional extension, sampling grid and bounding box information to the
 Astropy model classes, or contribute rasterisation code to
 [astropy.modeling](http://docs.astropy.org/en/stable/modeling/index.html) or
 photutils, or expand the existing resampling code in the
-[reproject](https://github.com/astrofrog/reproject/) package. The student
+[reproject](https://github.com/astropy/reproject/) package. The student
 should be interested in model fitting and image rasterisation as well as
 profiling and extensive testing of a given method to make it “just work” for
 the end user.
