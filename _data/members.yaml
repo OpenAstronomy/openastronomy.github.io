@@ -304,10 +304,10 @@ yt:
   repositories:
     github: yt-project/yt
   mailinglist:
-    users: http://lists.spacepope.org/listinfo.cgi/yt-users-spacepope.org
-    devs: http://lists.spacepope.org/listinfo.cgi/yt-dev-spacepope.org
+    users: https://mail.python.org/archives/list/yt-users@python.org/
+    devs: https://mail.python.org/archives/list/yt-dev@python.org/
   chat:
-    irc: irc://irc.freenode.net/#yt
+    slack: https://yt-project.slack.com/
   description: >-
     is a python package for analyzing and visualizing volumetric,
     multi-resolution data from astrophysical simulations,
