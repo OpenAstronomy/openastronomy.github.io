@@ -72,7 +72,7 @@ with a basic structure and a simple test case, but we want to expand it much fur
 
 * Fix any bugs that might appear regarding visualization, hyperbolic orbits and so forth
 * Review pull requests from other poliastro contributors, including the mentor
-* Maintain [poliastro benchmarks](https://blog.poliastro.space/poliastro-benchmarks/)
+* Maintain [poliastro benchmarks](https://benchmarks.poliastro.space/)
 * Give a talk about the work at some Python event
 
 #### Additional resources
