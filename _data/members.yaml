@@ -198,7 +198,7 @@ heliopy:
   repositories:
     github: heliopython/heliopy
   mailinglist:
-    general: https://groups.google.com/group/plasmapy
+    users: https://groups.google.com/group/plasmapy
   chat:
     matrix: https://riot.im/app/#/room/#heliopy:matrix.org
   description: >-
@@ -213,8 +213,8 @@ gnuastro:
   repositories:
     savannah: https://git.savannah.gnu.org/cgit/gnuastro.git
   mailinglist:
-    user: https://lists.gnu.org/mailman/listinfo/help-gnuastro
-    dev: https://lists.gnu.org/mailman/listinfo/gnuastro-devel
+    users: https://lists.gnu.org/mailman/listinfo/help-gnuastro
+    devs: https://lists.gnu.org/mailman/listinfo/gnuastro-devel
   description: >-
     (Gnuastro) is an official GNU package consisting of many
     <a href="https://www.gnu.org/software/gnuastro/manual/html_node/Gnuastro-programs-list.html"
@@ -260,7 +260,7 @@ plasmapy:
   repositories:
     github: plasmapy/plasmapy
   mailinglist:
-    general: https://groups.google.com/group/plasmapy
+    users: https://groups.google.com/group/plasmapy
   chat:
     matrix: https://riot.im/app/#/room/#plasmapy:matrix.org
   description: >-
