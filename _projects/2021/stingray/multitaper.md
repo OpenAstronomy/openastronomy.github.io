@@ -42,10 +42,7 @@ Stingray aims to provide a comprehensive library of reliable, well-tested implem
 
 * Proof-of-concept implementation is complete.
 
-##### 2nd evaluation
-
-* Full implementation is complete
-
 ##### Final
 
+* Full implementation is complete
 * Wrap up connecting the new implementation to existing Stingray classes, finish documentation and associated tutorial in a Jupyter notebook.
