@@ -84,6 +84,11 @@
           <span ng-click="redirect(issue)" class="pr-element-detail chip clickable" ng-repeat="issue in currentProject.issues">{{ issue | format_issue }}</span>
         </div>
         <br>
+        <div ng-show="currentProject.collaborating_projects.length>0" class="project-detail-element">
+            <div class="heading">Show interest on this project by:</div>
+            <a class="pr-element-detail chip clickable" ng-repeat="project in currentProject.collaborating_projects" href="{{ project | format_project }}">chat/mail</a>
+        </div>
+        <br>
       </div>
 
       <div class="col-md-8 dashboard">

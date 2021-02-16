@@ -122,6 +122,35 @@
   };
  });
 
+ app.filter('format_project', function () {
+  return function (value) {
+      if (!value) return '';
+      var all =  {{ site.data.members | jsonify }};
+      if (value in all) {
+          var data = all[value];
+          if ('chat' in data){
+              if ('matrix' in data.chat) {
+                  return data.chat['matrix'];
+              } else if ('slack' in data.chat) {
+                  return data.chat['slack'];
+              } else if ('gitter' in data.chat) {
+                  return data.chat['gitter'];
+              }
+          };
+          if ('mailinglist' in data){
+              if ('devs' in data.mailinglist) {
+                  return data.mailintlist['devs'];
+              } else if ('users' in data.mailinglist) {
+                  return data.mailinglist['users'];
+              };
+          };
+      };
+      return 'https://riot.im/app/#/room/#openastronomy:matrix.org';
+  };
+ });
+
+
+
 
 	app.directive('mentors', ['$http', function ($http) {
 		return {
