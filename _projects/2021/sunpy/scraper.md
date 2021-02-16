@@ -23,6 +23,7 @@ tags:
  - web
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
+ - sunpy
  - astroquery
 ---
 

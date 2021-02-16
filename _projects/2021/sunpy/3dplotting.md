@@ -23,6 +23,7 @@ tags:
  - 3D
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
+ - sunpy
 ---
 This is an awesome project idea for suborg.
 
