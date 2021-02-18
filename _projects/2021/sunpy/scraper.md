@@ -40,9 +40,9 @@ Many of these simpler clients do URL scraping to return metadata and data files 
 This scraping is done by the `scraper class <https://docs.sunpy.org/en/stable/api/sunpy.util.scraper.Scraper.html?highlight=scraper>`__.
 Over the years, the scale of what this class has to do has expanded to a point where it has become unmaintainable.
 
-The goal of this project is to rewrite this class to have a defined structure. 
-Please be aware that this project is not a design project, the API and the scope of scrapper has been (link to come) predetermined and laid out by the mentors.
-So the focus will be to write the class and its methods to follow this specification (obviously leaving the implementation up to you).  
+The goal of this project is to create a new scraper with a predefined API and class structure. 
+Please be aware that this project is not a design project, the API and the scope of scrapper has been (link to come) predetermined and laid out by the GSoC mentors.
+So the primary focus of this project will be to write the class and its methods to follow this specification (obviously leaving the implementation details mainly up to you).  
 
 
 #### Milestones (if any)
