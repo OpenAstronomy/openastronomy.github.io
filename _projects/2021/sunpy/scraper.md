@@ -4,7 +4,8 @@ desc: Improve the current scraper to download data
 # add a short one line description of your project
 requirements:
 # Student requirements:
- - Knowledge on python and text parsing
+ - Familiarity with Python 
+ - Knowledge of Python regex 
  - Familiar with web protocols
 difficulty: medium
 issues:
@@ -14,6 +15,9 @@ mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub handles
  - nabobalis
+ - cadair
+ - samaloney
+ - hayesla
  - dpshelio
 initiatives:
  - GSOC
@@ -24,23 +28,28 @@ tags:
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
  - sunpy
- - astroquery
 ---
 
-This project will provide access to data in an programmatic way.
+This project will provide the ability to parse URL information in a programmatic way.
 
 #### Description
 
-The current scraper implementation has been very useful to provide access to
-many data archives, however, it has some limitations and the work around are
-making the code very unsustainable.
+sunpy provides a way for users to access data using Fido and its many internal clients.
+Many of these simpler clients do URL scraping to return metadata and data files to a user. 
+
+This scraping is done by the `scraper class <https://docs.sunpy.org/en/stable/api/sunpy.util.scraper.Scraper.html?highlight=scraper>`__.
+Over the years, the scale of what this class has to do has expanded to a point where it is unmaintainable.
+
+The goal of this project is to rewrite this class to have a defined structure. 
+Please be aware that this project is not a design project, the API and the scope of scrapper has been (link to come) predetermined and laid out by the mentors.
+So the focus will be to write the class and its methods to follow this specification (obviously leaving the implementation up to you).  
 
 
 #### Milestones (if any)
 
-- Fully scope out what we need scraper to achieve
-- Figure out how to use parse (probably with patches upstream)
-- Implement it.
+1. Partial scraper written
+2. Functional scraper written
+3. Finished scraper implementation.
 
 ##### Coding starts
 
@@ -48,8 +57,8 @@ making the code very unsustainable.
 
 ##### 1st evaluation
 
-* Have done awesome stuff.
+* Partial skeleton of scraper written.
 
 ##### Final
 
-* Finished the awesome stuff.
+* Functional replacement scraper. 
