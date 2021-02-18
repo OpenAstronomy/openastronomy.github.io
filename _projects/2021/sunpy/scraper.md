@@ -38,7 +38,7 @@ sunpy provides a way for users to access data using Fido and its many internal c
 Many of these simpler clients do URL scraping to return metadata and data files to a user. 
 
 This scraping is done by the `scraper class <https://docs.sunpy.org/en/stable/api/sunpy.util.scraper.Scraper.html?highlight=scraper>`__.
-Over the years, the scale of what this class has to do has expanded to a point where it is unmaintainable.
+Over the years, the scale of what this class has to do has expanded to a point where it has become unmaintainable.
 
 The goal of this project is to rewrite this class to have a defined structure. 
 Please be aware that this project is not a design project, the API and the scope of scrapper has been (link to come) predetermined and laid out by the mentors.
