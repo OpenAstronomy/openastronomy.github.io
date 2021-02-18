@@ -14,6 +14,7 @@ mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub handles
  - DanRyanIrish
+ - cadair
  - nabobalis
 initiatives:
  - GSOC
