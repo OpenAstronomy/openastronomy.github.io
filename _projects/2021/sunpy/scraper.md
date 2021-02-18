@@ -53,7 +53,8 @@ So the primary focus of this project will be to write the class and its methods 
 
 ##### Coding starts
 
-* Be awesome
+* Already have a development environment setup
+* Understand the project and the API design. Having asked questions if you do not. 
 
 ##### 1st evaluation
 
