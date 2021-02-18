@@ -13,6 +13,8 @@ mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub handles
  - dstansby
+ - cadair
+ - nabobalis
 initiatives:
  - GSOC
 tags:

@@ -4,7 +4,8 @@ desc: Updates the sunraster code-base to use the powerful new version of ndcube.
 # add a short one line description of your project
 requirements:
 # Student requirements:
- - Knowledge on python
+ - Knowledge of Python
+ - Ideally some familiarity with ndcube 2.0 and sunraster.
 difficulty: medium
 issues:
 # Related issues (if any) to this project.
@@ -13,6 +14,7 @@ mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub handles
  - DanRyanIrish
+ - nabobalis
 initiatives:
  - GSOC
 tags:
@@ -23,8 +25,7 @@ collaborating_projects:
  - sunpy
 ---
 
-This project will upgrade the sunraster package to use the much more powerful
-2.0 release of the ndcube package and lead to the next release to the sunraster package.
+This project will update the sunraster package to use the ndcube 2.0, a much more powerful version and lead to the next release of the sunraster package.
 
 #### Description
 
@@ -37,6 +38,7 @@ handling functional based coordinate transformations that describe the observati
 relationships to real world coordinates, e.g. which part of
 the sky a camera pixel is pointing, or what time an image was taken.
 These transformations are known as the World Coordinate System (WCS).
+
 A new API-breaking version of ndcube (2.0) is imminent which supports a
 more flexible generic API for WCS transformations.
 This API is not backwards compatible and so requires upgrades to the sunraster
@@ -59,4 +61,3 @@ data analysis.
 ##### Final
 
 * Release new version of sunraster.
-

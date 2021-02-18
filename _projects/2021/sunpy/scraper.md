@@ -42,7 +42,7 @@ Over the years, the scale of what this class has to do has expanded to a point w
 
 The goal of this project is to create a new scraper with a predefined API and class structure. 
 Please be aware that this project is not a design project, the API and the scope of scrapper has been (link to come) predetermined and laid out by the GSoC mentors.
-So the primary focus of this project will be to write the class and its methods to follow this specification (obviously leaving the implementation details mainly up to you).  
+So the primary focus of this project will be to write the class and its methods to follow this specification (obviously leaving the implementation details mainly up to you).
 
 
 #### Milestones (if any)
