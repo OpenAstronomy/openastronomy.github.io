@@ -61,4 +61,4 @@ So the primary focus of this project will be to write the class and its methods 
 
 ##### Final
 
-* Functional replacement scraper. 
+* Functional replacement ready for review and merging into sunpy. 
