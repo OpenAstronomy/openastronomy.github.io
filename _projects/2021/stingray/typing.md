@@ -45,4 +45,4 @@ In this project, the student will introduce type hints in the code, in order to 
 
 ##### Final
 
-* Through tests through external libraries such as https://pypi.org/project/enforce-typing/
+* Through tests through external libraries such as [enforce-typing](https://pypi.org/project/enforce-typing/).
