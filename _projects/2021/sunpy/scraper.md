@@ -47,8 +47,9 @@ So the primary focus of this project will be to write the class and its methods 
 #### Milestones (if any)
 
 1. Partial scraper written
-2. Functional scraper written
-3. Finished scraper implementation.
+2. Figured out if we can use parse instead of python regex.
+3. Functional scraper written
+4. Finished scraper implementation.
 
 ##### Coding starts
 
