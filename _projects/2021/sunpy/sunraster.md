@@ -49,6 +49,9 @@ data analysis.
 
 #### Milestones (if any)
 
+* sunraster code has been updated.
+* sunraster tests all pass.
+* sunraster has been released.
 ##### Coding starts
 
 * Become familiar with ndcube and sunraster codebases.
@@ -61,4 +64,4 @@ data analysis.
 
 ##### Final
 
-* Release new version of sunraster.
+* sunraster is ready to be released to users.
