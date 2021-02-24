@@ -1,5 +1,5 @@
 ---
-name: Resample NDCube
+name: Supporting Resampling in NDCube
 desc: Enable users to resample their data using NDCube.
 # add a short one line description of your project
 requirements:
@@ -67,4 +67,3 @@ community.
 ##### Final
 
 * Release new version of ndcube including resampling capability
-
