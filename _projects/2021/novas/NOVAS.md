@@ -1,7 +1,6 @@
 ---
 name: NOVAS
-desc: Implement a Julia version of the U.S. Naval Observatory Vector
-Astrometry Software (NOVAS) library and vectorize it to improve performance.
+desc: Implement a Julia vectorized version of the NOVAS library
 # add a short one line description of your project
 requirements: 
 # Student requirements:
@@ -27,7 +26,8 @@ collaborating_projects:
 # suborganisation(s) to which this project belongs.
  - juliaAstro
 ---
-This is an awesome project idea for suborg.
+Implement a Julia version of the U.S. Naval Observatory Vector Astrometry 
+Software (NOVAS) library and vectorize it to improve performance.
 
 #### Description
 
