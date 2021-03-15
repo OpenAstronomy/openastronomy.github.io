@@ -29,7 +29,7 @@ collaborating_projects:
 
 #### Description
 
-The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculate high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available. This performance makes it very suitable to compute high-temperature atmospheres.
+The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available. This performance makes it very suitable to compute high-temperature atmospheres.
 
 The goal of this project is to simplify the user interface to compute atmospheres directly :
 
@@ -57,7 +57,7 @@ The goal of this project is to simplify the user interface to compute atmosphere
 
 * Write interface to read standard atmosphere input files (mole fractions, temperature profile, pressure profile)
 
-* Add tests and Notebook examples in the documentation
+* Add a detailed Notebook example in the documentation
 
 
 ##### 2nd evaluation
@@ -70,6 +70,8 @@ The goal of this project is to simplify the user interface to compute atmosphere
 
 
 ##### Final
+
+* Add a Gallery Example in RADIS documentation
 
 * Have all code, tests and documentation in GitHub.
 

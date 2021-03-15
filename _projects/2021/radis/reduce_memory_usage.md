@@ -28,7 +28,7 @@ collaborating_projects:
 
 #### Description
 
-The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculate high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available. 
+The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available. 
 
 However, although the algorithm is very CPU/GPU efficient, the RADIS code is still memory-hungry. The first goal of the current project is to reduce the memory usage of current calculations. Then, it is to replace the current core with libraries better suited to process larger-than-memory-data, which would make it possible to compute spectral databases of up to billions of lines (hundred of GB or terabyte-scale). 
 

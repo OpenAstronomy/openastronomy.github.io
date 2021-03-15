@@ -28,7 +28,7 @@ collaborating_projects:
 
 #### Description
 
-The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculate high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that makes it one of the fastest line-by-line spectral codes available. 
+The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that makes it one of the fastest line-by-line spectral codes available. 
 
 Currently RADIS supports calculation of about every possible molecule, but assumes that it is diluted in air by default. It is possible to manually adjust it to replace air by one other diulter (for instance : compute CO diluted in CO2). The goal of the current project is to make it automatic, and extend it to multiple diluents (for instance: CO diluted in CO2 and H2O).
 
