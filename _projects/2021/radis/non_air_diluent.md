@@ -53,9 +53,6 @@ Learn the physics :
 
 * Add tutorial to show how to manually replace the broadening coefficients in RADIS (with Pandas).
 
-
-##### 2nd evaluation
-
 Implement : 
 
 * write a method in [SpectrumFactory](https://github.com/radis/radis/blob/develop/radis/lbl/factory.py#L109) to set-up the dilution gas, and read the corresponding coefficients from the loaded database.

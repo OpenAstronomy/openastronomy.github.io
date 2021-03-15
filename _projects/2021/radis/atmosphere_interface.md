@@ -59,17 +59,12 @@ The goal of this project is to simplify the user interface to compute atmosphere
 
 * Add a detailed Notebook example in the documentation
 
-
-##### 2nd evaluation
-
 * Add integration to more line databases, like ExoMol or GEISA ([#34](https://github.com/radis/radis/issues/34))
-
-* Improve how these databases are downloaded automatically and converted to RADIS standard format (see [#210](https://github.com/radis/radis/issues/210))
-
-* Add examples in the documentation 
 
 
 ##### Final
+
+* Improve how these databases are downloaded automatically and converted to RADIS standard format (see [#210](https://github.com/radis/radis/issues/210))
 
 * Add a Gallery Example in RADIS documentation
 

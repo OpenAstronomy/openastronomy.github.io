@@ -43,7 +43,7 @@ However, although the algorithm is very CPU/GPU efficient, the RADIS code is sti
 
 * Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and [RADIS architecture](https://radis.readthedocs.io/en/latest/dev/developer.html#architecture)
 
-##### 1st evaluation
+##### 1st Evaluation
 
 * Work on the current memory bottlenecks (#118)
 
@@ -52,11 +52,9 @@ However, although the algorithm is very CPU/GPU efficient, the RADIS code is sti
 * Merge the changes
 
 
-##### 2nd evaluation
+##### Final
 
 * Setup a proof-of-concept with Vaex / Dask or alternative libraries with lazy-loading features, to be able to compute larger-than-memory-databases  (> tens of GB - terabyte-scale )
-
-##### Final
 
 * Based on results, decide whether to integrate Vaex, Dask or alternative library in the code.
 
