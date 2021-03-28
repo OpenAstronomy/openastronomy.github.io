@@ -39,6 +39,7 @@ Gnuastro therefore plans on adding a low-level wrapper infra-structure which wil
 Note that this won't involve intermediate wrapper languages SWIG, we will directly link with the core C library of Numpy: https://docs.scipy.org/doc/numpy-1.10.0/reference/c-api.html
 This will be a wonderful chance to master Python and Scipy/Numpy at a very fundamental level, giving you a great experience to expand what you have learnt afterwards into many other functionalities.
 Of course, in the meantime you will also working on many real-world astronomical data and science scenarios using ground-based and space-based data.
+To get started, a checklist has been prepared at http://savannah.gnu.org/support/?110457#comment0
 
 #### Milestones (if any)
 
