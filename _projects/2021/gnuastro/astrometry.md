@@ -35,6 +35,7 @@ In short, astrometry is the process of finding the transformation matrix (includ
 Gnuastro's astrometry library aims to be fully blind, needing no prior information on the input image's location in the sky, or the optical distortion of the camera that has taken the image.
 Many of the low-level components of astrometry have already been added in Gnuastro's new implementation.
 However some work still remains on stitching them together into a simple-to-use, high-level C library function that can later be used in several Gnuastro programs, as well as other programs and languages.
+To get started, check [our checklist](http://savannah.gnu.org/support/?110457#comment0)
 
 #### Milestones (if any)
 
