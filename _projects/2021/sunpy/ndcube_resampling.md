@@ -8,7 +8,7 @@ requirements:
 difficulty: hard
 issues:
 # Related issues (if any) to this project.
- - https://github.com/sunpy/sunraster/issues/155
+ - https://github.com/sunpy/ndcube/issues/155
 mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub handles
