@@ -53,7 +53,12 @@ developer guides are great reads no matter what project you are thinking of work
 Checkout the issue lists of the projects to see if there is something that you could do.
 **You will be expected to submit a pull request to one of the OpenAstronomy projects before
 you submit your application (it does not have to be accepted, but it has to be something
-that shows your code abilities!).**
+that shows your code abilities!).** This requirement is to show that you know how git, github,
+pull requests and reviews work and allows mentors to eveluate all applications based on a real code 
+contribution, instead of e.g. the name of a specific school. 
+GSOC is a short program and we want to make sure you are
+ready to start immediately. If you have previously contributed to OpenAstronomy projects,
+you can point to those pull requests, too.
 
 5. **Plan your application.**
 Think which is your favourite project from the [ideas page](/gsoc/) or think
