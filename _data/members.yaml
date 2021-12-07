@@ -313,6 +313,28 @@ yt:
     multi-resolution data from astrophysical simulations,
     radio telescopes, and a burgeoning interdisciplinary community.
 
+heacit:
+  name: HEACIT
+  logo: CasA.png
+  url: https://heasarc.gsfc.nasa.gov/docs/heacit/
+  repositories:
+    somethingelse: https://github.com/HEACIT
+  mailinglist:
+    members: heacit@cfa.harvard.edu
+    # We are applying to join Open Astronomy so we can open a HEACIT page on the OA discourse forums.
+    # Once that happens, we will point the general public to the HEACIT forums
+  description: >-
+    is a working group that seeks to identify how the landscape of
+    astrophysical software enables or can improve the impact of high
+    energy astrophysical data. This includes maximizing the return of
+    current and future observations, as well as increasing their
+    usability and interoperability with datasets at other
+    wavelengths. HEACIT is not technically associated with any
+    particular software package, but HEACIT members include developers
+    of industry standard high energy software. See the <a
+    href="https://heasarc.gsfc.nasa.gov/docs/heacit/charter/HEACITCharter.html">HEACIT
+    Charter</a> for more details.
+
 # Are you a new org? copy the fragment below above this line and fill it up
 # with your organisation details. Don't forget to add your logo to the img/members
 # directory.
