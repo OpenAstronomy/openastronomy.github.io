@@ -320,7 +320,7 @@ heacit:
   repositories:
     somethingelse: https://github.com/HEACIT
   mailinglist:
-    members: heacit@cfa.harvard.edu
+    members: "mailto:heacit@cfa.harvard.edu"
     # We are applying to join Open Astronomy so we can open a HEACIT page on the OA discourse forums.
     # Once that happens, we will point the general public to the HEACIT forums
   description: >-
