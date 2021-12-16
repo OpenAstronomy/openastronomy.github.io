@@ -315,7 +315,7 @@ yt:
 
 heacit:
   name: HEACIT
-  logo: CasA.png
+  logo: heacit.png
   url: https://heasarc.gsfc.nasa.gov/docs/heacit/
   repositories:
     somethingelse: https://github.com/HEACIT
