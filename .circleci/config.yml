@@ -59,7 +59,7 @@ jobs:
       - run:
           name: HTMLProofer with external
           command: |
-            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+            if [ "${CIRCLE_BRANCH}" = "main" ]; then
              bundle exec htmlproofer ./html \
                --allow-hash-href \
                --check-html \
