@@ -26,8 +26,9 @@
           </div>
 
 
-        <div ng-show="project.initiatives.length>0" class="project-overview-element clickable card-action">
-          <span ng-click="search(initiative)" class="pr-element-detail chip" ng-repeat="initiative in project.initiatives">{{ initiative }}</span><br>
+          <div ng-show="project.initiatives.length>0" class="project-overview-element clickable card-action">
+              <span ng-click="search(initiative)" class="pr-element-detail chip" ng-repeat="initiative in project.initiatives">{{ initiative }}</span>
+              <span ng-click="search(p_size)" class="pr-element-detail chip" ng-repeat="p_size in project.project_size">{{ p_size }}</span>
         </div>
 
          <div ng-show="project.collaborating_projects.length>0" class="project-overview-element clickable card-action">
@@ -72,6 +73,11 @@
         <div ng-show="currentProject.difficulty" class="project-detail-element">
           <div class="small-heading">Difficulty</div>
           <span class="pr-element-detail chip">{{ currentProject.difficulty }}</span>
+        </div>
+
+        <div ng-show="currentProject.project_size" class="project-detail-element">
+            <div class="small-heading">Project Size</div>
+            <span class="pr-element-detail chip" ng-repeat="p_size in currentProject.project_size">{{p_size}}</span>
         </div>
 
         <div ng-show="currentProject.mentors.length>0" class="project-detail-element">
