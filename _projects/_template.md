@@ -16,8 +16,12 @@ mentors:
 # GitHub handles
  - astrorobot
 initiatives:
+# The programme under this project wish to run.
  - GSOC
  - SOCIS
+project_size:
+ - medium
+ - large
 tags:
 # Different technologies needed
  - python
@@ -53,10 +57,6 @@ quam.
 
 * Have done awesome stuff.
 
-##### 2nd evaluation
-
-* Have done awesome stuff.
-
-##### Final
+##### Final evaluation
 
 * Finished the awesome stuff.
