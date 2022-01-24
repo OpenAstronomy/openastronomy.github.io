@@ -41,9 +41,9 @@
         }
     }
 
-    @include media-query($on-palm) {
+    @include media-query($on-desktop) {
         position: absolute;
-        top: 9px;
+        top: 20px;
         right: 30px;
         background-color: $menu-color;
         border: 1px solid $grey-color-light;
@@ -64,7 +64,7 @@
                 height: 15px;
 
                 path {
-                    fill: $grey-color-dark;
+                    fill: white;
                 }
             }
         }

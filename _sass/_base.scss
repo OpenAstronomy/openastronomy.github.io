@@ -24,6 +24,14 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     height:100%;
+
+    @include media-query($on-laptop) {
+        background-size: 200%;
+    }
+
+    @include media-query($on-palm) {
+        background-size: 300%;
+    }
 }
 
 
