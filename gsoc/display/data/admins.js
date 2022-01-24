@@ -3,4 +3,5 @@ admins = {2017: ["dpshelio", "Cadair", "taldcroft", "eteq"],
           2019: ["dpshelio", "bsipocz", "mirca"],
           2020: ["dpshelio", "bsipocz", "mirca"],
           2021: ["dpshelio", "bsipocz", "mirca"],
+          2022: ["dpshelio", "bsipocz", "mirca"],
          };
