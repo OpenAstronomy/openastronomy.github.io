@@ -1,4 +1,4 @@
-
+---
 name: Spectral timing in Julia
 desc: Create a set of timing and spectral timing methods in Julia.
 # add a short one line description of your project
