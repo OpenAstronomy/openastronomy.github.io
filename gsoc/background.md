@@ -41,15 +41,19 @@ The complete details on applying are in the [GSoC Student Guide].
 
 ### Who is eligible to apply to GSoC?
 
-OpenAstronomy is actively seeking applicants who are undergraduate or
-graduate students with experience developing software for astronomy in
-Python and other languages. We are especially (but not exclusively) looking
-for students who have or are pursuing degrees in astronomy or physics, more
-importantly who are interested in developing open source software. You don't
-need to be a Python guru or an astronomical coordinate system expert to be
+Until 2021, GSoC was a programme eligible exclusively to university students.
+The ultimate goal of GSoC has always been to attract and retain new open source
+contributors. Hence, as of its 2022 edition, the student status is no longer required,
+and one is eligible to take part in GSoC as long as they are an "open source beginner".
+
+On the OpenAstronomy side, we actively seek self-motivated applicants
+with _some_ experience developing software in
+Python and other languages. We are especially looking
+for individuals who are genuinely interested in developing open source software.
+You don't need to be a Python guru or an astronomical coordinate system expert to be
 eligible -- projects are available that cover a range of previous experience
-in Python and astronomy. Students from any background from anywhere around 
-the world is very welcome to apply.
+in Python and astronomy. Individuals from any background from anywhere around
+the world are very welcome to apply.
 
 ### Testimonials
 
