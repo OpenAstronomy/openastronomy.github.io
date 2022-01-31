@@ -53,7 +53,7 @@ for individuals who are genuinely interested in developing open source software.
 You don't need to be a Python guru or an astronomical coordinate system expert to be
 eligible -- projects are available that cover a range of previous experience
 in Python and astronomy. Individuals from any background from anywhere around
-the world are very welcome to apply.
+the world are encouraged to apply.
 
 ### Testimonials
 
