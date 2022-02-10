@@ -8,6 +8,7 @@ issues:
 - https://github.com/sunpy/sunpy/issues?q=is%3Aissue+is%3Aopen+database
 mentors:
  - cadair
+ - wtbarnes
  - nabobalis
 initiatives:
  - GSOC
