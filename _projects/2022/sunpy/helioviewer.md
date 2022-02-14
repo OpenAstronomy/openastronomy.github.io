@@ -26,8 +26,7 @@ collaborating_projects:
 
 #### Description
 
-This project aims to design and implement a low level Python wrapper around the unirest API provided by the
-HelioViewer Project.
+This project aims to design and implement a low level Python wrapper around the unirest API provided by the HelioViewer Project.
 This would create a new affiliated SunPy package (name up for suggestions).
 
 Currently `sunpy` has a `HelioviewerClient` that implements only a handful of the available API.
@@ -37,6 +36,8 @@ What we want to do is to create a new Python package that will lightly wrap ever
 API allowing anyone to create their own helioviewer.org like GUI in Python (this could be part of the project
 but will depend on the progress).
 To facilitate this, we will need to remove the current code from `sunpy` and move it to the new affiliated package.
+
+Finally, we will then create a new client that interfaces with the `sunpy` downloader Fido.
 
 #### Milestones
 
@@ -54,8 +55,5 @@ To facilitate this, we will need to remove the current code from `sunpy` and mov
 ##### Final evaluation
 
 * All of the API is wrapped within the package.
+* Fido Client created for Helioviewer.
 * Have all code, tests and documentation in GitHub.
-
-##### Additional Aims (time permitting)
-
-* Start on a GUI-like interface for the new package, if time permits.
