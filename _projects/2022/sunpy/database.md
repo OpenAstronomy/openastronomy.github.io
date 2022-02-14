@@ -40,6 +40,7 @@ The ability for someone to pass a directory of data files and to create a new da
 Overall, the code will new but we hope that parts of the original database module could be reused with some tidy up to the source code.
 
 More technical details can be found on the linked issue.
+
 #### Milestones
 
 ##### Coding starts
