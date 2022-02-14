@@ -14,7 +14,6 @@ mentors:
 initiatives:
  - GSOC
 project_size:
- - medium
  - large
 tags:
  - python
