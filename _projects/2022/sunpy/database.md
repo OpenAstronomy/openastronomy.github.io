@@ -3,6 +3,7 @@ name: Database as a data client
 desc: Creating a new database module
 requirements:
  - Familiarity with Python
+ - Familiarity with SQLAlchemy
 difficulty: high
 issues:
 - https://github.com/sunpy/sunpy/issues?q=is%3Aissue+is%3Aopen+database
@@ -19,6 +20,7 @@ tags:
  - python
 collaborating_projects:
  - sunpy
+ - parfive
 ---
 
 #### Description
