@@ -24,23 +24,23 @@ collaborating_projects:
 
 #### Description
 
-This project aims to design and implement a new database module within `sunpy`.
-Currently the database module was created to manage data files that are stored locally or on a remote server
-you have access/control to.
+This project aims to design and implement a new database sub-package within `sunpy`.
+Currently, there is a `sunpy.database` that was created to manage locally data files stored locally or on a remote server with direct access. This allows someone to manage the files, to add missing files, to remove them and to search based on specific metadata stored in the file.
+Over the years, this module has seen little development and has not been linked to the new `sunpy` downloader, Fido. This have made it difficult to support.
 
-You are be able to add/remove files, fetch missing files from various data sources.
-Within the the `sunpy` documentation we have overviews of database: <https://docs.sunpy.org/en/stable/guide/acquiring_data/database.html> and <https://docs.sunpy.org/en/stable/guide/tour.html#database-package>
+For an overview of the current database, you can read:
+<https://docs.sunpy.org/en/stable/guide/acquiring_data/database.html> and <https://docs.sunpy.org/en/stable/guide/tour.html#database-package>
 
-However time, the code has been left to "rot" and it has no real integration with the new `sunpy` downloader,
-Fido.
-These problems have made its original use case difficult to support anymore.
+The project has several aims:
+A creation of a new sub-package, `sunpy.net.database`.
+When a user does a data search and download, the search and file information will be saved to a local database.
+The user can then do the same search and will be informed that the files already exist locally avoiding doing the original download again.
+The ability for someone to pass a directory of data files and to create a new database with all the metadata information in those data files.
 
-The goal of this project is to create a "database2" module that will take the idea (and most of the code)
-behind the original database that integrates with Fido in a manner that allows you to search your data archive as if
-it was a data provider.
-This will be called a "database client".
+Overall, the code will new but we hope that parts of the original database module could be reused with some tidy up to the source code.
 
-In addition, we will want to replace parts of the original database functionally with more maintainable and testable code.
+More technical details can be found on the linked issue.
+
 
 #### Milestones
 
