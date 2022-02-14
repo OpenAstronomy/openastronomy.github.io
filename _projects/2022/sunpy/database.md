@@ -6,7 +6,7 @@ requirements:
  - Familiarity with SQLAlchemy
 difficulty: high
 issues:
-- https://github.com/sunpy/sunpy/issues?q=is%3Aissue+is%3Aopen+database
+- https://github.com/sunpy/sunpy/issues/5880
 mentors:
  - cadair
  - wtbarnes
