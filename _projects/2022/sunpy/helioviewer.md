@@ -12,7 +12,7 @@ issues:
 mentors:
  - wafels
  - nabobalis
- - Helioviewer-Kirill
+ - dgarciabriseno
 initiatives:
  - GSOC
 project_size:
