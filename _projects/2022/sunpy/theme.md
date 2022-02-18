@@ -25,23 +25,19 @@ collaborating_projects:
 
 #### Description
 
-In a previous GSoC project, we replaced the theme used to build our website and documentation.
-This lives in the theme repository: <https://github.com/sunpy/sunpy-sphinx-theme>.
+In a previous GSoC project, we replaced the way we build the sunpy.org website and the theme it used.
+We now use sphinx to create both our website and documentation, using the following theme: https://github.com/sunpy/sunpy-sphinx-theme
+This theme is based upon https://github.com/ryan-roemer/sphinx-bootstrap-theme and it has served us very well. The problem is that it has been updated to bootstrap 4 and we would like to use that to improve the way our website and documentation render on smaller screens.
+The main aim is to move our theme to use a new base theme: https://pydata-sphinx-theme.readthedocs.io/en/latest/ This gives us a new layout and more modern bootstrap versions.
 
-The problem has become that the original base theme that we based this on, has not seen any updates.
-We want to move to a new base theme: <https://pydata-sphinx-theme.readthedocs.io/en/latest/>
+The issue is that the way we have been using our theme has a few incompatibilities that either need patching to the pydata theme or overridden in our version.
+ 
+1.	A method to create the header bar to match how we currently it, see sunpy.org for an example.
+a.	We really like our dropdowns
+2.	A method to anchor the footer bar instead of having it scroll.
+a.	Pydata will only show it when you scroll to the very bottom.
 
-However, to do this, the pydata-sphinx-theme needs several additions:
-
-1. A new way to create the header bar to match how we currently it, see sunpy.org for an example.
-2. A way to fix the footer bar instead of having it scroll.
-
-Ideally we want this added upstream to the pydata-sphinx-theme repository but we can start with it being in
-our theme repository.
-
-Finally if we have time:
-
-3. Work through the remaining issues we have in our theme once the transplant has finished.
+If there is time left over, we will then work through the remaining issues we have in our theme repository once the groundwork has been finished.
 
 #### Milestones
 
@@ -49,7 +45,7 @@ Finally if we have time:
 
 * Already have a development environment setup
 * Understand the project and sphinx build system.
-* Tried to build and modify the pydata-sphinx-theme.
+* Tried to build and modify the pydata-sphinx-theme with our website/documentation
 
 ##### 1st evaluation
 
