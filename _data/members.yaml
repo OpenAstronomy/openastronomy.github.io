@@ -121,7 +121,7 @@ sunpy:
     users: http://groups.google.com/group/sunpy
     devs: http://groups.google.com/group/sunpy-dev
   chat:
-    matrix: https://riot.im/app/#/room/#sunpy:matrix.org
+    matrix: https://openastronomy.element.io/#/room/#sunpy:openastronomy.org
   description: >-
     is a community-developed free and open-source software package for solar
     physics. SunPy is meant to be a free alternative to the

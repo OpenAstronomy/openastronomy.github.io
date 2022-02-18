@@ -12,7 +12,6 @@ mentors:
  - nabobalis
  - samaloney
  - hayesla
- - dpshelio
 initiatives:
  - GSOC
 project_size:
