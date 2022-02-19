@@ -54,8 +54,8 @@ Checkout the issue lists of the projects to see if there is something that you c
 **You will be expected to submit a pull request to one of the OpenAstronomy projects before
 you submit your application (it does not have to be accepted, but it has to be something
 that shows your code abilities!).** This requirement is to show that you know how git, github,
-pull requests and reviews work and allows mentors to eveluate all applications based on a real code 
-contribution, instead of e.g. the name of a specific school. 
+pull requests and reviews work and allows mentors to eveluate all applications based on a real code
+contribution, instead of e.g. the name of a specific school.
 GSOC is a short program and we want to make sure you are
 ready to start immediately. If you have previously contributed to OpenAstronomy projects,
 you can point to those pull requests, too.
@@ -75,7 +75,7 @@ We are also happy to give comments on your proposal if you like.  Feel free to
 add your application to the sub-org member's wiki following this format: "GSoC-\<YEAR\> Application \<sub-org\> \<Your Name\>:\<Project Name\>"
 and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
 
-[Matrix]: https://riot.im/app/#/room/#openastronomy:matrix.org
+[Matrix]: https://openastronomy.element.io/#/room/#openastronomy:openastronomy.org
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template
 [Python Software Foundation]: http://python-gsoc.org/
 [GSoC Student Guide]: https://google.github.io/gsocguides/student/

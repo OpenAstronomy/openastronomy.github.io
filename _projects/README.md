@@ -4,7 +4,7 @@ This short tutorial will guide you on how to add a GSoC project idea in the
 OpenAstronomy website.
 
 In case you face any issues with this tutorial do contact your org admins via email,
-[Matrix](https://riot.im/app/#/room/#openastronomy:matrix.org),
+[Matrix](https://openastronomy.element.io/#/room/#openastronomy:openastronomy.org),
 or in the [mailing list](https://groups.google.com/forum/#!forum/openastronomy).
 
 *tl;dr: are you an expert?* Fork the repo and modify
@@ -17,7 +17,7 @@ Everything you need is a title and description of the project idea, a set of req
 for potential students (_e.g._, proficiency with `astropy.tables` and `astropy.units`),
 and a list of potential mentors. In addition, please link any related issues or tickets
 to the project idea, if any. Lastly, make sure to indicate the level of difficulty of
-the project. 
+the project.
 
 In case your project idea already has specific milestones, please add them
 so as to make students aware when they start writing their applications.
