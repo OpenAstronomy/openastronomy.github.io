@@ -82,4 +82,4 @@ and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/
 [Astropy GSoC guidelines]: https://github.com/astropy/astropy/wiki/GSoC-Guidelines
 [latest pictures of the million degree Sun]: http://docs.sunpy.org/en/stable/generated/gallery/plotting/aia_example.html
 [volume render a simulation of the galaxy]: http://yt-project.org/docs/dev/quickstart/volume_rendering.html
-[plan some astronomical observations]: http://www.astropy.org/astropy-tutorials/Coordinates.html
+[plan some astronomical observations]: https://learn.astropy.org/tutorials/1-Coordinates-Intro.html
