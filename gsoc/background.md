@@ -78,8 +78,7 @@ the world are encouraged to apply.
 > One of the best parts of the GSoC was the amount of learning I got by being
 > mentored by experts in software development and astronomy! If you want to know
 > more about my journey during the GSoC 2016 see my
-> [blog posts](https://mirca.github.io/posts). Also check out some
-> [tips](https://mirca.github.io/gsoc-application/) before applying.
+> [blog posts](https://openastronomy.org/Universe_OA/authors/ze-vinicius/).
 
 [Zé Vinícius][mirca], EE undergraduate student, GSoC 2016
 
