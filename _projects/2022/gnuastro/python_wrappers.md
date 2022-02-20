@@ -37,9 +37,11 @@ However, Gnuastro's also has an extensive set of installed, dynamic C/C++ librar
 On the other hand, many projects today are done in Python, almost excuslively using Numpy for their numerical operations (like data arrays).
 Python and Numpy are actually written in C, therefore they have very well-defined interfaces for communicating with installed C libraries.
 Gnuastro therefore plans on adding a low-level wrapper infra-structure which will allow easy usage of Gnuastro's powerful libraries in Python.
-Note that this won't involve intermediate wrapper languages SWIG, we will directly link with the core C library of Numpy: https://docs.scipy.org/doc/numpy-1.10.0/reference/c-api.html
+Note that this won't involve intermediate wrapper languages SWIG, we will directly link with [the core C library of Numpy](https://docs.scipy.org/doc/numpy-1.10.0/reference/c-api.html).
+
 This will be a wonderful chance to master Python and Scipy/Numpy at a very fundamental level, giving you a great experience to expand what you have learnt afterwards into many other functionalities.
 Of course, in the meantime you will also working on many real-world astronomical data and science scenarios using ground-based and space-based data.
+
 To get started, check [our GSoC 2022 checklist](https://savannah.gnu.org/support/index.php?110613#comment0).
 
 #### Milestones (if any)

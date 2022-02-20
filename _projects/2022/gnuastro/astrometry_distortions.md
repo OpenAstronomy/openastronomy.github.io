@@ -23,7 +23,9 @@ project_size:
 tags:
 # Different technologies needed
  - C
- - C libraries: (Gnuastro, WCSLIB, GNU Scientific Library)
+ - Gnuastro
+ - WCSLIB
+ - GNU Scientific Library
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
  - Gnuastro
@@ -38,6 +40,7 @@ Gnuastro's astrometry library aims to be fully blind, needing no prior informati
 Many of the low-level components of astrometry have already been added in Gnuastro's new implementation.
 In particular, as part of GSoC 2021, we can now successfully find the linear parameters of Astrometry.
 However, there are also non-linear (distortion) terms that need to be calculated.
+
 To get started, check [our GSoC 2022 checklist](https://savannah.gnu.org/support/index.php?110613#comment0).
 
 #### Milestones (if any)
