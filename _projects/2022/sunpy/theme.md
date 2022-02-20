@@ -8,7 +8,7 @@ difficulty: high
 issues:
  - https://github.com/sunpy/sunpy-sphinx-theme/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
 mentors:
- - Cadair
+ - cadair
  - nabobalis
 initiatives:
  - GSOC
