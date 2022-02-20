@@ -180,7 +180,7 @@ If they are not followed the administrators will fail the contributors.
 [Google's mentor guide]: https://google.github.io/gsocguides/mentor/
 [GSOC]: https://summerofcode.withgoogle.com/
 [members PR]: https://github.com/OpenAstronomy/openastronomy.github.io/blob/master/_data/members.yaml
-[ESA-SOCIS]: https://socis.esa.int
+[ESA-SOCIS]: https://www.esa.int/Enabling_Support/Space_Engineering_Technology/SOCIS_The_ESA_Summer_of_Code_in_Space
 [Google-notes]: https://google.github.io/gsocguides/mentor/notes-for-first-year-organizations
 [PSF-sub-orgs]: https://python-gsoc.org/mentors.html#sub-orgs
 [template-application-wiki]: https://github.com/OpenAstronomy/openastronomy.github.io/wiki/Contributor-Application-template

@@ -85,3 +85,4 @@ and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/
 [volume render a simulation of the galaxy]: http://yt-project.org/docs/dev/quickstart/volume_rendering.html
 [plan some astronomical observations]: http://www.astropy.org/astropy-tutorials/Coordinates.html
 [template-application-wiki]: https://github.com/OpenAstronomy/openastronomy.github.io/wiki/Contributor-Application-template
+[plan some astronomical observations]: https://learn.astropy.org/tutorials/1-Coordinates-Intro.html
