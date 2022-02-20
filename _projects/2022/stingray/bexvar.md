@@ -3,7 +3,7 @@ name: Bexvar in Stingray
 desc: Implement the Bayesian Excess variance in Stingray
 # add a short one line description of your project
 requirements:
-# Student requirements:
+# Contributor requirements:
  - Knowledge of Python
  - Familiar with time series methods
 difficulty: medium
@@ -43,7 +43,7 @@ Another possible source of spurious variability is the presence of variable
 background signals.
 The Bayesian Excess Variance method is suitable for finding variability in 
 gappy X-ray light curves with variable background.
-The student will work to implement this method in Stingray, a Python library
+The contributor will work to implement this method in Stingray, a Python library
 for the analysis of astronomical time series.
 See [Buchner et al. 2021](https://arxiv.org/abs/2106.14529)
 

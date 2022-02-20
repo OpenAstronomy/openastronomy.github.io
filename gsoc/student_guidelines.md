@@ -1,21 +1,21 @@
 ---
 layout: default
-title:  "GSoC Student Application Guidelines"
+title:  "GSoC Contributor Application Guidelines"
 show_main: false
 ---
 
-# GSoC Student Application Guidelines
+# GSoC Contributor Application Guidelines
 
 If you want to apply to OpenAstronomy to participate in GSoC
 there are many things you can do to improve your application.
 Many of OpenAstronomy's admins and mentors have participated in
 previous editions of GSoC with their projects, so will be able to
-answer any questions you might have, come talk to us on [Matrix] or the
+answer any questions you might have, come talk to us on [\[Matrix\]] or the
 mailing list.
 
 There are many guidelines on writing a good application and how to
 increase your chances, this guide covers the most important things
-to OpenAstronomy, however, you should also checkout the [GSoC Student
+to OpenAstronomy, however, you should also checkout the [GSoC Contributor
 Guide], the [Python Software Foundation] guide, the [Astropy GSoC guidelines] and the [SymPy
 Guidelines] to name but a few.
 
@@ -66,6 +66,7 @@ of a new one that will help out one of the OpenAstronomy members.
 Prepare a plan on how you will tackle that project and the time it will take you to solve it.
 Do not worry much in providing exact dates, but plan it as best as you can
 (if you are planing to have some holidays during the GSoC programme, then you should mention it too).
+Use [our application template][template-application-wiki] to describe how you plan to do the work during the programme.
 Also, don't be afraid to ask your potential mentor for help.
 Don't be shy when describing yourself!
 
@@ -78,8 +79,10 @@ and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/
 [Matrix]: https://openastronomy.element.io/#/room/#openastronomy:openastronomy.org
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template
 [Python Software Foundation]: http://python-gsoc.org/
-[GSoC Student Guide]: https://google.github.io/gsocguides/student/
+[GSoC Contributor Guide]: https://google.github.io/gsocguides/student/
 [Astropy GSoC guidelines]: https://github.com/astropy/astropy/wiki/GSoC-Guidelines
 [latest pictures of the million degree Sun]: http://docs.sunpy.org/en/stable/generated/gallery/plotting/aia_example.html
 [volume render a simulation of the galaxy]: http://yt-project.org/docs/dev/quickstart/volume_rendering.html
+[plan some astronomical observations]: http://www.astropy.org/astropy-tutorials/Coordinates.html
+[template-application-wiki]: https://github.com/OpenAstronomy/openastronomy.github.io/wiki/Contributor-Application-template
 [plan some astronomical observations]: https://learn.astropy.org/tutorials/1-Coordinates-Intro.html
