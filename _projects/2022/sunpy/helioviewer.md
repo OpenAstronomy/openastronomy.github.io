@@ -29,7 +29,7 @@ This project aims to design and implement a low level Python wrapper around the 
 This would create a new affiliated SunPy package (name up for suggestions).
 
 Currently `sunpy` has a `HelioviewerClient` that implements only a handful of the available API.
-They are `getClosestImage`, `getJP2Image`, `getJP2Header (in an open pull request as of writing)` and `takeScreenshot` from the Helioviewer API and you can see our code [here.](https://github.com/sunpy/sunpy/blob/master/sunpy/net/helioviewer.py)
+They are `getClosestImage`, `getJP2Image`, `getJP2Header` (in an open pull request as of writing) and `takeScreenshot` from the Helioviewer API as [currently implemented](https://github.com/sunpy/sunpy/blob/master/sunpy/net/helioviewer.py).
 
 What we want to do is to create a new Python package that will lightly wrap every aspect of the HelioViewer
 API allowing anyone to create their own helioviewer.org like GUI in Python (this could be part of the project
