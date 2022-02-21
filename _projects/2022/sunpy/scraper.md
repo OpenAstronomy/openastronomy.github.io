@@ -30,7 +30,7 @@ This project will provide the ability to parse URL information in a programmatic
 sunpy provides a way for users to access data using Fido and its many internal clients.
 Many of these simpler clients do URL scraping to return metadata and data files to a user.
 
-This scraping is done by the [scraper class](https://docs.sunpy.org/en/stable/api/sunpy.util.scraper.Scraper.html?highlight=scraper).
+This scraping is done by the [scraper class](https://docs.sunpy.org/en/stable/api/sunpy.net.scraper.Scraper.html?highlight=scraper).
 Over the years, the scale of what this class has to do has expanded to a point where it has become unmaintainable.
 
 The goal of this project is to create a new scraper with a predefined API and class structure.
