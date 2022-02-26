@@ -23,7 +23,7 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 ## Quick Links
 
 * [OpenAstronomy Contributor Guide]
-* [GSoC Student Guide]
+* [GSoC Contributor Guide]
 * [Now You Know It!: Getting selected in Outreachy by Kriti Singh]
 
 ## Ideas Pages
