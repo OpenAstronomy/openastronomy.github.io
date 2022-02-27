@@ -18,7 +18,7 @@ initiatives:
  - GSOC
  - SOCIS
 project_size:
- - large
+ - 350 h
 tags:
 # Different technologies needed
  - python

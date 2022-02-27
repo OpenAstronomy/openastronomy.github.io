@@ -18,7 +18,7 @@ initiatives:
 # The programme under this project wish to run.
  - GSOC
 project_size:
- - medium
+ - 175 h
 tags:
 # Different technologies needed
  - python

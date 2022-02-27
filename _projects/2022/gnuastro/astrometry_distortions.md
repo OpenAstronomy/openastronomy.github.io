@@ -19,7 +19,7 @@ initiatives:
  - GSOC
  - SOCIS
 project_size:
- - medium
+ - 175 h
 tags:
 # Different technologies needed
  - C
