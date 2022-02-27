@@ -14,7 +14,7 @@ mentors:
 initiatives:
  - GSOC
 project_size:
- - large
+ - 350 h
 tags:
  - python
 collaborating_projects:
