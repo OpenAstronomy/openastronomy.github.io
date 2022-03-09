@@ -16,7 +16,6 @@ mentors:
 initiatives:
 # The programme under this project wish to run.
  - GSOC
- - SOCIS
 project_size:
  - 350 h
 tags:
