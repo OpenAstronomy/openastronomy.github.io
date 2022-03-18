@@ -73,4 +73,4 @@ However, although the algorithm is very CPU/GPU efficient, the RADIS code is sti
 
 * Add [.h5 loading benchmark](https://github.com/radis/radis-benchmark/issues/4)
 
-* Have all code, tests and documentation in GitHub.
+* Have all code, tests and documentation in GitHub
