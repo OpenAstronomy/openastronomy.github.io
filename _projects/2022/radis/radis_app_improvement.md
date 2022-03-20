@@ -27,7 +27,6 @@ tags:
  - TypeScript
  - Python
  - HTML/CSS
- - AWS
  - Git
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
@@ -61,12 +60,12 @@ The goal of this project is to create a more responsive app while improving and 
 
 * Add an advance tab option to add more parameters like `medium`, `wstep`, `optimization`, `truncation`, `broadening_method`, etc to add more command to the users and make the calculations more transparent by displaying important parameters using [hover tooltips](https://github.com/suzil/radis-app/issues/184)
 
-* Migrate from native React to [react-hook-form](https://github.com/suzil/radis-app/issues/347) 
+* Migrate from native React to [react-hook-form](https://github.com/suzil/radis-app/issues/347) or any other library to simplify the codebase
 
 
 ##### Final evaluation
 
-* [Cache Hitran dataset](https://github.com/suzil/radis-app/issues/527) on the server to remove download time to generate spectrum of any new molecule and possibly add Hitemp dataset also (molecules can be hardcoded)
+* [Cache Hitran dataset](https://github.com/suzil/radis-app/issues/527) to remove download time to generate spectrum of any new molecule and possibly add Hitemp dataset also (molecules can be hardcoded). Data may be to attach to a persistent network file system like Amazon EFS or on a more available database like DynamoDB
 
 * Add ability to download `.spec` file for the spectrum generated and add an option to upload `.spec` file to the load spectrum
 
