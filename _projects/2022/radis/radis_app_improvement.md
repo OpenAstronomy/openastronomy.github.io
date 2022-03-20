@@ -4,7 +4,7 @@ desc: Improve the current Radis Web App involving various features enhancement a
 # add a short one line description of your project
 requirements:
 # Student requirements:
- - Ideally : familiar with typescript and python.
+ - Familiar with typescript and python
 difficulty: medium
 issues:
 # Related issues (if any) to this project.

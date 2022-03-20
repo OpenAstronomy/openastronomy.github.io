@@ -4,7 +4,7 @@ desc: Model atmospheres in the RADIS spectral code with a simplified frontend an
 # add a short one line description of your project
 requirements:
 # Student requirements:
- - Ideally : familiar with radiative transfer equations.
+ - Familiar with radiative transfer equations
 difficulty: easy
 issues:
 # Related issues (if any) to this project.
