@@ -77,3 +77,5 @@ The goal of this project is to create a more responsive app while improving and 
 ##### Secondary Goals
 
 * Upload your experimental spectrum and be able to fit it  (to infer temperature or species)
+
+* Add a counter to track the use of app (for eg- how many spectrums are generated over time)
