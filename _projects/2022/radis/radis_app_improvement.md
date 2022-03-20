@@ -72,3 +72,8 @@ The goal of this project is to create a more responsive app while improving and 
 * Create a detailed documentation of architecture and workflow of RADIS app
 
 * Have all code, tests and documentation in GitHub
+
+
+##### Secondary Goals
+
+* Upload your experimental spectrum and be able to fit it  (to infer temperature or species)
