@@ -5,7 +5,7 @@ desc: Reduce Memory usage and improve performance in RADIS to be able to compute
 requirements:
 # Student requirements:
  - Knowledge of Pandas or other DataFrame libraries
- - Desirable : Prior working knowledge with big data handling databases like Vaex 
+ - Prior working knowledge with big data handling databases like Vaex 
 difficulty: medium
 issues:
 # Related issues (if any) to this project.
@@ -73,4 +73,4 @@ However, although the algorithm is very CPU/GPU efficient, the RADIS code is sti
 
 * Add [.h5 loading benchmark](https://github.com/radis/radis-benchmark/issues/4)
 
-* Have all code, tests and documentation in GitHub.
+* Have all code, tests and documentation in GitHub

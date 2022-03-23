@@ -4,7 +4,7 @@ desc: Model atmospheres in the RADIS spectral code with a simplified frontend an
 # add a short one line description of your project
 requirements:
 # Student requirements:
- - Ideally : familiar with radiative transfer equations.
+ - Familiar with radiative transfer equations
 difficulty: easy
 issues:
 # Related issues (if any) to this project.
@@ -19,7 +19,7 @@ mentors:
 initiatives:
  - GSOC
 project_size:
- - 350 h
+ - 175 h
 tags:
 # Different technologies needed
  - Python
@@ -36,11 +36,11 @@ The RADIS code was developed to characterize the radiation of plasmas, flames an
 
 The goal of this project is to simplify the user interface to compute atmospheres directly :
 
-- set up a new, direct front-end interface.
+- set up a new, direct front-end interface
 
-- make RADIS compatible with more line databases (ExoMol, GEISA, etc.)
+- make RADIS compatible with more line databases (ExoMol, GEISA, etc)
 
-- if interested in the radiative transfer-physics, add a plane-parallel model for multiple-layers-atmospheres. 
+- if interested in the radiative transfer-physics, add a plane-parallel model for multiple-layers-atmospheres 
 
 
 #### Milestones
