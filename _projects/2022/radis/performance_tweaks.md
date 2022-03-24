@@ -63,7 +63,7 @@ However, although the algorithm is very CPU/GPU efficient, the RADIS code is sti
 * Merge the changes
 
 
-##### Final
+##### Final evaluation
 
 * Write the Proof-Of-Concept to do out of the core calculations i.e., use Vaex for computations instead of pandas. 
 
