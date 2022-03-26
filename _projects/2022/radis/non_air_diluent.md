@@ -19,7 +19,7 @@ mentors:
 initiatives:
  - GSOC
 project_size:
- - 350 h
+ - 175 h / 350 h
 tags:
 # Different technologies needed
  - Python
