@@ -12,10 +12,11 @@ projects to share resources, ideas, and to improve code.
 The core principles of OpenAstronomy (OA) include:
 
 1. Open Source: OA projects are committed to their software being Open Source[1]. This promotes accessibility, reliability, and scientific reproducibility.
-[1] https://opensource.org/docs/osd
-2. Open Development: OA projects support the principle of "open development"[1], a model where the software is both *by* and *for* the community.  More concretely, these projects try to work in publicly-visible spaces, encouraging discussion and participation from their public user community on both code and project-level decisions.
-[1] Tollerud, E., “Sustaining Community-Driven Software for Astronomy in the 2020s”, vol. 51, no. 7, 2019.
+2. Open Development: OA projects support the principle of Open Development[2], a model where the software is both *by* and *for* the community.  More concretely, these projects try to work in publicly-visible spaces, encouraging discussion and participation from their public user community on both code and project-level decisions.
 3. Open Science: OA projects supports reproducible science through the use of open and accessible data both through good data management practices and effective open software.
+
+[1] https://opensource.org/docs/osd
+[2] Tollerud, E., “Sustaining Community-Driven Software for Astronomy in the 2020s”, vol. 51, no. 7, 2019.
 
 ## Get involved with OpenAstronomy
 
