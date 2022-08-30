@@ -14,7 +14,9 @@ bundler install
 or use:
 
 ```shell
-bundle install --path vendor/bundle
+
+bundle config set path 'vendor/bundle'
+
 ```
 
 to install the dependencies locally at `vendor/bundle`.
