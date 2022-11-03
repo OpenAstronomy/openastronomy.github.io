@@ -1,6 +1,6 @@
 ### About
 
-This is the source for the openastronomy.github.io website
+This is the source for the openastronomy.github.io website.
 
 ### Building
 
