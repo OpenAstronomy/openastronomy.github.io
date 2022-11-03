@@ -18,6 +18,7 @@ nav_links:
   Student Blogs: http://openastronomy.org/Universe_OA
   PyAstro Conference: http://openastronomy.org/pyastro
   Events Calendar: https://calendar.google.com/calendar/b/1?cid=YmxoZzd0MG9zbjhscm50ZDcwOXFoZzFtaXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ
+  Discourse Forum: https://community.openastronomy.org
 
 # Build settings
 markdown: kramdown
