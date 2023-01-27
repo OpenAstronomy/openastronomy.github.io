@@ -4,15 +4,15 @@ title: Google Summer of Code
 permalink: /gsoc/
 ---
 
-## New to GSoC? 
- 
+## New to GSoC?
+
 [Background on GSoC: start here!](./background.html)
 
-## GSoC/Open Astronomy 2022
+## GSoC/Open Astronomy 2023
 
 OpenAstronomy is an umbrella organisation which collects project ideas
 from any of its members. OpenAstronomy has been a GSOC mentoring organisation since 2016 and
-it's applying to participate in 2022.
+it's applying to participate in 2023.
 
 Contributors applications to OpenAstronomy projects follows the same
 rules as the [Python Software Foundation] and the [GSoC Contributor Guide],
@@ -28,6 +28,7 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 ## Ideas Pages
 
+* [2023](./gsoc2023/)
 * [2022](./gsoc2022/)
 * [2021](./gsoc2021/)
 * [2020](./gsoc2020/)
