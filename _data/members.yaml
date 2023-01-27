@@ -23,7 +23,7 @@ astronomy-commons:
   mailinglist:
     devs: https://groups.google.com/forum/#!forum/astronomy-commons
   chat:
-    matrix: https://riot.im/app/#/room/#astronomy-commons:matrix.org 
+    matrix: https://riot.im/app/#/room/#astronomy-commons:matrix.org
   description: >-
     is an initiative for software infrastructure for science platforms and
     scalable astronomy on cloud resources. Astronomy Data Commons is lead by
@@ -135,8 +135,6 @@ timelab:
   url: http://www.timelabtechnologies.com
   repositories:
     github: StingraySoftware
-  chat:
-    slack: http://slack-invite.timelabtechnologies.com
   description: >-
     : we are a team of astrophysicists and software developers working together
     to build a variability analysis software to study black holes and
@@ -190,21 +188,6 @@ coin:
     astronomers, statisticians and machine learning experts can flourish. COIN
     is designed to promote the development of a new family of tools for data
     exploration in astrophysics and cosmology.
-
-heliopy:
-  name: HelioPy
-  logo: heliopy.png
-  url: http://heliopy.org
-  repositories:
-    github: heliopython/heliopy
-  mailinglist:
-    users: https://groups.google.com/group/plasmapy
-  chat:
-    matrix: https://riot.im/app/#/room/#heliopy:matrix.org
-  description: >-
-    is a python package for space physics, that aims to provide the tools to
-    find, download and analyse spacecraft data from across the whole solar
-    system.
 
 gnuastro:
   name: GNU Astronomy Utilities
