@@ -135,8 +135,6 @@ timelab:
   url: http://www.timelabtechnologies.com
   repositories:
     github: StingraySoftware
-  chat:
-    slack: http://slack-invite.timelabtechnologies.com
   description: >-
     : we are a team of astrophysicists and software developers working together
     to build a variability analysis software to study black holes and
