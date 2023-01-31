@@ -26,10 +26,10 @@ collaborating_projects:
 
 #### Description
 
-sunpy provides a way for users to access data using Fido and its many internal clients.
+`sunpy` provides a way for users to access data using Fido and its many internal clients.
 Many of these simpler clients do URL scraping to return metadata and data files to a user.
 
-This scraping is done by the [scraper class](https://docs.sunpy.org/en/stable/api/sunpy.net.scraper.Scraper.html?highlight=scraper).
+This scraping is done by the [Scraper class](https://docs.sunpy.org/en/stable/api/sunpy.net.scraper.Scraper.html).
 Over the years, the scale of what this class has to do has expanded to a point where it has become unmaintainable.
 
 The goal of this project is to create a new scraper with a predefined API and class structure.
@@ -60,4 +60,4 @@ More information is found on the linked issue.
 
 ##### Final evaluation
 
-* Functional replacement ready for review and merging into sunpy.
+* Functional replacement ready for review and merging into `sunpy`.

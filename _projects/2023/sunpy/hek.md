@@ -28,7 +28,7 @@ Descriptions of the properties of each feature and event are given [here](https:
 Feature and event properties include their type, physical extent, location, lifetime, and other feature/event properties that are specific to a given feature/event.
 For example, the time at which the energy flux of a solar flare is at a maximum is relevant for flares, but is not relevant to the description of a coronal hole.
 
-The current representation of HEK features/events in `sunpy` does not make full use of the capabilities of `sunpy`.
+The current representation of HEK features/events in `sunpy` does not make full use of the capabilities of `sunpy` or the other libraries it uses.
 For example, many feature/event properties are not expressed using Astropy units or `sunpy` coordinates, even although there is sufficient information in the HEK description that can be used to do this.
 
 The goal of this project is to create classes to represent HEK solar feature/events that function well within the SunPy ecosystem.
@@ -51,6 +51,7 @@ More information is found on the linked issues.
 ##### Coding starts
 
 * Experimenting with the current representation of HEK feature and event data.
+* Consider parsing the html page for the specification.
 
 ##### 1st evaluation
 
