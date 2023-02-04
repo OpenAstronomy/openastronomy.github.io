@@ -34,16 +34,14 @@ Therefore the aim of this GSoC project is:
 1. Refactor specific functions to accept and return a `sunpy.map.Map` (or an `NDcube` instead, to be decided during the project) instead of a `numpy.array`.
    This would apply to functions that take a 2D data array and return one, functions like the `timelag` would not factor in to this.
 2. Tackle some of the following issues:
-   1. https://github.com/sunpy/sunkit-image/issues/83
-   2. https://github.com/sunpy/sunkit-image/issues/103
-   3. https://github.com/sunpy/sunkit-image/issues/76
-   4. https://github.com/sunpy/sunkit-image/issues/69
-   5. https://github.com/sunpy/sunkit-image/issues/83
-
+   1. [Refactor the `coalignment` module](https://github.com/sunpy/sunkit-image/issues/83)
+   2. [Add a coalignment example to the gallery](https://github.com/sunpy/sunkit-image/issues/103)
+   3. [Add persistence transform example to the gallery](https://github.com/sunpy/sunkit-image/issues/76)
+   4. [Inconsistent input types across functions](https://github.com/sunpy/sunkit-image/issues/69)
 
 If there is some time left over:
 
-3. Performance profiling of the current functions to find bottle necks and improve performance where possible.
+1. Performance profiling of the current functions to find bottle necks and improve performance where possible.
 
 #### Goals
 
