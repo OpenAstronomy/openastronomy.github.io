@@ -9,6 +9,8 @@ astropy:
     devs: http://groups.google.com/group/astropy-dev
   chat:
     slack: http://joinslack.astropy.org/
+  microblogging:
+    twitter: astropy
   description: >-
     is a community-driven package intended to contain much of the core
     functionality and some common tools needed for performing
@@ -58,6 +60,8 @@ einsteinpy:
     devs: https://groups.io/g/einsteinpy-dev
   chat:
     matrix: https://riot.im/app/#/room/#einsteinpy:matrix.org
+  microblogging:
+    twitter: EinsteinPy
   description: >-
     is a python package for solving problems in general relativity. Computations
     can be done for Schwarzschild, Kerr and Kerr-Newman geometries. Visualising
@@ -74,6 +78,8 @@ glue:
   mailinglist:
     users: https://groups.google.com/group/glue-viz
     devs: https://groups.google.com/group/glue-viz-dev
+  microblogging:
+    twitter: glueviz
   description: >-
     is a data visualization application and library to explore relationships
     within and among related datasets. Its main features include linked
@@ -106,6 +112,9 @@ poliastro:
     devs: https://groups.io/g/poliastro-dev
   chat:
     matrix: https://riot.im/app/#/room/#poliastro:matrix.org
+  microblogging:
+    twitter: poliastro_py
+    mastodon: "@poliastro@fosstodon.org"
   description: >-
     is a python package for Astrodynamics and Orbital Mechanics problems, such
     as orbital elements conversion, orbital propagation, plotting, planetary
@@ -122,6 +131,8 @@ sunpy:
     devs: http://groups.google.com/group/sunpy-dev
   chat:
     matrix: https://openastronomy.element.io/#/room/#sunpy:openastronomy.org
+  microblogging:
+    twitter: SunPyProject
   description: >-
     is a community-developed free and open-source software package for solar
     physics. SunPy is meant to be a free alternative to the
@@ -224,6 +235,8 @@ ims:
     bitbucket: italianmarssociety/
   mailinglist:
     admin: mailto:gsoc@marssociety.it
+  microblogging:
+    twitter: marssociety
   description: >-
     (IMS) is a non-profit organization, existing from 2004, as Italian branch of
     the International Mars Society, created in the USA by Robert Zubrin. IMS is
@@ -246,6 +259,8 @@ plasmapy:
     users: https://groups.google.com/group/plasmapy
   chat:
     matrix: https://riot.im/app/#/room/#plasmapy:matrix.org
+  microblogging:
+    twitter: plasmapy
   description: >-
     aims to be a collection of functionality commonly used and shared between
     plasma physicists and researchers globally, running within and leveraging
@@ -261,6 +276,8 @@ radis:
      users: https://groups.google.com/forum/#!forum/radis-radiation
    chat:
      gitter: https://gitter.im/radis-radiation/community
+   microblogging:
+     twitter: radis_radiation
    description: >-
      A fast line-by-line code for high-resolution infrared molecular spectra.
      RADIS can compute spectra of millions of lines within seconds. Also
@@ -291,6 +308,8 @@ yt:
     devs: https://mail.python.org/archives/list/yt-dev@python.org/
   chat:
     slack: https://yt-project.slack.com/
+  microblogging:
+    twitter: yt_astro
   description: >-
     is a python package for analyzing and visualizing volumetric,
     multi-resolution data from astrophysical simulations,

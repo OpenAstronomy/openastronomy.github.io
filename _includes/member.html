@@ -63,5 +63,25 @@
         {% endfor %}
         <br/>
     {% endif %}
+    <!-- microblogging -->
+    {% for mb in details.microblogging %}
+        {% if mb[0] == 'twitter'  %}
+        {% assign name = '@' | append: mb[1] %}
+        <a href="{{ 'https://twitter.com/' | append: mb[1] }}" target="_blank">
+            <span class="icon  icon--github">
+                <i class="fa-brands fa-twitter"></i>
+            </span>
+        {% elsif mb[0] == "mastodon" %}
+            {% assign mastodon_parts = mb[1] | split: "@" %}
+            {% assign name = mb[1] %}
+            {% assign url = 'https://' | append: mastodon_parts[2] | append: '/@' | append: mastodon_parts[1] %}
+            <a href="{{ url }}" target="_blank">
+            <span class="icon  icon--github">
+                <i class="fa-brands fa-mastodon"></i>
+            </span>
+        {% endif %}
+	          {{ name }}</a>
+    {% endfor %}
+        <br/>
   </div>
 </div>
