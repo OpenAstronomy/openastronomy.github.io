@@ -11,11 +11,13 @@ Clone this repository locally, then inside it, type:
 gem install bundler
 bundler install
 ```
-or use:
+Depending on your Ruby setup this may require superuser privileges to install to the default location, so you may want to instead use:
 
 ```shell
 
-bundle config set path 'vendor/bundle'
+gem install -i vendor/bundle bundler
+bundle config --local path 'vendor/bundle'
+bundle install
 
 ```
 
