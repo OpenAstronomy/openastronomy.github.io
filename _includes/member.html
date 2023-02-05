@@ -67,7 +67,7 @@
         {% for mb in details.microblogging %}
             {% if mb[0] == 'twitter'  %}
                 {% assign name = '@' | append: mb[1] %}
-                {% assign url = https://twitter.com/' | append: mb[1] %}
+                {% assign url = 'https://twitter.com/' | append: mb[1] %}
                 {% assign icon = site.data.icons.twitter_logo %}
             {% elsif mb[0] == "mastodon" %}
                 {% assign mastodon_parts = mb[1] | split: "@" %}
