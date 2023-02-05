@@ -59,29 +59,30 @@
             </svg>
         </span>
         {% for chat in details.chat %}
-            <a href="{{ chat[1] }}">{{ chat[0] }}</a>{% unless forloop.last %},{% endunless %}
+        <a href="{{ chat[1] }}">{{ chat[0] }}</a>{% unless forloop.last %},{% endunless %}
         {% endfor %}
         <br/>
-    {% endif %}
-    <!-- microblogging -->
-    {% for mb in details.microblogging %}
-        {% if mb[0] == 'twitter'  %}
-        {% assign name = '@' | append: mb[1] %}
-        <a href="{{ 'https://twitter.com/' | append: mb[1] }}" target="_blank">
-            <span class="icon  icon--github">
-                <i class="fa-brands fa-twitter"></i>
-            </span>
-        {% elsif mb[0] == "mastodon" %}
-            {% assign mastodon_parts = mb[1] | split: "@" %}
-            {% assign name = mb[1] %}
-            {% assign url = 'https://' | append: mastodon_parts[2] | append: '/@' | append: mastodon_parts[1] %}
-            <a href="{{ url }}" target="_blank">
-            <span class="icon  icon--github">
-                <i class="fa-brands fa-mastodon"></i>
-            </span>
         {% endif %}
+        <!-- microblogging -->
+        {% for mb in details.microblogging %}
+            {% if mb[0] == 'twitter'  %}
+                {% assign name = '@' | append: mb[1] %}
+                {% assign url = https://twitter.com/' | append: mb[1] %}
+                {% assign icon = site.data.icons.twitter_logo %}
+            {% elsif mb[0] == "mastodon" %}
+                {% assign mastodon_parts = mb[1] | split: "@" %}
+                {% assign name = mb[1] %}
+                {% assign url = 'https://' | append: mastodon_parts[2] | append: '/@' | append: mastodon_parts[1] %}
+                {% assign icon = site.data.icons.mastodon_logo %}
+            {% endif %}
+            <a href="{{ url }}" target="_blank">
+                <span class="icon  icon--github">
+                    <svg height="50%" viewBox="0 0 16 16">
+                        <path fill="#333333" d="{{ icon }}"/>
+                    </svg>
+                </span>
 	          {{ name }}</a>
-    {% endfor %}
+        {% endfor %}
         <br/>
   </div>
 </div>
