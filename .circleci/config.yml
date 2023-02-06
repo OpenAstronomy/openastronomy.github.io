@@ -63,7 +63,7 @@ jobs:
              bundle exec htmlproofer ./html \
                --allow-hash-href \
                --check-html \
-               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-9].+/","/.+\/html/projects/201[5-9].+/","/.+\/gsoc\/gsoc202[0-1].+/","/.+\/html/projects/202[0-1].+/" \
+               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-9].+/","/.+\/html/projects/201[5-9].+/","/.+\/gsoc\/gsoc202[0-2].+/","/.+\/html/projects/202[0-2].+/" \
                --http-status-ignore 302
                # Ignore old ideas pages and ssl certificates that error.
             fi
@@ -72,12 +72,13 @@ jobs:
       - run:
           name: Jekyll re-build for local
           command: |
-            echo "url: https://${CIRCLE_BUILD_NUM}-30926520-gh.circle-artifacts.com" > circle.yml && \
-            bundle exec jekyll build -d html -b "/0/html"  --config _config.yml,circle.yml && \
+            echo "url: https://output.circle-artifacts.com" > circle.yml
+            bundle exec jekyll build -d html -b "/output/job/${CIRCLE_WORKFLOW_JOB_ID}/artifacts/0/html"  --config _config.yml,circle.yml
             find ./html/ -type f -iname '*html' | xargs -I{} sed -i \
               -e 's|href="\(\.\/.*\/\)"|href="\1index.html"|g' \
               -e '/0\/html/ s|href="\(\/.*\/\)"|href="\1index.html"|g' {}
             # Replace pages ending on `/` from our site to direct to index.html
+
 
       - run:
           name: "Built documentation is available at:"
