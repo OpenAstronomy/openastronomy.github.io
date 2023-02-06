@@ -35,7 +35,7 @@ Stingray provides methods for analysing astronomical time series, in particular 
 
 ##### Community Bonding
 Community Bonding
-* Scope out which spectral timing methods can be adapted to uneven sampling, and which functionality to adapt from astrapy 
+* Scope out which spectral timing methods can be adapted to uneven sampling, and which functionality to adapt from astropy 
 * Set up development environment and become familiar with stingray core functionality
 
 ##### Coding starts
