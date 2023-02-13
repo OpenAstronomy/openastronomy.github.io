@@ -140,12 +140,14 @@ sunpy:
     and its aim is to provide the software tools necessary so that anyone can
     analyze solar data.
 
-timelab:
-  name: TimeLab
-  logo: timelab.png
-  url: http://www.timelabtechnologies.com
+stingray:
+  name: Stingray 
+  logo: stingray_logo.png
+  url: http://stingray.science
   repositories:
     github: StingraySoftware
+  chat:
+    slack: https://join.slack.com/t/stingraysoftware/shared_invite/zt-49kv4kba-mD1Y~s~rlrOOmvqM7mZugQ
   description: >-
     : we are a team of astrophysicists and software developers working together
     to build a variability analysis software to study black holes and
