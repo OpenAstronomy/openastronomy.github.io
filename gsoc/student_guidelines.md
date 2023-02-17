@@ -76,7 +76,7 @@ We are also happy to give comments on your proposal if you like.  Feel free to
 add your application to the sub-org member's wiki following this format: "GSoC-\<YEAR\> Application \<sub-org\> \<Your Name\>:\<Project Name\>"
 and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
 
-[Matrix]: https://openastronomy.element.io/#/room/#openastronomy:openastronomy.org
+[Matrix]: https://app.element.io/#/room/#openastronomy:openastronomy.org
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template
 [Python Software Foundation]: http://python-gsoc.org/
 [GSoC Contributor Guide]: https://google.github.io/gsocguides/student/

@@ -27,7 +27,7 @@ href="mailto:openastronomy@googlegroups.com">openastronomy@googlegroups.com</a>)
 which is good place to introduce yourself.
 
 You can also get involved by joining our chat on Matrix
-([#openastronomy:matrix.org](https://openastronomy.element.io/#/room/#openastronomy:openastronomy.org)),
+([#openastronomy:matrix.org](https://app.element.io/#/room/#openastronomy:openastronomy.org)),
  which regularly has a number of people in it, if you want to pop in for an astronomy related conversation.
 
 ## Contact the OpenAstronomy Members
