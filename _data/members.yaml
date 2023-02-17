@@ -25,7 +25,7 @@ astronomy-commons:
   mailinglist:
     devs: https://groups.google.com/forum/#!forum/astronomy-commons
   chat:
-    matrix: https://riot.im/app/#/room/#astronomy-commons:matrix.org
+    matrix: https://app.element.io/#/room/#astronomy-commons:matrix.org
   description: >-
     is an initiative for software infrastructure for science platforms and
     scalable astronomy on cloud resources. Astronomy Data Commons is lead by
@@ -38,7 +38,7 @@ ctlearn:
    repositories:
      github: ctlearn-project/ctlearn
    chat:
-     matrix: https://riot.im/app/#/room/#ctlearn:matrix.org
+     matrix: https://app.element.io/#/room/#ctlearn:matrix.org
    description: >-
       is a package under active development that pursues the
       application of deep-learning based methods to the analysis of
@@ -59,7 +59,7 @@ einsteinpy:
   mailinglist:
     devs: https://groups.io/g/einsteinpy-dev
   chat:
-    matrix: https://riot.im/app/#/room/#einsteinpy:matrix.org
+    matrix: https://app.element.io/#/room/#einsteinpy:matrix.org
   microblogging:
     twitter: EinsteinPy
   description: >-
@@ -95,7 +95,7 @@ juliaastro:
   mailinglist:
     users: https://discourse.julialang.org/c/domain/astro
   chat:
-    matrix: https://riot.im/app/#/room/#JuliaAstro:openastronomy.org
+    matrix: https://app.element.io/#/room/#JuliaAstro:openastronomy.org
   description: >-
     is an organization that shepherds the development of community astronomy and
     astrophysics packages for Julia. These include packages for widely used
@@ -111,7 +111,7 @@ poliastro:
   mailinglist:
     devs: https://groups.io/g/poliastro-dev
   chat:
-    matrix: https://riot.im/app/#/room/#poliastro:matrix.org
+    matrix: https://app.element.io/#/room/#poliastro:matrix.org
   microblogging:
     twitter: poliastro_py
     mastodon: "@poliastro@fosstodon.org"
@@ -130,7 +130,7 @@ sunpy:
     users: http://groups.google.com/group/sunpy
     devs: http://groups.google.com/group/sunpy-dev
   chat:
-    matrix: https://openastronomy.element.io/#/room/#sunpy:openastronomy.org
+    matrix: https://app.element.io/#/room/#sunpy:openastronomy.org
   microblogging:
     twitter: SunPyProject
   description: >-
@@ -141,7 +141,7 @@ sunpy:
     analyze solar data.
 
 stingray:
-  name: Stingray 
+  name: Stingray
   logo: stingray_logo.png
   url: http://stingray.science
   repositories:
@@ -260,7 +260,7 @@ plasmapy:
   mailinglist:
     users: https://groups.google.com/group/plasmapy
   chat:
-    matrix: https://riot.im/app/#/room/#plasmapy:matrix.org
+    matrix: https://app.element.io/#/room/#plasmapy:matrix.org
   microblogging:
     twitter: plasmapy
   description: >-

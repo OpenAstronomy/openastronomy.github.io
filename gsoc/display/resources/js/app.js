@@ -145,7 +145,7 @@
               };
           };
       };
-      return 'https://riot.im/app/#/room/#openastronomy:matrix.org';
+      return 'https://app.element.io/#/room/#openastronomy:matrix.org';
   };
  });
 
