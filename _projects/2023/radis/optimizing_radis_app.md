@@ -1,30 +1,21 @@
 ---
  name: Optimizing Radis app
  desc: Our project is all about enhancing user experience to the next level! We're committed to bringing you cutting-edge features and  fine-tuning these features for maximum performance and efficiency, and rigorous testing to ensure they meet the needs of our highly valued end users.
-
 # add a short one line description of your project
-
 requirements:
-
 # Student requirements
-
 - TypeScript
 - React
 - FastApi
 - Testing (pytest && vitest)
-
 difficulty: medium
 issues:
-
 - <https://github.com/suzil/radis-app/issues/669>
 - <https://github.com/suzil/radis-app/issues/85>
 - <https://github.com/suzil/radis-app/issues/674>
  mentors:
-
 # First person in contact; mentors may change before project starts
-
 # GitHub handles
-
 - erwanp
 - arunavabasu-03
  initiatives:
@@ -32,9 +23,7 @@ issues:
  project_size:
 - 350 h
  tags:
-
 # Different technologies needed
-
 - Python
 - TypeScript
 - JavaScript
@@ -43,11 +32,8 @@ issues:
 - Pandas
 - Git
  collaborating_projects:
-
 # suborganisation(s) to which this project belongs
-
 - radis
-
 ---
 
 #### Description
