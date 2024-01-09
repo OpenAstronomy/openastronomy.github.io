@@ -53,7 +53,7 @@ and making sure they communicate regularly.
 Normally organisations provide a list of ideas that can be done by a contributor
 in approximately three months (working full-time). Take a look at what [Google
 says on how to define a project](https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list),
-then look at [other ideas OpenAstronomy's members have proposed this or previous years.](./#ideas-pages).
+then look at [other ideas OpenAstronomy's members have proposed this or previous years.](./#current-projects).
 
 To add your own, you will have to create a pull-request to [our repository][OA repository]
 following the [template](https://github.com/OpenAstronomy/openastronomy.github.io/blob/master/_projects/_template.md).
