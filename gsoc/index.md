@@ -26,7 +26,11 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 * [GSoC Contributor Guide]
 * [Now You Know It!: Getting selected in Outreachy by Kriti Singh]
 
-## Ideas Pages
+## Current Projects
+
+* [2024](./gsoc2024/)
+
+## Previous Projects
 
 * [2023](./gsoc2023/)
 * [2022](./gsoc2022/)
@@ -42,7 +46,6 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 Whether you have been participating for years or this is your first time
 read our guide for [sub-org admins](./suborg_guidelines.html).
-
 
 [OpenAstronomy Contributor Guide]: ./student_guidelines.html
 [Python Software Foundation]: http://python-gsoc.org/
