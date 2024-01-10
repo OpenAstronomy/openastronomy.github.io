@@ -6,19 +6,17 @@ permalink: /gsoc/
 
 ## New to GSoC?
 
-[Background on GSoC: start here!](./background.html)
+[Background on GSoC: Start Here!](./background.html)
 
-## GSoC/Open Astronomy 2023
+## GSoC & Open Astronomy 2024
 
-OpenAstronomy is an umbrella organisation which collects project ideas
-from any of its members. OpenAstronomy has been a GSOC mentoring organisation since 2016 and
-it's applying to participate in 2023.
+OpenAstronomy is an umbrella organisation which collects project ideas from any of its members.
+OpenAstronomy has been a GSOC mentoring organisation since 2016 and it's applying to participate in 2024.
 
-Contributors applications to OpenAstronomy projects follows the same
-rules as the [Python Software Foundation] and the [GSoC Contributor Guide],
-we have [also our own guide to a good application for OpenAstronomy][OpenAstronomy Contributor Guide].
+Contributors applications to OpenAstronomy projects follows the same rules as the [Python Software Foundation] and the [GSoC Contributor Guide].
+We have [also our own guide to a good application for OpenAstronomy][OpenAstronomy Contributor Guide].
 
-All the student blogs are collected in the [OpenAstronomy Universe] site.
+All student blogs are collected on the [OpenAstronomy Universe] site.
 
 ## Quick Links
 
@@ -44,8 +42,7 @@ All the student blogs are collected in the [OpenAstronomy Universe] site.
 
 ## Info for sub-organisations' admins
 
-Whether you have been participating for years or this is your first time
-read our guide for [sub-org admins](./suborg_guidelines.html).
+Whether you have been participating for years or this is your first time read our guide for [sub-org admins](./suborg_guidelines.html).
 
 [OpenAstronomy Contributor Guide]: ./student_guidelines.html
 [Python Software Foundation]: http://python-gsoc.org/
