@@ -32,7 +32,7 @@ However, due to this, some issues have cropped up, such as by adding a hidden pl
 
 It also lacks some useful features such as plotting current sheets and animations.
 There are open pull requests for these and we would like them finished by the student for this project.
-We appreciate that this not the interesting project as it will partly fixing up issues and open pull requests.
+We appreciate that this not the interesting project as it will mostly fixing up issues and open pull requests.
 
 ## Goals
 

@@ -36,7 +36,7 @@ Therefore the aim of this GSoC project is to tackle as many of the following iss
 7. [Failing test test_multiscale_gaussian #96](https://github.com/sunpy/sunkit-image/issues/96)
 8. [Figure out what from SunPy core can be moved here #5](https://github.com/sunpy/sunkit-image/issues/5)
 
-We appreciate that this not the interesting project.
+We appreciate that this not the interesting project as it will mostly fixing up issues and open pull requests.
 
 If there is some time left over:
 
