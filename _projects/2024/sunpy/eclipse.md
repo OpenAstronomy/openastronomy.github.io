@@ -9,6 +9,7 @@ issues:
 mentors:
  - nabobalis
  - ehsteve
+ - ayshih
 initiatives:
  - GSOC
 project_size:
