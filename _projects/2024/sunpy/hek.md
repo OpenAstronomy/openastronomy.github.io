@@ -33,10 +33,10 @@ For example, many feature/event properties are not expressed using Astropy units
 The goal of this project is to create classes to represent HEK solar feature/events that function well within the SunPy ecosystem.
 The design of the feature/event classes should be sufficiently general so as not to exclude their application to feature/event descriptions held by other catalogs.
 
-A previous GSoC Project [worked on this problem](https://github.com/sunpy/sunpy/pull/7059) and that will need to be used as the basis for this.
-This should shorten the project lifecycle and is it why this is a small project.
+A previous GSoC Project [worked on this problem](https://github.com/sunpy/sunpy/pull/7059) and that will form the basis for this project.
+This will shorten the project size and is why this is marked as a small project.
 
-For this project, being familiar with astropy regions and some solar coordinate items would be ideal but not necessary.
+For this project, being familiar with astropy regions and some solar coordinate items would be ideal.
 
 ## Milestones
 

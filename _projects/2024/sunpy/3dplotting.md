@@ -23,16 +23,15 @@ collaborating_projects:
 
 # Description
 
-The SunPy Ecosystem currently has well developed support for making 2D plots (primarily with Matplotlib), but currently a simple interface for making 3D plots.
+The SunPy Ecosystem currently has well developed support for making 2D plots (with Matplotlib), but currently a simpler interface for making 3D plots.
 
-[sunkit-pyvista](https://github.com/sunpy/sunkit-pyvista) came out of a previous GSoC project and enables "simple" 3D plotting of sunpy Maps.
-This is achieved by wrapping parts of [pyvista](https://github.com/pyvista/pyvista) and adding a "solar-spin"  on their API.
+[sunkit-pyvista](https://github.com/sunpy/sunkit-pyvista) came out of a previous GSoC project and enables  3D plotting of sunpy Maps.
+This is achieved by wrapping [pyvista](https://github.com/pyvista/pyvista) and adding a "solar-spin"  on their API.
 
-However, due to this, some issues have cropped up, such as by adding a hidden plotter class, the API has become `plotter.plotter` to access the underlying pyvista API.
-
+However, after this GSoC, progress was much slower and issues have cropped up with time, the main one being the the API currently has a `plotter.plotter` to access the underlying pyvista API.
 It also lacks some useful features such as plotting current sheets and animations.
-There are open pull requests for these and we would like them finished by the student for this project.
-We appreciate that this not the interesting project as it will mostly fixing up issues and open pull requests.
+
+This project will be addressing these issues, in part by taking over existing pull requests.
 
 ## Goals
 
