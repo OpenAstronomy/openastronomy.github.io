@@ -1,6 +1,6 @@
 ---
 name: Solar Eclipse analysis with sunpy
-desc: Process and analysis images taken of the total solar eclipse that crosses the US in 2024
+desc: Process and analysis photographs taken of the total solar eclipse that crosses the US in 2024
 requirements:
  - Experience with Python
  - Background with Physics or Astronomy
@@ -41,12 +41,12 @@ There are several steps:
    This one has several smaller steps to break up the work.
    1. A guide on how to import a photograph into a Map and determine its coordinates
    2. A guide on how to perform the following processing steps:
-      a. Stacking
+      a. Stacking images with different exposure times
       b. Flat-fielding
       c. Sharpening
 
 Note this will be a difficult project as we are dealing with solar coordinates and how to determine them from the Earth.
-We would need someone with a background in Physics or Astoronmy and with experience of astropy or sunpy coordinates.
+A background in Physics or Astronomy with experience of astropy or sunpy coordinates is preferred.
 
 ## Goals
 
