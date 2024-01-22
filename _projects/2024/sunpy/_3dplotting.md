@@ -9,8 +9,8 @@ issues:
  - https://github.com/sunpy/sunkit-pyvista/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
  - https://github.com/sunpy/sunkit-pyvista/pulls?q=is%3Apr+is%3Aopen+sort%3Aupdated-desc
 mentors:
+ - <ADD SOMEONE>
  - nabobalis
- - <ADD SOMEONE ELSE>
 project_size:
  - 175 h / medium
 tags:

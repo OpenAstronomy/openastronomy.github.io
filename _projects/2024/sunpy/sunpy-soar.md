@@ -10,6 +10,7 @@ issues:
 mentors:
  - hayesla
  - nabobalis
+ - ebuchlin
 initiatives:
  - GSOC
 project_size:
@@ -23,19 +24,22 @@ collaborating_projects:
 
 # Description
 
-[sunpy-soar](https://github.com/sunpy/sunpy-soar) is an extension to sunpy [Fido downloader](https://docs.sunpy.org/en/stable/tutorial/acquiring_data/index.html#sunpy-tutorial-acquiring-data-index) to download data from the Solar Orbiter Archive
-(SOAR).
+[sunpy-soar](https://github.com/sunpy/sunpy-soar) is an plug-in to [sunpy's Fido](https://docs.sunpy.org/en/stable/tutorial/acquiring_data/index.html#sunpy-tutorial-acquiring-data-index) to download data from the [Solar Orbiter Archive (SOAR)](https://soar.esac.esa.int/soar/).
 
-This data source has an extensive API and rich metadata which currently is unsupported by sunpy-soar.
+This data provider has an extensive API and rich metadata which currently is not fully supported by sunpy-soar.
 
-The goal of this GSoC project, is to add support for the large range of available metadata.
-The API of of the SOAR uses a [TAP protocol](https://git.ias.u-psud.fr/spice/data-analysis-club/-/blob/main/20231205-soar-tap/tap-demo.ipynb)  so it will be important for any student to get familiar with this protocol.
-Further to this, there is a large range of [possible values and types of tables](https://www.cosmos.esa.int/web/soar/tables-views-and-columns) which are important to understand as they are different for different files one might want to download.
+The goal of this GSoC project, is to add support for a subset of the available metadata, the shear variety means that it is not practical or useful to add 100% coverage.
+The API of of the SOAR uses a [TAP protocol](https://git.ias.u-psud.fr/spice/data-analysis-club/-/blob/main/20231205-soar-tap/tap-demo.ipynb) so it will be good for any student to get familiar with this protocol.
+Further to this, there is a large range of [possible values and types of tables](https://www.cosmos.esa.int/web/soar/tables-views-and-columns) which are important to understand as they are different for different files.
 
-This involves understanding the [complicated attribute system](https://docs.sunpy.org/en/stable/topic_guide/extending_fido.html) that Fido uses.
-We will need to add new ones to query new metadata fields that the SOAR uses but also to translate them from TAP queries back into "normal" values after.
+On the sunpy side, understanding the [sunpy.net attribute system](https://docs.sunpy.org/en/stable/topic_guide/extending_fido.html) that Fido uses is also useful.
+This translates Python code into the correct values required to do any query and then back into "normal" values after.
+As we are not planning to add every metadata as a new attribute, we will make use of more generic ones to enable filtering, similar to how it is done for another data provider, the [JSOC](https://docs.sunpy.org/en/latest/generated/api/sunpy.net.jsoc.Keyword.html#sunpy.net.jsoc.Keyword).
+If we do need to add new ones, they should have a very specific reason to exist, or we might need to add support for them within sunpy for other data
 
 For example, there are existing attributes like that can be mapped like ``Wavelength`` which would take values from the following table ``v_<instrument>_<ll/sc>_fits`` with its column `wavelength`.
+[More examples are here.](https://github.com/sunpy/sunpy-soar/issues/46#issuecomment-1557936562)
+
 This will project will partly be working out all of the connections for each table to enable these "translations".
 Thus the outcome would be:
 
