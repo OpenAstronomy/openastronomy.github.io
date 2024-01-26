@@ -1,24 +1,21 @@
 ---
-name: sunkit-image and integration with sunpy
-desc: Improve the integration of sunkit-image to work with SunPy data structures
+name: Improve sunkit-image
+desc: Improve the features of sunkit-image
 requirements:
- - Experience with Python.
- - Experience with sunpy Map.
- - Experience with NDcube.
-difficulty: low
+ - Experience with Python
+difficulty: low to medium
 issues:
- - https://github.com/sunpy/sunpy-sphinx-theme/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
+ - https://github.com/sunpy/sunkit-image/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc
 mentors:
- - nabobalis
  - wtbarnes
+ - nabobalis
 initiatives:
  - GSOC
 project_size:
- - 90 h
+ - 175 h / medium
 tags:
  - sunpy
  - Python
- - refactoring
 collaborating_projects:
  - sunpy
 ---
@@ -26,18 +23,18 @@ collaborating_projects:
 # Description
 
 In a previous GSoC project, [sunkit-image](https://github.com/sunpy/sunkit-image); a image analysis Python library for solar physics was created.
-Initially, functions were created to take a `numpy.array` and return a `numpy.array` and with hindsight, a mistake for the public API.
-One core goal of the SunPy Project is to ensure interoperability between the packages and this entails being able to pass in a `sunpy.map.Map` into a function and getting a `sunpy.map.Map` out.
+Over time, it has grown but lacks refinement and lots of issues have piled up and need addressing.
 
-Therefore the aim of this GSoC project is:
+Therefore the aim of this GSoC project is to tackle as many of the following issues:
 
-1. Refactor specific functions to accept and return a `sunpy.map.Map` (or an `NDcube` instead, to be decided during the project) instead of a `numpy.array`.
-   This would apply to functions that take a 2D data array and return one, functions like the `timelag` would not factor in to this.
-2. Tackle some of the following issues:
-   1. [Refactor the `coalignment` module](https://github.com/sunpy/sunkit-image/issues/83)
-   2. [Add a coalignment example to the gallery](https://github.com/sunpy/sunkit-image/issues/103)
-   3. [Add persistence transform example to the gallery](https://github.com/sunpy/sunkit-image/issues/76)
-   4. [Inconsistent input types across functions](https://github.com/sunpy/sunkit-image/issues/69)
+1. [Declass ASDA #42](https://github.com/sunpy/sunkit-image/issues/42)
+2. [Clean up sunkit_image.trace API #134](https://github.com/sunpy/sunkit-image/issues/134)
+3. [ASDA has no gallery example #45](https://github.com/sunpy/sunkit-image/issues/45)
+4. [Refactor the `coalignment` module](https://github.com/sunpy/sunkit-image/issues/83)
+5. [Add a coalignment example to the gallery #103](https://github.com/sunpy/sunkit-image/issues/103)
+6. [Add persistence transform example to the gallery](https://github.com/sunpy/sunkit-image/issues/76)
+7. [Failing test test_multiscale_gaussian #96](https://github.com/sunpy/sunkit-image/issues/96)
+8. [Figure out what from SunPy core can be moved here #5](https://github.com/sunpy/sunkit-image/issues/5)
 
 If there is some time left over:
 
@@ -47,17 +44,17 @@ If there is some time left over:
 
 ### Community Bonding Period
 
-* Scope out what functions need changing and get familiar with the library.
+* Get familiar with the library.
 * Setup a development environment.
 
 ### Coding starts
 
-* Start working on the first function.
+* Start working on the first issue.
 
 #### 1st evaluation
 
-* Have around ~50% of the functions taken care of.
+* Have around ~50% of the issues taken care of.
 
 #### Final evaluation
 
-* Finish updating each function in sunkit-image.
+* Ideally have 100% of the issues finished.
