@@ -8,6 +8,7 @@ issues:
  - https://github.com/StingraySoftware/stingray/issues/794
 mentors:
  - matteobachetti
+ - mgullik
 initiatives:
  - GSOC
 project_size:
