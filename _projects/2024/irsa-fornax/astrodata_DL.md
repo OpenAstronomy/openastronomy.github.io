@@ -67,8 +67,8 @@ challenges but also highlight their applicability across astronomical research.
 
 #### 1st evaluation
 
-* Have
+* Have developed an initial DL architecture for gap filling in archival AGN data.
 
 #### Final evaluation
 
-* Have
+* Have optimized the DL architecture for data unification from multiple archives, with quantified improvement metrics.
