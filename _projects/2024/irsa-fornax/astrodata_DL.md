@@ -1,6 +1,6 @@
 ---
 name: Astronomical data enhancement with DL
-desc:
+desc: Improve usability of incomplete archival datasets
 requirements:
  - Experience with data processing, AI, and machine learning
  - Experience with Python

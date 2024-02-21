@@ -1,6 +1,6 @@
 ---
 name: Enable Dask execution of NASA time-domain analysis
-desc:
+desc: Improve scalability of time-domain analysis
 requirements:
  - Experience with Python
  - Experience with Dask
