@@ -15,7 +15,6 @@ mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub handles
  - minouHub
- - XXX
 initiatives:
  - GSOC
 project_size:
