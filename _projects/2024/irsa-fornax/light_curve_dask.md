@@ -6,7 +6,8 @@ requirements:
  - Experience with Dask
  - Background with astronomy is desired but not required.
 difficulty: high
-issues: https://github.com/fornax-navo/fornax-demo-notebooks/issues/240
+issues:
+ - https://github.com/fornax-navo/fornax-demo-notebooks/issues/240
 mentors:
  - jkrick
  - troyraen
