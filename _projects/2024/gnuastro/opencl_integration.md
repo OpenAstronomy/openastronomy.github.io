@@ -3,7 +3,9 @@ name: OpenCL integration with Gnuastro
 desc: GPU support inside Gnuastro C library.
 requirements:
 # Student requirements:
- -C, OpenCL, GNU Autotools (build system)
+ - C
+ - OpenCL
+ - GNU Autotools (build system)
 difficulty: medium
 issues:
 # Related issues (if any) to this project.
@@ -37,7 +39,7 @@ At the conclusion of GSoC 2023, a first draft of OpenCL was integrated in Gnuast
 
 The goal for this summer is to solidify a mature and generic interface to that implementation, such that a Gnuastro user that has a GPU device can use that while a user without a GPU can do exactly the same operation on a CPU. This will be tested by gradually implementing the interface to parallelizable operations (that are currently only using the CPU). Finally, we need to perform extensive testing of the OpenCL-accelerated subroutines on various hardware configurations to ensure robustness and compatibility. 
 
-To get started, check our [GSoC 2023 checklist](https://savannah.gnu.org/support/index.php?110827#comment0).
+To get started, check our [GSoC 2024 checklist](https://savannah.gnu.org/support/index.php?110827#comment0).
 
 
 #### Milestones (if any)
