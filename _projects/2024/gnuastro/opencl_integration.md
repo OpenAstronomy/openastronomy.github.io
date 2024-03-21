@@ -4,7 +4,6 @@ desc: GPU support inside Gnuastro C library.
 requirements:
 # Student requirements:
  - C
- - OpenCL
  - GNU Autotools (build system)
 difficulty: medium
 issues:
@@ -53,6 +52,8 @@ To get started, check our [GSoC 2024 checklist](https://savannah.gnu.org/support
 ##### Coding starts
 
 * Reviewing the work in GSoC 2023 and understand the work that was done before to understand all its details.
+
+* Learning OpenCL's API and C interface
 
 * Testing and debugging the work in various scenarios.
 
