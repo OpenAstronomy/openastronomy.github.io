@@ -7,7 +7,7 @@ requirements:
  - Background with astronomy is desired but not required.
 difficulty: high
 issues:
- - https://github.com/fornax-navo/fornax-demo-notebooks/issues/240
+ - https://github.com/nasa-fornax/fornax-demo-notebooks/issues/240
 mentors:
  - jkrick
  - troyraen
