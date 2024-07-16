@@ -7,7 +7,7 @@ requirements:
  - Experience with AI/ML libraries such as TensorFlor and PyTorch
 difficulty: very high
 issues:
- - https://github.com/fornax-navo/fornax-demo-notebooks/issues/243
+ - https://github.com/nasa-fornax/fornax-demo-notebooks/issues/243
 mentors:
  - xoubish
  - jkrick
