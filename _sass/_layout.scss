@@ -94,6 +94,17 @@
 .site-footer {
     border-top: 1px solid $grey-color-light;
     padding: $spacing-unit / 2 0;
+
+    @include media-query($on-palm) {
+        .wrapper {
+            display: block; /* Ensure all elements stack properly */
+        }
+
+        .footer-col {
+            float: none;
+            width: 100%; /* Ensure columns stack on mobile */
+        }
+    }
 }
 
 .footer-heading {
@@ -158,10 +169,10 @@
 
 
 .fixed-wrap {
-    position: fixed;
-    top: 80px;
-    left: 0;
-    bottom: 80px;
+    position: static;
+    top: auto;
+    left: auto;
+    bottom: auto;
     width: 100%;
 }
 
