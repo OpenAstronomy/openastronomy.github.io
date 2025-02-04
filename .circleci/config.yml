@@ -94,7 +94,3 @@ jobs:
       - store_artifacts:
           path: ~/repo/html
           destination: html
-
-notify:
-  webhooks:
-    - url: https://giles.cadair.dev/circleci
