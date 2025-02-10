@@ -42,7 +42,8 @@ periodograms, cross spectra, and a number of "variability vs energy spectra", th
 allow to understand the variability at different energies.
 This project is about the implementation of a basic set of X-ray timing analysis 
 operations in Julia, continuing the porting of the core operations from the
-`stingray` Python package initiated during Google Summer of Code 2022. 
+`stingray` Python package [initiated during Google Summer of Code 2022]
+(https://github.com/StingraySoftware/Stingray.jl)
 
 #### Milestones (if any)
 
