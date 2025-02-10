@@ -14,6 +14,7 @@ mentors:
 # GitHub handles
  - matteobachetti
  - stefanocovino
+ - fjebaker
 initiatives:
 # The programme under this project wish to run.
  - GSOC
