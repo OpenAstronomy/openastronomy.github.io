@@ -29,7 +29,7 @@ collaborating_projects:
  - stingray
  - juliaAstro
 ---
-Spectral timing in Julia
+## Spectral timing in Julia
 
 #### Description
 The analysis of time series from astronomical observations in the X-rays is an 
@@ -45,7 +45,7 @@ operations in Julia, continuing the porting of the core operations from the
 `stingray` Python package [initiated during Google Summer of Code 2022]
 (https://github.com/StingraySoftware/Stingray.jl)
 
-#### Milestones (if any)
+#### Milestones
 
 ##### Coding starts
 
