@@ -10,9 +10,8 @@ requirements:
  - Testing (pytest && vitest)
 difficulty: medium
 issues:
- - <https://github.com/suzil/radis-app/issues/669>
- - <https://github.com/suzil/radis-app/issues/85>
- - <https://github.com/suzil/radis-app/issues/674>
+ - <https://github.com/arunavabasucom/radis-app/issues/85>
+ - <https://github.com/arunavabasucom/radis-app/issues/674>
 mentors:
 # First person in contact; mentors may change before project starts
 # GitHub handles
