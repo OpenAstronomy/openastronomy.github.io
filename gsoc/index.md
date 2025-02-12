@@ -45,18 +45,18 @@ All student blogs are collected on the [OpenAstronomy Universe] site.
 
 Whether you have been participating for years or this is your first time read our guide for [sub-org admins](./suborg_guidelines.html).
 
-## Related Organizations
-
-OpenAstronomy is closely related to other organizations that support open-source scientific computing:
-
-- [NumFOCUS](https://numfocus.org/) ([NumFOCUS GSoC page](https://numfocus.org/community/google-summer-of-code)) - Supports open-source scientific computing projects, including many under OpenAstronomy. NumFOCUS also participates in GSoC.
-- [Python Software Foundation](https://www.python.org/) ([PSF GSoC page](http://python-gsoc.org/)) - Oversees GSoC projects for the broader Python ecosystem.
-- [TARDIS](https://tardis-sn.github.io/) ([TARDIS GSoC page](https://tardis-sn.github.io/summer_of_code/gsoc_start/)) - A radiative transfer code for supernovae, also participating in GSoC.
-
-These organizations collaborate on various scientific computing initiatives and GSoC projects.
-
 [OpenAstronomy Contributor Guide]: ./student_guidelines.html
 [Python Software Foundation]: http://python-gsoc.org/
 [GSoC Contributor Guide]: https://google.github.io/gsocguides/student/
 [OpenAstronomy Universe]: http://openastronomy.org/Universe_OA/
 [Now You Know It!: Getting selected in Outreachy by Kriti Singh]: https://github.com/kritisingh1/numpy/wiki/Now-You-Know-It!-:-Getting-selected-in-Outreachy
+
+## Related Organizations
+
+OpenAstronomy is closely related to other organizations that support open-source scientific computing:
+
+- [NumFOCUS](https://numfocus.org/) - Supports open-source scientific computing projects, including many under OpenAstronomy [and also participates in GSoC.](https://numfocus.org/community/google-summer-of-code)
+- [Python Software Foundation](https://www.python.org/) - Oversees GSoC projects for the broader Python ecosystem [and also participates in GSoC.](http://python-gsoc.org/)
+- [TARDIS](https://tardis-sn.github.io/) - A radiative transfer code for supernovae, [also participating in GSoC](https://tardis-sn.github.io/summer_of_code/gsoc_start/)
+
+These organizations collaborate on various scientific computing initiatives and GSoC at times.
