@@ -1,39 +1,41 @@
 ---
 name: Example project
+# Add a short one line description of your project
 desc: This is the first idea for suborg
-# add a short one line description of your project
-requirements:
 # Student requirements:
+requirements:
  - Knowledge on pythonic physics.
  - Familiar with numerical methods
 difficulty: low
-issues:
 # Related issues (if any)  to this project.
+# Ideally you want at least one
+issues:
  - https://github.com/org/org_repo/issues/4444
  - https://github.com/org/org_repo/issues/5555
 mentors:
 # First person in contact; mentors may change before project starts.
-# GitHub handles
+# GitHub or GitLab handles
  - astrorobot
-initiatives:
 # The programme under this project wish to run.
+initiatives:
  - GSOC
- - SOCIS
 project_size:
- - 175 h
- - 350 h
-tags:
+ - 90 h (Small)
+ - 175 h (Medium)
+ - 350 h (Large)
 # Different technologies needed
+tags:
  - python
- - GUI
-collaborating_projects:
+ - postgres
 # suborganisation(s) to which this project belongs.
+collaborating_projects:
  - astropy
  - juliaAstro
 ---
-This is an awesome project idea for suborg.
 
-#### Description
+# This is an awesome project idea for suborg.
+
+## Description
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam
 turpis neque, vel fermentum diam gravida id. Maecenas tempor magna libero, non
@@ -47,16 +49,16 @@ vitae velit scelerisque volutpat ut nec ex. Sed in velit tincidunt, volutpat
 turpis sit amet, dignissim nisi. Donec a mattis eros. Pellentesque vitae leo
 quam.
 
-#### Milestones (if any)
+## Project Milestones
 
-##### Coding starts
+### Coding starts
 
 * Be awesome
 
-##### 1st evaluation
+### 1st evaluation
 
 * Have done awesome stuff.
 
-##### Final evaluation
+### Final evaluation
 
 * Finished the awesome stuff.
