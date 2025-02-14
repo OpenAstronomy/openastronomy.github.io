@@ -47,14 +47,18 @@ peculiar features hidden within the vast dataset.
 Challenges: Efficient storage and fast retrieval of data products, 
 ensuring interactivity of the tool, and enabling comparisons across different X-ray instruments.
 
-#### Milestones (if any)
-- gain familiarity with the observations (different type of X-ray telescopes) and with the products
-- create the database
-- graphic interface to interact with the database
-- classification of the observations base on their products (possible use of ML techniques)
+#### Milestones
   
 ##### Coding starts
 
+- Gain familiarity with the observations (different type of X-ray telescopes) and with the products
+
 ##### 1st evaluation
 
+- Create the database
+- Graphic interface to interact with the database
+
 ##### Final evaluation
+
+- Classification of the observations base on their products (possible use of ML techniques)
+
