@@ -1,7 +1,7 @@
 ---
 name: Interactive Database for X-ray observations 
 # add a short one line description of your project
-desc: Create an interactive database for analyzing, storing, and classifying X-ray observations of accreting black holes.
+desc: Create an interactive database for analyzing, storing, and classifying X-ray observations of accreting black holes
 # Student requirements:
 requirements:
  - Understanding Python code
@@ -30,7 +30,9 @@ collaborating_projects:
  - stingray
 ---
 
-#### Description
+# Interactive Database for X-ray observations 
+
+## Description
 
 The increasing number of X-ray telescopes observing accreting black hole sources 
 has led to an incredibly large amount of available observational data. 
@@ -48,18 +50,17 @@ peculiar features hidden within the vast dataset.
 Challenges: Efficient storage and fast retrieval of data products, 
 ensuring interactivity of the tool, and enabling comparisons across different X-ray instruments.
 
-#### Milestones
+### Milestones
   
-##### Coding starts
+#### Coding starts
 
 - Gain familiarity with the observations (different type of X-ray telescopes) and with the products
 
-##### 1st evaluation
+#### 1st evaluation
 
 - Create the database
 - Graphic interface to interact with the database
 
-##### Final evaluation
+#### Final evaluation
 
 - Classification of the observations base on their products (possible use of ML techniques)
-
