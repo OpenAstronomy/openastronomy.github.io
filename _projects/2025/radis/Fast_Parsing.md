@@ -1,5 +1,5 @@
 ---
-name: Fast parsing of large databases
+name: Fast parsing of large databases and execution bottlenecks
 desc: The conversion of large files from a compressed format to hdf5 should be accelerated.
 
 
@@ -15,6 +15,7 @@ mentors:
 # GitHub handles
  - minouHub
  - erwanp
+ - dcmvdbekerom
 initiatives:
  - GSOC
 project_size:
@@ -55,7 +56,7 @@ With more and more lines added to the databases, some files grew considerably in
 
 * Propose a solution to save several HDF5 files instead of a large one in .radisdb (For example, save 10 files of 7 GB each instead of a single 70-GB file for HITEMP CO2)
 
-* Write a review of current bottleneck in 1/ the **parsing** and 2/ the **computation** of spectra. This bottleneck review should be uploaded on the documentation, with working examples for small (~1 cm-1) and large (~100 cm-1). See this example: https://github.com/radis/radis/issues/685
+* Write a review of current bottleneck in 1/ the **parsing** and 2/ the **computation** of spectra. This bottleneck review should be uploaded on the documentation, with working examples for small (~1 cm-1) and large (~100 cm-1) spectra. See this example: https://github.com/radis/radis/issues/685
 
 * Tackle some of the bottleneck by either modifying the code, leveraging numba, or writing a C++ code.   
 
@@ -68,3 +69,5 @@ With more and more lines added to the databases, some files grew considerably in
 * Document architecture and developer guide when facing unclear points that may appear.
 
 * Review pull requests from other RADIS contributors
+
+* Although this project is devoted to CPU computation, the interested contributor can also contribute to the resolution of GPU bottlenecks. For instance: in a GPU computation, the database first needs to be copied to a host buffer (i.e. CPU side), a so called 'staging buffer'. After that, the database can be copied to the GPU. For integrated GPU's, i.e. when the GPU is part of the CPU chip (like most Intel and AMD processors), the CPU and GPU memory is shared. Ideally, the database would directly be loaded into the staging buffer to prevent copying the same database 3 times (1: regular load, 2: staging buffer, 3: GPU buffer). 
