@@ -46,7 +46,6 @@ Other codes allow to compute electronic spectra of diatomic molecules and can be
 * Moose - https://github.com/AntoineTUE/Moose
 * MassiveOES - https://bitbucket.org/OES_muni/massiveoes (with Radis/MassiveOES example in https://github.com/radis/massiveOES-examples)
 * ExoMol list - https://www.exomol.com/software/
-<!-- Another open-source code, called EXOJAX, exchanged portions of code with RADIS until some parts of both codes became very similar. Currently, a database API is written in the RADIS code. The main goal of the current project is to add the atomic Kurucz database to RADIS. The second objective is to improve the aformentioned common API to download and manage all databases. The mentee will not start from scratch because the community already worked on the problem and set up a frame for this big merge of code built around a [DatabaseManager](https://github.com/radis/radis/blob/develop/radis/api/dbmanager.py#L51) class. Previous work on the Kurucz database can be found in [this PR](https://github.com/radis/radis/pull/601). -->
 
 #### Milestones
 
