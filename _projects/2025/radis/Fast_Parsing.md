@@ -1,9 +1,7 @@
 ---
 name: Fast parsing of large databases and execution bottlenecks
-desc: The conversion of large files from a compressed format to hdf5 should be accelerated.
-
-
 # add a short one line description of your project
+desc: The conversion of large files from a compressed format to hdf5 should be accelerated.
 requirements:
 # Student requirements:
  - Knowledge of Pandas or other DataFrame libraries
@@ -31,12 +29,19 @@ collaborating_projects:
  - radis
 ---
 
-
 #### Description
 
-The RADIS code was developed for the characterization of plasmas, flames and atmospheres. High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck. RADIS implements a new algorithm to compute these lineshapes, and is already one of the fastest line-by-line spectral codes available. It can also compute many different types of spectra (absorption / emission / equilibrium / nonequilibrium). In a typical calculation, a database of coefficients is loaded and these coefficients are multiplied according to physics laws to generate a set of linestrength in a spectrum. RADIS can handle different molecular databases such as HITRAN, HITEMP, EXOMOL, and GEISA. 
+The RADIS code was developed for the characterization of plasmas, flames and atmospheres.
+High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck.
+RADIS implements a new algorithm to compute these lineshapes, and is already one of the fastest line-by-line spectral codes available.
+It can also compute many different types of spectra (absorption / emission / equilibrium / nonequilibrium).
+In a typical calculation, a database of coefficients is loaded and these coefficients are multiplied according to physics laws to generate a set of line strengths in a spectrum.
+RADIS can also handle different molecular databases such as HITRAN, HITEMP, EXOMOL, and GEISA.
 
-With more and more lines added to the databases, some files grew considerably in size. To be as fast as possible, RADIS convert compressed databases into the HDF5 format. This conversion also increases the size of the files which can take hours to be written in the hard drive (2-3 hours for HITEMP CO2 in its 2025 version). The objective of this project is to accelerate the parsing to hdf5 files.  
+With more and more lines added to the databases, some files grew considerably in size.
+To be as fast as possible, RADIS convert compressed databases into the HDF5 format.
+This conversion also increases the size of the files which can take hours to be written in the hard drive (2-3 hours for HITEMP CO2 in its 2025 version).
+The objective of this project is to accelerate the parsing to HDF5 files.
 
 #### Milestones
 
@@ -54,7 +59,7 @@ With more and more lines added to the databases, some files grew considerably in
 
 ##### 2nd Evaluation
 
-* Propose a solution to save several HDF5 files instead of a large one in .radisdb (For example, save 10 files of 7 GB each instead of a single 70-GB file for HITEMP CO2)
+* Propose a solution to save several HDF5 files instead of a large one in `.radisdb`. For example, save 10 files of 7 GB each instead of a single 70-GB file for HITEMP CO2
 
 * Write a review of current bottleneck in 1/ the **parsing** and 2/ the **computation** of spectra. This bottleneck review should be uploaded on the documentation, with working examples for small (~1 cm-1) and large (~100 cm-1) spectra. See this example: https://github.com/radis/radis/issues/685
 
