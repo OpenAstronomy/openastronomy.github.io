@@ -1,8 +1,7 @@
 ---
 name: Electronic spectra for RADIS
-desc: The project aims at adding the possibility to calculated electronic spectra with RADIS, mainly using the newly available molecules in ExoMol
-
 # add a short one line description of your project
+desc: The project aims at adding the possibility to calculated electronic spectra with RADIS, mainly using the newly available molecules in ExoMol
 requirements:
 # Student requirements:
  - Knowledge of Pandas or other DataFrame libraries
@@ -29,13 +28,21 @@ collaborating_projects:
  - radis
 ---
 
-
 #### Description
 
   
-The RADIS code was developed for the characterization of plasmas, flames and atmospheres. High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck. RADIS implements a new algorithm to compute these lineshapes, and is already one of the fastest line-by-line spectral codes available. It can also compute many different types of spectra (absorption / emission / equilibrium / nonequilibrium). In a typical calculation, a database of coefficients is loaded and these coefficients are multiplied according to physics laws to generate a set of linestrength in a spectrum. RADIS can handle different molecular databases such as HITRAN, HITEMP, EXOMOL, and GEISA. Currently, it supports the computation of rovibrational spectra, which correspond to transitions between rotational and vibrational energy levels. However, it lacks the capability to compute electronic spectra from databases like EXOMOL, which would complement its existing capabilities.
+The RADIS code was developed for the characterization of plasmas, flames and atmospheres.
+High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck.
+RADIS implements a new algorithm to compute these lineshapes, and is already one of the fastest line-by-line spectral codes available.
+It can also compute many different types of spectra (absorption / emission / equilibrium / nonequilibrium).
+In a typical calculation, a database of coefficients is loaded and these coefficients are multiplied according to physics laws to generate a set of line strengths in a spectrum.
+
+RADIS can handle different molecular databases such as HITRAN, HITEMP, EXOMOL, and GEISA.
+Currently, it supports the computation of rovibrational spectra, which correspond to transitions between rotational and vibrational energy levels.
+**However, it lacks the capability to compute electronic spectra from databases like EXOMOL, which would complement its existing capabilities.**
 
 Other codes allow to compute electronic spectra of diatomic molecules and can be used as a reference or comparison point:
+
 * Moose - https://github.com/AntoineTUE/Moose
 * MassiveOES - https://bitbucket.org/OES_muni/massiveoes (with Radis/MassiveOES example in https://github.com/radis/massiveOES-examples)
 * ExoMol list - https://www.exomol.com/software/
