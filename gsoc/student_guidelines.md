@@ -24,8 +24,8 @@ Some general pointers to follow are:
 
 1. **The better we know you, the better we can judge your application.**
 There are many ways to get yourself known by the community, you can introduce yourself through the
-OpenAstronomy mailing list, chat with us in the Matrix channel and even contact the mentors to know
-more about certain project. Also, when you have a particular idea in
+OpenAstronomy mailing list ([how to use Google Groups](https://support.google.com/groups/answer/1046523?hl=en)), chat with us in the Matrix channel([how to connect to matrix](https://element.io/user-guide)) and if required contact the mentors to know
+more about certain project. However, contacting mentors through email or direct messages is discourages, and contacting them in public channels is preferred to provide answers to multiple people at once. Also, when you have a particular idea in
 mind, get in touch with that project and introduce yourself.
 For `astropy` projects you can do this by sending an e-mail to the
 [astropy-gsoc-applications](<mailto:astropy-gsoc-applications@googlegroups.com>) mailing list
@@ -40,14 +40,16 @@ are loads of things to do with all the projects involved with OpenAstronomy,
 get involved!
 
 3. **Set yourself up as a developer.**
-Create an account on [GitHub](http://github.com) or [BitBucket](http://bitbucket.org).
+Create an account on [GitHub](http://github.com) or the forge the organisation is using.
 Don't know how to use [git](http://www.git-scm.com/) or [Mercurial](http://mercurial.selenic.com/)?
-Don't worry, it's easy and there are lots of git [tutorials](http://try.github.com) [online](http://gitimmersion.com/)
+Don't worry, there are lots of git [tutorials](http://try.github.com) [online](http://gitimmersion.com/)
 and many [Mercurial](https://www.mercurial-scm.org/wiki/Tutorial) [ones](http://hgbook.red-bean.com/read/)
 [as well](http://mercurial.selenic.com/) that will help you to get quite confident with it in a short time.
 Also both the [Astropy](http://docs.astropy.org/en/stable/index.html#developer-documentation)
 and [yt](http://yt-project.org/docs/dev/developing/developing.html)
 developer guides are great reads no matter what project you are thinking of working on.
+
+Have you got stuck? ask on the forum or chat rooms for help and volunteers will support you.
 
 4. **Start to be a developer.**
 Checkout the issue lists of the projects to see if there is something that you could do.
@@ -67,11 +69,11 @@ Prepare a plan on how you will tackle that project and the time it will take you
 Do not worry much in providing exact dates, but plan it as best as you can
 (if you are planing to have some holidays during the GSoC programme, then you should mention it too).
 Use [our application template][template-application-wiki] to describe how you plan to do the work during the programme.
-Also, don't be afraid to ask your potential mentor for help.
+Also, don't be afraid to ask your potential mentors for help.
 Don't be shy when describing yourself!
 
 6. **Submit your application.**
-Don't forget to [submit your application](https://summerofcode.withgoogle.com/) before the deadline.
+Don't forget to [submit your application](https://summerofcode.withgoogle.com/) before the deadline. Please, include the sub-org name at the start of your proposal title as: `[<sub-org>] <project name>`, where `<suborg>` should be the name of the sub-org in lower case (e.g., `sunpy`, `stingray`, `radis`), or the combination of two if it's the case(e.g., `astropy|sunpy`).
 We are also happy to give comments on your proposal if you like.  Feel free to
 add your application to the sub-org member's wiki following this format: "GSoC-\<YEAR\> Application \<sub-org\> \<Your Name\>:\<Project Name\>"
 and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
