@@ -73,7 +73,7 @@ Also, don't be afraid to ask your potential mentors for help.
 Don't be shy when describing yourself!
 
 6. **Submit your application.**
-Don't forget to [submit your application](https://summerofcode.withgoogle.com/) before the deadline. Please, include the sub-org name at the start of your proposal title as: `[<sub-org>] <project name>`, where `<suborg>` should be the name of the sub-org in lower case (e.g., `sunpy`, `stingray`, `radis`), or the combination of two if it's the case(e.g., `astropy|sunpy`).
+Don't forget to [submit your application](https://summerofcode.withgoogle.com/) before the deadline. Please, include the sub-org name at the start of your proposal title as: `[<sub-org>] <project name>`, where `<suborg>` should be the name of the sub-org in lower case (e.g., `sunpy`, `stingray`, `radis`), or the combination of two if it's the case (e.g., `astropy|sunpy`).
 We are also happy to give comments on your proposal if you like.  Feel free to
 add your application to the sub-org member's wiki following this format: "GSoC-\<YEAR\> Application \<sub-org\> \<Your Name\>:\<Project Name\>"
 and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
