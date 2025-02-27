@@ -24,8 +24,8 @@ Some general pointers to follow are:
 
 1. **The better we know you, the better we can judge your application.**
 There are many ways to get yourself known by the community, you can introduce yourself through the
-OpenAstronomy mailing list ([how to use Google Groups](https://support.google.com/groups/answer/1046523?hl=en)), chat with us in the Matrix channel([how to connect to matrix](https://element.io/user-guide)) and if required contact the mentors to know
-more about certain project. However, contacting mentors through email or direct messages is discourages, and contacting them in public channels is preferred to provide answers to multiple people at once. Also, when you have a particular idea in
+OpenAstronomy mailing list ([how to use Google Groups](https://support.google.com/groups/answer/1046523?hl=en)), chat with us in the Matrix channel ([how to connect to matrix](https://element.io/user-guide)) and if required contact the mentors to know
+more about certain project. However, contacting mentors through email or direct messages is discouraged, and contacting them in public channels is the preferred way to provide answers to multiple people at once. Also, when you have a particular idea in
 mind, get in touch with that project and introduce yourself.
 For `astropy` projects you can do this by sending an e-mail to the
 [astropy-gsoc-applications](<mailto:astropy-gsoc-applications@googlegroups.com>) mailing list
