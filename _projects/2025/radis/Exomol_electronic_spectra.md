@@ -61,6 +61,8 @@ Other codes allow to compute electronic spectra of diatomic molecules and can be
 
 * Add documentation and example. Add tests against other spectral codes.
 
+* To ease the understand of the physics behind the code, the contributor could start with non-equilibrium spectra of atomic species (see Secondary goals). This is entirely optional and up to the contributor. 
+
 ##### 2nd Evaluation
 
 * Add the possibility to compute electronic spectra at **thermal non-equilibrium** (electronic temperature != translational temperature)
@@ -74,6 +76,8 @@ Other codes allow to compute electronic spectra of diatomic molecules and can be
 * Have all code, tests, and documentation in GitHub.
 
 #### Secondary Goals
+
+* RADIS can compute atomic spectra thanks to the hard work of GSOC 2023 and 2024 contributors, see https://github.com/radis/radis/pull/689. An interesting approach would be to start with non-equilibrium spectra of atomic species as the physics is slighly easier than for molecule.  
 
 * Document architecture and developer guide when facing unclear points that may appear.
 
