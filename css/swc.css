@@ -345,7 +345,7 @@ footer {
     margin-top: 10px;
 	width: 100%;
 	bottom: 0;
-	position: fixed;
+	position: static;
 }
 
 footer a, footer a:hover{
