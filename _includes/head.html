@@ -18,7 +18,7 @@
     <!-- OGP ends here -->
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    {% include style.html %}
+    {% include_cached style.html %}
 
     <link rel="alternate" type="application/rss+xml" title="The OpenAstronomy Blog" href="{{config.site}}/feed.xml"/>
     <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->

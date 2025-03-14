@@ -6,3 +6,4 @@ versions = JSON.parse(open('https://pages.github.com/versions.json').read)
 
 gem 'github-pages', group: :jekyll_plugins
 gem 'html-proofer'
+gem 'jekyll-include-cache'

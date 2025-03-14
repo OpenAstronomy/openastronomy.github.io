@@ -43,6 +43,8 @@ exclude:
   - vendor/ruby/
   - _projects/_template.md
   - _projects/README.md
+plugins:
+  - jekyll-include-cache
 
 # Security Headers (Content Security Policy)
 webrick:
