@@ -1,0 +1,49 @@
+<h4 id="description">Description</h4>
+
+<p>SunPy currently uses <code class="language-plaintext highlighter-rouge">datetime.datetime</code> objects as it’s internal representation
+of time. The goal of this project is to transition every part of the SunPy
+codebase to using <code class="language-plaintext highlighter-rouge">astropy.time.Time</code> instead. The main motivation for this is
+that the <code class="language-plaintext highlighter-rouge">Time</code> object in Astropy supports much higher precision representations
+of time as well as supporting time formats <em>e.g.</em> TAI time which are commonly
+used by solar physicists.</p>
+
+<p>This transition is a major component of the planned SunPy 1.0 release, and will
+involve many changes to a lot of the SunPy library, and some design and user
+experience work to plan the project and ensure its success.</p>
+
+<p>As well as changing the internal representation of time in the SunPy library,
+this project will involve rewriting the <code class="language-plaintext highlighter-rouge">sunpy.time.parse_time</code> function. This
+function is used to convert any supported time input to <code class="language-plaintext highlighter-rouge">datetime.datetime</code>
+objects, and is used in most SunPy functions that accept time-like inputs. This
+function is also one of the oldest in SunPy, and in need of a redesign to go
+with the transition to <code class="language-plaintext highlighter-rouge">astropy.time.Time</code>. A successful candidate for this
+project will have done substantial research on the use of <code class="language-plaintext highlighter-rouge">parse_time</code> in the
+SunPy code and will appreciate the requirements for changes to this part of
+SunPy.</p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<h5 id="coding-starts">Coding Starts</h5>
+
+<ul>
+  <li>Engaged with the community and understand the motivation and challenges of the project, especially the desired changes to <code class="language-plaintext highlighter-rouge">parse_time</code>.</li>
+</ul>
+
+<h5 id="evaluation-1">Evaluation 1</h5>
+
+<ul>
+  <li>Have implemented a new version of <code class="language-plaintext highlighter-rouge">parse_time</code> including, tests and documentation.</li>
+</ul>
+
+<h5 id="evaluation-2">Evaluation 2</h5>
+
+<ul>
+  <li>Have transitioned <code class="language-plaintext highlighter-rouge">sunpy.net</code> to use <code class="language-plaintext highlighter-rouge">astropy.time.Time</code></li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>Have finished transitioning to <code class="language-plaintext highlighter-rouge">Time</code>, including increasing test coverage where required.</li>
+  <li>Have written some narrative documentation to assist users in making the transition.</li>
+</ul>

@@ -1,0 +1,18 @@
+<h4 id="description">Description</h4>
+
+<p>Here is a common astronomical problem: I have a table with objects on the sky, each of which has a flux and an observation time. I match them with some other photometric  catalog and them compute certain values (e.g. the mass, the age and the accretion rate). I store all that in the table. Astropy offers a lot of classes to make this easier, for example coordinates that know how to transform between different coordinate systems.
+Once I write my publication, I need to store that table as a fits file and print it out to LaTeX. This is where the problem comes: Each of the special objects (coordinates, times, units) has metadata that does not easily fit into the data column.</p>
+
+<p>Astropy grew out of several independent pacakges (pyfits, asciitable) that each did one thing well, but were not very easy to interoperate. Astropy has (mostly) unified the interface, but functionally components still work separately. In this project, you will makes things interoperable. For the example above, you need to develop a protocol that allows storage of coordinates and times in fits and ascii tables.
+There is some discussion about this in <a href="https://github.com/astropy/astropy/issues/5626">issue 5625</a>.</p>
+
+<p>This project the following stages:</p>
+
+<ul>
+  <li>Find breaks in the workflow as described in the example above.</li>
+  <li>Define protocols for meta data that make it work between different packages.</li>
+  <li>Solicit feedback from the community on those protocols.</li>
+  <li>Implement code and test cases.</li>
+  <li>Test and document the steps above.</li>
+  <li>Add an <a href="http://tutorials.astropy.org">astropy tutorials</a> and update Astropy core package documentation to show the new capabilities.</li>
+</ul>

@@ -1,0 +1,54 @@
+<h1 id="description">Description</h1>
+
+<p><a href="https://github.com/sunpy/sunpy-soar">sunpy-soar</a> is an plug-in to <a href="https://docs.sunpy.org/en/stable/tutorial/acquiring_data/index.html#sunpy-tutorial-acquiring-data-index">sunpy’s Fido</a> to download data from the <a href="https://soar.esac.esa.int/soar/">Solar Orbiter Archive (SOAR)</a>.</p>
+
+<p>This data provider has an extensive API and rich metadata which currently is not fully supported by sunpy-soar.</p>
+
+<p>The goal of this GSoC project, is to add support for a subset of the available metadata, the shear variety means that it is not practical or useful to add 100% coverage.
+The API of of the SOAR uses a <a href="https://git.ias.u-psud.fr/spice/data-analysis-club/-/blob/main/20231205-soar-tap/tap-demo.ipynb">TAP protocol</a> so it will be good for any student to get familiar with this protocol.
+Further to this, there is a large range of <a href="https://www.cosmos.esa.int/web/soar/tables-views-and-columns">possible values and types of tables</a> which are important to understand as they are different for different files.</p>
+
+<p>On the sunpy side, understanding the <a href="https://docs.sunpy.org/en/stable/topic_guide/extending_fido.html">sunpy.net attribute system</a> that Fido uses is also useful.
+This translates Python code into the correct values required to do any query and then back into “normal” values after.
+As we are not planning to add every metadata as a new attribute, we will make use of more generic ones to enable filtering, similar to how it is done for another data provider, the <a href="https://docs.sunpy.org/en/latest/generated/api/sunpy.net.jsoc.Keyword.html#sunpy.net.jsoc.Keyword">JSOC</a>.
+If we do need to add new ones, they should have a very specific reason to exist, or we might need to add support for them within sunpy for other data</p>
+
+<p>For example, there are existing attributes like that can be mapped like <code class="language-plaintext highlighter-rouge">Wavelength</code> which would take values from the following table <code class="language-plaintext highlighter-rouge">v_&lt;instrument&gt;_&lt;ll/sc&gt;_fits</code> with its column <code class="language-plaintext highlighter-rouge">wavelength</code>.
+<a href="https://github.com/sunpy/sunpy-soar/issues/46#issuecomment-1557936562">More examples are here.</a></p>
+
+<p>This will project will partly be working out all of the connections for each table to enable these “translations”.
+Thus the outcome would be:</p>
+
+<ol>
+  <li>Additional attributes with metadata from the SOAR are returned from a sunpy-soar query with Fido.</li>
+  <li>Support for searching/filters with these attributes.</li>
+</ol>
+
+<p>We do have one stretch goal and that would be to look into using <a href="https://astroquery.readthedocs.io/en/latest/utils/tap.html">astroquery TAP</a> instead of manually constructing the TAP queries in sunpy-soar.</p>
+
+<h2 id="goals">Goals</h2>
+
+<h3 id="community-bonding-period">Community Bonding Period</h3>
+
+<ul>
+  <li>Get familiar with the SOAR and TAP protocols.</li>
+  <li>Setup a development environment.</li>
+</ul>
+
+<h3 id="coding-starts">Coding starts</h3>
+
+<ul>
+  <li>Start working on adding support for additional attributes.</li>
+</ul>
+
+<h4 id="1st-evaluation">1st evaluation</h4>
+
+<ul>
+  <li>Have the additional attributes implemented.</li>
+</ul>
+
+<h4 id="final-evaluation">Final evaluation</h4>
+
+<ul>
+  <li>Enable filters on the additional attributes.</li>
+</ul>

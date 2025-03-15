@@ -1,0 +1,27 @@
+<h4 id="description">Description</h4>
+
+<p>The goal of the <a href="https://www.youtube.com/watch?v=DUT5rEU6pqM">HIPS to Py</a> GSoC project is to create a
+new Python package to work with <a href="http://aladin.u-strasbg.fr/hips/">Hierarchical Progressive Surveys (HIPS)</a>.</p>
+
+<p>HIPS has become a standard to share large astronomical survey images, using multi-resolution image tiles
+that can be fetched by a client, similar to Google maps.
+So far, a Java client (Aladin) and a JavaScript client (<a href="http://aladin.u-strasbg.fr/AladinLite/">AladinLite</a>) exist,
+but there’s no easy way to fetch HIPS data and make images from Python.</p>
+
+<p>This project would build on <a href="http://docs.astropy.org/en/stable/coordinates/index.html">Astropy coordinates</a>,
+and probably on <a href="https://healpy.readthedocs.io/">healpy</a>
+and <a href="https://reproject.readthedocs.io/en/stable/healpix.html">reproject</a>,
+and maybe on <a href="http://astropy-regions.readthedocs.io">regions</a>,
+i.e. we would use the functionionality implemented there to implement a HIPS client.</p>
+
+<p>The main feature / deliverable would be a way to take an arbitrary sky image geometry, given by a
+<a href="http://docs.astropy.org/en/stable/wcs/index.html">astropy.wcs.WCS</a>, and to compute a 2-dim numpy array
+where the pixel values are filled from HIPS data. In the background, there should be lower-level functionality
+(also exposed by the package) to fetch and manage HIPS tiles, and to reproject and stitch them together into an image.
+Then one could analyse the data from Python, or save it locally to a FITS or PNG image file.</p>
+
+<p>If you’re interested in this project, please have a look at the
+<a href="http://cdsads.u-strasbg.fr/abs/2015A%26A...578A.114F">HIPS paper</a>
+and the packages mentioned above (they have tutorial docs pages),
+and then contact Christoph if you have any questions or would be interested
+to start working on an application for this project.</p>

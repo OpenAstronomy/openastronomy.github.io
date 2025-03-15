@@ -1,0 +1,50 @@
+<h4 id="description">Description</h4>
+
+<p>In a previous GSoC project, <a href="https://github.com/sunpy/sunkit-image">sunkit-image</a>; a image analysis Python library for solar physics was created.
+Initially, functions were created to take a <code class="language-plaintext highlighter-rouge">numpy.array</code> and return a <code class="language-plaintext highlighter-rouge">numpy.array</code> and with hindsight, a mistake for the public API.
+One core goal of the SunPy Project is to ensure interoperability between the packages and this entails being able to pass in a <code class="language-plaintext highlighter-rouge">sunpy.map.Map</code> into a function and getting a <code class="language-plaintext highlighter-rouge">sunpy.map.Map</code> out.</p>
+
+<p>Therefore the aim of this GSoC project is:</p>
+
+<ol>
+  <li>Refactor specific functions to accept and return a <code class="language-plaintext highlighter-rouge">sunpy.map.Map</code> (or an <code class="language-plaintext highlighter-rouge">NDcube</code> instead, to be decided during the project) instead of a <code class="language-plaintext highlighter-rouge">numpy.array</code>.
+This would apply to functions that take a 2D data array and return one, functions like the <code class="language-plaintext highlighter-rouge">timelag</code> would not factor in to this.</li>
+  <li>Tackle some of the following issues:
+    <ol>
+      <li><a href="https://github.com/sunpy/sunkit-image/issues/83">Refactor the <code class="language-plaintext highlighter-rouge">coalignment</code> module</a></li>
+      <li><a href="https://github.com/sunpy/sunkit-image/issues/103">Add a coalignment example to the gallery</a></li>
+      <li><a href="https://github.com/sunpy/sunkit-image/issues/76">Add persistence transform example to the gallery</a></li>
+      <li><a href="https://github.com/sunpy/sunkit-image/issues/69">Inconsistent input types across functions</a></li>
+    </ol>
+  </li>
+</ol>
+
+<p>If there is some time left over:</p>
+
+<ol>
+  <li>Performance profiling of the current functions to find bottle necks and improve performance where possible.</li>
+</ol>
+
+<h4 id="goals">Goals</h4>
+
+<h5 id="community-bonding-period">Community Bonding Period</h5>
+
+<ul>
+  <li>Scope out what functions need changing and get familiar with the library.</li>
+  <li>Setup a development environment.
+    <h5 id="coding-starts">Coding starts</h5>
+  </li>
+  <li>Start working on the first function.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Have around ~50% of the functions taken care of.</li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>Finish updating each function in sunkit-image.</li>
+</ul>

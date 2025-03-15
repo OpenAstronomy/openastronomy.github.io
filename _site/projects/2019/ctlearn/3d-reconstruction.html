@@ -1,0 +1,34 @@
+<h4 id="description">Description</h4>
+
+<p>One of the main goals of CTLearn is developing and implementing methods to perform classification/regression on <strong>multiple images simultaneously</strong>. Most ground-based imaging air Cherenkov telescope (IACT) experiments use an array of multiple telescopes to image each shower stereoscopically. Stereo imaging is the main reason for the breakthrough of ground based gamma-ray astronomy a decade ago, making it possible to achieve a better shower reconstruction, in particular the reconstruction of arrival direction.</p>
+
+<p>When it comes to event reconstruction with convolutional neural networks (CNNs), it likely that in order to improve noticeably on existing reconstruction methods, it will be necessary for CNN-based methods to make full use of this stereo information. The current methods implemented in CTLearn, like the convolutional recurrent neural network (CRNN) model do not take full advantage of this information, as they handle each input image of an event without any explicit reference to the geometrical relationship between all of the images.</p>
+
+<p>The idea behind this project is to implement a pre-processing stage which does a preliminary geometric reconstruction before passing the data to a CNN. A purely geometric method, based on photon back-tracing coupled with information about the telescope positions and pointings, is used to reconstruct a 3D array input representing the shower. In this 3D array, unlike the original images (which is only a projection of the 3D shower onto the camera), locality is preserved, as information about the same part of the shower (in three dimensions) will be combined from all telescopes. Ideally, this should result in the locality and hierarchicality assumptions of CNNs being better satisfied, the CNN being better able to extract and use low-level shower information/features, and a more powerful classifier.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="gsoc-coding-starts">GSOC CODING STARTS</h5>
+
+<ul>
+  <li>Install CTLearn and DL1 Data Handler and verify that shower images can be loaded and manipulated as numpy arrays.</li>
+  <li>Read and understand the 3D geometric reconstruction method laid out in the Event Reconstruction for VERITAS note.</li>
+  <li>Make a plan for implementation and a definition for the 3D input structure (how photon tracks will be converted into a voxel volume)</li>
+</ul>
+
+<h5 id="gsoc-midterm">GSOC MIDTERM</h5>
+
+<ul>
+  <li>Implement the 3D reconstruction method and present example outputs (w/ visualization so they can be validated).</li>
+  <li>Present a design for a minimal 3D convolutional neural network for classification (based on a review of the literature).</li>
+  <li>Have all code and documentation in GitHub.</li>
+</ul>
+
+<h5 id="gsoc-final">GSOC FINAL</h5>
+
+<ul>
+  <li>Preprocess a small dataset using the 3D reconstruction code and write code in TensorFlow to train the 3D model on it (should be based on the existing CTLearn framework and only involve definining a new model + any modifications to data loading code required to load 3D data).</li>
+  <li>Further optimize/improve implementation of 3D reconstruction method.</li>
+  <li>Prepare a report on method feasibility: training time/speed, dataset size/reduction factors, dataset processing time, GPU memory limitations, preliminary performance/observations about training.</li>
+  <li>Have all code, documentation, and final configuration files and plots in GitHub.</li>
+</ul>

@@ -1,0 +1,66 @@
+<h4 id="description">Description</h4>
+
+<p>Quasi-periodic oscillations are the “heart-beat” of black holes and neutron stars: 
+oscillations with changing phase and frequency, probably due to the complicated motion of matter around these objects. 
+Besides characterizing how these frequencies evolve in time (accelerate, decelerate, for example, when the luminosity increases), 
+it is important to understand their exact physical meaning. A few examples in the literature use different approaches 
+to the problem, and calculate the different spectrum of the light emitted at different phases of these oscillations. 
+This is highly non-trivial: one cannot follow easily the single “heartbeat”, but needs to apply a strong de-noising to 
+the signal first, and then calculate the average spectrum during the oscillation. 
+The reward for this scientific approach can be very high, and people have implemented a few different approaches to the problem, e.g.:</p>
+
+<ul>
+  <li>
+    <p><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&amp;link_type=EJOURNAL">Ingram et al. 2016</a> <a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.461.1967I&amp;link_type=PREPRINT">open-access preprint</a></p>
+  </li>
+  <li>
+    <p><a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&amp;link_type=ARTICLE">Stevens &amp; Uttley 2016</a> <a href="http://adsabs.harvard.edu/cgi-bin/nph-data_query?bibcode=2016MNRAS.460.2796S&amp;link_type=PREPRINT">open-access preprint</a></p>
+  </li>
+</ul>
+
+<p>In this Project, the student will work with the mentor to implement the full chain of de-noising and 
+phase-resolved spectroscopy of quasi-periodic oscillations, in such a way that</p>
+
+<ul>
+  <li>
+    <p>Any user with proper data sets can easily get a result</p>
+  </li>
+  <li>
+    <p>If datasets do not allow a solution (e.g., the modulation is not strong enough) warnings have to be sent.</p>
+  </li>
+  <li>
+    <p>Both methods can actually be used for pulsars too (it is the trivial case!).</p>
+  </li>
+</ul>
+
+<h4 id="deliverables">Deliverables</h4>
+<p>Deliverables for this project will be</p>
+
+<h5 id="to-complete-each-milestone">To complete each milestone</h5>
+
+<ul>
+  <li>
+    <p>Working unit tests for each piece of code</p>
+  </li>
+  <li>
+    <p>Documentation for each class, method and function implemented</p>
+  </li>
+</ul>
+
+<h5 id="milestone-1">Milestone 1</h5>
+
+<ul>
+  <li>A semi-automated procedure to follow the frequency of oscillations as they vary</li>
+</ul>
+
+<h5 id="milestone-2">Milestone 2</h5>
+
+<ul>
+  <li>The de-noising function that leads to the oscillation average profile (“heartbeat” shape) at different energies</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>A suite of scripts outlining workflows useful to scientists in practice</li>
+</ul>

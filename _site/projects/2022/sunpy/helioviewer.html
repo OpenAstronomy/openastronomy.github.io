@@ -1,0 +1,40 @@
+<h4 id="description">Description</h4>
+
+<p>This project aims to design and implement a low level Python wrapper around the unirest API provided by the HelioViewer Project.
+This would create a new affiliated SunPy package (name up for suggestions).
+The benefit of this project is two-fold: firstly, SunPy is no longer responsible for maintaining the interface to the Helioviewer API, and secondly, the Helioviewer Project can add new Python-based capabilities as the API becomes available.</p>
+
+<p>Currently <code class="language-plaintext highlighter-rouge">sunpy</code> has a <code class="language-plaintext highlighter-rouge">HelioviewerClient</code> that implements only a handful of the available API.
+They are <code class="language-plaintext highlighter-rouge">getClosestImage</code>, <code class="language-plaintext highlighter-rouge">getJP2Image</code>, <code class="language-plaintext highlighter-rouge">getJP2Header</code> (in an open pull request as of writing) and <code class="language-plaintext highlighter-rouge">takeScreenshot</code> from the Helioviewer API as <a href="https://github.com/sunpy/sunpy/blob/master/sunpy/net/helioviewer.py">currently implemented</a>.</p>
+
+<p>What we want to do is to create a new Python package that will lightly wrap every aspect of the HelioViewer
+API allowing anyone to create their own helioviewer.org like GUI in Python (this could be part of the project
+but will depend on the progress).
+To facilitate this, we will need to remove the current code from <code class="language-plaintext highlighter-rouge">sunpy</code> and move it to the new affiliated package.</p>
+
+<p>Finally, we will then create a new client that interfaces with the <code class="language-plaintext highlighter-rouge">sunpy</code> downloader Fido.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engaged with the community and understand the motivation and challenges of the project.</li>
+  <li>Have set up a development environment.</li>
+  <li>Helped to setup the new package.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Have 45% of the Helioviewer API wrapped.</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>All of the Helioviewer API is wrapped within the package.</li>
+  <li>Fido Client created for Helioviewer.</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>

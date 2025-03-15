@@ -1,0 +1,57 @@
+<h1 id="description">Description</h1>
+
+<p>On April 8 2024, a total solar eclipse will will cross North America, passing over Mexico, the United States, and Canada.
+It is expected that more than 20 million people will be able to witness it and we can expect a large number of amateur photographers to record the event.</p>
+
+<p>Thus the purpose of this project is to develop tools to enable ground-based amateur photographs of the solar corona taken during the eclipse to be imported into <code class="language-plaintext highlighter-rouge">sunpy</code> and processed to enable comparison with space-based data sets already available in <code class="language-plaintext highlighter-rouge">sunpy</code> such as SDO/AIA.
+Eclipse photographs also frequently require processing steps such as stacking and aligning of multiple exposures, sharpening, and flat-fielding.
+This may require new algorithms to be developed or existing tools in SciPy or  other libraries to be identified and applied.</p>
+
+<p>This project will need to create the components within <code class="language-plaintext highlighter-rouge">sunpy</code> but also other libraries such as <code class="language-plaintext highlighter-rouge">sunkit-image</code>.</p>
+
+<p>There are several steps:</p>
+
+<ol>
+  <li><a href="https://svs.gsfc.nasa.gov/5073">Recreate this image.</a></li>
+  <li><a href="https://github.com/sunpy/solar-eclipse">Take the notebook and code from this repository</a> of a previous eclipse and update it work with the current version of sunpy.</li>
+  <li><a href="https://github.com/sunpy/sunpy/issues/7387">Add a new topic guide for the 2024 Eclipse</a>
+This one has several smaller steps to break up the work.
+    <ol>
+      <li>A guide on how to import a photograph into a Map and determine its coordinates</li>
+      <li>A guide on how to perform the following processing steps:
+a. Stacking images with different exposure times
+b. Flat-fielding
+c. Sharpening</li>
+    </ol>
+  </li>
+</ol>
+
+<p>Note this will be a difficult project as we are dealing with solar coordinates and how to determine them from the Earth.
+A background in Physics or Astronomy with experience of astropy or sunpy coordinates is preferred.</p>
+
+<h2 id="goals">Goals</h2>
+
+<h3 id="community-bonding-period">Community Bonding Period</h3>
+
+<ul>
+  <li>Get familiar wih solar coordinates and solar eclipse data.</li>
+  <li>Setup a development environment.</li>
+</ul>
+
+<h3 id="coding-starts">Coding starts</h3>
+
+<ul>
+  <li>Start by recreating the eclipse path image.</li>
+</ul>
+
+<h4 id="1st-evaluation">1st evaluation</h4>
+
+<ul>
+  <li>Have updated the old notebook code to work with newer data.</li>
+</ul>
+
+<h4 id="final-evaluation">Final evaluation</h4>
+
+<ul>
+  <li>Ideally finished each bullet pointed task.</li>
+</ul>

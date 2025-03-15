@@ -1,0 +1,56 @@
+<h4 id="description">Description</h4>
+
+<p>The EinsteinPy Codebase is currently in a beta state, where it can be used to play around with the data but, lacks the possibility of serious computations due to bad performance. We recently made some performance enhancements to accelerate the code upto 10-15X the current speed. But it is still not enough. Serious computations and research requires a very good performance along with ability to scale on multiple CPUs, GPUs. This can further facilitate the adoption of EinsteinPy in general relativity community. Moreover, the overall code structure, including coordinate conversions are little bit tricky as well as adding a new frame/coordinate system is a tiresome process in current model.</p>
+
+<p>There are multiple ways of accelerating the codebase. We would like to slowly try each and every one of them. First step in determining the performance will be profiling the complete codebase using any open source tool.</p>
+
+<p>After profiling is done, we can have two backend type model (like tensorflow). For the low performance codebase too, we will need to replace certain Python snippets with either less complex pyton code snippets (accelerated with numba) wherever possible, or with some sort of compiled fast language (C++ / Rust).</p>
+
+<p>However the GPU backend is not a hard and fast requirement from this project as per the current state of the codebase. The coordinate conversions in EinsteinPy are not the best in the industry right now. We aim to fix the problem of coordinate conversion. This fix can give a significance boost to the computation speed.</p>
+
+<p>Some modules like, shadow do not scale well. Also there are some theoretical issues which make the whole module slow. We would like to simulate black hole shadows of real sized black holes rather than M=1 Black holes which have no practical significance.</p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engaged with the community and understand the motivation and challenges of
+the project.</li>
+  <li>Have set up a development environment and get familiar with einsteinpy dependencies.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Have done the profiling of the codebase, found the bottlenecks.</li>
+  <li>Fixed the ODE Solver as it is too slow.</li>
+  <li>Fixed the coordinate conversions.</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd evaluation</h5>
+
+<ul>
+  <li>Work on shadow and hypersurface modules, find the reason why they do not scale well (possibly because of the integrator)</li>
+  <li>Publish the performance comparisons.</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>Complete the Rust/C++ backend for the project and publish it on GitHub.</li>
+  <li>Complete the coordinate conversion issue and add an easy way to introduce new coordinate systems.</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h4 id="secondary-goals">Secondary goals</h4>
+
+<ul>
+  <li>Fix any bugs that might appear regarding visualization, symbolic module and so forth</li>
+  <li>Make the code work on GPU too.</li>
+  <li>Review pull requests from other einsteinpy contributors, including the mentor</li>
+  <li>Give a talk about the work at some Python event.</li>
+</ul>
+

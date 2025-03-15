@@ -1,0 +1,102 @@
+<h4 id="description">Description</h4>
+
+<p>The Interface Region Imaging Spectrograph (IRIS) is a UV spectrograph
+that observes the chromosphere and transition region of the Sun with
+high spatial and time resolution to help reveal how the solar
+atmosphere is energized. IRIS produces data through two instruments: a
+slit-jaw imager which can take images of the Sun in various wavelength
+bands; and a slit spectrograph which disperses the light through the
+slit to produce 2D spectra (position along slit vs. wavelength). The
+slit can be used in sit-and-stare mode (slit remains over the same
+place on the Sun) or raster mode (sequentially scan the slit
+perpendicular to its axis across a region on the Sun). This project
+aims to introduce the capability to read in and analyze IRIS data
+using SunPy. This includes the following tasks:</p>
+
+<ol>
+  <li>
+    <p>Build upon pre-existing code in SunPy to develop an IRIS
+MapSequence class so that slit-jaw images can be read in, combined
+and analyzed in a convenient way.</p>
+  </li>
+  <li>
+    <p>Develop and test an IRISRaster class to read in, combine and
+analyze IRIS spectra from different raster positions.</p>
+  </li>
+  <li>
+    <p>Using the two classes developed above, build an IRISObservation
+container class to allow users to easily associate co-temporal
+slit-jaw images and spectra.</p>
+  </li>
+</ol>
+
+<p><em>Optional:</em> Although the IRIS instrument team has calibrated the
+ publicly available IRIS data, finer tuning of this calibration can be
+ helpful for advanced data analysis.  Tools to do this have been
+ developed by the IRIS team in the Interactive Data Language (IDL),
+ but no such tools exist in Python.  Depending on the progress and
+ preference of the student, these tools can be developed in Python as
+ part of this project.  This would include the following tasks:</p>
+
+<ol>
+  <li>
+    <p>Develop and test a function for residual wavelength calibration.
+This already exists in IDL.</p>
+  </li>
+  <li>
+    <p>Develop and test a function to calculate the IRIS response
+function.  This already exists in IDL but not Python.</p>
+  </li>
+  <li>
+    <p>Using the IRIS response function code, develop a function to
+convert IRIS data into physical units.  This already exists in IDL
+but not Python.</p>
+  </li>
+</ol>
+
+<p>A good proposal would demonstrate that the student is familiar with
+the Xarray package.</p>
+
+<h5 id="expected-outcomes">Expected Outcomes</h5>
+
+<ul>
+  <li>IRIS MapSequence class</li>
+  <li>IRISRaster class</li>
+  <li>IRISObservation class</li>
+</ul>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="gsoc-2017-coding-starts">GSOC 2017 CODING STARTS</h5>
+
+<ul>
+  <li>Have familiarised yourself with the basics of IRIS data through the
+resources below and Python classes nd the Xarray package.</li>
+  <li>Have worked with the mentors to get the package repository setup on
+GitHub.</li>
+</ul>
+
+<h5 id="gsoc-2017-midterm">GSOC 2017 MIDTERM</h5>
+
+<ul>
+  <li>Have developed an IRISMapSequence object and submitted a PR.</li>
+  <li>Have started work on an IRISRaster object.</li>
+</ul>
+
+<h5 id="gsoc-2017-final">GSOC 2017 FINAL</h5>
+
+<ul>
+  <li>Have got IRISMapSequence PR accepted.</li>
+  <li>Have completed development of an IRISRaster object and have a PR
+ready submitted and ready to be accepted.</li>
+  <li>Have completed development of an IRISObservation object and have
+opened a PR.</li>
+</ul>
+
+<h5 id="additional-resources">Additional Resources</h5>
+
+<ul>
+  <li><a href="http://iris.lmsal.com/">IRIS website</a></li>
+  <li><a href="https://www.lmsal.com/iris_science/doc?cmd=dcur&amp;proj_num=IS0196&amp;file_type=pdf">IRIS instrument paper</a></li>
+  <li><a href="http://iris.lmsal.com/itn26/itn26.pdf">Guide to IRIS data analysis</a></li>
+</ul>

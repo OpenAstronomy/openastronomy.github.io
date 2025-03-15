@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html ng-app="coala">
+    <head>
+
+    <title>Ideas page for Google Summer of Code 2017</title>
+    <link rel="icon" type="image/png" href="http://localhost:4000/img/logo/logoOA_white_svg.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="foss, open source, organisations, astronomy,
+    OpenAstronomy, astrophysics, GSoC, projects, members, " />
+    <meta name="description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+">
+    <meta name="author" content="OpenAstronomy" />
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ideas page for Google Summer of Code 2017" />
+    <meta property="og:description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+" />
+    <meta property="og:url" content="https://openastronomy.org/" />
+    <meta property="og:site_name" content="OpenAstronmy" />
+    <!-- OGP ends here -->
+    <link rel="canonical" href="http://localhost:4000/gsoc/gsoc2017/">
+
+        <!-- <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'> -->
+    <link href="../assets/fonts/fira-sans.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/css/swc.css" />
+    <link rel="stylesheet" type="text/css" href="/css/swc-bootstrap.css" />
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <link rel="alternate" type="application/rss+xml" title="The OpenAstronomy Blog" href="/feed.xml"/>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="../../../../assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+     // change background images from a list.
+     $(document).ready(function() {
+         // list of filenames endings
+         var backgrounds = ['ap', 'sp'];
+         var selected = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+         var bgpath = "/css/background_" + selected + '.jpg';
+         $('body').css('background-image', 'url(' + bgpath + ')');
+     });
+    </script>
+
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0/angular-route.min.js" defer></script>
+        <script type="text/javascript" src="/gsoc/display/data/faq.js"></script>
+        <script>
+         
+         
+         
+         var year = 2017
+         var projects = [
+             
+                 {
+                 
+                      "url": "/projects/2017/astropy/astroplan-speed.html",
+                      "relative_path": "_projects/2017/astropy/astroplan-speed.md",
+                      "path": "_projects/2017/astropy/astroplan-speed.md",
+                      "id": "/projects/2017/astropy/astroplan-speed",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Pedal to the metal for astroplan",
+                      "desc": "Profiling and speeding up observation scheduling with astroplan and astropy",
+                      "requirements": ["Python","Observational astronomy experience may be helpful, but not required"],
+                      "difficulty": "Intermediate",
+                      "mentors": ["bmorris3","stuartlittlefair","eteq"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python","astroplan"],
+                      "collaborating_projects": ["astropy","astroplan"],
+                      "title": "Astroplan Speed",
+                      "slug": "astroplan-speed",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/astropy/astroquery.html",
+                      "relative_path": "_projects/2017/astropy/astroquery.md",
+                      "path": "_projects/2017/astropy/astroquery.md",
+                      "id": "/projects/2017/astropy/astroquery",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Add additional archives to astroquery",
+                      "desc": "Implement module(s) to access currently unsupported astronomical archives using astroquery.",
+                      "requirements": ["Python","Basic understanding of web queries and APIs"],
+                      "difficulty": "low",
+                      "issues": ["https://github.com/astropy/astroquery/issues/226"],
+                      "mentors": ["keflavich","eteq","bsipocz","pllim"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python","astropquery"],
+                      "collaborating_projects": ["astropy","astroquery"],
+                      "title": "Astroquery",
+                      "slug": "astroquery",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/astropy/astrowidgets.html",
+                      "relative_path": "_projects/2017/astropy/astrowidgets.md",
+                      "path": "_projects/2017/astropy/astrowidgets.md",
+                      "id": "/projects/2017/astropy/astrowidgets",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Jupyter widgets for Astropy",
+                      "desc": "Create \"astrowidgets\" - Jupyter widgets for Astropy.",
+                      "requirements": ["Python","Very basic knowledge of CSS.","Basic understanding of javascript."],
+                      "difficulty": "low to intermediate",
+                      "mentors": ["mwcraig"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python","javascript"],
+                      "collaborating_projects": ["astropy","astrowidgets"],
+                      "title": "Astrowidgets",
+                      "slug": "astrowidgets",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/astropy/coord-velocities.html",
+                      "relative_path": "_projects/2017/astropy/coord-velocities.md",
+                      "path": "_projects/2017/astropy/coord-velocities.md",
+                      "id": "/projects/2017/astropy/coord-velocities",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Velocities in Astropy coordinates",
+                      "desc": "Implement framework for handling velocities and velocity transforms in astropy.coordinates.",
+                      "requirements": ["Python","Some knowledge of coordinate transformations.","Background in astronomical velocity frames and how they are used (helpful but not necessarily a strict requirement)."],
+                      "difficulty": "Expert",
+                      "mentors": ["mhvk","eteq","adrn"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python","astropy core"],
+                      "collaborating_projects": ["astropy"],
+                      "title": "Coord Velocities",
+                      "slug": "coord-velocities",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/astropy/ds9-regions.html",
+                      "relative_path": "_projects/2017/astropy/ds9-regions.md",
+                      "path": "_projects/2017/astropy/ds9-regions.md",
+                      "id": "/projects/2017/astropy/ds9-regions",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Complete the ds9 region file reader/writer",
+                      "desc": "Implement a reader and writer for the ds9 regions file format.",
+                      "requirements": ["Python"],
+                      "difficulty": "low to intermediate",
+                      "mentors": ["keflavich","cdeil"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python","regions"],
+                      "collaborating_projects": ["astropy"],
+                      "title": "Ds9 Regions",
+                      "slug": "ds9-regions",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/astropy/fits-table-wcs.html",
+                      "relative_path": "_projects/2017/astropy/fits-table-wcs.md",
+                      "path": "_projects/2017/astropy/fits-table-wcs.md",
+                      "id": "/projects/2017/astropy/fits-table-wcs",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Seamless Combination of SkyCoord, Table, WCS, and FITS",
+                      "desc": null,
+                      "requirements": ["Python","Some familiarity with FITS files"],
+                      "difficulty": "intermediate",
+                      "issues": ["https://github.com/astropy/astropy/issue/5626"],
+                      "mentors": ["hamogu","taldcroft","eteq"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python","astropy core"],
+                      "collaborating_projects": ["astropy"],
+                      "title": "Fits Table Wcs",
+                      "slug": "fits-table-wcs",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/astropy/hips.html",
+                      "relative_path": "_projects/2017/astropy/hips.md",
+                      "path": "_projects/2017/astropy/hips.md",
+                      "id": "/projects/2017/astropy/hips",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "HIPS to Py",
+                      "desc": "Write a Python client for Hierarchical Progressive Surveys (HIPS)",
+                      "requirements": ["Have Python / Numpy / Astropy skills","Know how to write tests with pytest and docs with Sphinx","Some open source experience","Some image processing experience","Interest in spherical geometry and HEALPIX / HIPS"],
+                      "difficulty": "Intermediate to high",
+                      "mentors": ["cdeil","tboch"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python","regions","web","math"],
+                      "collaborating_projects": ["astropy"],
+                      "title": "Hips",
+                      "slug": "hips",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/astropy/performance.html",
+                      "relative_path": "_projects/2017/astropy/performance.md",
+                      "path": "_projects/2017/astropy/performance.md",
+                      "id": "/projects/2017/astropy/performance",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Improve astropy performance in a sustainable way",
+                      "desc": "Increase the air speed velocity of Astropy core.",
+                      "requirements": ["Python","Cython","C","web"],
+                      "difficulty": "Intermediate",
+                      "mentors": ["taldcroft"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python","astropy core"],
+                      "collaborating_projects": ["astropy"],
+                      "title": "Performance",
+                      "slug": "performance",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/astropy/test-helper.html",
+                      "relative_path": "_projects/2017/astropy/test-helper.md",
+                      "path": "_projects/2017/astropy/test-helper.md",
+                      "id": "/projects/2017/astropy/test-helper",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Astropy Test Helper as a Separate Package",
+                      "desc": "Re-implement Astropy Test Helper as Separate Installable Package",
+                      "requirements": ["Python packaging experience.","familiarity with pytest"],
+                      "difficulty": "Intermediate to Advanced",
+                      "issues": ["https://github.com/astropy/astropy/pull/5770"],
+                      "mentors": ["pllim","bsipocz","Cadair"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python","astropy","pytest"],
+                      "collaborating_projects": ["astropy"],
+                      "title": "Test Helper",
+                      "slug": "test-helper",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/casacore/testing.html",
+                      "relative_path": "_projects/2017/casacore/testing.md",
+                      "path": "_projects/2017/casacore/testing.md",
+                      "id": "/projects/2017/casacore/testing",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Casacore testing",
+                      "desc": "Improve the test coverage of the python wrappers around casacore, and possibly add some python functionality",
+                      "requirements": ["Proficiency in Python"],
+                      "difficulty": "intermediate",
+                      "issues": ["https://github.com/casacore/python-casacore/issues/6","https://github.com/casacore/python-casacore/issues/60"],
+                      "mentors": ["tammojan","gijzelaerr"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python casacore testing"],
+                      "collaborating_projects": ["casacore"],
+                      "title": "Testing",
+                      "slug": "testing",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/glue/notebook.html",
+                      "relative_path": "_projects/2017/glue/notebook.md",
+                      "path": "_projects/2017/glue/notebook.md",
+                      "id": "/projects/2017/glue/notebook",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Glue notebook viewers",
+                      "desc": "Make it possible to use glue from the Jupyter notebook by developing notebook-based data viewers. This will make it possible to also use glue remotely, and will be a widely used feature!",
+                      "requirements": ["Proficiency in Python","Familiarity with the Jupyter notebook"],
+                      "difficulty": "high",
+                      "issues": ["https://github.com/glue-viz/glue/issues/1226"],
+                      "mentors": ["astrofrog","eteq"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python"],
+                      "collaborating_projects": ["glue"],
+                      "title": "Notebook",
+                      "slug": "notebook",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/glue/widgets.html",
+                      "relative_path": "_projects/2017/glue/widgets.md",
+                      "path": "_projects/2017/glue/widgets.md",
+                      "id": "/projects/2017/glue/widgets",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "New glue widgets",
+                      "desc": "Expand the functionality of glue by developing a range of new widgets, including to better read in and edit data.",
+                      "requirements": ["Proficiency in Python","Familiarity with GUI programming, ideally Qt"],
+                      "difficulty": "medium",
+                      "issues": ["https://github.com/glue-viz/glue/issues/836","https://github.com/glue-viz/glue/issues/981","https://github.com/glue-viz/glue/issues/1073"],
+                      "mentors": ["astrofrog"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["python"],
+                      "collaborating_projects": ["glue"],
+                      "title": "Widgets",
+                      "slug": "widgets",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/juliaastro/astrolib.html",
+                      "relative_path": "_projects/2017/juliaastro/astrolib.md",
+                      "path": "_projects/2017/juliaastro/astrolib.md",
+                      "id": "/projects/2017/juliaastro/astrolib",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Porting the IDL Astronomy User's Library to Julia",
+                      "desc": "Expand the ecosystem of astronomical routines in Julia language.",
+                      "requirements": ["Julia","IDL","Knowledge of astronomy is beneficial, but not required"],
+                      "difficulty": "low to intermediate",
+                      "mentors": ["giordano","kbarbary"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["julia"],
+                      "collaborating_projects": ["JuliaAstro"],
+                      "title": "Astrolib",
+                      "slug": "astrolib",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/sunpy/drms.html",
+                      "relative_path": "_projects/2017/sunpy/drms.md",
+                      "path": "_projects/2017/sunpy/drms.md",
+                      "id": "/projects/2017/sunpy/drms",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "DRMS Module for JSOC Downloads",
+                      "desc": "Improve the drms package and the SunPy JSOC client,",
+                      "requirements": ["Familiarity with Python class development."],
+                      "difficulty": "medium",
+                      "issues": ["https://github.com/kbg/drms/issues/3","https://github.com/sunpy/sunpy/issues/1909"],
+                      "mentors": ["Cadair","kbg","mbobra"],
+                      "initiatives": ["GSOC","SoCiS"],
+                      "tags": ["sunpy","python"],
+                      "collaborating_projects": ["sunpy","drms"],
+                      "title": "Drms",
+                      "slug": "drms",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/sunpy/iris.html",
+                      "relative_path": "_projects/2017/sunpy/iris.md",
+                      "path": "_projects/2017/sunpy/iris.md",
+                      "id": "/projects/2017/sunpy/iris",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "SunPy IRIS Data class",
+                      "desc": "Develop tools to read in and analyze IRIS image and spectral data using SunPy.",
+                      "requirements": ["Familiarity with Python class development.","(Optional) A knowledge of the Interactive Data Language (IDL) would be useful, but not requried."],
+                      "difficulty": "medium",
+                      "issues": null,
+                      "mentors": ["ehsteve","DanRyanIrish"],
+                      "initiatives": ["GSOC","SoCiS"],
+                      "tags": ["sunpy","python"],
+                      "collaborating_projects": ["sunpy"],
+                      "title": "Iris",
+                      "slug": "iris",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/sunpy/mag_field.html",
+                      "relative_path": "_projects/2017/sunpy/mag_field.md",
+                      "path": "_projects/2017/sunpy/mag_field.md",
+                      "id": "/projects/2017/sunpy/mag_field",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "3D Map Class for Field Extrapolations in Spherical Coordinates",
+                      "desc": "Generalize magnetic field extrapolation to spherical coordinates in `solarbextrapolation` package with a \"coordinate-aware\" 3D Map-like object.",
+                      "requirements": ["Knowledge of vector calculus and differential equations","Familiar with numerical methods","Some familiarity with electromagnetism, MHD, potential/force-free magnetic fields (optional)"],
+                      "difficulty": "intermediate",
+                      "issues": ["https://github.com/sunpy/solarbextrapolation/issues/12"],
+                      "mentors": ["Alex-Ian-Hamilton","wtbarnes"],
+                      "initiatives": ["GSOC","SOCIS"],
+                      "tags": ["python","numba","numpy"],
+                      "collaborating_projects": ["sunpy"],
+                      "title": "Mag_field",
+                      "slug": "mag_field",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/sunpy/realtimesun.html",
+                      "relative_path": "_projects/2017/sunpy/realtimesun.md",
+                      "path": "_projects/2017/sunpy/realtimesun.md",
+                      "id": "/projects/2017/sunpy/realtimesun",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Sun, Right now!",
+                      "desc": "Build a website to display what the Sun looks like in real time",
+                      "requirements": ["Familiarity with Python","Understanding of databases","Basic web development","Familiarity with Flask"],
+                      "difficulty": "Intermediate",
+                      "issues": ["https://github.com/sunpy/sunpy/issues/1442","https://github.com/sunpy/sunpy/pull/1852"],
+                      "mentors": ["dpshelio","Cadair"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["sunpy"],
+                      "collaborating_projects": ["sunpy"],
+                      "title": "Realtimesun",
+                      "slug": "realtimesun",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/sunpy/roi.html",
+                      "relative_path": "_projects/2017/sunpy/roi.md",
+                      "path": "_projects/2017/sunpy/roi.md",
+                      "id": "/projects/2017/sunpy/roi",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Region of Interest",
+                      "desc": "Meta-Object creation for holding temporal and spatial features.",
+                      "requirements": ["Familiarity with Python","Understanding of design patterns"],
+                      "difficulty": "High",
+                      "issues": ["https://github.com/sunpy/sunpy/issues/164"],
+                      "mentors": ["dpshelio","wafels"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["sunpy"],
+                      "collaborating_projects": ["sunpy"],
+                      "title": "Roi",
+                      "slug": "roi",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/sunpy/sunkit-image.html",
+                      "relative_path": "_projects/2017/sunpy/sunkit-image.md",
+                      "path": "_projects/2017/sunpy/sunkit-image.md",
+                      "id": "/projects/2017/sunpy/sunkit-image",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "Develop sunkit-image",
+                      "desc": "Create and develop a package for solar image analysis.",
+                      "requirements": ["Good understanding of Python.","Enthusiasm to learn solar image processing."],
+                      "difficulty": "low",
+                      "issues": ["https://github.com/sunpy/sunpy/pull/1899","https://github.com/sunpy/sunpy/pull/1876"],
+                      "mentors": ["Cadair","wafels","Nabobalis"],
+                      "initiatives": ["GSOC","SOCIS"],
+                      "tags": ["python","sunpy"],
+                      "collaborating_projects": ["sunpy"],
+                      "title": "Sunkit Image",
+                      "slug": "sunkit-image",
+                 },
+                 {
+                 
+                      "url": "/projects/2017/sunpy/theme.html",
+                      "relative_path": "_projects/2017/sunpy/theme.md",
+                      "path": "_projects/2017/sunpy/theme.md",
+                      "id": "/projects/2017/sunpy/theme",
+                      "collection": "projects",
+                      "categories": [],
+                      "layout": null,
+                      "name": "SunPy Website Improvements",
+                      "desc": "Improve the SunPy website and documentation with a new look and new features.",
+                      "requirements": ["Experience with CSS and website design.","Excellent English language writing skills."],
+                      "difficulty": "low",
+                      "issues": null,
+                      "mentors": ["Cadair","dpshelio"],
+                      "initiatives": ["GSOC"],
+                      "tags": ["sunpy"],
+                      "collaborating_projects": ["sunpy"],
+                      "title": "Theme",
+                      "slug": "theme",
+                 },
+        ];
+        </script>
+        <script type="text/javascript" src="/gsoc/display/data/admins.js"></script>
+        <script type="text/javascript" src="/gsoc/display/vendors/angular-sanitize/angular-sanitize.js"></script>
+        <script type="text/javascript" src="/gsoc/display/vendors/showdown/showdown.js"></script>
+        <script type="text/javascript" src="/gsoc/display/vendors/markdown/markdown.js"></script>
+        <script type="text/javascript" src="/gsoc/display/resources/js/app.js"></script>
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    
+
+</head>
+
+<body>
+
+    <header class="site-header" style="background-color: #292929;">
+
+  
+
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/">
+          <img class="media-object logo" src="http://localhost:4000/img/logo/logoOA_white_svg.png" alt="OpenAstronomy" />
+      </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/gsoc/">Google Summer of Code</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/members/">Members</a>
+          
+        
+          
+          <a class="page-link" href="/news.html">News and Events</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+        
+          <a class="page-link" href="http://openastronomy.org/Universe_OA">Contributor Blogs</a>
+        
+          <a class="page-link" href="http://openastronomy.org/pyastro">PyAstro Conference</a>
+        
+          <a class="page-link" href="https://calendar.google.com/calendar/b/1?cid=YmxoZzd0MG9zbjhscm50ZDcwOXFoZzFtaXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Events Calendar</a>
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="projects" > <!-- To keep the css separated -->
+    <div class="page-content">
+    <main ng-app="gsoc">
+    <div ng-controller="TabController as tc">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <ul class="tabs uppercase">
+                        <li class="tab col-md-4"><a name="/projects" ng-click="tc.setTab('/projects')" ng-class="{active:tc.isSet('/projects')}">Projects</a></li>
+                        <li class="tab col-md-4"><a name="/mentors" ng-click="tc.setTab('/mentors')" ng-class="{active:tc.isSet('/mentors')}">Mentors</a></li>
+                        <li class="tab col-md-4"><a name="/faq" ng-click="tc.setTab('/faq')" ng-class="{active:tc.isSet('/faq')}">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div ng-view=""></div>
+    </div>
+    </main>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+	<p class="tagline"><strong>OpenAstronomy</strong>: Combining the power of open source astrophysics projects to empower science.</p>
+  <a href="https://app.element.io/#/room/#openastronomy:openastronomy.org" target="_blank">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 40 40" height="100%">
+              <path fill="#f9f9f9" d="M30,12V8h-5.004l1-8h-4l-1,8h-7.998l1-8h-4l-1,8H2v4h6.498L7.5,20H2v4h5l-1,8h4l1-8h8l-1.002,8H22l1-8h7v-4h-6.5l0.996-8H30z M19.5,20h-8l0.998-8h7.998L19.5,20z"/>
+          </svg>
+      </span>
+  </a>
+  <a href="https://groups.google.com/forum/#!forum/openastronomy" target="_blank">
+      <span style="color:white!important;" >
+          <span class="icon-white  icon-envelope" style="color:blue!important;">
+	  </span>
+      </span>
+
+  </a>
+  <a href="https://community.openastronomy.org">
+      <img src="/img/icons/discourse_icon.png" alt="OpenAstronomy on Discourse">
+  </a>
+  <a rel="me" href="https://twitter.com/Open_Astronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+            </span>
+  </a>
+  <a rel="me" href="https://astrodon.social/@OpenAstronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </span>
+  </a>
+
+  <a href="/feed.xml">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/>
+          </svg>
+  </a>
+  <a href="https://github.com/openastronomy">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+          </svg>
+      </span>
+      <!-- <span class="username">OpenAstronomy</span> -->
+  </a>
+  </div>
+
+</footer>
+
+
+</body>
+</html>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $('select').material_select();
+    //$('ul.tabs').tabs();
+    $('.github-card').html('<img src="http://placehold.it/100x100" />')
+})
+</script>

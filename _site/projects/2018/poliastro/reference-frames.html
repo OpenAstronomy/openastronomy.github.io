@@ -1,0 +1,68 @@
+<h4 id="description">Description</h4>
+
+<p>One of the focuses of poliastro is having an easy to use API. That’s why,
+for instance, when mixing quantities in meters and kilometers, poliastro
+knows how to combine them in a proper way, thanks to astropy.units.
+However, we haven’t reached this level of easiness with reference frames
+yet: the frame is not part of the <code class="language-plaintext highlighter-rouge">Orbit</code> object, and mixing two orbits
+can therefore produce meaningless or absurd results, in the same way
+that mixing quantities in meters and kilometers can produce incorrect
+results if not done carefully.</p>
+
+<p>This project aims to resolve this difficulty by incorporating reference
+frames to poliastro <code class="language-plaintext highlighter-rouge">Orbit</code> objects. astropy already has <code class="language-plaintext highlighter-rouge">SkyCoord</code>
+objects that contain all the necessary information, but it’s not clear
+how to leverage them from poliastro (see
+<a href="https://github.com/poliastro/poliastro/issues/257">the relevant discussion</a>).</p>
+
+<p>On the other hand, validating all these algorithms cannot be done using
+textbook examples anymore and more complex strategies have to be found,
+for instance using the SPICE toolkit by NASA. Check out
+<a href="https://gist.github.com/Juanlu001/3ba5f97928da923889b4201a94d1daa0">the example on how to run it from Python using the third party library SpiceyPy</a>.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engaged with the community and understand the motivation and challenges of
+the project.</li>
+  <li>Have set up a development environment and run a basic example using SPICE
+kernels.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Have all the current reference frames conversion validated against SpiceyPy</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd evaluation</h5>
+
+<ul>
+  <li>Have a working prototype on how to add reference frames to <code class="language-plaintext highlighter-rouge">Orbit</code> objects</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>Have finished the refactoring of <code class="language-plaintext highlighter-rouge">Orbit</code> objects to allow for reference frames,
+using a default one if appropriate</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h4 id="secondary-goals">Secondary goals</h4>
+
+<ul>
+  <li>Fix any bugs that might appear regarding visualization, reference frames and so forth</li>
+  <li>Review pull requests from other poliastro contributors, including the mentor</li>
+  <li>Give a talk about the work at some Python event</li>
+</ul>
+
+<h4 id="additional-resources">Additional resources</h4>
+
+<ul>
+  <li><a href="http://aa.usno.navy.mil/publications/docs/Circular_179.pdf">USNO Circular 179</a></li>
+</ul>

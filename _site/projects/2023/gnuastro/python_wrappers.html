@@ -1,0 +1,56 @@
+<h4 id="description">Description</h4>
+
+<p>Gnuastro is primarily written in C because astronomical datasets are large and thus need to be efficient with few dependencies.
+Therefore, Gnuastro’s most commonly used interface are Gnuastro’s command-line programs (that are built on the Unix philosophy).
+However, Gnuastro’s also has an extensive set of installed, dynamic C/C++ libraries, which are actually the beating heart of all the programs (they do all the number crunching).
+On the other hand, many projects today are done in Python, almost excuslively using Numpy for their numerical operations (like data arrays).
+Python and Numpy are actually written in C, therefore they have very well-defined interfaces for communicating with installed C libraries.
+For example see <a href="https://numpy.org/doc/stable/reference/c-api/index.html">the core C library of Numpy</a>.</p>
+
+<p>As part of GSoC 2022, Jash Shah completed a first implementation of pyGnuastro, see https://github.com/Jash-Shah/pyGnuastro and https://test.pypi.org/project/pygnuastro.
+This was mostly focused on the low-level build system (for example to be integrated nicely with PyPi).
+With the inclusion of more libraries we discovered that Gnuastro’s error reporting also <a href="https://savannah.gnu.org/task/?16263">needs modification</a> for blending into Python.
+Jash also progressed nicely on this front in GSoC 2022, but it is not yet finished.</p>
+
+<p>This project therefore has two components: 1. completing the new error-reporting features of Gnuastro in its own Library. 2. Bringing the Gnuastro libraries into the pyGnuastro.
+This will be a wonderful chance to master Python and Scipy/Numpy at a very fundamental level, giving you a great experience to expand what you have learnt afterwards into many other functionalities (far beyond astronomy!).
+Of course, in the meantime you will also working on many real-world astronomical data and science scenarios, while collaborating with an international team using ground-based and space-based data.</p>
+
+<p>To get started, check <a href="https://savannah.gnu.org/support/index.php?110827#comment0">our GSoC 2023 checklist</a>.</p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<ul>
+  <li>
+    <p>Completing <a href="https://savannah.gnu.org/support/index.php?110827#comment0">our GSoC 2022 checklist</a></p>
+  </li>
+  <li>
+    <p>Completing the re-design of Gnuastro’s error functionality.</p>
+  </li>
+  <li>
+    <p>Adding wrappers for Gnuastro library functions in pyGnuastro.</p>
+  </li>
+</ul>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Learning the new error reporting functionality.</p>
+  </li>
+  <li>
+    <p>Implementing the error reporting function in some basic functions.</p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Implementing some of Gnuastro’s basic libraries in pyGnuastro (with new error reporting feature).</li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>Implementing all the necessary library functions in pyGnuastro, and adding high-level functionality to pyGnuastro like Gnuastro’s programs.</li>
+</ul>

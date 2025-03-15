@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenAstronomy</title>
+    <description>Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 14 Mar 2025 23:17:46 +0530</pubDate>
+    <lastBuildDate>Fri, 14 Mar 2025 23:17:46 +0530</lastBuildDate>
+    <generator>Jekyll v3.10.0</generator>
+    
+      <item>
+        <title>2019 Jul 29 - Aug 2 - Python in Astronomy</title>
+        <description>&lt;p&gt;The Python in Astronomy conference will be held at the Space Telescope Science
+Institute in Baltimore during July 29th - August 2nd. Check out the
+&lt;a href=&quot;http://openastronomy.org/pyastro/2019/&quot;&gt;conference website&lt;/a&gt; for more information.&lt;/p&gt;
+
+</description>
+        <pubDate>Mon, 29 Jul 2019 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2019/07/29/pyastro.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/07/29/pyastro.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>2018 September 24-27 - .Astronomy X</title>
+        <description>&lt;p&gt;The &lt;a href=&quot;https://www.dotastronomy.com/astronomy-x/&quot;&gt;tenth .Astronomy meeting&lt;/a&gt; will take
+place in Baltimore MD from September 24-27, 2018.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 24 Sep 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2018/09/24/dotastro.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/09/24/dotastro.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>2018 August 14: GSoC - End of Coding</title>
+        <description>&lt;p&gt;Students submit their final work product and their final mentor evaluation.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 14 Aug 2018 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2018/08/14/GSoC.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/08/14/GSoC.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>First OpenAstronomy - Software Carpentry Workshop</title>
+        <description>&lt;p&gt;Last week (11-15th January 2016) saw the first Open Astronomy workshop held at The University of Sheffield for the UK astronomy and solar physics communities. The first two days of the &lt;a href=&quot;http://openastronomy.org/2016-01-11-Sheffield/&quot;&gt;workshop&lt;/a&gt; consisted of the core syllabus of &lt;a href=&quot;http://software-carpentry.org/&quot;&gt;Software Carpentry&lt;/a&gt;, covering git, bash and an introduction to programming with Python. The last three days provided an introduction to carrying out research in astronomy using Python. The attendees were mostly PhD students in Astrophysics from the University of Sheffield, however there were also representation of other fields (mathematics, medicine, ecology), from other universities (St. Andrews, Reading) and at different stages in their careers (post-docs).&lt;/p&gt;
+
+&lt;p&gt;The workshop was taught by four different instructors (&lt;a href=&quot;https://github.com/CyclingNinja&quot;&gt;Sam&lt;/a&gt;, &lt;a href=&quot;https://github.com/SolarDrew&quot;&gt;Drew&lt;/a&gt;, &lt;a href=&quot;https://github.com/cadair&quot;&gt;Stuart&lt;/a&gt; and &lt;a href=&quot;https://github.com/dpshelio&quot;&gt;David&lt;/a&gt;) with the help of &lt;a href=&quot;https://github.com/astrofrog/&quot;&gt;Tom&lt;/a&gt; (an Astropy developer) on Thursday.
+We all brought different expertise and shared the teaching out to keep the workshop lively over a gruelling five days none of us taught more than three hours in one go, and we alternated days between teaching and assisting.
+We used the red-green post-it technique suggested by software carpentry as a way to know how people were getting on during the sessions, also, for every session the learners were asked to use these post-it notes to give us feedback on the session (green for something good you’ve learnt, red for something that can be improved).
+This not just helped us for the next workshop, but it also helped to the next instructor that day!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/img/IMG_20160111_094506.jpg&quot; alt=&quot;David teaching bash&quot; align=&quot;right&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As usual there were some software setup issues at the beginning of the week, however we were very close!
+Only one person from the whole class has troubles with the Jupyter notebook - it simply was not able to execute any command within. We didn’t manage to fix the problem, but probably it was the oldest laptop (running Windows 7) in the class.
+Beside that case, we come across a couple of other problems with other windows machines, in one of them &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git log&lt;/code&gt; was blocking the screen and the other could not open the text editor (Notepad++ in this case) when executing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;commit&lt;/code&gt; (or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;merge&lt;/code&gt; with the default message).&lt;/p&gt;
+
+&lt;p&gt;Each day we updated the &lt;a href=&quot;https://github.com/OpenAstronomy/2016-01-11_Sheffield_Notes&quot;&gt;official repository&lt;/a&gt; with lesson templates in Jupyter notebook format, where an outline of the class was available, and the code cells were empty to be filled in while following the lecture. Once we completed a session, the notes can be browsed &lt;a href=&quot;http://nbviewer.jupyter.org/github/OpenAstronomy/2016-01-11_Sheffield_Notes/blob/master/index.ipynb&quot;&gt;here&lt;/a&gt;.
+In this way everyone had to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fork&lt;/code&gt; our repository on github, then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pull&lt;/code&gt; at the start of every session from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;upstream&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;push&lt;/code&gt; at the end to their &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;origin&lt;/code&gt;.
+This cemented the work at the start of the week on git+GitHub, while making sure everyone had a backup of all the work they had completed during the week and learning the usual git workflow of contributing to a larger project on GitHub.
+Thanks to the visualisations on GitHub we can see how all &lt;a href=&quot;https://github.com/OpenAstronomy/2016-01-11_Sheffield_Notes/network&quot;&gt;these forks evolved&lt;/a&gt;, and see if the participants keep using GitHub!!&lt;/p&gt;
+
+&lt;p&gt;During one of the sessions we discovered a bug in the latest release of SunPy. We used the opportunity to demonstrate what to do in these cases: fill an issue on GitHub and provide the information needed so the developers can replicate such error.&lt;/p&gt;
+
+&lt;p&gt;We will be looking to repeat this workshop later in the year, probably before term starts in late September. In the mean time, feel free to use our material and contact us if you want more information.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 15 Jan 2016 00:00:00 +0530</pubDate>
+        <link>http://localhost:4000/2016/01/15/Workshop.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/01/15/Workshop.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

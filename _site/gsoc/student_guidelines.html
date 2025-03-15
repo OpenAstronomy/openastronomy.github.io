@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>GSoC Contributor Application Guidelines</title>
+    <link rel="icon" type="image/png" href="http://localhost:4000/img/logo/logoOA_white_svg.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="foss, open source, organisations, astronomy,
+    OpenAstronomy, astrophysics, GSoC, projects, members, " />
+    <meta name="description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+">
+    <meta name="author" content="OpenAstronomy" />
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="GSoC Contributor Application Guidelines" />
+    <meta property="og:description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+" />
+    <meta property="og:url" content="https://openastronomy.org/" />
+    <meta property="og:site_name" content="OpenAstronmy" />
+    <!-- OGP ends here -->
+    <link rel="canonical" href="http://localhost:4000/gsoc/student_guidelines.html">
+
+        <!-- <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'> -->
+    <link href="../assets/fonts/fira-sans.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/css/swc.css" />
+    <link rel="stylesheet" type="text/css" href="/css/swc-bootstrap.css" />
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <link rel="alternate" type="application/rss+xml" title="The OpenAstronomy Blog" href="/feed.xml"/>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="../../../../assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+     // change background images from a list.
+     $(document).ready(function() {
+         // list of filenames endings
+         var backgrounds = ['ap', 'sp'];
+         var selected = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+         var bgpath = "/css/background_" + selected + '.jpg';
+         $('body').css('background-image', 'url(' + bgpath + ')');
+     });
+    </script>
+
+    
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" style="background-color: #292929;">
+
+  
+
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/">
+          <img class="media-object logo" src="http://localhost:4000/img/logo/logoOA_white_svg.png" alt="OpenAstronomy" />
+      </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/gsoc/">Google Summer of Code</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/members/">Members</a>
+          
+        
+          
+          <a class="page-link" href="/news.html">News and Events</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+        
+          <a class="page-link" href="http://openastronomy.org/Universe_OA">Contributor Blogs</a>
+        
+          <a class="page-link" href="http://openastronomy.org/pyastro">PyAstro Conference</a>
+        
+          <a class="page-link" href="https://calendar.google.com/calendar/b/1?cid=YmxoZzd0MG9zbjhscm50ZDcwOXFoZzFtaXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Events Calendar</a>
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="fixed-wrap">
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="gsoc-contributor-application-guidelines">GSoC Contributor Application Guidelines</h1>
+
+<p>If you want to apply to OpenAstronomy to participate in GSoC
+there are many things you can do to improve your application.
+Many of OpenAstronomy’s admins and mentors have participated in
+previous editions of GSoC with their projects, so will be able to
+answer any questions you might have, come talk to us on [[Matrix]] or the
+mailing list.</p>
+
+<p>There are many guidelines on writing a good application and how to
+increase your chances, this guide covers the most important things
+to OpenAstronomy, however, you should also checkout the <a href="https://google.github.io/gsocguides/student/">GSoC Contributor
+Guide</a>, the <a href="http://python-gsoc.org/">Python Software Foundation</a> guide, the <a href="https://github.com/astropy/astropy/wiki/GSoC-Guidelines">Astropy GSoC guidelines</a> and the <a href="https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template">SymPy
+Guidelines</a> to name but a few.</p>
+
+<p>Some general pointers to follow are:</p>
+
+<ol>
+  <li>
+    <p><strong>The better we know you, the better we can judge your application.</strong>
+There are many ways to get yourself known by the community, you can introduce yourself through the
+OpenAstronomy mailing list (<a href="https://support.google.com/groups/answer/1046523?hl=en">how to use Google Groups</a>), chat with us in the Matrix channel (<a href="https://element.io/user-guide">how to connect to matrix</a>) and if required contact the mentors to know
+more about certain project. However, contacting mentors through email or direct messages is discouraged, and contacting them in public channels is the preferred way to provide answers to multiple people at once. Also, when you have a particular idea in
+mind, get in touch with that project and introduce yourself.
+For <code class="language-plaintext highlighter-rouge">astropy</code> projects you can do this by sending an e-mail to the
+<a href="mailto:astropy-gsoc-applications@googlegroups.com">astropy-gsoc-applications</a> mailing list
+(please do not send to the <code class="language-plaintext highlighter-rouge">astropy-dev</code> list).</p>
+  </li>
+  <li>
+    <p><strong>Become a user!</strong>
+Download one or more of the OpenAstronomy projects and start experimenting with the code.
+Look at the <a href="http://docs.sunpy.org/en/stable/generated/gallery/plotting/aia_example.html">latest pictures of the million degree Sun</a> with <a href="http://sunpy.org/">SunPy</a>,
+<a href="http://yt-project.org/docs/dev/quickstart/volume_rendering.html">volume render a simulation of the galaxy</a> with <a href="http://yt-project.org/">yt</a>, or
+<a href="https://learn.astropy.org/tutorials/1-Coordinates-Intro.html">plan some astronomical observations</a> with <a href="http://www.astropy.org">Astropy</a> - There
+are loads of things to do with all the projects involved with OpenAstronomy,
+get involved!</p>
+  </li>
+  <li>
+    <p><strong>Set yourself up as a developer.</strong>
+Create an account on <a href="http://github.com">GitHub</a> or the forge the organisation is using.
+Don’t know how to use <a href="http://www.git-scm.com/">git</a> or <a href="http://mercurial.selenic.com/">Mercurial</a>?
+Don’t worry, there are lots of git <a href="http://try.github.com">tutorials</a> <a href="http://gitimmersion.com/">online</a>
+and many <a href="https://www.mercurial-scm.org/wiki/Tutorial">Mercurial</a> <a href="http://hgbook.red-bean.com/read/">ones</a>
+<a href="http://mercurial.selenic.com/">as well</a> that will help you to get quite confident with it in a short time.
+Also both the <a href="http://docs.astropy.org/en/stable/index.html#developer-documentation">Astropy</a>
+and <a href="http://yt-project.org/docs/dev/developing/developing.html">yt</a>
+developer guides are great reads no matter what project you are thinking of working on.</p>
+  </li>
+</ol>
+
+<p>Have you got stuck? ask on the forum or chat rooms for help and volunteers will support you.</p>
+
+<ol>
+  <li>
+    <p><strong>Start to be a developer.</strong>
+Checkout the issue lists of the projects to see if there is something that you could do.
+<strong>You will be expected to submit a pull request to one of the OpenAstronomy projects before
+you submit your application (it does not have to be accepted, but it has to be something
+that shows your code abilities!).</strong> This requirement is to show that you know how git, github,
+pull requests and reviews work and allows mentors to eveluate all applications based on a real code
+contribution, instead of e.g. the name of a specific school.
+GSOC is a short program and we want to make sure you are
+ready to start immediately. If you have previously contributed to OpenAstronomy projects,
+you can point to those pull requests, too.</p>
+  </li>
+  <li>
+    <p><strong>Plan your application.</strong>
+Think which is your favourite project from the <a href="/gsoc/">ideas page</a> or think
+of a new one that will help out one of the OpenAstronomy members.
+Prepare a plan on how you will tackle that project and the time it will take you to solve it.
+Do not worry much in providing exact dates, but plan it as best as you can
+(if you are planing to have some holidays during the GSoC programme, then you should mention it too).
+Use <a href="https://github.com/OpenAstronomy/openastronomy.github.io/wiki/Contributor-Application-template">our application template</a> to describe how you plan to do the work during the programme.
+Also, don’t be afraid to ask your potential mentors for help.
+Don’t be shy when describing yourself!</p>
+  </li>
+  <li>
+    <p><strong>Submit your application.</strong>
+Don’t forget to <a href="https://summerofcode.withgoogle.com/">submit your application</a> before the deadline. Please, include the sub-org name at the start of your proposal title as: <code class="language-plaintext highlighter-rouge">[&lt;sub-org&gt;] &lt;project name&gt;</code>, where <code class="language-plaintext highlighter-rouge">&lt;suborg&gt;</code> should be the name of the sub-org in lower case (e.g., <code class="language-plaintext highlighter-rouge">sunpy</code>, <code class="language-plaintext highlighter-rouge">stingray</code>, <code class="language-plaintext highlighter-rouge">radis</code>), or the combination of two if it’s the case (e.g., <code class="language-plaintext highlighter-rouge">astropy|sunpy</code>).
+We are also happy to give comments on your proposal if you like.  Feel free to
+add your application to the sub-org member’s wiki following this format: “GSoC-&lt;YEAR&gt; Application &lt;sub-org&gt; &lt;Your Name&gt;:&lt;Project Name&gt;”
+and link such page in <a href="https://github.com/OpenAstronomy/openastronomy/wiki">the wiki</a>.</p>
+  </li>
+</ol>
+
+
+      </div>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+	<p class="tagline"><strong>OpenAstronomy</strong>: Combining the power of open source astrophysics projects to empower science.</p>
+  <a href="https://app.element.io/#/room/#openastronomy:openastronomy.org" target="_blank">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 40 40" height="100%">
+              <path fill="#f9f9f9" d="M30,12V8h-5.004l1-8h-4l-1,8h-7.998l1-8h-4l-1,8H2v4h6.498L7.5,20H2v4h5l-1,8h4l1-8h8l-1.002,8H22l1-8h7v-4h-6.5l0.996-8H30z M19.5,20h-8l0.998-8h7.998L19.5,20z"/>
+          </svg>
+      </span>
+  </a>
+  <a href="https://groups.google.com/forum/#!forum/openastronomy" target="_blank">
+      <span style="color:white!important;" >
+          <span class="icon-white  icon-envelope" style="color:blue!important;">
+	  </span>
+      </span>
+
+  </a>
+  <a href="https://community.openastronomy.org">
+      <img src="/img/icons/discourse_icon.png" alt="OpenAstronomy on Discourse">
+  </a>
+  <a rel="me" href="https://twitter.com/Open_Astronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+            </span>
+  </a>
+  <a rel="me" href="https://astrodon.social/@OpenAstronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </span>
+  </a>
+
+  <a href="/feed.xml">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/>
+          </svg>
+  </a>
+  <a href="https://github.com/openastronomy">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+          </svg>
+      </span>
+      <!-- <span class="username">OpenAstronomy</span> -->
+  </a>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

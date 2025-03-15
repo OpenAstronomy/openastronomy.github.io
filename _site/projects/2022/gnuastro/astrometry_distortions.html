@@ -1,0 +1,50 @@
+<h4 id="description">Description</h4>
+
+<p>Astrometry is a critical component in the processing of astronomical data.
+In short, astrometry is the process of finding the transformation matrix (including distortions) to convert pixel coordinates in one image into sky coordinates (usually RA and Dec).
+Gnuastro’s astrometry library aims to be fully blind, needing no prior information on the input image’s location in the sky, or the optical distortion of the camera that has taken the image.
+Many of the low-level components of astrometry have already been added in Gnuastro’s new implementation.
+In particular, as part of GSoC 2021, we can now successfully find the linear parameters of Astrometry.
+However, there are also non-linear (distortion) terms that need to be calculated.</p>
+
+<p>To get started, check <a href="https://savannah.gnu.org/support/index.php?110613#comment0">our GSoC 2022 checklist</a>.</p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<ul>
+  <li>
+    <p>Completing <a href="https://savannah.gnu.org/support/index.php?110613#comment0">our GSoC 2022 checklist</a></p>
+  </li>
+  <li>
+    <p>Learning basic concepts of Astrometry and existing functions.</p>
+  </li>
+  <li>
+    <p>Fixing bugs in existing components.</p>
+  </li>
+  <li>
+    <p>Adding the remaining high-level components to complete astrometry.</p>
+  </li>
+</ul>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Actively start fixing/adding some minor bugs/tasks in Gnuastro to get a good feeling of the coding style and logic within Gnuastro (this can be independent of astrometry).</p>
+  </li>
+  <li>
+    <p>Study the basic concepts of Astrometry and learning/testing the existing low-level features that have already been written.</p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Adding tests to existing steps and start working on finding distortions.</li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>Library and program for writing the full WCS (including distortions) in the FITS format.</li>
+</ul>

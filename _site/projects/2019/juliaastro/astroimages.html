@@ -1,0 +1,51 @@
+<h4 id="description">Description</h4>
+
+<p><a href="http://julialang.org/">Julia</a> is a programming language designed for technical
+computing that combines ease-of-use of dynamical languages, like Python, and
+high-performance of statically-compiled languages, like C.  Its most notable
+feature is <a href="https://en.wikipedia.org/wiki/Multiple_dispatch">multiple dispatch</a>,
+which greatly simplifies the definition of complex functions whose behavior
+depends on the type of the arguments.</p>
+
+<p>The <a href="https://juliaastro.github.io/">JuliaAstro</a> organization aims at providing
+to astronomers the tools to work with the Julia language: there are libraries
+for manipulation of FITS files, transformation of coordinates, cosmological
+calculations, time system conversions, and computation of dust extinction laws.</p>
+
+<p>One of the latest packages is
+<a href="https://github.com/JuliaAstro/AstroImages.jl"><code class="language-plaintext highlighter-rouge">AstroImages.jl</code></a>, which will
+allow researchers to visualize astronomical images coming from <a href="https://en.wikipedia.org/wiki/FITS">FITS
+files</a>.  This package is now in its infancy
+and has very basic features, the goal of this project is to expand it and make
+it more useful.  <code class="language-plaintext highlighter-rouge">AstroImages.jl</code> has not been officially registered yet, thus
+you will be able to freely make any breaking change.</p>
+
+<h4 id="expected-outcomes">Expected Outcomes</h4>
+
+<ul>
+  <li>Design and implement the user interface</li>
+  <li>Support visualization of multiple extensions (e.g., three extensions combined
+with RGB)</li>
+  <li>Integrate with WCS info (accessible via
+<a href="https://github.com/JuliaAstro/WCS.jl"><code class="language-plaintext highlighter-rouge">WCS.jl</code></a>)</li>
+  <li>Integrate with common visualization and plotting frameworks in Julia, like
+<a href="https://github.com/JuliaImages/Images.jl"><code class="language-plaintext highlighter-rouge">Images.jl</code></a>,
+<a href="https://github.com/JuliaPlots/Plots.jl"><code class="language-plaintext highlighter-rouge">Plots.jl</code></a>, and optionally
+<a href="https://github.com/JuliaPlots/Makie.jl"><code class="language-plaintext highlighter-rouge">Makie.jl</code></a></li>
+  <li>Ensure smooth integration with Jupyter notebooks (basic integration is already
+in place)</li>
+  <li>Write documentation and tests</li>
+</ul>
+
+<h4 id="additional-resources">Additional resources</h4>
+
+<ul>
+  <li><a href="https://giordano.github.io/blog/2018-03-22-astroimages/">Presentation of
+<code class="language-plaintext highlighter-rouge">AstroImages.jl</code></a></li>
+  <li><a href="http://dx.doi.org/10.1086/382245">Preparing Red‐Green‐Blue Images from CCD
+Data</a></li>
+  <li><a href="http://docs.astropy.org/en/stable/visualization/wcsaxes/">Making plots with world coordinates in
+Astropy</a></li>
+  <li><a href="https://reproject.readthedocs.io/en/stable/">Image reprojection (resampling) in
+Python</a></li>
+</ul>

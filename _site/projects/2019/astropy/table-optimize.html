@@ -1,0 +1,43 @@
+<p>Improving astropy Table performance</p>
+
+<h4 id="description">Description</h4>
+
+<p>The astropy table sub-package defines a core Table class that is
+used to store and manipulate tabular data within astropy.  This class
+was written with an emphasis on functionality, convenience for astronomers,
+and code clarity.  With the astropy table package now fairly mature
+and with a strong set of regression tests in place, it is time to focus
+on performance for basic operations like table creation and slicing.
+For a simple operation like slicing, astropy Table is currently about
+a factor of 10 slower than Pandas.  This project will focus on identifying
+performance bottlenecks, writing performance tests for astropy-benchmarks,
+and then developing code to improve the performance.  It is possible that
+some fixes will require the use of Cython so previous experience is
+desirable though not absolutely required.</p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<h5 id="gsoc-2019-coding-starts">GSOC 2019 CODING STARTS</h5>
+
+<ul>
+  <li>Perform developer install of <code class="language-plaintext highlighter-rouge">astropy</code>.</li>
+  <li>Install Python profiling tools.</li>
+  <li>Study astropy and the table package capabilities.</li>
+</ul>
+
+<h5 id="gsoc-2019-midterm">GSOC 2019 MIDTERM</h5>
+
+<ul>
+  <li>Install and run <code class="language-plaintext highlighter-rouge">asv</code>.</li>
+  <li>Examine existing <code class="language-plaintext highlighter-rouge">asv</code> benchmarks and identify areas for improved benchmarking.</li>
+  <li>Profile key parts of table code and identify performance bottlenecks.</li>
+  <li>Identify strategies for improved speed performance.</li>
+  <li>Implement initial performance improvements.</li>
+</ul>
+
+<h5 id="gsoc-2019-final">GSOC 2019 FINAL</h5>
+
+<ul>
+  <li>Continue and finalize implementation of performance improvements.</li>
+  <li>Contine and finalize additional <code class="language-plaintext highlighter-rouge">asv</code> benchmark tests.</li>
+</ul>

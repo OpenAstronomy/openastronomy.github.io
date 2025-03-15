@@ -1,0 +1,12 @@
+<h4 id="description">Description</h4>
+
+<p>You want to schedule observations of one thousand targets over the next month. You are given one hour. Can you help us make astroplan the tool that’s up to the task?</p>
+
+<p>Last summer’s astroplan GSoC student began implementing a module for <a href="http://astroplan.readthedocs.io/en/latest/tutorials/scheduling.html">scheduling astronomical observations</a>. These scheduling operations require many calls to basic coordinate calculations – e.g. when does this target rise/set? – which can be optimized at several places within astropy core in the <a href="http://docs.astropy.org/en/stable/api/astropy.coordinates.SkyCoord.html"><code class="language-plaintext highlighter-rouge">SkyCoord</code></a> object and within the astroplan package to speed up astroplan’s schedulers. Some goals of this project are to:</p>
+
+<ol>
+  <li>Profile astroplan’s rise/set functions and identify inefficiencies in the <code class="language-plaintext highlighter-rouge">SkyCoord</code> object</li>
+  <li>Make efficiency improvements wherever possible with the findings of Step 1</li>
+  <li>Design/implement an API for accessing simple trigonometric rise/set calculations within astroplan’s schedulers (this is where some observational astronomy experience would be handy)</li>
+  <li>Test improved astroplan against some target use cases. We’d like to generate schedules for thousands of targets in a reasonable amounts of time, like those required by the <a href="https://lco.global">LCOGT</a> operators.</li>
+</ol>

@@ -1,0 +1,55 @@
+<h4 id="description">Description</h4>
+
+<p>The SunPy JSOC client is a very rudimentary client to the
+JSOC’s <a href="http://jsoc.stanford.edu/ajax/exportdata.html">export data CGI</a>.
+The <a href="https://github.com/kbg/drms">drms</a> Python module is a more complete
+implementation of the DRMS protocol. This project will involve contributions to
+both drms and SunPy, to improve the drms library and integrate it into SunPy.</p>
+
+<p>The drms module needs testing, and some other packaging improvements to
+automatically run the tests. This might involve adoption of some of the Astropy
+packaging code such as astropy_helpers, as agreed by the drms authors.</p>
+
+<p>Once the drms package has been well tested, CI added and a conda package
+created, the SunPy JSOC client could be improved and extended to enable use of
+the majority of the drms functionality through the unified search API of SunPy.
+While the SunPy implementation would not need to provide all the features of the
+drms library, it would strive to provide a simple API for most queries supported
+by drms. One high-priority feature that should be availble in SunPy is the
+ability to query drms series for which the prime key is not <code class="language-plaintext highlighter-rouge">T_REC</code>, also it
+should be possible to download only the metadata from drms without downloading
+the associated image data.</p>
+
+<p>Finally, documentation in SunPy should be improved to detail much more of the
+JSOC functionality. This should include API documentation, narrative
+documentation in the guide and examples in the gallery.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="gsoc-2017-coding-starts">GSOC 2017 CODING STARTS</h5>
+
+<ul>
+  <li>Have familiarised yourself with the drms module, the <code class="language-plaintext highlighter-rouge">sunpy.net.jsoc</code> and <code class="language-plaintext highlighter-rouge">sunpy.net.Fido</code> submodules.</li>
+  <li>Become comfortable with writing tests in pytest, and using mock.</li>
+</ul>
+
+<h5 id="gsoc-2017-midterm">GSOC 2017 MIDTERM</h5>
+
+<ul>
+  <li>Have developed a test suite for drms.</li>
+  <li>Have worked with the mentors to enable CI testing and build a conda package for the drms library.</li>
+</ul>
+
+<h5 id="gsoc-2017-final">GSOC 2017 FINAL</h5>
+
+<ul>
+  <li>Have completed a rework of the <code class="language-plaintext highlighter-rouge">sunpy.net.jsoc</code> module to use the features of drms.</li>
+</ul>
+
+<h5 id="additional-resources">Additional Resources</h5>
+
+<ul>
+  <li><a href="https://drms.readthedocs.io/en/stable/tutorial.html">drms Tutorial</a></li>
+  <li><a href="https://nbviewer.jupyter.org/github/kbg/ipynbs/blob/master/hminuggets/sharp_imgdata.ipynb">SHARP Example</a></li>
+  <li><a href="https://nbviewer.jupyter.org/github/mbobra/calculating-spaceweather-keywords/blob/master/plot_swx_d3.ipynb">Metadata example</a></li>
+</ul>

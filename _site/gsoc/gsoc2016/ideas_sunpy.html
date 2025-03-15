@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Ideas for SunPy</title>
+    <link rel="icon" type="image/png" href="http://localhost:4000/img/logo/logoOA_white_svg.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="foss, open source, organisations, astronomy,
+    OpenAstronomy, astrophysics, GSoC, projects, members, " />
+    <meta name="description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+">
+    <meta name="author" content="OpenAstronomy" />
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ideas for SunPy" />
+    <meta property="og:description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+" />
+    <meta property="og:url" content="https://openastronomy.org/" />
+    <meta property="og:site_name" content="OpenAstronmy" />
+    <!-- OGP ends here -->
+    <link rel="canonical" href="http://localhost:4000/gsoc/gsoc2016/ideas_sunpy.html">
+
+        <!-- <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'> -->
+    <link href="../assets/fonts/fira-sans.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/css/swc.css" />
+    <link rel="stylesheet" type="text/css" href="/css/swc-bootstrap.css" />
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <link rel="alternate" type="application/rss+xml" title="The OpenAstronomy Blog" href="/feed.xml"/>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="../../../../assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+     // change background images from a list.
+     $(document).ready(function() {
+         // list of filenames endings
+         var backgrounds = ['ap', 'sp'];
+         var selected = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+         var bgpath = "/css/background_" + selected + '.jpg';
+         $('body').css('background-image', 'url(' + bgpath + ')');
+     });
+    </script>
+
+    
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" style="background-color: #292929;">
+
+  
+
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/">
+          <img class="media-object logo" src="http://localhost:4000/img/logo/logoOA_white_svg.png" alt="OpenAstronomy" />
+      </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/gsoc/">Google Summer of Code</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/members/">Members</a>
+          
+        
+          
+          <a class="page-link" href="/news.html">News and Events</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+        
+          <a class="page-link" href="http://openastronomy.org/Universe_OA">Contributor Blogs</a>
+        
+          <a class="page-link" href="http://openastronomy.org/pyastro">PyAstro Conference</a>
+        
+          <a class="page-link" href="https://calendar.google.com/calendar/b/1?cid=YmxoZzd0MG9zbjhscm50ZDcwOXFoZzFtaXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Events Calendar</a>
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="fixed-wrap">
+    <div class="page-content">
+      <div class="wrapper">
+        <h3 id="lightcurve-refactor">Lightcurve Refactor</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/Cadair">Stuart Mumford</a>, <a href="https://github.com/DanRyanIrish">Dan Ryan</a>, <a href="https://github.com/aringlis">Andrew Inglis</a>, <a href="https://github.com/wafels">Jack Ireland</a></p>
+
+<p><em>Difficulty:</em> Beginner</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description">Description</h4>
+<p>The <code class="language-plaintext highlighter-rouge">Lightcurve</code> class is one of the three core datatypes in SunPy, along with Map and Spectra.
+<code class="language-plaintext highlighter-rouge">Lightcurve</code> is designed to read in, process and store meta data related to solar physics time series data.
+Currently, <code class="language-plaintext highlighter-rouge">Lightcurve</code> uses the pandas library as its underlying data structure, however, this is subject to change in the future.</p>
+
+<p>Much like the <code class="language-plaintext highlighter-rouge">map</code> submodule, <code class="language-plaintext highlighter-rouge">lightcurve</code> needs to be able to read in various supported data formats (such as FITS, ascii and others in the future), store their meta data and give users unified access to this metadata independently of the original source of the data.</p>
+
+<p>As currently implemented (as of 0.6) the <code class="language-plaintext highlighter-rouge">lightcurve</code> module performs three core tasks:</p>
+
+<ol>
+  <li>Download the raw data</li>
+  <li>Read this data into a pandas dataframe</li>
+  <li>store the meta data obtained with the data.</li>
+</ol>
+
+<p>As of the SunPy 0.7 release the first stage will be moved out of <code class="language-plaintext highlighter-rouge">lightcurve</code> and into the <code class="language-plaintext highlighter-rouge">net</code> subpackage as part of the <a href="https://github.com/sunpy/sunpy/pull/1300"><code class="language-plaintext highlighter-rouge">UnifiedDownloader</code></a> Pull Request.
+This leaves <code class="language-plaintext highlighter-rouge">lightcurve</code> in a similar position to <code class="language-plaintext highlighter-rouge">map</code> where the data acquisition is not part of the core data type and is managed separately.</p>
+
+<p>The objective of this project is to re-implement the core of the lightcurve submodule, such that it no longer contains the code to download data from the internet. The lightcurve module should be able to open file from disk that have been downloaded using the new UnifiedDownloader submodule. The lightcurve factory must be able to read files from multiple sources some of which will be able to be auto-detcted and some which will not. The lightcurve module must also be able to combine multiple files into a single timeseries.</p>
+
+<p><strong>Expected Outcomes</strong></p>
+
+<p>Someone under taking this project will complete the following tasks:</p>
+
+<ol>
+  <li>Become familiar with the <code class="language-plaintext highlighter-rouge">UnifiedDownloader</code> code, if it has not been accepted into the SunPy codebase, complete the remaining tasks for this to be achieved.</li>
+  <li>Write a factory class for <code class="language-plaintext highlighter-rouge">lightcurve</code> similar to the <code class="language-plaintext highlighter-rouge">sunpy.map.Map</code> class. This class will be a generic constructor for <code class="language-plaintext highlighter-rouge">lightcurve</code> allowing the user to instantiate any one of the many subclasses of <code class="language-plaintext highlighter-rouge">GenericLightcurve</code> present in <code class="language-plaintext highlighter-rouge">sunpy.lightcurve.sources</code>. The API design for the factory class is in <a href="https://github.com/sunpy/sunpy-SEP/blob/master/SEP-0007.md">SEP 7</a>.</li>
+  <li>Design and develop a robust method of dealing with lightcurve meta data, which can handle joining different parts of timeseries from different files, each with their own meta data. (See <a href="https://github.com/sunpy/sunpy/issues/1122">#1122</a>)</li>
+</ol>
+
+<p>A successful proposal for this project will demonstrate that the applicant has understood the mechanism behind the <code class="language-plaintext highlighter-rouge">Map</code> factory as already implemented in SunPy and presents a timeline of what things need to change in Lightcurve to mirror the design of <code class="language-plaintext highlighter-rouge">Map</code> and follow the design for Lightcurve in <a href="https://github.com/sunpy/sunpy-SEP/blob/master/SEP-0007.md">SEP 7</a>.</p>
+
+<h3 id="implementing-aia-response-functions-in-sunpy">Implementing AIA response functions in SunPy</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="https://github.com/SolarDrew">Drew Leonard</a>, <a href="https://github.com/wtbarnes">Will Barnes</a></p>
+
+<p><em>Difficulty:</em> Beginner</p>
+
+<p><em>Astronomy knowledge needed:</em> Some knowledge of coronal emission processes would be beneficial.</p>
+
+<p><em>Programming skills:</em> Python.</p>
+
+<h4 id="description-1">Description</h4>
+
+<p>The <a href="http://www.chiantidatabase.org/">CHIANTI</a> atomic physics database is a valuable resource for solar physics.
+The CHIANTI database holds a large amount of information on the physical properties of different elements in different ionisation states and enables the calculation of various parameters from this information.
+Using CHIANTI it is possible to calculate the spectra of various types of solar plasma (e.g., flare, quiet sun, etc.) from the observed elemental abundances and ionisation states.
+These synthetic spectra are essential for calculating reponse functions of various instruments.
+An instrument’s wavelength response function describes how much light emitted at a given wavelength is measured by the instrument.
+Similarly, the temperature response function describes the instrument’s sensitivity to light emitted by plasma at a particular temperature.
+These response functions play a vital role in correctly interpreting observations, as does proper calculation of these functions.</p>
+
+<p>Currently, SunPy has no implementation of instrument response functions.
+This project would develop the routines necessary to calculate response functions using the Python interface to the CHIANTI database, <a href="http://chiantipy.sourceforge.net/">ChiantiPy</a>.
+The primary implementation of this would be to produce default wavelength and temperature response functions for the <a href="http://aia.lmsal.com/">Atmospheric Imaging Assembly</a> instrument.
+A detailed discussion of the AIA response functions can be found in <a href="https://ui.adsabs.harvard.edu/#abs/2012SoPh..275...41B">Boerner et al 2012</a>.</p>
+
+<p>Other potential applications of ChiantiPy in SunPy include:</p>
+
+<ol>
+  <li>Generalisation of the code to produce response functions using arbitrary values of physical parameters (elemental abundances, etc.).</li>
+  <li>Calculation of reponse functions for other instruments.</li>
+  <li>Conversion of ChiantiPy spectra objects to SunPy Spectra objects.</li>
+</ol>
+
+<p><strong>Expected Outcomes</strong>: This project would facilitate SunPy becoming independent from Solar SoftWare (SSW) for analysing AIA data, particularly with respect to inferring plasma properties such as temperature and density.</p>
+
+<p>A successful proposal will outline a schedule for implementing at least a single set of temperature and wavelength response functions for AIA, and the response functions for arbitrary plasma conditions would be a bonus.
+Familiarity with CHIANTI, ChiantiPy and SSW’s implementation of the response functions will help to properly assess how long will be required to recreate them in SunPy.</p>
+
+<h3 id="real-time-data-access-and-visualisation-tools">Real time data access and visualisation tools</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/dpshelio">David Perez-Suarez</a>, <a href="https://github.com/wafels">Jack Ireland</a></p>
+
+<p><em>Difficulty:</em> Beginner-Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> none</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-2">Description</h4>
+
+<p>Real time data is very useful for
+<a href="https://en.wikipedia.org/wiki/Space_weather">spaceweather operations</a>, SunPy
+provides access to data by different virtual observatories or services (like
+<code class="language-plaintext highlighter-rouge">sunpy.net.vso</code> or <code class="language-plaintext highlighter-rouge">sunpy.net.hek</code>) or by accessing to direct data archives.
+<code class="language-plaintext highlighter-rouge">Fido</code> (formerly called <code class="language-plaintext highlighter-rouge">UnifiedDownloader</code>) provides a single point of access
+to them all. However, this needs to be extended to
+<a href="https://drive.google.com/open?id=1JizSdVKzKu_yFHXg4Bad5xcFREedcw7MhWwVto7L9kw">other data archives</a>,
+and a logic implemented so depending on the time range asked it downloads the
+data from the realtime archives or from the full-archive.</p>
+
+<p>Additionally, this project should produce some visualisation tools to combine
+data from different sources. Some examples are overlay of active regions on top
+of solar images (like in <a href="http://www.solarmonitor.org">SolarMonitor</a>), GOES
+X-ray flux with active regions number on the flares detected (like in
+<a href="http://www.lmsal.com/solarsoft/last_events/">Latest Events</a>), latest features
+observed available from HEK on top of a map (e.g.
+<a href="http://www.lmsal.com/hek/hek_isolsearch.html">isolsearh</a>).</p>
+
+<p>In summary, this project has two objectives:</p>
+
+<ol>
+  <li>Implementation of real time archives and logic on <code class="language-plaintext highlighter-rouge">Fido</code>.</li>
+  <li>Creation of visualisation tools to represent real-time data.</li>
+</ol>
+
+<p>Familiarisation with the
+<a href="https://github.com/sunpy/sunpy/tree/unidown"><code class="language-plaintext highlighter-rouge">unidown</code> branch</a> and
+<a href="http://matplotlib.org/"><code class="language-plaintext highlighter-rouge">matplotlib</code></a> library will help you to create a proper
+timeline on how much time will take to implement, test and document each part of
+the project.</p>
+
+<h3 id="improvements-to-the-sunpy-database">Improvements to the SunPy Database</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/Cadair">Stuart Mumford</a>, <a href="http://github.com/derdon">Simon Liedtke</a>, <a href="http://github.com/ehsteve">Steven Christe</a></p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Python, some database design knowledge would be helpful.</p>
+
+<h4 id="description-3">Description</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">database</code> module provides functionality to users to manage collections of files on disk in a way not reliant upon folder structure and file name.
+The database allows users to find files on disk by either physical parameters, such as wavelength and time or properties of the instrument such as name and spacecraft.
+It also allows more complex queries by enabling searches of the raw meta data associated with the files.</p>
+
+<p>The SunPy database will also act as a proxy for some web services supported by SunPy. When used like this, the database module takes a user query, downloads the data from the web service and then stores it in the database, and then returns the query to the user. SunPy contains clients to various web services, the first and primary web service SunPy supported was the Virtual Solar Observatory (VSO), this is the web service the database was originally designed to support. Since the original development of the database module, the database has also been extended to support the HEK client.</p>
+
+<p>The SunPy web clients, use a system named <code class="language-plaintext highlighter-rouge">attrs</code> (an abbreviation for attributes) to compose queries, this attrs system is also used by the database to perform queries on the database, with some of the attrs shared between the VSO client and the database.
+Recently, a new downloader front end (originally named <code class="language-plaintext highlighter-rouge">UnifiedDownloader</code>, now affectionately known as <code class="language-plaintext highlighter-rouge">Fido</code>) has been developed, this provides a Factory Class, with which various download clients (such as the VSO) can register with, providing information about which attrs and attr values that client supports. Using this approach, the <code class="language-plaintext highlighter-rouge">Fido</code> downloader provides a single interface to the many different services SunPy supports.
+The first part of this project will be to update the database module to support the new <code class="language-plaintext highlighter-rouge">Fido</code> interface, specifically by using <code class="language-plaintext highlighter-rouge">Fido</code> inside the database to retrieve data.</p>
+
+<p>The second part of the project will be to update the caching mechanism implemented in the database module. The current caching system serialises the users VSO query and stores it as JSON, upon the user requesting another query, the query will be compared to the cache of serialised queries and if a match is found, the results from the cached query returned.
+This mechanism is limiting in that if the user requests 100 records in query A and 100 records in query B, but 50 of the records requested in both queries are the same (i.e. two overlapping time windows) then the 50 records will be re-downloaded as the cache of query A will not match query B.
+The updated caching system will store the records a query returns (before the data is downloaded) and then link the results of a query to the records in the database (once the data has been downloaded). Then when records are retrieved from a web service, any records that are stored in the cache table can be skipped for retrieval from the web service and returned from the records in the database.
+This will allow the caching of partial queries rather than whole queries as is currently implemented.</p>
+
+<p>This project aims to achieve the following things:</p>
+
+<ol>
+  <li>Update the current implementation of the database using the VSO attributes to use the slightly refactored <code class="language-plaintext highlighter-rouge">Fido</code> attributes and use <code class="language-plaintext highlighter-rouge">Fido</code> inside the database to download data from the VSO.</li>
+  <li>Implement a new caching mechanism bases of the results of Queries with <code class="language-plaintext highlighter-rouge">Fido</code> rather than the current caching which is based upon the VSO query.</li>
+</ol>
+
+<p>A successful proposal will schedule updates to the database package in small sections, rather than in one large pull request. The work should be understood and broken down into individual sections.</p>
+
+<p>There are various other maintenance tasks which need undertaking (https://github.com/sunpy/sunpy/labels/Database) which would be a good way for someone interested in this project to familiarise themselves with the codebase.</p>
+
+<h3 id="gui-to-use-lct-tools">GUI to use LCT tools</h3>
+<p><em>Suggested Mentor(s):</em> <a href="https://github.com/Hypnus1803">Jose Iván Campos Rozo</a> (National Astronomical Observatory, National University of Colombia), Santiago Vargas Domínguez (National Astronomical Observatory, National University of Colombia), <a href="https://github.com/dpshelio">David Pérez Suárez</a>.</p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Python, basic knowledge of qt4, pyqt4, qt designer</p>
+
+<h4 id="description-4">Description:</h4>
+<p>The Local Correlation Tracking (LCT, November &amp; Simon, 1988) technique is a robust method used to study the dynamics of structures in a time series of images. By tracking pixel displacements, using a correlation window, LCT can determine proper motions and generate flow maps of horizontal velocities. This procedure is used to study the dynamics of plasma in the solar photosphere at different spatial scales, e.g the analysis of granular and supergranular convective cells, meridional flows, etc. A widget implemented in Python was developed. It generates a user-friendly graphical user interface (GUI) to control various parameters for the process of calculating flow maps of proper motions for a series of filtergrams (data cube). Our purpose is to implement this tool in Sunpy using its structure and to improve it with some more options, i.e. masks, statistics, histograms, contours and multi-plots. Although an initial version is already developed, our proposal is to focus on the efficient integration of the code in the  SunPy libraries. The code (without widget files yet) is https://github.com/Hypnus1803/flow_maps</p>
+
+<p><em>Expected Outcomes:</em> To integate efficiently the code in SunPy libraries.</p>
+
+      </div>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+	<p class="tagline"><strong>OpenAstronomy</strong>: Combining the power of open source astrophysics projects to empower science.</p>
+  <a href="https://app.element.io/#/room/#openastronomy:openastronomy.org" target="_blank">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 40 40" height="100%">
+              <path fill="#f9f9f9" d="M30,12V8h-5.004l1-8h-4l-1,8h-7.998l1-8h-4l-1,8H2v4h6.498L7.5,20H2v4h5l-1,8h4l1-8h8l-1.002,8H22l1-8h7v-4h-6.5l0.996-8H30z M19.5,20h-8l0.998-8h7.998L19.5,20z"/>
+          </svg>
+      </span>
+  </a>
+  <a href="https://groups.google.com/forum/#!forum/openastronomy" target="_blank">
+      <span style="color:white!important;" >
+          <span class="icon-white  icon-envelope" style="color:blue!important;">
+	  </span>
+      </span>
+
+  </a>
+  <a href="https://community.openastronomy.org">
+      <img src="/img/icons/discourse_icon.png" alt="OpenAstronomy on Discourse">
+  </a>
+  <a rel="me" href="https://twitter.com/Open_Astronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+            </span>
+  </a>
+  <a rel="me" href="https://astrodon.social/@OpenAstronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </span>
+  </a>
+
+  <a href="/feed.xml">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/>
+          </svg>
+  </a>
+  <a href="https://github.com/openastronomy">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+          </svg>
+      </span>
+      <!-- <span class="username">OpenAstronomy</span> -->
+  </a>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

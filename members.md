@@ -8,7 +8,7 @@ permalink: /members/
 
 <div class="row-fluid">
 {% for member in site.data.members %}
-  <div class="span6" style="padding-bottom:15px">{% include member.html member=member%}</div>
+  <div class="span6" style="padding-bottom:15px">{% include_cached member.html member=member%}</div>
   {% cycle '', '</div>' %}
   {% cycle '', '<div class="row-fluid">' %}
 {% endfor %}

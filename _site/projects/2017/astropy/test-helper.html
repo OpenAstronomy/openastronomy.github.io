@@ -1,0 +1,11 @@
+<h4 id="description">Description</h4>
+
+<p>Astropy’s test helper (inside <code class="language-plaintext highlighter-rouge">astropy.tests</code>) is very useful. There are some
+packages that do not want to use <code class="language-plaintext highlighter-rouge">astropy-helpers</code> submodule nor Astropy’s
+package template, but could use its test helper very much. It seems natural to
+extract the test helper into a new package on its own, so any developer can take
+advantage of its extra <code class="language-plaintext highlighter-rouge">pytest</code> features (e.g., remote data, doctest, etc).
+Currently, the test helper uses other utility functions from <code class="language-plaintext highlighter-rouge">astropy.utils</code> and
+Astropy logging. Ideally, this new package would be a complete standalone. This
+project would be to explore ways to re-package Astropy test helper as a
+standalone package that is not dependent on Astropy, and make it happen.</p>

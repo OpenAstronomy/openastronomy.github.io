@@ -1,0 +1,68 @@
+<h1 id="description">Description</h1>
+
+<p>The <a href="https://docs.sunpy.org/projects/ndcube/"><code class="language-plaintext highlighter-rouge">ndcube</code> package</a> is a SunPy affiliated package which provides a collection of objects for representing and manipulating data and world coordinates (stored as <a href="https://docs.astropy.org/en/stable/wcs/index.html">WCS objects</a>) simultaneously.
+Currently, the <code class="language-plaintext highlighter-rouge">ndcube</code> package does not provide any built in support for reading or writing it’s various objects to files.</p>
+
+<p>This project will add support for the <a href="https://asdf-standard.readthedocs.io/">ASDF</a> file format.
+As ASDF is a very metadata-rich file format, the end goal of this project is that <strong>almost any object</strong> should be able to be saved and then loaded back (aka round tripped) through ASDF.</p>
+
+<p>The <a href="https://github.com/asdf-format/asdf"><code class="language-plaintext highlighter-rouge">asdf</code></a> Python package implements (de)serialization of custom types by defining a <code class="language-plaintext highlighter-rouge">Converter</code> class and a schema for the new type, along with some other supporting infrastructure (<a href="https://asdf.readthedocs.io/en/latest/asdf/extending/use_cases.html#serialize-a-new-type">see here</a> for more details).
+Since <code class="language-plaintext highlighter-rouge">ndcube</code> currently does not support ASDF at all, the additional steps of adding an <code class="language-plaintext highlighter-rouge">asdf</code> extension will need to be completed.</p>
+
+<p>The first phase of this project will be to enable serializing a <code class="language-plaintext highlighter-rouge">ndcube.NDCube</code> object when <code class="language-plaintext highlighter-rouge">.data</code> is a numpy array and <code class="language-plaintext highlighter-rouge">.wcs</code> is a <a href="https://gwcs.readthedocs.io/"><code class="language-plaintext highlighter-rouge">gwcs.WCS</code></a> object.
+To do this the following classes will need to have <code class="language-plaintext highlighter-rouge">Converters</code> written for them in <code class="language-plaintext highlighter-rouge">ndcube</code>:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">NDCube</code></li>
+  <li><code class="language-plaintext highlighter-rouge">GlobalCoords</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ExtraCoords</code></li>
+</ul>
+
+<p>The next step will be to extend this basic support with support for <code class="language-plaintext highlighter-rouge">astropy.wcs.WCS</code> classes as the <code class="language-plaintext highlighter-rouge">NDCube.wcs</code> property.
+To do this a <code class="language-plaintext highlighter-rouge">Converter</code> for <code class="language-plaintext highlighter-rouge">astropy.wcs.WCS</code> will need to be added to the <a href="https://github.com/astropy/asdf-astropy/"><code class="language-plaintext highlighter-rouge">asdf_astropy</code></a> package.
+Then to add support for all the WCS wrapper classes implemented in <a href="https://github.com/sunpy/ndcube/tree/main/ndcube/wcs/wrappers">ndcube</a> and <a href="https://github.com/astropy/astropy/blob/main/astropy/wcs/wcsapi/wrappers/sliced_wcs.py#L105">astropy</a> so that <code class="language-plaintext highlighter-rouge">NDCube</code> object which have been manipulated can also be saved to ASDF.
+So by the end of this step the following classes will have converters written:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">astropy.wcs.WCS</code></li>
+  <li><code class="language-plaintext highlighter-rouge">SlicedLowLevelWCS</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ResampledLowLevelWCS</code></li>
+  <li><code class="language-plaintext highlighter-rouge">CompoundLowLevelWCS</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ReorderedLowLevelWCS</code></li>
+</ul>
+
+<p>The final stage for the <code class="language-plaintext highlighter-rouge">ndcube.NDCube</code> object will be to ensure that a <code class="language-plaintext highlighter-rouge">NDCube</code> object with all optional properties set, such as <code class="language-plaintext highlighter-rouge">mask</code>, <code class="language-plaintext highlighter-rouge">uncertainty</code> and <code class="language-plaintext highlighter-rouge">psf</code> is able to be saved to ASDF.
+This will at minimum require writing a <code class="language-plaintext highlighter-rouge">Converter</code> and schema for the <code class="language-plaintext highlighter-rouge">astropy.nddata.NDUncertainty</code> class in <code class="language-plaintext highlighter-rouge">asdf_astropy</code>.</p>
+
+<p>The next phase of the project will be to add support for the other <code class="language-plaintext highlighter-rouge">ndcube</code> data types:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">NDCubeSequence</code></li>
+  <li><code class="language-plaintext highlighter-rouge">NDCollection</code></li>
+</ul>
+
+<h2 id="goals">Goals</h2>
+
+<h3 id="community-bonding-period">Community Bonding Period</h3>
+
+<ul>
+  <li>Setup a development environment.</li>
+  <li>Familiarize yourself with <code class="language-plaintext highlighter-rouge">asdf</code> extensions, <code class="language-plaintext highlighter-rouge">Converters</code> and schemas.</li>
+</ul>
+
+<h3 id="before-1st-evaluation">Before 1st Evaluation</h3>
+
+<ul>
+  <li>Add the <code class="language-plaintext highlighter-rouge">asdf</code> extension infrastructure to <code class="language-plaintext highlighter-rouge">ndcube</code>.</li>
+  <li>Write Converters and schemas for <code class="language-plaintext highlighter-rouge">GlobalCoords</code> and <code class="language-plaintext highlighter-rouge">ExtraCoords</code> (with tests).</li>
+  <li>Write Converter and schema for <code class="language-plaintext highlighter-rouge">NDCube</code> (with tests).</li>
+  <li>Extend test suite with other examples of saving and loading <code class="language-plaintext highlighter-rouge">NDCube</code> objects backed by different <code class="language-plaintext highlighter-rouge">gwcs.WCS</code> objects etc which can be reused as test cases later.</li>
+</ul>
+
+<h4 id="before-final-evaluation">Before Final evaluation</h4>
+
+<ul>
+  <li>Have opened PRs to <code class="language-plaintext highlighter-rouge">asdf_astropy</code> for <code class="language-plaintext highlighter-rouge">astropy.wcs.WCS</code> and <code class="language-plaintext highlighter-rouge">astropy.nddata.NDUncertainty</code> classes.</li>
+  <li>Have written tests in <code class="language-plaintext highlighter-rouge">ndcube</code> of serializing <code class="language-plaintext highlighter-rouge">NDCube</code> objects of higher complexity (<code class="language-plaintext highlighter-rouge">.uncertainty</code>, <code class="language-plaintext highlighter-rouge">.mask</code> etc) and with <code class="language-plaintext highlighter-rouge">astropy.wcs.WCS</code> objects.</li>
+  <li>Add <code class="language-plaintext highlighter-rouge">Converters</code> and schemas for <code class="language-plaintext highlighter-rouge">NDCubeSequence</code> and <code class="language-plaintext highlighter-rouge">NDCollection</code> classes to <code class="language-plaintext highlighter-rouge">ndcube</code>.</li>
+</ul>

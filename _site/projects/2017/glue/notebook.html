@@ -1,0 +1,13 @@
+<h4 id="description">Description</h4>
+
+<p>At the moment, the main way users use glue is via the Qt-based application.
+However, much of glue is in fact GUI-agnostic and can in principle be re-used
+for different environments such as Jupyter notebooks. At the moment glue can be
+used in command-line mode in the Jupyter notebook, and the only way to get
+interactive viewers is to launch the Qt glue application via the qglue function.
+This project is to create new viewers for glue that instead of being Qt-based
+are rendered in the Jupyter notebook itself as interactive visualizations. The
+main challenge here is not simply showing the data, but also dealing properly
+with interactions and selections, and making sure a selection results in a
+subset being created in glue. This could potentially be done for instance using
+the Matplotlib interactive notebook backend, or Bokeh.</p>

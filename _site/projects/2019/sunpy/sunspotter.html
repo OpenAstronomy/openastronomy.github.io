@@ -1,0 +1,63 @@
+<h4 id="description">Description</h4>
+
+<p>Space weather studies Sun-Earth interaction events. One of these, is the effect
+of solar flares have on our civilisation. The forecast of solar flares is not a
+solved problem, and many approaches have been tried.
+<a href="https://www.sunspotter.org/">Sunspotter</a> is a citizen science project that
+asked volunteers to classify solar active regions by their complexity - as it’s
+believed complexity has a direct relationship with their activity. With more
+than 25,000 volunteers and millions of classifications produced, we’ve got a
+<a href="https://zenodo.org/record/1478972#.XI4YPqHgqr8">very nice dataset</a> that can be
+used to train a neural network. The images used come from the <a href="http://soi.stanford.edu/science/obs_prog.html">MDI
+instrument</a>, which is onboard of
+<a href="https://en.wikipedia.org/wiki/Solar_and_Heliospheric_Observatory">SoHO</a> - the
+NASA-ESA mission that’s been observing the sun for more than two decades.</p>
+
+<p>This project will need to create components within SunPy that will interact with
+other libraries (<a href="https://scikit-image.org/">scikit-image</a>,
+<a href="https://scikit-learn.org">scikit-learn</a>, etc.) to create such model.</p>
+
+<p>Read more information at the <a href="https://github.com/sunpy/sunpy/wiki/SOCIS-2019-Ideas-Information#space-weather-forecasting-using-machine-learning">wiki page</a>.
+Though this idea is for SOCIS, <a href="https://github.com/sunpy/sunpy/wiki/SOCIS-2019">same GSOC rules apply</a>.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="1st-month">1st Month</h5>
+
+<ul>
+  <li>Familiarisation with the dataset. Read and visualise the different type of
+data (images, classifications, …)</li>
+  <li>Have evaluated and chosen an approach to the design of a SunPy search events
+object based on the images using <a href="https://docs.sunpy.org/en/latest/guide/acquiring_data/hek.html">HEK or
+HELIO</a>.</li>
+  <li>Implementation of a basic machine learning model to understand the steps
+needed for this problem</li>
+  <li>Write up notebook for the sunpy gallery that exemplifies an analysis of this
+dataset</li>
+</ul>
+
+<h5 id="2nd-month">2nd Month</h5>
+
+<ul>
+  <li>Experiment with different machine learning methods to find the best model.</li>
+  <li>Write up as blog posts the different attempts tried.</li>
+</ul>
+
+<h5 id="3rd-month">3rd Month</h5>
+
+<ul>
+  <li>Check the accuracy of the model with SDO/HMI images from HEK</li>
+  <li>Create notebook for the sunpy gallery explaining how to use the model</li>
+</ul>
+
+<h4 id="resources">Resources</h4>
+
+<ul>
+  <li><a href="https://doi.org/10.3847/0004-637X/821/2/127">Predicting Coronal Mass Ejections Using Machine Learning Methods</a></li>
+  <li><a href="https://doi.org/10.6084/m9.figshare.1050569.v1">Sunspotter: Using Citizen Science to Determine the Complexity of
+Sunspots</a></li>
+  <li><a href="https://helioml.github.io/HelioML/title.html">Machine Learning, Statistics, and Data Mining for
+Heliophysics</a></li>
+  <li><a href="https://doi.org/10.3847/0004-637X/829/2/89">A Comparison of Flare Forecasting Methods. I. Results from the “All-Clear”
+Workshop</a></li>
+</ul>

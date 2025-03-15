@@ -1,0 +1,11 @@
+{
+  "m.homeserver": {
+    "base_url": "https://openastronomy.modular.im"
+  },
+  "m.identity_server": {
+    "base_url": "https://vector.im"
+  },
+  "org.matrix.msc3575.proxy": {
+    "url": "https://openastronomy.modular.im"
+  }
+}

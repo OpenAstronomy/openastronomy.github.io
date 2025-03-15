@@ -1,0 +1,42 @@
+<h4 id="description">Description</h4>
+
+<p>The Interface Region Imaging Spectrograph (IRIS) is a NASA Small Explorer satellite designed
+to make spectroscopic and imaging observations of the solar chromosphere and transition region.
+An important tool in interpreting these observations is the instrument response function which
+expresses the relationship between the physical intensity of light entering the instrument and
+the data number (DN) recorded by the CCD detectors.  The response function was carefully measured
+by the IRIS team before launch and this is currently available to IRISpy users for their analysis.</p>
+
+<p>However, due to time-dependent factors like degradation, it is known that the response function 
+evolves with time in orbit.  For this reason the IRIS team has developed a fitting algorithm based on
+calibration flights that predicts the response function as a function of time.  A direct translation
+of this algorithm from its original language, IDL (Interactive Data Langauage), into Python has already
+been performed but requires more work before it can be merged into IRISpy.</p>
+
+<p>In this project, the following tasks must be performed:</p>
+<ul>
+  <li>The time-dependent instrument function response code must be rewritten to be more efficient and Python-friendly;</li>
+  <li>Formal benchmarking between the results it produces and those found using the original IDL code must be performed;</li>
+  <li>Tests for the Python version must be written;</li>
+  <li>This software must be incoporated into methods and functions in IRISpy that depend on the instrument response function.</li>
+</ul>
+
+<p>These new feaures will give scientists far greater power and abilty to perform IRIS data analysis in Python
+and make new discoveries regarding the energetics and dynamics of the solar chromosphere and transition region.</p>
+
+<h4 id="expected-outcomes">Expected Outcomes</h4>
+
+<ul>
+  <li>A function for deriving the time-dependent IRIS reponse function.</li>
+  <li>Benchmarking and unit tests so this new software can be reliably maintained.</li>
+  <li>Updated intensity conversion methods between intrument and physical units that correct for 
+the time observations were taken.</li>
+</ul>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<h5 id="gsoc-coding-starts">GSOC CODING STARTS</h5>
+
+<h5 id="gsoc-midterm">GSOC MIDTERM</h5>
+
+<h5 id="gsoc-final">GSOC FINAL</h5>

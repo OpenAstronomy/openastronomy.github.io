@@ -1,0 +1,70 @@
+<h4 id="description">Description</h4>
+
+<p>The RADIS code was developed for the characterization of plasmas, flames and atmospheres. High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck. RADIS implements a new algorithm to compute these lineshapes, and is already one of the fastest line-by-line spectral codes available. It can also compute many different types of spectra (absorption / emission / equilibrium / nonequilibrium).</p>
+
+<p>However, although the algorithm is very CPU/GPU efficient, the RADIS code is still memory-hungry. Databases are currently loaded in RADIS using the VAEX package, but the operations to calculate the spectra are performed using the PANDAS library.  VAEX is a similar table management tool than PANDAS but uses memory mapping, a zero memory copy policy, and lazy computations for the best performance. <strong>The main goal of the current project is to refactor RADIS so that dataframes are only manipulated via the VAEX format</strong>. Potentially, this work would make it possible to compute spectral databases of up to billions of lines (hundred of GB or terabyte-scale databases).</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Engage with the community on <a href="https://github.com/radis/slack-invite">💬 RADIS Slack</a></p>
+  </li>
+  <li>
+    <p>Training on emission &amp; absorption spectroscopy</p>
+  </li>
+  <li>
+    <p>Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and <a href="https://radis.readthedocs.io/en/latest/dev/developer.html#architecture">RADIS architecture</a></p>
+  </li>
+  <li>
+    <p>Get familiar with RADIS architecture</p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st Evaluation</h5>
+
+<ul>
+  <li>Create a standalone spectroscopy code working with Out-of-core Vaex calculations (with minimum features: absorption code under equilibrium)</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd Evaluation</h5>
+
+<ul>
+  <li>
+    <p>Create a standalone spectroscopy code working with Out-of-core Vaex calculations (with minimum features: absorption code under equilibrium)</p>
+  </li>
+  <li>
+    <p>Implement VAEX out-of-core calculations directly in a single RADIS calculation path (e.g. equilibrium, one lineshape calculation routine), replacing PANDAS</p>
+  </li>
+  <li>
+    <p>Implement tests to verify that the implementation of VAEX will not have different output than the current PANDAS implementation</p>
+  </li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>
+    <p>Implement VAEX out-of-core calculations directly in all othe other RADIS calculation paths (nonequilibrium, all lineshape calculations routine), replacing PANDAS</p>
+  </li>
+  <li>
+    <p>Have all code, tests, and documentation in GitHub.</p>
+  </li>
+</ul>
+
+<h4 id="secondary-goals">Secondary Goals</h4>
+
+<ul>
+  <li>
+    <p>Document architecture and developer guide when facing unclear points that may appear.</p>
+  </li>
+  <li>
+    <p>Review pull requests from other RADIS contributors, especially parallel GSoC mentee</p>
+  </li>
+  <li>
+    <p>List and explore consequences for GPU calculations already implemented in RADIS</p>
+  </li>
+</ul>
+

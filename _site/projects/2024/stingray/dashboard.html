@@ -1,0 +1,62 @@
+<h1 id="description">Description</h1>
+
+<p>Stingray is a Python library designed to perform times series analysis and 
+related tasks on astronomical light curves. It supports a range of commonly-used 
+Fourier analysis techniques, as well as extensions for analyzing pulsar data, 
+simulating data sets, and statistical modelling. Stingray is designed to be easy 
+to extend, and easy to incorporate into data analysis workflows and pipelines.</p>
+
+<p>When analyzing a new astronomical dataset, it is often convenient to have some quicklook 
+visualization with basic information. For X-ray astronomy, the usual information is a
+light curve (a time series showing the flux of the source), a periodogram, spectral 
+colors (the ratio of fluxes in different energy bands of the X-rays).</p>
+
+<p>This project leverages Stingray’s flexibility to create a quicklook dashboard with basic
+interactivity. The principle is simple: given an event list, one calculates a light curve, 
+a power spectrum with default options, maybe a Lomb-Scargle periodogram, color-color or 
+HID diagrams, maybe power-color and color hue-rms diagrams. It should be somewhat 
+configurable, so that one can apply a set of custom options to a series of observations with ease.</p>
+
+<p>Each plot kind should be a separate plugin, with configurable options. The dashboard should
+display the plugins that the user requests with a custom JSON configuration file.</p>
+
+<p>The dashboard could work as an interactive visualization web page (just for zooming in and out), 
+or just make a PDF or image with the plots.</p>
+
+<p>A bonus could be making it the start for an interactive <em>analysis</em> interface (not just 
+plotting, but also recalculate the quantities with different parameters and refresh the plots)</p>
+
+<h2 id="milestones">Milestones</h2>
+
+<ol>
+  <li>Consultation with community on use cases and possible implementations.</li>
+  <li>Design of dashboard completed.</li>
+  <li>Functional dashboard completed.</li>
+  <li>Dashboard documented and possibly displayed in the Stingray website.</li>
+</ol>
+
+<h3 id="community-bonding-period">Community Bonding Period</h3>
+
+<ul>
+  <li>Understand Stingray scientific case.</li>
+  <li>Setup a development environment.</li>
+</ul>
+
+<h3 id="coding-starts">Coding starts</h3>
+
+<ul>
+  <li>Design the general structure of the dashboard and the plugins.</li>
+  <li>Use Stingray’s tutorials to set up the basic plugins for quicklook</li>
+</ul>
+
+<h3 id="1st-evaluation">1st evaluation</h3>
+
+<ul>
+  <li>Partial skeleton of the dashboard complete.</li>
+</ul>
+
+<h3 id="final-evaluation">Final evaluation</h3>
+
+<ul>
+  <li>Dashboard ready for deployment and properly documented.</li>
+</ul>

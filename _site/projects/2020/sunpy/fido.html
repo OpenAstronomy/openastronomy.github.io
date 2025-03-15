@@ -1,0 +1,18 @@
+<h4 id="description">Description</h4>
+
+<p>SunPy provides a Python interface to many different sources of solar data.
+These data are generally of two forms, file based downloads where observations are downloaded as FITS files or other files, and metadata only searches such as event lists or spatial location of features.
+Currently in sunpy the file based downloads are all accessible in one single search interface called “Fido”, this project would provide the foundations needed to extend Fido to include metadata only searches.
+<a href="https://docs.sunpy.org/en/latest/guide/acquiring_data/fido.html">An overview of fido is located in our documentation.</a></p>
+
+<p>Fido is backed by many different client classes, all which implement an interface to different webservices to search for and retrieve data.
+The search flow is that the user specifies a search to <code class="language-plaintext highlighter-rouge">Fido.search</code>, which dispatches to the correct client, which returns a response object, which is combined into a <code class="language-plaintext highlighter-rouge">UnifiedResponse</code> object with any other results from other clients, this is then returned to the user.
+The fetch flow is the <code class="language-plaintext highlighter-rouge">UnifiedResponse</code> object is parsed by <code class="language-plaintext highlighter-rouge">Fido.fetch</code> and the <code class="language-plaintext highlighter-rouge">.fetch()</code> methods of the appropriate clients is called and paths to the files are returned to the user.</p>
+
+<p>The first goal of this project is to standardize the response object returned from all the clients <code class="language-plaintext highlighter-rouge">search()</code> method.
+This would involve implement an <a href="https://docs.python.org/3/library/abc.html">Abstract Base Class</a> and transitioning all the current response implementations to it.
+Having done this, the next objective would be to extend the ability for <code class="language-plaintext highlighter-rouge">dataretriever</code> clients (simple clients) to specify what metadata about the results should be displayed in their QueryResponse objects.
+Finally, work should commence on extending the the ABC to allow the flexibility of returning and inspecting metadata only queries, from the JSOC client and then clients like the HEK and HELIO clients.</p>
+
+<p>The Fido codebase is complex and not very well documented from a developer perspective.
+Anyone taking on this project should be willing and able to learn the layout of the code, to spend a lot of time designing the future API, and to always consider the end user.</p>

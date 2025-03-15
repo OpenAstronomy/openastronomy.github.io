@@ -1,0 +1,23 @@
+<h4 id="description">Description</h4>
+
+<p>This project aims to design and implement an object that could be used to define a
+region of interest (ROI) in any physical dimension (such as spatial area,
+temporal range or spectral window) and interact with the rest of data types used
+in sunpy.</p>
+
+<p>For example, a region of interest could be a particular area in the Sun 
+at a particular moment in time. Therefore, that object should contain the extent
+of such area, its contour and the time when it was observed.
+It also needs other information, such as the coordinate system that it
+uses, the image from which it was created and the wavelength
+in which was observed.</p>
+
+<p>That region of interest should interact with the data types available in sunpy
+like <a href="https://github.com/sunpy/sunpy/tree/master/sunpy/map"><code class="language-plaintext highlighter-rouge">sunpy.Map</code></a> by
+plotting the box containing such region and being aware of difference in time or
+observational point. So, it needs to be spatial and temporal aware.</p>
+
+<p>Additionally, the object needs to understand (be able to parse in) features and
+events catalogued in the <a href="http://www.lmsal.com/hek/hek_isolsearch.html">HEK</a> 
+and <a href="http://hfc.helio-vo.eu/">HELIO</a> databases.</p>
+

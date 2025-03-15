@@ -1,0 +1,47 @@
+<p>This project will update the sunraster package to use the ndcube 2.0, a much more powerful version and lead to the next release of the sunraster package.</p>
+
+<h4 id="description">Description</h4>
+
+<p>The sunraster package provides tools for reading and manipulating satellite-based
+observations from solar slit spectrometers such as NASA’s IRIS satellite
+or SPICE onboard European Space Agency’s Solar Orbiter satellite.
+sunraster heavily leans on the ndcube package which provides powerful generic tools
+for manipulating and inspecting n-dimensional astronomical data and
+handling functional based coordinate transformations that describe the observations’
+relationships to real world coordinates, e.g. which part of
+the sky a camera pixel is pointing, or what time an image was taken.
+These transformations are known as the World Coordinate System (WCS).</p>
+
+<p>A new API-breaking version of ndcube (2.0) is imminent which supports a
+more flexible generic API for WCS transformations.
+This API is not backwards compatible and so requires upgrades to the sunraster
+so users of solar spectrograph observations can more easily perform their
+data analysis.</p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<ul>
+  <li>sunraster code has been updated.</li>
+  <li>sunraster tests all pass.</li>
+  <li>sunraster has been released.</li>
+</ul>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Become familiar with ndcube and sunraster codebases.</li>
+  <li>Create a test environment for sunraster that uses ndcube 2.0.</li>
+  <li>List out parts of sunraster API that need updating.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Update sunraster code base to get all ndcube-2.0-base tests passing.</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>sunraster is ready to be released to users.</li>
+</ul>

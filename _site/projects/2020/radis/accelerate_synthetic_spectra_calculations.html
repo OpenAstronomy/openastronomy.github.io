@@ -1,0 +1,56 @@
+<h4 id="description">Description</h4>
+
+<p>The presence and concentration of molecules in a gas can be measured by comparing absorption and emission experimental spectra to synthetic spectra. However, under high-temperature conditions, the synthetic spectra contain dozens of millions of lines. In any line-by-line code the bottleneck is the calculation of the lineshapes, which can require long computational times (up to several minutes).</p>
+
+<p>The RADIS code was recently developed for the characterization of high-temperature infrared spectra in plasmas and flames. It uses a new approach to quickly calculate lineshapes of synthetic spectra. The latest developments already make it one the fastest spectral codes in the world. The goal of this project is to push further and implement two new techniques to gain another orders of magnitude, by two means:</p>
+<ul>
+  <li>Implementing GPU acceleration for lineshape calculation (proof-of-concept example has shown we can compute 250 millions lines in 150 ms!)</li>
+  <li>Implementing a new vectorization technique to quickly compute lineshapes in line-of-sight spectra (i.e., a column of heterogeneous gas)</li>
+</ul>
+
+<p>This performance would be beneficial for new applications such as exoplanet characterization.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engage with the community and understand the motivation of spectroscopy users</li>
+  <li>Training on emission &amp; absorption spectroscopy</li>
+  <li>Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests)</li>
+  <li>Get used with RADIS architecture: review the interface change to calculate multiple molecules at the same time (<a href="https://github.com/radis/radis/pull/74#issuecomment-585773087">#74</a>)</li>
+  <li>Learn about the details of the vectorized calculation of lineshapes in line-of-sight spectra.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Proof of concept GPU implementation example has been reproduced</li>
+  <li>GPU acceleration is implemented and working on your own Fork for at least one combination of lineshape broadening parameters.</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd evaluation</h5>
+
+<ul>
+  <li>GPU acceleration is implemented in the main project for all combinations of lineshape broadening parameters</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>GPU acceleration is implemented in the main project and tested on many architectures</li>
+  <li>Write an iPython notebook to document the performance benchmark on <a href="https://github.com/radis/radis-benchmark">radis-benchmark</a></li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+  <li>Proof of concept of the vectorized calculation of lineshapes in line-of-sight spectra is implemented</li>
+</ul>
+
+<h4 id="secondary-goals">Secondary goals</h4>
+
+<ul>
+  <li>Direct line-of-sight spectra technique is implemented in main project</li>
+  <li>Document architecture and developer guide when facing unclear points that may appear.</li>
+  <li>Review pull requests from other RADIS contributors</li>
+  <li>Interface to atmosphere calculations (merge results with project <a href="https://openastronomy.org/gsoc/gsoc2020/#/projects?project=radis_atmosphere_calculation_interface">RADIS Atmosphere Calculation Interface</a> )</li>
+</ul>
+
