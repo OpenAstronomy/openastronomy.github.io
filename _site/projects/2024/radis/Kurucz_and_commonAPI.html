@@ -1,0 +1,74 @@
+<h4 id="description">Description</h4>
+
+<p>The RADIS code was developed for the characterization of plasmas, flames and atmospheres. High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck. RADIS implements a new algorithm to compute these lineshapes, and is already one of the fastest line-by-line spectral codes available. It can also compute many different types of spectra (absorption / emission / equilibrium / nonequilibrium). In a typical calculation, a database of coefficients is loaded and these coefficients are multiplied according to physics laws to generate a set of linestrength in a spectrum.</p>
+
+<p>RADIS can handle different databases such as HITRAN, HITEMP, EXOMOL, GEISA, etc. Another open-source code, called EXOJAX, exchanged portions of code with RADIS until some parts of both codes became very similar. Currently, a database API is written in the RADIS code. The main goal of the current project is to add the atomic Kurucz database to RADIS. The second objective is to improve the aformentioned common API to download and manage all databases. The mentee will not start from scratch because the community already worked on the problem and set up a frame for this big merge of code built around a <a href="https://github.com/radis/radis/blob/develop/radis/api/dbmanager.py#L51">DatabaseManager</a> class. Previous work on the Kurucz database can be found in <a href="https://github.com/radis/radis/pull/601">this PR</a>.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Engage with the community on <a href="https://github.com/radis/slack-invite">💬 RADIS Slack</a></p>
+  </li>
+  <li>
+    <p>Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and <a href="https://radis.readthedocs.io/en/latest/dev/developer.html#architecture">RADIS architecture</a></p>
+  </li>
+  <li>
+    <p>Get familiar with RADIS architecture, the <a href="https://github.com/radis/radis/blob/develop/radis/api/dbmanager.py#L51">DatabaseManager</a> class, and what was already implemented.</p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st Evaluation</h5>
+
+<ul>
+  <li>
+    <p>Add new molecular databases: Kurucz</p>
+  </li>
+  <li>
+    <p>Add documentation</p>
+  </li>
+  <li>
+    <p>Gather feedbacks from current users of ExoJax and RADIS</p>
+  </li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd Evaluation</h5>
+
+<ul>
+  <li>
+    <p>Add atomic database: NIST</p>
+  </li>
+  <li>
+    <p>Based on the user feebacks and the hands-on experience acquired in the 1st round, refactor the Common API as required to make it more user-friendly. It might require major architectural changes.</p>
+  </li>
+  <li>
+    <p>Set up documentation of a stand-alone version of the Database API</p>
+  </li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>
+    <p>Have all code, tests, and documentation in GitHub.</p>
+  </li>
+  <li>
+    <p>If ready and, make the Common API stand-alone.</p>
+  </li>
+</ul>
+
+<h4 id="secondary-goals">Secondary Goals</h4>
+
+<ul>
+  <li>
+    <p>Add collisional-induced-absorption (CIA) databases which are a different type of databases than line databases</p>
+  </li>
+  <li>
+    <p>Document architecture and developer guide when facing unclear points that may appear.</p>
+  </li>
+  <li>
+    <p>Review pull requests from other RADIS contributors</p>
+  </li>
+</ul>

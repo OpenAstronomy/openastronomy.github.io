@@ -1,0 +1,50 @@
+<h4 id="description">Description</h4>
+
+<p><code class="language-plaintext highlighter-rouge">sunpy</code> provides access to solar feature and event data held by the <a href="https://www.lmsal.com/hek/">Heliophysics Event Knowledgebase</a>.
+Descriptions of the properties of each feature and event are given <a href="https://www.lmsal.com/hek/VOEvent_Spec.html">here</a>.</p>
+
+<p>Feature and event properties include their type, physical extent, location, lifetime, and other feature/event properties that are specific to a given feature/event.
+For example, the time at which the energy flux of a solar flare is at a maximum is relevant for flares, but is not relevant to the description of a coronal hole.</p>
+
+<p>The current representation of HEK features/events in <code class="language-plaintext highlighter-rouge">sunpy</code> does not make full use of the capabilities of <code class="language-plaintext highlighter-rouge">sunpy</code> or the other libraries it uses.
+For example, many feature/event properties are not expressed using Astropy units or <code class="language-plaintext highlighter-rouge">sunpy</code> coordinates, even although there is sufficient information in the HEK description that can be used to do this.</p>
+
+<p>The goal of this project is to create classes to represent HEK solar feature/events that function well within the SunPy ecosystem.
+The design of the feature/event classes should be sufficiently general so as not to exclude their application to feature/event descriptions held by other catalogs.</p>
+
+<p>More information is found on the linked issues.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<ol>
+  <li>Consultation with community on use cases and possible implementations.</li>
+  <li>Design of HEK feature/event object completed.</li>
+  <li>Functional HEK feature/event object completed that implements HEK-required attributes.</li>
+  <li>Final HEK feature/event object completed that implements HEK-required and optional attributes.</li>
+</ol>
+
+<h5 id="community-bonding-period">Community Bonding Period</h5>
+
+<ul>
+  <li>Understand the project and the API design.</li>
+  <li>Setup a development environment.</li>
+</ul>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Experimenting with the current representation of HEK feature and event data.</li>
+  <li>Consider parsing the html page for the specification.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Partial skeleton of the new HEK feature/event object written.</li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>Functional replacement ready for review and merging into <code class="language-plaintext highlighter-rouge">sunpy</code>.</li>
+</ul>

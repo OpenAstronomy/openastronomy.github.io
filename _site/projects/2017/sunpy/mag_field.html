@@ -1,0 +1,37 @@
+<h4 id="description">Description</h4>
+
+<p>Determining the 3D geometry of the tangled and dynamic coronal magnetic field is an open research problem in solar physics.
+A common technique for deriving the 3D vector field from a photospheric magnetogram is to assume a <em>potential</em> field such that it can be derived by solving Laplace’s equation.
+The SunPy-affiliated <a href="https://github.com/sunpy/solarbextrapolation"><code class="language-plaintext highlighter-rouge">solarbextrapolation</code></a> package solves Laplace’s equation using the method of <a href="http://adsabs.harvard.edu/abs/1982SoPh...76..301S">Sakurai (1982)</a>.
+However, when constructing the 3D field from the magnetogram, the “small-angle” approximation is used such that the curvature of the Sun is ignored, a valid approximation on the scale of an active region.</p>
+
+<p>This project aims to improve the <code class="language-plaintext highlighter-rouge">solarbextrapolation</code> package by relaxing the small-angle approximation and allowing for extrapolation of global magnetic fields, i.e. 3D vector fields on a scale larger than an active region.
+This will involve extensive modifications to the numerical method used to perform the field extrapolation as well as developing methods for coordinate transformations between the magnetogram coordinate system and the spherical coordinate system of the derived vector field.</p>
+
+<p>The main challenge of this project will be creating a general 3D Map class similar to <a href="http://docs.sunpy.org/en/stable/code_ref/map.html"><code class="language-plaintext highlighter-rouge">Map</code></a> in SunPy.
+Currently, the <code class="language-plaintext highlighter-rouge">solarbextrapolation</code> package uses a Map3D class that is limited to Cartesian coordinates and has no support for coordinate transformations. This new Map3D class will have support for 3D coordinates through the use of the <a href="http://docs.sunpy.org/en/stable/guide/units-coordinates.html#physical-coordinates-in-sunpy">SunPy coordinates module</a>
+It is expected that this new object will serve as a prototype for a first-class data type in the core SunPy package.</p>
+
+<h4 id="primary-goals">Primary Goals</h4>
+<ul>
+  <li>Develop a coordinate-aware 3D Map class</li>
+  <li>Use 3D Map class for global field extrapolations</li>
+</ul>
+
+<h4 id="possible-secondary-goals">Possible Secondary Goals</h4>
+<ul>
+  <li>Performance improvements</li>
+  <li>Improvements to the documentation and examples</li>
+  <li>Better visualization methods</li>
+  <li>Addition of more advanced extrapolators, e.g. non-linear force-free field</li>
+</ul>
+
+<h4 id="additional-resources">Additional Resources</h4>
+<ul>
+  <li><a href="https://github.com/sunpy/solarbextrapolation"><code class="language-plaintext highlighter-rouge">solarbextrapolation</code> package </a></li>
+  <li><a href="http://docs.sunpy.org/en/stable/code_ref/map.html">Maps in SunPy</a></li>
+  <li><a href="http://docs.sunpy.org/en/stable/code_ref/coordinates.html">Coordinates in SunPy</a></li>
+  <li><a href="http://adsabs.harvard.edu/abs/2006A%26A...449..791T">Coordinates for Solar Image Data – Thompson (2006)</a></li>
+  <li><a href="http://www.lmsal.com/~derosa/pfsspack/">IDL package for global potential field extrapolations</a></li>
+  <li><a href="http://adsabs.harvard.edu/abs/2005ESASP.596E..12N">Review of Magnetic Field Extrapolation Techniques – T. Neukirch</a></li>
+</ul>

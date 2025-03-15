@@ -1,0 +1,37 @@
+<h4 id="description">Description</h4>
+
+<p><a href="https://github.com/dfm/emcee">emcee</a> is one of the most sucessfull
+modern samplers extensively used by (but not limited to) the astronomical
+community.
+<a href="http://docs.astropy.org/en/stable/modeling/#module-astropy.modeling.functional_models">astropy.modeling.models</a>,
+on the other hand, offers a myriad of easy-to-use models.
+The goal of this project is to design and implement a protocol
+that enables astropy models to be used in emcee.</p>
+
+<p>A <em>potential</em> list of milestones might be:</p>
+
+<ol>
+  <li>Determine the best way to integrate an astropy model with
+a posterior distribution.</li>
+  <li>Design and implement classes to represent Likelihood Functions and
+Prior distributions.</li>
+  <li>Determine the best interface to be exposed to the user. For example,
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g = Gaussian1D()
+posterior = g.sample(likelihood='gaussian', prior='uniform', nwalkers=1000, kwargs)
+</code></pre></div>    </div>
+    <p>or</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sampler = Sampler()
+posterior = sampler(model=Gaussian1D(), likelihood='gaussian', prior='uniform', nwalkers=1000, kwargs)
+</code></pre></div>    </div>
+  </li>
+  <li>Write unit tests and documentation (using the astropy affiliated package template)
+to ensure the implementations are operational.</li>
+</ol>
+
+<p><em>Notes: a potential good start for any candidates would be to take an
+extensive look at</em>
+<a href="https://github.com/astropy/astropy-model-ideas/blob/master/MCMCWithAstropyModels.ipynb">this</a>
+<em>IPython notebook.</em></p>
+
+<p><em>Might be worth to look at</em> <a href="https://github.com/KeplerGO/oktopus">oktopus</a>
+<em>for inspiration on step 2.</em></p>

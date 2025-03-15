@@ -1,0 +1,60 @@
+<h4 id="description">Description</h4>
+
+<p>The problem of propagation, finding the position and velocity of an orbiting
+object after some amount of time, is fundamental to any orbit analysis.
+It is a difficult problem, since the Kepler equation is transcendental and
+does not have a closed-form solution, and therefore numerical solutions
+have to be developed. The process has to be both fast (since a program
+might need to propagate thousands of orbits) and robust (converge in as
+many cases as possible).</p>
+
+<p>In poliastro we already have a propagator that has served us well for years, but
+<a href="https://github.com/poliastro/poliastro/issues/265">it has some convergence problems</a>.</p>
+
+<p>On the other hand, among the many propagation algorithms that exist,
+we haven’t benchmarked our propagator against others, so we might be missing
+out performance gains. This project aims to fix the current propagation
+issues, as well as adding other propagators to poliastro to let users
+choose the best that suits their needs.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engaged with the community and understand the motivation and challenges of
+the project.</li>
+  <li>Have set up a development environment and reproduced the existing propagation
+issues.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Fix <a href="https://github.com/poliastro/poliastro/issues/265">convergence problems (#265)</a>,
+either with a new propagator or fixing the current one</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd evaluation</h5>
+
+<ul>
+  <li>Add time and accuracy benchmarks for the propagators that can be easily
+reproducible</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>Have at least two new propagators</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h4 id="secondary-goals">Secondary goals</h4>
+
+<ul>
+  <li>Fix any bugs that might appear regarding propagation, hyperbolic orbits and so forth</li>
+  <li>Review pull requests from other poliastro contributors, including the mentor</li>
+  <li>Give a talk about the work at some Python event</li>
+</ul>

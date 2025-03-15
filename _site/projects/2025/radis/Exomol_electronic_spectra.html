@@ -1,0 +1,80 @@
+<h4 id="description">Description</h4>
+
+<p>The RADIS code was developed for the characterization of plasmas, flames and atmospheres.
+High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck.
+RADIS implements a new algorithm to compute these lineshapes, and is already one of the fastest line-by-line spectral codes available.
+It can also compute many different types of spectra (absorption / emission / equilibrium / nonequilibrium).
+In a typical calculation, a database of coefficients is loaded and these coefficients are multiplied according to physics laws to generate a set of line strengths in a spectrum.</p>
+
+<p>RADIS can handle different molecular databases such as HITRAN, HITEMP, EXOMOL, and GEISA.
+Currently, it supports the computation of rovibrational spectra, which correspond to transitions between rotational and vibrational energy levels.
+<strong>However, it lacks the capability to compute electronic spectra from databases like EXOMOL, which would complement its existing capabilities.</strong></p>
+
+<p>Other codes allow to compute electronic spectra of diatomic molecules and can be used as a reference or comparison point:</p>
+
+<ul>
+  <li>Moose - https://github.com/AntoineTUE/Moose</li>
+  <li>MassiveOES - https://bitbucket.org/OES_muni/massiveoes (with Radis/MassiveOES example in https://github.com/radis/massiveOES-examples)</li>
+  <li>ExoMol list - https://www.exomol.com/software/</li>
+</ul>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Engage with the community on <a href="https://github.com/radis/slack-invite">💬 RADIS Slack</a></p>
+  </li>
+  <li>
+    <p>Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and <a href="https://radis.readthedocs.io/en/latest/dev/developer.html#architecture">RADIS architecture</a></p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st Evaluation</h5>
+
+<ul>
+  <li>
+    <p>Adapt how the EXOMOL database is currently employed to allow the computation of electronic spectra at <strong>thermal equilibrium</strong> (single temperature)</p>
+  </li>
+  <li>
+    <p>Add documentation and example. Add tests against other spectral codes.</p>
+  </li>
+  <li>
+    <p>To ease the understand of the physics behind the code, the contributor could start with non-equilibrium spectra of atomic species (see Secondary goals). This is entirely optional and up to the contributor.</p>
+  </li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd Evaluation</h5>
+
+<ul>
+  <li>
+    <p>Add the possibility to compute electronic spectra at <strong>thermal non-equilibrium</strong> (electronic temperature != translational temperature)</p>
+  </li>
+  <li>
+    <p>Add documentation and example. Add tests against other spectral codes.</p>
+  </li>
+  <li>
+    <p>For diatomic species, start a new database based on MassiveOES sources.</p>
+  </li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>Have all code, tests, and documentation in GitHub.</li>
+</ul>
+
+<h4 id="secondary-goals">Secondary Goals</h4>
+
+<ul>
+  <li>
+    <p>RADIS can compute atomic spectra thanks to the hard work of GSOC 2023 and 2024 contributors, see https://github.com/radis/radis/pull/689. An interesting approach would be to start with non-equilibrium spectra of atomic species as the physics is slighly easier than for molecule.</p>
+  </li>
+  <li>
+    <p>Document architecture and developer guide when facing unclear points that may appear.</p>
+  </li>
+  <li>
+    <p>Review pull requests from other RADIS contributors</p>
+  </li>
+</ul>

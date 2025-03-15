@@ -1,0 +1,52 @@
+<p>In this project you would create the foundations of the ‘sunkit-image’ SunPy
+affiliated package, a package to contain image processing routines and
+functionality specific to the analysis of solar physics data.</p>
+
+<h4 id="description">Description</h4>
+
+<p>There have been various proposals for adding image processing and manipulation
+code to the SunPy library. SunPy has decided that this functionality will
+instead reside in an affiliated package, tentatively named ‘sunkit-image’. This
+project will setup this package and implement the initial functionality.</p>
+
+<p>There is various functionality that should be added to ‘sunkit-image’ some of it
+already developed, some of it not! This project should achieve some or all of
+the following goals (roughly in this order):</p>
+
+<ol>
+  <li>Port the Multi-Scale Gaussian Normalisation code from <a href="https://github.com/sunpy/sunpy/pull/1899">#1899</a>.</li>
+  <li>Convert the <a href="https://github.com/sunpy/sunpy/blob/master/sunpy/physics/differential_rotation.py">differential rotation code</a> in SunPy to use <a href="https://github.com/sunpy/sunpy/tree/master/sunpy/map"><code class="language-plaintext highlighter-rouge">sunpy.coordinates</code></a>.</li>
+  <li>Implement image warping for solar differential rotation. <a href="https://github.com/sunpy/sunpy/pull/1876">#1876</a>.</li>
+  <li>Implement the <a href="http://arxiv.org/abs/1307.5046">OCCULT-2 algorithm</a> for coronal loop tracing.</li>
+  <li>Implement running and base difference functionality and the persistence transform. See Figure 2 in <a href="http://iopscience.iop.org/article/10.1088/0004-637X/736/2/102/pdf">this paper</a> for some ideas.</li>
+</ol>
+
+<p>optional extras:</p>
+
+<ol>
+  <li>Refactor and write a Python wrapper for <a href="https://arxiv.org/abs/0712.4289">FLCT</a> <a href="http://solarmuri.ssl.berkeley.edu/overview/publicdownloads/software.html">code</a>.</li>
+  <li>Implement image alignment using feature detection and tracking. <a href="http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_brief.html">Example</a></li>
+</ol>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="gsoc-2017-coding-starts">GSOC 2017 CODING STARTS</h5>
+
+<ul>
+  <li>Have familiarised yourself with the algorithms and with Python packaging. Have worked with the mentors to get the package repository setup on GitHub and the CI and documentation running.</li>
+</ul>
+
+<h5 id="gsoc-2017-midterm">GSOC 2017 MIDTERM</h5>
+
+<ul>
+  <li>Have copied in and documented and tested the MGN code.</li>
+  <li>Have opened a PR to SunPy to convert the <code class="language-plaintext highlighter-rouge">sunpy.physics</code> module to use <code class="language-plaintext highlighter-rouge">sunpy.coordinates</code>.</li>
+  <li>Have implemented the Map warping code.</li>
+</ul>
+
+<h5 id="gsoc-2017-final">GSOC 2017 FINAL</h5>
+
+<ul>
+  <li>Have got the SunPy PR for coordinates in <code class="language-plaintext highlighter-rouge">sunpy.physics</code> merged.</li>
+  <li>Have implemented OCCULT-2.</li>
+</ul>

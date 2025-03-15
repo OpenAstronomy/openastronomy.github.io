@@ -1,0 +1,69 @@
+<h4 id="description">Description</h4>
+
+<p>Since 2017 poliastro features Near Earth Objects (NEOs) data
+retrieval and 3D plotting, as can be seen in these notebooks:</p>
+
+<ul>
+  <li><a href="http://docs.poliastro.space/en/latest/examples/Using%20NEOS%20package.html">Using the NEOs package</a></li>
+  <li><a href="http://docs.poliastro.space/en/latest/examples/Plotting%20in%203D.html">Plotting in 3D</a></li>
+</ul>
+
+<p>With the increasing interest in NEOs it would be
+interesting to offer the casual user a web application to visualize
+the orbits of such objects to have a better idea on the magnitude of the
+distances, the shape of the orbits and so on.</p>
+
+<p>This project aims to provide such a web application so the user doesn’t
+have to set up a Python development environment, install poliastro,
+launch a notebook, retrieve the data and visualize the orbits. Therefore,
+the app should have an attractive user interface that lets the user
+select NEOs from a list, possibly offering a list of famous examples
+or recent approaches, move backwards and forwards in time, let them share
+the configuration via copy-pasting URLs and exporting the results as
+static plots or Python scripts.</p>
+
+<p>Due to the fact that poliastro already uses Plotly to display 3D orbits,
+the most natural choice for a web app would be <a href="https://plot.ly/dash/">Dash</a>,
+which recently became a NumFOCUS affiliated project.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engaged with the community and understand the motivation and challenges of
+the project.</li>
+  <li>Have set up a development environment and tried to build some basic Dash
+application</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Have a basic web application to display the 3D trajectory of one NEO of choice</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd evaluation</h5>
+
+<ul>
+  <li>Allow the user to change the epoch and/or select a time period</li>
+  <li>Add examples of popular NEOs and showcase some approaches from the news</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>Allow the user to display more than one NEO in the application</li>
+  <li>Allow the user to export the result as a Python script</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h4 id="secondary-goals">Secondary goals</h4>
+
+<ul>
+  <li>Fix any bugs that might appear regarding visualization, hyperbolic orbits and so forth</li>
+  <li>Review pull requests from other poliastro contributors, including the mentor</li>
+  <li>Give a talk about the work at some Python event</li>
+</ul>

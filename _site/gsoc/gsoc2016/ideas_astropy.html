@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Ideas for Astropy</title>
+    <link rel="icon" type="image/png" href="http://localhost:4000/img/logo/logoOA_white_svg.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="foss, open source, organisations, astronomy,
+    OpenAstronomy, astrophysics, GSoC, projects, members, " />
+    <meta name="description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+">
+    <meta name="author" content="OpenAstronomy" />
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ideas for Astropy" />
+    <meta property="og:description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+" />
+    <meta property="og:url" content="https://openastronomy.org/" />
+    <meta property="og:site_name" content="OpenAstronmy" />
+    <!-- OGP ends here -->
+    <link rel="canonical" href="http://localhost:4000/gsoc/gsoc2016/ideas_astropy.html">
+
+        <!-- <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'> -->
+    <link href="../assets/fonts/fira-sans.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/css/swc.css" />
+    <link rel="stylesheet" type="text/css" href="/css/swc-bootstrap.css" />
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <link rel="alternate" type="application/rss+xml" title="The OpenAstronomy Blog" href="/feed.xml"/>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="../../../../assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+     // change background images from a list.
+     $(document).ready(function() {
+         // list of filenames endings
+         var backgrounds = ['ap', 'sp'];
+         var selected = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+         var bgpath = "/css/background_" + selected + '.jpg';
+         $('body').css('background-image', 'url(' + bgpath + ')');
+     });
+    </script>
+
+    
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" style="background-color: #292929;">
+
+  
+
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/">
+          <img class="media-object logo" src="http://localhost:4000/img/logo/logoOA_white_svg.png" alt="OpenAstronomy" />
+      </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/gsoc/">Google Summer of Code</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/members/">Members</a>
+          
+        
+          
+          <a class="page-link" href="/news.html">News and Events</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+        
+          <a class="page-link" href="http://openastronomy.org/Universe_OA">Contributor Blogs</a>
+        
+          <a class="page-link" href="http://openastronomy.org/pyastro">PyAstro Conference</a>
+        
+          <a class="page-link" href="https://calendar.google.com/calendar/b/1?cid=YmxoZzd0MG9zbjhscm50ZDcwOXFoZzFtaXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Events Calendar</a>
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="fixed-wrap">
+    <div class="page-content">
+      <div class="wrapper">
+        <p>If you are interested in one of the following Astropy Project ideas please see
+the <a href="https://github.com/astropy/astropy/wiki/GSoC-2016-Guidelines">Astropy GSoC 2016 Guidelines</a>
+for additional information that is specific to Astropy.</p>
+
+<h3 id="implement-scheduling-capabilities-for-astroplan">Implement Scheduling capabilities for Astroplan</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/eteq">Erik Tollerud</a>, <a href="https://github.com/ejeschke">Eric Jeschke</a>, <a href="https://github.com/joshwalawender">Josh Walawender</a></p>
+
+<p><em>Difficulty:</em> Beginner to Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> Basic understanding of how astronomy observations work, practical experience a plus</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description">Description</h4>
+
+<p>The <a href="http://astroplan.readthedocs.org/en/latest/">astroplan</a> affiliated package is an Astropy affiliated package that provides tools for planning observations.
+One valuable feature that astroplan could provide is basic scheduling capabilities for an observing run.
+Many large observatories have their own schedulers, but this package would be targeted at the needs of the typical individual or small-collaboration observing run.
+While some initial efforts have occurred, this project would involve expanding those efforts into a full-fledged API and implementing both the interface and the actual scheduler(s).</p>
+
+<h3 id="ephemerides-for-solar-system-objects-in-astropy">Ephemerides for Solar System objects in Astropy</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/mhvk">Marten van Kerkwijk</a>, <a href="http://github.com/eteq">Erik Tollerud</a></p>
+
+<p><em>Difficulty:</em> Beginner to Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> Some understanding of astronomical coordinate systems, basic knowledge of solar system dynamics (or ability to learn as-needed to implement the specific algorithms required)</p>
+
+<p><em>Programming skills:</em> Python, some knowledge of C might be helpful</p>
+
+<h4 id="description-1">Description</h4>
+
+<p>An often-requested missing feature in Astropy is the ability to compute ephemerides: the on-sky location of Solar System objects like the planets, asteroids, or artificial satellites.  This project would involve implementing just this feature. This will likely <em>start</em> with implementing a <code class="language-plaintext highlighter-rouge">get_moon</code> function similar to the existing <code class="language-plaintext highlighter-rouge">get_sun</code> to familiarize the student with the important concepts in the <code class="language-plaintext highlighter-rouge">astropy.coordinates</code> subpackage.  The larger part of the project will likely involve using the orbital elements that the JPL Solar System dynamics group has already complied (there is already a package to read these files: <a href="https://pypi.python.org/pypi/jplephem">JPLEphem</a>), and translate those into  the Astropy coordinates framework.  The student will implement these algorithms and also collaborate with the mentors and Astropy community to develop an API to access this machinery.</p>
+
+<h3 id="implement-public-api-for-erfa">Implement Public API for ERFA</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/eteq">Erik Tollerud</a>, <a href="http://github.com/taldcroft">Tom Aldcroft</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> None required, but may be helpful for understanding ERFA functionality</p>
+
+<p><em>Programming skills:</em> Python, Cython, C</p>
+
+<h4 id="description-2">Description</h4>
+
+<p>Some of the major functionality for Astropy uses the ERFA C library (adapted from the IAU SOFA library) as the back-end for
+computational “heavy-lifting”.  Members of the community have expressed a desire to use this lower-level python wrapper
+around ERFA for other purposes that may not be directly relevant for Astropy.  So this project would involve making the
+necessary changes to make the ERFA python API public.  This includes:</p>
+
+<ul>
+  <li>Getting the documentation up to the astropy standard (currently it is mostly auto-generated verbatim from the C comments).</li>
+  <li>Implementing a more complete test suite for the python side of the code.</li>
+  <li>Possibly moving it to a separate package as part of the liberfa GitHub organization.  This would also include making the necessary
+changes to ensure everything continues to work in Astropy.</li>
+  <li>Any other steps necessary to ensure the resulting package (or sub-package of Astropy) is stable and relatively easy to use.</li>
+</ul>
+
+<h3 id="web-development-for-gammapy">Web development for Gammapy</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="https://github.com/cdeil">Christoph Deil</a>, <a href="https://github.com/joleroi">Johannes King</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> None.</p>
+
+<p><em>Programming skills:</em> Scientific python (Numpy, Scipy, Astropy), Web development (Python backend, Javascript frontend)</p>
+
+<h4 id="description-3">Description</h4>
+
+<p><a href="https://docs.gammapy.org/">Gammapy</a> is a Python package for
+professional gamma-ray astronomers. We are looking for a web developer with good
+Python, HTML and Javascript skills that is interested in building web pages and
+apps to display and browse gamma-ray data and maybe even launch Gammapy
+analyses. There’s a few different projects we’d like to see realised, depending
+on your interests and skills. One option is to build a much-improved version of
+<a href="http://tevcat.uchicago.edu/">TeVCat</a> (a TeV catalog browse web page), that
+includes more image and catalog data and interactivity (maps that pan &amp; zoom,
+search field for source name) with the general public as well as professional
+gamma-ray astronomers as the target. This project would mostly be front-end
+development, plus Python scripts to prepare the images and catalogs in suitable
+formats. Another option is to write several small static site generator scripts
+or Python web apps that let us browse the gamma-ray data and analysis results,
+basically a web GUI for Gammapy. That project would mostly be Python web app
+development, and you have to learn a bit more about Gammapy before GSoC starts.</p>
+
+<h3 id="data-analysis-for-gammapy">Data analysis for Gammapy</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="https://github.com/cdeil">Christoph Deil</a>, <a href="https://github.com/joleroi">Johannes King</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> Some, e.g. sky coordinates and projections.
+Experience with X-ray or gamma-ray data analysis (e.g. Fermi-LAT) is a plus, but not a requirement.</p>
+
+<p><em>Method knowledge needed:</em> Some experience in data analysis (e.g. images, regions) and statistics (e.g. Poisson noise).</p>
+
+<p><em>Programming skills:</em> Python (including pytest and Sphinx) and scientific python (Numpy, Scipy, Astropy)</p>
+
+<h4 id="description-4">Description</h4>
+
+<p><a href="https://docs.gammapy.org/">Gammapy</a> is a Python package for
+professional gamma-ray astronomers. We are looking for someone that’s interested
+towork on a few distinct data analysis tasks, each taking a few weeks of the
+GSoC total time. Gammapy is a very young project, and there’s a lot to do.
+Examples of what needs to be done include implementing new algorithms (e.g.
+image reprojection, source detection, region-based analysis), bringing existing
+prototype algorithms to production (improve API and implementation, add tests
+and docs) as well as grunt work that’s needed to go towards production quality
+and a Gammapy 1.0 release this fall (e.g. set up continuous integration for
+example IPython notebooks or adding more tests). To get an idea of what is going
+on in Gammapy and what still needs to be done, please check out the project on
+Github (https://github.com/gammapy/gammapy) and browse the documentation a bit
+(or try out the examples) and if this looks interesting to you, send us an email
+and let us know what your skills and interests are.</p>
+
+<h3 id="implement-psf-photometry-for-fitting-several-overlapping-objects-at-once">Implement PSF photometry for fitting several overlapping objects at once</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="https://github.com/hamogu">Moritz Guenther</a>, <a href="https://github.com/bsipocz">Brigitta Sipocz</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> basic understanding of what photometry is</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-5">Description</h4>
+
+<p>The <a href="http://photutils.readthedocs.org/en/latest/">photutils</a> package is an Astropy affiliated package that provides tools for photometry (measuring how bright a source is).</p>
+
+<p>There are several ways to do photometry and the package currently implements aperture photometry (just add up all the flux in an image in some some area) and single source point-spread-function (PSF) fitting (fit a function such as a Gaussian to the image). In many situations, sources may overlap in the image, e.g. when observing a dense star cluster, so that we need to fit many functions at once. However, the simple brute-force approach “just fit a model with hundreds of parameters” if there are hundreds of stars usually fails.</p>
+
+<p>This project includes looking at other astronomy codes to see how they tackle the problem; select, modify and improve an algorithm that fits into the astropy modelling framework; implement this in python; and, if it turns out that speed is a problem, move speed-critical parts to Cython. To verify that the new code works, we will compare it to the solutions of established PSF photometry codes.</p>
+
+<p>See https://github.com/OpenAstronomy/openastronomy.github.io/pull/27 for a discussion of some problems and possible solutions that will be addressed in this project.</p>
+
+<h3 id="bridge-sherpa-and-astropy-fitting">Bridge sherpa and astropy fitting</h3>
+
+<p><em>Suggested Mentor(s):</em> D. Burke, T. Aldcroft, H. M. Guenther</p>
+
+<p><em>Difficulty:</em> Expert or better</p>
+
+<p><em>Astronomy knowledge needed:</em> fitting functions and statistics</p>
+
+<p><em>Programming skills:</em> Python, C, Cython</p>
+
+<h4 id="description-6">Description</h4>
+
+<p>Both astropy and Sherpa (https://github.com/sherpa/sherpa/) provide modelling and fitting capabilities; however, Sherpa’s features are way
+more advanced. Sherpa provides far more build-in models, a larger choice of optimizers and a real variety
+of fit statistics.
+Unfortunately Sherpa is less well known and for historical reasons the object-oriented user interface is less polished than the functional state-based interface.
+The main goal is the bring Sherpa’s optimizers and fit statistic functions to astropy; the stretch goal is
+to develop a bridge between both packages such that a user can use a astropy models completely
+interchangably with Sherpa models and fitters. Sherpa models should look like astropy models to astropy
+to enable situations where the model can be made out of three components (a user defined model, an astropy model
+and a Sherpa model) and this is then fitted to astropy data using the Sherpa fitters.</p>
+
+<p>This project requires the student to get proficient in two major packages (Not an easy task!), but with code written in
+just a few weeks of GSoC it will give astropy users access to fitting capabilites that required many years of developer time
+and that are unfeasable redevelop from scratch.</p>
+
+<h3 id="enhancements-to-ginga-a-toolkit-for-building-scientific-image-viewers">Enhancements to Ginga, a Toolkit for Building Scientific Image Viewers</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="https://github.com/ejeschke">Eric Jeschke</a>, <a href="https://github.com/pllim">Pey-Lian Lim</a>, <a href="https://github.com/nabobalis">Nabil Freij</a></p>
+
+<p><em>Difficulty:</em> Beginning to Advanced, depending on project choices</p>
+
+<p><em>Astronomy knowledge needed:</em> Some, depending on project choices</p>
+
+<p><em>Programming skills:</em> Python and scientific python (Numpy, Scipy, Astropy), git version control</p>
+
+<p><em>Desirable:</em> OpenCL, Javascript/web sockets, C/C++ programming, experience in image or array processing, concurrent programming, experience in using GUI toolkits, github-based workflow</p>
+
+<h4 id="description-7">Description</h4>
+
+<p><a href="https://ejeschke.github.io/ginga/">Ginga</a> is a toolkit for constructing scientific image viewers in Python, with an emphasis toward astronomy. Ginga is being used at a number of observatories and institutes for observation and instrument control, quick look, custom data reduction and analysis tasks. The general aim is to build upon this toolkit improving its current features and to expand this toolkit in order for scientists to be able to easily accomplish preliminary data analysis.</p>
+
+<p>We are looking for an individual to work on a few select project areas, depending on skill level and interest. Each project area itself would form a small part of the overall GSOC project. Essentially it would be a large pick and mix but do not let this put you off. This method would allow a range of different contributions to be made the Ginga toolkit that are for your choosing.</p>
+
+<p>Beginning-level:</p>
+<ul>
+  <li>Improve and expand Ginga’s unit test suite and coverage</li>
+  <li>Improve documentation and tutorials, including via Jupyter notebooks and video voice-overs</li>
+  <li>Improve our “native app” packaging for Mac, Unix and Windows</li>
+  <li>Improving LineProfile and Slit plugins</li>
+  <li>Enhance existing plugins by adding GUIs for some common tasks like configuring catalog sources, which are currently done by editing config files</li>
+  <li>Add support for loading broken FITS files by [“fingerprinting” them] (https://github.com/ejeschke/ginga/issues/205)</li>
+</ul>
+
+<p>Intermediate-level:</p>
+<ul>
+  <li>Improve Ginga backends for web browsers (native javascript/web sockets and/or Jupyter notebooks and/or Bokeh server)</li>
+  <li>Enhancements to “traditional” GUI backends (e.g. add support for gtk3, AGG support for python 3, improvements to Qt-based widgets)</li>
+  <li>Graft the astropy-helpers package into Ginga</li>
+  <li>Adding support for calculating approximate line-of-sight velocities</li>
+  <li>Enhance existing plugins for data analysis tasks, usually featuring astropy or affiliated packages</li>
+</ul>
+
+<p>Advanced-level:</p>
+<ul>
+  <li>Implement an OpenCL module that leverages CPU and GPU resources for accelerating some common image processing operations (scaling, transformations, rotations) on numpy image arrays. Benchmark against current CPU based solutions.</li>
+  <li>Improving IO speeds by optimizing use of astropy.fits.io/cfitsio/numpy, lazy reads, file caching hints, optimizing concurrency, etc.</li>
+  <li>Adding support for a binary file format used by a very popular ground-based solar telescope and extending it to support Stokes data products</li>
+</ul>
+
+<p>If you are interested in working on any of these aspects, or want to propose some other work on Ginga, please sign in to Github and comment on <a href="https://github.com/ejeschke/ginga/issues/287">Assist the Ginga Project</a>.</p>
+
+      </div>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+	<p class="tagline"><strong>OpenAstronomy</strong>: Combining the power of open source astrophysics projects to empower science.</p>
+  <a href="https://app.element.io/#/room/#openastronomy:openastronomy.org" target="_blank">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 40 40" height="100%">
+              <path fill="#f9f9f9" d="M30,12V8h-5.004l1-8h-4l-1,8h-7.998l1-8h-4l-1,8H2v4h6.498L7.5,20H2v4h5l-1,8h4l1-8h8l-1.002,8H22l1-8h7v-4h-6.5l0.996-8H30z M19.5,20h-8l0.998-8h7.998L19.5,20z"/>
+          </svg>
+      </span>
+  </a>
+  <a href="https://groups.google.com/forum/#!forum/openastronomy" target="_blank">
+      <span style="color:white!important;" >
+          <span class="icon-white  icon-envelope" style="color:blue!important;">
+	  </span>
+      </span>
+
+  </a>
+  <a href="https://community.openastronomy.org">
+      <img src="/img/icons/discourse_icon.png" alt="OpenAstronomy on Discourse">
+  </a>
+  <a rel="me" href="https://twitter.com/Open_Astronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+            </span>
+  </a>
+  <a rel="me" href="https://astrodon.social/@OpenAstronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </span>
+  </a>
+
+  <a href="/feed.xml">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/>
+          </svg>
+  </a>
+  <a href="https://github.com/openastronomy">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+          </svg>
+      </span>
+      <!-- <span class="username">OpenAstronomy</span> -->
+  </a>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

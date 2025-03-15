@@ -1,0 +1,55 @@
+<h4 id="description">Description</h4>
+
+<p>There have been various proposals for adding image processing and manipulation code to the SunPy library.
+SunPy has decided that this functionality will instead reside in an affiliated package, named <a href="https://github.com/sunpy/sunkit-image/">sunkit-image.</a>
+This project will implement the initial functionality with a broad scope.</p>
+
+<p>We have a range of open issues that form the starting core of the project and contain more concreate steps and information about each feature request.</p>
+
+<p>This project should achieve most or all of the following goals (roughly in this order):</p>
+
+<ol>
+  <li>Implement the <a href="http://adsabs.harvard.edu/abs/2006SoPh..236..263M">normalizing-radial-graded filter (NRGF)</a>.</li>
+  <li>Port the Multi-Scale Gaussian Normalisation (MGN) code from <a href="https://github.com/sunpy/sunpy/pull/1899">#1899</a>.</li>
+  <li>Implement the <a href="http://arxiv.org/abs/1307.5046">OCCULT-2 algorithm</a> for coronal loop tracing.</li>
+  <li>Implement the <a href="https://www.aanda.org/articles/aa/pdf/2006/38/aa4852-06.pdf">soft morphological filtering of solar images</a></li>
+</ol>
+
+<p>There are more complex features we would like but will only be looked at once the previous features have been implemented.</p>
+
+<ol>
+  <li>Refactor and write a Python wrapper for <a href="https://arxiv.org/abs/0712.4289">FLCT</a> <a href="http://solarmuri.ssl.berkeley.edu/overview/publicdownloads/software.html">code</a>.</li>
+  <li>Implement image alignment using feature detection and tracking. <a href="http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_brief.html">Example</a></li>
+  <li>Implement image re-sampling as described <a href="https://link.springer.com/content/pdf/10.1023/B:SOLA.0000021743.24248.b0.pdf">here</a> through updating <a href="https://github.com/astropy/reproject/pull/52">this pull request</a> to the Astropy <a href="https://reproject.readthedocs.io/en/stable/">image resampling</a> repository.</li>
+</ol>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Have familiarized yourself with the algorithms.</li>
+  <li>Have set up a development environment.</li>
+  <li>Understand of what is currently in <code class="language-plaintext highlighter-rouge">sunkit-image</code>.</li>
+</ul>
+
+<h5 id="to-be-completed-by-the-phase-1-evaluation-deadline">To be completed by the Phase 1 Evaluation Deadline</h5>
+
+<ul>
+  <li>Have implemented, tested and documented the NRGF code.</li>
+  <li>Have implemented, tested and documented the MGN code.</li>
+</ul>
+
+<h5 id="to-be-completed-by-the-phase-2-evaluation-deadline">To be completed by the Phase 2 Evaluation Deadline</h5>
+
+<ul>
+  <li>Have successfully merged the NRGF and MGN code.</li>
+  <li>Have implemented OCCULT-2.</li>
+</ul>
+
+<h5 id="to-be-completed-by-the-end-of-gsoc">To be completed by the end of GSoC</h5>
+
+<ul>
+  <li>Have implemented, tested and documented soft morphological filtering code.</li>
+  <li>Have tested, documented and merged the OCCULT-2 code.</li>
+</ul>

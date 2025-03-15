@@ -1,0 +1,24 @@
+<h4 id="description">Description</h4>
+
+<p>The goal of this project is to develop a set of <a href="https://github.com/ipython/ipywidgets">widgets</a> allowing easy use of functionality from astropy and its affiliated packages in <a href="http://jupyter.org/">Jupyter</a> notebooks. While some work in this direction has been done in <a href="https://github.com/mwcraig/reducer">reducer</a>, a package that provides a widget-based interface to <a href="https://github.com/astropy/ccdproc">ccdproc</a>, the widgets in reducer are too tightly bound to the task of image reduction to be useful outside reducer.</p>
+
+<p>The final deliverable for the project will be a new package ready for application to be an astropy affiliated package.</p>
+
+<p>Some of the deliverables for this project would be widget interfaces for:</p>
+
+<ul>
+  <li>A FITS image viewer utilizing the affiliated package <a href="https://github.com/ejeschke/ginga">ginga</a> to handle the image display. This widget should allow for overlays of sources from catalogs (using <a href="https://github.com/astropy/astroquery">astroquery</a>), selection of sources in the image using a mouse, and user-configurable key bindings. An initial implementation, using <a href="https://github.com/mwcraig/ipyevents">ipyevents</a>, has been done in <a href="https://github.com/ejeschke/ginga">ginga</a>.</li>
+  <li>Point source detection and photometry using either <a href="https://github.com/astropy/photutils">photutils</a> or <a href="https://github.com/kbarbary/sep">sep</a>.</li>
+  <li>Observation planning using <a href="https://github.com/astropy/astroplan">astroplan</a>.</li>
+</ul>
+
+<p>In addition, these Jupyter notebooks will be developed:</p>
+
+<ul>
+  <li>Sample notebooks demonstrating how to compose the widgets into applications.</li>
+  <li>An image reduction notebook, similar to <a href="https://github.com/mwcraig/reducer">reducer</a>.</li>
+  <li>A photometry notebook for source detection and photometry.</li>
+  <li>A notebook for performing differential photometry on a time series of measurements.</li>
+</ul>
+
+<p>Preliminary development of this project is already underway, so some of the specific deliverables might have changed by the beginning of the summer of code.</p>

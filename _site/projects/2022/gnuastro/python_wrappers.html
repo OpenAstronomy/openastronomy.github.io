@@ -1,0 +1,59 @@
+<h4 id="description">Description</h4>
+
+<p>Gnuastro is primarily written in C because astronomical datasets are large and thus need to be efficient with few dependencies.
+Therefore, its most commonly used interface are Gnuastro’s command-line programs (that are built on the Unix philosophy).
+However, Gnuastro’s also has an extensive set of installed, dynamic C/C++ libraries, which are the actually beating heart of the programs.
+On the other hand, many projects today are done in Python, almost excuslively using Numpy for their numerical operations (like data arrays).
+Python and Numpy are actually written in C, therefore they have very well-defined interfaces for communicating with installed C libraries.
+Gnuastro therefore plans on adding a low-level wrapper infra-structure which will allow easy usage of Gnuastro’s powerful libraries in Python.
+Note that this won’t involve intermediate wrapper languages SWIG, we will directly link with <a href="https://docs.scipy.org/doc/numpy-1.10.0/reference/c-api.html">the core C library of Numpy</a>.</p>
+
+<p>This will be a wonderful chance to master Python and Scipy/Numpy at a very fundamental level, giving you a great experience to expand what you have learnt afterwards into many other functionalities.
+Of course, in the meantime you will also working on many real-world astronomical data and science scenarios using ground-based and space-based data.</p>
+
+<p>To get started, check <a href="https://savannah.gnu.org/support/index.php?110613#comment0">our GSoC 2022 checklist</a>.</p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<ul>
+  <li>
+    <p>Completing <a href="https://savannah.gnu.org/support/index.php?110613#comment0">our GSoC 2022 checklist</a></p>
+  </li>
+  <li>
+    <p>Mastering the C interface of Python/Numpy and Gnuastro.</p>
+  </li>
+  <li>
+    <p>Writing functions to convert Numpy’s core data structure to Gnuastro’s core data structure and vice-versa.</p>
+  </li>
+  <li>
+    <p>Build and install the Python components as part of the Gnuastro’s build.</p>
+  </li>
+</ul>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Learning the numpy C interface and writing small test usages on some basic operations (not necessarily involving Gnuastro).</p>
+  </li>
+  <li>
+    <p>Fixing small bugs in Gnuastro’s library (as an excuse to learn the programming style and usage of Gnuastro’s libraries).</p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Having a working converter between Numpy’s data structure and Gnuastro’s data structure.</li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>
+    <p>Adding wrappers to the core lower-level Gnuastro libraries.</p>
+  </li>
+  <li>
+    <p>Writing tests and build/install steps of the Python wrappers in Gnuastro’s build system.</p>
+  </li>
+</ul>

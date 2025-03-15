@@ -1,0 +1,35 @@
+<h4 id="description">Description</h4>
+
+<p>CTLearn is a Python package for using deep learning to perform analysis tasks on data from imaging atmospheric Cherenkov telescopes (IACTs). These tasks may be either classification or regression problems. CTLearn can already perform classification tasks, such as distingiuishing between signal gamma ray and background cosmic ray images. This project would extend to regression tasks as well.</p>
+
+<p>There are two main analysis tasks for which regression would be used: estimating the energy of the orginating particle from a gamma ray image or set of images, and reconstructing the arrival direction on the sky of that particle. These tasks are critical for maximizing the energy resolution, angular resolution, and sensitivity of gamma-ray telescopes.</p>
+
+<p>In this project, the student will first implement the ability to load continuous variables in CTLearn using the data loading library <a href="https://github.com/cta-observatory/dl1-data-handler">Dl1DataHandler</a>. Then, they will create and train a neural network to predict the particle energy corresponding to a simulated CTA gamma ray image, and add it to the CTLearn default models. Finally, they will extend this network to accept as input multiple gamma-ray images corresponding to the same event as seen from different angles, and to predict the particle arrival direction as well.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="gsoc-coding-starts">GSOC CODING STARTS</h5>
+
+<ul>
+  <li>Install CTLearn and train a pre-existing benchmark model to verify that it runs correctly.</li>
+  <li>Understand the technical and scientific goals of the project.</li>
+</ul>
+
+<h5 id="gsoc-midterm">GSOC MIDTERM</h5>
+
+<ul>
+  <li>Implement loading continuous variables in CTLearn.</li>
+  <li>Make a neural network for energy estimation based on the single telescope model in CTLearn and begin training it.</li>
+  <li>Have all code and documentation in GitHub.</li>
+</ul>
+
+<h5 id="gsoc-final">GSOC FINAL</h5>
+
+<ul>
+  <li>Complete the training and optimize the performance of the neural network for energy estimation.</li>
+  <li>Add the capability for angular reconstruction to the neural network (time permitting).</li>
+  <li>Create and train a neural network for energy estimation using multiple images based on the CNN-RNN model in CTLearn (time permitting).</li>
+  <li>Make configuration files and plots demonstrating the performance of the neural network(s).</li>
+  <li>Evaluating the energy bias and point spread function with the regression network.</li>
+  <li>Have all code, documentation, and final configuration files and plots in GitHub.</li>
+</ul>

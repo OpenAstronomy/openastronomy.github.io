@@ -1,0 +1,33 @@
+<h4 id="description">Description</h4>
+
+<p>CTLearn is a Python package for using deep learning to perform analysis tasks on data from imaging atmospheric Cherenkov telescopes (IACTs). One of the most pressing challenges is processing raw IACT images captured by cameras made of hexagonal lattices of photo-multipliers. In order to feed the current deep convolutional neural network models, a transformation from hexagonal camera pixels to square image pixels has to be performed.</p>
+
+<p>A different, more promising, approach is to implement hexagonal convolutional kernels. There are several packages (implemented in PyTorch) avaiable, which have been shown an improvement in performance. The goal of this project is to implement hexagonal convolution and pooling methods in CTLearn using Tensorflow.</p>
+
+<p>In this project, the student will first study the different packages like <a href="https://github.com/IndexedConv/IndexedConv">IndexedConv</a> and <a href="https://github.com/ai4iacts/hexagdly">HexagDLy</a>. The require transformations to create the input images for these packages are already implemented. Then, they will transfer the PyTorch code to Tensorflow and make it compatible with CTLearn. Finally, the CTLearn default models will be tested on the new method and compared with the conventional conversion methods.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="gsoc-coding-starts">GSOC CODING STARTS</h5>
+
+<ul>
+  <li>Install CTLearn and train a pre-existing benchmark model to verify that it runs correctly.</li>
+  <li>Understand the technical and scientific goals of the project.</li>
+</ul>
+
+<h5 id="gsoc-midterm">GSOC MIDTERM</h5>
+
+<ul>
+  <li>Implement hexagonal convolution and pooling methods in CTLearn.</li>
+  <li>Test/Train CTLearn default models using the new method.</li>
+  <li>Have all code and documentation in GitHub.</li>
+</ul>
+
+<h5 id="gsoc-final">GSOC FINAL</h5>
+
+<ul>
+  <li>Complete the training and optimize the performance of the neural network for hexagonal convolution.</li>
+  <li>Compare performance with previous benchmarks.</li>
+  <li>Make/Edit configuration files and plots demonstrating the performance of hexagonal convolution.</li>
+  <li>Have all code, documentation, and final configuration files and plots in GitHub.</li>
+</ul>

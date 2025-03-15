@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Ideas for Astropy</title>
+    <link rel="icon" type="image/png" href="http://localhost:4000/img/logo/logoOA_white_svg.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="foss, open source, organisations, astronomy,
+    OpenAstronomy, astrophysics, GSoC, projects, members, " />
+    <meta name="description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+">
+    <meta name="author" content="OpenAstronomy" />
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ideas for Astropy" />
+    <meta property="og:description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+" />
+    <meta property="og:url" content="https://openastronomy.org/" />
+    <meta property="og:site_name" content="OpenAstronmy" />
+    <!-- OGP ends here -->
+    <link rel="canonical" href="http://localhost:4000/gsoc/gsoc2015/ideas_astropy.html">
+
+        <!-- <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'> -->
+    <link href="../assets/fonts/fira-sans.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/css/swc.css" />
+    <link rel="stylesheet" type="text/css" href="/css/swc-bootstrap.css" />
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <link rel="alternate" type="application/rss+xml" title="The OpenAstronomy Blog" href="/feed.xml"/>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="../../../../assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+     // change background images from a list.
+     $(document).ready(function() {
+         // list of filenames endings
+         var backgrounds = ['ap', 'sp'];
+         var selected = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+         var bgpath = "/css/background_" + selected + '.jpg';
+         $('body').css('background-image', 'url(' + bgpath + ')');
+     });
+    </script>
+
+    
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" style="background-color: #292929;">
+
+  
+
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/">
+          <img class="media-object logo" src="http://localhost:4000/img/logo/logoOA_white_svg.png" alt="OpenAstronomy" />
+      </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/gsoc/">Google Summer of Code</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/members/">Members</a>
+          
+        
+          
+          <a class="page-link" href="/news.html">News and Events</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+        
+          <a class="page-link" href="http://openastronomy.org/Universe_OA">Contributor Blogs</a>
+        
+          <a class="page-link" href="http://openastronomy.org/pyastro">PyAstro Conference</a>
+        
+          <a class="page-link" href="https://calendar.google.com/calendar/b/1?cid=YmxoZzd0MG9zbjhscm50ZDcwOXFoZzFtaXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Events Calendar</a>
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="fixed-wrap">
+    <div class="page-content">
+      <div class="wrapper">
+        <h3 id="implement-distribution-support-for-quantity">Implement Distribution Support for Quantity</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/eteq">Erik Tollerud</a></p>
+
+<p><em>Difficulty:</em> Beginner to Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> none, but statistics knowledge/background useful</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description">Description</h4>
+
+<p>The <a href="http://docs.astropy.org/en/stable/units/index.html">Quantity</a> class is
+powerful but doesn’t have particularly useful support for uncertainties on
+quantities or other statistical approaches to thinking about numbers. A very
+straightforward way to make progress on this would be to create a subclass of
+Quantity called “Distribution” (or similar) that represents a probability
+density function of a quantity as Monte-Carlo-sampled arrays. This project would
+involve implementing this subclass, propagating operations while combining
+distributions, as well as tools for extracting useful information from such
+distributions. If there is time, this could also involve expanding this system
+to support common analytically-representable distributions such as Gaussian and
+Poisson distributions.</p>
+
+<h3 id="implement-image-rasterization-methods-for-models">Implement image rasterization methods for models</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/cdeil">Christoph Deil</a></p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> Basic</p>
+
+<p><em>Programming skills:</em> Python, Cython</p>
+
+<h4 id="description-1">Description</h4>
+
+<p>When fitting models to binned data, evaluating the model at the bin centers leads to incorrect results if the model changes significantly within a bin. E.g. think of an image where the point spread function (PSF) only has a width slightly above the pixel size and you want to distinguish small Galaxies from stars.</p>
+
+<p>Currently Astropy models have an <code class="language-plaintext highlighter-rouge">evaluate</code> method that can be used to
+evaluate them on a grid of pixel centers, there’s also an oversampling function
+to get a better representation of the expected flux in pixels. It would be
+useful to add methods that allow fast and precise rasterization of models,
+similar to what graphics libraries do (sparse subsampling or resampling of
+models evaluated on grids that are appropriate for each model, or
+anti-aliasing).</p>
+
+<p>There are different options for how to proceed with this project, e.g. possibly
+add optional extension, sampling grid and bounding box information to the
+Astropy model classes, or contribute rasterisation code to
+<a href="http://docs.astropy.org/en/stable/modeling/index.html">astropy.modeling</a> or
+photutils, or expand the existing resampling code in the
+<a href="https://github.com/astropy/reproject/">reproject</a> package. The student
+should be interested in model fitting and image rasterisation as well as
+profiling and extensive testing of a given method to make it “just work” for
+the end user.</p>
+
+<h3 id="add-indexing-capability-to-table-object">Add indexing capability to Table object</h3>
+
+<p><em>Suggested Mentor(s):</em> Tom Aldcroft (Astropy), Stuart Mumford (SunPy)</p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> none</p>
+
+<p><em>Programming skills:</em> Python, Cython, familiarity with database algorithms</p>
+
+<h4 id="description-2">Description</h4>
+
+<p>The <a href="http://docs.astropy.org/en/stable/table/index.html">Table</a> class is the
+core astropy class for storing and manipulating tabular data.  Currently it
+supports a limited set of database-like capabilities including table joins and
+grouping.  A natural extension of this is to provide the ability to create and
+maintain an index on one or more columns as well as a table primary key.  With
+these indexed columns available then certain selection and query operations
+could be highly optimized.  The challenge is to maintain the integrity of the
+indexes as column or table properties change, using state of the art algorithms
+for high performance.</p>
+
+<p>There are various uses of this functionality, such as supporting
+time series data, where the index column would allow you to sort the
+Table correctly as well as performing operations such as truncations
+and merges while maintaining the integrity of the time series.
+Other uses include catalogs of positions in the night sky where an
+index column of astropy coordinate objects would maintain the
+uniqueness of every position.</p>
+
+<p>To summarize:</p>
+
+<ul>
+  <li>Add method to create an index for a specified column</li>
+  <li>Add code to maintain these indexes when the table is modified</li>
+  <li>Add method to designate a column as a primary key (possibly maintaining
+table in sort order for that key)</li>
+  <li>Optimize existing table operations to use indexes where possible</li>
+  <li>Add new methods to select table rows based on column values</li>
+</ul>
+
+<h3 id="unify-and-improve-file-handling">Unify and improve file handling</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/mdboom">Michael Droettboom</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> none</p>
+
+<p><em>Programming skills:</em> Python, Unix features</p>
+
+<h4 id="description-3">Description</h4>
+
+<p>We have a number of packages that read and write data to files and file-like
+objects. While there was some initial effort to unify this code in
+<a href="http://docs.astropy.org/en/stable/api/astropy.utils.data.get_readable_fileobj.html#astropy.utils.data.get_readable_fileobj">get_readable_fileobj</a> and others, in general each package
+is handling its own file I/O. This sort of code is notoriously difficult to get
+right across versions of Python and the different platforms we support, so it
+would be beneficial to remove this duplication. This also means that some
+features, such as gzip handling or URL handling, are not universally available
+or inconsistent across packages. Once this is unified, we can move on to some
+more advanced features that don’t exist anywhere in astropy, such as HTTP Range
+fetching (see <a href="https://github.com/astropy/astropy/issues/3446">astropy/#3446</a>,
+and OS-level file locking to make multiprocessing applications that write to
+files more robust.</p>
+
+<h3 id="implement-missing-astropymodeling-functionality">Implement missing astropy.modeling functionality</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/cdeil">Christoph Deil</a></p>
+
+<p><em>Difficulty:</em> Intermediate to expert</p>
+
+<p><em>Astronomy knowledge needed:</em> Basic</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-4">Description</h4>
+
+<p>Implement some basic features are still missing in the astropy.modeling package:</p>
+
+<ul>
+  <li>Fit parameter errors (symmetric and profile likelihood)</li>
+  <li>Poisson fit statistic</li>
+  <li>PSF-convolved models</li>
+  <li>model parameter and fit result serialisation, e.g. to YAML or JSON or XML (e.g. some astronomers use <a href="http://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/source_models.html">XML</a>)</li>
+</ul>
+
+<p>For the parameter error and Poisson fit statistic part some statistics background is needed, as well as interest in discussing and finding a good API for these things.</p>
+
+<p>An optional fun application at the end of this project (if model and fit result serialisation is implemented) could be to develop an interactive image fitting GUI (e.g. with IPython widgets in the web browser) for common 2D Astropy models, showing data, model and residual images and letting the user adjust model parameters and display fit statistics and results interactively.</p>
+
+<h3 id="implement-framework-for-handling-velocities-and-velocity-transforms-in-astropycoordinates">Implement framework for handling velocities and velocity transforms in astropy.coordinates</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/adrn">Adrian Price-Whelan</a> &amp; <a href="http://github.com/eteq">Erik Tollerud</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> understanding of coordinate transformations, some knowledge of astronomical coordinate systems would be useful</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-5">Description</h4>
+
+<p>The coordinates subpackage currently only supports transforming positional
+coordinates, but it would be useful to develop a consistent framework for also
+transforming velocities (e.g., proper motion to proper motion, or proper motion
+to cartesian) with full support for barycentric, galactocentric, and LSR
+motion. This project could be:</p>
+
+<ol>
+  <li>working with us to develop a consistent API for handling velocities within coordinates,</li>
+  <li>developing a trial implementation of an API,</li>
+  <li>actually doing core development to implement the new features, or</li>
+  <li>some combination of all of the above.</li>
+</ol>
+
+<h3 id="implement-public-api-for-erfa">Implement Public API for ERFA</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/eteq">Erik Tollerud</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> None required, but may be helpful for understanding ERFA functionality</p>
+
+<p><em>Programming skills:</em> Python, Cython, C</p>
+
+<h4 id="description-6">Description</h4>
+
+<p>Some of the major functionality for Astropy uses the ERFA C library (adapted from the IAU SOFA library) as the back-end for
+computational “heavy-lifting”.  Members of the community have expressed a desire to use this lower-level python wrapper
+around ERFA for other purposes that may not be directly relevant for Astropy.  So this project would involve making the
+necessary changes to make the ERFA python API public.  This includes:</p>
+
+<ul>
+  <li>Getting the documentation up to the astropy standard (currently it is mostly auto-generated verbatim from the C comments).</li>
+  <li>Implementing a more complete test suite for the python side of the code.</li>
+  <li>Possibly moving it to a separate package as part of the liberfa GitHub organization.  This would also include making the necessary
+changes to ensure everything continues to work in Astropy.</li>
+  <li>Any other steps necessary to ensure the resulting package (or sub-package of Astropy) is stable and relatively easy to use.</li>
+</ul>
+
+
+      </div>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+	<p class="tagline"><strong>OpenAstronomy</strong>: Combining the power of open source astrophysics projects to empower science.</p>
+  <a href="https://app.element.io/#/room/#openastronomy:openastronomy.org" target="_blank">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 40 40" height="100%">
+              <path fill="#f9f9f9" d="M30,12V8h-5.004l1-8h-4l-1,8h-7.998l1-8h-4l-1,8H2v4h6.498L7.5,20H2v4h5l-1,8h4l1-8h8l-1.002,8H22l1-8h7v-4h-6.5l0.996-8H30z M19.5,20h-8l0.998-8h7.998L19.5,20z"/>
+          </svg>
+      </span>
+  </a>
+  <a href="https://groups.google.com/forum/#!forum/openastronomy" target="_blank">
+      <span style="color:white!important;" >
+          <span class="icon-white  icon-envelope" style="color:blue!important;">
+	  </span>
+      </span>
+
+  </a>
+  <a href="https://community.openastronomy.org">
+      <img src="/img/icons/discourse_icon.png" alt="OpenAstronomy on Discourse">
+  </a>
+  <a rel="me" href="https://twitter.com/Open_Astronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+            </span>
+  </a>
+  <a rel="me" href="https://astrodon.social/@OpenAstronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </span>
+  </a>
+
+  <a href="/feed.xml">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/>
+          </svg>
+  </a>
+  <a href="https://github.com/openastronomy">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+          </svg>
+      </span>
+      <!-- <span class="username">OpenAstronomy</span> -->
+  </a>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

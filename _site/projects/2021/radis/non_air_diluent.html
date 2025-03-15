@@ -1,0 +1,72 @@
+<h4 id="description">Description</h4>
+
+<p>The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that makes it one of the fastest line-by-line spectral codes available.</p>
+
+<p>Currently RADIS supports calculation of about every possible molecule, but assumes that it is diluted in air by default. It is possible to manually adjust it to replace air by one other diulter (for instance : compute CO diluted in CO2). The goal of the current project is to make it automatic, and extend it to multiple diluents (for instance: CO diluted in CO2 and H2O).</p>
+
+<p>No background in spectroscopy and collisional broadening is required, but the student is expected to want to learn about this topic ! First evaluation will focus on the physics, 2nd and Final will focus on implementation.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Engage with the community on <a href="https://github.com/radis/slack-invite">💬 RADIS Slack</a></p>
+  </li>
+  <li>
+    <p>Training on emission &amp; absorption spectroscopy, with a focus on collisional broadening.</p>
+  </li>
+  <li>
+    <p>Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and get familiar with <a href="https://radis.readthedocs.io/en/latest/dev/developer.html#architecture">RADIS architecture</a></p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<p>Learn the physics :</p>
+
+<ul>
+  <li>
+    <p>With the help of the mentors, write a Tutorial notebook about collisional broadening and the effect of diluent (for instance using the existing implementation in the very good <a href="https://github.com/hitranonline/hapi">HAPI</a> code)</p>
+  </li>
+  <li>
+    <p>Add tutorial to show how to manually replace the broadening coefficients in RADIS (with Pandas).</p>
+  </li>
+</ul>
+
+<p>Implement :</p>
+
+<ul>
+  <li>
+    <p>write a method in <a href="https://github.com/radis/radis/blob/develop/radis/lbl/factory.py#L109">SpectrumFactory</a> to set-up the dilution gas, and read the corresponding coefficients from the loaded database.</p>
+  </li>
+  <li>
+    <p>Update the <a href="https://github.com/radis/radis/blob/develop/radis/lbl/broadening.py#L249">pressure_broadening_HWMH</a> function to compute more than one diluent.</p>
+  </li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<p>Make it user friendly :</p>
+
+<ul>
+  <li>
+    <p>Add a <code class="language-plaintext highlighter-rouge">diluent</code> parameter in the high-level <a href="https://github.com/radis/radis/blob/develop/radis/lbl/calc.py#L29">calc_spectrum</a> function</p>
+  </li>
+  <li>
+    <p>automatically retrieve non-air broadening coefficients from the HITRAN database and convert it to the RADIS database format (see <a href="https://github.com/radis/radis/issues/213">#213</a> ).</p>
+  </li>
+  <li>
+    <p>Add a Gallery Example</p>
+  </li>
+  <li>
+    <p>Have all code, tests and documentation in GitHub.</p>
+  </li>
+</ul>
+
+<h5 id="secondary-goals">Secondary goals</h5>
+
+<ul>
+  <li>allow user to specify their own collisional broadening formula.</li>
+</ul>

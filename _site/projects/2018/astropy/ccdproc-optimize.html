@@ -1,0 +1,25 @@
+<p>Optimizing performance of ccdproc</p>
+
+<h4 id="description">Description</h4>
+
+<p>The <a href="https://ccdproc.readthedocs.io">ccdproc</a> package contains functions for reducing and combining optical/IR image data and for managing collections of FITS files. The package API is mature and is close to feature-complete. Limited effort has been put into trying to optimize <code class="language-plaintext highlighter-rouge">ccdproc</code> for speed and memory use but users have reported that it runs slowly. One area to focus on is image combination. The first stage of this project is identifying which parts of the code are bottlenecks; the remainder of the project is fixing those bottlenecks and setting up regular monitoring using <a href="https://asv.readthedocs.io/">asv</a>.</p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<h5 id="gsoc-2018-coding-starts">GSOC 2018 CODING STARTS</h5>
+
+<ul>
+  <li>Perform developer install of <code class="language-plaintext highlighter-rouge">ccdproc</code></li>
+  <li>Install Python profiling tools</li>
+  <li>Install and run <code class="language-plaintext highlighter-rouge">asv</code>.</li>
+</ul>
+
+<h5 id="gsoc-2018-milestones">GSOC 2018 Milestones</h5>
+
+<ul>
+  <li>Profile code to identify targets for performance (speed) optimization.</li>
+  <li>Set up regular performance testing of <code class="language-plaintext highlighter-rouge">ccdproc</code> on CI.</li>
+  <li>Propose fixes for each of the problems identified in previous milestone.</li>
+  <li>Identify memory bottlenecks.</li>
+  <li>Fix memory bottlenecks.</li>
+</ul>

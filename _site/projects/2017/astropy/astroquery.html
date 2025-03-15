@@ -1,0 +1,20 @@
+<h4 id="description">Description</h4>
+
+<p><a href="http://astroquery.readthedocs.io/">astroquery</a>, an astropy
+affiliated package, is a package to place modules that access astronomical data
+that is onlone. The aim of this project will be to implement just such modules,
+for a variety of astronomical archives that are currently lacking astroquery modules.
+A list of new services that have been suggested by our users
+<a href="https://github.com/astropy/astroquery/issues?q=is%3Aissue+is%3Aopen+label%3A%22New+Service%22">can be found here</a> and
+in <a href="https://github.com/astropy/astroquery/issues/226">this summary issue</a>.</p>
+
+<p>A <em>possible</em> set of milestones for any particular one of these modules  might be:</p>
+
+<ol>
+  <li>Research the web API for the archive sufficiently to determine what exactly astroquery should expose.</li>
+  <li>Determine the best interface to access the simplest subset of that archive that would be useful.</li>
+  <li>Create an astroquery module to actually implement that interface.</li>
+  <li>Add tests to ensure the module works correctly.</li>
+  <li>Generalize that architecture to extend to other data products from the archive - e.g. repeat 1-4 until all useful functionality in the module is complete.</li>
+</ol>
+

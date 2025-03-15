@@ -1,0 +1,50 @@
+<h4 id="description">Description</h4>
+
+<p>CTLearn is a Python package for using deep learning to perform
+analysis tasks on data from imaging atmospheric Cherenkov telescopes
+(IACTs). These tasks may be either classification or regression
+problems. This project would enable CTLearn to take IACT data in
+<a href="https://root.cern.ch/">ROOT</a> format as input.</p>
+
+<p>The sensitivity of IACTs is mostly driven by our capability of
+distinguishing gamma-ray induced events from cosmic-ray induced events
+as well as determining the arrival direction of the incoming
+particle. CTLearn aims at improving on the current methods for event
+reconstruction. So far, CTLearn takes data in
+<a href="https://www.hdfgroup.org/solutions/hdf5/">HDF5</a> format as
+input. However, most of the data from IACTs currently in operation
+come in ROOT format. Enabling ROOT input in CTLearn will open its
+doors to existing IACT facilities.</p>
+
+<p>In this project, the student will first learn how to use CTLearn to
+train classification models that tell gamma-ray images from cosmic-ray
+images apart and why this is important in the context of IACTs. Then,
+the student will enable the input of data in ROOT format and train
+some of the already existing deep learning models in CTLearn with data
+from current-generation IACTs.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="gsoc-coding-starts">GSOC CODING STARTS</h5>
+
+<ul>
+  <li>Install CTLearn and train a pre-existing benchmark model to verify that it runs correctly.</li>
+  <li>Understand the technical and scientific goals of the project.</li>
+</ul>
+
+<h5 id="gsoc-midterm">GSOC MIDTERM</h5>
+
+<ul>
+  <li>Implement input of generic data in ROOT format using the packages uproot and Dl1-data-handler.</li>
+  <li>Enable input of data in ROOT format from a specific IACT using the packages uproot and Dl1-data-handler.</li>
+  <li>Have all code and documentation in GitHub.</li>
+</ul>
+
+<h5 id="gsoc-final">GSOC FINAL</h5>
+
+<ul>
+  <li>Enable input of data in ROOT format from a given collection of IACTs.</li>
+  <li>Train single_tel classification model on data from a specific IACT.</li>
+  <li>Train cnn_rnn classification model on data from a specific IACT.</li>
+  <li>Have all code, documentation, and plots in GitHub.</li>
+</ul>

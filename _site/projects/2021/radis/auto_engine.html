@@ -1,0 +1,72 @@
+<h4 id="description">Description</h4>
+
+<p>The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available.</p>
+
+<p>The new algorithm is very efficient for large number of lines. However, for very widespread spectra with low number of lines, the legacy algorithm performs better. It was suggested that a scaling number would of the form :</p>
+
+\[Rc = broadening_cutoff  / wstep * N_lines / log(spectral range / wstep)\]
+
+<p>For low values of Rc, the legacy method would perform better. For large values of R, the new algorithm would perform better.</p>
+
+<p>The first goal of the project is to confirm or adjust this number, by setting up benchmark cases under various simulation conditions. 
+The second goal of the project is to automatically switch the lineshape algorithm used at runtime based on the value of the number.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Engage with the community on <a href="https://github.com/radis/slack-invite">💬 RADIS Slack</a></p>
+  </li>
+  <li>
+    <p>Training on emission &amp; absorption spectroscopy</p>
+  </li>
+  <li>
+    <p>Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and <a href="https://radis.readthedocs.io/en/latest/dev/developer.html#architecture">RADIS architecture</a></p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st Evaluation</h5>
+
+<p>The goal is to confirm or adjust the critical number above. We only use RADIS and do not edit the codebase yet :</p>
+
+<ul>
+  <li>
+    <p>Run at least 100 benchmark cases, for various HITRAN (see <a href="https://radis.readthedocs.io/en/latest/examples/hitran-spectra.html#">HITRAN spectra</a> ) and larger databases (HITEMP, CDSD-4000).</p>
+  </li>
+  <li>
+    <p>Compare the results for the two lineshape engines of <a href="https://radis.readthedocs.io/en/latest/source/radis.lbl.calc.html#radis.lbl.calc.calc_spectrum">calc_spectrum</a> (<code class="language-plaintext highlighter-rouge">optimization="None"</code> and <code class="language-plaintext highlighter-rouge">optimization="simple"</code>), and plot them against the R number.</p>
+  </li>
+  <li>
+    <p>Write a Jupyter Notebook to discuss the changes made to the R number formula, and the critical value obtained.</p>
+  </li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<p>We now update the RADIS codebase to implement the automatic engine choice :</p>
+
+<ul>
+  <li>
+    <p>Add some of the benchmarks above in the <a href="https://github.com/radis/radis-benchmark/tree/master/manual_benchmarks">cpu-performance benchmark</a> to track the changes.</p>
+  </li>
+  <li>
+    <p>Compute the <code class="language-plaintext highlighter-rouge">Rc</code> number in <a href="https://radis.readthedocs.io/en/latest/source/radis.lbl.calc.html#radis.lbl.calc.calc_spectrum">calc_spectrum</a> and automatically choose the optimization mode accordingly.</p>
+  </li>
+  <li>
+    <p>Choose what lineshape-broadening-cutoff to use by default in the legacy algorithm.</p>
+  </li>
+  <li>
+    <p>Re-run the benchmarks and ensure the fastest option is always chosen.</p>
+  </li>
+  <li>
+    <p>Have all code, tests and documentation in GitHub.</p>
+  </li>
+</ul>
+
+<h5 id="secondary-goals">Secondary Goals</h5>
+
+<ul>
+  <li>For the math/algorithm-oriented student : set-up the code architecture to deal with large spectra composed of multiple spectral regions, some of which would have different <code class="language-plaintext highlighter-rouge">Rc</code> numbers, and use the appropriate algorithm for each spectral region before merging the spectra.</li>
+</ul>

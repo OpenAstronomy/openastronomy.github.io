@@ -1,0 +1,70 @@
+<h4 id="description">Description</h4>
+
+<p>The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available. This performance makes it very suitable to compute high-temperature atmospheres.</p>
+
+<p>The goal of this project is to simplify the user interface to compute atmospheres directly :</p>
+
+<ul>
+  <li>
+    <p>set up a new, direct front-end interface</p>
+  </li>
+  <li>
+    <p>make RADIS compatible with more line databases (ExoMol, GEISA, etc)</p>
+  </li>
+  <li>
+    <p>if interested in the radiative transfer-physics, add a plane-parallel model for multiple-layers-atmospheres</p>
+  </li>
+</ul>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Engage with the community on <a href="https://github.com/radis/slack-invite">💬 RADIS Slack</a></p>
+  </li>
+  <li>
+    <p>Training on emission &amp; absorption spectroscopy</p>
+  </li>
+  <li>
+    <p>Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests)</p>
+  </li>
+  <li>
+    <p>Get familiar with <a href="https://radis.readthedocs.io/en/latest/dev/developer.html#architecture">RADIS architecture</a> : in particular, review the interface change to calculate multiple molecules at the same time (<a href="https://github.com/radis/radis/pull/74">#74</a>)</p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>
+    <p>Write interface to read standard atmosphere input files (mole fractions, temperature profile, pressure profile)</p>
+  </li>
+  <li>
+    <p>Add a detailed Notebook example in the documentation</p>
+  </li>
+  <li>
+    <p>Add integration to more line databases, like ExoMol or GEISA (<a href="https://github.com/radis/radis/issues/34">#34</a>)</p>
+  </li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>
+    <p>Improve how these databases are downloaded automatically and converted to RADIS standard format (see <a href="https://github.com/radis/radis/issues/210">#210</a>)</p>
+  </li>
+  <li>
+    <p>Add a Gallery Example in RADIS documentation</p>
+  </li>
+  <li>
+    <p>Have all code, tests and documentation in GitHub.</p>
+  </li>
+</ul>
+
+<h5 id="secondary-goals">Secondary Goals</h5>
+
+<ul>
+  <li>If the student is interested in the radiative-transfer physics, set-up a plane-parallel model to compute multiple-layers atmospheres (<a href="https://github.com/radis/radis/issues/189">#189</a>)</li>
+</ul>

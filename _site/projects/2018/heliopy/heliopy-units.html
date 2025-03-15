@@ -1,0 +1,47 @@
+<h4 id="description">Description</h4>
+
+<p>HelioPy is a relatively new python package, whose aim is to automate the
+downloading and import of data used for space physics.</p>
+
+<p>Currently all the data imported is just returned as lists of numbers, with no
+information about their units attached. We want to move to a system where all
+the data imported with HelioPy has units (e.g. meters, seconds, volts) attached
+before it is output to the scientists using the data.
+This will mean finding out ways of automatically detecting the correct units
+from raw data, and then converting current code to using the astropy
+units system.</p>
+
+<p>Find more information about <a href="http://docs.heliopy.org/en/stable/">HelioPy</a> and
+<a href="http://docs.astropy.org/en/stable/units/index.html">astropy units</a></p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<h5 id="gsoc-2018-coding-starts">GSOC 2018 CODING STARTS</h5>
+
+<ul>
+  <li>Have installed HelioPy and used it to download and plot some data to get a
+feel of how it currently works.</li>
+  <li>Have read the documentation on astropy units and know how they work,
+and what their advantages are over using data without units.</li>
+</ul>
+
+<h5 id="gsoc-2018-1st-evaluation">GSOC 2018 1ST EVALUATION</h5>
+
+<ul>
+  <li>Have investigated a way of automatically extracting the correct units from
+raw data files.</li>
+</ul>
+
+<h5 id="gsoc-2018-2nd-evaluation">GSOC 2018 2ND EVALUATION</h5>
+
+<ul>
+  <li>Have written code to make at least one data import function return data
+with units attached.</li>
+</ul>
+
+<h5 id="gsoc-2018-final-evaluation">GSOC 2018 FINAL EVALUATION</h5>
+
+<ul>
+  <li>Have expanded the new code to all of the data import functions, to make
+HelioPy fully compatible with the astropy units system.</li>
+</ul>

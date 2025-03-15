@@ -1,0 +1,53 @@
+<h4 id="description">Description</h4>
+
+<p>This project aims to improve the <code class="language-plaintext highlighter-rouge">solarbextrapolation</code> (maybe renamed in the future) package by relaxing the small-angle approximation and allowing for extrapolation of global magnetic fields, i.e. 3D vector fields on a scale larger than an active region.
+Furthermore, we want to add support for other numerical models with the first one being Potential Field Source Surface (<a href="https://github.com/antyeates1983/pfss">PFSS</a>).</p>
+
+<p>This will involve extensive modifications to the numerical method used to perform the field extrapolation as well as developing methods for coordinate transformations between the magnetogram coordinate system and the spherical coordinate system of the derived vector field.</p>
+
+<p>The main challenge of this project will be creating a general 3D Map class similar to <a href="http://docs.sunpy.org/en/stable/code_ref/map.html"><code class="language-plaintext highlighter-rouge">Map</code></a> in SunPy.
+Currently, the <code class="language-plaintext highlighter-rouge">solarbextrapolation</code> package uses a Map3D class that is limited to Cartesian coordinates and has no support for coordinate transformations. This new Map3D class will have support for 3D coordinates through the use of the <a href="http://docs.sunpy.org/en/stable/guide/units-coordinates.html#physical-coordinates-in-sunpy">SunPy coordinates module</a>
+It is expected that this new object will serve as a prototype for a first-class data type in the core SunPy package.</p>
+
+<p>More information may be added to the <a href="https://github.com/sunpy/sunpy/wiki/SOCIS-2019-Ideas-Information#expand-the-scope-of-solarbextrapolation">wiki page</a>.
+Though this idea is for SOCIS, <a href="https://github.com/sunpy/sunpy/wiki/SOCIS-2019">same GSOC rules apply</a>.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engaged with the community and understand the motivation and challenges of the project.</li>
+  <li>Have set up a development environment.</li>
+  <li>Some understanding of what <code class="language-plaintext highlighter-rouge">solarbextrapolation</code> does and how.</li>
+</ul>
+
+<h5 id="to-be-completed-by-the-phase-1-evaluation-deadline">To be completed by the Phase 1 Evaluation Deadline</h5>
+
+<ul>
+  <li>Add PFSS modelling to the package.</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h5 id="to-be-completed-by-the-phase-2-evaluation-deadline">To be completed by the Phase 2 Evaluation Deadline</h5>
+
+<ul>
+  <li>Develop a coordinate-aware 3D Map class</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h5 id="to-be-completed-by-the-end-of-gsoc">To be completed by the end of GSoC</h5>
+
+<ul>
+  <li>Use 3D Map class for global field extrapolations</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+  <li>Improvements to the documentation and examples</li>
+</ul>
+
+<h5 id="additional-aims-time-permitting">Additional Aims (time permitting)</h5>
+
+<ul>
+  <li>Performance improvements</li>
+  <li>Better visualization methods</li>
+  <li>Addition of more advanced extrapolators, e.g. non-linear force-free field</li>
+</ul>

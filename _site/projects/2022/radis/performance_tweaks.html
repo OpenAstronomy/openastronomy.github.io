@@ -1,0 +1,61 @@
+<h4 id="description">Description</h4>
+
+<p>The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available.</p>
+
+<p>However, although the algorithm is very CPU/GPU efficient, the RADIS code is still memory-hungry. The first goal of the current project is to reduce the memory usage of current calculations. Then, it is to replace the current core with libraries better suited to process larger-than-memory-data, which would make it possible to compute spectral databases of up to billions of lines (hundred of GB or terabyte-scale).</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>
+    <p>Engage with the community on <a href="https://github.com/radis/slack-invite">💬 RADIS Slack</a></p>
+  </li>
+  <li>
+    <p>Training on emission &amp; absorption spectroscopy</p>
+  </li>
+  <li>
+    <p>Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and <a href="https://radis.readthedocs.io/en/latest/dev/developer.html#architecture">RADIS architecture</a></p>
+  </li>
+</ul>
+
+<h5 id="1st-evaluation">1st Evaluation</h5>
+
+<ul>
+  <li>
+    <p>Work on the existing <a href="https://github.com/radis/radis/issues/118">memory bottlenecks</a></p>
+  </li>
+  <li>
+    <p>Work on <a href="https://github.com/radis/radis-benchmark/pull/11">crunching datatypes</a> of various columns to optimise dataframe memory usage</p>
+  </li>
+  <li>
+    <p>Setup <a href="https://github.com/radis/radis-benchmark/tree/master/manual_benchmarks">memory-performance benchmark</a> to track the changes</p>
+  </li>
+  <li>
+    <p>Automatically <a href="https://github.com/radis/radis/issues/176">cache non equilibrium parameters</a> to line database cache</p>
+  </li>
+  <li>
+    <p>Merge the changes</p>
+  </li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>
+    <p>Write the Proof-Of-Concept to do out of the core calculations i.e., use Vaex for computations instead of pandas.</p>
+  </li>
+  <li>
+    <p>Merge the idea of the Proof-Of-Concept to the codebase.</p>
+  </li>
+  <li>
+    <p>Add <a href="https://github.com/radis/radis/issues/268">automatic linestrength cutoff</a></p>
+  </li>
+  <li>
+    <p>Add <a href="https://github.com/radis/radis-benchmark/issues/4">.h5 loading benchmark</a></p>
+  </li>
+  <li>
+    <p>Have all code, tests and documentation in GitHub</p>
+  </li>
+</ul>

@@ -1,0 +1,32 @@
+<h4 id="description">Description</h4>
+
+<p>Plasma physics is an important and wide-ranging field of research with applications from astrophysics to fusion power, and PlasmaPy is a Python package which provides aims to provide tools for this research.
+Currently PlasmaPy uses a single basic <code class="language-plaintext highlighter-rouge">Plasma</code> class to represent plasmas.
+This class works well enough for the moment, but lacks a significant amount of flexibility that will be needed as PlasmaPy grows.
+Given the broad purview of plasma physics, PlasmaPy will need to be able to handle observational data, simulation results and theoretical plasmas, but should ideally provide a single user experience for working with any of these.</p>
+
+<p>The aim of this project would therefore be to implement a new <code class="language-plaintext highlighter-rouge">Plasma</code> metaclass and a number of subclasses, similar to SunPy’s use of <a href="http://docs.sunpy.org/en/stable/code_ref/map.html"><code class="language-plaintext highlighter-rouge">Map</code>s</a> for solar observations from different instruments.
+These subclasses would handle respresenting and storing different kinds of plasmas using appropriate structures; for instance a <code class="language-plaintext highlighter-rouge">yt</code> data object would be ideal for 3D simulation data but not for a 1D observational timeseries.
+The <code class="language-plaintext highlighter-rouge">Plasma</code> metaclass itself would create the appropriate subclass when instantiated, and provide a single data-agnostic user interface.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="to-be-completed-by-the-gsoc-2018-phase-1-evaluation-deadline">To be completed by the GSOC 2018 Phase 1 Evaluation Deadline</h5>
+
+<ul>
+  <li>Write appropriate tests and basic documentation for the a new <code class="language-plaintext highlighter-rouge">Plasma</code> metaclass</li>
+</ul>
+
+<h5 id="to-be-completed-by-the-gsoc-2018-phase-2-evaluation-deadline">To be completed by the GSOC 2018 Phase 2 Evaluation Deadline</h5>
+
+<ul>
+  <li>Implement the <code class="language-plaintext highlighter-rouge">Plasma</code> metaclass</li>
+</ul>
+
+<h5 id="to-be-completed-by-the-gsoc-2018-final-week">To be completed by the GSOC 2018 Final Week</h5>
+
+<ul>
+  <li>Update tests and documentation as necessary</li>
+  <li>Remove any bugs in <code class="language-plaintext highlighter-rouge">Plasma</code> implementation</li>
+  <li>If the above are done ahead of schedule, also implement, test and document one or more subclasses to load and store plasma data in commonly used formats</li>
+</ul>

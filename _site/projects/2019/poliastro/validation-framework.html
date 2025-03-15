@@ -1,0 +1,76 @@
+<h4 id="description">Description</h4>
+
+<p><em>Validation is hard.</em> The current approach in poliastro is to add unit tests that check whether poliastro gives the same result as the solved examples of <a href="http://docs.poliastro.space/en/latest/references.html#books-and-papers">popular Astrodynamics textbooks</a>.</p>
+
+<p>However, poliastro is now a mature project and validating against textbook examples is not enough anymore,
+for several reasons:</p>
+
+<ul>
+  <li>It is being used more and more in companies and professional settings, which cannot afford failure</li>
+  <li>It has grown in feature set and can do more complicated things, which are out of the scope of undergraduate textbooks</li>
+</ul>
+
+<p>One example of this is the tests covering perturbations and low-thrust guidance laws
+(see <a href="https://blog.poliastro.space/2018/08/05/2018-08-05-google-summer-of-code-2018/">last year results</a>
+for a summary and a list of links). These tests use research papers to validate poliastro code,
+but in some cases we were not able to reproduce the original results and conclusions,
+resulting in half-baked validations and experimental features.</p>
+
+<p>For all the reasons above, we need to validate poliastro against external software,
+such as SPICE, GMAT, and STK. Our first target will be
+planetary reference frame transformations, but in the ideal case we would go
+much further than that.</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engaged with the community and understand the motivation and challenges of
+the project.</li>
+  <li>Have set up a development environment and get familiar with either SPICE, GMAT, STK, or all of them</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Have settled on one of the tools for reference frame validation</li>
+  <li>Have a basic understanding of reference frames</li>
+  <li>Have converted the <code class="language-plaintext highlighter-rouge">Body</code> rotational elements to proper reference frames</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd evaluation</h5>
+
+<ul>
+  <li>Have produced a table similar to <a href="http://www.astropy.org/coordinates-benchmark/summary.html">astropy’s</a> for our planetary reference frames</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>Have used a second method to validate the reference frames</li>
+  <li>Have started a conversation in Astropy to integrate our code upstream</li>
+  <li>Have all code, tests and documentation in GitHub</li>
+</ul>
+
+<h4 id="secondary-goals">Secondary goals</h4>
+
+<ul>
+  <li>Fix any bugs that might appear regarding visualization, hyperbolic orbits and so forth</li>
+  <li>Review pull requests from other poliastro contributors, including the mentor</li>
+  <li>Maintain <a href="https://blog.poliastro.space/poliastro-benchmarks/">poliastro benchmarks</a></li>
+  <li>Give a talk about the work at some Python event</li>
+</ul>
+
+<h4 id="additional-resources">Additional resources</h4>
+
+<ul>
+  <li><a href="https://github.com/poliastro/poliastro/wiki/Validation">Wiki page on Validation</a></li>
+  <li><a href="http://spiceypy.readthedocs.io/">SpiceyPy</a> (Python wrappers for SPICE)</li>
+  <li><a href="http://www.gmatcentral.org/">GMAT</a></li>
+  <li><a href="https://agi.com/products/engineering-tools">STK</a></li>
+  <li><a href="https://github.com/astropy/astropy/pull/6508">Discussion about ecliptic reference frames in Astropy</a></li>
+</ul>
+

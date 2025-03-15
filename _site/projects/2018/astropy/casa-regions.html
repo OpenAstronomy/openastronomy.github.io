@@ -1,0 +1,17 @@
+<h4 id="description">Description</h4>
+
+<p>Astropy’s <a href="https://github.com/astropy/regions/">regions</a> affiliated package is being developed to handle description and manipulation of regions on the sky and in images.
+The current regions package has support for the most commonly used region specification, ds9 regions, but does not yet support the CASA CRTF format.
+CASA is the main package for radio interferometry data reduction and processing.
+CASA regions are mostly compatible with and translatable to ds9 regions and other formats, but the only parser that presently exists lives within CASA.
+Details about the CASA region parser are linked from the <a href="https://github.com/astropy/regions/issues/119">associated issue</a>.</p>
+
+<p>Some milestones for this project will be:</p>
+
+<ol>
+  <li>Implementation of basic region reading without metadata</li>
+  <li>Implementation of metadata reading</li>
+  <li>Creation of a test suite that tests against CASA’s internal region parser</li>
+  <li>Implementation of a CRTF writer</li>
+  <li>Implementation of cube regions, which are supported by CRTF but presently not incorporated into astropy-regions.</li>
+</ol>

@@ -1,0 +1,40 @@
+<p>Bayesian Excess Variance (bexvar) in Stingray</p>
+
+<h4 id="description">Description</h4>
+
+<p>The Bayesian Excess Variance is a statistical measurement of variability 
+in Poisson-distributed (e.g. X-ray or gamma-ray) data.
+The time series from most astronomical facilities, and in particular from 
+low-Earth orbit satellites, can only be recorded when the source is visible, 
+most of all when it is not below the horizon (or in “Earth occultation” in the 
+case of satellites).
+The missing data from the occultation periods can result in spurious variability
+if not properly accounted for.
+Another possible source of spurious variability is the presence of variable 
+background signals.
+The Bayesian Excess Variance method is suitable for finding variability in 
+gappy X-ray light curves with variable background.
+The contributor will work to implement this method in Stingray, a Python library
+for the analysis of astronomical time series.
+See <a href="https://arxiv.org/abs/2106.14529">Buchner et al. 2021</a></p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Take confidence with the Stingray infrastructure.</li>
+  <li>Creation of test cases for the Bexvar method, based on real observations.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Draft implementation of bexvar</li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>Polished implementation, working tests, documentation</li>
+</ul>

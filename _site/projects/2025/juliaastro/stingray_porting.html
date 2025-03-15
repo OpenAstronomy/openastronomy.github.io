@@ -1,0 +1,39 @@
+<h2 id="spectral-timing-in-julia">Spectral timing in Julia</h2>
+
+<h4 id="description">Description</h4>
+<p>The analysis of time series from astronomical observations in the X-rays is an 
+excellent tool to test advanced physical theories.
+Of particular interest are the periodicities that are often observed in the 
+X-ray signals coming from the surroundings of accreting black holes, and the
+evolution of the rotation period of neutron stars.
+The essential toolbox for X-ray timing analysis includes different kinds of 
+periodograms, cross spectra, and a number of “variability vs energy spectra”, that
+allow to understand the variability at different energies.
+This project is about the implementation of a basic set of X-ray timing analysis 
+operations in Julia, continuing the porting of the core operations from the
+<code class="language-plaintext highlighter-rouge">stingray</code> Python package [initiated during Google Summer of Code 2022]
+(https://github.com/StingraySoftware/Stingray.jl)</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Gain familiarity with the codebase</li>
+  <li>Apply existing analysis to simulated datasets</li>
+  <li>Implement I/O operation on FITS files</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Implement a series of tests in Julia that the new code will have to pass</li>
+  <li>Extend basic operations (periodograms and cross spectra) to event lists and light curves</li>
+  <li>Time lags and coherence spectra</li>
+</ul>
+
+<h5 id="final-evaluation">Final evaluation</h5>
+
+<ul>
+  <li>A working framework for variability vs energy spectra (covariance spectra, time lags)</li>
+</ul>

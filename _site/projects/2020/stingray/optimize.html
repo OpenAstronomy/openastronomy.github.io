@@ -1,0 +1,41 @@
+<h4 id="description">Description</h4>
+<p>This project is about making the <a href="https://stingray.readthedocs.io">Stingray spectral timing library</a> ready for the data coming from high-sensitivity X-ray detectors like NICER (and, in the future, eXTP and/or Strobe-X), or other kinds of high-throughput photon counters (i.e. in the optical).
+The student will start by benchmarking the code through simulated data, address a few known bottlenecks of the code (for example, the need for loading full dataset into the RAM), and explore alternative technologies (memory mapping, parallel computing) to speed up the computation and the data retrieval for larger-than-memory datasets.</p>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<ol>
+  <li>
+    <p>Initial benchmark of the code</p>
+  </li>
+  <li>
+    <p>Memory mapped versions for the <code class="language-plaintext highlighter-rouge">EventList</code> and <code class="language-plaintext highlighter-rouge">Lightcurve</code> classes</p>
+  </li>
+  <li>
+    <p>Speed up of <code class="language-plaintext highlighter-rouge">AveragedCrossspectrum</code></p>
+  </li>
+</ol>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Setup benchmarks to test the performance of different parts of the code with larger and larger simulated datasets.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>A thorough report on the scalability of the various parts of the library. Draft memory mapping to allow larger-than-memory datasets in the <code class="language-plaintext highlighter-rouge">EventList</code> and <code class="language-plaintext highlighter-rouge">Lightcurve</code> classes.</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd evaluation</h5>
+
+<ul>
+  <li>Memory mapping completed and tested. Speed up computation in <code class="language-plaintext highlighter-rouge">AveragedCrossspectrum</code>.</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>Wrap up all optimizations, described in the <code class="language-plaintext highlighter-rouge">restructuredText</code> documentation and in Jupyter notebooks.</li>
+</ul>

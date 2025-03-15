@@ -1,0 +1,46 @@
+<h4 id="description">Description</h4>
+
+<p>The presence and concentration of molecules in exoplanet atmospheres are measured by comparing absorption and emission spectra to synthetic spectra. However, under high-temperature conditions, the synthetic spectra contain dozens of millions of lines, which require long computational times .</p>
+
+<p>The RADIS code was recently developed for the characterization of plasmas and flames. It uses a new approach to quickly calculate high-temperature infrared spectra. New developments are in progress (see our <a href="https://openastronomy.org/gsoc/gsoc2020/#/projects?project=accelerate_synthetic_spectra_calculations">other project</a>  on further accelerating the code), but it is already one of the fastest spectral codes in the world. This performance would be beneficial for exoplanet characterization, and this is the goal of this project: adapt the RADIS code to the calculation of exoplanet atmospheres!</p>
+
+<h4 id="milestones">Milestones</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engage with the community and understand the motivation of spectroscopy users</li>
+  <li>Training on emission &amp; absorption spectroscopy</li>
+  <li>Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests)</li>
+  <li>Get used with RADIS architecture: review the interface change to calculate multiple molecules at the same time (<a href="https://github.com/radis/radis/pull/74#issuecomment-585773087">#74</a>)</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Indirect integration of databases from the Exoplanet atmosphere community  (ExoMol), using a converter to the HITRAN format supported by RADIS</li>
+  <li>1st calculation of an atmosphere line-of-sight spectrum with Python hardcoded inputs</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd evaluation</h5>
+
+<ul>
+  <li>Direct integration of ExoMol, and memory optimization</li>
+  <li>Calculation of atmosphere with standard atmosphere input files (mole fractions, temperature profile, pressure profile)</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>Write an iPython notebook to document the atmosphere module on <a href="https://github.com/radis/radis-examples">radis-examples</a></li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h4 id="secondary-goals">Secondary goals</h4>
+
+<ul>
+  <li>Document architecture and developer guide when facing unclear points that may appear.</li>
+  <li>Review pull requests from other RADIS contributors</li>
+  <li>Optimized calculation of atmospheres in optically thin configurations (merge results with project <a href="https://openastronomy.org/gsoc/gsoc2020/#/projects?project=accelerate_synthetic_spectra_calculations">Accelerate Synthetic Spectra Calculations</a> )
+ )</li>
+</ul>

@@ -1,0 +1,66 @@
+<h4 id="description">Description</h4>
+
+<p>X-ray spectroscopy (measuring and understanding how the brightness of a black 
+hole source varies with wavelength of the light) is one of the most important 
+ways we learn about the physics of black holes and their companion stars. For 
+the past twenty years ago, the main package for X-ray spectroscopy has been 
+<a href="https://heasarc.gsfc.nasa.gov/docs/xanadu/xspec/manual/XspecManual.html">XSPEC</a>. 
+While other options exist (e.g., <a href="https://github.com/sherpa/sherpa">Sherpa</a>), 
+all of them have one thing in common: 
+they provide a convenient, but very rigid user interface. This makes them hard 
+to modify or extend without having to change a large amount of the underlying 
+source code, something that few scientists are able or willing to do (especially 
+since XSPEC is mostly written in C++). However, astronomy is changing, and the 
+requirements we have for our software are changing, too! The current software 
+environment makes it extremely difficult to build new models and test new ideas, 
+and it is very hard to install XSPEC in a shared cluster environment due to a 
+legacy of complex software dependencies. This is especially important in the 
+context of <a href="https://github.com/StingraySoftware">Stingray</a>: while we have so 
+far focused on methods that help us 
+explore how the brightness of black hole sources changes with time, we would 
+ideally also want to connect this to how the brightness of black hole sources 
+changes with energy, and model both at the same time. At the same time, as our 
+data sets grow, it is becoming increasingly unrealistic that we will be able to 
+analyse our data on conventional desktop computers. None of the current software 
+packages allow the user to step outside the few, well-defined commands the user 
+interface allows, and installing these packages on large computer clusters is 
+exceptionally difficult. This means that successful completion of this project 
+would be a big step forward for the entire field of X-ray astrophysics.</p>
+
+<p>For a test of this project by one of our Stingray leads, see
+<a href="https://github.com/dhuppenkothen/clarsach">(dhuppenkothen/clarsach)</a>.</p>
+
+<h4 id="deliverables">Deliverables</h4>
+<p>Deliverables for this project will be:</p>
+
+<h5 id="to-complete-each-milestone">To complete each milestone</h5>
+
+<ul>
+  <li>
+    <p>Working unit tests for each piece of code</p>
+  </li>
+  <li>
+    <p>Documentation for each class, method and function implemented</p>
+  </li>
+</ul>
+
+<h5 id="milestone-1">Milestone 1</h5>
+
+<ul>
+  <li>Python bindings to the XSPEC models and an API for access</li>
+</ul>
+
+<h5 id="milestone-2">Milestone 2</h5>
+
+<ul>
+  <li>Installation files for the XSPEC models (fortran/C++) and the Python library</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li><a href="https://github.com/StingraySoftware/notebooks">Example/tutorial notebooks</a> 
+connecting the models to the 
+<a href="https://github.com/StingraySoftware/stingray/tree/master/stingray/modeling">Stingray modeling API</a>
+(in progress)</li>
+</ul>

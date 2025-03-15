@@ -1,0 +1,32 @@
+<p>Write a Sphinx plugin to identify examples in the Astropy documentation, tag/index them, and build an example gallery from them</p>
+
+<h4 id="description">Description</h4>
+
+<p>The <a href="http://docs.astropy.org/en/stable/generated/examples/">current astropy example gallery</a> is problematic because it duplicates content from the astropy documentation and it is not clear which examples are “worthy” of the example gallery. It also overlaps with the <a href="http://tutorials.astropy.org">astropy tutorials</a>.  Hence, this project is focused on developing the infrastructure to auto-generate the example gallery from examples <em>in</em> the documentation.  This will require building a Sphinx plugin to find tagged examples and generating links.  It will also require coordinating moving of existing gallery examples to the documentation and tagging them appropriately.</p>
+
+<h4 id="possible-milestones">Possible Milestones</h4>
+
+<h5 id="at-start-of-coding-for-gsoc-2018">At start of coding for GSOC 2018</h5>
+
+<ul>
+  <li>Identify what labeling technique is best for tagging the examples.</li>
+  <li>Solicit authors of gallery examples to determine where they should be moved. Some may belong in the documentations, whil others might be better places as Astropy Tutorials.</li>
+  <li>Determine where the plugin will go (either a standalone small package, in the astropy-helpers, or in astropy itself), in consultation with the Astropy documentation maintainers.</li>
+</ul>
+
+<h5 id="gsoc-2018-midterm">GSOC 2018 Midterm</h5>
+
+<ul>
+  <li>Have examples identified and ready to be moved out of the gallery and into their relevant locations in the astropy docs or tutorials.</li>
+  <li>Have a first-draft working plugin ready for review by Astropy documentation maintainers.</li>
+  <li>Determine how difficult it will be to have an example <em>gallery</em> (as opposed to simply an index/list of the examples).</li>
+</ul>
+
+<h5 id="gsoc-2018-final">GSOC 2018 Final</h5>
+
+<ul>
+  <li>Release the plugin, with minimum functionality of generating the example list (or have it merged if it ends up as part of another project).</li>
+  <li>(Stretch Goal) have the plugin generate an example gallery instead of a list.</li>
+  <li>Complete a Pull Request to activate the (finished) plugin in the Astropy repository.</li>
+  <li>Have a Pull Request to tag all the relevant examples which sucessfully generates the example <em>list</em>.</li>
+</ul>

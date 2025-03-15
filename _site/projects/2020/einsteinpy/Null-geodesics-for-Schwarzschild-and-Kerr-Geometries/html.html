@@ -1,0 +1,76 @@
+<h4 id="description">Description</h4>
+
+<p>Null-geodesics is the path traced by light rays in 4-D space-time. We aim to calculate null geodesics around non-rotating (Schwarzschild) and rotating (Kerr) massive bodies given the initial conditions.</p>
+
+<p>The project has roughly the following objectives :</p>
+<ul>
+  <li>Calculating null trajectories around a rotating/non-rotating black hole.</li>
+  <li>Use those trajectories to raytrace a bundle of photon rays, to visualize how space-time gets distorted in presence of black holes.</li>
+  <li>Calculate redshifts in photon rays due to space-time curvature.</li>
+  <li>Visualization of Keplerian disc/shell in around it.</li>
+  <li>In short, we aim to replicate one of the few papers available with proper coding paradigms like OOPs, good documentation and unit tests.</li>
+  <li>If required due to performance issues, python wrappers over native C/C++ have to be written.</li>
+</ul>
+
+<p>This project also aims at fixing the problem of natural units introduced due to the research papers and books and to give native support to MKS units.</p>
+
+<h5 id="papers-we-intend-to-replicate-">Papers we intend to replicate :</h5>
+<ul>
+  <li>Odyssey: https://arxiv.org/abs/1601.02063</li>
+  <li>YNOGK: https://arxiv.org/abs/1305.1250</li>
+</ul>
+
+<h5 id="links-to-other-relevant-papers-">Links to other relevant papers :</h5>
+<ul>
+  <li>https://www.aanda.org/articles/aa/abs/2004/36/aa0814/aa0814.html</li>
+  <li>http://www.math.mcgill.ca/gantumur/math599w17/project-kerr.pdf</li>
+  <li>https://iopscience.iop.org/article/10.1088/0004-637X/696/2/1616</li>
+</ul>
+
+<h4 id="milestones-if-any">Milestones (if any)</h4>
+
+<h5 id="coding-starts">Coding starts</h5>
+
+<ul>
+  <li>Engaged with the community and understand the motivation and challenges of
+the project.</li>
+  <li>Have set up a development environment and get familiar with einsteinpy dependencies.</li>
+  <li>Have read relevant literature/codes required for the project.</li>
+</ul>
+
+<h5 id="1st-evaluation">1st evaluation</h5>
+
+<ul>
+  <li>Null geodesic in Kerr space-time</li>
+  <li>Null geodesic in Schwarzschild space-time (It can be implemented by creating a class inheriting from Kerr null geodesics and setting a=0. However, it would lead to unnecessary calculation and therefore, seperate Schwarzschild-Null class is necessary.)</li>
+  <li>If possible, basic raytracing using the newly created classes.</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h5 id="2nd-evaluation">2nd evaluation</h5>
+
+<ul>
+  <li>Plotting class for both Kerr and Schwarzschild null geodesics.</li>
+  <li>Improvement in raytracing, along with simulation of a photon sheet around a black hole.</li>
+  <li>Calculation of redshifts along the null trajectory.</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h5 id="final">Final</h5>
+
+<ul>
+  <li>Good-enough implementation of any of the relavent papers.</li>
+  <li>Complete any chores left out during the 1st and 2nd phase.</li>
+  <li>Fix the Natural Units Problem in Kerr-Newman time-like geodesics.</li>
+  <li>Fix the Natural Units Problem in Hypersurface Module.</li>
+  <li>Have all code, tests and documentation in GitHub.</li>
+</ul>
+
+<h4 id="secondary-goals">Secondary goals</h4>
+
+<ul>
+  <li>Fix any bugs that might appear regarding visualization, symbolic module and so forth.</li>
+  <li>Review pull requests from other einsteinpy contributors, including the mentor.</li>
+  <li>Give a talk about the work at some Python event.</li>
+  <li>EinsteinPy is nothing without its community. Therefore, getting integrated deeply within the community and oversee future development of EinsteinPy.</li>
+</ul>

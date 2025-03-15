@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <title>Ideas page for Google Summer of Code 2015</title>
+    <link rel="icon" type="image/png" href="http://localhost:4000/img/logo/logoOA_white_svg.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="foss, open source, organisations, astronomy,
+    OpenAstronomy, astrophysics, GSoC, projects, members, " />
+    <meta name="description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+">
+    <meta name="author" content="OpenAstronomy" />
+    <!-- OGP -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ideas page for Google Summer of Code 2015" />
+    <meta property="og:description" content="Where all about the combined force of different open source projects in astronomy and astrophysics takes place.
+" />
+    <meta property="og:url" content="https://openastronomy.org/" />
+    <meta property="og:site_name" content="OpenAstronmy" />
+    <!-- OGP ends here -->
+    <link rel="canonical" href="http://localhost:4000/gsoc/gsoc2015/ideas.html">
+
+        <!-- <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet' type='text/css'> -->
+    <link href="../assets/fonts/fira-sans.css" rel="stylesheet">
+    <link href="/css/bootstrap/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/bootstrap/bootstrap-responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/css/swc.css" />
+    <link rel="stylesheet" type="text/css" href="/css/swc-bootstrap.css" />
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <link rel="alternate" type="application/rss+xml" title="The OpenAstronomy Blog" href="/feed.xml"/>
+    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->
+    <script src="../../../../assets/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+     // change background images from a list.
+     $(document).ready(function() {
+         // list of filenames endings
+         var backgrounds = ['ap', 'sp'];
+         var selected = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+         var bgpath = "/css/background_" + selected + '.jpg';
+         $('body').css('background-image', 'url(' + bgpath + ')');
+     });
+    </script>
+
+    
+
+</head>
+
+
+  <body>
+
+    <header class="site-header" style="background-color: #292929;">
+
+  
+
+
+  <div class="wrapper">
+
+      <a class="site-title" href="/">
+          <img class="media-object logo" src="http://localhost:4000/img/logo/logoOA_white_svg.png" alt="OpenAstronomy" />
+      </a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/gsoc/">Google Summer of Code</a>
+          
+        
+          
+        
+          
+          <a class="page-link" href="/members/">Members</a>
+          
+        
+          
+          <a class="page-link" href="/news.html">News and Events</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+
+        
+          <a class="page-link" href="http://openastronomy.org/Universe_OA">Contributor Blogs</a>
+        
+          <a class="page-link" href="http://openastronomy.org/pyastro">PyAstro Conference</a>
+        
+          <a class="page-link" href="https://calendar.google.com/calendar/b/1?cid=YmxoZzd0MG9zbjhscm50ZDcwOXFoZzFtaXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">Events Calendar</a>
+        
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="fixed-wrap">
+    <div class="page-content">
+      <div class="wrapper">
+        <h1 id="ideas-page-for-gsoc-2015">Ideas page for GSoC 2015</h1>
+
+<p>Browse ideas for the following projects:</p>
+
+<ul>
+  <li>
+    <p><a href="#astropy-core-package">Astropy core package</a></p>
+  </li>
+  <li>
+    <p><a href="#packages-affiliated-with-astropy">Packages affiliated with Astropy</a></p>
+  </li>
+  <li>
+    <p><a href="#chiantipy">ChiantiPy</a></p>
+  </li>
+  <li>
+    <p><a href="#sunpy">SunPy</a></p>
+  </li>
+  <li>
+    <p><a href="#yt">yt</a></p>
+  </li>
+</ul>
+
+<p>For each participating project, the ideas are organized from easiest to hardest.</p>
+
+<h1 id="astropy-core-package">Astropy core package</h1>
+
+<h3 id="implement-distribution-support-for-quantity">Implement Distribution Support for Quantity</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/eteq">Erik Tollerud</a></p>
+
+<p><em>Difficulty:</em> Beginner to Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> none, but statistics knowledge/background useful</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description">Description</h4>
+
+<p>The <a href="http://docs.astropy.org/en/stable/units/index.html">Quantity</a> class is
+powerful but doesn’t have particularly useful support for uncertainties on
+quantities or other statistical approaches to thinking about numbers. A very
+straightforward way to make progress on this would be to create a subclass of
+Quantity called “Distribution” (or similar) that represents a probability
+density function of a quantity as Monte-Carlo-sampled arrays. This project would
+involve implementing this subclass, propagating operations while combining
+distributions, as well as tools for extracting useful information from such
+distributions. If there is time, this could also involve expanding this system
+to support common analytically-representable distributions such as Gaussian and
+Poisson distributions.</p>
+
+<h3 id="implement-image-rasterization-methods-for-models">Implement image rasterization methods for models</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/cdeil">Christoph Deil</a></p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> Basic</p>
+
+<p><em>Programming skills:</em> Python, Cython</p>
+
+<h4 id="description-1">Description</h4>
+
+<p>When fitting models to binned data, evaluating the model at the bin centers leads to incorrect results if the model changes significantly within a bin. E.g. think of an image where the point spread function (PSF) only has a width slightly above the pixel size and you want to distinguish small Galaxies from stars.</p>
+
+<p>Currently Astropy models have an <code class="language-plaintext highlighter-rouge">evaluate</code> method that can be used to
+evaluate them on a grid of pixel centers, there’s also an oversampling function
+to get a better representation of the expected flux in pixels. It would be
+useful to add methods that allow fast and precise rasterization of models,
+similar to what graphics libraries do (sparse subsampling or resampling of
+models evaluated on grids that are appropriate for each model, or
+anti-aliasing).</p>
+
+<p>There are different options for how to proceed with this project, e.g. possibly
+add optional extension, sampling grid and bounding box information to the
+Astropy model classes, or contribute rasterisation code to
+<a href="http://docs.astropy.org/en/stable/modeling/index.html">astropy.modeling</a> or
+photutils, or expand the existing resampling code in the
+<a href="https://github.com/astropy/reproject/">reproject</a> package. The student
+should be interested in model fitting and image rasterisation as well as
+profiling and extensive testing of a given method to make it “just work” for
+the end user.</p>
+
+<h3 id="add-indexing-capability-to-table-object">Add indexing capability to Table object</h3>
+
+<p><em>Suggested Mentor(s):</em> Tom Aldcroft (Astropy), Stuart Mumford (SunPy)</p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> none</p>
+
+<p><em>Programming skills:</em> Python, Cython, familiarity with database algorithms</p>
+
+<h4 id="description-2">Description</h4>
+
+<p>The <a href="http://docs.astropy.org/en/stable/table/index.html">Table</a> class is the
+core astropy class for storing and manipulating tabular data.  Currently it
+supports a limited set of database-like capabilities including table joins and
+grouping.  A natural extension of this is to provide the ability to create and
+maintain an index on one or more columns as well as a table primary key.  With
+these indexed columns available then certain selection and query operations
+could be highly optimized.  The challenge is to maintain the integrity of the
+indexes as column or table properties change, using state of the art algorithms
+for high performance.</p>
+
+<p>There are various uses of this functionality, such as supporting
+time series data, where the index column would allow you to sort the
+Table correctly as well as performing operations such as truncations
+and merges while maintaining the integrity of the time series.
+Other uses include catalogs of positions in the night sky where an
+index column of astropy coordinate objects would maintain the
+uniqueness of every position.</p>
+
+<p>To summarize:</p>
+
+<ul>
+  <li>Add method to create an index for a specified column</li>
+  <li>Add code to maintain these indexes when the table is modified</li>
+  <li>Add method to designate a column as a primary key (possibly maintaining
+table in sort order for that key)</li>
+  <li>Optimize existing table operations to use indexes where possible</li>
+  <li>Add new methods to select table rows based on column values</li>
+</ul>
+
+<h3 id="unify-and-improve-file-handling">Unify and improve file handling</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/mdboom">Michael Droettboom</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> none</p>
+
+<p><em>Programming skills:</em> Python, Unix features</p>
+
+<h4 id="description-3">Description</h4>
+
+<p>We have a number of packages that read and write data to files and file-like
+objects. While there was some initial effort to unify this code in
+<a href="http://docs.astropy.org/en/stable/api/astropy.utils.data.get_readable_fileobj.html#astropy.utils.data.get_readable_fileobj">get_readable_fileobj</a> and others, in general each package
+is handling its own file I/O. This sort of code is notoriously difficult to get
+right across versions of Python and the different platforms we support, so it
+would be beneficial to remove this duplication. This also means that some
+features, such as gzip handling or URL handling, are not universally available
+or inconsistent across packages. Once this is unified, we can move on to some
+more advanced features that don’t exist anywhere in astropy, such as HTTP Range
+fetching (see <a href="https://github.com/astropy/astropy/issues/3446">astropy/#3446</a>,
+and OS-level file locking to make multiprocessing applications that write to
+files more robust.</p>
+
+<h3 id="implement-missing-astropymodeling-functionality">Implement missing astropy.modeling functionality</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/cdeil">Christoph Deil</a></p>
+
+<p><em>Difficulty:</em> Intermediate to expert</p>
+
+<p><em>Astronomy knowledge needed:</em> Basic</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-4">Description</h4>
+
+<p>Implement some basic features are still missing in the astropy.modeling package:</p>
+
+<ul>
+  <li>Fit parameter errors (symmetric and profile likelihood)</li>
+  <li>Poisson fit statistic</li>
+  <li>PSF-convolved models</li>
+  <li>model parameter and fit result serialisation, e.g. to YAML or JSON or XML (e.g. some astronomers use <a href="http://fermi.gsfc.nasa.gov/ssc/data/analysis/scitools/source_models.html">XML</a>)</li>
+</ul>
+
+<p>For the parameter error and Poisson fit statistic part some statistics background is needed, as well as interest in discussing and finding a good API for these things.</p>
+
+<p>An optional fun application at the end of this project (if model and fit result serialisation is implemented) could be to develop an interactive image fitting GUI (e.g. with IPython widgets in the web browser) for common 2D Astropy models, showing data, model and residual images and letting the user adjust model parameters and display fit statistics and results interactively.</p>
+
+<h3 id="implement-framework-for-handling-velocities-and-velocity-transforms-in-astropycoordinates">Implement framework for handling velocities and velocity transforms in astropy.coordinates</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/adrn">Adrian Price-Whelan</a> &amp; <a href="http://github.com/eteq">Erik Tollerud</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> understanding of coordinate transformations, some knowledge of astronomical coordinate systems would be useful</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-5">Description</h4>
+
+<p>The coordinates subpackage currently only supports transforming positional
+coordinates, but it would be useful to develop a consistent framework for also
+transforming velocities (e.g., proper motion to proper motion, or proper motion
+to cartesian) with full support for barycentric, galactocentric, and LSR
+motion. This project could be:</p>
+
+<ol>
+  <li>working with us to develop a consistent API for handling velocities within coordinates,</li>
+  <li>developing a trial implementation of an API,</li>
+  <li>actually doing core development to implement the new features, or</li>
+  <li>some combination of all of the above.</li>
+</ol>
+
+<h3 id="implement-public-api-for-erfa">Implement Public API for ERFA</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/eteq">Erik Tollerud</a></p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> None required, but may be helpful for understanding ERFA functionality</p>
+
+<p><em>Programming skills:</em> Python, Cython, C</p>
+
+<h4 id="description-6">Description</h4>
+
+<p>Some of the major functionality for Astropy uses the ERFA C library (adapted from the IAU SOFA library) as the back-end for
+computational “heavy-lifting”.  Members of the community have expressed a desire to use this lower-level python wrapper
+around ERFA for other purposes that may not be directly relevant for Astropy.  So this project would involve making the
+necessary changes to make the ERFA python API public.  This includes:</p>
+
+<ul>
+  <li>Getting the documentation up to the astropy standard (currently it is mostly auto-generated verbatim from the C comments).</li>
+  <li>Implementing a more complete test suite for the python side of the code.</li>
+  <li>Possibly moving it to a separate package as part of the liberfa GitHub organization.  This would also include making the necessary
+changes to ensure everything continues to work in Astropy.</li>
+  <li>Any other steps necessary to ensure the resulting package (or sub-package of Astropy) is stable and relatively easy to use.</li>
+</ul>
+
+<h1 id="packages-affiliated-with-astropy">Packages affiliated with Astropy</h1>
+
+<h3 id="develop-an-affiliated-package-for-observation-planning--scheduling">Develop an affiliated package for observation planning / scheduling</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/cdeil">Christoph Deil</a></p>
+
+<p><em>Difficulty:</em> Beginner</p>
+
+<p><em>Astronomy knowledge needed:</em> Intermediate</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-7">Description</h4>
+
+<p>Now that Astropy can transform from horizontal (altitude/azimuth) to sky
+coordinates it’s possible to develop tools for observation planning /
+scheduling (see
+<a href="http://docs.astropy.org/en/stable/coordinates/observing-example.html">here</a>
+for an example). It would be nice to start developing an affiliated package
+that can be used by observers and observatories to plan and schedule
+observations. This project could go in a few different directions, including:</p>
+
+<ul>
+  <li>creating typical tables and plots for observation planning</li>
+  <li>optimising scheduling of observations for given target lists and telescope slew speed / exposure lengths for a given night or even month / year</li>
+  <li>contribute sun / moon rise / set functionality to astropy coordinates</li>
+  <li>a desktop or web GUI</li>
+</ul>
+
+<p>The project could start with a look at the functionality of existing tools
+and then gather some input on the astropy mailing list what the community
+wants. The student should have an interest in coordinates, observations
+planning / scheduling and plotting / GUIs.</p>
+
+<h3 id="contribute-gamma-ray-data-analysis-methods-to-gammapy">Contribute gamma-ray data analysis methods to Gammapy</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/cdeil">Christoph Deil</a>, <a href="http://github.com/adonath">Axel Donath</a></p>
+
+<p><em>Difficulty:</em> Beginner to intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> Basic</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-8">Description</h4>
+
+<p><a href="https://docs.gammapy.org/">Gammapy</a> is an Astropy-affiliated package to simulate and analyse data from gamma-ray telescopes such as Fermi, H.E.S.S. and CTA. A lot of basic functionality is still missing, specifically we think that contributing to one of the sub-packages gammapy.background (background modeling), gammapy.detect (source detection methods) or gammapy.spectrum (spectral analysis methods) would be a good GSoC project if you are interested in implementing specific established data analysis algorithms (e.g. adaptive-ring or reflected region or template background estimation, or spectrum forward-folding or unfolding methods) used in gamma-ray astronomy (but no prior gamma-ray data experience / knowledge needed).</p>
+
+<h3 id="astropy-acknowledgementcitation-generator">Astropy Acknowledgement/Citation Generator</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/eteq">Erik Tollerud</a></p>
+
+<p><em>Difficulty:</em> Beginner to Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> none, although some experience with astronomy citation practices might be useful</p>
+
+<p><em>Programming skills:</em> Python and LaTeX/BibTeX</p>
+
+<h4 id="description-9">Description</h4>
+
+<p>Some parts of Astropy and affiliated packages use algorithms or tools that have
+been published in the scientific literature (this includes Astropy itself). To
+encourage citing these works, it would be useful if Astropy had a feature to
+allow attaching citations to methods, functions, or packages. This would then
+allow a user to simply run a function along the lines of “write_citations” and
+have it print or write a file that tells them what papers to cite. Bonus points
+if this actually can show BibTeX or LaTeX bibliography entries that can be just
+dropped into papers with minimal effort on the part of the user.</p>
+
+<h3 id="adding-further-spectral-standards-to-specutils">Adding further spectral standards to specutils</h3>
+
+<p><em>Suggested Mentor(s)</em>: Adam Ginsburg &amp; Wolfgang Kerzendorf</p>
+
+<p><em>Difficulty</em>: Intermediate</p>
+
+<p><em>Programming skills</em>: Python</p>
+
+<h4 id="description-10">Description</h4>
+
+<p>Specutils is a package within the astropy collection that deals with operations with spectra. Apart from imaging, spectra are the second main data product in astronomy. While imaging data is collected by hooking a giant DSLR at the end of telescope and sticking coloured glass between telescope and DSLR (a filter), spectra are obtained by breaking light up into its components and then observing the resulting distribution. These data are saved in a variety of formats.</p>
+
+<p>Currently, we are able to read and write a subset of standards that are out there. As a project, we suggest to implement the remaining unsupported standards. All of the code is in Python and a good understanding of classes is needed for this project.</p>
+
+<h3 id="improve-pyregion-and-pyds9">Improve pyregion and pyds9</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/cdeil">Christoph Deil</a></p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> Basic</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-11">Description</h4>
+
+<p>The pyregion package is very useful to work with ds9 and CIAO region files. It
+is now at
+<a href="https://github.com/astropy/pyregion">https://github.com/astropy/pyregion</a> but
+it is unfinished … someone has to improve and polish it. In particular the
+region file parser is very slow (see
+<a href="https://github.com/astropy/pyregion/issues/48">pyregion#48</a> and someone
+interested in parsing should find out why and make it fast. There are several
+other things to do, e.g. using astropy coordinates everywhere and implementing
+tests so that it is compatible with ds9 to a very high accuracy. The package
+could also be extended with Python functions to read / write / visualise <a href="http://www.ivoa.net/documents/MOC/">MOC
+files</a> or to unify and [improve the
+existing Python interfaces to
+<a href="https://github.com/ericmandel/pyds9/issues/2">ds9</a>. The student should be
+interested in sky coordinates and regions, parsing, visualisation, writing
+tests and docs, and for the ds9 interfaces some Cython coding is probably
+needed.</p>
+
+<h3 id="revamp-astropythonorg-web-site">Revamp astropython.org web site</h3>
+
+<p><em>Suggested Mentor(s):</em> Tom Aldcroft</p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> Basic / none</p>
+
+<p><em>Programming skills:</em> Python, web development (javascript etc)</p>
+
+<h4 id="description-12">Description</h4>
+
+<p>The <a href="http://www.astropython.org">http://www.astropython.org</a> site is one of the
+top two generic informational / resource sites about Python in astronomy. This
+site uses Google App Engine and is basically all custom code built around the
+bloggart engine. Currently it is getting a bit stale for a few reasons:</p>
+
+<ul>
+  <li>There is no good mechanism for guest posting to expand the community of people contributing.</li>
+  <li>It is painful to add content because of the antiquated entry interface which now seems to work only on firefox.</li>
+  <li>The comment system is lacking (no feedback to comment authors etc).</li>
+  <li>The website code itself is convoluted and difficult to maintain / improve</li>
+</ul>
+
+<p>The proposal is to start over with all modern tools to bring fresh energy and involvement into this project.  All details of how to do this to be determined, but one requirement is to migrate all the current content.  Part of this would be re-evaluating current resources as well as digging around to freshen up the resource list.</p>
+
+<h1 id="chiantipy">ChiantiPy</h1>
+
+<h3 id="gui-spectral-explorer">GUI Spectral Explorer</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://sourceforge.net/u/kdere/profile/">Ken Dere</a></p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> A basic understand of astrophysical spectroscopy</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-13">Description</h4>
+
+<p>The goal of this project is to provide a graphical user interface to
+enable a user to explore observed spectra and compare it with
+theoretical spectra.  The basis for the theoretical spectra is the
+CHIANTI atomic database for astrophysical spectroscopy that was
+first released in 1997.  Programmatic access to the database, which
+is freely available, is provided by the ChiantiPy package – a pure
+python package.  It is highly object oriented with each ion, such as
+Fe XVII, being the basic object.  Higher level objects are often
+assembled from a collection of ions, such as when calculating a
+spectrum.  ChiantiPy uses the CHIANTI database to calculate line and
+continuum intensities as a function of temperature, electron
+density. This can be done for a set of elemental abundances in
+CHIANTI or for a user provided set of elemental abundances.  At
+present, if a user wants to compare CHIANTI theoretical spectra it
+must be done on a case-by-case basis.  A GUI explorer, written in
+Python and preferably PyQt or Wx based, will provide an integrated
+tool to import observed spectra and plot them alongside theoretical
+spectra.  It will further allow the user to understand what spectra
+lines contribute to various spectral line profile, how the predicted
+spectra vary as a function of temperature and density.</p>
+
+<p>It will be necessary to develop techniques to import observed
+spectra from a variety sources.  Typical sources are in FITS files,
+HDF5 files, or csv files.  It will also be important to allow users
+import their data through modules of their own.</p>
+
+<h1 id="sunpy">SunPy</h1>
+
+<h3 id="improvements-to-the-sunpy-database">Improvements to the SunPy Database</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/Cadair">Stuart Mumford</a>, <a href="http://github.com/ehsteve">Steven Christe</a></p>
+
+<p><em>Difficulty:</em> Beginner</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Python, some database knowledge would be helpful, but not required.</p>
+
+<h4 id="description-14">Description</h4>
+<p>The <code class="language-plaintext highlighter-rouge">database</code> module provides functionality to users to manage collections of files on disk in a way not reliant upon folder structure and file name.
+The database allows users to find files on disk by either physical parameters, such as wavelength and time or properties of the instrument such as name and spacecraft.
+It also allows more complex queries by enabling searches of the raw meta data associated with the files.</p>
+
+<p>The improvements to the database functionality that would be implemented by this project include:</p>
+
+<ol>
+  <li>Integration of the new <code class="language-plaintext highlighter-rouge">UnifiedDownloader</code> code into the database search, to replace the direct VSO integration current present. (The <a href="http://vso1.nascom.nasa.gov/">VSO</a> is a repository of solar physics data, SunPy’s VSO API has been wrapped by <code class="language-plaintext highlighter-rouge">UnifiedDownloader</code>.)</li>
+  <li>Support for relative paths in the database module <a href="https://github.com/sunpy/sunpy/issues/783">#783</a> to allow a centralised database with multiple users, all referencing a central file store mounted with different absolute paths on each client.</li>
+  <li>Supporting all data supported by the <code class="language-plaintext highlighter-rouge">sunpy.lightcurve</code> module in the database. The major hurdle here is the lack of standardisation in the file used by this data.</li>
+</ol>
+
+<p>There are various other maintenance tasks which need undertaking (https://github.com/sunpy/sunpy/labels/Database) which would be a good way for someone interested in this project to familiarise themselves with the codebase.</p>
+
+<h3 id="integrating-chiantipy-and-sunpy">Integrating ChiantiPy and SunPy</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="https://github.com/DanRyanIrish">Dan Ryan</a>, <a href="http://sourceforge.net/u/kdere/profile/">Ken Dere</a></p>
+
+<p><em>Difficulty:</em> Beginner</p>
+
+<p><em>Astronomy knowledge needed:</em> Some knowledge of spectra.</p>
+
+<p><em>Programming skills:</em> Python.</p>
+
+<h4 id="description-15">Description</h4>
+
+<p>The <a href="http://www.chiantidatabase.org/">CHIANTI</a> atomic physics database is a valuable resource for solar physics. The CHIANTI database holds a large amount of information on the physical properties of different elements in different ionisation states and enabled the calculation of various parameters from this information. Using CHIANTI it is possible to calculate the spectra of various types of solar plasma (e.g., flare, quiet sun, etc.) from the observed elemental abundances and ionisation states.
+These synthetic spectra are essential for comparing to the data observed by various instruments to calculate the response functions of the instruments and to compare to the properties of observed plasma to allow the calculation of physical parameters such as temperature.</p>
+
+<p>Currently, no SunPy code uses the Python interface to the CHIANTI database <a href="http://chiantipy.sourceforge.net/">ChiantiPy</a>. This project would develop the routines to be included in SunPy to use ChiantiPy for various physical calculations desired. The first potential use of ChiantiPy in SunPy is in the <code class="language-plaintext highlighter-rouge">sunpy.instr.goes</code> module, where currently data tables calculated using CHIANTI are downloaded from the Solar Software (SSW) distribution, these data tables should be created using SunPy.</p>
+
+<p>Other potential application of ChiantiPy in SunPy include:</p>
+
+<ol>
+  <li>Conversion of ChiantiPy spectra objects to SunPy Spectra objects.</li>
+  <li>Calculation of AIA temperature response functions from ChiantiPy
+contribution functions.</li>
+</ol>
+
+<p><strong>Expected Outcomes</strong>: This project would facilitate SunPy becoming independent from Solar SoftWare (SSW) in producing and maintaining files required by the sunpy.instr.goes module for determining the thermodynamic properties of the emitting plasma observed by GOES.  It would also allow SunPy users to calculate spectra and exclusively through Python without relying on SSW.</p>
+
+<h3 id="support-for-analysis-of-solar-energetic-particles">Support for analysis of Solar Energetic Particles</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/dpshelio">David Pérez-Suárez</a></p>
+
+<p><em>Difficulty:</em> Beginner</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Python.</p>
+
+<h4 id="description-16">Description</h4>
+
+<p>SunPy is able to read a lightcurve from different sources (GOES x-ray, Lyra, Norh,…), however these are not all.
+SoHO/ERNE (Energetic and Relativistic Nuclei and Electron experiment on board SoHO) measures
+one of the important effects in Space Weather, <a href="https://en.wikipedia.org/wiki/Solar_energetic_particles">Solar Energetic Particles</a> (SEP).
+The data of such instrument (as for GOES particle measurements) comes as plaintext csv files with header information.
+This project should add ERNE to the SunPy supported instruments by being
+able to read these files in as a lightcurve object and allow to perform
+the basic operations used when such data is analysed:
+eg. energy ranges binning, visualisation, …</p>
+
+<h3 id="lightcurve-refactor">Lightcurve Refactor</h3>
+
+<p><em>Suggested Mentor(s):</em> <a href="http://github.com/Cadair">Stuart Mumford</a>, <a href="https://github.com/DanRyanIrish">Dan Ryan</a>, <a href="https://github.com/aringlis">Andrew Inglis</a></p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Python</p>
+
+<h4 id="description-17">Description</h4>
+<p>The <code class="language-plaintext highlighter-rouge">Lightcurve</code> class is one of the three core datatypes in SunPy, along with Map and Spectra.
+<code class="language-plaintext highlighter-rouge">Lightcurve</code> is designed to read in, process and store meta data related to solar physics time series data.
+Currently, <code class="language-plaintext highlighter-rouge">Lightcurve</code> uses the pandas library as its underlying data structure, however, this is subject to change in the future.</p>
+
+<p>Much like the <code class="language-plaintext highlighter-rouge">map</code> submodule, <code class="language-plaintext highlighter-rouge">lightcurve</code> needs to be able to read in various supported data formats (such as FITS, ascii and others in the future), store their meta data and give users Beginner and unified access to this metadata independently of the original source of the data.</p>
+
+<p>As currently implemented (as of 0.5) the <code class="language-plaintext highlighter-rouge">lightcurve</code> module performs three core tasks:</p>
+
+<ol>
+  <li>Download the raw data</li>
+  <li>Read this data into a pandas dataframe</li>
+  <li>store the meta data obtained with the data.</li>
+</ol>
+
+<p>As of the SunPy 0.6 release the first stage will be moved out of <code class="language-plaintext highlighter-rouge">lightcurve</code> and into the <code class="language-plaintext highlighter-rouge">net</code> subpackage as part of the <a href="https://github.com/sunpy/sunpy/pull/1088"><code class="language-plaintext highlighter-rouge">UnifiedDownloader</code></a> (name subject to change) Pull Request.
+This leaves <code class="language-plaintext highlighter-rouge">lightcurve</code> in a similar position to <code class="language-plaintext highlighter-rouge">map</code> where the data acquisition is not part of the core data type and is managed separately.
+Therefore, enabling the implementation of a factory class like <code class="language-plaintext highlighter-rouge">Map</code>
+for the lightcurve module.</p>
+
+<p><strong>Expected Outcomes</strong></p>
+
+<p>Someone under taking this project will complete the following tasks:</p>
+
+<ol>
+  <li>Become familiar with the <code class="language-plaintext highlighter-rouge">UnifiedDownloader</code> code, if it has not been accepted into the SunPy codebase, complete the remaining tasks for this to be achieved.</li>
+  <li>Re-write any new lightcurve sources that were not included in the <code class="language-plaintext highlighter-rouge">UnifiedDownloader</code> code as sources for <code class="language-plaintext highlighter-rouge">UnifiedDownloader</code>.</li>
+  <li>Write a factory class for <code class="language-plaintext highlighter-rouge">lightcurve</code> similar to the <code class="language-plaintext highlighter-rouge">sunpy.map.Map</code> class. This class will be a generic constructor for <code class="language-plaintext highlighter-rouge">lightcurve</code> allowing the user to instantiate any one of the many subclasses of <code class="language-plaintext highlighter-rouge">GenericLightcurve</code> present in <code class="language-plaintext highlighter-rouge">sunpy.lightcurve.sources</code>. The API design for the factory class is here: https://github.com/sunpy/sunpy-SEP/pull/6</li>
+  <li>Design and develop a robust method of dealing with lightcurve meta data, which can handle joining different parts of timeseries from different files, each with their own meta data. (See <a href="https://github.com/sunpy/sunpy/issues/1122">#1122</a>)</li>
+</ol>
+
+<h3 id="iris-4d-cubes-and-gui">IRIS, 4D Cubes and GUI</h3>
+
+<p><em>Suggested Mentors:</em> <a href="http://github.com/ehsteve">Steven Christe</a> (NASA GSFC, SunPy), <a href="https://github.com/nabobalis">Nabil Freij</a> (Sheffield University)</p>
+
+<p><em>Difficulty:</em> Intermediate to Expert</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Python and basic knowledge of GUI design.</p>
+
+<h4 id="description-18">Description:</h4>
+
+<p>Recently, a new Sun observing satellite was launched, called <a href="http://iris.lmsal.com">IRIS</a>.
+It performs high-resolution, multi-wavelength observations of the solar atmosphere.
+As a result, the data is saved out as 4D cubes. These cubes have the following structure, [Time, Wavelength, Spatial].
+This format is also used by other ground and space-based telescopes.</p>
+
+<p>Traditionally (which is a powerful thing in astronomy), data analysis is done using a programming language called IDL.
+Using this language, a GUI was created called <a href="http://folk.uio.no/gregal/crispex/">CRISPEX</a> and is used to do simple but effective analysis.</p>
+
+<p>This project aims to create a smaller scale version that uses <a href="http://ejeschke.github.io/ginga/">Ginga</a> as a backend.
+Ginga is a file viewer that was created with astrophysics in mind.
+It allows basic manipulation of FIT files, which are the standard data container in astrophysics. 
+A Python plugin will be created and integrated into Ginga, allowing the user to open 3D/4D datasets and perform basic analysis, such as, slit extraction.</p>
+
+<p>To achieve this, a previous ESA summer project created a cube class.
+While it was finished, it was never integrated into SunPy.
+The code was created to hold and manipulate complex datatypes. 
+It is similar in style to the SunPy Map Class and follows that convention.
+It however, has extra features enabling specific data formats to be extracted that the user requires, for example, a spectrum. 
+The student will need to become familiar with this code, as small tweaks need to occur before it is added to SunPy.</p>
+
+<p>Finally, the plugin will be created using Python.
+However, a background in QT would ideally be needed but it is not necessary.
+Ginga uses multiple backends for the GUI but we plan to use QT.</p>
+
+<p>Plugin Features:</p>
+
+<ol>
+  <li>Open FITS file and call the correct SunPy Map or Cube class.</li>
+  <li>Solar coordinate integration.</li>
+  <li>Perform slit extraction with the ability to choose a time and/or wavelength range.</li>
+</ol>
+
+<p>Sunpy Feature:</p>
+
+<ol>
+  <li>Full IRIS support.</li>
+</ol>
+
+<h1 id="yt">yt</h1>
+
+<h3 id="enable-volume-rendering-of-octree-datasets">Enable volume rendering of octree datasets</h3>
+
+<p><em>Suggested Mentor(s):</em> Matthew Turk, Sam Skillman</p>
+
+<p><em>Difficulty:</em> Intermediate</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Familiarity with Python and Cython, and a familiarity with data structures such as octrees and B-trees.</p>
+
+<h4 id="description-19">Description</h4>
+
+<p>At present, volume rendering in yt works best with patch-based AMR datasets.  Extending this to support octree datasets will enable a much greater diversity of data types and formats to be visualized in this way.</p>
+
+<p>This would include several specific, concrete actions:</p>
+
+<ol>
+  <li>Development of viewpoint traversal-ordering for Octree datasets</li>
+  <li>Refactoring grid traversal methods to travel along the octree data structure without explicit parentage links (i.e., using built-in neighbor-finding functions)</li>
+  <li>Optimizing for parallel decomposition of octrees in this way</li>
+</ol>
+
+<h3 id="implementation-of-deep-image-format">Implementation of deep image format</h3>
+
+<p><em>Suggested Mentor(s):</em> Matthew Turk, Kacper Kowalik</p>
+
+<p><em>Difficulty:</em> Advanced</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Familiarity with Python and Cython, and a familiarity with z-buffering.</p>
+
+<h4 id="description-20">Description</h4>
+
+<p>Deep image compositing can be used to create a notion of depth. This could be utilized for multi-level rendering, rendering of semi-transparent streamlines inside volumes.</p>
+
+<p>This would require:</p>
+
+<ol>
+  <li>Developing a sparse image format data container</li>
+  <li>Utilizing aforementioned container for multi-level rendering</li>
+</ol>
+
+<h3 id="volume-traversal">Volume Traversal</h3>
+
+<p><em>Suggested Mentor(s):</em> Matthew Turk, Sam Skillman</p>
+
+<p><em>Difficulty:</em> Advanced</p>
+
+<p><em>Astronomy knowledge needed:</em> None</p>
+
+<p><em>Programming skills:</em> Familiarity with Python and Cython, and a familiarity with data structures such as octrees and B-trees.</p>
+
+<h4 id="description-21">Description</h4>
+
+<p>Currently yt uses several objects that utilize brick decomposition, i.e. a process by which overlapping grids are broken apart until a full tessellation of the domain (or data source) is created with no overlaps. This is done by the kD-tree decomposition. This project aims to enhance current capabilities by providing easy mechanisms for creating volume traversal mechanisms. There are two components to this: handling tiles of data, and creating fast methods for passing through the data and moving between tiles.</p>
+
+<p>This would require:</p>
+
+<ol>
+  <li>Creating flexible (in terms of ordering) iterator over the “tiles” that compose a given data object</li>
+  <li>Designing and implementing object for storing values returned by aforementioned iterator, that would:
+    <ul>
+      <li>Cache a slice of the grid or data object that it operates on</li>
+      <li>Filter particles from the data object it operates on</li>
+      <li>Provide a mechanism for identifying neighbor objects from a given face index.</li>
+      <li>Provide mechanisms for generating vertex-centered data or cell-centered data quickly</li>
+    </ul>
+  </li>
+  <li>Implement a mechanism for integrating paths through tiles, that would:
+    <ul>
+      <li>define a method for determining when a ray has left an object</li>
+      <li>define a method for selecting the next brick to traverse or connect to</li>
+      <li>update the value of a ray’s direction</li>
+    </ul>
+  </li>
+</ol>
+
+
+      </div>
+    </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+	<p class="tagline"><strong>OpenAstronomy</strong>: Combining the power of open source astrophysics projects to empower science.</p>
+  <a href="https://app.element.io/#/room/#openastronomy:openastronomy.org" target="_blank">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 40 40" height="100%">
+              <path fill="#f9f9f9" d="M30,12V8h-5.004l1-8h-4l-1,8h-7.998l1-8h-4l-1,8H2v4h6.498L7.5,20H2v4h5l-1,8h4l1-8h8l-1.002,8H22l1-8h7v-4h-6.5l0.996-8H30z M19.5,20h-8l0.998-8h7.998L19.5,20z"/>
+          </svg>
+      </span>
+  </a>
+  <a href="https://groups.google.com/forum/#!forum/openastronomy" target="_blank">
+      <span style="color:white!important;" >
+          <span class="icon-white  icon-envelope" style="color:blue!important;">
+	  </span>
+      </span>
+
+  </a>
+  <a href="https://community.openastronomy.org">
+      <img src="/img/icons/discourse_icon.png" alt="OpenAstronomy on Discourse">
+  </a>
+  <a rel="me" href="https://twitter.com/Open_Astronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+            </span>
+  </a>
+  <a rel="me" href="https://astrodon.social/@OpenAstronomy">
+            <span class="icon-image  icon--github">
+                <svg viewBox="0 0 16 16">
+                    <path fill="#f9f9f9" d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/>
+                </svg>
+            </span>
+  </a>
+
+  <a href="/feed.xml">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z M5.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-3-8.5a1 1 0 0 1 1-1c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1-1-1zm0 4a1 1 0 0 1 1-1 6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1-1-1z"/>
+          </svg>
+  </a>
+  <a href="https://github.com/openastronomy">
+      <span class="icon-image  icon--github">
+          <svg viewBox="0 0 16 16">
+              <path fill="#f9f9f9" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+          </svg>
+      </span>
+      <!-- <span class="username">OpenAstronomy</span> -->
+  </a>
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
