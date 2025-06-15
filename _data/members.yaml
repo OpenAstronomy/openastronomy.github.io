@@ -91,11 +91,12 @@ juliaastro:
   logo: juliaastro.svg
   url: https://juliaastro.github.io/
   repositories:
-    github: juliaastro
+    github: JuliaAstro
   mailinglist:
     users: https://discourse.julialang.org/c/domain/astro
   chat:
-    matrix: https://app.element.io/#/room/#JuliaAstro:openastronomy.org
+    slack: https://app.slack.com/client/T68168MUP/CMXU6SD7V
+    zulip: https://julialang.zulipchat.com/#narrow/channel/astronomy
   description: >-
     is an organization that shepherds the development of community astronomy and
     astrophysics packages for Julia. These include packages for widely used
