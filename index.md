@@ -20,6 +20,8 @@ The core principles of OpenAstronomy (OA) include:
 
 ## Get involved with OpenAstronomy
 
+The [OpenAstronomy discourse](https://community.openastronomy.org) is a great place to get involved with the communit. You can freely browse the channels but posting and other interaction require you to sign up.
+
 If you want to get involved with OpenAstronomy or maybe you have a project that
 would like to join the collaboration, please feel free to get in touch. The
 OpenAstronomy organisation has a mailing list (<a
