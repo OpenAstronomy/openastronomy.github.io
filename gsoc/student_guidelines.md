@@ -10,7 +10,7 @@ If you want to apply to OpenAstronomy to participate in GSoC
 there are many things you can do to improve your application.
 Many of OpenAstronomy's admins and mentors have participated in
 previous editions of GSoC with their projects, so will be able to
-answer any questions you might have, come talk to us on [\[Matrix\]] or the
+answer any questions you might have, come talk to us on the
 mailing list.
 
 There are many guidelines on writing a good application and how to
@@ -78,7 +78,6 @@ We are also happy to give comments on your proposal if you like.  Feel free to
 add your application to the sub-org member's wiki following this format: "GSoC-\<YEAR\> Application \<sub-org\> \<Your Name\>:\<Project Name\>"
 and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
 
-[Matrix]: https://app.element.io/#/room/#openastronomy:openastronomy.org
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template
 [Python Software Foundation]: http://python-gsoc.org/
 [GSoC Contributor Guide]: https://google.github.io/gsocguides/student/

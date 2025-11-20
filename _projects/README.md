@@ -4,8 +4,7 @@ This short tutorial will guide you on how to add a GSoC project idea in the
 OpenAstronomy website.
 
 In case you face any issues with this tutorial do contact your org admins via email,
-[Matrix](https://app.element.io/#/room/#openastronomy:openastronomy.org),
-or in the [mailing list](https://groups.google.com/forum/#!forum/openastronomy).
+thorough the [mailing list](https://groups.google.com/forum/#!forum/openastronomy).
 
 *tl;dr: are you an expert?* Fork the repo and modify
 the [template file](./_template.md) according to your idea, save it under
