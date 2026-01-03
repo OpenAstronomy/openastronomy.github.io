@@ -6,17 +6,18 @@ desc: This is the first idea for suborg
 requirements:
  - Knowledge on pythonic physics.
  - Familiar with numerical methods
+# How difficult would you consider the project to be: low, medium, high
 difficulty: low
-# Related issues (if any)  to this project.
-# Ideally you want at least one
+# Related issues (if any) to this project.
+# Ideally you want at least one that describes the problem it tries to solve
 issues:
  - https://github.com/org/org_repo/issues/4444
  - https://github.com/org/org_repo/issues/5555
-mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub or GitLab handles
+mentors:
  - astrorobot
-# The programme under this project wish to run.
+# The programme under this project wish to run. At the moment only GSOC is available
 initiatives:
  - GSOC
 project_size:

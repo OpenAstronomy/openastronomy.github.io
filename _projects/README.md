@@ -26,7 +26,7 @@ other members of the community, that is fine too!
 ## Required format
 
 Given that you have the above items, all you need now is to put them in a plain text file following
-the [template file](./_template.md) (you may click on `RAW` to see how it looks).
+the [template file](./_template.md) (you may click on `Code` to see how it looks).
 
 The file is composed in two parts (separated by a `---`).
 Change the text in the template keeping special care of the structure of the `yaml`
