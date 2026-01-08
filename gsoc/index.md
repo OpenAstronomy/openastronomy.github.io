@@ -24,8 +24,7 @@ All student blogs are collected on the [OpenAstronomy Universe] site.
 * [GSoC Contributor Guide]
 * [Now You Know It!: Getting selected in Outreachy by Kriti Singh]
 
-(current-projects)=
-## Current Project ideas offered by mentors
+## Current Project ideas offered by mentors {#current-projects}
 
 * [2026](./gsoc2026/)
 
