@@ -9,7 +9,7 @@ requirements:
 # How difficult would you consider the project to be: low, medium, high
 difficulty: low
 # Related issues (if any) to this project.
-# Ideally you want at least one that describes the problem it tries to solve
+# Ideally you want at least one that describes the problem it is trying to solve
 issues:
  - https://github.com/org/org_repo/issues/4444
  - https://github.com/org/org_repo/issues/5555
