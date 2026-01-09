@@ -1,0 +1,16 @@
+name: Run CircleCI artifacts redirector for rendered website
+on: [status]
+jobs:
+   circleci_artifacts_redirector_job:
+     if: ${{ github.repository == 'OpenAstronomy/openastronomy.github.io' }}
+     runs-on: ubuntu-latest
+     name: Run CircleCI artifacts redirector
+     steps:
+       - name: GitHub Action step
+         uses: scientific-python/circleci-artifacts-redirector-action@5d358ff96e96429a5c64a969bb4a574555439f4f  # v1.3.1
+         with:
+           repo-token: ${{ secrets.GITHUB_TOKEN }}
+           api-token: ${{ secrets.OA_WEBSITE_CIRCLE_TOKEN }}
+           artifact-path: 0/html/index.html
+           circleci-jobs: build
+           job-title: "--> Website Preview <--"
