@@ -22,6 +22,11 @@ nav_links:
 # Build settings
 markdown: kramdown
 
+kramdown:
+  hard_wrap: false
+  input: GFM
+  parse_block_html: true
+
 irc_freenode: irc://irc.freenode.net/
 
 collections:
