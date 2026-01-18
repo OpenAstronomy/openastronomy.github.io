@@ -29,7 +29,7 @@ All student blogs are collected on the [OpenAstronomy Universe] site.
 * [2026](./gsoc2026/)
 
 <!-- as provided in https://github.com/gettalong/kramdown/issues/155#issuecomment-339793629 -->
-<details><summary markdown='span'>Previous editions</summary>
+<details markdown="1"><summary markdown='span'>Previous editions</summary>
 
 * [2025](./gsoc2025/)
 * [2024](./gsoc2024/)
