@@ -1,39 +1,84 @@
-# How to add project ideas for OpenAstronomy
+# Project Ideas
 
-This short tutorial will guide you on how to add a GSoC project idea in the
-OpenAstronomy website.
+This directory contains project ideas for OpenAstronomy's participation in programs like Google Summer of Code (GSoC).
 
-In case you face any issues with this tutorial do contact your org admins via email,
-thorough the [mailing list](https://groups.google.com/forum/#!forum/openastronomy).
+## Directory Structure
 
-*tl;dr: are you an expert?* Fork the repo and modify
-the [template file](./_template.md) according to your idea, save it under
-`_projects/YYYY/sub-org/` with a meaningful filename and open a pull-request.
+Projects are organized by year and sub-organisation:
+```
+_projects/
+├── YYYY/
+│   ├── suborg1/
+│   │   ├── project1.md
+│   │   └── project2.md
+│   └── suborg2/
+│       └── project3.md
+└── _template.md
+```
 
-## What do I need for my project idea?
+## Creating a New Project Idea
 
-Everything you need is a title and description of the project idea, a set of requirements
-for potential students (_e.g._, proficiency with `astropy.tables` and `astropy.units`),
-and a list of potential mentors. In addition, please link any related issues or tickets
-to the project idea, if any. Lastly, make sure to indicate the level of difficulty of
-the project.
+1. Copy `_template.md` to the appropriate year and sub-organisation directory
+2. Fill in all the required fields in the YAML front matter
+3. Write a clear description of the project
+4. **Add contact information** for your sub-organisation (see below)
+5. Define clear milestones for the project timeline
+6. Submit a pull request
 
-In case your project idea already has specific milestones, please add them
-so as to make students aware when they start writing their applications.
-If the project milestones are open ended and you would like to hear input from
-other members of the community, that is fine too!
+## Adding Sub-Organisation Contact Information
 
-## Required format
+To help students reach your community, add contact information to your project page by including this line right after the project title:
 
-Given that you have the above items, all you need now is to put them in a plain text file following
-the [template file](./_template.md) (you may click on `Code` to see how it looks).
+```liquid
+{% include suborg_contacts.html suborg="yoursuborg" %}
+```
 
-The file is composed in two parts (separated by a `---`).
-Change the text in the template keeping special care of the structure of the `yaml`
-file and the headings on the markdown part (_e.g._, the top level starts with a 4 level title: `####`).
+Replace `yoursuborg` with your sub-organisation's key from `_data/members.yaml` (e.g., `sunpy`, `astropy`, `radis`, `stingray`).
 
-## How to include my project idea on the website?
+This will automatically display:
+- Chat channels (Matrix, Slack, Gitter, etc.)
+- Mailing lists (users, developers)
+- Website link
+- A reminder to contact mentors in public channels
 
-If you are familiar with git/GitHub: for this repo and add your project idea
-to the directory of your sub-organisation. Otherwise, we've got you covered!
-Contact us via [email](openastronomy.organization@gmail.com) and attach the above file.
+### Example
+
+```markdown
+---
+name: My Awesome Project
+collaborating_projects:
+ - sunpy
+---
+
+# My Awesome Project
+
+{% include suborg_contacts.html suborg="sunpy" %}
+
+## Description
+...
+```
+
+## Updating Contact Information
+
+Contact information is centrally managed in `_data/members.yaml`. To update your sub-organisation's contact details:
+
+1. Edit `_data/members.yaml`
+2. Update the relevant fields under your sub-organisation's entry
+3. The changes will automatically appear on all project pages using the include
+
+## Template Fields
+
+See `_template.md` for all available fields and their descriptions. Key fields include:
+
+- `name`: Project title
+- `desc`: One-line description
+- `requirements`: Student prerequisites
+- `difficulty`: low, medium, or high
+- `mentors`: GitHub/GitLab handles
+- `collaborating_projects`: Sub-organisation(s)
+- `project_size`: Expected time commitment
+- `tags`: Technologies involved
+
+## Questions?
+
+For questions about creating project ideas, contact the OpenAstronomy admins or refer to the [Sub-Org Guidelines](/gsoc/suborg_guidelines.html).

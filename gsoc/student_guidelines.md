@@ -27,9 +27,8 @@ There are many ways to get yourself known by the community, you can introduce yo
 OpenAstronomy mailing list ([how to use Google Groups](https://support.google.com/groups/answer/1046523?hl=en)), chat with us in the Matrix channel ([how to connect to matrix](https://element.io/user-guide)) and if required contact the mentors to know
 more about certain project. However, contacting mentors through email or direct messages is discouraged, and contacting them in public channels is the preferred way to provide answers to multiple people at once. Also, when you have a particular idea in
 mind, get in touch with that project and introduce yourself.
-For `astropy` projects you can do this by sending an e-mail to the
-[astropy-gsoc-applications](<mailto:astropy-gsoc-applications@googlegroups.com>) mailing list
-(please do not send to the `astropy-dev` list).
+
+**Each sub-organisation has its own communication channels.** See the [Sub-Organisation Contact Information](#sub-organisation-contact-information) section below for specific details on how to reach each project's community.
 
 2. **Become a user!**
 Download one or more of the OpenAstronomy projects and start experimenting with the code.
@@ -77,6 +76,66 @@ Don't forget to [submit your application](https://summerofcode.withgoogle.com/) 
 We are also happy to give comments on your proposal if you like.  Feel free to
 add your application to the sub-org member's wiki following this format: "GSoC-\<YEAR\> Application \<sub-org\> \<Your Name\>:\<Project Name\>"
 and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
+
+## Sub-Organisation Contact Information
+
+Each OpenAstronomy sub-organisation has its own community and communication channels. When you're interested in a specific project, make sure to reach out through the appropriate channels for that organisation:
+
+### Astropy
+- **Application mailing list**: [astropy-gsoc-applications@googlegroups.com](mailto:astropy-gsoc-applications@googlegroups.com) (please do not send to the `astropy-dev` list)
+- **Chat**: [Slack](http://joinslack.astropy.org/)
+- **User mailing list**: [astropy users](http://mail.python.org/mailman/listinfo/astropy)
+- **Developer mailing list**: [astropy-dev](http://groups.google.com/group/astropy-dev)
+
+### Astronomy Data Commons
+- **Developer mailing list**: [astronomy-commons](https://groups.google.com/forum/#!forum/astronomy-commons)
+- **Chat**: [Matrix](https://app.element.io/#/room/#astronomy-commons:matrix.org)
+
+### CTLearn
+- **Chat**: [Matrix](https://app.element.io/#/room/#ctlearn:matrix.org)
+
+### EinsteinPy
+- **Developer mailing list**: [einsteinpy-dev](https://groups.io/g/einsteinpy-dev)
+- **Chat**: [Matrix](https://app.element.io/#/room/#einsteinpy:matrix.org)
+
+### Glue
+- **User mailing list**: [glue-viz](https://groups.google.com/group/glue-viz)
+- **Developer mailing list**: [glue-viz-dev](https://groups.google.com/group/glue-viz-dev)
+
+### GNU Astronomy Utilities (Gnuastro)
+- **User mailing list**: [help-gnuastro](https://lists.gnu.org/mailman/listinfo/help-gnuastro)
+- **Developer mailing list**: [gnuastro-devel](https://lists.gnu.org/mailman/listinfo/gnuastro-devel)
+
+### JuliaAstro
+- **User forum**: [Julia Discourse - Astronomy](https://discourse.julialang.org/c/domain/astro)
+- **Chat**: [Slack](https://app.slack.com/client/T68168MUP/CMXU6SD7V) or [Zulip](https://julialang.zulipchat.com/#narrow/channel/astronomy)
+
+### PlasmaPy
+- **User mailing list**: [plasmapy](https://groups.google.com/group/plasmapy)
+- **Chat**: [Matrix](https://app.element.io/#/room/#plasmapy:matrix.org)
+
+### poliastro
+- **Developer mailing list**: [poliastro-dev](https://groups.io/g/poliastro-dev)
+- **Chat**: [Matrix](https://app.element.io/#/room/#poliastro:matrix.org)
+
+### RADIS
+- **User mailing list**: [radis-radiation](https://groups.google.com/forum/#!forum/radis-radiation)
+- **Chat**: [Gitter](https://gitter.im/radis-radiation/community)
+
+### Stingray
+- **Chat**: [Slack](https://join.slack.com/t/stingraysoftware/shared_invite/zt-49kv4kba-mD1Y~s~rlrOOmvqM7mZugQ)
+
+### SunPy
+- **User mailing list**: [sunpy](http://groups.google.com/group/sunpy)
+- **Developer mailing list**: [sunpy-dev](http://groups.google.com/group/sunpy-dev)
+- **Chat**: [Matrix](https://app.element.io/#/room/#sunpy:openastronomy.org)
+
+### yt
+- **User mailing list**: [yt-users](https://mail.python.org/archives/list/yt-users@python.org/)
+- **Developer mailing list**: [yt-dev](https://mail.python.org/archives/list/yt-dev@python.org/)
+- **Chat**: [Slack](https://yt-project.slack.com/)
+
+**Note**: For organisations not listed above or for general OpenAstronomy questions, use the main OpenAstronomy communication channels mentioned at the top of this guide.
 
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template
 [Python Software Foundation]: http://python-gsoc.org/

@@ -29,6 +29,8 @@ collaborating_projects:
  - radis
 ---
 
+{% include suborg_contacts.html suborg="radis" %}
+
 #### Description
 
 The RADIS code was developed for the characterization of plasmas, flames and atmospheres.

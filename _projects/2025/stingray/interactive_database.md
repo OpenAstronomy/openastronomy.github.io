@@ -32,6 +32,8 @@ collaborating_projects:
 
 # Interactive Database for X-ray observations 
 
+{% include suborg_contacts.html suborg="stingray" %}
+
 ## Description
 
 The increasing number of X-ray telescopes observing accreting black hole sources 
