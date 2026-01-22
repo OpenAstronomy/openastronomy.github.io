@@ -6,6 +6,14 @@ show_main: false
 
 # GSoC Contributor Application Guidelines
 
+**Communication Channels**
+
+If you have questions, please join our chat!
+* **Chat:** [OpenAstronomy Matrix Channel](https://openastronomy.org/chat) (Join here first!)
+* **Mailing List:** [OpenAstronomy Google Group](https://groups.google.com/forum/#!forum/openastronomy)
+
+---
+
 If you want to apply to OpenAstronomy to participate in GSoC
 there are many things you can do to improve your application.
 Many of OpenAstronomy's admins and mentors have participated in
