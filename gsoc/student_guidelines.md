@@ -9,8 +9,15 @@ show_main: false
 **Communication Channels**
 
 If you have questions, please join our chat!
-* **Chat:** [OpenAstronomy Matrix Channel](https://openastronomy.org/chat) (Join here first!)
+* **General Help:** [OpenAstronomy Matrix Channel](https://openastronomy.org/chat) (Join here first!)
 * **Mailing List:** [OpenAstronomy Google Group](https://groups.google.com/forum/#!forum/openastronomy)
+
+OpenAstronomy is a federation of many different organizations (like SunPy, Astropy, etc.).
+To get help, you need to find the specific project you are interested in:
+
+1.  Browse the **[Project Ideas Page](/gsoc/)** to find a project that interests you.
+2.  Check the **[Members Page](/members)** to find the chat links for that specific organization.
+3.  Join *that* organization's chat to talk to the mentors!
 
 ---
 
