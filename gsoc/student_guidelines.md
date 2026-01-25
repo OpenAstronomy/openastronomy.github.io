@@ -9,7 +9,7 @@ show_main: false
 **Communication Channels**
 
 If you have questions, please join our chat!
-* **General Help:** [OpenAstronomy Matrix Channel](https://openastronomy.org/chat) (Join here first!)
+
 * **Mailing List:** [OpenAstronomy Google Group](https://groups.google.com/forum/#!forum/openastronomy)
 
 OpenAstronomy is a federation of many different organizations (like SunPy, Astropy, etc.).
