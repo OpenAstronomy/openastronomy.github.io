@@ -8,9 +8,6 @@ show_main: false
 
 **Communication Channels**
 
-If you have questions, please join our chat!
-
-* **Mailing List:** [OpenAstronomy Google Group](https://groups.google.com/forum/#!forum/openastronomy)
 
 OpenAstronomy is a federation of many different organizations (like SunPy, Astropy, etc.).
 To get help, you need to find the specific project you are interested in:
@@ -18,6 +15,10 @@ To get help, you need to find the specific project you are interested in:
 1.  Browse the **[Project Ideas Page](/gsoc/)** to find a project that interests you.
 2.  Check the **[Members Page](/members)** to find the chat links for that specific organization.
 3.  Join *that* organization's chat to talk to the mentors!
+
+**Mailing List**
+
+You can also join the [OpenAstronomy mailing list](https://groups.google.com/forum/#!forum/openastronomy) to receive announcements and ask general questions.
 
 ---
 
