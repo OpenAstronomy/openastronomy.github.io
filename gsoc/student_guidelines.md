@@ -6,6 +6,16 @@ show_main: false
 
 # GSoC Contributor Application Guidelines
 
+**Communication Channels**
+
+OpenAstronomy is a collaboration between open source astronomy and astrophysics projects and as such, to get help you need to find the specific project you are interested in:
+
+1.  Browse the **[Project Ideas Page](/gsoc/)** to find a project that interests you.
+2.  Check the **[Members Page](/members)** to find the chat links for that specific organization.
+3.  Join *that* organization's chat to talk to the mentors!
+
+---
+
 If you want to apply to OpenAstronomy to participate in GSoC
 there are many things you can do to improve your application.
 Many of OpenAstronomy's admins and mentors have participated in
