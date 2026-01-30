@@ -318,6 +318,18 @@ yt:
     multi-resolution data from astrophysical simulations,
     radio telescopes, and a burgeoning interdisciplinary community.
 
+lincc-frameworks:
+  name: LINCC Frameworks
+  logo: lincc-frameworks.png
+  url: https://lsstdiscoveryalliance.org/lsst-discovery-alliance-programs/lincc-frameworks/
+  repositories:
+    github: lincc-frameworks
+  chat:
+    slack: https://discovery-alliance.slack.com/archives/C062LG1AK1S
+  description: >-
+    builds open-source tools scalable data analysis in astronomy, aimed at 
+    enabling scientific discovery with large datasets.
+
 # Are you a new org? copy the fragment below above this line and fill it up
 # with your organisation details. Don't forget to add your logo to the img/members
 # directory.
