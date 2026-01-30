@@ -36,7 +36,6 @@ tags:
  - python
 # suborganisation(s) to which this project belongs.
 collaborating_projects:
- - apache
  - lincc-frameworks
 ---
 
