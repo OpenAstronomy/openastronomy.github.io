@@ -1,38 +1,38 @@
 ---
 name: Interactive Tutorials and Automated Testing for the Reltrans Code
-Create a series of tutorials on how to use the reltrans code and a suite of unit tests
-
-# Student requirements:
+desc: Create a series of tutorials on how to use the reltrans code and a suite of unit tests
+# add a short one line description of your project
 requirements:
+# Student requirements:
  - Basic Fortran knowledge
  - Implementation of Python code
  - Use of python notebook
-# How difficult would you consider the project to be: low, medium, high
 difficulty: medium
+# How difficult would you consider the project to be: low, medium, high
+issues:
 # Related issues (if any) to this project.
 # Ideally you want at least one that describes the problem it is trying to solve
-issues:
+mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub or GitLab handles
-mentors:
  - mgullik
  - fjebaker
-# The programme under this project wish to run. At the moment only GSOC is available
 initiatives:
+# The programme under this project wish to run. At the moment only GSOC is available
  - GSOC
 project_size:
  - 350 h (Large)
-# Different technologies needed
 tags:
+# Different technologies needed
  - python
  - fortran
-# suborganisation(s) to which this project belongs.
 collaborating_projects:
+# suborganisation(s) to which this project belongs.
  - astropy
-
 ---
+## Interactive Tutorials and Automated Testing for the Reltrans Code
 
-## Description
+### Description
 
 Reltrans is a publicly available, semi-analytical model for X-ray reverberation mapping
 of accreting black holes in both Active Galactic Nuclei (AGN) and X-ray binaries.
@@ -63,9 +63,9 @@ while also benefiting developers by enabling confident refactoring and extension
 In the long term, these improvements will enhance the sustainability of
 Reltrans as a community-driven scientific software package.
 
-## Project Milestones
+### Project Milestones
 
-### Coding starts
+#### Coding starts
 
 * Familiarization with the Reltrans codebase, including the Fortran core and existing Python wrappers
 * Review of current documentation and identification of key user workflows
@@ -73,7 +73,7 @@ Reltrans as a community-driven scientific software package.
 * Setup of the testing framework and definition of testing standards and conventions
 
 
-### 1st evaluation
+#### 1st evaluation
 
 * Delivery of initial Python notebook tutorials covering:
   - Installation and environment setup
@@ -83,7 +83,7 @@ Reltrans as a community-driven scientific software package.
 * Initial integration of tests into the existing development workflow
 
 
-### Final evaluation
+#### Final evaluation
 
 * Completion of the full tutorial series, including advanced usage examples and best practices
 * Expanded unit test coverage, including edge cases and regression tests
