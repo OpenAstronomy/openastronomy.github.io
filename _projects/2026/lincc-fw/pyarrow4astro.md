@@ -1,7 +1,7 @@
 ---
 name: PyArrow improvements for astronomy
 # Add a short one line description of your project
-desc: Implement missing functionality and improve PyArrow performance for nested arrays, to enable on-scale time-domain and spectral analysis in astronomy.
+desc: Improve and speed up PyArrow for nested arrays to enable on-scale time-domain analysis in astronomy.
 # Student requirements:
 requirements:
  - Be familiar with C++
@@ -29,7 +29,7 @@ mentors:
 initiatives:
  - GSOC
 project_size:
- - 175 h (Medium)
+ - 350 h (Large)
 # Different technologies needed
 tags:
  - c++
