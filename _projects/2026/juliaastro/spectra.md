@@ -1,6 +1,6 @@
 ---
 name: Spectra.jl across the electromagnetic spectrum
-desc: Help develop Spectra.jl and friends with JuliaAstro!
+desc: Help develop `Spectra.jl` and friends with JuliaAstro!
 requirements:
  - Familiarity with Julia
 difficulty: medium
@@ -34,7 +34,7 @@ collaborating_projects:
 When we observe a star, we can filter particular colours to learn about the
 star at different wavelengths of the electromagnetic spectrum. We can also
 [disperse](https://en.wikipedia.org/wiki/Diffraction) the light through a prism
-or a off a grating to obtain the intensity of radiation across a range of
+or off a grating to obtain the intensity of radiation across a range of
 wavelengths simultaneously. This _spectrum_ can teach us many things, including
 about the chemical abundance and composition of stars, the temperatures and
 velocities of gasses and other materials, the presence of organic molecules on
@@ -46,7 +46,7 @@ infrared, optical, ultraviolet, X-ray, gamma-ray) and come in many different
 formats. Particular frequency ranges have their own instrument types and
 exploit different physics to measure the spectra precisely. This means that the
 data files we receive from various observatories must be handled differently
-and carefully, in order for us to be able to gain meaningful and accurate
+and carefully in order for us to be able to gain meaningful and accurate
 scientific insights.
 
 This project aims to rework existing functionality in
@@ -54,7 +54,7 @@ This project aims to rework existing functionality in
 loading and transforming astrophysical spectra of various types. The project
 will build on work in
 [SpectralFitting.jl](https://github.com/JuliaAstro/SpectralFitting.jl) and
-[FITSFiles.jl](https://github.com/JuliaAstro/FITSFiles.jl), to provide a
+[FITSFiles.jl](https://github.com/JuliaAstro/FITSFiles.jl) to provide a
 uniform interface in Spectra.jl for loading datasets and their associated
 metadata, and for performing basic manipulations and first-look analyses.
 
@@ -65,7 +65,7 @@ For some further discussion, see:
 
 ### Coding starts
 
-* Learn about the different spectral data types, and what makes, e.g. radio or
+* Learn about the different spectral data types and what makes, e.g. radio or
   X-ray, spectra unusual.
 * Learn about [FITS](https://en.wikipedia.org/wiki/FITS) tables and other common
   astronomical data formats for spectra.
@@ -93,6 +93,6 @@ For some further discussion, see:
 * A revamped Spectra.jl; that is:
 * To have implemented data loading for a significant portion of our library of
   example spectra (ideally, for at least three different file formats).
-* To provide some common routines, such as rebining according to different
+* To provide some common routines, such as rebinning according to different
   heuristics (e.g. minimum flux, signal to noise, count rates, ...), adjusting
   the wavelength or energy shifts, or converting between common units.
