@@ -1,6 +1,6 @@
 ---
 name: Spectra.jl across the electromagnetic spectrum
-desc: "Help develop Spectra\.jl and friends with JuliaAstro!"
+desc: Help develop Spectrajl and friends with JuliaAstro!
 requirements:
  - Familiarity with Julia
 difficulty: medium
