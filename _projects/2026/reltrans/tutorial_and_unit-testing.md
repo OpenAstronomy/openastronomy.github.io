@@ -12,6 +12,9 @@ difficulty: medium
 issues:
 # Related issues (if any) to this project.
 # Ideally you want at least one that describes the problem it is trying to solve
+* Reltrans testing [issue 59](https://github.com/reltrans/reltrans/issues/59)
+* Reltrans tutorias [issue 60] (https://github.com/reltrans/reltrans/issues/60)
+* The project might also contribute to the [reltrans issue 13](https://github.com/reltrans/reltrans/issues/13)
 mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub or GitLab handles
@@ -28,7 +31,7 @@ tags:
  - fortran
 collaborating_projects:
 # suborganisation(s) to which this project belongs.
- - astropy
+ - reltrans
 ---
 ## Interactive Tutorials and Automated Testing for the Reltrans Code
 
