@@ -23,7 +23,7 @@ mentors:
 initiatives:
  - GSOC
 project_size:
- - 100 to 200h. 175 is prefered
+ - 175 h
 # Different technologies needed
 tags:
  - python
@@ -56,9 +56,8 @@ checks the behavior of the public API, which doesn't intersect with the low leve
 We want to build a more fundamental test suite for this low level layer, making it much
 more independent from astropy's existing tests.
 
-This project would be highly related to (although separable from) the following draft
-APE, which also contains more details on why the separation is desirable
-https://github.com/neutrinoceros/astropy-APEs/pull/1
+This project would be highly related to (although separable from) the [following draft
+APE](https://github.com/neutrinoceros/astropy-APEs/pull/1), which also contains more details on why the separation is desirable
 
 As such, it would also provide opportunities for exploratory works like
 - migrating to a modern, externally maintained build system like Meson
