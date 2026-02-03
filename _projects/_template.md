@@ -36,6 +36,13 @@ collaborating_projects:
 
 # This is an awesome project idea for suborg.
 
+{% comment %}
+Add contact information for your sub-organisation by including the line below.
+Replace "astropy" with your suborg name (lowercase, matching the key in _data/members.yaml).
+This will automatically display chat channels, mailing lists, and other contact info.
+{% endcomment %}
+{% include suborg_contacts.html suborg="astropy" %}
+
 ## Description
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam

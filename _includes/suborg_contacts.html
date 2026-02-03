@@ -1,0 +1,54 @@
+{% comment %}
+This include displays contact information for a specific sub-organisation.
+Usage: {% include suborg_contacts.html suborg="sunpy" %}
+{% endcomment %}
+
+{% assign suborg_name = include.suborg | downcase %}
+{% assign suborg_data = site.data.members[suborg_name] %}
+
+{% if suborg_data %}
+<div class="suborg-contact-info" style="background-color: #f5f5f5; padding: 15px; margin: 20px 0; border-left: 4px solid #2196F3;">
+  <h4 style="margin-top: 0;">📬 Contact {{ suborg_data.name }}</h4>
+  <p>Interested in this project? Get in touch with the {{ suborg_data.name }} community:</p>
+  <ul style="margin-bottom: 0;">
+    {% if suborg_data.chat %}
+      {% if suborg_data.chat.matrix %}
+        <li><strong>Chat (Matrix):</strong> <a href="{{ suborg_data.chat.matrix }}" target="_blank">Join Matrix channel</a></li>
+      {% endif %}
+      {% if suborg_data.chat.slack %}
+        <li><strong>Chat (Slack):</strong> <a href="{{ suborg_data.chat.slack }}" target="_blank">Join Slack workspace</a></li>
+      {% endif %}
+      {% if suborg_data.chat.gitter %}
+        <li><strong>Chat (Gitter):</strong> <a href="{{ suborg_data.chat.gitter }}" target="_blank">Join Gitter channel</a></li>
+      {% endif %}
+      {% if suborg_data.chat.zulip %}
+        <li><strong>Chat (Zulip):</strong> <a href="{{ suborg_data.chat.zulip }}" target="_blank">Join Zulip channel</a></li>
+      {% endif %}
+      {% if suborg_data.chat.irc %}
+        <li><strong>Chat (IRC):</strong> <a href="{{ suborg_data.chat.irc }}" target="_blank">Join IRC channel</a></li>
+      {% endif %}
+    {% endif %}
+    {% if suborg_data.mailinglist %}
+      {% if suborg_data.mailinglist.users %}
+        <li><strong>User mailing list:</strong> <a href="{{ suborg_data.mailinglist.users }}" target="_blank">Subscribe here</a></li>
+      {% endif %}
+      {% if suborg_data.mailinglist.devs %}
+        <li><strong>Developer mailing list:</strong> <a href="{{ suborg_data.mailinglist.devs }}" target="_blank">Subscribe here</a></li>
+      {% endif %}
+      {% if suborg_data.mailinglist.admin %}
+        <li><strong>Contact admin:</strong> <a href="{{ suborg_data.mailinglist.admin }}" target="_blank">Email admin</a></li>
+      {% endif %}
+    {% endif %}
+    {% if suborg_data.url %}
+      <li><strong>Website:</strong> <a href="{{ suborg_data.url }}" target="_blank">{{ suborg_data.url }}</a></li>
+    {% endif %}
+  </ul>
+  <p style="margin-top: 10px; margin-bottom: 0; font-size: 0.9em; color: #666;">
+    <em>Remember: Contact mentors in public channels rather than via direct messages or email.</em>
+  </p>
+</div>
+{% else %}
+<div class="suborg-contact-info" style="background-color: #fff3cd; padding: 15px; margin: 20px 0; border-left: 4px solid #ffc107;">
+  <p><strong>Note:</strong> For contact information about this project, please refer to the <a href="/gsoc/student_guidelines.html#sub-organisation-contact-information">Student Guidelines</a>.</p>
+</div>
+{% endif %}

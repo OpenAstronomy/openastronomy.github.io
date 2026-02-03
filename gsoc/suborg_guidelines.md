@@ -61,6 +61,11 @@ Take a look at [how others have done it before](https://github.com/OpenAstronomy
 The admins and other members will review your ideas and provide feedback. Once
 done, they will be merged and displayed on our website.
 
+**Important**: To help students reach your community, include contact information on each project page
+by adding `{% include suborg_contacts.html suborg="yoursuborg" %}` right after the project title.
+This automatically displays your chat channels, mailing lists, and website from `_data/members.yaml`.
+See the [project template](https://github.com/OpenAstronomy/openastronomy.github.io/blob/master/_projects/_template.md) for an example.
+
 It's also possible that a contributor comes up with their own ideas! That's OK, the
 only limitation is that either the contributor or the admin will have to find a
 mentor for that idea who is familiar with the programming language, the repository,
