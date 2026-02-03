@@ -34,7 +34,7 @@ collaborating_projects:
  - sunpy
 ---
 
-# Improving radiospectra'sfunctionality and interoperability
+# Improving radiospectra's functionality and interoperability
 
 ## Description
 
