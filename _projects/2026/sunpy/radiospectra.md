@@ -1,7 +1,7 @@
 ---
 name: Improving radiospectra’s Functionality and Interoperability
 # Add a short one line description of your project
-desc: Improving radiospectra’s interoperability with SunPy and more broadly with scientific Python and implement commonly requested usability features such as background subtraction.
+desc: Improving radiospectra’s interoperability by redesining the spectral data container and adding commonly requested usability features 
 # Student requirements:
 requirements:
  - python
@@ -23,7 +23,7 @@ mentors:
 initiatives:
  - GSOC
 project_size:
- - 
+ - 350 h (Large)
 # Different technologies needed
 tags:
  - python
@@ -45,7 +45,7 @@ The result will be a modern, extensible, and user-friendly foundation for radio 
 
 ### Expected Outcomes
 
-By the end of the project the student will deliver:
+By the end of the project the contributor will deliver:
 - A redesigned, coordinate-aware Spectra object with a clear external API that:
   - Provides a WCS-like mapping from physical coordinates (time, frequency) to array indices
   - Supports axis-aware operations (e.g., slicing, scaling, statistics) by index or coordinate
