@@ -17,7 +17,7 @@ mentors:
 initiatives:
  - GSOC
 project_size:
- - 175 h
+ - 350 h (Large)
 tags:
 # Different technologies needed
  - Python
@@ -83,12 +83,12 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
 ##### Final evaluation
 
 * Complete integration with production-ready code:
-  - Full replacement of Vaex dependencies throughout the codebase
+  - Addition of a new package able to fully replace the Vaex dependencies. The choice of the package to use will be done by the user using parameters in `radis.json` via the parameter `DATAFRAME_ENGINE`
   - Performance validation showing maintained or improved speed
   
 * Comprehensive documentation:
   - User guide for database operations with the new system
-  - Performance comparison report (before/after metrics)
+  - Performance comparison report (before/after metrics), see vaex_vs_pandas_performance.py
 
 * Identify and document additional I/O bottlenecks discovered during implementation
 
