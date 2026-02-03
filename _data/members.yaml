@@ -332,7 +332,7 @@ lincc-frameworks:
 
 reltrans:
   name: Reltrans
-  logo: NA 
+  logo: reltrans_logo.png 
   url: https://reltrans.github.io/reltrans_website/Home.html
   repositories:
     github: reltrans
