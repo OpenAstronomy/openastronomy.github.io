@@ -19,6 +19,7 @@ issues:
 # GitHub or GitLab handles
 mentors:
  - samaloney
+ - hayesla
 # The programme under this project wish to run. At the moment only GSOC is available
 initiatives:
  - GSOC
@@ -33,7 +34,7 @@ collaborating_projects:
  - sunpy
 ---
 
-# Improving `radiospectra` functionality and interoperability
+# Improving radiospectra'sfunctionality and interoperability
 
 ## Description
 
