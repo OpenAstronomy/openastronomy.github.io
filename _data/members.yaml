@@ -336,7 +336,7 @@ reltrans:
   url: https://reltrans.github.io/reltrans_website/Home.html
   repositories:
     github: reltrans
-      chat:
+  chat:
     slack: https://join.slack.com/t/reltrans-workspace/shared_invite/zt-3p234fciq-lD12LDPTCCPf0DTT1ZocmQ
   description: >-
    Reltrans (Relativistic transfer functions) is a publicly available, semi-analytical model for X-ray reverberation mapping of accreting black holes in both AGN and X-ray binaries. It can be used to compute both time-averaged spectra and energy-dependent, Fourier domain cross spectra
