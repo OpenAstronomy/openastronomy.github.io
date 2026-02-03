@@ -330,6 +330,17 @@ lincc-frameworks:
     builds open-source tools scalable data analysis in astronomy, aimed at 
     enabling scientific discovery with large datasets.
 
+reltrans:
+  name: Reltrans
+  logo: NA 
+  url: https://reltrans.github.io/reltrans_website/Home.html
+  repositories:
+    github: reltrans
+      chat:
+    slack: https://join.slack.com/t/reltrans-workspace/shared_invite/zt-3p234fciq-lD12LDPTCCPf0DTT1ZocmQ
+  description: >-
+   Reltrans (Relativistic transfer functions) is a publicly available, semi-analytical model for X-ray reverberation mapping of accreting black holes in both AGN and X-ray binaries. It can be used to compute both time-averaged spectra and energy-dependent, Fourier domain cross spectra
+
 # Are you a new org? copy the fragment below above this line and fill it up
 # with your organisation details. Don't forget to add your logo to the img/members
 # directory.
