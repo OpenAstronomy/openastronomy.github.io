@@ -32,7 +32,7 @@ collaborating_projects:
 ---
 ## Profiling and Performance Optimization of Reltrans
 
-### Description
+#### Description
 
 Reltrans is a publicly available, semi-analytical model for X-ray reverberation mapping
 of accreting black holes in both Active Galactic Nuclei (AGN) and X-ray binaries.
@@ -53,19 +53,19 @@ The outcome will be faster model evaluations, improved scalability,
 and a more sustainable codebase for future development.
 
 
-### Project Milestones
+#### Project Milestones
 
-#### Coding starts
+##### Coding starts
 
 * Familiarization with the code
 * Setup of profiling tools and baseline performance measurements
 
-#### 1st evaluation
+##### 1st evaluation
 
 * Identification of main performance bottlenecks
 * Initial optimization and benchmarking of the most critical portion of the code
 
-#### Final evaluation
+##### Final evaluation
 
 * Implementation of further targeted optimizations
 * Documentation of profiling methods and optimization results

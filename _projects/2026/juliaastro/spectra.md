@@ -27,9 +27,9 @@ collaborating_projects:
  - juliaAstro
 ---
 
-# Spectra.jl across the electromagnetic spectrum
+## Spectra.jl across the electromagnetic spectrum
 
-## Description
+#### Description
 
 When we observe a star, we can filter particular colours to learn about the
 star at different wavelengths of the electromagnetic spectrum. We can also
@@ -61,9 +61,9 @@ metadata, and for performing basic manipulations and first-look analyses.
 For some further discussion, see:
 - https://github.com/JuliaAstro/Spectra.jl/pull/24
 
-## Project Milestones
+#### Project Milestones
 
-### Coding starts
+##### Coding starts
 
 * Learn about the different spectral data types and what makes, e.g. radio or
   X-ray, spectra unusual.
@@ -78,7 +78,7 @@ For some further discussion, see:
   [OGIP](https://heasarc.gsfc.nasa.gov/docs/heasarc/ofwg/docs/spectra/ogip_92_007.pdf)
   parser in SpectralFitting.jl.
 
-### 1st evaluation
+##### 1st evaluation
 
 * To have moved and integrated the OGIP parser from SpectralFitting.jl to
   Spectra.jl. This should be a relatively easy and informative way to start, as
@@ -88,7 +88,7 @@ For some further discussion, see:
   choice. In choosing which to implement, you can pick the difficulty that you
   feel is appropriate.
 
-### Final evaluation
+##### Final evaluation
 
 * A revamped Spectra.jl; that is:
 * To have implemented data loading for a significant portion of our library of
