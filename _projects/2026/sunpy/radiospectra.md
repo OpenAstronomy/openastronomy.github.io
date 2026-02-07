@@ -1,7 +1,7 @@
 ---
 name: Improving radiospectra’s Functionality and Interoperability
 # Add a short one line description of your project
-desc: Improving radiospectra’s interoperability by redesining the spectral data container and adding commonly requested usability features 
+desc: Improving radiospectra’s interoperability by redesining the spectral data container and adding commonly requested usability features
 # Student requirements:
 requirements:
  - python
@@ -34,9 +34,9 @@ collaborating_projects:
  - sunpy
 ---
 
-# Improving radiospectra's functionality and interoperability
+## Improving radiospectra's functionality and interoperability
 
-## Description
+#### Description
 
 Solar radio spectrograms are a fundamental data product for studying energetic and transient processes in the solar atmosphere. The `sunpy/radiospectra` package provides foundational support for working with such data, but its current capabilities are limited and not well aligned with modern SunPy and scientific Python data models.
 
@@ -44,7 +44,7 @@ This project aims to **significantly improve radiospectra’s functionality and 
 
 The result will be a modern, extensible, and user-friendly foundation for radio spectral analysis within the SunPy ecosystem.
 
-### Expected Outcomes
+##### Expected Outcomes
 
 By the end of the project the contributor will deliver:
 - A redesigned, coordinate-aware Spectra object with a clear external API that:
@@ -61,16 +61,16 @@ By the end of the project the contributor will deliver:
   - Improved plotting of gappy spectral data
  - Updated documentation and test coverage to support new functionality
 
-## Project Milestones
+#### Project Milestones
 
-### Coding starts
+##### Coding starts
 
 - Get familiar with the SunPy organisation and the radiospectra codebase
 - Review existing radiospectra functionality and open issues
 - Discuss and refine design choices for the Spectra data model with mentors
 - Survey existing approaches (NDCube, xarray, Astropy WCS) and agree on an implementation plan
 
-### 1st evaluation
+##### 1st evaluation
 
 - Implement the initial version of a coordinate-aware Spectra object
   - Provide a WCS-like interface mapping physical coordinates (time, frequency) to array indices
@@ -81,7 +81,7 @@ By the end of the project the contributor will deliver:
   - Define a public interface for user-supplied background subtraction functions
 - Begin improving visualisation support for irregular or gapped data
 
-### Final evaluation
+##### Final evaluation
 
 - Implement operations (e.g., scaling, reductions, rebinning) on Spectra
 - Complete the background subtraction framework with additional built-in methods

@@ -35,7 +35,7 @@ collaborating_projects:
 ---
 ## Interactive Tutorials and Automated Testing for the Reltrans Code
 
-### Description
+#### Description
 
 Reltrans is a publicly available, semi-analytical model for X-ray reverberation mapping
 of accreting black holes in both Active Galactic Nuclei (AGN) and X-ray binaries.
@@ -66,9 +66,9 @@ while also benefiting developers by enabling confident refactoring and extension
 In the long term, these improvements will enhance the sustainability of
 Reltrans as a community-driven scientific software package.
 
-### Project Milestones
+#### Project Milestones
 
-#### Coding starts
+##### Coding starts
 
 * Familiarization with the Reltrans codebase, including the Fortran core and existing Python wrappers
 * Review of current documentation and identification of key user workflows
@@ -76,7 +76,7 @@ Reltrans as a community-driven scientific software package.
 * Setup of the testing framework and definition of testing standards and conventions
 
 
-#### 1st evaluation
+##### 1st evaluation
 
 * Delivery of initial Python notebook tutorials covering:
   - Installation and environment setup
@@ -86,7 +86,7 @@ Reltrans as a community-driven scientific software package.
 * Initial integration of tests into the existing development workflow
 
 
-#### Final evaluation
+##### Final evaluation
 
 * Completion of the full tutorial series, including advanced usage examples and best practices
 * Expanded unit test coverage, including edge cases and regression tests

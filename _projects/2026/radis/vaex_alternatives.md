@@ -34,6 +34,8 @@ collaborating_projects:
  - radis
 ---
 
+## Integrate a modern lazy-loading alternative for large-scale spectroscopic database processing
+
 #### Description
 
 The RADIS code was developed for the characterization of plasmas, flames, and atmospheres.
@@ -62,7 +64,7 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
 
 * Generate comprehensive benchmark report covering:
   - Memory usage patterns (peak memory, memory mapping efficiency)
-  - Lazy evaluation capabilities 
+  - Lazy evaluation capabilities
   - Integration complexity with existing RADIS codebase
 
 * Select the optimal alternative based on benchmarking results and present findings to mentors
@@ -73,7 +75,7 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
   - Refactor database loading functions to use the new library
   - Ensure backward compatibility with existing HDF5 files
   - Implement lazy loading for HITEMP CO2 and H2O databases
-  
+
 * Develop comprehensive unit tests and integration tests
 
 * Profile and optimize memory usage for 50GB+ files to ensure they remain under memory limits
@@ -85,7 +87,7 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
 * Complete integration with production-ready code:
   - Addition of a new package able to fully replace the Vaex dependencies. The choice of the package to use will be done by the user using parameters in `radis.json` via the parameter `DATAFRAME_ENGINE`
   - Performance validation showing maintained or improved speed
-  
+
 * Comprehensive documentation:
   - User guide for database operations with the new system
   - Performance comparison report (before/after metrics), see vaex_vs_pandas_performance.py
@@ -103,5 +105,3 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
 * Document architecture and developer guide for future maintainers
 
 * Review pull requests from other RADIS contributors
-
-
