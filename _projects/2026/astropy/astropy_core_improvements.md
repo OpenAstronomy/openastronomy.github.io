@@ -19,6 +19,7 @@ issues:
 # GitHub or GitLab handles
 mentors:
  - neutrinoceros
+ - astrofrog
 # The programme under this project wish to run. At the moment only GSOC is available
 initiatives:
  - GSOC
@@ -71,12 +72,15 @@ interests and time allocated.
 
 ### Coding starts
 
-* TBD
+* set up dev env and tooling
+* define a subset of astropy's extension modules to test, and testing strategy(ies)
 
 ### 1st evaluation
 
-* TBD
+* Write a test suite for a single subpackage's extensions
+* Report on any difficulties met along the way, and identify (general ?) solutions
 
 ### Final evaluation
 
-* TBD
+* Complete test coverage for as many subpackages as possible
+* Report on what (if anything) is still missing and identify a path forward
