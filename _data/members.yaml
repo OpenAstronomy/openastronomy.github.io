@@ -325,7 +325,7 @@ lincc-frameworks:
   repositories:
     github: lincc-frameworks
   chat:
-    slack: https://join.slack.com/share/enQtMTA1Mjg1NzA1Mzk3OTItNjNlODhkZmQxYTc3NGU2YmM2ZDc4YzdlYzJjNzNhMzA1Y2I2MmY4NzdlOWI0ZjJmZTg5Mjg1ZmM0MGIxYzFmMA
+    slack: https://join.slack.com/t/gsoc26arrowforastro/shared_invite/zt-3qpirqhkg-qTHUg4R0iMewhIprewR1eg
   description: >-
     builds open-source tools scalable data analysis in astronomy, aimed at 
     enabling scientific discovery with large datasets.
