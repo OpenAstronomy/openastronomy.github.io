@@ -20,6 +20,7 @@ issues:
 mentors:
  - neutrinoceros
  - astrofrog
+ - nstarkman
 # The programme under this project wish to run. At the moment only GSOC is available
 initiatives:
  - GSOC
