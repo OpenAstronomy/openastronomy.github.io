@@ -49,7 +49,7 @@ All student blogs are collected on the [OpenAstronomy Universe] site.
 
 Whether you have been participating for years or this is your first time read our guide for [sub-org admins](./suborg_guidelines.html).
 
-[OpenAstronomy Contributor Guide]: ./student_guidelines.html
+[OpenAstronomy Contributor Guide]: ./contributor_guidelines.html
 [Python Software Foundation]: http://python-gsoc.org/
 [GSoC Contributor Guide]: https://google.github.io/gsocguides/student/
 [OpenAstronomy Universe]: http://openastronomy.org/Universe_OA/

@@ -176,7 +176,7 @@ If they are not followed the administrators will fail the contributors.
 
 
 [OA repository]: https://github.com/OpenAstronomy/openastronomy.github.io
-[contributor guidelines]: ./student_guidelines.html
+[contributor guidelines]: ./contributor_guidelines.html
 [Google's mentor guide]: https://google.github.io/gsocguides/mentor/
 [GSOC]: https://summerofcode.withgoogle.com/
 [members PR]: https://github.com/OpenAstronomy/openastronomy.github.io/blob/master/_data/members.yaml
