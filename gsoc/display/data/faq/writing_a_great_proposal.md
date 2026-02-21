@@ -15,6 +15,4 @@ course, your mentors will help you too.
 Don't forget that a submission of new code is not only code, but its documentation and
 tests!
 
-Use the wiki of each sub-organisation and the "draft" feature on the GSoC
-system early on, so you can get comments and feedback from the mentors and the rest of
-the community.
+Use the [gsoc-proposals repository](https://github.com/OpenAstronomy/gsoc-proposals/) to "draft" your proposal early on, here you can get comments and feedback from the mentors and the rest of the community. Then remember to upload it to the [GSoC platform](https://summerofcode.withgoogle.com/).
