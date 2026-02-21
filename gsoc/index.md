@@ -16,7 +16,7 @@ OpenAstronomy has been a GSOC mentoring organisation since 2016 and it's applyin
 Contributors applications to OpenAstronomy projects follows the same rules as the [Python Software Foundation] and the [GSoC Contributor Guide].
 We have [also our own guide to a good application for OpenAstronomy][OpenAstronomy Contributor Guide].
 
-All student blogs are collected on the [OpenAstronomy Universe] site.
+All contributors blogs are collected on the [OpenAstronomy Universe] site.
 
 ## Quick Links
 
