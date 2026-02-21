@@ -14,10 +14,10 @@ recruit new developers and mentors for summer mentorships. You get paid to write
 software at home (or wherever you like), with guidance from expert mentors
 distributed around the globe.
 
-To apply to be a GSoC student, you must write an application to [GSoC] for one or
+To apply to be a GSoC contributor, you must write an application to [GSoC] for one or
 more OpenAstronomy project ideas. Each summer, [several projects][oa projects] are offered by
 [OpenAstronomy mentors][oa mentors], with well-defined scope and pre-requisite
-experience. If you are selected by OpenAstronomy, you will be a GSoC student.
+experience. If you are selected by OpenAstronomy, you will be a GSoC contributor.
 
 ### What is OpenAstronomy?
 
@@ -37,7 +37,7 @@ able to give you feedback before officially submitting it.  Check the
 previous years in the GitHub wiki pages of some of the OpenAstronomy
 members.
 
-The complete details on applying are in the [GSoC Student Guide].
+The complete details on applying are in the [GSoC Contributor Guide].
 
 ### Who is eligible to apply to GSoC?
 
@@ -84,7 +84,7 @@ the world are encouraged to apply.
 
 ### Apply!
 
-Now that you know you're a good candidate, check out the [GSoC Student Guide]
+Now that you know you're a good candidate, check out the [GSoC Contributor Guide]
 to learn how to apply.
 
 {% assign year = 2015 %}
@@ -102,7 +102,7 @@ to learn how to apply.
 [astropy]: http://www.astropy.org
 [sunpy]: http://sunpy.org
 [oa members]: /members/
-[application]: https://github.com/OpenAstronomy/GSoC/blob/master/application_students.md
-[GSoC Student Guide]: https://google.github.io/gsocguides/student/
+[application]: https://github.com/OpenAstronomy/gsoc-proposals/blob/main/template.md
+[GSoC Contributor Guide]: https://google.github.io/gsocguides/student/
 [bmorris3]: https://github.com/bmorris3
 [mirca]: https://github.com/mirca

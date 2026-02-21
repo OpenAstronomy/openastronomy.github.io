@@ -13,13 +13,13 @@ the [template file](./_template.md) according to your idea, save it under
 ## What do I need for my project idea?
 
 Everything you need is a title and description of the project idea, a set of requirements
-for potential students (_e.g._, proficiency with `astropy.tables` and `astropy.units`),
+for potential contributors (_e.g._, proficiency with `astropy.tables` and `astropy.units`),
 and a list of potential mentors. In addition, please link any related issues or tickets
 to the project idea, if any. Lastly, make sure to indicate the level of difficulty of
 the project.
 
 In case your project idea already has specific milestones, please add them
-so as to make students aware when they start writing their applications.
+so as to make contributors aware when they start writing their applications.
 If the project milestones are open ended and you would like to hear input from
 other members of the community, that is fine too!
 

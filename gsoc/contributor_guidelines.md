@@ -55,10 +55,9 @@ Don't know how to use [git](http://www.git-scm.com/) or [Mercurial](http://mercu
 Don't worry, there are lots of git [tutorials](http://try.github.com) [online](http://gitimmersion.com/)
 and many [Mercurial](https://www.mercurial-scm.org/wiki/Tutorial) [ones](http://hgbook.red-bean.com/read/)
 [as well](http://mercurial.selenic.com/) that will help you to get quite confident with it in a short time.
-Also both the [Astropy](http://docs.astropy.org/en/stable/index.html#developer-documentation)
+Also both the [Astropy](https://docs.astropy.org/en/stable/index_dev.html)
 and [yt](http://yt-project.org/docs/dev/developing/developing.html)
 developer guides are great reads no matter what project you are thinking of working on.
-
 Have you got stuck? ask on the forum or chat rooms for help and volunteers will support you.
 
 4. **Start to be a developer.**
@@ -73,20 +72,21 @@ ready to start immediately. If you have previously contributed to OpenAstronomy 
 you can point to those pull requests, too.
 
 5. **Plan your application.**
-Think which is your favourite project from the [ideas page](/gsoc/) or think
-of a new one that will help out one of the OpenAstronomy members.
+Think which is your favourite project from the [ideas page](/gsoc/).
 Prepare a plan on how you will tackle that project and the time it will take you to solve it.
 Do not worry much in providing exact dates, but plan it as best as you can
 (if you are planing to have some holidays during the GSoC programme, then you should mention it too).
-Use [our application template][template-application-wiki] to describe how you plan to do the work during the programme.
+Use [our application template][gsoc-proposal-template] to describe how you plan to do the work during the programme.
+Add your draft to the [gsoc-proposals](https://github.com/OpenAstronomy/gsoc-proposals) repository. This will be place where to receive any feedback. Follow the indications mentioned in that repository to submit your proposal.
 Also, don't be afraid to ask your potential mentors for help.
 Don't be shy when describing yourself!
 
 6. **Submit your application.**
-Don't forget to [submit your application](https://summerofcode.withgoogle.com/) before the deadline. Please, include the sub-org name at the start of your proposal title as: `[<sub-org>] <project name>`, where `<suborg>` should be the name of the sub-org in lower case (e.g., `sunpy`, `stingray`, `radis`), or the combination of two if it's the case (e.g., `astropy|sunpy`).
-We are also happy to give comments on your proposal if you like.  Feel free to
-add your application to the sub-org member's wiki following this format: "GSoC-\<YEAR\> Application \<sub-org\> \<Your Name\>:\<Project Name\>"
-and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/wiki).
+Besides adding your proposal to the gsoc-proposals repository, you also need to [submit your application](https://summerofcode.withgoogle.com/) before the deadline. Please, include the sub-org name at the start of your proposal title as: `[<sub-org>] <project name>`, where `<suborg>` should be the name of the sub-org in lower case (e.g., `sunpy`, `stingray`, `radis`), or the combination of two if it's the case (e.g., `astropy|sunpy`).
+Only the proposals present on both, the gsoc-proposals repository and GSoC platform, will be considered.
+
+7. **Respect the AI policies.**
+Much of the [Open Source ecosystem is suffering due to AI Slop][ai-slop-summary]. Don't be one adding more pain to this, doing so will result on being banned of the whole organisation. This is not to say that you can't use AI tools to support your learning, you can, but keeping in mind the policies and rules that each suborg may have. As a starting point, if you don't find an AI contribution policy or rules related the use of LLMs, assume they are forbidden.
 
 [SymPy Guidelines]: https://github.com/sympy/sympy/wiki/GSoC-2017-Application-Template
 [Python Software Foundation]: http://python-gsoc.org/
@@ -95,5 +95,6 @@ and link such page in [the wiki](https://github.com/OpenAstronomy/openastronomy/
 [latest pictures of the million degree Sun]: http://docs.sunpy.org/en/stable/generated/gallery/plotting/aia_example.html
 [volume render a simulation of the galaxy]: http://yt-project.org/docs/dev/quickstart/volume_rendering.html
 [plan some astronomical observations]: http://www.astropy.org/astropy-tutorials/Coordinates.html
-[template-application-wiki]: https://github.com/OpenAstronomy/openastronomy.github.io/wiki/Contributor-Application-template
+[gsoc-proposal-template]: https://github.com/OpenAstronomy/gsoc-proposals/blob/main/template.md
 [plan some astronomical observations]: https://learn.astropy.org/tutorials/1-Coordinates-Intro.html
+[ai-slop-summary]: https://redmonk.com/kholterhoff/2026/02/03/ai-slopageddon-and-the-oss-maintainers/
