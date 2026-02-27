@@ -102,12 +102,12 @@
  app.filter('format_desc', function () {
   return function (value) {
    if (!value) return '';
-   var lastspace = value.indexOf('.');
+   var lastspace = value.search(/\.\s/);
    if (lastspace != -1) {
     if (value.charAt(lastspace-1) == ',') {
     	lastspace = lastspace - 1;
     }
-    value = value.substr(0, lastspace);
+    value = value.substr(0, lastspace + 1);
    }
    return value;
   };
