@@ -95,6 +95,10 @@ help if the mentors are unavailable).
 Oh, and yes! you as an admin can also be a mentor. And don't forget to tell
 them to read [Google's mentor guide].
 
+All mentors should subscribe to the
+[OpenAstronomy GSoC mentors mailing list](mailto:openastronomy-gsoc-mentors@googlegroups.com)
+to participate in cross-sub-org discussions and stay informed about programme updates.
+
 ## GSoC starts
 
 If we are accepted... what happens next?

@@ -24,6 +24,17 @@ All contributors blogs are collected on the [OpenAstronomy Universe] site.
 * [GSoC Contributor Guide]
 * [Now You Know It!: Getting selected in Outreachy by Kriti Singh]
 
+## GSoC Mailing Lists
+
+OpenAstronomy uses dedicated mailing lists for GSoC communications:
+
+- **[Mentors Discussion List](mailto:openastronomy-gsoc-mentors@googlegroups.com)** — For mentors to discuss
+  project coordination, evaluations, and programme logistics. All mentors are encouraged to subscribe.
+- **[Contributors List](mailto:openastronomy-gsoc-contributors@googlegroups.com)** — For all GSoC contributor
+  applicants to ask questions, share updates, and engage with the community.
+- **[Accepted Contributors List](mailto:openastronomy-gsoc-accepted@googlegroups.com)** — For accepted
+  contributors to coordinate with mentors and admins during the programme.
+
 ## Current Project ideas offered by mentors {#current-projects}
 
 * [2026](./gsoc2026/)
