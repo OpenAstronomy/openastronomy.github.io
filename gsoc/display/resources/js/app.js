@@ -141,18 +141,21 @@
                     } else if ('gitter' in data.chat) {
                         return data.chat['gitter'];
                     }
-                }
+                };
                 if ('mailinglist' in data) {
                     if ('devs' in data.mailinglist) {
-                        return data.mailinglist['devs'];
+                        return data.mailintlist['devs'];
                     } else if ('users' in data.mailinglist) {
                         return data.mailinglist['users'];
-                    }
-                }
-            }
+                    };
+                };
+            };
             return 'https://app.element.io/#/room/#openastronomy:matrix.org';
         };
     });
+
+
+
 
     app.directive('mentors', ['$http', function($http) {
         return {
