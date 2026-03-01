@@ -125,9 +125,7 @@
         app.filter('format_project', function () {
             return function (value) {
                 if (!value) return '';
-                var all = {{ site.data.members | jsonify
-            }
-        };
+                var all = {{ site.data.members | jsonify }};
         if (value in all) {
             var data = all[value];
             if ('chat' in data) {
@@ -138,21 +136,18 @@
                 } else if ('gitter' in data.chat) {
                     return data.chat['gitter'];
                 }
-            };
+            }
             if ('mailinglist' in data) {
                 if ('devs' in data.mailinglist) {
                     return data.mailinglist['devs'];
                 } else if ('users' in data.mailinglist) {
                     return data.mailinglist['users'];
-                };
-            };
-        };
+                }
+            }
+        }
         return 'https://app.element.io/#/room/#openastronomy:matrix.org';
     };
- });
-
-
-
+    });
 
 app.directive('mentors', ['$http', function ($http) {
     return {
