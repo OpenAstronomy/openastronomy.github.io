@@ -8,7 +8,7 @@ requirements:
  - Familiarity with benchmarking and performance profiling
  - Understanding of memory-efficient data processing techniques
  - Experience with HDF5 or Parquet file formats is a plus
-difficulty: medium
+difficulty: medium to high
 mentors:
 # First person in contact; mentors may change before project starts.
 # GitHub handles
@@ -69,12 +69,14 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
 
 * Select the optimal alternative based on benchmarking results and present findings to mentors
 
-##### 2nd Evaluation
-
-* Implement the selected alternative in RADIS codebase:
+* Begin implementation of the selected alternative in RADIS codebase:
   - Refactor database loading functions to use the new library
   - Ensure backward compatibility with existing HDF5 files
   - Implement lazy loading for HITEMP CO2 and H2O databases
+
+##### 2nd Evaluation
+
+* Implement configurable size limits and an LRU cache system for HITEMP CO2 caches using parameters in `radis.json` to control cache persistence
 
 * Develop comprehensive unit tests and integration tests
 
@@ -82,15 +84,15 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
 
 * Document migration strategy and API changes
 
-##### Final evaluation
+##### Final Evaluation
 
 * Complete integration with production-ready code:
-  - Addition of a new package able to fully replace the Vaex dependencies. The choice of the package to use will be done by the user using parameters in `radis.json` via the parameter `DATAFRAME_ENGINE`
+  - Add new package to fully replace Vaex dependencies with user-selectable backend via `DATAFRAME_ENGINE` parameter in `radis.json`
   - Performance validation showing maintained or improved speed
 
 * Comprehensive documentation:
   - User guide for database operations with the new system
-  - Performance comparison report (before/after metrics), see vaex_vs_pandas_performance.py
+  - Performance comparison report (before/after metrics), see `vaex_vs_pandas_performance.py`
 
 * Identify and document additional I/O bottlenecks discovered during implementation
 
