@@ -1,0 +1,96 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "../../layouts/PageLayout.astro";
+import { localizeHref } from "../../lib/relative-paths.ts";
+import { resolveProjectDisplay } from "../../lib/member-logos.ts";
+import { getBlogUrl } from "../../lib/feeds.ts";
+import { loadUniverseConfig } from "../../lib/universe-config.ts";
+import "../../styles/universe.css";
+
+const pagePath = Astro.url.pathname;
+const { seasons, availableYears } = loadUniverseConfig();
+const archivedYears = availableYears.slice(1);
+
+const projectArchiveHref = (year: number) =>
+  year >= 2017 ? `/gsoc/${year}/` : `/gsoc/${year}/ideas/`;
+---
+
+<PageLayout
+  title="Contributor Blog Archive"
+  description="Previous OpenAstronomy contributor blog seasons and project archives."
+>
+  <div class="universe-heading">
+    <p>
+      Previous contributor blog seasons. Project archive links point to the
+      matching Google Summer of Code pages in this site.
+    </p>
+    <p>
+      <a href={localizeHref(pagePath, "/universe-oa/")}>
+        Current contributor blogs
+      </a>
+    </p>
+  </div>
+
+  <div class="universe-archive-list">
+    {
+      archivedYears.map((year) => {
+        const season = seasons[year];
+        return (
+          <section class="universe-archive-season">
+            <h2>GSoC {year}</h2>
+            <p class="universe-archive-actions">
+              <a href={localizeHref(pagePath, projectArchiveHref(year))}>
+                Project archive
+              </a>
+            </p>
+            <div class="universe-table-wrap">
+              <table class="universe-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Contributor</th>
+                    <th scope="col">Project</th>
+                    <th scope="col">Feed</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {season.contributors.map((contributor) => {
+                    const project = resolveProjectDisplay(contributor.project);
+                    const blogUrl = getBlogUrl(contributor.feedUrl, []);
+                    return (
+                      <tr>
+                        <th scope="row">
+                          {blogUrl ? (
+                            <a href={blogUrl}>{contributor.name}</a>
+                          ) : (
+                            <span>{contributor.name}</span>
+                          )}
+                        </th>
+                        <td>
+                          <span class="universe-project">
+                            {project.logo && (
+                              <Image
+                                src={project.logo}
+                                alt=""
+                                width={24}
+                                height={24}
+                                loading="lazy"
+                              />
+                            )}
+                            {project.name}
+                          </span>
+                        </td>
+                        <td>
+                          <a href={contributor.feedUrl}>RSS feed</a>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        );
+      })
+    }
+  </div>
+</PageLayout>

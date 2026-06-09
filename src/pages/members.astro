@@ -1,0 +1,23 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import MemberCard from "../components/MemberCard.astro";
+import { members } from "../lib/members.ts";
+
+const sortedMembers = Object.entries(members).sort(([a], [b]) =>
+  a.localeCompare(b),
+);
+---
+
+<PageLayout title="Members">
+  <h2>Who is part of OpenAstronomy?</h2>
+
+  <div class="members-grid">
+    {
+      sortedMembers.map(([key, details], index) => (
+        <div class="members-grid-item">
+          <MemberCard memberKey={key} details={details} eager={index < 4} />
+        </div>
+      ))
+    }
+  </div>
+</PageLayout>

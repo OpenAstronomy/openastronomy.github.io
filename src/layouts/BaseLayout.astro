@@ -1,0 +1,36 @@
+---
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+  pageType?: "website" | "article";
+  publishedAt?: string | Date;
+};
+
+const { title, description, pageType, publishedAt } = Astro.props as Props;
+---
+
+<!doctype html>
+<html lang="en">
+  <Head
+    pageTitle={title}
+    description={description}
+    pageType={pageType}
+    publishedAt={publishedAt}
+  />
+  <body>
+    <Header />
+    <div class="fixed-wrap">
+      <div class="page-content">
+        <div class="container">
+          <slot />
+        </div>
+      </div>
+    </div>
+    <Footer />
+  </body>
+</html>

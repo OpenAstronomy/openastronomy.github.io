@@ -1,0 +1,50 @@
+{
+  "name": "openastronomy-site",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint \"src/**/*.{astro,js,ts}\" \"scripts/**/*.{js,mjs}\"",
+    "lint:fix": "eslint \"src/**/*.{astro,js,ts}\" \"scripts/**/*.{js,mjs}\" --fix",
+    "lint:md": "markdownlint-cli2",
+    "lint:md:fix": "markdownlint-cli2 --fix",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "astro:check": "astro check",
+    "check": "npm run lint && npm run astro:check",
+    "linkcheck": "node scripts/linkcheck.mjs"
+  },
+  "dependencies": {
+    "astro": "^6.4.5",
+    "fast-xml-parser": "^5.8.0",
+    "yaml": "^2.9.0"
+  },
+  "overrides": {
+    "yaml-language-server": {
+      "yaml": "$yaml"
+    }
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "@eslint/js": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.61.0",
+    "@typescript-eslint/parser": "^8.61.0",
+    "astro-eslint-parser": "^1.4.0",
+    "eslint": "^10.4.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-astro": "^1.7.0",
+    "globals": "^17.6.0",
+    "markdownlint-cli2": "^0.22.1",
+    "prettier": "^3.8.4",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.8"
+  }
+}

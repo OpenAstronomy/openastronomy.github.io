@@ -1,0 +1,103 @@
+---
+/*
+ * Used inside <dialog> by ProjectDetail and as a standalone page section by
+ * [...slug].astro; the slot receives the rendered markdown body.
+ */
+import type { ProjectMeta } from "../../lib/gsoc.ts";
+import { getProjectDetailRows } from "../../lib/gsoc.ts";
+import "../../styles/gsoc.css";
+
+type Props = { project: ProjectMeta; showOpenLink?: boolean };
+const { project, showOpenLink = true } = Astro.props as Props;
+const rows = getProjectDetailRows(project);
+---
+
+{
+  showOpenLink ? (
+    <p class="gsoc-project-detail-link">
+      <a href={project.href}>Open project page</a>
+    </p>
+  ) : null
+}
+<h3>{project.name}</h3>
+{project.desc ? <p>{project.desc}</p> : null}
+
+{
+  project.requirements.length > 0 ? (
+    <div>
+      <strong>Requirements:</strong>
+      <ul>
+        {project.requirements.map((req) => (
+          <li>{req}</li>
+        ))}
+      </ul>
+    </div>
+  ) : null
+}
+
+{
+  rows.map((row) => (
+    <div>
+      <strong>{row.label}:</strong> {row.values.join(", ")}
+    </div>
+  ))
+}
+
+{
+  project.mentors.length > 0 ? (
+    <div>
+      <strong>Mentors:</strong>{" "}
+      {project.mentors.map((mentor, index) => (
+        <>
+          {index > 0 ? ", " : ""}
+          <a
+            href={`https://github.com/${mentor}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @{mentor}
+          </a>
+        </>
+      ))}
+    </div>
+  ) : null
+}
+
+{
+  project.issues.length > 0 ? (
+    <div>
+      <strong>Related issues:</strong>
+      <ul>
+        {project.issues.map((issue) => (
+          <li>
+            <a href={issue} target="_blank" rel="noopener noreferrer">
+              {issue}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ) : null
+}
+
+{
+  project.collaborators.length > 0 ? (
+    <div>
+      <strong>Collaborating projects:</strong>{" "}
+      {project.collaborators.map((collaborator, index) => (
+        <>
+          {index > 0 ? ", " : ""}
+          {collaborator.href ? (
+            <a href={collaborator.href}>{collaborator.label}</a>
+          ) : (
+            collaborator.label
+          )}
+        </>
+      ))}
+    </div>
+  ) : null
+}
+
+<div class="gsoc-project-body">
+  <slot />
+</div>

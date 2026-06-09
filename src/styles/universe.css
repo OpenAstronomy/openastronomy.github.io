@@ -1,0 +1,133 @@
+.universe-heading {
+  max-width: 760px;
+}
+
+.universe-updated,
+.universe-date {
+  color: #5c5c5c;
+  font-size: 0.9rem;
+}
+
+.universe-archive-list {
+  display: grid;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.universe-archive-season h2 {
+  margin-top: 0;
+}
+
+.universe-archive-actions {
+  margin: 0 0 12px;
+}
+
+.universe-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0 12px;
+}
+
+.universe-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.universe-table th,
+.universe-table td {
+  border-bottom: 1px solid #dddddd;
+  padding: 12px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.universe-table thead th {
+  border-top: 1px solid #dddddd;
+  background: #f6f6f6;
+}
+
+.universe-table tbody th {
+  font-weight: 600;
+}
+
+.universe-feed,
+.universe-date {
+  display: block;
+  margin-top: 4px;
+}
+
+.universe-feed {
+  font-size: 0.82rem;
+}
+
+.universe-feed-ok {
+  color: #1f6f43;
+}
+
+.universe-feed-empty {
+  color: #7a5a00;
+}
+
+.universe-feed-unavailable {
+  color: #9f2424;
+}
+
+.universe-feed-error {
+  color: #9f2424;
+  font-weight: 600;
+}
+
+.universe-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.universe-project img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.universe-windows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.universe-window {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.universe-window-complete {
+  background: #dff3e7;
+  border-color: #9fceb2;
+  color: #155d35;
+}
+
+.universe-window-missing {
+  background: #f9dddd;
+  border-color: #e4a0a0;
+  color: #8d1e1e;
+}
+
+.universe-window-optional {
+  background: #e7eef8;
+  border-color: #b5c8e4;
+  color: #31537a;
+}
+
+.universe-window-pending {
+  background: #eeeeee;
+  border-color: #c9c9c9;
+  color: #555555;
+}

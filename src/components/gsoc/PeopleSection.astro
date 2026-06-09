@@ -1,0 +1,43 @@
+---
+type Props = {
+  id: string;
+  heading: string;
+  intro: string;
+  handles: string[];
+};
+
+const { id, heading, intro, handles } = Astro.props;
+---
+
+<section {id}>
+  <h2>
+    <a class="gsoc-section-link" href={`#${id}`}>{heading}</a>
+  </h2>
+  <p>{intro}</p>
+  <div class="gsoc-people-grid">
+    {
+      handles.map((handle) => (
+        <div class="text-center">
+          <img
+            class="rounded-circle"
+            src={`https://avatars.githubusercontent.com/${handle}`}
+            alt={`@${handle} avatar`}
+            height="80"
+            width="80"
+            loading="lazy"
+            decoding="async"
+          />
+          <div>
+            <a
+              href={`https://github.com/${handle}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              @{handle}
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

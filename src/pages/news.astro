@@ -1,0 +1,39 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import { getPostUrl, getPostDateParts } from "../lib/posts.ts";
+import { localizeHref } from "../lib/relative-paths.ts";
+
+type Post = CollectionEntry<"posts">;
+const posts = (await getCollection("posts")).sort(
+  (a: Post, b: Post) =>
+    new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+);
+const pagePath = Astro.url.pathname;
+const dateFormatter = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
+---
+
+<PageLayout title="News and Events">
+  <div>
+    {
+      posts.map((post: Post) => {
+        const { date } = getPostDateParts(post);
+        const postHref = localizeHref(pagePath, getPostUrl(post));
+        return (
+          <article>
+            <h2>
+              <a href={postHref}>{post.data.title}</a>
+            </h2>
+            <p class="post-meta">{dateFormatter.format(date)}</p>
+            <p>{post.data.summary ?? ""}</p>
+          </article>
+        );
+      })
+    }
+  </div>
+</PageLayout>

@@ -1,0 +1,4 @@
+{
+  "globs": ["**/*.{md,mdx}"],
+  "ignores": ["**/node_modules/**", "**/html/**", "**/.history/**"],
+}

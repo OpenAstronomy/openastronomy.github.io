@@ -1,0 +1,78 @@
+---
+import { Image } from "astro:assets";
+import site from "../data/site.json";
+import icons from "../data/icons.json";
+import { fromSiteRoot, localizeHref } from "../lib/relative-paths.ts";
+import logoWhite from "../assets/logoOA_white.png";
+
+const pagePath = Astro.url.pathname;
+const navLinks = [
+  ...site.page_links.map((page) => ({
+    title: page.title,
+    href: localizeHref(pagePath, page.href),
+  })),
+  ...Object.entries(site.nav_links).map(([title, href]) => ({
+    title,
+    href: localizeHref(pagePath, href),
+  })),
+];
+---
+
+<header class="site-header">
+  <div class="container">
+    <a class="site-title" href={fromSiteRoot(pagePath, "/")}>
+      <Image
+        class="logo"
+        src={logoWhite}
+        alt={site.title}
+        width={1308}
+        height={629}
+        loading="eager"
+      />
+    </a>
+
+    <nav class="site-nav" data-site-nav>
+      <button
+        type="button"
+        class="menu-icon"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="site-nav-links"
+      >
+        <svg
+          viewBox={icons.hamburger.viewBox}
+          width="18"
+          height="15"
+          aria-hidden="true"
+          focusable="false"
+        >
+          {icons.hamburger.paths.map((d) => <path fill="#ffffff" d={d} />)}
+        </svg>
+      </button>
+      <div class="trigger" id="site-nav-links">
+        {navLinks.map((link) => <a href={link.href}>{link.title}</a>)}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const nav = document.querySelector<HTMLElement>("[data-site-nav]");
+  const toggle = nav?.querySelector<HTMLButtonElement>(".menu-icon");
+  if (nav && toggle) {
+    const close = () => {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", (event) => {
+      if (event.target instanceof Node && !nav.contains(event.target)) close();
+    });
+    nav.addEventListener("click", (event) => {
+      if (event.target instanceof Element && event.target.closest("a")) close();
+    });
+  }
+</script>

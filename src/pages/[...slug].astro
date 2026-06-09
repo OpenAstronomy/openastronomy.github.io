@@ -1,0 +1,56 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
+import ProjectsLayout from "../layouts/ProjectsLayout.astro";
+import ProjectBody from "../components/gsoc/ProjectBody.astro";
+import { members } from "../lib/members.ts";
+import { buildProjectMeta, parseProjectId } from "../lib/gsoc.ts";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages
+    .filter(
+      (page: CollectionEntry<"pages">) => page.id !== "gsoc/_project_template",
+    )
+    .map((page: CollectionEntry<"pages">) => ({
+      params: { slug: page.id === "index" ? undefined : page.id },
+      props: { page },
+    }));
+}
+
+type Props = { page: CollectionEntry<"pages"> };
+const { page } = Astro.props as Props;
+const { Content } = await render(page);
+
+const { title, name, description } = page.data;
+const pageTitle = title ?? name ?? undefined;
+const seasonMatch = page.id.match(/^gsoc\/(\d{4})$/);
+const projectInfo = parseProjectId(page.id);
+const projectMeta = projectInfo
+  ? buildProjectMeta(page.data, projectInfo, members, Astro.url.pathname)
+  : null;
+---
+
+{
+  seasonMatch ? (
+    <ProjectsLayout seasonKey={seasonMatch[1]} title={pageTitle} />
+  ) : projectMeta ? (
+    <BaseLayout
+      title={projectMeta.name}
+      description={projectMeta.desc || description}
+    >
+      <ProjectBody project={projectMeta} showOpenLink={false}>
+        <Content />
+      </ProjectBody>
+    </BaseLayout>
+  ) : page.data.layout === "page" ? (
+    <PageLayout title={pageTitle} description={description}>
+      <Content />
+    </PageLayout>
+  ) : (
+    <BaseLayout title={pageTitle} description={description}>
+      <Content />
+    </BaseLayout>
+  )
+}

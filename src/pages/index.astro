@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import logo from "../assets/logoOA.png";
+import { fromSiteRoot } from "../lib/relative-paths.ts";
+
+const membersHref = fromSiteRoot(Astro.url.pathname, "/members/");
+---
+
+<BaseLayout title="OpenAstronomy">
+  <Image
+    class="large-logo"
+    src={logo}
+    alt="Open Astronomy Logo"
+    width={1308}
+    height={629}
+    loading="eager"
+  />
+
+  <p>
+    OpenAstronomy is a collaboration between open source astronomy and
+    astrophysics projects to share resources, ideas, and to improve code.
+  </p>
+
+  <h2>Principles of OpenAstronomy (OA)</h2>
+
+  <p>The core principles of OpenAstronomy (OA) include:</p>
+
+  <ol>
+    <li>
+      Open Source: OA projects are committed to their software being
+      <a href="https://opensource.org/docs/osd">Open Source</a>. This promotes
+      accessibility, reliability, and scientific reproducibility.
+    </li>
+    <li>
+      Open Development: OA projects support the principle of
+      <a href="https://ui.adsabs.harvard.edu/abs/2019BAAS...51g.180T/abstract"
+        >Open Development</a
+      >, a model where the software is both <em>by</em> and <em>for</em> the community.
+      More concretely, these projects try to work in publicly-visible spaces, encouraging
+      discussion and participation from their public user community on both code and
+      project-level decisions.
+    </li>
+    <li>
+      Open Science: OA projects support reproducible science through the use of
+      open and accessible data both through good data management practices and
+      effective open software.
+    </li>
+  </ol>
+
+  <h2>Get involved with OpenAstronomy</h2>
+
+  <p>
+    If you want to get involved with OpenAstronomy or maybe you have a project
+    that would like to join the collaboration, please feel free to get in touch
+    on the
+    <a href="https://community.openastronomy.org">OpenAstronomy discourse</a>.
+    You can freely browse the channels but posting and other interaction
+    requires you to sign up.
+  </p>
+
+  <h2>Contact the OpenAstronomy Members</h2>
+
+  <p>
+    As OA is an umbrella organization, you will need to see our
+    <a href={membersHref}>members page</a> for both information and contact details
+    of all the individual organizations.
+  </p>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+import Icon from "./Icon.astro";
+import site from "../data/site.json";
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="tagline">
+      <strong>{site.title}</strong>: Combining the power of open source
+      astrophysics projects to empower science.
+    </p>
+    {
+      site.social_links.map((link) => (
+        <a
+          href={link.href}
+          aria-label={link.label}
+          rel={link.rel ?? "noopener noreferrer"}
+        >
+          <Icon name={link.icon} fill="#f9f9f9" />
+        </a>
+      ))
+    }
+  </div>
+</footer>

@@ -1,0 +1,60 @@
+---
+/*
+ * `details.description` is rendered with `set:html` because it may contain
+ * inline links/emphasis. Source (`src/data/members.json`) is trusted
+ * repository-controlled content — do NOT pass untrusted input here.
+ */
+import { Image } from "astro:assets";
+import Icon from "./Icon.astro";
+import { buildMemberLinks, type MemberDetails } from "../lib/members.ts";
+import { memberLogoMap } from "../lib/member-logos.ts";
+import { slugify } from "../lib/relative-paths.ts";
+
+type Props = { memberKey: string; details: MemberDetails; eager?: boolean };
+const { memberKey, details, eager = false } = Astro.props as Props;
+
+const links = buildMemberLinks(details);
+const anchorId = slugify(details.name);
+
+const logo = memberLogoMap[details.logo];
+if (!logo) throw new Error(`Missing member logo asset: ${details.logo}`);
+---
+
+<div class="member-card">
+  <a
+    href={details.url}
+    class="member-logo-link"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Image
+      class="member-logo"
+      src={logo}
+      alt={memberKey}
+      loading={eager ? "eager" : "lazy"}
+      fetchpriority={eager ? "high" : "auto"}
+    />
+  </a>
+  <div id={anchorId} class="member-body">
+    <a href={details.url} target="_blank" rel="noopener noreferrer"
+      >{details.name}</a
+    >
+    <span set:html={details.description ?? ""} />
+    <ul class="member-links">
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.iconName === "envelope" ? (
+                <span class="icon-envelope" aria-hidden="true" />
+              ) : (
+                <Icon name={link.iconName} fill="#333333" />
+              )}
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>

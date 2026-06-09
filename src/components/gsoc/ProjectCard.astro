@@ -1,0 +1,45 @@
+---
+import { getProjectCardRows, type GsocProject } from "../../lib/gsoc.ts";
+
+const { project } = Astro.props as { project: GsocProject };
+const rows = getProjectCardRows(project);
+---
+
+<article class="gsoc-project-card">
+  <h3>{project.name}</h3>
+  {project.desc ? <p class="gsoc-project-desc">{project.desc}</p> : null}
+  {
+    rows.map((row) => (
+      <div class="gsoc-card-row">
+        <span class="gsoc-card-label">{row.label}:</span>
+        <span>{row.values.join(", ")}</span>
+      </div>
+    ))
+  }
+  {
+    project.collaborators.length > 0 ? (
+      <div class="gsoc-card-row">
+        <span class="gsoc-card-label">Project:</span>
+        <span>
+          {project.collaborators.map((collaborator, index) => (
+            <>
+              {index > 0 ? ", " : ""}
+              {collaborator.href ? (
+                <a href={collaborator.href}>{collaborator.label}</a>
+              ) : (
+                collaborator.label
+              )}
+            </>
+          ))}
+        </span>
+      </div>
+    ) : null
+  }
+  <button
+    class="gsoc-project-card-open"
+    type="button"
+    data-detail={`detail-${project.anchor}`}
+  >
+    View details
+  </button>
+</article>
