@@ -1,0 +1,166 @@
+---
+import { Image } from "astro:assets";
+import PageLayout from "../../layouts/PageLayout.astro";
+import { localizeHref } from "../../lib/relative-paths.ts";
+import { resolveProjectDisplay } from "../../lib/member-logos.ts";
+import {
+  buildUniverseSeason,
+  type UniverseStudent,
+} from "../../lib/universe.ts";
+import "../../styles/universe.css";
+
+const season = await buildUniverseSeason();
+const pagePath = Astro.url.pathname;
+
+const dateFormatter = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
+
+const timeFormatter = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  hour: "numeric",
+  minute: "2-digit",
+  timeZone: "UTC",
+  timeZoneName: "short",
+});
+
+const formatDate = (date: Date | null) =>
+  date ? dateFormatter.format(date) : "No posts found";
+
+const formatRange = (start: Date, end: Date) =>
+  `${dateFormatter.format(start)} - ${dateFormatter.format(end)}`;
+
+const statusLabel = (status: string) =>
+  status.charAt(0).toUpperCase() + status.slice(1);
+
+// Shape-coded status so it does not rely on colour alone.
+const statusGlyph: Record<string, string> = {
+  complete: "✓",
+  missing: "✕",
+  optional: "○",
+  pending: "·",
+};
+
+const feedLabel = (student: UniverseStudent) => {
+  if (student.feedStatus === "ok") return "Feed available";
+  if (student.feedStatus === "empty") return "No posts found";
+  return "Feed failed";
+};
+
+const feedTitle = (student: UniverseStudent) => {
+  const label = feedLabel(student);
+  return student.feedError ? `${label}: ${student.feedError}` : label;
+};
+
+const feedErrorMessage = (student: UniverseStudent) =>
+  student.feedError ? `Feed failed: ${student.feedError}` : "Feed failed";
+---
+
+<PageLayout
+  title="Contributor Blogs"
+  description={`GSoC ${season.year} contributor blog feed status for OpenAstronomy.`}
+>
+  <div class="universe-heading">
+    <p>
+      GSoC {season.year} contributor blog feeds, checked from the RSS sources configured
+      in this repository.
+    </p>
+    <p class="universe-updated">
+      Last checked {timeFormatter.format(season.generatedAt)}
+    </p>
+    <p>
+      <a href={localizeHref(pagePath, "/universe-oa/archive/")}>
+        View previous seasons
+      </a>
+    </p>
+  </div>
+
+  <div class="universe-table-wrap">
+    <table class="universe-table">
+      <thead>
+        <tr>
+          <th scope="col">Contributor</th>
+          <th scope="col">Project</th>
+          <th scope="col">Latest post</th>
+          <th scope="col">Blog updates</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          season.students.map((student) => {
+            const project = resolveProjectDisplay(student.project);
+            return (
+              <tr>
+                <th scope="row">
+                  {student.blogUrl ? (
+                    <a href={student.blogUrl}>{student.name}</a>
+                  ) : (
+                    <span>{student.name}</span>
+                  )}
+                  <span
+                    class={`universe-feed universe-feed-${student.feedStatus}`}
+                    title={feedTitle(student)}
+                  >
+                    {feedLabel(student)}
+                  </span>
+                </th>
+                <td>
+                  <span class="universe-project">
+                    {project.logo && (
+                      <Image
+                        src={project.logo}
+                        alt=""
+                        width={24}
+                        height={24}
+                        loading="lazy"
+                      />
+                    )}
+                    {project.name}
+                  </span>
+                </td>
+                <td>
+                  {student.posts[0] ? (
+                    <>
+                      <a href={student.posts[0].url}>
+                        {student.posts[0].title}
+                      </a>
+                      <span class="universe-date">
+                        {formatDate(student.posts[0].publishedAt)}
+                      </span>
+                    </>
+                  ) : student.feedStatus === "unavailable" ? (
+                    <span class="universe-feed-error">
+                      {feedErrorMessage(student)}
+                    </span>
+                  ) : (
+                    <span>{formatDate(student.latestPostAt)}</span>
+                  )}
+                </td>
+                <td>
+                  <div class="universe-windows">
+                    {student.windows.map((window, index) => (
+                      <span
+                        class={`universe-window universe-window-${window.status}`}
+                        title={`${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}
+                        aria-label={`Window ${index + 1}, ${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}
+                      >
+                        <span aria-hidden="true">
+                          {statusGlyph[window.status] ?? index + 1}
+                        </span>
+                      </span>
+                    ))}
+                  </div>
+                </td>
+              </tr>
+            );
+          })
+        }
+      </tbody>
+    </table>
+  </div>
+</PageLayout>

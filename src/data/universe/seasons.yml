@@ -1,0 +1,388 @@
+# Contributor blog feeds for /Universe_OA/.
+# Feed checks run during the Astro build; scheduled CI rebuilds keep the static page fresh.
+# Use src/data/members.json project keys when the contributor belongs to an OpenAstronomy member.
+# The first posting window of each season is optional.
+
+seasons:
+  - year: 2026
+    windows:
+      - start: 2026-05-01
+        end: 2026-05-25
+        optional: true
+      - start: 2026-05-25
+        end: 2026-06-08
+      - start: 2026-06-08
+        end: 2026-06-22
+      - start: 2026-06-22
+        end: 2026-07-06
+      - start: 2026-07-06
+        end: 2026-07-20
+      - start: 2026-07-20
+        end: 2026-08-03
+      - start: 2026-08-03
+        end: 2026-08-17
+    contributors:
+      - name: Amityush-lgtm
+        project: sunpy
+        feed: https://sunpy-radiospectra.blogspot.com/feeds/posts/default?alt=rss
+      - name: jamesrafe
+        project: juliaastro
+        feed: https://jamesraffertylee.wordpress.com/feed/
+      - name: OmBiradar
+        project: lincc-frameworks
+        feed: https://imporving-pyarrow-for-nested-structures.hashnode.dev/rss.xml
+      - name: Omiii-215
+        project: stingray
+        feed: https://medium.com/feed/@omhabib311
+      - name: ReemHamraz
+        project: astropy
+        feed: https://dev.to/feed/reemhamraz
+  - year: 2025
+    windows:
+      - start: 2025-05-01
+        end: 2025-06-02
+        optional: true
+      - start: 2025-06-02
+        end: 2025-06-16
+      - start: 2025-06-16
+        end: 2025-06-30
+      - start: 2025-06-30
+        end: 2025-07-14
+      - start: 2025-07-14
+        end: 2025-07-28
+      - start: 2025-07-28
+        end: 2025-08-11
+      - start: 2025-08-11
+        end: 2025-08-25
+    contributors:
+      - name: aDNAn-itis
+        project: stingray
+        feed: https://sejifukishima.blogspot.com/feeds/posts/default/-/GSOC?alt=rss
+      - name: darshvn
+        project: radis
+        feed: https://medium.com/feed/@darshvn
+      - name: kashish2210
+        project: juliaastro
+        feed: https://kashish2210.blogspot.com/feeds/posts/default/-/gsoc25
+      - name: mohyware
+        project: radis
+        feed: https://medium.com/feed/@mohyware
+      - name: Prtm2110
+        project: radis
+        feed: https://medium.com/feed/@prathamhole
+  - year: 2024
+    windows:
+      - start: 2024-05-27
+        end: 2024-06-10
+        optional: true
+      - start: 2024-06-10
+        end: 2024-06-24
+      - start: 2024-06-24
+        end: 2024-07-01
+      - start: 2024-07-01
+        end: 2024-07-15
+      - start: 2024-07-15
+        end: 2024-07-29
+      - start: 2024-07-29
+        end: 2024-08-12
+    contributors:
+      - name: ahmedhosssam
+        project: sunpy
+        feed: https://dev.to/feed/ahmedhosssam/
+      - name: code29563
+        project: radis
+        feed: https://code29563.github.io/feed.xml
+      - name: DeadSpheroid
+        project: gnuastro
+        feed: https://deadspheroid.github.io/my-blog/feed.xml
+      - name: Deus1704
+        project: sunpy
+        feed: https://deus1704.vercel.app/rss.xml
+      - name: kartikmandar
+        project: stingray
+        feed: https://gsoc2024.kartikmandar.com/feeds/posts/default?alt=rss
+      - name: lucasmg18
+        project: irsa-fornax
+        feed: https://lucasmartingarciagsoc24openastronomy.blogspot.com/feeds/posts/default
+      - name: NucleonGodX
+        project: sunpy
+        feed: https://medium.com/feed/@manitsingh018
+      - name: ViciousEagle03
+        project: sunpy
+        feed: https://viciouseagle03.github.io/index.xml
+  - year: 2023
+    windows:
+      - start: 2023-05-29
+        end: 2023-06-12
+        optional: true
+      - start: 2023-06-12
+        end: 2023-06-26
+      - start: 2023-06-26
+        end: 2023-07-03
+      - start: 2023-07-03
+        end: 2023-07-17
+      - start: 2023-07-17
+        end: 2023-07-31
+      - start: 2023-07-31
+        end: 2023-08-13
+    contributors:
+      - name: exitflynn
+        project: sunpy
+        feed: https://exitflynn.github.io/blog/tags/gsoc/index.xml
+      - name: aritrasinha108
+        project: sunpy
+        feed: https://medium.com/feed/@aritrasinha002
+      - name: labeeb-7z
+        project: gnuastro
+        feed: https://labeeb-7z.github.io/Blogs/feed.gsoc.xml
+      - name: Gaurav17Joshi
+        project: stingray
+        feed: https://gaurav17joshi.github.io/Blogs/feed.gsoc.xml
+      - name: pupperemeritus
+        project: stingray
+        feed: https://dev.to/feed/pupperemeritus
+      - name: menasrac
+        project: radis
+        feed: https://medium.com/feed/@menasrac
+      - name: 1someshverma
+        project: radis
+        feed: https://1someshverma.github.io/feed.xml
+  - year: 2022
+    windows:
+      - start: 2022-06-13
+        end: 2022-07-01
+        optional: true
+      - start: 2022-07-01
+        end: 2022-08-01
+      - start: 2022-08-01
+        end: 2022-09-01
+      - start: 2022-09-01
+        end: 2022-10-01
+      - start: 2022-10-01
+        end: 2022-11-01
+      - start: 2022-11-01
+        end: 2022-11-21
+    contributors:
+      - name: akash5100
+        project: sunpy
+        feed: https://medium.com/feed/@akash5100
+      - name: arunavabasu-03
+        project: radis
+        feed: https://gsoc.arunavabasu.com/rss.xml
+      - name: sagarchotalia
+        project: radis
+        feed: https://sagarchotalia.github.io/Blog/feed.xml
+      - name: Supriya1702
+        project: radis
+        feed: https://supriya-gsoc.netlify.app/rss.xml
+      - name: TranHuuNhatHuy
+        project: radis
+        feed: https://gsoc2022tranhuunhathuy.gatsbyjs.io/rss.xml
+      - name: Jash-Shah
+        project: gnuastro
+        feed: https://jash-shah.github.io/Blogs/feed.gsoc.xml
+      - name: mihirtripathi97
+        project: stingray
+        feed: https://medium.com/feed/@mihirtripathi97
+      - name: Aman-Pandey-afk
+        project: stingray
+        feed: https://medium.com/feed/@aman_p
+  - year: 2021
+    windows:
+      - start: 2021-05-01
+        end: 2021-06-08
+        optional: true
+      - start: 2021-06-08
+        end: 2021-06-22
+      - start: 2021-06-22
+        end: 2021-07-06
+      - start: 2021-07-06
+        end: 2021-07-20
+      - start: 2021-07-20
+        end: 2021-08-03
+      - start: 2021-08-03
+        end: 2021-08-17
+    contributors:
+      - name: Suyog7130
+        project: astropy
+        feed: https://suyog20.blogspot.com/feeds/posts/default/-/gsoc/?alt=rss
+      - name: adwaitbhope
+        project: sunpy
+        feed: https://medium.com/feed/@adwaitbhope
+      - name: jeffreypaul15
+        project: sunpy
+        feed: https://jeffrey-paul2000.medium.com/feed
+      - name: ndanzanello
+        project: gnuastro
+        feed: https://ndanzanello.wordpress.com/tag/gsoc/feed
+      - name: anandxkumar
+        project: radis
+        feed: https://anandkumar-blog.netlify.app/rss.xml
+      - name: gagan-aryan
+        project: radis
+        feed: https://gagan-aryan.netlify.app/tags/gsoc21//index.xml
+      - name: dhruv9vats
+        project: stingray
+        feed: https://medium.com/feed/@dhruv9vats
+      - name: rachittshah
+        project: stingray
+        feed: https://medium.com/feed/@rachitt01
+      - name: rashmiraj137
+        project: stingray
+        feed: https://medium.com/feed/@raj-rashmi741
+  - year: 2020
+    windows: []
+    contributors:
+      - name: theand9
+        project: stingray
+        feed: https://medium.com/feed/@andsbmp17
+      - name: pkj-m
+        project: radis
+        feed: https://pkj-m.github.io/blog/feed.gsoc.xml
+      - name: siddharthlal25
+        project: juliaastro
+        feed: https://siddharthlal25.github.io/blog/feed.gsoc.xml
+      - name: meuge
+        project: poliastro
+        feed: https://blog.poliastro.space/feeds/meuge.rss.xml
+      - name: JeS24
+        project: einsteinpy
+        feed: https://dev.to/feed/jes24
+      - name: sahilyadav27
+        project: ctlearn
+        feed: https://medium.com/feed/@sahilyadav27
+      - name: kakirastern
+        project: sunpy
+        feed: https://medium.com/feed/@krisastern
+      - name: abhijeetmanhas
+        project: sunpy
+        feed: https://medium.com/feed/@abhimanhas
+      - name: Raahul-Singh
+        project: sunpy
+        feed: https://medium.com/feed/@_hawks_
+      - name: techguybiswa
+        project: astronomy-commons
+        feed: https://medium.com/feed/@biswarupbanerjee
+  - year: 2019
+    windows: []
+    contributors:
+      - name: Sedictious
+        project: poliastro
+        feed: https://blog.poliastro.space/feeds/eleftheria-chatziargyriou.rss.xml
+      - name: jorgepiloto
+        project: poliastro
+        feed: https://blog.poliastro.space/feeds/jorge-martinez-garrido.rss.xml
+      - name: kakirastern
+        project: sunpy
+        feed: https://medium.com/feed/@krisastern
+      - name: vatch123
+        project: sunpy
+        feed: https://medium.com/feed/@vatsalyachaubey19980
+      - name: vn-ki
+        project: sunpy
+        feed: https://medium.com/feed/@appukuttancr
+      - name: yashrsharma44
+        project: sunpy
+        feed: https://medium.com/feed/@yashrsharma44
+      - name: tianxiaoma
+        project: sunpy
+        feed: https://medium.com/feed/@tianxiaoma
+      - name: tcjansen
+        project: astropy
+        feed: https://astrotiff.home.blog/category/gsoc/feed/
+      - name: aquatiko
+        project: juliaastro
+        feed: https://aquatiko.github.io/series/gsoc/index.xml
+      - name: jredondopizarro
+        project: ctlearn
+        feed: https://medium.com/feed/@jrpg1996
+  - year: 2018
+    windows: []
+    contributors:
+      - name: MananAgarwal
+        project: astropy
+        feed: https://medium.com/feed/@manan_agarwal
+      - name: sushobhana
+        project: astropy
+        feed: https://medium.com/feed/@sushobhanapatra
+      - name: ritiek
+        project: plasmapy
+        feed: https://ritiek.github.io/feed/gsoc.xml
+      - name: nikita-astronaut
+        project: poliastro
+        feed: https://medium.com/feed/@nikita.astronaut
+      - name: abotiamnot
+        project: HelioPy
+        feed: https://medium.com/feed/@yatharthrai16
+      - name: swapsha96
+        project: TimeLab
+        feed: https://medium.com/feed/@swapsha96
+      - name: prakharcode
+        project: juliaastro
+        feed: https://prakharcode.github.io/gsoc_feed.xml
+      - name: vn-ki
+        project: sunpy
+        feed: https://medium.com/feed/@appukuttancr
+  - year: 2017
+    windows: []
+    contributors:
+      - name: ayadav
+        project: astropy
+        feed: https://medium.com/feed/@ayushyadav
+      - name: haikyu
+        project: astropy
+        feed: https://aaryapatil.wordpress.com/feed/
+      - name: shibasisp
+        project: casacore
+        feed: http://www.techievirus.com/feed.xml
+      - name: nitinkgp23
+        project: sunpy
+        feed: https://medium.com/feed/@nitinkgp23
+      - name: adl1995
+        project: astropy
+        feed: https://adl1995.github.io/feeds/all.rss.xml
+      - name: abit2
+        project: sunpy
+        feed: https://medium.com/feed/@ankit_b
+      - name: TestSubjector
+        project: juliaastro
+        feed: https://medium.com/feed/@prasunk2
+      - name: Punyaslok
+        project: sunpy
+        feed: https://punyaslokpattnaik.wordpress.com/feed/
+      - name: duygukeskek
+        project: sunpy
+        feed: https://medium.com/feed/@duygukeskek
+      - name: pgabor
+        project: sunpy
+        feed: http://pgabor.blogspot.com/feeds/posts/default/-/SunPy/?alt=rss
+  - year: 2016
+    windows: []
+    contributors:
+      - name: rirze
+        project: astropy
+        feed: http://www.roseateblog.wordpress.com/category/GSOC/feed
+      - name: nocturnalastro
+        project: astropy
+        feed: http://myopensauceadventure.blogspot.co.uk/feeds/posts/default?alt=rss
+      - name: OlgaVorokh
+        project: astropy
+        feed: http://alcyonegammapy.blogspot.com/feeds/posts/default?alt=rss
+      - name: mirca
+        project: astropy
+        feed: http://mirca.github.io/feed.xml
+      - name: tdwilkinson
+        project: sunpy
+        feed: http://tdwilkinson.blogspot.com/feeds/posts/default?alt=rss
+      - name: Punyaslok
+        project: sunpy
+        feed: https://punyaslokpattnaik.wordpress.com/feed/
+      - name: sudk1896
+        project: sunpy
+        feed: https://sudonymousblog.wordpress.com/feed/
+      - name: kvyh
+        project: astropy
+        feed: http://kvyhastroplan.blogspot.com/feeds/posts/default?alt=rss
+      - name: ahamilton
+        project: sunpy
+        feed: http://socis2016.blogspot.com/feeds/posts/default?alt=rss

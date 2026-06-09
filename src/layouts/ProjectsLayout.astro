@@ -1,0 +1,103 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import ProjectCard from "../components/gsoc/ProjectCard.astro";
+import ProjectDetail from "../components/gsoc/ProjectDetail.astro";
+import PeopleSection from "../components/gsoc/PeopleSection.astro";
+import admins from "../data/gsoc-admins.json";
+import { members } from "../lib/members.ts";
+import {
+  buildProjectMeta,
+  parseProjectId,
+  type GsocProject,
+} from "../lib/gsoc.ts";
+import "../styles/gsoc.css";
+
+type Props = { seasonKey: string; title?: string };
+const { seasonKey, title } = Astro.props as Props;
+const pagePath = Astro.url.pathname;
+const pageTitle = title ? `${title} (${seasonKey})` : `GSoC ${seasonKey}`;
+
+const adminLookup = admins as Record<string, string[]>;
+const pageEntries = await getCollection("pages");
+type SeasonEntry = {
+  entry: CollectionEntry<"pages">;
+  info: NonNullable<ReturnType<typeof parseProjectId>>;
+};
+const seasonEntries: SeasonEntry[] = pageEntries.flatMap(
+  (entry: CollectionEntry<"pages">) => {
+    const info = parseProjectId(entry.id);
+    return info?.year === seasonKey ? [{ entry, info }] : [];
+  },
+);
+
+const projects: GsocProject[] = (
+  await Promise.all(
+    seasonEntries.map(async ({ entry, info }: SeasonEntry) => {
+      const meta = buildProjectMeta(entry.data, info, members, pagePath);
+      const { Content } = await render(entry);
+      return { ...meta, Content };
+    }),
+  )
+).sort((a, b) => a.name.localeCompare(b.name));
+
+const mentors = Array.from(
+  new Set(projects.flatMap((p) => p.mentors).filter(Boolean)),
+).sort();
+const adminHandles = adminLookup[seasonKey] ?? [];
+
+const sections = [
+  {
+    id: "projects",
+    label: "Projects",
+    heading: `GSoC Projects for ${seasonKey}`,
+  },
+  { id: "mentors", label: "Mentors", heading: `Mentors for ${seasonKey}` },
+  { id: "admins", label: "Admins", heading: `Admins for ${seasonKey}` },
+];
+---
+
+<BaseLayout title={pageTitle}>
+  <nav class="gsoc-tabs">
+    {sections.map((s) => <a href={`#${s.id}`}>{s.label}</a>)}
+  </nav>
+
+  <section id="projects">
+    <h2>
+      <a class="gsoc-section-link" href="#projects">{sections[0].heading}</a>
+    </h2>
+    {projects.length === 0 ? <p>No projects listed yet.</p> : null}
+    <div class="gsoc-projects-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+    {projects.map((project) => <ProjectDetail project={project} />)}
+  </section>
+
+  <PeopleSection
+    id="mentors"
+    heading={sections[1].heading}
+    intro={`We are the mentors for OpenAstronomy in GSoC ${seasonKey}.`}
+    handles={mentors}
+  />
+  <PeopleSection
+    id="admins"
+    heading={sections[2].heading}
+    intro="We are the admins for OpenAstronomy."
+    handles={adminHandles}
+  />
+
+  <script>
+    document
+      .querySelectorAll<HTMLButtonElement>(
+        ".gsoc-project-card-open[data-detail]",
+      )
+      .forEach((button) => {
+        const detailId = button.dataset.detail;
+        if (!detailId) return;
+        button.addEventListener("click", () => {
+          const dialog = document.getElementById(detailId);
+          if (dialog instanceof HTMLDialogElement) dialog.showModal();
+        });
+      });
+  </script>
+</BaseLayout>

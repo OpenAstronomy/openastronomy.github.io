@@ -1,0 +1,32 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import PostLayout from "../../../../layouts/PostLayout.astro";
+import { getPostDateParts, getPostSlug } from "../../../../lib/posts.ts";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  return posts.map((post: CollectionEntry<"posts">) => {
+    const { year, month, day } = getPostDateParts(post);
+    return {
+      params: { year, month, day, slug: getPostSlug(post) },
+      props: { post },
+    };
+  });
+}
+
+type Props = { post: CollectionEntry<"posts"> };
+const { post } = Astro.props as Props;
+const { Content } = await render(post);
+const description =
+  typeof post.data.summary === "string" ? post.data.summary : undefined;
+---
+
+<PostLayout
+  title={post.data.title}
+  date={post.data.date}
+  author={post.data.author}
+  meta={post.data.meta}
+  description={description}
+>
+  <Content />
+</PostLayout>

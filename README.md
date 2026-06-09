@@ -1,62 +1,154 @@
-### About
+# openastronomy.github.io
 
-This is the source for the openastronomy.github.io website.
+This is the source code for the [openastronomy.org](https://openastronomy.org)
+website. The site is built with Astro and outputs static HTML to `html/`.
 
-### Building
+For code style, CI details, the GSoC content workflow, and dependency update
+guidance, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-To build the site locally, you will need [jekyll](https://jekyllrb.com) to be installed.
-Clone this repository locally, then inside it, type:
+## Requirements
 
-```shell
-gem install bundler
-bundler install
-```
-Depending on your Ruby setup this may require superuser privileges to install to the default location, so you may want to instead use:
+- [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+  22 or newer
+- npm
 
-```shell
+## Local Development
 
-gem install -i vendor/bundle bundler
-bundle config --local path 'vendor/bundle'
-bundle install
-
-```
-
-to install the dependencies locally at `vendor/bundle`.
-
-You can then build the website with:
+Install dependencies from the lockfile:
 
 ```shell
-bundle exec jekyll build
+npm ci
 ```
 
-To view the site locally, you will then need to run:
+Run the dev server:
 
 ```shell
-bundle exec jekyll serve
+npm run dev
 ```
 
-this will track the changes and rebuild automatically. However, it won't reflect changes on `_config.yaml` 
-
-
-### Building using a Jekyll container
-
-```bash
-mkdir -p ../vendor/bundle # so it's available for other projects
-export JEKYLL_VERSION=3.8
-# only needs to run it once to download the dependencies
-docker run --rm -e BUNDLE_APP_CONFIG="/srv/vendor/bundle" -e BUNDLE_HOME="/srv/vendor/bundle" -e BUNDLE_PATH="/srv/vendor/bundle" --volume="$PWD:/srv/jekyll" --volume="$PWD/../vendor:/srv/vendor" -it jekyll/jekyll:$JEKYLL_VERSION  bundle install
-# build
-docker run --rm -e BUNDLE_APP_CONFIG="/srv/vendor/bundle" -e BUNDLE_HOME="/srv/vendor/bundle" -e BUNDLE_PATH="/srv/vendor/bundle" --volume="$PWD:/srv/jekyll" --volume="$PWD/../vendor:/srv/vendor" -it jekyll/jekyll:$JEKYLL_VERSION  bundle exec jekyll build
-# serve from python
-python -m http.server -d _site
-```
-
-### Submodule
-
-Note that this uses a submodule to complete the build process of the site.  So you may need to do:
+Build the website:
 
 ```shell
-git submodule init
-git submodule update
+npm run build
 ```
-in a fresh clone, or just the second line to update the submodule.
+
+Preview the production build:
+
+```shell
+npm run preview
+```
+
+## Checks
+
+Run the unit test suite:
+
+```shell
+npm test
+```
+
+Run tests in watch mode:
+
+```shell
+npm run test:watch
+```
+
+Format the codebase:
+
+```shell
+npm run format
+```
+
+Check formatting without writing changes:
+
+```shell
+npm run format:check
+```
+
+Run ESLint:
+
+```shell
+npm run lint
+```
+
+Auto-fix ESLint issues where supported:
+
+```shell
+npm run lint:fix
+```
+
+Run Markdown lint:
+
+```shell
+npm run lint:md
+```
+
+Auto-fix Markdown lint issues where supported:
+
+```shell
+npm run lint:md:fix
+```
+
+Run Astro type and content checks:
+
+```shell
+npm run astro:check
+```
+
+Run the short combined source check:
+
+```shell
+npm run check
+```
+
+## Link Check
+
+Build the site before running the link check:
+
+```shell
+npm run build
+```
+
+Check internal links and anchors:
+
+```shell
+npm run linkcheck
+```
+
+The link checker intentionally ignores external URLs. It only validates local
+generated files and fragment anchors, which keeps CI deterministic and avoids
+checking third-party services such as fonts, social sites, and redirect-heavy
+documentation hosts.
+
+Supported environment variable:
+
+- `LINKCHECK_ROOT=...` points at a different build folder.
+
+## CI
+
+GitHub Actions (`.github/workflows/ci.yml`) is the merge quality gate. It runs
+formatting, source lint, Markdown lint, Astro checks, unit tests, a production
+build, and an internal link/anchor check. A daily scheduled run keeps the
+build and the `/universe-oa/` feed check exercised.
+
+CircleCI (`.circleci/config.yml`) builds the site and publishes the `html/`
+artifact for pull-request preview.
+
+## Structure
+
+- `public/` contains static passthrough assets such as `CNAME`, Open Graph
+  images, and raw files.
+- `src/assets/` contains assets processed by Astro, including member logos and
+  backgrounds.
+- `src/components/` contains shared Astro components.
+- `src/content/` contains posts and Markdown page content, including GSoC pages
+  and projects.
+- `src/data/` contains JSON data used by pages and components.
+  `src/data/universe/` configures the `/universe-oa/` contributor blog feed
+  checker and archive.
+- `src/layouts/` contains page and post layout components.
+- `src/lib/` contains reusable JavaScript and TypeScript helpers plus unit
+  tests.
+- `src/pages/` contains Astro routes.
+- `src/styles/` contains site-wide CSS (`global.css`) and per-page stylesheets
+  for the GSoC and universe-oa pages.
+- `scripts/` contains maintenance scripts such as the link checker.

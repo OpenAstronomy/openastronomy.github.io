@@ -1,0 +1,16 @@
+---
+import type { GsocProject } from "../../lib/gsoc.ts";
+import ProjectBody from "./ProjectBody.astro";
+
+const { project } = Astro.props as { project: GsocProject };
+const ProjectContent = project.Content;
+---
+
+<dialog class="gsoc-project-detail" id={`detail-${project.anchor}`}>
+  <form method="dialog">
+    <button class="gsoc-modal-close" type="submit">Close</button>
+  </form>
+  <ProjectBody project={project}>
+    <ProjectContent />
+  </ProjectBody>
+</dialog>

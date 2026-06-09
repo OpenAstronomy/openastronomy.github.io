@@ -1,96 +1,31 @@
-# Ruby CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-ruby/ for more details
-#
-version: 2
+version: 2.1
 jobs:
-  build:
+  build_website:
     docker:
-      # specify the version you desire here
-       - image: cimg/ruby:2.5
-    environment:
-      BUNDLE_PATH: ~/vendor/bundle
-
-    working_directory: ~/repo
-
+      - image: cimg/node:lts
     steps:
       - checkout
       - run:
-          name: a merge PR
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Build site
+          command: npm run build
+      - run:
+          name: Patch asset paths for artifact viewer
+          # Astro emits processed assets at absolute /_astro/ paths. Prefix
+          # them so the CircleCI artifact viewer can resolve them.
           command: |
-            if [[ -n "${CIRCLE_PR_NUMBER}" ]]; then
-              git fetch origin +refs/pull/$CIRCLE_PR_NUMBER/merge:pr/$CIRCLE_PR_NUMBER/merge
-              git checkout -qf pr/$CIRCLE_PR_NUMBER/merge
-            fi
-
-      - run:
-          name: fetch submodules
-          command: git submodule init && git submodule update
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - rubygems-v1-latest
-
-      - run:
-          name: install dependencies
-          command: bundle check || bundle install --jobs=4 --retry=3
-
-      - run:
-          name: Jekyll build
-          command: bundle exec jekyll build -d html 2> std.err
-
-      - run:
-          name: Check Jekyll build
-          command: |
-            cat std.err
-            exit $(wc -l std.err | awk '{print $1}')
-
-      - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer ./html \
-              --allow-hash-href \
-              --check-html \
-              --disable-external \
-              --file-ignore "/.+\/gsoc\/display\/partials.+/"
-              # Ignores the path for the angular magic
-
-      - run:
-          name: HTMLProofer with external
-          command: |
-            if [ "${CIRCLE_BRANCH}" = "main" ]; then
-             bundle exec htmlproofer ./html \
-               --allow-hash-href \
-               --check-html \
-               --file-ignore "/.+\/gsoc\/display\/partials.+/","/.+\/gsoc\/gsoc201[5-9].+/","/.+\/html/projects/201[5-9].+/","/.+\/gsoc\/gsoc202[0-2].+/","/.+\/html/projects/202[0-2].+/" \
-               --http-status-ignore 302
-               # Ignore old ideas pages and ssl certificates that error.
-            fi
-
-
-      - run:
-          name: Jekyll re-build for local
-          command: |
-            echo "url: https://output.circle-artifacts.com" > circle.yml
-            bundle exec jekyll build -d html -b "/output/job/${CIRCLE_WORKFLOW_JOB_ID}/artifacts/0/html"  --config _config.yml,circle.yml
-            find ./html/ -type f -iname '*html' | xargs -I{} sed -i \
-              -e 's|href="\(\.\/.*\/\)"|href="\1index.html"|g' \
-              -e '/0\/html/ s|href="\(\/.*\/\)"|href="\1index.html"|g' {}
-            # Replace pages ending on `/` from our site to direct to index.html
-
-
-      - run:
-          name: "Built documentation is available at:"
-          command: DOCS_URL="${CIRCLE_BUILD_URL}/artifacts/${CIRCLE_NODE_INDEX}/html/index.html"; echo $DOCS_URL
-
-
-      - save_cache:
-          paths:
-            - ~/vendor/bundle
-          key: rubygems-v1-latest
-
-      # collect reports
+            sh scripts/circleci-preview.sh \
+              "/output/job/${CIRCLE_WORKFLOW_JOB_ID}/artifacts/${CIRCLE_NODE_INDEX}/html"
       - store_artifacts:
-          path: ~/repo/html
+          path: html
           destination: html
+      - run:
+          name: "Preview URL"
+          command: echo "https://output.circle-artifacts.com/output/job/${CIRCLE_WORKFLOW_JOB_ID}/artifacts/${CIRCLE_NODE_INDEX}/html/index.html"
+
+workflows:
+  preview_website:
+    jobs:
+      - build_website

@@ -1,0 +1,38 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+type Props = {
+  title: string;
+  date?: string | Date;
+  author?: string;
+  meta?: string;
+  description?: string;
+};
+
+const { title, date, author, meta, description } = Astro.props as Props;
+const dateObject = date ? new Date(date) : undefined;
+const formattedDate = dateObject
+  ? new Intl.DateTimeFormat("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      timeZone: "UTC",
+    }).format(dateObject)
+  : "";
+const metaParts = [formattedDate, author, meta].filter(Boolean);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  pageType="article"
+  publishedAt={dateObject}
+>
+  <header>
+    <h1>{title}</h1>
+    {metaParts.length ? <p class="post-meta">{metaParts.join(" • ")}</p> : null}
+  </header>
+  <article>
+    <slot />
+  </article>
+</BaseLayout>

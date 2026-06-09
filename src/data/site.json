@@ -1,0 +1,31 @@
+{
+  "title": "OpenAstronomy",
+  "description": "Where all about the combined force of different open source projects in astronomy and astrophysics takes place.",
+  "url": "https://openastronomy.org",
+  "nav_links": {
+    "Contributor Blogs": "/universe-oa/"
+  },
+  "page_links": [
+    { "title": "Members", "href": "/members/" },
+    { "title": "News and Events", "href": "/news/" },
+    { "title": "Google Summer of Code", "href": "/gsoc/" }
+  ],
+  "social_links": [
+    {
+      "icon": "discourse",
+      "href": "https://community.openastronomy.org",
+      "label": "OpenAstronomy Discourse"
+    },
+    {
+      "icon": "mastodon",
+      "href": "https://floss.social/@OpenAstronomy",
+      "label": "OpenAstronomy on Mastodon",
+      "rel": "me noopener noreferrer"
+    },
+    {
+      "icon": "github",
+      "href": "https://github.com/openastronomy",
+      "label": "OpenAstronomy on GitHub"
+    }
+  ]
+}

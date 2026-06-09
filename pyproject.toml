@@ -1,4 +1,4 @@
 [ tool.gilesbot ]
-  [ tool.gilesbot.circleci_artifacts.website ]
+  [ tool.gilesbot.circleci_artifacts.preview_website ]
     url = "html/index.html"
     message = "Preview the website build."
