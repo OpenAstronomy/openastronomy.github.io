@@ -343,3 +343,245 @@ blockquote {
     display: none;
   }
 }
+
+/* GSoC season and project pages */
+
+.gsoc-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 20px 0 30px;
+}
+
+.gsoc-section-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.gsoc-section-link:hover,
+.gsoc-section-link:focus {
+  text-decoration: underline;
+}
+
+.gsoc-project-card {
+  position: relative;
+  background: var(--color-light);
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.gsoc-project-body {
+  margin-top: 12px;
+}
+
+.gsoc-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.gsoc-project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gsoc-project-card {
+    transition: none;
+  }
+
+  .gsoc-project-card:hover {
+    transform: none;
+  }
+}
+
+.gsoc-project-card h3 {
+  margin-top: 0;
+}
+
+/* The title link covers the whole card; member links stay clickable above it. */
+.gsoc-project-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.gsoc-card-row a {
+  position: relative;
+}
+
+.gsoc-project-desc {
+  margin: 0 0 8px;
+  font-size: 0.9em;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gsoc-card-row {
+  font-size: 0.85em;
+  line-height: 1.4;
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.gsoc-card-label {
+  font-weight: 600;
+}
+
+.gsoc-people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Contributor blog (universe-oa) pages */
+
+.universe-heading {
+  max-width: 760px;
+}
+
+.universe-updated,
+.universe-date {
+  color: #5c5c5c;
+  font-size: 0.9rem;
+}
+
+.universe-archive-list {
+  margin-top: 24px;
+}
+
+.universe-archive-season + .universe-archive-season {
+  margin-top: 32px;
+}
+
+.universe-archive-season h2 {
+  margin-top: 0;
+}
+
+.universe-archive-actions {
+  margin: 0 0 12px;
+}
+
+.universe-table-wrap {
+  overflow-x: auto;
+  margin: 24px 0 12px;
+}
+
+.universe-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.universe-table th,
+.universe-table td {
+  border-bottom: 1px solid #dddddd;
+  padding: 12px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.universe-table thead th {
+  border-top: 1px solid #dddddd;
+  background: #f6f6f6;
+}
+
+.universe-table tbody th {
+  font-weight: 600;
+}
+
+.universe-feed,
+.universe-date {
+  display: block;
+  margin-top: 4px;
+}
+
+.universe-feed {
+  font-size: 0.82rem;
+}
+
+.universe-feed-ok {
+  color: #1f6f43;
+}
+
+.universe-feed-empty {
+  color: #7a5a00;
+}
+
+.universe-feed-unavailable {
+  color: #9f2424;
+}
+
+.universe-feed-error {
+  color: #9f2424;
+  font-weight: 600;
+}
+
+.universe-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.universe-project img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.universe-windows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.universe-window {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.universe-window-complete {
+  background: #dff3e7;
+  border-color: #9fceb2;
+  color: #155d35;
+}
+
+.universe-window-missing {
+  background: #f9dddd;
+  border-color: #e4a0a0;
+  color: #8d1e1e;
+}
+
+.universe-window-optional {
+  background: #e7eef8;
+  border-color: #b5c8e4;
+  color: #31537a;
+}
+
+.universe-window-pending {
+  background: #eeeeee;
+  border-color: #c9c9c9;
+  color: #555555;
+}

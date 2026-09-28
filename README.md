@@ -164,6 +164,5 @@ artifact for pull-request preview.
 - `src/lib/` contains reusable JavaScript and TypeScript helpers plus unit
   tests.
 - `src/pages/` contains Astro routes.
-- `src/styles/` contains site-wide CSS (`global.css`) and per-page stylesheets
-  for the GSoC and universe-oa pages.
+- `src/styles/global.css` is the site's only stylesheet.
 - `scripts/` contains the CircleCI preview link rewriter.

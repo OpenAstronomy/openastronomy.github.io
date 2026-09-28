@@ -2,7 +2,6 @@
 /* A project's standalone page; the slot receives the rendered markdown body. */
 import type { ProjectMeta } from "../../lib/gsoc.ts";
 import { getProjectDetailRows } from "../../lib/gsoc.ts";
-import "../../styles/gsoc.css";
 
 type Props = { project: ProjectMeta };
 const { project } = Astro.props as Props;
