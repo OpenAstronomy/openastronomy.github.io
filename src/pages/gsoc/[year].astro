@@ -1,0 +1,11 @@
+---
+import ProjectsLayout from "../../layouts/ProjectsLayout.astro";
+import admins from "../../data/gsoc-admins.json";
+
+// One season page per year in gsoc-admins.json; projects come from
+// src/content/pages/gsoc/<year>/.
+export const getStaticPaths = () =>
+  Object.keys(admins).map((year) => ({ params: { year } }));
+---
+
+<ProjectsLayout seasonKey={Astro.params.year} />

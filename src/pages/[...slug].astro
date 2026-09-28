@@ -2,7 +2,6 @@
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
-import ProjectsLayout from "../layouts/ProjectsLayout.astro";
 import ProjectBody from "../components/gsoc/ProjectBody.astro";
 import { buildProjectMeta, parseProjectId } from "../lib/gsoc.ts";
 
@@ -13,7 +12,7 @@ export async function getStaticPaths() {
       (page: CollectionEntry<"pages">) => page.id !== "gsoc/_project_template",
     )
     .map((page: CollectionEntry<"pages">) => ({
-      params: { slug: page.id === "index" ? undefined : page.id },
+      params: { slug: page.id },
       props: { page },
     }));
 }
@@ -25,7 +24,6 @@ const { Content } = await render(page);
 const { title, name } = page.data;
 const description = page.data.description ?? undefined;
 const pageTitle = title ?? name ?? undefined;
-const seasonMatch = page.id.match(/^gsoc\/(\d{4})$/);
 const projectInfo = parseProjectId(page.id);
 const projectMeta = projectInfo
   ? buildProjectMeta(page.data, projectInfo)
@@ -33,9 +31,7 @@ const projectMeta = projectInfo
 ---
 
 {
-  seasonMatch ? (
-    <ProjectsLayout seasonKey={seasonMatch[1]} title={pageTitle} />
-  ) : projectMeta ? (
+  projectMeta ? (
     <BaseLayout
       title={projectMeta.name}
       description={projectMeta.desc || description}
