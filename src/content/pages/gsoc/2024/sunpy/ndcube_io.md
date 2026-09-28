@@ -1,6 +1,6 @@
 ---
 name: Serialisation of NDCube classes to ASDF
-desc: This project will add functionality to `ndcube` and other relevant packages to save all the ndcube classes to ASDF files.
+desc: This project will add functionality to ndcube and other relevant packages to save all the ndcube classes to ASDF files.
 requirements:
   - Experience with Python
 difficulty: medium to high

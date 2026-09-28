@@ -1,6 +1,6 @@
 ---
 name: Stingray GUI update
-desc: Update Stingray's GUI, DAVE, to use the most recent Javascript dependencies and Stingray API (including faster pulsar searches, faster processing, large data handling) and infrastructure (e.g. the modifications introduced by [APE 17](https://docs.astropy.org/projects/package-template/en/latest/ape17.html))
+desc: Update Stingray's GUI, DAVE, to use the most recent Javascript dependencies and Stingray API (including faster pulsar searches, faster processing, large data handling) and infrastructure (e.g. the modifications introduced by APE 17)
 requirements:
   - Good knowledge of Python and Javascript
   - Knowledge of signal processing and Fourier methods would be ideal
@@ -30,7 +30,7 @@ Stingray aims to provide a comprehensive library of reliable, well-tested implem
 DAVE is an elegant GUI to the library, developed during a previous GSoC.
 Due to the fast evolving Python and Javascript landscape, this GUI is not compatible with the current versions of the dependencies.
 Also, Stingray has now new features that were not implemented in the original GUI.
-In this project, the student will refresh the GUI dependencies, update the package building infrastructure, and add the new functionality introduced in recent versions of Stingray.
+In this project, the student will refresh the GUI dependencies, update the package building infrastructure (see [APE 17](https://docs.astropy.org/projects/package-template/en/latest/ape17.html)), and add the new functionality introduced in recent versions of Stingray.
 
 #### Milestones (if any)
 

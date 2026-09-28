@@ -4,7 +4,7 @@ desc: Write a Sphinx plugin to identify examples in the Astropy documentation, t
 # add a short one line description of your project
 requirements:
   # Student requirements:
-  - Knowledge of [sphinx](http://www.sphinx-doc.org/en/stable/)
+  - Knowledge of Sphinx
   - Interest in user training
 difficulty: moderate
 issues:
@@ -27,7 +27,7 @@ collaborating_projects:
   - astropy
 ---
 
-Write a Sphinx plugin to identify examples in the Astropy documentation, tag/index them, and build an example gallery from them
+Write a [Sphinx](http://www.sphinx-doc.org/en/stable/) plugin to identify examples in the Astropy documentation, tag/index them, and build an example gallery from them
 
 #### Description
 
