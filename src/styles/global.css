@@ -139,9 +139,10 @@ blockquote {
 
 .site-header .trigger {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 4px 16px;
 }
 
 .site-header .site-title,
@@ -153,6 +154,7 @@ blockquote {
 .site-header .trigger a {
   font-size: 1.05rem;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .site-header .site-title:hover,
@@ -318,7 +320,6 @@ blockquote {
 
   .site-header .trigger a {
     display: block;
-    white-space: nowrap;
   }
 
   .site-header .site-nav.is-open .trigger {
@@ -465,7 +466,7 @@ blockquote {
 }
 
 .universe-archive-season + .universe-archive-season {
-  margin-top: 32px;
+  margin-top: 44px;
 }
 
 .universe-archive-season h2 {
@@ -543,6 +544,7 @@ blockquote {
 .universe-project img {
   width: 24px;
   height: 24px;
+  max-width: none;
   object-fit: contain;
 }
 
