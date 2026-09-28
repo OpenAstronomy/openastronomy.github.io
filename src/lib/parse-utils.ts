@@ -1,6 +1,6 @@
 /**
  * Small coercion helpers for the RSS/Atom feed parser (`feeds.ts`).
- * All take `unknown` and never throw.
+ * None of them throw.
  */
 
 export const asRecord = (value: unknown): Record<string, unknown> | null =>

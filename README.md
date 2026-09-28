@@ -133,9 +133,14 @@ also deploys, which refreshes the `/universe-oa/` feed statuses.
 
 This needs **Settings → Pages → Source** set to **GitHub Actions**. When moving
 off the old Jekyll site, switch that setting _before_ merging the Astro rewrite:
-the old branch build would publish the raw source tree. The root `CNAME` file
-only matters to that old branch build (Actions uses `public/CNAME` via the
-Pages settings) and can be deleted after the switch.
+the old branch build would publish the raw source tree. Actions deploys ignore
+`CNAME` files: the custom domain comes from **Settings → Pages → Custom
+domain**. The root `CNAME` only keeps that domain set if the old branch build
+runs before the switch, and can be deleted afterwards.
+
+GitHub disables scheduled workflows after 60 days without commits to the
+repository. If `/universe-oa/` stops updating, re-enable the CI workflow under
+**Actions → CI**.
 
 The build must keep `.well-known/matrix/` (Matrix server discovery for
 `openastronomy.org`); CI fails if it is missing.

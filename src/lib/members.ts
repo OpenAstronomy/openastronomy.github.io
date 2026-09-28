@@ -1,5 +1,5 @@
 /**
- * Validates `members.json` at load time and exposes per-member link builder.
+ * Validates `members.json` at load time; member lookup, anchors and links.
  */
 import { z } from "astro/zod";
 import rawMembers from "../data/members.json";

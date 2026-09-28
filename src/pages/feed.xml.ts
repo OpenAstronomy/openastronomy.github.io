@@ -19,7 +19,7 @@ export const GET: APIRoute = async ({ site: siteUrl }) => {
     const link = new URL(getPostUrl(post), siteUrl).href;
     return `    <item>
       <title>${escapeXml(post.data.title)}</title>
-      <description>${escapeXml(post.rendered?.html ?? post.data.summary ?? "")}</description>
+      <description>${escapeXml(post.rendered?.html ?? "")}</description>
       <pubDate>${post.data.date.toUTCString()}</pubDate>
       <link>${link}</link>
       <guid isPermaLink="true">${link}</guid>

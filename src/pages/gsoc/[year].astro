@@ -1,11 +1,75 @@
 ---
-import ProjectsLayout from "../../layouts/ProjectsLayout.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/gsoc/ProjectCard.astro";
+import PeopleSection from "../../components/gsoc/PeopleSection.astro";
 import admins from "../../data/gsoc-admins.json";
+import { buildProjectMeta, parseProjectId } from "../../lib/gsoc.ts";
 
 // One season page per year in gsoc-admins.json; projects come from
 // src/content/pages/gsoc/<year>/.
 export const getStaticPaths = () =>
   Object.keys(admins).map((year) => ({ params: { year } }));
+
+const seasonKey = Astro.params.year;
+const pageTitle = `Ideas page for Google Summer of Code ${seasonKey}`;
+
+const adminLookup = admins as Record<string, string[]>;
+const pageEntries = await getCollection("pages");
+type SeasonEntry = {
+  entry: CollectionEntry<"pages">;
+  info: NonNullable<ReturnType<typeof parseProjectId>>;
+};
+const seasonEntries: SeasonEntry[] = pageEntries.flatMap(
+  (entry: CollectionEntry<"pages">) => {
+    const info = parseProjectId(entry.id);
+    return info?.year === seasonKey ? [{ entry, info }] : [];
+  },
+);
+
+const projects = seasonEntries
+  .map(({ entry, info }: SeasonEntry) => buildProjectMeta(entry.data, info))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+const mentors = Array.from(new Set(projects.flatMap((p) => p.mentors))).sort();
+const adminHandles = adminLookup[seasonKey];
+
+const sections = [
+  {
+    id: "projects",
+    label: "Projects",
+    heading: `GSoC Projects for ${seasonKey}`,
+  },
+  { id: "mentors", label: "Mentors", heading: `Mentors for ${seasonKey}` },
+  { id: "admins", label: "Admins", heading: `Admins for ${seasonKey}` },
+];
 ---
 
-<ProjectsLayout seasonKey={Astro.params.year} />
+<BaseLayout title={pageTitle}>
+  <nav class="gsoc-tabs">
+    {sections.map((s) => <a href={`#${s.id}`}>{s.label}</a>)}
+  </nav>
+
+  <section id="projects">
+    <h2>
+      <a class="gsoc-section-link" href="#projects">{sections[0].heading}</a>
+    </h2>
+    {projects.length === 0 ? <p>No projects listed yet.</p> : null}
+    <div class="gsoc-projects-grid">
+      {projects.map((project) => <ProjectCard project={project} />)}
+    </div>
+  </section>
+
+  <PeopleSection
+    id="mentors"
+    heading={sections[1].heading}
+    intro={`We are the mentors for OpenAstronomy in GSoC ${seasonKey}.`}
+    handles={mentors}
+  />
+  <PeopleSection
+    id="admins"
+    heading={sections[2].heading}
+    intro="We are the admins for OpenAstronomy."
+    handles={adminHandles}
+  />
+</BaseLayout>

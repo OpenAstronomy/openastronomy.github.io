@@ -13,7 +13,12 @@ const [current] = (await getCollection("seasons")).sort(
   (a, b) => Number(b.id) - Number(a.id),
 );
 // The file() loader only logs YAML errors, so fail loudly here instead.
-if (!current) throw new Error("No seasons loaded from seasons.yml");
+if (!current) {
+  throw new Error(
+    "No seasons loaded from src/data/universe/seasons.yml; see the " +
+      "[file-loader] error above (YAML syntax or a repeated year).",
+  );
+}
 const season = await buildUniverseSeason({
   year: Number(current.id),
   ...current.data,
