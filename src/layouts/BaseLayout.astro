@@ -9,9 +9,11 @@ type Props = {
   description?: string;
   pageType?: "website" | "article";
   publishedAt?: string | Date;
+  noindex?: boolean;
 };
 
-const { title, description, pageType, publishedAt } = Astro.props as Props;
+const { title, description, pageType, publishedAt, noindex } =
+  Astro.props as Props;
 ---
 
 <!doctype html>
@@ -21,6 +23,7 @@ const { title, description, pageType, publishedAt } = Astro.props as Props;
     description={description}
     pageType={pageType}
     publishedAt={publishedAt}
+    noindex={noindex}
   />
   <body>
     <a class="skip-link" href="#main">

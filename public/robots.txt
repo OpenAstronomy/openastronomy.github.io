@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://openastronomy.org/sitemap-index.xml

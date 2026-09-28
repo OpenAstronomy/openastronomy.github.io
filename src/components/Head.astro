@@ -10,6 +10,7 @@ type Props = {
   description?: string;
   pageType?: "website" | "article";
   publishedAt?: string | Date;
+  noindex?: boolean;
 };
 
 const {
@@ -17,6 +18,7 @@ const {
   description = site.description,
   pageType = "website",
   publishedAt,
+  noindex = false,
 } = Astro.props as Props;
 
 const ogTitle = pageTitle ?? site.title;
@@ -52,6 +54,7 @@ const publishedIso =
   <link rel="icon" type="image/png" sizes="32x32" href={favicon.src} />
   <link rel="apple-touch-icon" href={touchIcon.src} />
   <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex" />}
   <meta name="author" content="OpenAstronomy" />
   <meta property="og:type" content={pageType} />
   <meta property="og:locale" content="en_US" />
