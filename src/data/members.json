@@ -131,7 +131,7 @@
     "socials": {
       "x": "SunPyProject"
     },
-    "description": "is a community-developed free and open-source software package for solar physics. SunPy is meant to be a free alternative to the <a href=\"http://www.lmsal.com/solarsoft/\" target=\"_blank\">SolarSoft</a> and its aim is to provide the software tools necessary so that anyone can analyze solar data."
+    "description": "is a community-developed free and open-source software package for solar physics. SunPy is meant to be a free alternative to the <a href=\"http://www.lmsal.com/solarsoft/\" target=\"_blank\" rel=\"noopener noreferrer\">SolarSoft</a> and its aim is to provide the software tools necessary so that anyone can analyze solar data."
   },
   "stingray": {
     "name": "Stingray",
@@ -164,7 +164,7 @@
     "mailinglists": {
       "users": "https://lists.sourceforge.net/lists/listinfo/chiantipy-users"
     },
-    "description": "is a Python interface to the <a href=\"http://www.chiantidatabase.org/\" target=\"_blank\"> CHIANTI atomic database </a> for astrophysical spectroscopy. CHIANTI consists of a database of atomic data that can be used to interpret spectral lines and continua emitted from high-temperature, optically-thin astrophysical sources."
+    "description": "is a Python interface to the <a href=\"http://www.chiantidatabase.org/\" target=\"_blank\" rel=\"noopener noreferrer\"> CHIANTI atomic database </a> for astrophysical spectroscopy. CHIANTI consists of a database of atomic data that can be used to interpret spectral lines and continua emitted from high-temperature, optically-thin astrophysical sources."
   },
   "coin": {
     "name": "COIN",
@@ -176,7 +176,7 @@
     "mailinglists": {
       "admin (Rafael S. de Souza)": "mailto:rafael.2706@gmail.com"
     },
-    "description": "(COsmostatistics INitiative) is an international working group built under the auspices of the International Astrostatistics Association (<a href=\"https://asaip.psu.edu/organizations/iaa\" target=\"_blank\">IAA</a>). It aims to create an interdisciplinary environment where collaborations between astronomers, statisticians and machine learning experts can flourish. COIN is designed to promote the development of a new family of tools for data exploration in astrophysics and cosmology."
+    "description": "(COsmostatistics INitiative) is an international working group built under the auspices of the International Astrostatistics Association (<a href=\"https://asaip.psu.edu/organizations/iaa\" target=\"_blank\" rel=\"noopener noreferrer\">IAA</a>). It aims to create an interdisciplinary environment where collaborations between astronomers, statisticians and machine learning experts can flourish. COIN is designed to promote the development of a new family of tools for data exploration in astrophysics and cosmology."
   },
   "gnuastro": {
     "name": "GNU Astronomy Utilities",
@@ -189,7 +189,7 @@
       "users": "https://lists.gnu.org/mailman/listinfo/help-gnuastro",
       "devs": "https://lists.gnu.org/mailman/listinfo/gnuastro-devel"
     },
-    "description": "(Gnuastro) is an official GNU package consisting of many <a href=\"https://www.gnu.org/software/gnuastro/manual/html_node/Gnuastro-programs-list.html\" target=\"_blank\">command-line programs</a> and <a href=\"https://www.gnu.org/software/gnuastro/manual/html_node/Gnuastro-library.html\" target=\"_blank\">library functions</a> for the manipulation and analysis of astronomical data. All the programs share the same basic and familiar (GNU style) command-line user interface for the comfort of both the users and developers. Gnuastro is written to comply fully with the GNU coding standards so it blends nicely with all Unix-like operating systems. This also enables astronomers to expect a fully familiar experience in the source code, building, installing and command-line user interaction. Gnuastro also has a very complete <a href=\"https://www.gnu.org/software/gnuastro/manual/index.html\" target=\"_blank\">book/manual</a>, the <a href=\"https://www.gnu.org/software/gnuastro/manual/html_node/Tutorials.html\" target=\"_blank\">tutorials</a> is the best place to start using it."
+    "description": "(Gnuastro) is an official GNU package consisting of many <a href=\"https://www.gnu.org/software/gnuastro/manual/html_node/Gnuastro-programs-list.html\" target=\"_blank\" rel=\"noopener noreferrer\">command-line programs</a> and <a href=\"https://www.gnu.org/software/gnuastro/manual/html_node/Gnuastro-library.html\" target=\"_blank\" rel=\"noopener noreferrer\">library functions</a> for the manipulation and analysis of astronomical data. All the programs share the same basic and familiar (GNU style) command-line user interface for the comfort of both the users and developers. Gnuastro is written to comply fully with the GNU coding standards so it blends nicely with all Unix-like operating systems. This also enables astronomers to expect a fully familiar experience in the source code, building, installing and command-line user interaction. Gnuastro also has a very complete <a href=\"https://www.gnu.org/software/gnuastro/manual/index.html\" target=\"_blank\" rel=\"noopener noreferrer\">book/manual</a>, the <a href=\"https://www.gnu.org/software/gnuastro/manual/html_node/Tutorials.html\" target=\"_blank\" rel=\"noopener noreferrer\">tutorials</a> is the best place to start using it."
   },
   "ims": {
     "name": "The Italian Mars Society",
@@ -204,7 +204,7 @@
     "socials": {
       "x": "marssociety"
     },
-    "description": "(IMS) is a non-profit organization, existing from 2004, as Italian branch of the International Mars Society, created in the USA by Robert Zubrin. IMS is a member of the Mars Society European network. The foundation scope of the Italian Mars Society is to promote research projects devoted to Mars Exploration and the involvement of SMEs and large enterprises in the new economy related to space exploration. <br/> IMS is currently spearheading the <a href=\"http://www.mars-city.org/\" _target=\"_blank\">MARS CITY</a> project. The project aims to address the major issues that could jeopardize a crewed mission to Mars and are not adequately being addressed at existing terrestrial Mars analogs."
+    "description": "(IMS) is a non-profit organization, existing from 2004, as Italian branch of the International Mars Society, created in the USA by Robert Zubrin. IMS is a member of the Mars Society European network. The foundation scope of the Italian Mars Society is to promote research projects devoted to Mars Exploration and the involvement of SMEs and large enterprises in the new economy related to space exploration. <br/> IMS is currently spearheading the <a href=\"http://www.mars-city.org/\" target=\"_blank\" rel=\"noopener noreferrer\">MARS CITY</a> project. The project aims to address the major issues that could jeopardize a crewed mission to Mars and are not adequately being addressed at existing terrestrial Mars analogs."
   },
   "plasmapy": {
     "name": "PlasmaPy",
