@@ -22,7 +22,7 @@ project_size:
 # Different technologies needed
 tags:
   - Julia
-# suborganization(s) to which this project belongs.
+# suborganisation(s) to which this project belongs.
 collaborating_projects:
   - juliaAstro
 ---

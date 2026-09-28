@@ -29,7 +29,7 @@ project_size:
 tags:
   - python
 
-# suborganization(s) to which this project belongs.
+# suborganisation(s) to which this project belongs.
 collaborating_projects:
   - sunpy
 ---
@@ -64,7 +64,7 @@ By the end of the project the contributor will deliver:
 
 ##### Coding starts
 
-- Get familiar with the SunPy organization and the radiospectra codebase
+- Get familiar with the SunPy organisation and the radiospectra codebase
 - Review existing radiospectra functionality and open issues
 - Discuss and refine design choices for the Spectra data model with mentors
 - Survey existing approaches (NDCube, xarray, Astropy WCS) and agree on an implementation plan

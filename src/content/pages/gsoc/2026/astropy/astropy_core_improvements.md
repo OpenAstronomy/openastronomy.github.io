@@ -34,7 +34,7 @@ tags:
   - C++
   - Cython
   - pytest
-# suborganization(s) to which this project belongs.
+# suborganisation(s) to which this project belongs.
 collaborating_projects:
   - astropy
 ---

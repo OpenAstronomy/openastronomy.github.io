@@ -34,7 +34,7 @@ project_size:
 tags:
   - c++
   - python
-# suborganization(s) to which this project belongs.
+# suborganisation(s) to which this project belongs.
 collaborating_projects:
   - lincc-frameworks
 ---

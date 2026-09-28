@@ -18,7 +18,7 @@ tags:
   - python
   - Cython (maybe)
 collaborating_projects:
-  # suborganization(s) to which this project belongs.
+  # suborganisation(s) to which this project belongs.
   - astropy
   - ccdproc
 ---

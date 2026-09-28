@@ -25,7 +25,7 @@ tags:
   - database
   - time series analysis
   - machine learning
-# suborganization(s) to which this project belongs.
+# suborganisation(s) to which this project belongs.
 collaborating_projects:
   - stingray
 ---

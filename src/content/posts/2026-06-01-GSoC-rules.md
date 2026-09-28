@@ -13,7 +13,7 @@ We did it as a mechanism to avoid LLM slop and to make it as transparent as poss
 [SunPy had been using this approach since 2013](https://github.com/sunpy/sunpy/wiki/Google-Summer-of-Code#editions) without any problems.
 
 This time, however, after the selections were announced we got a message from GSoC admins about a complaint involving plagiarism between proposals.
-We've spent a whole week analyzing the situation involving all of the three OA organization admins, the lead mentor of the project involved,
+We've spent a whole week analysing the situation involving all of the three OA organisation admins, the lead mentor of the project involved,
 and GSoC admins.
 Below, we detail some lessons learnt about this situation to help avoid this happening in the future.
 
@@ -41,7 +41,7 @@ Below, we detail some lessons learnt about this situation to help avoid this hap
    And for the first time, we found multiple interpretations to the rules we set.
    From opening an empty pull-request before the deadline and not sharing the content until just after, to uploading all the proposals in a single commit.
    There were also cases of using `pdf` rather than `md` files or grouping multiple proposals in a single pull-request.
-   The other purpose of open proposals, is to follow the [open development approach that is followed by our organizations (second point of our principles)](https://openastronomy.org/#principles-of-openastronomy).
+   The other purpose of open proposals, is to follow the [open development approach that is followed by our organisations (second point of our principles)](https://openastronomy.org/#principles-of-openastronomy).
    As with software, the candidates are expected to work in the open,
    show the evolution of their proposals in multiple commits and iterating on their draft as it gets to a complete status.
    Ideally, even with time enough to get feedback from the community (not just the mentors).

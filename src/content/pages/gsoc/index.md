@@ -9,7 +9,7 @@ layout: page
 
 ## GSoC & OpenAstronomy
 
-OpenAstronomy is an umbrella organization which collects project ideas from any of its members and has been a mentoring organization since 2016.
+OpenAstronomy is an umbrella organisation which collects project ideas from any of its members and has been a mentoring organisation since 2016.
 
 Contributor applications to OpenAstronomy projects follows the same rules as the [Python Software Foundation] and the [GSoC Contributor Guide].
 [We have also our own guide on what we consider a good application for OpenAstronomy.][OpenAstronomy Contributor Guide]
@@ -45,7 +45,7 @@ Contributor applications to OpenAstronomy projects follows the same rules as the
 </ul>
 </details>
 
-## Info for sub-organizations' admins
+## Info for sub-organisations' admins
 
 Whether you have been participating for years or this is your first time [read our guide for sub-org admins.](./suborg_guidelines/)
 

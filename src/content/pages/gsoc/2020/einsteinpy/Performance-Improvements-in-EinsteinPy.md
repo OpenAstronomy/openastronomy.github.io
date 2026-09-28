@@ -30,7 +30,7 @@ tags:
   - Rust
   - C++
 collaborating_projects:
-  # suborganization(s) to which this project belongs.
+  # suborganisation(s) to which this project belongs.
   - einsteinpy
 ---
 

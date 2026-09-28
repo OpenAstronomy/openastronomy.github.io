@@ -24,7 +24,7 @@ tags:
   - plotting
   - 3D
 collaborating_projects:
-  # suborganization(s) to which this project belongs.
+  # suborganisation(s) to which this project belongs.
   - sunpy
 ---
 

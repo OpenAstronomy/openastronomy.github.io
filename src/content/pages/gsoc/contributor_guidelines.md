@@ -41,7 +41,7 @@ Some general pointers to follow are:
   There are loads of things to do with all the projects involved with OpenAstronomy, get involved!
 
 - **Set yourself up as a developer.**
-  Create an account on [GitHub](http://github.com) or the code hosting platform the organization is using.
+  Create an account on [GitHub](http://github.com) or the code hosting platform the organisation is using.
   Don't know how to use [git](http://www.git-scm.com/)?
   Don't worry, there are lots of git [tutorials](https://docs.github.com/en/get-started/getting-started-with-git/set-up-git) [online](http://gitimmersion.com/) that will help you to get quite confident with it in a short time.
   Also both the [Astropy](http://docs.astropy.org/en/stable/index.html#developer-documentation)
@@ -68,7 +68,7 @@ Some general pointers to follow are:
    If you have previously contributed to OpenAstronomy projects, you can point to those pull requests, too.
 
 2. **Plan your application.**
-   Think which is your favorite project from the [ideas page](../) or think of a new one that will help out one of the OpenAstronomy members.
+   Think which is your favourite project from the [ideas page](../) or think of a new one that will help out one of the OpenAstronomy members.
    If you have your own idea, discuss it with the sub-org first, then open a pull request adding it to the ideas page (see the [sub-org guidelines](../suborg_guidelines/)).
    Read the sub-org's user and developer guides, and find all the issues related to the project.
    Prepare a plan on how you will tackle that project and the time it will take you to solve it.

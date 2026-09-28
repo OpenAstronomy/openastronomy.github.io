@@ -4,22 +4,22 @@ title: "GSoC Sub-organizations Guidelines"
 
 # GSoC Sub-organizations Guidelines
 
-OpenAstronomy has been accepted as an umbrella organization since 2016.
+OpenAstronomy has been accepted as an umbrella organisation since 2016.
 We will keep applying every year, but that doesn't mean we will always be selected.
 If selected, we don't know the number of slots we will get till the contributor selection process ends.
-However, it's our intention to keep the process fair for the sub-organizations and contributors.
+However, it's our intention to keep the process fair for the sub-organisations and contributors.
 
 ## I want to propose a new sub-org, what do I do?
 
 First, we recommend you to carefully read [Google's notes for first year organizations][Google-notes] and [the PSF guidelines for sub orgs][PSF-sub-orgs], which provide a general idea about the goals and concepts underpinning the Google Summer of Code program.
 Then, you need to be a member of the OpenAstronomy team.
 That process is simple (and free!).
-You need to be an open-development organization and be related with astronomy.
+You need to be an open-development organisation and be related with astronomy.
 Then make a pull-request to [our repository][OA repository] that adds your organization to [the `members.json` file][members file] (name, website, short description, and links to your repositories, chat, and mailing lists, you can copy an existing entry as a starting point) and your logo image to [`src/assets/members/`][members logos].
 The steering council will review your application and give you feedback.
 
 Once a member, you can start the path to participate on GSoC!
-First you should get familiarized with the program, [Google's mentor guide] is a wonderful resource with detailed information of every aspect of it.
+First you should get familiarised with the program, [Google's mentor guide] is a wonderful resource with detailed information of every aspect of it.
 You need the following:
 
 - Time! How much? a fair bit.
@@ -40,7 +40,7 @@ Besides these deadlines, as a sub-org admin, you will have to keep track of all 
 
 ### Ideas
 
-Normally organizations provide a list of ideas that can be done by a contributor in approximately three months (working full-time).
+Normally organisations provide a list of ideas that can be done by a contributor in approximately three months (working full-time).
 Take a look at what [Google says on how to define a project](https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list), then look at [other ideas OpenAstronomy's members have proposed this or previous years.](../#current-projects).
 
 To add your own, you will have to create a pull-request to [our repository][OA repository] following the [project template].
@@ -69,7 +69,7 @@ For each project idea you need to have at least **two** mentors that are committ
 The mentors need most importantly be familiar with the repository, normally they are real core-contributors, they need to be familiar with the idea and have some idea on how that could be implemented.
 
 The mentors also need to have time for the project.
-We expect around 10 hours per week (not only to mentoring, but to the organization in itself).
+We expect around 10 hours per week (not only to mentoring, but to the organisation in itself).
 That time varies depending from project to project.
 But a minimum they should have a hour per week to discuss with the contributor their progress.
 This can be done as a 10 minutes per day, or as 1 hour video-call.
@@ -80,9 +80,9 @@ Mentors do also need a break.
 They may have a conference to attend or simply they could disappear from the project.
 Having two mentors will help to keep continuity to the contributor project and brings more knowledge to the table.
 
-Though we are not too strict about the availability of the mentors, we suggest they are at least one hour per day - in a non-crazy hour for contributor and mentor - at the chat room of the organization.
-So the contributor can ask the questions needed on the organization room.
-This can also be done via e-mail, but we believe the contributors need to familiarize with the rest of the community.
+Though we are not too strict about the availability of the mentors, we suggest they are at least one hour per day - in a non-crazy hour for contributor and mentor - at the chat room of the organisation.
+So the contributor can ask the questions needed on the organisation room.
+This can also be done via e-mail, but we believe the contributors need to familiarise with the rest of the community.
 (Plus others can help if the mentors are unavailable).
 
 Oh, and yes, **you** as an admin can also be a mentor and don't forget to tell them to read [Google's mentor guide].
@@ -94,9 +94,9 @@ First, have you read the [mentor guide][Google's mentor guide]?
 If so, take a look at it again as a refresher!
 
 The application period for contributors is open just for two weeks.
-However, they will know for more than a month which organizations are participating.
+However, they will know for more than a month which organisations are participating.
 Even some contributors start to show interest from way before that!!
-The main purpose of the programme is to bring new contributors to the organization, so the more they engage the better for your organization.
+The main purpose of the programme is to bring new contributors to the organisation, so the more they engage the better for your organisation.
 The dream contributor is that one that becomes mentor in the following years.
 
 ### Contributor application
@@ -108,13 +108,13 @@ Some sub-orgs require they post publicly their application on their wiki ([see f
 In any case, it's good to encourage the contributors to share the draft of their applications with the mentors, so they can improve it before the deadline.
 
 OpenAstronomy has [certain rules for an application to be considered][contributor guidelines].
-Familiarize with them to be able to inform your mentors and candidates.
+Familiarise with them to be able to inform your mentors and candidates.
 
 ### Applications evaluation
 
 Each sub-org will have to evaluate the contributor application using a shared document within all the mentors.
 The OpenAstronomy administrators will share them with you.
-There you will grade the application, the engagement of the contributor shown so far, the quality of the pull request to the organization, any notes from an interview you may do, etc.
+There you will grade the application, the engagement of the contributor shown so far, the quality of the pull request to the organisation, any notes from an interview you may do, etc.
 
 ### Slots allocation
 
@@ -132,14 +132,14 @@ If the number of slots obtained is smaller than the requested, then the steering
   How has the contributor engaged till now?
 - Commitment of the mentors for the project.
   The mentors need to show they have committed to the sub-org and OpenAstronomy, and evidence of this will make the slot more likely to be allocated.
-  For example, it is best to have mentors that have contributed to the organization's codebase and are familiar with the language and topic.
-- A project that enables cooperation with other sub-organizations of OpenAstronomy will generally be favored over those that do not.
+  For example, it is best to have mentors that have contributed to the organisation's codebase and are familiar with the language and topic.
+- A project that enables cooperation with other sub-organisations of OpenAstronomy will generally be favored over those that do not.
 
 The process will be as open as possible including only the admins and mentors involved in the selection.
 Remember, we cannot disclose any information on contributor selection to the contributors before Google announces the selected contributors
 
 Note that OpenAstronomy usually assigns one slot for first year sub-orgs.
-That may change in a case-by-case basis, e.g., the sub-organization already participated in previous editions of the GSoC (either by itself or with another umbrella organization), or has experience with similar coding outreach programmes, such as [ESA-SOCIS][ESA-SOCIS].
+That may change in a case-by-case basis, e.g., the sub-organisation already participated in previous editions of the GSoC (either by itself or with another umbrella organization), or has experience with similar coding outreach programmes, such as [ESA-SOCIS][ESA-SOCIS].
 
 ### Evaluations
 

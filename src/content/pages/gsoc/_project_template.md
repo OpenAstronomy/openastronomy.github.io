@@ -27,7 +27,7 @@ project_size:
 tags:
   - python
   - postgres
-# Sub-organization(s) to which this project belongs.
+# Sub-organisation(s) to which this project belongs.
 collaborating_projects:
   - astropy
   - juliaAstro

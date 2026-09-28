@@ -24,7 +24,7 @@ tags:
   - C
   - OpenCL
 collaborating_projects:
-  # suborganization(s) to which this project belongs.
+  # suborganisation(s) to which this project belongs.
   - Gnuastro
 ---
 
