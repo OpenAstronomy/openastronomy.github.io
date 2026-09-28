@@ -12,9 +12,7 @@ jobs:
           name: Build site
           command: npm run build
       - run:
-          name: Patch asset paths for artifact viewer
-          # Astro emits processed assets at absolute /_astro/ paths. Prefix
-          # them so the CircleCI artifact viewer can resolve them.
+          name: Patch links for the artifact viewer
           command: |
             sh scripts/circleci-preview.sh \
               "/output/job/${CIRCLE_WORKFLOW_JOB_ID}/artifacts/${CIRCLE_NODE_INDEX}/html"

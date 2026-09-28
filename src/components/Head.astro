@@ -1,6 +1,5 @@
 ---
 import site from "../data/site.json";
-import { fromSiteRoot } from "../lib/relative-paths.ts";
 import faviconAsset from "../assets/favicon.png";
 import backgroundAp from "../assets/background/background_ap.jpg";
 import backgroundSp from "../assets/background/background_sp.jpg";
@@ -23,7 +22,6 @@ const title = pageTitle ?? site.title;
 const pagePath = Astro.url.pathname;
 const canonicalBase = Astro.site ?? site.url;
 const canonicalUrl = new URL(Astro.url.pathname, canonicalBase).toString();
-const faviconHref = fromSiteRoot(pagePath, faviconAsset.src);
 const ogImageUrl = new URL(
   "/og/openastronomy-og.jpg",
   canonicalBase,
@@ -45,7 +43,7 @@ const publishedIso =
 
 <head>
   <title>{title}</title>
-  <link rel="icon" type="image/png" href={faviconHref} />
+  <link rel="icon" type="image/png" href={faviconAsset.src} />
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />

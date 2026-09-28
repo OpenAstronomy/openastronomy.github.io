@@ -4,7 +4,7 @@
  * No Astro-runtime imports here so the helpers stay unit-testable.
  */
 
-import { fromSiteRoot, slugify } from "./relative-paths.ts";
+import { slugify } from "./members.ts";
 
 export type AstroComponentFactory = (...args: unknown[]) => unknown;
 
@@ -74,13 +74,12 @@ const memberLookupKeys = (memberLookup: Record<string, { name?: string }>) => {
 
 /**
  * Resolves a `collaborating_projects` key to a display label + optional
- * relative href into `/members/#<slug>`. Matching is case-insensitive so
+ * href into `/members/#<slug>`. Matching is case-insensitive so
  * legacy values such as `SunPy` and `juliaAstro` still resolve.
  */
 export const formatMemberLink = (
   key: string,
   memberLookup: Record<string, { name?: string }>,
-  pagePath: string,
 ): CollaboratorLink => {
   const memberKey =
     memberLookupKeys(memberLookup).get(key.toLowerCase()) ?? key;
@@ -88,7 +87,7 @@ export const formatMemberLink = (
   if (member?.name) {
     return {
       label: member.name,
-      href: fromSiteRoot(pagePath, `/members/#${slugify(member.name)}`),
+      href: `/members/#${slugify(member.name)}`,
     };
   }
   return { label: key, href: null };
@@ -143,7 +142,6 @@ export const buildProjectMeta = (
   data: Record<string, unknown>,
   pathInfo: { year: string; suborg: string; fileSlug: string },
   memberLookup: Record<string, { name?: string }>,
-  pagePath: string,
 ): ProjectMeta => {
   const name =
     typeof data.name === "string" && data.name.trim()
@@ -152,10 +150,7 @@ export const buildProjectMeta = (
   return {
     name,
     anchor: slugify(name),
-    href: fromSiteRoot(
-      pagePath,
-      `/gsoc/${pathInfo.year}/${pathInfo.suborg}/${pathInfo.fileSlug}/`,
-    ),
+    href: `/gsoc/${pathInfo.year}/${pathInfo.suborg}/${pathInfo.fileSlug}/`,
     desc: typeof data.desc === "string" ? data.desc : "",
     difficulty: normalizeArray(data.difficulty)[0] ?? "",
     requirements: normalizeArray(data.requirements),
@@ -164,7 +159,7 @@ export const buildProjectMeta = (
     projectSize: normalizeArray(data.project_size),
     tags: normalizeArray(data.tags),
     collaborators: normalizeArray(data.collaborating_projects).map((key) =>
-      formatMemberLink(key, memberLookup, pagePath),
+      formatMemberLink(key, memberLookup),
     ),
     issues: normalizeArray(data.issues),
   };

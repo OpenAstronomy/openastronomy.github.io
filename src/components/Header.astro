@@ -2,25 +2,17 @@
 import { Image } from "astro:assets";
 import site from "../data/site.json";
 import icons from "../data/icons.json";
-import { fromSiteRoot, localizeHref } from "../lib/relative-paths.ts";
 import logoWhite from "../assets/logoOA_white.png";
 
-const pagePath = Astro.url.pathname;
 const navLinks = [
-  ...site.page_links.map((page) => ({
-    title: page.title,
-    href: localizeHref(pagePath, page.href),
-  })),
-  ...Object.entries(site.nav_links).map(([title, href]) => ({
-    title,
-    href: localizeHref(pagePath, href),
-  })),
+  ...site.page_links,
+  ...Object.entries(site.nav_links).map(([title, href]) => ({ title, href })),
 ];
 ---
 
 <header class="site-header">
   <div class="container">
-    <a class="site-title" href={fromSiteRoot(pagePath, "/")}>
+    <a class="site-title" href="/">
       <Image
         class="logo"
         src={logoWhite}

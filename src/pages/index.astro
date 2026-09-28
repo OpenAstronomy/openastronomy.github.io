@@ -2,9 +2,6 @@
 import { Image } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import logo from "../assets/logoOA.png";
-import { fromSiteRoot } from "../lib/relative-paths.ts";
-
-const membersHref = fromSiteRoot(Astro.url.pathname, "/members/");
 ---
 
 <BaseLayout title="OpenAstronomy">
@@ -65,7 +62,7 @@ const membersHref = fromSiteRoot(Astro.url.pathname, "/members/");
 
   <p>
     As OA is an umbrella organization, you will need to see our
-    <a href={membersHref}>members page</a> for both information and contact details
+    <a href="/members/">members page</a> for both information and contact details
     of all the individual organizations.
   </p>
 </BaseLayout>

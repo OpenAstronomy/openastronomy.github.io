@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import PageLayout from "../../layouts/PageLayout.astro";
-import { localizeHref } from "../../lib/relative-paths.ts";
 import { resolveProjectDisplay } from "../../lib/member-logos.ts";
 import {
   buildUniverseSeason,
@@ -10,7 +9,6 @@ import {
 import "../../styles/universe.css";
 
 const season = await buildUniverseSeason();
-const pagePath = Astro.url.pathname;
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -74,9 +72,7 @@ const feedErrorMessage = (student: UniverseStudent) =>
       Last checked {timeFormatter.format(season.generatedAt)}
     </p>
     <p>
-      <a href={localizeHref(pagePath, "/universe-oa/archive/")}>
-        View previous seasons
-      </a>
+      <a href="/universe-oa/archive/"> View previous seasons </a>
     </p>
   </div>
 

@@ -6,9 +6,12 @@
  */
 import { Image } from "astro:assets";
 import Icon from "./Icon.astro";
-import { buildMemberLinks, type MemberDetails } from "../lib/members.ts";
+import {
+  buildMemberLinks,
+  slugify,
+  type MemberDetails,
+} from "../lib/members.ts";
 import { memberLogoMap } from "../lib/member-logos.ts";
-import { slugify } from "../lib/relative-paths.ts";
 
 type Props = { memberKey: string; details: MemberDetails; eager?: boolean };
 const { memberKey, details, eager = false } = Astro.props as Props;

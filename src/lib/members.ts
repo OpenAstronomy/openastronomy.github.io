@@ -25,6 +25,14 @@ const memberKeysByLowercase = new Map(
   Object.keys(members).map((key) => [key.toLowerCase(), key]),
 );
 
+/** Lowercase kebab-case slug, used for member anchors on /members/. */
+export const slugify = (value: string): string =>
+  value
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+
 /** Resolves a members.json key case-insensitively (e.g. "SunPy" → "sunpy"). */
 export const findMemberKey = (key: string): string | undefined =>
   memberKeysByLowercase.get(key.toLowerCase());

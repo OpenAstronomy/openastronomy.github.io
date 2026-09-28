@@ -81,7 +81,7 @@ Add a brief inline comment when test setup is non-obvious (e.g. a mock helper or
 ## Astro components
 
 - Keep frontmatter focused on **data fetching and transformation**. Move reusable logic into `src/lib/`.
-- All internal links must use `fromSiteRoot(Astro.url.pathname, "/target/")` from `src/lib/relative-paths.ts`. Hardcoded absolute paths (`/foo/`) break on preview deployments.
+- Write internal links as root-relative paths with a trailing slash (`/members/`). The CircleCI preview rewrites them (`scripts/circleci-preview.sh`).
 - Format with Prettier and lint with ESLint before committing. Run locally before pushing:
 
   ```sh
