@@ -1,7 +1,5 @@
 ---
 title: "Ideas for CasaCore"
-show_main: false
-ideas_team: CasaCore
 ---
 
 # Ideas for CasaCore

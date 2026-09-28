@@ -1,6 +1,5 @@
 ---
 title: "GSoC Contributor Application Guidelines"
-show_main: false
 ---
 
 # GSoC Contributor Application Guidelines

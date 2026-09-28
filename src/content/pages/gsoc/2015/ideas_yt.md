@@ -1,7 +1,5 @@
 ---
 title: "Ideas for yt"
-show_main: false
-ideas_team: yt
 ---
 
 # Ideas for yt

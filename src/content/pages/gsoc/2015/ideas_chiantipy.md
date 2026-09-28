@@ -1,7 +1,5 @@
 ---
 title: "Ideas for ChiantiPy"
-show_main: false
-ideas_team: ChiantiPy
 ---
 
 # Ideas for ChiantiPy

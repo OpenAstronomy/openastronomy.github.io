@@ -1,7 +1,5 @@
 ---
 title: "Ideas for SunPy"
-show_main: false
-ideas_team: SunPy
 ---
 
 # Ideas for SunPy

@@ -1,7 +1,5 @@
 ---
 title: "Ideas for Astropy-affiliated packages"
-show_main: false
-ideas_team: Packages affiliated with Astropy
 ---
 
 # Ideas for Astropy-affiliated packages

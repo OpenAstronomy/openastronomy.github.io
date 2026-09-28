@@ -1,7 +1,5 @@
 ---
 title: "Ideas for Astropy"
-show_main: false
-ideas_team: Astropy core package
 ---
 
 # Ideas for Astropy

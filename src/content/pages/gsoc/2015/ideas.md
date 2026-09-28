@@ -1,6 +1,5 @@
 ---
 title: "Ideas page for Google Summer of Code 2015"
-show_main: false
 ---
 
 # Ideas page for Google Summer of Code 2015

@@ -1,6 +1,5 @@
 ---
 title: "GSoC Sub-organizations Guidelines"
-show_main: false
 ---
 
 # GSoC Sub-organizations Guidelines

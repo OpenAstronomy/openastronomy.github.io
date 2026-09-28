@@ -1,6 +1,5 @@
 ---
 title: "Background on GSoC: Start Here!"
-show_main: false
 ---
 
 # Background on GSoC: Start Here

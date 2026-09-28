@@ -1,7 +1,5 @@
 ---
 title: "Ideas for IMS - ERAS"
-show_main: false
-ideas_team: IMS
 ---
 
 # Ideas for IMS - ERAS

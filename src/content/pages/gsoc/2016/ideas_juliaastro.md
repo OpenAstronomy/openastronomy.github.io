@@ -1,7 +1,5 @@
 ---
 title: "Ideas for Julia Astro"
-show_main: false
-ideas_team: JuliaAstro
 ---
 
 # Ideas for Julia Astro
