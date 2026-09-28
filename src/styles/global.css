@@ -6,8 +6,7 @@
   --color-link: #3e51cf;
   --color-link-hover: #965412;
   --color-heading-link: #2b3990;
-  --color-heading-link-hover: #c26d17;
-  --color-nav-hover: #e15f5f;
+  --color-nav-hover: #ec7a7a;
 }
 
 *,
@@ -67,8 +66,20 @@ h5 a:visited {
 h3 a:hover,
 h4 a:hover,
 h5 a:hover {
-  color: var(--color-heading-link-hover);
+  color: var(--color-link-hover);
   text-decoration: none;
+}
+
+pre {
+  padding: 12px 16px;
+  border-radius: 6px;
+}
+
+:not(pre) > code {
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  background: #f0f0f0;
+  font-size: 0.9em;
 }
 
 blockquote {
@@ -432,9 +443,6 @@ blockquote {
   font-size: 0.85em;
   line-height: 1.4;
   margin-top: 6px;
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
 }
 
 .gsoc-card-label {
@@ -443,7 +451,7 @@ blockquote {
 
 .gsoc-people-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 16px;
   margin-top: 16px;
 }

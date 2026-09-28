@@ -3,6 +3,7 @@ import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import ProjectBody from "../components/gsoc/ProjectBody.astro";
+import admins from "../data/gsoc-admins.json";
 import { buildProjectMeta, parseProjectId } from "../lib/gsoc.ts";
 
 export async function getStaticPaths() {
@@ -11,10 +12,17 @@ export async function getStaticPaths() {
     .filter(
       (page: CollectionEntry<"pages">) => page.id !== "gsoc/_project_template",
     )
-    .map((page: CollectionEntry<"pages">) => ({
-      params: { slug: page.id },
-      props: { page },
-    }));
+    .map((page: CollectionEntry<"pages">) => {
+      // Season pages come from gsoc-admins.json; without an entry a project
+      // would build but nothing would link to it.
+      const year = parseProjectId(page.id)?.year;
+      if (year && !(year in admins)) {
+        throw new Error(
+          `${page.id}: add "${year}" to src/data/gsoc-admins.json so the season page exists`,
+        );
+      }
+      return { params: { slug: page.id }, props: { page } };
+    });
 }
 
 type Props = { page: CollectionEntry<"pages"> };
@@ -23,7 +31,14 @@ const { Content } = await render(page);
 
 const { title, name } = page.data;
 const description = page.data.description ?? undefined;
-const pageTitle = title ?? name ?? undefined;
+// Year-scoped pages (e.g. the 2015/2016 ideas lists) share titles across
+// years, so add the year when the title lacks it.
+const year = page.id.match(/^gsoc\/(\d{4})\//)?.[1];
+const baseTitle = title ?? name ?? undefined;
+const pageTitle =
+  year && baseTitle && !baseTitle.includes(year)
+    ? `${baseTitle} (GSoC ${year})`
+    : baseTitle;
 const projectInfo = parseProjectId(page.id);
 const projectMeta = projectInfo
   ? buildProjectMeta(page.data, projectInfo)
@@ -32,7 +47,7 @@ const projectMeta = projectInfo
 
 {projectMeta ? (
   <BaseLayout
-    title={projectMeta.name}
+    title={`${projectMeta.name} (GSoC ${projectInfo?.year})`}
     description={projectMeta.desc || description}
   >
     <ProjectBody project={projectMeta}>

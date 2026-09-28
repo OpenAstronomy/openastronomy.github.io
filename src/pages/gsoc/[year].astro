@@ -45,8 +45,12 @@ const sections = [
 ];
 ---
 
-<BaseLayout title={pageTitle}>
-  <nav class="gsoc-tabs">
+<BaseLayout
+  title={pageTitle}
+  description={`Project ideas, mentors and admins for OpenAstronomy in Google Summer of Code ${seasonKey}.`}
+>
+  <h1>{pageTitle}</h1>
+  <nav class="gsoc-tabs" aria-label="Sections">
     {sections.map((s) => (
       <a href={`#${s.id}`}>{s.label}</a>
     ))}
