@@ -13,8 +13,8 @@ import {
 } from "../lib/members.ts";
 import { memberLogoMap } from "../lib/member-logos.ts";
 
-type Props = { memberKey: string; details: MemberDetails; eager?: boolean };
-const { memberKey, details, eager = false } = Astro.props as Props;
+type Props = { details: MemberDetails; eager?: boolean };
+const { details, eager = false } = Astro.props as Props;
 
 const links = buildMemberLinks(details);
 const anchorId = slugify(details.name);
@@ -24,16 +24,20 @@ if (!logo) throw new Error(`Missing member logo asset: ${details.logo}`);
 ---
 
 <div class="member-card">
+  <!-- Same target as the name link, so hidden from keyboard and screen readers. -->
   <a
     href={details.url}
     class="member-logo-link"
     target="_blank"
     rel="noopener noreferrer"
+    tabindex="-1"
+    aria-hidden="true"
   >
     <Image
       class="member-logo"
       src={logo}
-      alt={memberKey}
+      alt=""
+      width={240}
       loading={eager ? "eager" : "lazy"}
       fetchpriority={eager ? "high" : "auto"}
     />
@@ -47,11 +51,7 @@ if (!logo) throw new Error(`Missing member logo asset: ${details.logo}`);
       {links.map((link) => (
         <li>
           <a href={link.href} target="_blank" rel="noopener noreferrer">
-            {link.iconName === "envelope" ? (
-              <span class="icon-envelope" aria-hidden="true" />
-            ) : (
-              <Icon name={link.iconName} fill="#333333" />
-            )}
+            <Icon name={link.iconName} fill="#333333" />
             {link.label}
           </a>
         </li>

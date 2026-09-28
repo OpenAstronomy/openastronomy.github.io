@@ -31,18 +31,6 @@ body {
   vertical-align: middle;
 }
 
-.icon-envelope {
-  display: inline-block;
-  width: 16px;
-  text-align: center;
-}
-
-.icon-envelope::before {
-  content: "✉";
-  font-size: 0.9rem;
-  line-height: 1;
-}
-
 h1,
 h2 {
   margin-top: 40px;

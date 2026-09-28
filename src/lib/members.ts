@@ -12,7 +12,11 @@ const memberSchema = z.object({
   repositories: z.record(z.string(), z.string()).optional(),
   mailinglists: z.record(z.string(), z.string()).optional(),
   chats: z.record(z.string(), z.string()).optional(),
-  socials: z.record(z.string(), z.string()).optional(),
+  // Only these social networks are rendered; others fail the build.
+  socials: z
+    .object({ x: z.string().optional(), mastodon: z.string().optional() })
+    .strict()
+    .optional(),
 });
 
 export type MemberDetails = z.infer<typeof memberSchema>;
@@ -61,17 +65,17 @@ const socialBuilder: Record<string, (h: string) => MemberLink | null> = {
 
 /**
  * Builds the icon links (repositories, mailing lists, chats, socials) shown
- * on a member card. Unknown repository hosts fall back to the raw URL.
+ * on a member card. Other repository hosts (e.g. Savannah) take a full URL
+ * and get a generic code icon labelled with the host name.
  */
 export const buildMemberLinks = (details: MemberDetails): MemberLink[] => {
   const links: MemberLink[] = [];
   for (const [key, value] of Object.entries(details.repositories ?? {})) {
-    const known = key in repoUrl;
-    links.push({
-      href: known ? repoUrl[key](value) : value,
-      label: known ? value : details.name,
-      iconName: known ? key : "github",
-    });
+    links.push(
+      key in repoUrl
+        ? { href: repoUrl[key](value), label: value, iconName: key }
+        : { href: value, label: new URL(value).hostname, iconName: "code" },
+    );
   }
   for (const [label, url] of Object.entries(details.mailinglists ?? {})) {
     links.push({ href: url, label, iconName: "envelope" });

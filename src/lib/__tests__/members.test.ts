@@ -38,15 +38,16 @@ describe("buildMemberLinks", () => {
     expect(link.iconName).toBe("sourceforge");
   });
 
-  it("falls back to raw URL + member name + github icon for unknown providers", () => {
+  it("uses the raw URL, its host name and a code icon for other hosts", () => {
     const [link] = buildMemberLinks({
       ...base,
-      name: "Demo",
-      repositories: { gitlab: "https://gitlab.com/org/repo" },
+      repositories: {
+        savannah: "https://git.savannah.gnu.org/cgit/gnuastro.git",
+      },
     });
-    expect(link.href).toBe("https://gitlab.com/org/repo");
-    expect(link.label).toBe("Demo");
-    expect(link.iconName).toBe("github");
+    expect(link.href).toBe("https://git.savannah.gnu.org/cgit/gnuastro.git");
+    expect(link.label).toBe("git.savannah.gnu.org");
+    expect(link.iconName).toBe("code");
   });
 
   it("builds mailing list links with envelope icon", () => {
@@ -93,15 +94,6 @@ describe("buildMemberLinks", () => {
   it("skips malformed mastodon handles", () => {
     expect(
       buildMemberLinks({ ...base, socials: { mastodon: "astropy" } }),
-    ).toEqual([]);
-  });
-
-  it("ignores unsupported social platforms", () => {
-    expect(
-      buildMemberLinks({
-        ...base,
-        socials: { bluesky: "astropy.bsky.social" },
-      }),
     ).toEqual([]);
   });
 

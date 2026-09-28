@@ -8,7 +8,7 @@ import type { ImageMetadata } from "astro";
 import { findMemberKey, members } from "./members.ts";
 
 const logoModules = import.meta.glob<{ default: ImageMetadata }>(
-  "../assets/members/*.{png,jpg,jpeg,webp,avif}",
+  "../assets/members/*.{png,jpg,jpeg,webp,avif,svg,gif}",
   { eager: true },
 );
 

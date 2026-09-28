@@ -12,9 +12,9 @@ const sortedMembers = Object.entries(members).sort(([a], [b]) =>
   <h2>Who is part of OpenAstronomy?</h2>
 
   <div class="members-grid">
-    {sortedMembers.map(([key, details], index) => (
+    {sortedMembers.map(([, details], index) => (
       <div class="members-grid-item">
-        <MemberCard memberKey={key} details={details} eager={index < 4} />
+        <MemberCard details={details} eager={index < 4} />
       </div>
     ))}
   </div>
