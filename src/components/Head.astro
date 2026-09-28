@@ -71,7 +71,7 @@ const publishedIso =
   {pageType === "article" && publishedIso ? (
     <meta property="article:published_time" content={publishedIso} />
   ) : null}
-  <link rel="canonical" href={canonicalUrl} />
+  {!noindex && <link rel="canonical" href={canonicalUrl} />}
   <link
     rel="alternate"
     type="application/rss+xml"

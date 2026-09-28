@@ -105,4 +105,4 @@ TypeScript stays on 6.x until `@astrojs/check` and `typescript-eslint` accept 7.
 
 Commit both `package.json` and `package-lock.json` together. If `npm run build` or `npm test` fails after the update, check the changelog for the offending package and either fix the issue or pin that package back to the previous version.
 
-**Security alerts**: if GitHub raises a Dependabot security alert for a specific npm package, fix that immediately regardless of the regular update schedule.
+**Security alerts**: if GitHub raises a Dependabot security alert for a specific npm package, fix that immediately regardless of the regular update schedule. With "Dependabot security updates" enabled in the repository settings, Dependabot opens the fix PR itself (`.github/dependabot.yml`).

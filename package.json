@@ -19,7 +19,7 @@
     "format:check": "prettier . --check",
     "astro:check": "astro check",
     "check": "npm run lint && npm run astro:check",
-    "linkcheck": "lychee --no-progress --root-dir \"$PWD/html\" html"
+    "linkcheck": "lychee --no-progress --root-dir \"$PWD/html\" --remap \"^https://openastronomy\\.org/(.*)$ file://$PWD/html/\\$1\" html"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

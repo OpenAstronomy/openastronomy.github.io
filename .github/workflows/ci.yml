@@ -44,7 +44,10 @@ jobs:
       - name: Check internal links and anchors
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:
-          args: --no-progress --root-dir "${{ github.workspace }}/html" html
+          args: >-
+            --no-progress --root-dir "${{ github.workspace }}/html"
+            --remap "^https://openastronomy\.org/(.*)$ file://${{ github.workspace }}/html/\$1"
+            html
       - name: Upload Pages artifact
         if: github.repository == 'OpenAstronomy/openastronomy.github.io' && github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0

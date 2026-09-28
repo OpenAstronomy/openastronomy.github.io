@@ -117,7 +117,9 @@ npm run linkcheck
 ```
 
 The options live in `lychee.toml`. External URLs are skipped, so only local
-files and fragment anchors are checked, which keeps CI deterministic.
+files and fragment anchors are checked, which keeps CI deterministic. Absolute
+`https://openastronomy.org/...` links are checked against the build too, except
+for the other repositories' sites on the domain (listed in `lychee.toml`).
 
 ## CI
 

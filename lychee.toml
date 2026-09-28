@@ -3,3 +3,6 @@
 offline = true
 include_fragments = "full"
 index_files = ["index.html"]
+# Absolute https://openastronomy.org/ links are remapped to html/ (see the
+# npm script and CI); these paths are other repos' sites on the same domain.
+exclude = ['/html/(pyastro|Universe_OA|2016-01-11-Sheffield|workshop_sunpy_astropy|workshop-2016-09-12|badges|rcsc18|chat)(/|$)']
