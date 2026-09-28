@@ -28,11 +28,13 @@ const metaParts = [formattedDate, author, meta].filter(Boolean);
   pageType="article"
   publishedAt={dateObject}
 >
-  <header>
-    <h1>{title}</h1>
-    {metaParts.length ? <p class="post-meta">{metaParts.join(" • ")}</p> : null}
-  </header>
   <article>
+    <header>
+      <h1>{title}</h1>
+      {metaParts.length ? (
+        <p class="post-meta">{metaParts.join(" • ")}</p>
+      ) : null}
+    </header>
     <slot />
   </article>
 </BaseLayout>

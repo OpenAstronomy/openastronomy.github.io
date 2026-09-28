@@ -23,14 +23,15 @@ const { title, description, pageType, publishedAt } = Astro.props as Props;
     publishedAt={publishedAt}
   />
   <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
     <Header />
-    <div class="fixed-wrap">
-      <div class="page-content">
-        <div class="container">
-          <slot />
-        </div>
+    <main id="main" class="page-content">
+      <div class="container">
+        <slot />
       </div>
-    </div>
+    </main>
     <Footer />
   </body>
 </html>

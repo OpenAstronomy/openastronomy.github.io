@@ -27,7 +27,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
             <a href={postHref}>{post.data.title}</a>
           </h2>
           <p class="post-meta">{dateFormatter.format(date)}</p>
-          <p>{post.data.summary ?? ""}</p>
+          {post.data.summary && <p>{post.data.summary}</p>}
         </article>
       );
     })}

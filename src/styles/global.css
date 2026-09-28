@@ -170,16 +170,27 @@ blockquote {
 /* Long URLs and inline code in project text must not widen the page. */
 .page-content {
   overflow-wrap: anywhere;
+  padding-bottom: 5px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10;
+  padding: 8px 12px;
+  background: var(--color-light);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
 }
 
 /* Zero specificity so explicit image sizes elsewhere still win. */
 :where(.page-content img) {
   max-width: 100%;
   height: auto;
-}
-
-.fixed-wrap > .page-content {
-  padding-bottom: 5px;
 }
 
 .page-content img.large-logo {

@@ -5,10 +5,6 @@ const { title, description } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description}>
-  <header>
-    <h1>{title}</h1>
-  </header>
-  <article>
-    <slot />
-  </article>
+  <h1>{title}</h1>
+  <slot />
 </BaseLayout>
