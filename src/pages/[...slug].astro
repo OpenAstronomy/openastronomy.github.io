@@ -23,7 +23,8 @@ type Props = { page: CollectionEntry<"pages"> };
 const { page } = Astro.props as Props;
 const { Content } = await render(page);
 
-const { title, name, description } = page.data;
+const { title, name } = page.data;
+const description = page.data.description ?? undefined;
 const pageTitle = title ?? name ?? undefined;
 const seasonMatch = page.id.match(/^gsoc\/(\d{4})$/);
 const projectInfo = parseProjectId(page.id);

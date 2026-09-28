@@ -181,6 +181,17 @@ blockquote {
   padding: 0 32px;
 }
 
+/* Long URLs and inline code in project text must not widen the page. */
+.page-content {
+  overflow-wrap: anywhere;
+}
+
+/* Zero specificity so explicit image sizes elsewhere still win. */
+:where(.page-content img) {
+  max-width: 100%;
+  height: auto;
+}
+
 .fixed-wrap > .page-content {
   padding-bottom: 5px;
 }
@@ -337,6 +348,7 @@ blockquote {
 
   .site-header .trigger a {
     display: block;
+    white-space: nowrap;
   }
 
   .site-header .site-nav.is-open .trigger {

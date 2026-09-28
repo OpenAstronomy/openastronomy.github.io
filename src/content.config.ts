@@ -4,13 +4,15 @@ import { z } from "astro/zod";
 
 const posts = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/posts" }),
-  schema: z.object({
-    title: z.string(),
-    date: z.date(),
-    author: z.string().optional(),
-    meta: z.string().optional(),
-    summary: z.string().optional(),
-  }),
+  schema: z
+    .object({
+      title: z.string(),
+      date: z.date(),
+      author: z.string().optional(),
+      meta: z.string().optional(),
+      summary: z.string().optional(),
+    })
+    .strict(),
 });
 
 // Project frontmatter often leaves fields empty (the template ships them
@@ -34,24 +36,26 @@ const stringListField = z
 
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/pages" }),
-  schema: z.object({
-    title: z.string().nullish(),
-    name: z.string().nullish(),
-    description: z.string().nullish(),
-    season: z.union([z.string(), z.number()]).optional(),
-    layout: z.string().optional(),
-    show_main: z.boolean().optional(),
-    ideas_team: stringField,
-    desc: z.string().nullish(),
-    difficulty: stringField,
-    requirements: stringListField,
-    mentors: stringListField,
-    initiatives: stringListField,
-    project_size: stringListField,
-    tags: stringListField,
-    collaborating_projects: stringListField,
-    issues: stringListField,
-  }),
+  schema: z
+    .object({
+      title: z.string().nullish(),
+      name: z.string().nullish(),
+      description: z.string().nullish(),
+      season: z.union([z.string(), z.number()]).optional(),
+      layout: z.string().optional(),
+      show_main: z.boolean().optional(),
+      ideas_team: stringField,
+      desc: z.string().nullish(),
+      difficulty: stringField,
+      requirements: stringListField,
+      mentors: stringListField,
+      initiatives: stringListField,
+      project_size: stringListField,
+      tags: stringListField,
+      collaborating_projects: stringListField,
+      issues: stringListField,
+    })
+    .strict(),
 });
 
 export const collections = { posts, pages };

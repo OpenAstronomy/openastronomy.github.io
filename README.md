@@ -127,8 +127,26 @@ Supported environment variable:
 
 GitHub Actions (`.github/workflows/ci.yml`) is the merge quality gate. It runs
 formatting, source lint, Markdown lint, Astro checks, unit tests, a production
-build, and an internal link/anchor check. A daily scheduled run keeps the
-build and the `/universe-oa/` feed check exercised.
+build, and an internal link/anchor check.
+
+## Deployment
+
+Pushes to `main` on `OpenAstronomy/openastronomy.github.io` deploy `html/` to
+GitHub Pages from the `Deploy to GitHub Pages` CI job. The daily scheduled run
+also deploys, which refreshes the `/universe-oa/` feed statuses.
+
+This needs **Settings → Pages → Source** set to **GitHub Actions**. When moving
+off the old Jekyll site, switch that setting _before_ merging the Astro rewrite:
+the old branch build would publish the raw source tree. The root `CNAME` file
+only matters to that old branch build (Actions uses `public/CNAME` via the
+Pages settings) and can be deleted after the switch.
+
+The build must keep `.well-known/matrix/` (Matrix server discovery for
+`openastronomy.org`); CI fails if it is missing.
+
+Old Jekyll URLs (`/gsoc/gsoc2026/`, `*.html` pages, `/projects/...`) redirect
+through `src/pages/[...legacy].ts`, using the frozen list in
+`src/data/legacy-redirects.json`.
 
 CircleCI (`.circleci/config.yml`) builds the site and publishes the `html/`
 artifact for pull-request preview.
@@ -136,7 +154,8 @@ artifact for pull-request preview.
 ## Structure
 
 - `public/` contains static passthrough assets such as `CNAME`, Open Graph
-  images, and raw files.
+  images, and raw files. `public/img/` keeps old image URLs that other sites
+  hotlink; the site itself uses the copies in `src/assets/`.
 - `src/assets/` contains assets processed by Astro, including member logos and
   backgrounds.
 - `src/components/` contains shared Astro components.

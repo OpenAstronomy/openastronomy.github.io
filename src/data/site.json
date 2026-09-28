@@ -3,7 +3,9 @@
   "description": "Where all about the combined force of different open source projects in astronomy and astrophysics takes place.",
   "url": "https://openastronomy.org",
   "nav_links": {
-    "Contributor Blogs": "/universe-oa/"
+    "Contributor Blogs": "/universe-oa/",
+    "PyAstro Conference": "https://openastronomy.org/pyastro/",
+    "Events Calendar": "https://calendar.google.com/calendar/embed?src=blhg7t0osn8lrntd709qhg1mis%40group.calendar.google.com"
   },
   "page_links": [
     { "title": "Members", "href": "/members/" },
@@ -21,6 +23,11 @@
       "href": "https://floss.social/@OpenAstronomy",
       "label": "OpenAstronomy on Mastodon",
       "rel": "me noopener noreferrer"
+    },
+    {
+      "icon": "rss",
+      "href": "/feed.xml",
+      "label": "OpenAstronomy news RSS feed"
     },
     {
       "icon": "github",

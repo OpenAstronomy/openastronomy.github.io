@@ -9,9 +9,11 @@
 }
 
 .universe-archive-list {
-  display: grid;
-  gap: 32px;
   margin-top: 24px;
+}
+
+.universe-archive-season + .universe-archive-season {
+  margin-top: 32px;
 }
 
 .universe-archive-season h2 {

@@ -1,4 +1,4 @@
-# Contributor blog feeds for /Universe_OA/.
+# Contributor blog feeds for /universe-oa/.
 # Feed checks run during the Astro build; scheduled CI rebuilds keep the static page fresh.
 # Use src/data/members.json project keys when the contributor belongs to an OpenAstronomy member.
 # The first posting window of each season is optional.

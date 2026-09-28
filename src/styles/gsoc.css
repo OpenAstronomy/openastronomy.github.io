@@ -109,7 +109,6 @@
 
 .gsoc-project-detail-link a {
   color: var(--color-heading-link);
-  word-break: break-all;
 }
 
 dialog.gsoc-project-detail {

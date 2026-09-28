@@ -70,7 +70,12 @@ Some general pointers to follow are:
 
 2. **Plan your application.**
    Think which is your favorite project from the [ideas page](../) or think of a new one that will help out one of the OpenAstronomy members.
+   If you have your own idea, discuss it with the sub-org first, then open a pull request adding it to the ideas page (see the [sub-org guidelines](../suborg_guidelines/)).
+   Read the sub-org's user and developer guides, and find all the issues related to the project.
    Prepare a plan on how you will tackle that project and the time it will take you to solve it.
+   What is the final goal? Can you break it into sub-projects, and estimate how long each will take? The best applications we have had contain a list of problems to solve on a weekly basis.
+   You will hit problems on the way, but a plan helps you prioritise when stuck, and your mentors will help you too.
+   Remember that new code is not only code: its documentation and tests are part of the work.
    Do not worry much in providing exact dates, but plan it as best as you can (if you are planing to have some holidays during the GSoC programme, then you should mention it too).
    Use [our application template][gsoc-proposal-template] to describe how you plan to do the work during the programme.
    Add your draft to the [gsoc-proposals](https://github.com/OpenAstronomy/gsoc-proposals) repository.

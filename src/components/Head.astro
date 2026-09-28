@@ -35,7 +35,7 @@ const ogImageHeight = 630;
 const backgroundOptions = [backgroundAp, backgroundSp];
 const backgroundAsset =
   backgroundOptions[pagePath.length % backgroundOptions.length];
-const backgroundHref = fromSiteRoot(pagePath, backgroundAsset.src);
+const backgroundHref = backgroundAsset.src;
 
 const publishedIso =
   publishedAt instanceof Date
@@ -68,6 +68,12 @@ const publishedIso =
     ) : null
   }
   <link rel="canonical" href={canonicalUrl} />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title={site.title}
+    href="/feed.xml"
+  />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
