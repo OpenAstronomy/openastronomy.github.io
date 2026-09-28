@@ -24,10 +24,7 @@
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
-  border: 0;
-  width: 100%;
   min-width: 0;
-  text-align: left;
   display: flex;
   flex-direction: column;
 }

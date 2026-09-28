@@ -1,28 +1,16 @@
 ---
-/*
- * The hamburger entry in icons.json has `paths` (an array) instead of `d`
- * and is rendered inline by Header.astro directly, not via this component.
- */
 import icons from "../data/icons.json";
 
-type IconEntry = { d?: string; viewBox: string; paths?: string[] };
-
-type Props = {
-  name: string;
-  size?: number;
-  fill?: string;
-};
-const { name, size = 16, fill = "currentColor" } = Astro.props as Props;
-const icon = (icons as unknown as Record<string, IconEntry>)[name];
-if (!icon?.d) {
-  throw new Error(`Unknown icon: ${name}`);
-}
+type Props = { name: string; fill?: string };
+const { name, fill = "currentColor" } = Astro.props as Props;
+const icon = (icons as Record<string, { d: string; viewBox: string }>)[name];
+if (!icon) throw new Error(`Unknown icon: ${name}`);
 ---
 
 <svg
   class="icon"
-  width={size}
-  height={size}
+  width="16"
+  height="16"
   viewBox={icon.viewBox}
   aria-hidden="true"
   focusable="false"
