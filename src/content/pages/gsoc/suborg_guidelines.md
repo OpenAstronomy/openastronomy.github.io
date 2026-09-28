@@ -15,7 +15,10 @@ First, we recommend you to carefully read [Google's notes for first year organiz
 Then, you need to be a member of the OpenAstronomy team.
 That process is simple (and free!).
 You need to be an open-development organisation and be related with astronomy.
-Then make a pull-request to [our repository][OA repository] that adds your organization to [the `members.json` file][members file] (name, website, short description, and links to your repositories, chat, and mailing lists, you can copy an existing entry as a starting point) and your logo image to [`src/assets/members/`][members logos].
+Then make a pull-request to [our repository][OA repository] that adds your organization to [the `members.json` file][members file] (name, website, logo file name, short description, and links to your repositories, chat, and mailing lists, you can copy an existing entry as a starting point) and your logo image to [`src/assets/members/`][members logos].
+The logo can be a PNG, JPG, WebP, AVIF, SVG or GIF file.
+The description is printed right after the name, so write it as a continuation of the name (e.g., "is a Python package for ...").
+The supported `socials` keys are `x` and `mastodon` (as a full `@user@server` handle).
 The steering council will review your application and give you feedback.
 
 Once a member, you can start the path to participate on GSoC!
