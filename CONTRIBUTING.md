@@ -97,18 +97,7 @@ When updating the Node.js version or build command, update both CI configs.
 
 ### GitHub Actions jobs
 
-GitHub Actions (`.github/workflows/ci.yml`) runs on every push and pull request. Jobs run in parallel where possible:
-
-| Job         | What it checks                                                       |
-| ----------- | -------------------------------------------------------------------- |
-| `format`    | Prettier format                                                      |
-| `lint`      | ESLint (warnings treated as errors) + Markdownlint                   |
-| `typecheck` | Astro type/content checks (`astro:check`)                            |
-| `test`      | Unit tests (`npm test`)                                              |
-| `build`     | Production build; output uploaded as a shared artifact               |
-| `linkcheck` | Internal links and anchors (lychee), using the shared build artifact |
-
-All jobs must pass before merging. The `linkcheck` job waits for `build` and all quality jobs.
+GitHub Actions (`.github/workflows/ci.yml`) runs on pull requests and pushes to `main`. One `build` job runs, in order: Prettier, ESLint (warnings are errors), markdownlint, `astro check`, unit tests, the production build, and a lychee check of internal links and anchors. It must pass before merging. On `main` in the upstream repository, a `deploy` job then publishes the build to GitHub Pages.
 
 ---
 
