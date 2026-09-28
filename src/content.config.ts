@@ -18,6 +18,8 @@ const posts = defineCollection({
 
 // Project frontmatter often leaves fields empty (the template ships them
 // commented out), so treat null/empty values as absent instead of failing.
+// List fields also drop placeholders such as "None".
+const PLACEHOLDERS = ["none", "n/a", "na", "null"];
 const stringField = z
   .preprocess(
     (value) => (value === null || value === "" ? undefined : value),
@@ -29,9 +31,15 @@ const stringListField = z
   .preprocess((value) => {
     if (value === null || value === undefined || value === "") return undefined;
     const items = Array.isArray(value) ? value : [value];
-    return items.filter(
-      (item) => item !== null && item !== undefined && item !== "",
-    );
+    return items
+      .map((item) => (typeof item === "string" ? item.trim() : item))
+      .filter(
+        (item) =>
+          item !== null &&
+          item !== undefined &&
+          item !== "" &&
+          !PLACEHOLDERS.includes(String(item).toLowerCase()),
+      );
   }, z.array(z.string()).optional())
   .optional();
 

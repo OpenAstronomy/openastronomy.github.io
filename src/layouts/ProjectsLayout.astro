@@ -4,7 +4,6 @@ import BaseLayout from "./BaseLayout.astro";
 import ProjectCard from "../components/gsoc/ProjectCard.astro";
 import PeopleSection from "../components/gsoc/PeopleSection.astro";
 import admins from "../data/gsoc-admins.json";
-import { members } from "../lib/members.ts";
 import { buildProjectMeta, parseProjectId } from "../lib/gsoc.ts";
 import "../styles/gsoc.css";
 
@@ -26,9 +25,7 @@ const seasonEntries: SeasonEntry[] = pageEntries.flatMap(
 );
 
 const projects = seasonEntries
-  .map(({ entry, info }: SeasonEntry) =>
-    buildProjectMeta(entry.data, info, members),
-  )
+  .map(({ entry, info }: SeasonEntry) => buildProjectMeta(entry.data, info))
   .sort((a, b) => a.name.localeCompare(b.name));
 
 const mentors = Array.from(

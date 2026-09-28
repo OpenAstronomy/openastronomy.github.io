@@ -4,7 +4,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageLayout from "../layouts/PageLayout.astro";
 import ProjectsLayout from "../layouts/ProjectsLayout.astro";
 import ProjectBody from "../components/gsoc/ProjectBody.astro";
-import { members } from "../lib/members.ts";
 import { buildProjectMeta, parseProjectId } from "../lib/gsoc.ts";
 
 export async function getStaticPaths() {
@@ -29,7 +28,7 @@ const pageTitle = title ?? name ?? undefined;
 const seasonMatch = page.id.match(/^gsoc\/(\d{4})$/);
 const projectInfo = parseProjectId(page.id);
 const projectMeta = projectInfo
-  ? buildProjectMeta(page.data, projectInfo, members)
+  ? buildProjectMeta(page.data, projectInfo)
   : null;
 ---
 

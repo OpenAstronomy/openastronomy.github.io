@@ -3,8 +3,8 @@
  *
  * No Astro-runtime imports here so the helpers stay unit-testable.
  */
-
-import { slugify } from "./members.ts";
+import type { CollectionEntry } from "astro:content";
+import { findMemberKey, members, slugify } from "./members.ts";
 
 /** Link to a collaborating member project; `href` is null for non-members. */
 export type CollaboratorLink = {
@@ -33,58 +33,15 @@ export type ProjectMetadataRow = {
 };
 
 /**
- * Coerces a raw frontmatter value to a clean array of non-empty strings.
- * Strips placeholders like "none", "n/a", "null".
- */
-export const normalizeArray = (value: unknown): string[] => {
-  const values = Array.isArray(value)
-    ? value
-    : value !== null && value !== undefined && value !== ""
-      ? [value]
-      : [];
-  return values
-    .map((item) => String(item ?? "").trim())
-    .filter((item) => {
-      const normalized = item.toLowerCase();
-      if (!normalized) return false;
-      return !["none", "n/a", "na", "null"].includes(normalized);
-    });
-};
-
-// Cached per lookup object: formatMemberLink runs once per collaborator and
-// would otherwise rebuild the lowercase-key map on every call.
-const memberKeyCache = new WeakMap<object, Map<string, string>>();
-
-const memberLookupKeys = (memberLookup: Record<string, { name?: string }>) => {
-  let keys = memberKeyCache.get(memberLookup);
-  if (!keys) {
-    keys = new Map(
-      Object.keys(memberLookup).map((key) => [key.toLowerCase(), key]),
-    );
-    memberKeyCache.set(memberLookup, keys);
-  }
-  return keys;
-};
-
-/**
  * Resolves a `collaborating_projects` key to a display label + optional
  * href into `/members/#<slug>`. Matching is case-insensitive so
  * legacy values such as `SunPy` and `juliaAstro` still resolve.
  */
-export const formatMemberLink = (
-  key: string,
-  memberLookup: Record<string, { name?: string }>,
-): CollaboratorLink => {
-  const memberKey =
-    memberLookupKeys(memberLookup).get(key.toLowerCase()) ?? key;
-  const member = memberLookup[memberKey];
-  if (member?.name) {
-    return {
-      label: member.name,
-      href: `/members/#${slugify(member.name)}`,
-    };
-  }
-  return { label: key, href: null };
+export const formatMemberLink = (key: string): CollaboratorLink => {
+  const memberKey = findMemberKey(key);
+  if (!memberKey) return { label: key, href: null };
+  const { name } = members[memberKey];
+  return { label: name, href: `/members/#${slugify(name)}` };
 };
 
 const row = (label: string, values: string[]): ProjectMetadataRow => ({
@@ -133,27 +90,18 @@ export const parseProjectId = (
  * Build the rendered metadata for one project from its parsed frontmatter.
  */
 export const buildProjectMeta = (
-  data: Record<string, unknown>,
+  data: CollectionEntry<"pages">["data"],
   pathInfo: { year: string; suborg: string; fileSlug: string },
-  memberLookup: Record<string, { name?: string }>,
-): ProjectMeta => {
-  const name =
-    typeof data.name === "string" && data.name.trim()
-      ? data.name.trim()
-      : pathInfo.fileSlug;
-  return {
-    name,
-    href: `/gsoc/${pathInfo.year}/${pathInfo.suborg}/${pathInfo.fileSlug}/`,
-    desc: typeof data.desc === "string" ? data.desc : "",
-    difficulty: normalizeArray(data.difficulty)[0] ?? "",
-    requirements: normalizeArray(data.requirements),
-    mentors: normalizeArray(data.mentors),
-    initiatives: normalizeArray(data.initiatives),
-    projectSize: normalizeArray(data.project_size),
-    tags: normalizeArray(data.tags),
-    collaborators: normalizeArray(data.collaborating_projects).map((key) =>
-      formatMemberLink(key, memberLookup),
-    ),
-    issues: normalizeArray(data.issues),
-  };
-};
+): ProjectMeta => ({
+  name: data.name?.trim() || pathInfo.fileSlug,
+  href: `/gsoc/${pathInfo.year}/${pathInfo.suborg}/${pathInfo.fileSlug}/`,
+  desc: data.desc ?? "",
+  difficulty: data.difficulty?.trim() ?? "",
+  requirements: data.requirements ?? [],
+  mentors: data.mentors ?? [],
+  initiatives: data.initiatives ?? [],
+  projectSize: data.project_size ?? [],
+  tags: data.tags ?? [],
+  collaborators: (data.collaborating_projects ?? []).map(formatMemberLink),
+  issues: data.issues ?? [],
+});

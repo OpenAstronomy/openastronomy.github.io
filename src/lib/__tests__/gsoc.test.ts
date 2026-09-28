@@ -1,6 +1,5 @@
 import { describe, it, expect } from "vitest";
 import {
-  normalizeArray,
   formatMemberLink,
   getProjectCardRows,
   getProjectDetailRows,
@@ -8,66 +7,28 @@ import {
   buildProjectMeta,
 } from "../gsoc.ts";
 
-describe("normalizeArray", () => {
-  it("returns an array value as-is after trimming", () => {
-    expect(normalizeArray(["python", "rust"])).toEqual(["python", "rust"]);
-  });
-
-  it("wraps a scalar string in an array", () => {
-    expect(normalizeArray("python")).toEqual(["python"]);
-  });
-
-  it("returns an empty array for null/undefined/empty string", () => {
-    expect(normalizeArray(null)).toEqual([]);
-    expect(normalizeArray(undefined)).toEqual([]);
-    expect(normalizeArray("")).toEqual([]);
-  });
-
-  it("filters out placeholder values (case-insensitive)", () => {
-    expect(normalizeArray(["python", "none", "N/A", "null"])).toEqual([
-      "python",
-    ]);
-  });
-
-  it("trims whitespace and filters blank values", () => {
-    expect(normalizeArray(["  python  ", " rust ", "   "])).toEqual([
-      "python",
-      "rust",
-    ]);
-  });
-
-  it("coerces numbers to strings", () => {
-    expect(normalizeArray(42)).toEqual(["42"]);
-  });
-});
-
-const memberLookup = {
-  sunpy: { name: "SunPy" },
-  astropy: { name: "Astropy" },
-};
 const pathInfo = { year: "2026", suborg: "sunpy", fileSlug: "radiospectra" };
 
 describe("formatMemberLink", () => {
   it("returns the member name and a slugified anchor href for a known key", () => {
-    const result = formatMemberLink("sunpy", memberLookup);
+    const result = formatMemberLink("sunpy");
     expect(result.label).toBe("SunPy");
     expect(result.href).toBe("/members/#sunpy");
   });
 
   it("matches member keys case-insensitively", () => {
-    const result = formatMemberLink("SunPy", memberLookup);
+    const result = formatMemberLink("SunPy");
     expect(result.label).toBe("SunPy");
     expect(result.href).toContain("#sunpy");
   });
 
   it("slugifies multi-word member names for the href anchor", () => {
-    const lookup = { aetheria: { name: "Astronomy Data Commons" } };
-    const result = formatMemberLink("aetheria", lookup);
+    const result = formatMemberLink("astronomy-commons");
     expect(result.href).toContain("#astronomy-data-commons");
   });
 
   it("returns the raw key with a null href for an unknown member", () => {
-    const result = formatMemberLink("unknown-org", memberLookup);
+    const result = formatMemberLink("unknown-org");
     expect(result.label).toBe("unknown-org");
     expect(result.href).toBeNull();
   });
@@ -97,36 +58,31 @@ describe("parseProjectId", () => {
 
 describe("buildProjectMeta", () => {
   it("uses the `name` field when set", () => {
-    const meta = buildProjectMeta(
-      { name: "Radio Spectra" },
-      pathInfo,
-      memberLookup,
-    );
+    const meta = buildProjectMeta({ name: "Radio Spectra" }, pathInfo);
     expect(meta.name).toBe("Radio Spectra");
   });
 
   it("falls back to the file slug when `name` missing", () => {
-    const meta = buildProjectMeta({}, pathInfo, memberLookup);
+    const meta = buildProjectMeta({}, pathInfo);
     expect(meta.name).toBe("radiospectra");
   });
 
   it("builds the href to the standalone project page", () => {
-    const meta = buildProjectMeta({}, pathInfo, memberLookup);
+    const meta = buildProjectMeta({}, pathInfo);
     expect(meta.href).toBe("/gsoc/2026/sunpy/radiospectra/");
   });
 
-  it("normalises array fields and resolves collaborators", () => {
+  it("copies list fields and resolves collaborators", () => {
     const meta = buildProjectMeta(
       {
         mentors: ["alice"],
-        initiatives: "GSOC",
+        initiatives: ["GSOC"],
         project_size: ["350 h (Large)"],
-        tags: ["python", "none"],
+        tags: ["python"],
         collaborating_projects: ["sunpy", "unknown"],
-        issues: "https://github.com/x/y/issues/1",
+        issues: ["https://github.com/x/y/issues/1"],
       },
       pathInfo,
-      memberLookup,
     );
     expect(meta.mentors).toEqual(["alice"]);
     expect(meta.initiatives).toEqual(["GSOC"]);
@@ -140,11 +96,7 @@ describe("buildProjectMeta", () => {
   });
 
   it("adds difficulty when present", () => {
-    const meta = buildProjectMeta(
-      { difficulty: "medium" },
-      pathInfo,
-      memberLookup,
-    );
+    const meta = buildProjectMeta({ difficulty: "medium" }, pathInfo);
     expect(meta.difficulty).toBe("medium");
   });
 });
@@ -158,7 +110,6 @@ describe("getProjectCardRows", () => {
         tags: [],
       },
       pathInfo,
-      memberLookup,
     );
     expect(getProjectCardRows(meta)).toEqual([
       { label: "Mentors", values: ["alice"] },
@@ -177,7 +128,6 @@ describe("getProjectDetailRows", () => {
         tags: ["python"],
       },
       pathInfo,
-      memberLookup,
     );
     expect(getProjectDetailRows(meta)).toEqual([
       { label: "Difficulty", values: ["high"] },
