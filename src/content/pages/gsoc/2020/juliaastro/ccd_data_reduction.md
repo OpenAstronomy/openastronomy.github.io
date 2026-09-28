@@ -22,7 +22,7 @@ tags:
   - Julia
 collaborating_projects:
   # suborganisation(s) to which this project belongs.
-  - JuliaAstro
+  - juliaastro
 ---
 
 For a good background on astronomical data, check out [this paper](https://arxiv.org/abs/1905.13189).

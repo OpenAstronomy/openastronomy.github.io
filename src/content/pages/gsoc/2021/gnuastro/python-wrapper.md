@@ -24,7 +24,7 @@ tags:
   - Git
 collaborating_projects:
   # suborganisation(s) to which this project belongs.
-  - Gnuastro
+  - gnuastro
 ---
 
 #### Description

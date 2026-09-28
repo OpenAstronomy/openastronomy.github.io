@@ -1,5 +1,5 @@
 /**
- * RSS/Atom/RDF feed fetching and parsing for the universe-oa pages.
+ * RSS/Atom feed fetching and parsing for the universe-oa pages.
  *
  * Everything here is independent of the season config; see `universe.ts`
  * for the season builder.
@@ -65,8 +65,8 @@ const pickLink = (value: unknown): string => {
       if (text) return text;
       continue;
     }
-    const href = textValue(record["@href"] ?? record["href"]);
-    const rel = textValue(record["@rel"] ?? record["rel"]);
+    const href = textValue(record["@href"]);
+    const rel = textValue(record["@rel"]);
     if (href && (!rel || rel === "alternate")) return href;
     if (!href && textValue(record["#text"])) return textValue(record["#text"]);
   }
@@ -92,14 +92,7 @@ const itemUrl = (item: Record<string, unknown>, feedUrl: string): string => {
 };
 
 const itemDate = (item: Record<string, unknown>) => {
-  for (const key of [
-    "published",
-    "updated",
-    "pubDate",
-    "dc:date",
-    "date",
-    "created",
-  ]) {
+  for (const key of ["published", "updated", "pubDate"]) {
     const date = parseDateValue(item[key]);
     if (date) return date;
   }
@@ -114,13 +107,12 @@ const itemSummary = (item: Record<string, unknown>) => {
   return undefined;
 };
 
-/** Items of an RSS 2.0 channel, an Atom feed or an RSS 1.0 (RDF) document. */
+/** Items of an RSS 2.0 channel or an Atom feed. */
 const feedItemsFromXml = (xml: string): Record<string, unknown>[] => {
   const parsed = asRecord(xmlParser.parse(xml));
   const items =
     asRecord(asRecord(parsed?.rss)?.channel)?.item ??
-    asRecord(parsed?.feed)?.entry ??
-    asRecord(parsed?.["rdf:RDF"] ?? parsed?.RDF)?.item;
+    asRecord(parsed?.feed)?.entry;
   return asArray(items).flatMap((item) => {
     const record = asRecord(item);
     return record ? [record] : [];

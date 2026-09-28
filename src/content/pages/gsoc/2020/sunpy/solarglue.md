@@ -6,7 +6,6 @@ requirements:
   - Previous QT or GUI experience would be nice
 difficulty: Medium to High
 issues:
-  - None
 mentors:
   - Cadair
   - nabobalis
@@ -17,8 +16,8 @@ tags:
   - python
   - GUI (qtpy)
 collaborating_projects:
-  - SunPy
-  - Glue
+  - sunpy
+  - glue
 ---
 
 #### Description

@@ -20,24 +20,6 @@ describe("buildMemberLinks", () => {
     });
   });
 
-  it("builds a bitbucket repository link", () => {
-    const [link] = buildMemberLinks({
-      ...base,
-      repositories: { bitbucket: "team/repo" },
-    });
-    expect(link.href).toBe("https://bitbucket.org/team/repo");
-    expect(link.iconName).toBe("bitbucket");
-  });
-
-  it("builds a sourceforge repository link", () => {
-    const [link] = buildMemberLinks({
-      ...base,
-      repositories: { sourceforge: "my-project" },
-    });
-    expect(link.href).toBe("https://sourceforge.net/projects/my-project");
-    expect(link.iconName).toBe("sourceforge");
-  });
-
   it("uses the raw URL, its host name and a code icon for other hosts", () => {
     const [link] = buildMemberLinks({
       ...base,

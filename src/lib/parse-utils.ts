@@ -25,7 +25,7 @@ export const textValue = (value: unknown): string => {
   const record = asRecord(value);
   if (!record) return "";
 
-  for (const key of ["#text", "__cdata", "@term", "@label", "@href"]) {
+  for (const key of ["#text", "@term", "@label", "@href"]) {
     const text = textValue(record[key]);
     if (text) return text;
   }

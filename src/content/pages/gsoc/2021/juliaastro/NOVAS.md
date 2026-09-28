@@ -25,7 +25,7 @@ tags:
   - JPL ephemeris library
 collaborating_projects:
   # suborganisation(s) to which this project belongs.
-  - juliaAstro
+  - juliaastro
 ---
 
 Implement a Julia version of the U.S. Naval Observatory Vector Astrometry

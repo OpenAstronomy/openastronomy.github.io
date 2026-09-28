@@ -1,8 +1,9 @@
 ---
 title: Google Summer of Code
-layout: page
 description: "OpenAstronomy in Google Summer of Code: current project ideas, previous seasons, and guides for contributors and sub-organisations."
 ---
+
+# Google Summer of Code
 
 <h2 id="new-to-gsoc">New to Google Summer of Code (GSoC)?</h2>
 

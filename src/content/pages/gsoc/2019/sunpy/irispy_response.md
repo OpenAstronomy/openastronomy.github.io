@@ -21,7 +21,7 @@ tags:
   - python
 collaborating_projects:
   # suborganisation(s) to which this project belongs.
-  - SunPy
+  - sunpy
 ---
 
 #### Description

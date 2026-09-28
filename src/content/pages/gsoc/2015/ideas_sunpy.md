@@ -1,5 +1,5 @@
 ---
-title: "Ideas for sunpy"
+title: "Ideas for sunpy (GSoC 2015)"
 description: "OpenAstronomy Google Summer of Code 2015 project ideas for sunpy."
 ---
 

@@ -2,7 +2,6 @@ import { defineCollection } from "astro:content";
 import { file, glob } from "astro/loaders";
 import { z } from "astro/zod";
 import { members } from "./lib/members.ts";
-import { toStringList } from "./lib/gsoc.ts";
 
 const posts = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/posts" }),
@@ -10,43 +9,30 @@ const posts = defineCollection({
     .object({
       title: z.string(),
       date: z.date(),
-      author: z.string().optional(),
-      meta: z.string().optional(),
       summary: z.string().optional(),
     })
     .strict(),
 });
 
-// Project frontmatter often leaves fields empty (the template ships them
-// commented out), so treat null/empty values as absent instead of failing.
-const stringField = z
-  .preprocess(
-    (value) => (value === null || value === "" ? undefined : value),
-    z.string().optional(),
-  )
-  .optional();
-
-const stringListField = z
-  .preprocess(toStringList, z.array(z.string()).optional())
-  .optional();
+// A key left empty in frontmatter (e.g. `issues:`) parses as null.
+const stringList = z.array(z.string()).nullish();
 
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/pages" }),
   schema: z
     .object({
-      title: z.string().nullish(),
-      name: z.string().nullish(),
-      description: z.string().nullish(),
-      layout: z.string().optional(),
+      title: z.string().optional(),
+      name: z.string().optional(),
+      description: z.string().optional(),
       desc: z.string().nullish(),
-      difficulty: stringField,
-      requirements: stringListField,
-      mentors: stringListField,
-      initiatives: stringListField,
-      project_size: stringListField,
-      tags: stringListField,
-      collaborating_projects: stringListField,
-      issues: stringListField,
+      difficulty: z.string().optional(),
+      requirements: stringList,
+      mentors: stringList,
+      initiatives: stringList,
+      project_size: stringList,
+      tags: stringList,
+      collaborating_projects: stringList,
+      issues: stringList,
     })
     .strict(),
 });
@@ -86,7 +72,6 @@ const seasons = defineCollection({
     .object({
       windows: z
         .array(window)
-        .default([])
         .refine(
           (windows) => windows.every((w, i) => w.optional === (i === 0)),
           "the first window, and only the first, must set optional: true",

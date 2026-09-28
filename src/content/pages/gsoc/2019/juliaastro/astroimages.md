@@ -17,7 +17,7 @@ initiatives:
 tags:
   - julia
 collaborating_projects:
-  - JuliaAstro
+  - juliaastro
 ---
 
 #### Description

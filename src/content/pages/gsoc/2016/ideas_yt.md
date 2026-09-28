@@ -1,5 +1,5 @@
 ---
-title: "Ideas for yt"
+title: "Ideas for yt (GSoC 2016)"
 description: "OpenAstronomy Google Summer of Code 2016 project ideas for yt."
 ---
 

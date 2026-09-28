@@ -158,7 +158,7 @@ artifact for pull-request preview.
 
 ## Structure
 
-- `public/` contains static passthrough assets such as `CNAME`, Open Graph
+- `public/` contains static passthrough assets such as `robots.txt`, Open Graph
   images, and raw files. `public/img/logo/` keeps the logo URLs that the PyAstro
   and GitHub Actions workflow docs sites hotlink, and `public/img/members/` the
   member logos the Universe_OA aggregator uses (delete it once that site is

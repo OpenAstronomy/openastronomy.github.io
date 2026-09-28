@@ -20,7 +20,7 @@ initiatives:
 tags:
   - python
 collaborating_projects:
-  - SunPy
+  - sunpy
 ---
 
 #### Description

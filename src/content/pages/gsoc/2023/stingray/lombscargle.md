@@ -21,7 +21,6 @@ project_size:
 tags:
   # Different technologies needed
   - python
-  -
 collaborating_projects:
   # suborganisation(s) to which this project belongs.
   - stingray

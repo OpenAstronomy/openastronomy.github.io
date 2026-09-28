@@ -4,28 +4,7 @@
  * No Astro-runtime imports here so the helpers stay unit-testable.
  */
 import type { CollectionEntry } from "astro:content";
-import { findMemberKey, members, slugify } from "./members.ts";
-
-const PLACEHOLDERS = ["none", "n/a", "na", "null"];
-
-/**
- * Normalises a frontmatter list field before validation: wraps a single
- * value in a list, trims strings, and drops empty values and placeholders
- * such as "None". Returns undefined for an absent field.
- */
-export const toStringList = (value: unknown): unknown[] | undefined => {
-  if (value === null || value === undefined || value === "") return undefined;
-  const items = Array.isArray(value) ? value : [value];
-  return items
-    .map((item) => (typeof item === "string" ? item.trim() : item))
-    .filter(
-      (item) =>
-        item !== null &&
-        item !== undefined &&
-        item !== "" &&
-        !PLACEHOLDERS.includes(String(item).toLowerCase()),
-    );
-};
+import { members, slugify } from "./members.ts";
 
 /** Link to a collaborating member project; `href` is null for non-members. */
 export type CollaboratorLink = {
@@ -54,14 +33,12 @@ export type ProjectMetadataRow = {
 };
 
 /**
- * Resolves a `collaborating_projects` key to a display label + optional
- * href into `/members/#<slug>`. Matching is case-insensitive so
- * legacy values such as `SunPy` and `juliaAstro` still resolve.
+ * Resolves a `collaborating_projects` key (a members.json key) to a display
+ * label + href into `/members/#<slug>`; other projects stay plain text.
  */
 export const formatMemberLink = (key: string): CollaboratorLink => {
-  const memberKey = findMemberKey(key);
-  if (!memberKey) return { label: key, href: null };
-  const { name } = members[memberKey];
+  if (!Object.hasOwn(members, key)) return { label: key, href: null };
+  const { name } = members[key];
   return { label: name, href: `/members/#${slugify(name)}` };
 };
 
@@ -114,10 +91,10 @@ export const buildProjectMeta = (
   data: CollectionEntry<"pages">["data"],
   pathInfo: { year: string; suborg: string; fileSlug: string },
 ): ProjectMeta => ({
-  name: data.name?.trim() || pathInfo.fileSlug,
+  name: data.name || pathInfo.fileSlug,
   href: `/gsoc/${pathInfo.year}/${pathInfo.suborg}/${pathInfo.fileSlug}/`,
   desc: data.desc ?? "",
-  difficulty: data.difficulty?.trim() ?? "",
+  difficulty: data.difficulty ?? "",
   requirements: data.requirements ?? [],
   mentors: data.mentors ?? [],
   initiatives: data.initiatives ?? [],

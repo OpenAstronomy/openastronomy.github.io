@@ -25,10 +25,6 @@ export const members: Record<string, MemberDetails> = z
   .record(z.string(), memberSchema)
   .parse(rawMembers);
 
-const memberKeysByLowercase = new Map(
-  Object.keys(members).map((key) => [key.toLowerCase(), key]),
-);
-
 /** Lowercase kebab-case slug, used for member anchors on /members/. */
 export const slugify = (value: string): string =>
   value
@@ -37,20 +33,10 @@ export const slugify = (value: string): string =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
-/** Resolves a members.json key case-insensitively (e.g. "SunPy" → "sunpy"). */
-export const findMemberKey = (key: string): string | undefined =>
-  memberKeysByLowercase.get(key.toLowerCase());
-
 export type MemberLink = {
   href: string;
   label: string;
   iconName: string;
-};
-
-const repoUrl: Record<string, (v: string) => string> = {
-  github: (v) => `https://github.com/${v}`,
-  bitbucket: (v) => `https://bitbucket.org/${v}`,
-  sourceforge: (v) => `https://sourceforge.net/projects/${v}`,
 };
 
 const socialBuilder: Record<string, (h: string) => MemberLink | null> = {
@@ -65,15 +51,15 @@ const socialBuilder: Record<string, (h: string) => MemberLink | null> = {
 
 /**
  * Builds the icon links (repositories, mailing lists, chats, socials) shown
- * on a member card. Other repository hosts (e.g. Savannah) take a full URL
- * and get a generic code icon labelled with the host name.
+ * on a member card. `github` takes "owner/repo"; other repository hosts
+ * (e.g. Savannah) take a full URL and get a generic code icon.
  */
 export const buildMemberLinks = (details: MemberDetails): MemberLink[] => {
   const links: MemberLink[] = [];
   for (const [key, value] of Object.entries(details.repositories ?? {})) {
     links.push(
-      key in repoUrl
-        ? { href: repoUrl[key](value), label: value, iconName: key }
+      key === "github"
+        ? { href: `https://github.com/${value}`, label: value, iconName: key }
         : { href: value, label: new URL(value).hostname, iconName: "code" },
     );
   }

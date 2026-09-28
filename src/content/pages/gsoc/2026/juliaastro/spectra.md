@@ -24,7 +24,7 @@ tags:
   - Julia
 # suborganisation(s) to which this project belongs.
 collaborating_projects:
-  - juliaAstro
+  - juliaastro
 ---
 
 #### Description

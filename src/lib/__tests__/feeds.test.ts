@@ -111,16 +111,6 @@ describe("parseFeedXml", () => {
     expect(posts).toEqual([]);
   });
 
-  it("parses RSS 1.0 (RDF) items", () => {
-    const [post] = parseFeedXml(`
-      <rdf:RDF><item>
-        <title>RDF post</title>
-        <link>https://e.com/rdf</link>
-        <dc:date>2026-06-01T00:00:00Z</dc:date>
-      </item></rdf:RDF>`);
-    expect(post.url).toBe("https://e.com/rdf");
-  });
-
   it("keeps only GSoC-tagged Medium posts", () => {
     const posts = parseFeedXml(
       `

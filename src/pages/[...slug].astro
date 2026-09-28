@@ -1,7 +1,6 @@
 ---
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import PageLayout from "../layouts/PageLayout.astro";
 import ProjectBody from "../components/gsoc/ProjectBody.astro";
 import admins from "../data/gsoc-admins.json";
 import { buildProjectMeta, parseProjectId } from "../lib/gsoc.ts";
@@ -29,16 +28,7 @@ type Props = { page: CollectionEntry<"pages"> };
 const { page } = Astro.props as Props;
 const { Content } = await render(page);
 
-const { title, name } = page.data;
-const description = page.data.description ?? undefined;
-// Year-scoped pages (e.g. the 2015/2016 ideas lists) share titles across
-// years, so add the year when the title lacks it.
-const year = page.id.match(/^gsoc\/(\d{4})\//)?.[1];
-const baseTitle = title ?? name ?? undefined;
-const pageTitle =
-  year && baseTitle && !baseTitle.includes(year)
-    ? `${baseTitle} (GSoC ${year})`
-    : baseTitle;
+const { title, description } = page.data;
 const projectInfo = parseProjectId(page.id);
 const projectMeta = projectInfo
   ? buildProjectMeta(page.data, projectInfo)
@@ -49,19 +39,15 @@ const projectMeta = projectInfo
   <BaseLayout
     title={`${projectMeta.name} (GSoC ${projectInfo?.year})`}
     description={`GSoC ${projectInfo?.year}: ${
-      projectMeta.desc || description || "OpenAstronomy project idea."
+      projectMeta.desc || "OpenAstronomy project idea."
     }`}
   >
     <ProjectBody project={projectMeta}>
       <Content />
     </ProjectBody>
   </BaseLayout>
-) : page.data.layout === "page" ? (
-  <PageLayout title={pageTitle} description={description}>
-    <Content />
-  </PageLayout>
 ) : (
-  <BaseLayout title={pageTitle} description={description}>
+  <BaseLayout title={title} description={description}>
     <Content />
   </BaseLayout>
 )}

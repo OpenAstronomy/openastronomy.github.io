@@ -15,7 +15,7 @@ initiatives:
 tags:
   - python
 collaborating_projects:
-  - PlasmaPy
+  - plasmapy
 ---
 
 #### Description

@@ -9,7 +9,7 @@ type Props = {
   pageTitle?: string;
   description?: string;
   pageType?: "website" | "article";
-  publishedAt?: string | Date;
+  publishedAt?: Date;
   noindex?: boolean;
 };
 
@@ -44,10 +44,7 @@ const backgroundHref = (
   await getImage({ src: backgroundAsset, format: "webp" })
 ).src;
 
-const publishedIso =
-  publishedAt instanceof Date
-    ? publishedAt.toISOString()
-    : (publishedAt ?? undefined);
+const publishedIso = publishedAt?.toISOString();
 ---
 
 <head>

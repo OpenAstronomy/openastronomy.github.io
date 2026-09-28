@@ -31,7 +31,7 @@ tags:
 # Sub-organisation(s) to which this project belongs.
 collaborating_projects:
   - astropy
-  - juliaAstro
+  - juliaastro
 ---
 
 ## Description
