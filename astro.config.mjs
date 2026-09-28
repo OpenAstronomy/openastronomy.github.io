@@ -6,9 +6,6 @@ export default defineConfig({
   trailingSlash: "always",
   outDir: "html",
   integrations: [sitemap()],
-  build: {
-    format: "directory",
-  },
   vite: {
     server: {
       watch: {

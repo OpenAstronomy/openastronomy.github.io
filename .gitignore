@@ -1,11 +1,6 @@
-_site/
 .astro/
-.bundle
 .DS_Store
 .history
-.sass-cache/
 *~
-dist/
 html/
 node_modules/
-vendor/

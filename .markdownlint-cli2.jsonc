@@ -1,4 +1,11 @@
 {
-  "globs": ["**/*.{md,mdx}"],
-  "ignores": ["**/node_modules/**", "**/html/**", "**/.history/**"],
+  "gitignore": true,
+  "globs": ["**/*.md"],
+  "config": {
+    "MD013": false,
+    "MD033": false,
+    "MD041": false,
+    "MD024": { "siblings_only": true },
+    "MD025": { "front_matter_title": "" },
+  },
 }
