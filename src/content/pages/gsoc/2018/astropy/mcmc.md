@@ -38,19 +38,19 @@ A _potential_ list of milestones might be:
    Prior distributions.
 3. Determine the best interface to be exposed to the user. For example,
 
-```python
-g = Gaussian1D()
-posterior = g.sample(likelihood='gaussian', prior='uniform', nwalkers=1000, kwargs)
-```
+   ```python
+   g = Gaussian1D()
+   posterior = g.sample(likelihood='gaussian', prior='uniform', nwalkers=1000, kwargs)
+   ```
 
-or
+   or
 
-```python
-sampler = Sampler()
-posterior = sampler(model=Gaussian1D(), likelihood='gaussian', prior='uniform', nwalkers=1000, kwargs)
-```
+   ```python
+   sampler = Sampler()
+   posterior = sampler(model=Gaussian1D(), likelihood='gaussian', prior='uniform', nwalkers=1000, kwargs)
+   ```
 
-1. Write unit tests and documentation (using the astropy affiliated package template)
+4. Write unit tests and documentation (using the astropy affiliated package template)
    to ensure the implementations are operational.
 
 _Notes: a potential good start for any candidates would be to take an
