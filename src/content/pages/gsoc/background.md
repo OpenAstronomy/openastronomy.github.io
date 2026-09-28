@@ -2,9 +2,9 @@
 title: "Background on GSoC: Start Here!"
 ---
 
-# Background on GSoC: Start Here
+<h1 id="background-start-here">Background on GSoC: Start Here</h1>
 
-## What is Google Summer of Code (GSoC)?
+<h2 id="what-is-gsoc">What is Google Summer of Code (GSoC)?</h2>
 
 Google Summer of Code is a remote summer coding program funded by Google.
 Google distributes funds to open software development organizations to recruit new developers and mentors for summer mentorships.
@@ -14,7 +14,7 @@ To apply to be a GSoC contributor, you must write an application to [GSoC] for o
 Each summer, [several projects][oa projects] are offered by OpenAstronomy mentors, with well-defined scope and pre-requisite experience.
 If you are selected by OpenAstronomy (and Google provides the requested number of slots), you will become a GSoC contributor.
 
-## What is OpenAstronomy (OA)?
+<h2 id="what-is-openastronomy">What is OpenAstronomy (OA)?</h2>
 
 OpenAstronomy is an umbrella organization which acts as an interface between the Google Summer of Code and several open source, open development projects in the astronomical community, including [astropy], [sunpy], and [many other astronomy projects][oa members].
 It coordinates mentors and projects for Google Summer of Code mentorships related to astronomy.

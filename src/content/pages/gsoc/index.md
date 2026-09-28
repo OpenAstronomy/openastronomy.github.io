@@ -3,7 +3,7 @@ title: Google Summer of Code
 layout: page
 ---
 
-## New to Google Summer of Code (GSoC)?
+<h2 id="new-to-gsoc">New to Google Summer of Code (GSoC)?</h2>
 
 [We provide some background on GSoC right here!](./background/)
 
@@ -25,12 +25,9 @@ Contributor applications to OpenAstronomy projects follows the same rules as the
 
 - [2026](./2026/)
 
-<br/>
-
 <details>
 <summary>Previous editions</summary>
 <ul>
-  <br/>
   <li><a href="./2025/">2025</a></li>
   <li><a href="./2024/">2024</a></li>
   <li><a href="./2023/">2023</a></li>
@@ -45,7 +42,7 @@ Contributor applications to OpenAstronomy projects follows the same rules as the
 </ul>
 </details>
 
-## Info for sub-organisations' admins
+<h2 id="info-for-sub-organisations-admins">Info for sub-organisations' admins</h2>
 
 Whether you have been participating for years or this is your first time [read our guide for sub-org admins.](./suborg_guidelines/)
 
