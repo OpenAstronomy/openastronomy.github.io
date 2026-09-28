@@ -4,8 +4,6 @@ title: "Ideas page for Google Summer of Code 2015"
 
 # Ideas page for Google Summer of Code 2015
 
-## Ideas page for GSoC 2015
-
 Browse ideas for the following projects:
 
 - [Astropy core package](../ideas_astropy/)
