@@ -485,6 +485,8 @@ blockquote {
   width: 100%;
   min-width: 760px;
   border-collapse: collapse;
+  /* The table scrolls sideways instead, so keep words whole. */
+  overflow-wrap: normal;
 }
 
 .universe-table th,
