@@ -1,4 +1,5 @@
 ---
+# Save a copy of this file as src/content/pages/gsoc/<year>/<suborg>/<name>.md (one file per idea).
 name: Example project
 # Add a short one line description of your project
 desc: This is the first idea for sub-org
