@@ -3,7 +3,6 @@ import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import site from "../data/site.json";
 import redirects from "../data/legacy-redirects.json";
-import { getPostUrl } from "../lib/posts.ts";
 
 // Posts from the Jekyll site keep their old .html URL as the GUID, so feed
 // readers do not show them as new again.
@@ -24,7 +23,7 @@ export const GET: APIRoute = async ({ site: siteUrl }) => {
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
     .slice(0, 10);
   const items = posts.map((post) => {
-    const url = getPostUrl(post);
+    const url = `/news/${post.id}/`;
     const link = new URL(url, siteUrl).href;
     const legacy = legacyUrlFor(url);
     const guid = legacy

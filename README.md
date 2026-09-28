@@ -147,9 +147,11 @@ repository. If `/universe-oa/` stops updating, re-enable the CI workflow under
 The build must keep `.well-known/matrix/` (Matrix server discovery for
 `openastronomy.org`); CI fails if it is missing.
 
-Old Jekyll URLs (`/gsoc/gsoc2026/`, `*.html` pages, `/projects/...`) redirect
-through `src/pages/[...legacy].ts`, using the frozen list in
-`src/data/legacy-redirects.json`.
+The old Jekyll URLs that other sites link to (`/gsoc/gsoc2026/` season pages,
+the GSoC guide `*.html` pages, `/news.html`, the old post URLs and
+`/Universe_OA/`) redirect through `src/pages/[...legacy].ts`, using the frozen
+list in `src/data/legacy-redirects.json`. Other old URLs (such as the
+`/projects/*.html` fragments the old ideas app loaded) are not kept.
 
 CircleCI (`.circleci/config.yml`) builds the site and publishes the `html/`
 artifact for pull-request preview.
@@ -157,8 +159,10 @@ artifact for pull-request preview.
 ## Structure
 
 - `public/` contains static passthrough assets such as `CNAME`, Open Graph
-  images, and raw files. `public/img/` keeps old image URLs that other sites
-  hotlink; the site itself uses the copies in `src/assets/`.
+  images, and raw files. `public/img/logo/` keeps the logo URLs that the PyAstro
+  and GitHub Actions workflow docs sites hotlink, and `public/img/members/` the
+  member logos the Universe_OA aggregator uses (delete it once that site is
+  retired); the site itself uses the copies in `src/assets/`.
 - `src/assets/` contains assets processed by Astro, including member logos and
   backgrounds.
 - `src/components/` contains shared Astro components.

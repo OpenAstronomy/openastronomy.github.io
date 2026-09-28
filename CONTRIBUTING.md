@@ -68,7 +68,7 @@ summary: "One sentence about the post."
 ---
 ```
 
-`title` and `date` are required. `summary` is optional but should always be set: it is the text shown for the post on `/news/` and the page's meta description. The post is published at `/YYYY/MM/DD/slug/`, with the date taken from `date` and the slug from the file name. It also appears in `/feed.xml`.
+`title` and `date` are required. `summary` is optional but should always be set: it is the text shown for the post on `/news/` and the page's meta description. The post is published at `/news/<file name>/`, e.g. `/news/2026-06-01-gsoc-rules/`. It also appears in `/feed.xml`.
 
 ---
 

@@ -1,0 +1,24 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import PostLayout from "../../layouts/PostLayout.astro";
+
+// Posts live at /news/<file name>/, e.g. /news/2026-06-01-gsoc-rules/.
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+type Props = { post: CollectionEntry<"posts"> };
+const { post } = Astro.props as Props;
+const { Content } = await render(post);
+---
+
+<PostLayout
+  title={post.data.title}
+  date={post.data.date}
+  author={post.data.author}
+  meta={post.data.meta}
+  description={post.data.summary}
+>
+  <Content />
+</PostLayout>
