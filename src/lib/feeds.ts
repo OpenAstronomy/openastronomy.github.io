@@ -1,8 +1,8 @@
 /**
  * RSS/Atom/RDF feed fetching and parsing for the universe-oa pages.
  *
- * Everything here is independent of the season config; see
- * `universe-config.ts` for that and `universe.ts` for the season builder.
+ * Everything here is independent of the season config; see `universe.ts`
+ * for the season builder.
  */
 import { XMLParser } from "fast-xml-parser";
 import {

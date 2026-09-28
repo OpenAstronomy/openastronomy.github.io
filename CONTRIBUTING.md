@@ -169,6 +169,4 @@ Major-version bumps usually need migration steps; the error messages typically l
 
 Commit both `package.json` and `package-lock.json` together. If `npm run build` or `npm test` fails after the update, check the changelog for the offending package and either fix the issue or pin that package back to the previous version.
 
-The `overrides` field in `package.json` forces the `yaml` copy nested inside `yaml-language-server` (pulled in by `@astrojs/check`) to match our top-level `yaml` version, because older releases have a known vulnerability. When updating dependencies, check whether the override is still needed (`npm audit` after removing it).
-
 **Security alerts**: if GitHub raises a Dependabot security alert for a specific npm package, fix that immediately regardless of the regular update schedule.

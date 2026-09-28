@@ -17,64 +17,65 @@ The page also reuses existing site data:
 
 ## Data Shape
 
-Each season has:
+The file is keyed by GSoC year. Each season has:
 
-- `year`: the GSoC year.
 - `windows`: posting date ranges for that year.
 - `contributors`: contributor blog feeds for that year.
 
 Each contributor has:
 
 - `name`: contributor handle/name shown in the table.
-- `project`: a key from `src/data/members.json` when possible.
+- `project`: a key from `src/data/members.json`, or one of the non-member
+  projects listed in `EXTERNAL_PROJECTS` in `src/content.config.ts`.
 - `feed`: RSS or Atom feed URL.
 
 The first posting window of each season is optional and should be marked with
 `optional: true`.
 
 ```yaml
-seasons:
-  - year: 2026
-    windows:
-      - start: 2026-05-01
-        end: 2026-05-25
-        optional: true
-      - start: 2026-05-25
-        end: 2026-06-08
-    contributors:
-      - name: example-user
-        project: sunpy
-        feed: https://example.com/feed.xml
+2026:
+  windows:
+    - start: 2026-05-01
+      end: 2026-05-25
+      optional: true
+    - start: 2026-05-25
+      end: 2026-06-08
+  contributors:
+    - name: example-user
+      project: sunpy
+      feed: https://example.com/feed.xml
 ```
 
 ## Updating For A New Season
 
-1. Add a new season at the top of `seasons.yml`.
+1. Add a new year at the top of `seasons.yml`.
 2. Add the posting windows, marking the first one as optional.
 3. Add each contributor with their project key and feed URL.
 4. Run `npm run build` to verify the page can fetch and render the feeds.
 
-If a project is not in `src/data/members.json`, the page still renders the raw
-project value, but no logo is shown.
+Projects listed in `EXTERNAL_PROJECTS` render their raw key with no logo.
 
-The build validates this file before rendering. It fails if seasons,
-contributors, feed URLs, or project keys are malformed. The latest configured
-season must include valid posting windows. Older archive-only season windows are
-ignored if present. For the latest season, the first window must set
-`optional: true`; later windows must not.
+The build validates this file with the `seasons` schema in
+`src/content.config.ts`. It fails if a year is repeated, or if contributors,
+feed URLs, project keys or windows are malformed. In every season the first
+window must set `optional: true`; later windows must not.
+
+A YAML syntax error (including a repeated year) is logged as
+`[file-loader] Error reading data`. CI builds from scratch, so the build then
+fails. Locally, Astro may reuse the last good data; run
+`npm run build -- --force` to rebuild from scratch.
 
 ## Build And Freshness
 
 The page is static. Feeds are fetched during `npm run build`, not when a user
 loads the page.
 
-The GitHub Actions CI workflow has a daily cron trigger, so the build (and
-with it the feed check) is exercised every day. The live page only updates
-when a fresh build is deployed.
+The GitHub Actions CI workflow rebuilds and deploys the site daily, which
+refreshes the feed statuses.
 
 ## Archive
 
-`/universe-oa/` shows the current configured season.
+`/universe-oa/` shows the newest configured season.
 
 `/universe-oa/archive/` lists older seasons and links to the matching GSoC
 project archive pages.

@@ -1,13 +1,15 @@
 ---
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import PageLayout from "../../layouts/PageLayout.astro";
 import { resolveProjectDisplay } from "../../lib/member-logos.ts";
 import { getBlogUrl } from "../../lib/feeds.ts";
-import { loadUniverseConfig } from "../../lib/universe-config.ts";
 import "../../styles/universe.css";
 
-const { seasons, availableYears } = loadUniverseConfig();
-const archivedYears = availableYears.slice(1);
+// Every season except the newest (shown on /universe-oa/).
+const [, ...archived] = (await getCollection("seasons")).sort(
+  (a, b) => Number(b.id) - Number(a.id),
+);
 
 const projectArchiveHref = (year: number) =>
   year >= 2017 ? `/gsoc/${year}/` : `/gsoc/${year}/ideas/`;
@@ -29,8 +31,8 @@ const projectArchiveHref = (year: number) =>
 
   <div class="universe-archive-list">
     {
-      archivedYears.map((year) => {
-        const season = seasons[year];
+      archived.map(({ id, data: season }) => {
+        const year = Number(id);
         return (
           <section class="universe-archive-season">
             <h2>GSoC {year}</h2>
@@ -49,7 +51,7 @@ const projectArchiveHref = (year: number) =>
                 <tbody>
                   {season.contributors.map((contributor) => {
                     const project = resolveProjectDisplay(contributor.project);
-                    const blogUrl = getBlogUrl(contributor.feedUrl, []);
+                    const blogUrl = getBlogUrl(contributor.feed, []);
                     return (
                       <tr>
                         <th scope="row">
@@ -74,7 +76,7 @@ const projectArchiveHref = (year: number) =>
                           </span>
                         </td>
                         <td>
-                          <a href={contributor.feedUrl}>RSS feed</a>
+                          <a href={contributor.feed}>RSS feed</a>
                         </td>
                       </tr>
                     );

@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { UniverseFeedPost } from "../feeds.ts";
-import type { UniverseDateRange } from "../universe-config.ts";
+import type { UniverseDateRange } from "../universe.ts";
 import { computeWindowStatuses } from "../universe.ts";
 
 const date = (value: string) => new Date(value);

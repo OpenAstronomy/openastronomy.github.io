@@ -1,7 +1,7 @@
 /**
  * Builds render-ready season data for the universe-oa pages: fetches each
- * contributor's feed (`feeds.ts`) against the configured season windows
- * (`universe-config.ts`) and computes per-window blog status.
+ * contributor's feed (`feeds.ts`) against a season's windows (the `seasons`
+ * content collection) and computes per-window blog status.
  */
 import {
   DEFAULT_TIMEOUT_MS,
@@ -10,11 +10,19 @@ import {
   type ParsedFeed,
   type UniverseFeedPost,
 } from "./feeds.ts";
-import {
-  loadUniverseConfig,
-  resolveUniverseYear,
-  type UniverseDateRange,
-} from "./universe-config.ts";
+
+export type UniverseDateRange = {
+  start: Date;
+  end: Date;
+  optional?: boolean;
+};
+
+/** One season from `src/data/universe/seasons.yml`. */
+export type UniverseSeasonConfig = {
+  year: number;
+  windows: UniverseDateRange[];
+  contributors: { name: string; project: string; feed: string }[];
+};
 
 export type UniverseWindowStatus = UniverseDateRange & {
   status: "complete" | "missing" | "optional" | "pending";
@@ -33,12 +41,10 @@ export type UniverseStudent = {
 };
 
 export type UniverseSeason = {
-  seasonKey: string;
   year: number;
   generatedAt: Date;
   students: UniverseStudent[];
   dateRanges: UniverseDateRange[];
-  availableYears: number[];
   totals: {
     complete: number;
     missing: number;
@@ -50,7 +56,6 @@ export type UniverseSeason = {
 };
 
 type BuildUniverseSeasonOptions = {
-  year?: number;
   now?: Date;
   fetcher?: typeof fetch;
   timeoutMs?: number;
@@ -76,21 +81,19 @@ export const computeWindowStatuses = (
     return { ...range, status };
   });
 
-export const buildUniverseSeason = async ({
-  year,
-  now = new Date(),
-  fetcher = fetch,
-  timeoutMs = DEFAULT_TIMEOUT_MS,
-}: BuildUniverseSeasonOptions = {}): Promise<UniverseSeason> => {
-  const { seasons, availableYears } = loadUniverseConfig();
-  const resolvedYear = resolveUniverseYear(availableYears, now, year);
-  const seasonKey = `gsoc${resolvedYear}`;
-  const season = seasons[resolvedYear];
-  const ranges = season?.dateRanges ?? [];
+export const buildUniverseSeason = async (
+  season: UniverseSeasonConfig,
+  {
+    now = new Date(),
+    fetcher = fetch,
+    timeoutMs = DEFAULT_TIMEOUT_MS,
+  }: BuildUniverseSeasonOptions = {},
+): Promise<UniverseSeason> => {
+  const ranges = season.windows;
 
   const students = await Promise.all(
-    (season?.contributors ?? []).map(async (contributor) => {
-      const { name, feedUrl, project } = contributor;
+    season.contributors.map(async (contributor) => {
+      const { name, feed: feedUrl, project } = contributor;
       const feed: ParsedFeed = feedUrl
         ? await fetchFeed(feedUrl, fetcher, timeoutMs)
         : {
@@ -132,12 +135,10 @@ export const buildUniverseSeason = async ({
   }
 
   return {
-    seasonKey,
-    year: resolvedYear,
+    year: season.year,
     generatedAt: now,
     students,
     dateRanges: ranges,
-    availableYears,
     totals,
   };
 };

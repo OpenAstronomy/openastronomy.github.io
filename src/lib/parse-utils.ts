@@ -1,6 +1,5 @@
 /**
- * Small coercion helpers shared by the universe-oa config loader
- * (`universe-config.ts`) and the RSS/Atom feed parser (`feeds.ts`).
+ * Small coercion helpers for the RSS/Atom feed parser (`feeds.ts`).
  * All take `unknown` and never throw.
  */
 

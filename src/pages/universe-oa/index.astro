@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import PageLayout from "../../layouts/PageLayout.astro";
 import { resolveProjectDisplay } from "../../lib/member-logos.ts";
 import {
@@ -8,7 +9,16 @@ import {
 } from "../../lib/universe.ts";
 import "../../styles/universe.css";
 
-const season = await buildUniverseSeason();
+// The newest season in src/data/universe/seasons.yml is the current one.
+const [current] = (await getCollection("seasons")).sort(
+  (a, b) => Number(b.id) - Number(a.id),
+);
+// The file() loader only logs YAML errors, so fail loudly here instead.
+if (!current) throw new Error("No seasons loaded from seasons.yml");
+const season = await buildUniverseSeason({
+  year: Number(current.id),
+  ...current.data,
+});
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
