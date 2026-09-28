@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import type { UniverseFeedPost } from "../feeds.ts";
 import type { UniverseDateRange } from "../universe.ts";
-import { computeWindowStatuses } from "../universe.ts";
+import { computeWindowStatuses, contributorWindows } from "../universe.ts";
 
 const date = (value: string) => new Date(value);
 
@@ -49,5 +49,29 @@ describe("computeWindowStatuses", () => {
       "missing",
       "pending",
     ]);
+  });
+});
+
+describe("contributorWindows", () => {
+  const ranges: UniverseDateRange[] = [
+    { start: date("2026-05-01T00:00:00Z"), end: date("2026-05-15T00:00:00Z") },
+  ];
+
+  it("marks every window unknown when the feed could not be fetched", () => {
+    expect(
+      contributorWindows(ranges, { status: "unavailable", posts: [] }).map(
+        (window) => window.status,
+      ),
+    ).toEqual(["unknown"]);
+  });
+
+  it("computes statuses from posts when the feed was fetched", () => {
+    expect(
+      contributorWindows(
+        ranges,
+        { status: "empty", posts: [] },
+        date("2026-06-01T00:00:00Z"),
+      ).map((window) => window.status),
+    ).toEqual(["missing"]);
   });
 });

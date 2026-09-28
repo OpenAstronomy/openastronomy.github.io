@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import {
+  toStringList,
   formatMemberLink,
   getProjectCardRows,
   getProjectDetailRows,
@@ -135,5 +136,27 @@ describe("getProjectDetailRows", () => {
       { label: "Project size", values: ["350 h"] },
       { label: "Tags", values: ["python"] },
     ]);
+  });
+});
+
+describe("toStringList", () => {
+  it("returns undefined for absent or empty fields", () => {
+    expect(toStringList(undefined)).toBeUndefined();
+    expect(toStringList(null)).toBeUndefined();
+    expect(toStringList("")).toBeUndefined();
+  });
+
+  it("wraps a single value and trims strings", () => {
+    expect(toStringList("  python ")).toEqual(["python"]);
+  });
+
+  it("drops empty items and placeholders case-insensitively", () => {
+    expect(toStringList(["python", " ", null, "None", "N/A", "null"])).toEqual([
+      "python",
+    ]);
+  });
+
+  it("leaves non-strings for the schema to reject", () => {
+    expect(toStringList([350])).toEqual([350]);
   });
 });

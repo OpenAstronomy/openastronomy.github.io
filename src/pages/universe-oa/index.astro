@@ -1,28 +1,16 @@
 ---
 import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
 import PageLayout from "../../layouts/PageLayout.astro";
 import { resolveProjectDisplay } from "../../lib/member-logos.ts";
+import { getSeasons } from "../../lib/seasons.ts";
 import {
   buildUniverseSeason,
   type UniverseStudent,
 } from "../../lib/universe.ts";
 
-// The newest season in src/data/universe/seasons.yml is the current one.
-const [current] = (await getCollection("seasons")).sort(
-  (a, b) => Number(b.id) - Number(a.id),
-);
-// The file() loader only logs YAML errors, so fail loudly here instead.
-if (!current) {
-  throw new Error(
-    "No seasons loaded from src/data/universe/seasons.yml; see the " +
-      "[file-loader] error above (YAML syntax or a repeated year).",
-  );
-}
-const season = await buildUniverseSeason({
-  year: Number(current.id),
-  ...current.data,
-});
+// The newest season is the current one.
+const [current] = await getSeasons();
+const season = await buildUniverseSeason(current);
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -45,7 +33,9 @@ const formatRange = (start: Date, end: Date) =>
   `${dateFormatter.format(start)} - ${dateFormatter.format(end)}`;
 
 const statusLabel = (status: string) =>
-  status.charAt(0).toUpperCase() + status.slice(1);
+  status === "unknown"
+    ? "Unknown (feed failed)"
+    : status.charAt(0).toUpperCase() + status.slice(1);
 
 // Shape-coded status so it does not rely on colour alone.
 const statusGlyph: Record<string, string> = {
@@ -53,6 +43,7 @@ const statusGlyph: Record<string, string> = {
   missing: "✕",
   optional: "○",
   pending: "·",
+  unknown: "?",
 };
 
 const feedLabel = (student: UniverseStudent) => {
@@ -149,6 +140,7 @@ const feedErrorMessage = (student: UniverseStudent) =>
                 <div class="universe-windows">
                   {student.windows.map((window, index) => (
                     <span
+                      role="img"
                       class={`universe-window universe-window-${window.status}`}
                       title={`${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}
                       aria-label={`Window ${index + 1}, ${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}

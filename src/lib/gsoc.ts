@@ -6,6 +6,27 @@
 import type { CollectionEntry } from "astro:content";
 import { findMemberKey, members, slugify } from "./members.ts";
 
+const PLACEHOLDERS = ["none", "n/a", "na", "null"];
+
+/**
+ * Normalises a frontmatter list field before validation: wraps a single
+ * value in a list, trims strings, and drops empty values and placeholders
+ * such as "None". Returns undefined for an absent field.
+ */
+export const toStringList = (value: unknown): unknown[] | undefined => {
+  if (value === null || value === undefined || value === "") return undefined;
+  const items = Array.isArray(value) ? value : [value];
+  return items
+    .map((item) => (typeof item === "string" ? item.trim() : item))
+    .filter(
+      (item) =>
+        item !== null &&
+        item !== undefined &&
+        item !== "" &&
+        !PLACEHOLDERS.includes(String(item).toLowerCase()),
+    );
+};
+
 /** Link to a collaborating member project; `href` is null for non-members. */
 export type CollaboratorLink = {
   label: string;

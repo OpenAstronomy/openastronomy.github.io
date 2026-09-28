@@ -4,6 +4,7 @@
  * content collection) and computes per-window blog status.
  */
 import { fetchFeed, getBlogUrl, type UniverseFeedPost } from "./feeds.ts";
+import type { Season } from "./seasons.ts";
 
 export type UniverseDateRange = {
   start: Date;
@@ -11,15 +12,9 @@ export type UniverseDateRange = {
   optional?: boolean;
 };
 
-/** One season from `src/data/universe/seasons.yml`. */
-export type UniverseSeasonConfig = {
-  year: number;
-  windows: UniverseDateRange[];
-  contributors: { name: string; project: string; feed: string }[];
-};
-
 export type UniverseWindowStatus = UniverseDateRange & {
-  status: "complete" | "missing" | "optional" | "pending";
+  // "unknown": the feed could not be fetched, so there is nothing to judge.
+  status: "complete" | "missing" | "optional" | "pending" | "unknown";
 };
 
 export type UniverseStudent = {
@@ -52,7 +47,17 @@ export const computeWindowStatuses = (
     return { ...range, status };
   });
 
-export const buildUniverseSeason = async (season: UniverseSeasonConfig) => {
+/** Window statuses for one contributor; all "unknown" if the feed failed. */
+export const contributorWindows = (
+  ranges: UniverseDateRange[],
+  feed: { status: string; posts: UniverseFeedPost[] },
+  now = new Date(),
+): UniverseWindowStatus[] =>
+  feed.status === "unavailable"
+    ? ranges.map((range) => ({ ...range, status: "unknown" }))
+    : computeWindowStatuses(ranges, feed.posts, now);
+
+export const buildUniverseSeason = async (season: Season) => {
   const now = new Date();
   const students: UniverseStudent[] = await Promise.all(
     season.contributors.map(async ({ name, feed: feedUrl, project }) => {
@@ -64,7 +69,7 @@ export const buildUniverseSeason = async (season: UniverseSeasonConfig) => {
         feedStatus: feed.status,
         feedError: feed.error,
         posts: feed.posts,
-        windows: computeWindowStatuses(season.windows, feed.posts, now),
+        windows: contributorWindows(season.windows, feed, now),
       };
     }),
   );

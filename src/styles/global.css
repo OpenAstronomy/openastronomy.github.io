@@ -596,3 +596,9 @@ blockquote {
   border-color: #c9c9c9;
   color: #555555;
 }
+
+.universe-window-unknown {
+  background: #fff4d6;
+  border-color: #e0bf62;
+  color: #6b4f00;
+}

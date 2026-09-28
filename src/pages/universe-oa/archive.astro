@@ -1,14 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import { getCollection } from "astro:content";
 import PageLayout from "../../layouts/PageLayout.astro";
 import { resolveProjectDisplay } from "../../lib/member-logos.ts";
 import { getBlogUrl } from "../../lib/feeds.ts";
+import { getSeasons } from "../../lib/seasons.ts";
 
 // Every season except the newest (shown on /universe-oa/).
-const [, ...archived] = (await getCollection("seasons")).sort(
-  (a, b) => Number(b.id) - Number(a.id),
-);
+const [, ...archived] = await getSeasons();
 
 const projectArchiveHref = (year: number) =>
   year >= 2017 ? `/gsoc/${year}/` : `/gsoc/${year}/ideas/`;
@@ -29,8 +27,8 @@ const projectArchiveHref = (year: number) =>
   </div>
 
   <div class="universe-archive-list">
-    {archived.map(({ id, data: season }) => {
-      const year = Number(id);
+    {archived.map((season) => {
+      const year = season.year;
       return (
         <section class="universe-archive-season">
           <h2>GSoC {year}</h2>

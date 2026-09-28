@@ -2,6 +2,7 @@ import { defineCollection } from "astro:content";
 import { file, glob } from "astro/loaders";
 import { z } from "astro/zod";
 import { members } from "./lib/members.ts";
+import { toStringList } from "./lib/gsoc.ts";
 
 const posts = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/posts" }),
@@ -18,8 +19,6 @@ const posts = defineCollection({
 
 // Project frontmatter often leaves fields empty (the template ships them
 // commented out), so treat null/empty values as absent instead of failing.
-// List fields also drop placeholders such as "None".
-const PLACEHOLDERS = ["none", "n/a", "na", "null"];
 const stringField = z
   .preprocess(
     (value) => (value === null || value === "" ? undefined : value),
@@ -28,19 +27,7 @@ const stringField = z
   .optional();
 
 const stringListField = z
-  .preprocess((value) => {
-    if (value === null || value === undefined || value === "") return undefined;
-    const items = Array.isArray(value) ? value : [value];
-    return items
-      .map((item) => (typeof item === "string" ? item.trim() : item))
-      .filter(
-        (item) =>
-          item !== null &&
-          item !== undefined &&
-          item !== "" &&
-          !PLACEHOLDERS.includes(String(item).toLowerCase()),
-      );
-  }, z.array(z.string()).optional())
+  .preprocess(toStringList, z.array(z.string()).optional())
   .optional();
 
 const pages = defineCollection({
@@ -78,12 +65,15 @@ const window = z
 
 const contributor = z
   .object({
-    name: z.string().min(1),
+    name: z.string().trim().min(1),
     project: z
       .string()
       .refine(
-        (key) => key in members || EXTERNAL_PROJECTS.includes(key),
-        "must be a src/data/members.json key or listed in EXTERNAL_PROJECTS",
+        (key) => Object.hasOwn(members, key) || EXTERNAL_PROJECTS.includes(key),
+        {
+          error: (issue) =>
+            `"${issue.input}" is not a src/data/members.json key or listed in EXTERNAL_PROJECTS`,
+        },
       ),
     feed: z.url({ protocol: /^https?$/ }),
   })

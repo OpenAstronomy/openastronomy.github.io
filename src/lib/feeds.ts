@@ -33,6 +33,8 @@ const xmlParser = new XMLParser({
   attributeNamePrefix: "@",
   ignoreAttributes: false,
   processEntities: true,
+  // Decode HTML entities such as &#8217; that WordPress puts in titles.
+  htmlEntities: true,
   textNodeName: "#text",
   trimValues: true,
 });
@@ -54,9 +56,8 @@ const isRelevantMediumItem = (item: Record<string, unknown>) =>
     stripHtml(textValue(item["content:encoded"] ?? item.content)),
   ].some((text) => GSOC_PATTERN.test(text ?? ""));
 
+/** RSS <link> text or Atom <link href> (never rel="self" and friends). */
 const pickLink = (value: unknown): string => {
-  if (typeof value === "string") return value.trim();
-
   for (const entry of asArray(value)) {
     const record = asRecord(entry);
     if (!record) {
@@ -64,13 +65,30 @@ const pickLink = (value: unknown): string => {
       if (text) return text;
       continue;
     }
-
     const href = textValue(record["@href"] ?? record["href"]);
     const rel = textValue(record["@rel"] ?? record["rel"]);
     if (href && (!rel || rel === "alternate")) return href;
+    if (!href && textValue(record["#text"])) return textValue(record["#text"]);
   }
+  return "";
+};
 
-  return textValue(value);
+/** RSS 2.0 <guid>, which is a permalink unless isPermaLink="false". */
+const permalinkGuid = (value: unknown): string =>
+  textValue(asRecord(value)?.["@isPermaLink"]) === "false"
+    ? ""
+    : textValue(value);
+
+/** The post URL, resolved against the feed URL when it is relative. */
+const itemUrl = (item: Record<string, unknown>, feedUrl: string): string => {
+  const raw =
+    pickLink(item.link) || permalinkGuid(item.guid) || pickLink(item.id);
+  if (!raw) return "";
+  try {
+    return new URL(raw, feedUrl || undefined).href;
+  } catch {
+    return "";
+  }
 };
 
 const itemDate = (item: Record<string, unknown>) => {
@@ -119,7 +137,7 @@ export const parseFeedXml = (xml: string, feedUrl = ""): UniverseFeedPost[] => {
       }
 
       const publishedAt = itemDate(item);
-      const url = pickLink(item.link ?? item.id);
+      const url = itemUrl(item, feedUrl);
       if (!publishedAt || !url || !isHttpUrl(url)) return [];
 
       const title =

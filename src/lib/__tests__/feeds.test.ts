@@ -65,6 +65,62 @@ describe("parseFeedXml", () => {
     expect(posts.map((post) => post.url)).toEqual(["https://example.com/safe"]);
   });
 
+  const rssItem = (inner: string) => `
+    <rss><channel><item>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>${inner}
+    </item></channel></rss>`;
+
+  it("decodes numeric HTML entities in titles", () => {
+    const [post] = parseFeedXml(
+      rssItem(
+        "<title>GSoC&#8217;26 &#8211; done</title><link>https://e.com/a</link>",
+      ),
+    );
+    expect(post.title).toBe("GSoC’26 – done");
+  });
+
+  it("resolves relative item links against the feed URL", () => {
+    const [post] = parseFeedXml(
+      rssItem("<title>A</title><link>/posts/a</link>"),
+      "https://blog.example.com/feed.xml",
+    );
+    expect(post.url).toBe("https://blog.example.com/posts/a");
+  });
+
+  it("falls back to a permalink guid when an RSS item has no link", () => {
+    const [post] = parseFeedXml(
+      rssItem(
+        '<title>A</title><guid isPermaLink="true">https://e.com/a</guid>',
+      ),
+    );
+    expect(post.url).toBe("https://e.com/a");
+    expect(
+      parseFeedXml(
+        rssItem('<title>B</title><guid isPermaLink="false">tag:e.com,1</guid>'),
+      ),
+    ).toEqual([]);
+  });
+
+  it("never uses an Atom rel=self link as the post URL", () => {
+    const posts = parseFeedXml(`
+      <feed><entry>
+        <title>Self only</title>
+        <updated>2026-06-01T00:00:00Z</updated>
+        <link rel="self" href="https://api.example.com/entry/1"/>
+      </entry></feed>`);
+    expect(posts).toEqual([]);
+  });
+
+  it("parses RSS 1.0 (RDF) items", () => {
+    const [post] = parseFeedXml(`
+      <rdf:RDF><item>
+        <title>RDF post</title>
+        <link>https://e.com/rdf</link>
+        <dc:date>2026-06-01T00:00:00Z</dc:date>
+      </item></rdf:RDF>`);
+    expect(post.url).toBe("https://e.com/rdf");
+  });
+
   it("keeps only GSoC-tagged Medium posts", () => {
     const posts = parseFeedXml(
       `
