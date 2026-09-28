@@ -12,13 +12,13 @@ const rows = getProjectCardRows(project);
   {project.desc ? <p class="gsoc-project-desc">{project.desc}</p> : null}
   {rows.map((row) => (
     <div class="gsoc-card-row">
-      <span class="gsoc-card-label">{row.label}:</span>
+      <span class="gsoc-card-label">{row.label}:</span>{" "}
       <span>{row.values.join(", ")}</span>
     </div>
   ))}
   {project.collaborators.length > 0 ? (
     <div class="gsoc-card-row">
-      <span class="gsoc-card-label">Project:</span>
+      <span class="gsoc-card-label">Project:</span>{" "}
       <span>
         {project.collaborators.map((collaborator, index) => (
           <>

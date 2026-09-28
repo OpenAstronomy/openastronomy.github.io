@@ -41,7 +41,7 @@ if (!logo) throw new Error(`Missing member logo asset: ${details.logo}`);
   <div id={anchorId} class="member-body">
     <a href={details.url} target="_blank" rel="noopener noreferrer">
       {details.name}
-    </a>
+    </a>{" "}
     <span set:html={details.description ?? ""} />
     <ul class="member-links">
       {links.map((link) => (
