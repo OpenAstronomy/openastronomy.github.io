@@ -22,7 +22,7 @@ collaborating_projects:
   - sunpy
 ---
 
-# Description
+## Description
 
 On April 8 2024, a total solar eclipse will will cross North America, passing over Mexico, the United States, and Canada.
 It is expected that more than 20 million people will be able to witness it and we can expect a large number of amateur photographers to record the event.
@@ -48,21 +48,21 @@ There are several steps:
 Note this will be a difficult project as we are dealing with solar coordinates and how to determine them from the Earth.
 A background in Physics or Astronomy with experience of astropy or sunpy coordinates is preferred.
 
-## Goals
+### Goals
 
-### Community Bonding Period
+#### Community Bonding Period
 
 - Get familiar wih solar coordinates and solar eclipse data.
 - Setup a development environment.
 
-### Coding starts
+#### Coding starts
 
 - Start by recreating the eclipse path image.
 
-#### 1st evaluation
+##### 1st evaluation
 
 - Have updated the old notebook code to work with newer data.
 
-#### Final evaluation
+##### Final evaluation
 
 - Ideally finished each bullet pointed task.

@@ -22,7 +22,7 @@ collaborating_projects:
   - sunpy
 ---
 
-# Description
+## Description
 
 [sunpy-soar](https://github.com/sunpy/sunpy-soar) is an plug-in to [sunpy's Fido](https://docs.sunpy.org/en/stable/tutorial/acquiring_data/index.html#sunpy-tutorial-acquiring-data-index) to download data from the [Solar Orbiter Archive (SOAR)](https://soar.esac.esa.int/soar/).
 
@@ -48,21 +48,21 @@ Thus the outcome would be:
 
 We do have one stretch goal and that would be to look into using [astroquery TAP](https://astroquery.readthedocs.io/en/latest/utils/tap.html) instead of manually constructing the TAP queries in sunpy-soar.
 
-## Goals
+### Goals
 
-### Community Bonding Period
+#### Community Bonding Period
 
 - Get familiar with the SOAR and TAP protocols.
 - Setup a development environment.
 
-### Coding starts
+#### Coding starts
 
 - Start working on adding support for additional attributes.
 
-#### 1st evaluation
+##### 1st evaluation
 
 - Have the additional attributes implemented.
 
-#### Final evaluation
+##### Final evaluation
 
 - Enable filters on the additional attributes.

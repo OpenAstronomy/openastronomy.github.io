@@ -21,7 +21,7 @@ collaborating_projects:
   - sunpy
 ---
 
-# Description
+## Description
 
 The [`ndcube` package](https://docs.sunpy.org/projects/ndcube/) is a SunPy affiliated package which provides a collection of objects for representing and manipulating data and world coordinates (stored as [WCS objects](https://docs.astropy.org/en/stable/wcs/index.html)) simultaneously.
 Currently, the `ndcube` package does not provide any built in support for reading or writing it's various objects to files.
@@ -58,21 +58,21 @@ The next phase of the project will be to add support for the other `ndcube` data
 - `NDCubeSequence`
 - `NDCollection`
 
-## Goals
+### Goals
 
-### Community Bonding Period
+#### Community Bonding Period
 
 - Setup a development environment.
 - Familiarize yourself with `asdf` extensions, `Converters` and schemas.
 
-### Before 1st Evaluation
+#### Before 1st Evaluation
 
 - Add the `asdf` extension infrastructure to `ndcube`.
 - Write Converters and schemas for `GlobalCoords` and `ExtraCoords` (with tests).
 - Write Converter and schema for `NDCube` (with tests).
 - Extend test suite with other examples of saving and loading `NDCube` objects backed by different `gwcs.WCS` objects etc which can be reused as test cases later.
 
-#### Before Final evaluation
+##### Before Final evaluation
 
 - Have opened PRs to `asdf_astropy` for `astropy.wcs.WCS` and `astropy.nddata.NDUncertainty` classes.
 - Have written tests in `ndcube` of serializing `NDCube` objects of higher complexity (`.uncertainty`, `.mask` etc) and with `astropy.wcs.WCS` objects.

@@ -30,8 +30,6 @@ collaborating_projects:
   - stingray
 ---
 
-# Interactive Database for X-ray observations
-
 ## Description
 
 The increasing number of X-ray telescopes observing accreting black hole sources

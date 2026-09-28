@@ -19,7 +19,7 @@ collaborating_projects:
   - stingray
 ---
 
-# Description
+## Description
 
 Stingray is a Python library designed to perform times series analysis and
 related tasks on astronomical light curves. It supports a range of commonly-used
@@ -47,27 +47,27 @@ or just make a PDF or image with the plots.
 A bonus could be making it the start for an interactive _analysis_ interface (not just
 plotting, but also recalculate the quantities with different parameters and refresh the plots)
 
-## Milestones
+### Milestones
 
 1. Consultation with community on use cases and possible implementations.
 2. Design of dashboard completed.
 3. Functional dashboard completed.
 4. Dashboard documented and possibly displayed in the Stingray website.
 
-### Community Bonding Period
+#### Community Bonding Period
 
 - Understand Stingray scientific case.
 - Setup a development environment.
 
-### Coding starts
+#### Coding starts
 
 - Design the general structure of the dashboard and the plugins.
 - Use Stingray's tutorials to set up the basic plugins for quicklook
 
-### 1st evaluation
+#### 1st evaluation
 
 - Partial skeleton of the dashboard complete.
 
-### Final evaluation
+#### Final evaluation
 
 - Dashboard ready for deployment and properly documented.

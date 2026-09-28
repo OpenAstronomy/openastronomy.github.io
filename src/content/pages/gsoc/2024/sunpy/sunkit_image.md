@@ -20,7 +20,7 @@ collaborating_projects:
   - sunpy
 ---
 
-# Description
+## Description
 
 In a previous GSoC project, [sunkit-image](https://github.com/sunpy/sunkit-image); a image analysis Python library for solar physics was created.
 Over time, it has grown but lacks refinement and lots of issues have piled up and need addressing.
@@ -40,21 +40,21 @@ If there is some time left over:
 
 1. Performance profiling of the current functions to find bottle necks and improve performance where possible.
 
-## Goals
+### Goals
 
-### Community Bonding Period
+#### Community Bonding Period
 
 - Get familiar with the library.
 - Setup a development environment.
 
-### Coding starts
+#### Coding starts
 
 - Start working on the first issue.
 
-#### 1st evaluation
+##### 1st evaluation
 
 - Have around ~50% of the issues taken care of.
 
-#### Final evaluation
+##### Final evaluation
 
 - Ideally have 100% of the issues finished.

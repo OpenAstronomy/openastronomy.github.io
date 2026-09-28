@@ -23,7 +23,7 @@ collaborating_projects:
   - irsa-fornax
 ---
 
-# Description
+## Description
 
 In partnership with the NASA Science Platform Initiative, which promotes scientific
 research by providing enhanced access to archival data on the cloud, this project
@@ -44,29 +44,29 @@ of Active Galactic Nuclei (AGNs), serving as a robust testbed for our algorithms
 This effort will not only validate the algorithms' ability to address complex data
 challenges but also highlight their applicability across astronomical research.
 
-## Goals
+### Goals
 
 - Design and optimize a deep learning architecture tailored for the enhancement and unification of astronomical archival data.
 - Conduct comprehensive testing of the data unification schema on large samples of AGNs
 
-## Project requirements
+### Project requirements
 
 - Strong foundation in computer science, with a specialization in data processing, AI, and machine learning (ML)
 - Proficiency in programming, particularly Python, and familiarity with AI/ML libraries and frameworks such as TensorFlow and PyTorch
 - Expertise in data analysis, capable of assessing the impact of different augmentation techniques on the informational content and practical utility of datasets.
 - Collaborative spirit, prepared to work within the NASA science platform group and engage with astronomers, ensuring that the project's technical solutions are aligned with scientific objectives and effectively contribute to the field.
 
-### Community Bonding Period
+#### Community Bonding Period
 
 - Familiarize yourself with the current code and the challenges.
 - Setup a development environment.
 
-### Coding starts
+#### Coding starts
 
-#### 1st evaluation
+##### 1st evaluation
 
 - Have developed an initial DL architecture for gap filling in archival AGN data.
 
-#### Final evaluation
+##### Final evaluation
 
 - Have optimized the DL architecture for data unification from multiple archives, with quantified improvement metrics.

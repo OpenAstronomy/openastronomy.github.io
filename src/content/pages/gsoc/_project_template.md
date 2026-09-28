@@ -33,8 +33,6 @@ collaborating_projects:
   - juliaAstro
 ---
 
-# This is an awesome project idea for suborg
-
 ## Description
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus aliquam

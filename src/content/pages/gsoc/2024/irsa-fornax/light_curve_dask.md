@@ -23,7 +23,7 @@ collaborating_projects:
   - irsa-fornax
 ---
 
-# Description
+## Description
 
 NASA is building a science console that runs on cloud compute and supports astrophysicists to access the literally
 astronomically large datasets produced by space telescopes past and future. Our team is directing the science
@@ -45,20 +45,20 @@ may not require altering the existing code to work more efficiently with Dask. T
 may work with additional codes that we are developing for related use cases, each of which is likely to present
 different challenges to running at scale on a Dask cluster.
 
-## Goals
+### Goals
 
-### Community Bonding Period
+#### Community Bonding Period
 
 - Familiarize yourself with the current code and the challenges to running at scale.
 - Setup a development environment.
 
-### Coding starts
+#### Coding starts
 
-#### 1st evaluation
+##### 1st evaluation
 
 - Have written new code that executes the light curve collection code on a Dask cluster.
 
-#### Final evaluation
+##### Final evaluation
 
 - Have implemented a solution that runs smoothly on a Dask cluster and finishes in less time than the current
   code takes.

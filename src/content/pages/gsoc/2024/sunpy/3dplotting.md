@@ -21,7 +21,7 @@ collaborating_projects:
   - sunpy
 ---
 
-# Description
+## Description
 
 The SunPy Ecosystem currently has well developed support for making 2D plots (with Matplotlib), but currently a simpler interface for making 3D plots.
 
@@ -33,22 +33,22 @@ It also lacks some useful features such as plotting current sheets and animation
 
 This project will be addressing these issues, in part by taking over existing pull requests.
 
-## Goals
+### Goals
 
-### Community Bonding Period
+#### Community Bonding Period
 
 - Get familiar with sunkit-pyvista.
 - Get familiar with pyvista.
 - Setup a development environment.
 
-### Coding starts
+#### Coding starts
 
 - Start working on the first issue.
 
-#### 1st evaluation
+##### 1st evaluation
 
 - Have around ~50% of the issues and pull requests taken care of.
 
-#### Final evaluation
+##### Final evaluation
 
 - Ideally have 100% of the issues and pull requests finished.
