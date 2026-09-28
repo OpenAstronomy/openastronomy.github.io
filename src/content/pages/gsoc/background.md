@@ -29,7 +29,7 @@ The [application] process is currently described by our [gsoc-proposals reposito
 It is very possible that the project has its own template and you can use that when submitting to GSOC but for the gsoc-proposals repository, you must follow that template.
 
 You can also find applications from previous years in the GitHub wiki pages of some of the OpenAstronomy members.
-The more details on applying are in the [GSoC Contributor Guide].
+More details on applying are in the [GSoC Contributor Guide].
 
 ## Who is eligible to apply to GSoC?
 
@@ -55,7 +55,7 @@ See the [GSoC FAQ][gsoc-faq] for the current figures.
 **How much time does it take?**
 
 Project ideas are sized as roughly 90 (small), 175 (medium), or 350 (large) hours of work spread over the coding period.
-Thee size is fixed by the project & mentors, only they can decide if the project can be shortened or extended.
+The size is fixed by the project & mentors, only they can decide if the project can be shortened or extended.
 
 **Can I apply to more than one project?**
 

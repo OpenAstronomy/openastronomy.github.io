@@ -32,7 +32,7 @@ Some general pointers to follow are:
   There are many ways to get yourself known by the community, you can introduce yourself through the [OpenAstronomy discourse](https://community.openastronomy.org) and if required contact the mentors to know more about certain project.
   However, contacting mentors through email or direct messages is discouraged, and contacting them in public channels is the preferred way to provide answers to multiple people at once.
   Also, when you have a particular idea in mind, get in touch with that project and introduce yourself.
-  For example, `astropy` projects, follow the contact guidance in the [Astropy GSoC guidelines] and do not send an email to the `astropy-dev` list.
+  For `astropy` projects, follow the contact guidance in the [Astropy GSoC guidelines] and do not send an email to the `astropy-dev` list.
   It is important that you follow the guidance for any OA member.
 
 - **Become a user!**
@@ -86,7 +86,7 @@ Some general pointers to follow are:
 3. **Submit your application.**
    Besides adding your proposal to the gsoc-proposals repository, you also need to [submit your application](https://summerofcode.withgoogle.com/) before the deadline.
    **You must submit it there.**
-   Do not leave it to the last minute: Google's, and Google does not extend their deadline for anyone.
+   Do not leave it to the last minute: Google's deadline is strict, and Google does not extend it for anyone.
    If you want a review, you need to give mentors at least 7 days notice.
    Please include the sub-org name at the start of your proposal title as `[<sub-org>] <project name>`,
    where `<suborg>` should be the name of the sub-org in lower case (e.g., `sunpy`, `stingray`, `radis`),

@@ -53,7 +53,7 @@ That's OK, the only limitation is that either the contributor or the admin will 
 
 #### What do I need for my project idea?
 
-Everything you need is a title and description of the project idea, a set of requirements for potential contributors (_e.g._, proficiency with `astropy.tables` and `astropy.units`), and a list of potential mentors.
+Everything you need is a name (the `name` field of the template) and a description of the project idea, a set of requirements for potential contributors (_e.g._, proficiency with `astropy.tables` and `astropy.units`), and a list of potential mentors.
 In addition, please link any related issues or tickets to the project idea, if any.
 Lastly, make sure to indicate the level of difficulty of the project.
 
