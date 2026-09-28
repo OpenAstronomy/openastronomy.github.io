@@ -48,7 +48,9 @@ const projectMeta = projectInfo
 {projectMeta ? (
   <BaseLayout
     title={`${projectMeta.name} (GSoC ${projectInfo?.year})`}
-    description={projectMeta.desc || description}
+    description={`GSoC ${projectInfo?.year}: ${
+      projectMeta.desc || description || "OpenAstronomy project idea."
+    }`}
   >
     <ProjectBody project={projectMeta}>
       <Content />

@@ -8,8 +8,11 @@ const sortedMembers = Object.entries(members).sort(([a], [b]) =>
 );
 ---
 
-<PageLayout title="Members">
-  <h2>Who is part of OpenAstronomy?</h2>
+<PageLayout
+  title="Members"
+  description="The open source astronomy and astrophysics projects that make up OpenAstronomy, with their repositories and contact channels."
+>
+  <h2 id="who-is-part-of-openastronomy">Who is part of OpenAstronomy?</h2>
 
   <div class="members-grid">
     {sortedMembers.map(([, details], index) => (

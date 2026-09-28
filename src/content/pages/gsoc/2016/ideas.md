@@ -1,5 +1,6 @@
 ---
 title: "Ideas page for Google Summer of Code 2016"
+description: "OpenAstronomy Google Summer of Code 2016 project ideas."
 ---
 
 # Ideas page for Google Summer of Code 2016

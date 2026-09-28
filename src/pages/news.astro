@@ -16,7 +16,10 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 });
 ---
 
-<PageLayout title="News and Events">
+<PageLayout
+  title="News and Events"
+  description="News and event announcements from OpenAstronomy."
+>
   <div>
     {posts.map((post: Post) => {
       const { date } = getPostDateParts(post);

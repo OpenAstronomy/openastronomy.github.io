@@ -1,5 +1,6 @@
 ---
 title: "Ideas for IMS - ERAS"
+description: "OpenAstronomy Google Summer of Code 2016 project ideas for IMS - ERAS."
 ---
 
 # Ideas for IMS - ERAS

@@ -1,5 +1,6 @@
 ---
 title: "GSoC Sub-organizations Guidelines"
+description: "Guidelines for OpenAstronomy member projects taking part in Google Summer of Code as sub-organisations."
 ---
 
 # GSoC Sub-organizations Guidelines

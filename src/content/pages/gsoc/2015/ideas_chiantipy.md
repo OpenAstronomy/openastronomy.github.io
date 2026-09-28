@@ -1,5 +1,6 @@
 ---
 title: "Ideas for ChiantiPy"
+description: "OpenAstronomy Google Summer of Code 2015 project ideas for ChiantiPy."
 ---
 
 # Ideas for ChiantiPy

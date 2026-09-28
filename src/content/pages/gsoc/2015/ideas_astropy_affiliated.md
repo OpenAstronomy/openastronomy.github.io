@@ -1,5 +1,6 @@
 ---
 title: "Ideas for Astropy-affiliated packages"
+description: "OpenAstronomy Google Summer of Code 2015 project ideas for Astropy-affiliated packages."
 ---
 
 # Ideas for Astropy-affiliated packages

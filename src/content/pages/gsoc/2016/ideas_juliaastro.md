@@ -1,5 +1,6 @@
 ---
 title: "Ideas for Julia Astro"
+description: "OpenAstronomy Google Summer of Code 2016 project ideas for Julia Astro."
 ---
 
 # Ideas for Julia Astro

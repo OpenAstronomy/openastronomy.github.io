@@ -1,5 +1,6 @@
 ---
 title: "Background on GSoC: Start Here!"
+description: "What Google Summer of Code is, how OpenAstronomy takes part, and what to know before applying."
 ---
 
 <h1 id="background-start-here">Background on GSoC: Start Here</h1>

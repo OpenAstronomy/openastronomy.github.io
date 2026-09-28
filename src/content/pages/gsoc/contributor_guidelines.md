@@ -1,5 +1,6 @@
 ---
 title: "GSoC Contributor Application Guidelines"
+description: "How to prepare and submit a Google Summer of Code application to OpenAstronomy."
 ---
 
 # GSoC Contributor Application Guidelines

@@ -39,7 +39,10 @@ const touchIcon = await getImage({
 const backgroundOptions = [backgroundAp, backgroundSp];
 const backgroundAsset =
   backgroundOptions[pagePath.length % backgroundOptions.length];
-const backgroundHref = backgroundAsset.src;
+// WebP at full width is about 18 kB instead of the 134 kB JPEG.
+const backgroundHref = (
+  await getImage({ src: backgroundAsset, format: "webp" })
+).src;
 
 const publishedIso =
   publishedAt instanceof Date

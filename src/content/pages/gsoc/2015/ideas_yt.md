@@ -1,5 +1,6 @@
 ---
 title: "Ideas for yt"
+description: "OpenAstronomy Google Summer of Code 2015 project ideas for yt."
 ---
 
 # Ideas for yt

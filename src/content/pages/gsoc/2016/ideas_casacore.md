@@ -1,5 +1,6 @@
 ---
 title: "Ideas for CasaCore"
+description: "OpenAstronomy Google Summer of Code 2016 project ideas for CasaCore."
 ---
 
 # Ideas for CasaCore
