@@ -66,4 +66,4 @@ This performance would be beneficial for new applications such as exoplanet char
 - Direct line-of-sight spectra technique is implemented in main project
 - Document architecture and developer guide when facing unclear points that may appear.
 - Review pull requests from other RADIS contributors
-- Interface to atmosphere calculations (merge results with project [RADIS Atmosphere Calculation Interface](https://openastronomy.org/gsoc/2020/#/projects?project=radis_atmosphere_calculation_interface) )
+- Interface to atmosphere calculations (merge results with project [RADIS Atmosphere Calculation Interface](/gsoc/2020/radis/radis_atmosphere_calculation_interface/) )

@@ -30,7 +30,7 @@ Below, we detail some lessons learnt about this situation to help avoid this hap
    In fact, the proposal document itself is the least important part of the application.
    We need that to document the work plan and your background and availability but nothing more.
    After all the details of the work, in the ideal case, is the result of a collaboration with mentors and other contributors of the hosting project.
-   We've got that as [the first point of our guidelines: The better we know you, the better we can judge your application](https://openastronomy.org/gsoc/contributor_guidelines.html).
+   We've got that as [the first point of our guidelines: The better we know you, the better we can judge your application](/gsoc/contributor_guidelines/).
    This means that besides having a good proposal and demonstrating its understanding (through an interview),
    everything such as: How the candidates interact with the community, answer to feedback, welcome and help other candidates to get started, and much more, counts!
    GSoC is not a competition or an internship/job, GSoC is a programme to build community and develop future maintainers.
@@ -41,7 +41,7 @@ Below, we detail some lessons learnt about this situation to help avoid this hap
    And for the first time, we found multiple interpretations to the rules we set.
    From opening an empty pull-request before the deadline and not sharing the content until just after, to uploading all the proposals in a single commit.
    There were also cases of using `pdf` rather than `md` files or grouping multiple proposals in a single pull-request.
-   The other purpose of open proposals, is to follow the [open development approach that is followed by our organisations (second point of our principles)](https://openastronomy.org/#principles-of-openastronomy).
+   The other purpose of open proposals, is to follow the [open development approach that is followed by our organisations (second point of our principles)](/#principles-of-openastronomy).
    As with software, the candidates are expected to work in the open,
    show the evolution of their proposals in multiple commits and iterating on their draft as it gets to a complete status.
    Ideally, even with time enough to get feedback from the community (not just the mentors).

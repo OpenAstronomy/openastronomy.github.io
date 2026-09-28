@@ -26,7 +26,7 @@ issues:
 
 The presence and concentration of molecules in exoplanet atmospheres are measured by comparing absorption and emission spectra to synthetic spectra. However, under high-temperature conditions, the synthetic spectra contain dozens of millions of lines, which require long computational times .
 
-The RADIS code was recently developed for the characterization of plasmas and flames. It uses a new approach to quickly calculate high-temperature infrared spectra. New developments are in progress (see our [other project](https://openastronomy.org/gsoc/2020/#/projects?project=accelerate_synthetic_spectra_calculations) on further accelerating the code), but it is already one of the fastest spectral codes in the world. This performance would be beneficial for exoplanet characterization, and this is the goal of this project: adapt the RADIS code to the calculation of exoplanet atmospheres!
+The RADIS code was recently developed for the characterization of plasmas and flames. It uses a new approach to quickly calculate high-temperature infrared spectra. New developments are in progress (see our [other project](/gsoc/2020/radis/accelerate_synthetic_spectra_calculations/) on further accelerating the code), but it is already one of the fastest spectral codes in the world. This performance would be beneficial for exoplanet characterization, and this is the goal of this project: adapt the RADIS code to the calculation of exoplanet atmospheres!
 
 #### Milestones
 
@@ -56,5 +56,5 @@ The RADIS code was recently developed for the characterization of plasmas and fl
 
 - Document architecture and developer guide when facing unclear points that may appear.
 - Review pull requests from other RADIS contributors
-- Optimized calculation of atmospheres in optically thin configurations (merge results with project [Accelerate Synthetic Spectra Calculations](https://openastronomy.org/gsoc/2020/#/projects?project=accelerate_synthetic_spectra_calculations) )
+- Optimized calculation of atmospheres in optically thin configurations (merge results with project [Accelerate Synthetic Spectra Calculations](/gsoc/2020/radis/accelerate_synthetic_spectra_calculations/) )
   )
