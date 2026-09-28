@@ -19,6 +19,12 @@ export const GET: APIRoute = ({ props, site }) => {
 <meta charset="utf-8">
 <title>Redirecting to ${to}</title>
 <meta http-equiv="refresh" content="0;url=${props.to}">
+<script>
+  // Keep #fragments (the meta refresh drops them); read the target from the
+  // meta tag so the CircleCI preview's path rewrite applies here too.
+  var target = document.querySelector("meta[http-equiv=refresh]").content;
+  location.replace(target.slice(target.indexOf("url=") + 4) + location.hash);
+</script>
 <meta name="robots" content="noindex">
 <link rel="canonical" href="${to}">
 <a href="${props.to}">Redirecting to ${to}</a>
