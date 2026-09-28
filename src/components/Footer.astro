@@ -9,16 +9,14 @@ import site from "../data/site.json";
       <strong>{site.title}</strong>: Combining the power of open source
       astrophysics projects to empower science.
     </p>
-    {
-      site.social_links.map((link) => (
-        <a
-          href={link.href}
-          aria-label={link.label}
-          rel={link.rel ?? "noopener noreferrer"}
-        >
-          <Icon name={link.icon} fill="#f9f9f9" />
-        </a>
-      ))
-    }
+    {site.social_links.map((link) => (
+      <a
+        href={link.href}
+        aria-label={link.label}
+        rel={link.rel ?? "noopener noreferrer"}
+      >
+        <Icon name={link.icon} fill="#f9f9f9" />
+      </a>
+    ))}
   </div>
 </footer>

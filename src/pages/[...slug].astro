@@ -30,23 +30,21 @@ const projectMeta = projectInfo
   : null;
 ---
 
-{
-  projectMeta ? (
-    <BaseLayout
-      title={projectMeta.name}
-      description={projectMeta.desc || description}
-    >
-      <ProjectBody project={projectMeta}>
-        <Content />
-      </ProjectBody>
-    </BaseLayout>
-  ) : page.data.layout === "page" ? (
-    <PageLayout title={pageTitle} description={description}>
+{projectMeta ? (
+  <BaseLayout
+    title={projectMeta.name}
+    description={projectMeta.desc || description}
+  >
+    <ProjectBody project={projectMeta}>
       <Content />
-    </PageLayout>
-  ) : (
-    <BaseLayout title={pageTitle} description={description}>
-      <Content />
-    </BaseLayout>
-  )
-}
+    </ProjectBody>
+  </BaseLayout>
+) : page.data.layout === "page" ? (
+  <PageLayout title={pageTitle} description={description}>
+    <Content />
+  </PageLayout>
+) : (
+  <BaseLayout title={pageTitle} description={description}>
+    <Content />
+  </BaseLayout>
+)}

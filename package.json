@@ -22,19 +22,19 @@
     "linkcheck": "lychee --no-progress --root-dir \"$PWD/html\" html"
   },
   "dependencies": {
-    "astro": "^6.4.5",
-    "fast-xml-parser": "^5.8.0"
+    "astro": "^7.3.5",
+    "fast-xml-parser": "^5.11.1"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "^0.9.10",
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.4.1",
-    "eslint-plugin-astro": "^1.7.0",
-    "markdownlint-cli2": "^0.22.1",
-    "prettier": "^3.8.4",
-    "prettier-plugin-astro": "^0.14.1",
+    "eslint": "^10.11.0",
+    "eslint-plugin-astro": "^3.2.1",
+    "markdownlint-cli2": "^0.23.3",
+    "prettier": "^3.9.9",
+    "prettier-plugin-astro": "^1.1.0",
     "typescript": "^6.0.3",
     "typescript-eslint": "^8.70.1",
-    "vitest": "^4.1.8"
+    "vitest": "^5.0.2"
   }
 }

@@ -18,20 +18,18 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 
 <PageLayout title="News and Events">
   <div>
-    {
-      posts.map((post: Post) => {
-        const { date } = getPostDateParts(post);
-        const postHref = getPostUrl(post);
-        return (
-          <article>
-            <h2>
-              <a href={postHref}>{post.data.title}</a>
-            </h2>
-            <p class="post-meta">{dateFormatter.format(date)}</p>
-            <p>{post.data.summary ?? ""}</p>
-          </article>
-        );
-      })
-    }
+    {posts.map((post: Post) => {
+      const { date } = getPostDateParts(post);
+      const postHref = getPostUrl(post);
+      return (
+        <article>
+          <h2>
+            <a href={postHref}>{post.data.title}</a>
+          </h2>
+          <p class="post-meta">{dateFormatter.format(date)}</p>
+          <p>{post.data.summary ?? ""}</p>
+        </article>
+      );
+    })}
   </div>
 </PageLayout>

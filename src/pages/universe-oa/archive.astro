@@ -29,63 +29,61 @@ const projectArchiveHref = (year: number) =>
   </div>
 
   <div class="universe-archive-list">
-    {
-      archived.map(({ id, data: season }) => {
-        const year = Number(id);
-        return (
-          <section class="universe-archive-season">
-            <h2>GSoC {year}</h2>
-            <p class="universe-archive-actions">
-              <a href={projectArchiveHref(year)}>Project archive</a>
-            </p>
-            <div class="universe-table-wrap">
-              <table class="universe-table">
-                <thead>
-                  <tr>
-                    <th scope="col">Contributor</th>
-                    <th scope="col">Project</th>
-                    <th scope="col">Feed</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {season.contributors.map((contributor) => {
-                    const project = resolveProjectDisplay(contributor.project);
-                    const blogUrl = getBlogUrl(contributor.feed, []);
-                    return (
-                      <tr>
-                        <th scope="row">
-                          {blogUrl ? (
-                            <a href={blogUrl}>{contributor.name}</a>
-                          ) : (
-                            <span>{contributor.name}</span>
+    {archived.map(({ id, data: season }) => {
+      const year = Number(id);
+      return (
+        <section class="universe-archive-season">
+          <h2>GSoC {year}</h2>
+          <p class="universe-archive-actions">
+            <a href={projectArchiveHref(year)}>Project archive</a>
+          </p>
+          <div class="universe-table-wrap">
+            <table class="universe-table">
+              <thead>
+                <tr>
+                  <th scope="col">Contributor</th>
+                  <th scope="col">Project</th>
+                  <th scope="col">Feed</th>
+                </tr>
+              </thead>
+              <tbody>
+                {season.contributors.map((contributor) => {
+                  const project = resolveProjectDisplay(contributor.project);
+                  const blogUrl = getBlogUrl(contributor.feed, []);
+                  return (
+                    <tr>
+                      <th scope="row">
+                        {blogUrl ? (
+                          <a href={blogUrl}>{contributor.name}</a>
+                        ) : (
+                          <span>{contributor.name}</span>
+                        )}
+                      </th>
+                      <td>
+                        <span class="universe-project">
+                          {project.logo && (
+                            <Image
+                              src={project.logo}
+                              alt=""
+                              width={24}
+                              height={24}
+                              loading="lazy"
+                            />
                           )}
-                        </th>
-                        <td>
-                          <span class="universe-project">
-                            {project.logo && (
-                              <Image
-                                src={project.logo}
-                                alt=""
-                                width={24}
-                                height={24}
-                                loading="lazy"
-                              />
-                            )}
-                            {project.name}
-                          </span>
-                        </td>
-                        <td>
-                          <a href={contributor.feed}>RSS feed</a>
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        );
-      })
-    }
+                          {project.name}
+                        </span>
+                      </td>
+                      <td>
+                        <a href={contributor.feed}>RSS feed</a>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      );
+    })}
   </div>
 </PageLayout>

@@ -39,25 +39,23 @@ if (!logo) throw new Error(`Missing member logo asset: ${details.logo}`);
     />
   </a>
   <div id={anchorId} class="member-body">
-    <a href={details.url} target="_blank" rel="noopener noreferrer"
-      >{details.name}</a
-    >
+    <a href={details.url} target="_blank" rel="noopener noreferrer">
+      {details.name}
+    </a>
     <span set:html={details.description ?? ""} />
     <ul class="member-links">
-      {
-        links.map((link) => (
-          <li>
-            <a href={link.href} target="_blank" rel="noopener noreferrer">
-              {link.iconName === "envelope" ? (
-                <span class="icon-envelope" aria-hidden="true" />
-              ) : (
-                <Icon name={link.iconName} fill="#333333" />
-              )}
-              {link.label}
-            </a>
-          </li>
-        ))
-      }
+      {links.map((link) => (
+        <li>
+          <a href={link.href} target="_blank" rel="noopener noreferrer">
+            {link.iconName === "envelope" ? (
+              <span class="icon-envelope" aria-hidden="true" />
+            ) : (
+              <Icon name={link.iconName} fill="#333333" />
+            )}
+            {link.label}
+          </a>
+        </li>
+      ))}
     </ul>
   </div>
 </div>

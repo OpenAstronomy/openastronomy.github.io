@@ -42,7 +42,9 @@ const navLinks = [
         </svg>
       </button>
       <div class="trigger" id="site-nav-links">
-        {navLinks.map((link) => <a href={link.href}>{link.title}</a>)}
+        {navLinks.map((link) => (
+          <a href={link.href}>{link.title}</a>
+        ))}
       </div>
     </nav>
   </div>

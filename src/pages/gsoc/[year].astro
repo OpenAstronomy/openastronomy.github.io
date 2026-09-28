@@ -47,16 +47,22 @@ const sections = [
 
 <BaseLayout title={pageTitle}>
   <nav class="gsoc-tabs">
-    {sections.map((s) => <a href={`#${s.id}`}>{s.label}</a>)}
+    {sections.map((s) => (
+      <a href={`#${s.id}`}>{s.label}</a>
+    ))}
   </nav>
 
   <section id="projects">
     <h2>
-      <a class="gsoc-section-link" href="#projects">{sections[0].heading}</a>
+      <a class="gsoc-section-link" href="#projects">
+        {sections[0].heading}
+      </a>
     </h2>
     {projects.length === 0 ? <p>No projects listed yet.</p> : null}
     <div class="gsoc-projects-grid">
-      {projects.map((project) => <ProjectCard project={project} />)}
+      {projects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
     </div>
   </section>
 
