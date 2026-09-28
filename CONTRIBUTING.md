@@ -128,7 +128,7 @@ For a new season, also:
 3. Update the current-year heading and the previous-editions list in `src/content/pages/gsoc/index.md`.
 4. Update `src/data/universe/seasons.yml` with the season's posting windows and contributor feeds once contributors are selected (see `src/data/universe/README.md`).
 
-Project cards, detail dialogs, and the mentors list are generated automatically from the project files; no route or layout changes are needed.
+Project cards, project pages, and the mentors list are generated automatically from the project files; no route or layout changes are needed.
 
 ---
 

@@ -103,7 +103,6 @@ describe("buildProjectMeta", () => {
       memberLookup,
     );
     expect(meta.name).toBe("Radio Spectra");
-    expect(meta.anchor).toBe("radio-spectra");
   });
 
   it("falls back to the file slug when `name` missing", () => {

@@ -1,16 +1,11 @@
 ---
-import { getCollection, render, type CollectionEntry } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 import BaseLayout from "./BaseLayout.astro";
 import ProjectCard from "../components/gsoc/ProjectCard.astro";
-import ProjectDetail from "../components/gsoc/ProjectDetail.astro";
 import PeopleSection from "../components/gsoc/PeopleSection.astro";
 import admins from "../data/gsoc-admins.json";
 import { members } from "../lib/members.ts";
-import {
-  buildProjectMeta,
-  parseProjectId,
-  type GsocProject,
-} from "../lib/gsoc.ts";
+import { buildProjectMeta, parseProjectId } from "../lib/gsoc.ts";
 import "../styles/gsoc.css";
 
 type Props = { seasonKey: string; title?: string };
@@ -30,15 +25,11 @@ const seasonEntries: SeasonEntry[] = pageEntries.flatMap(
   },
 );
 
-const projects: GsocProject[] = (
-  await Promise.all(
-    seasonEntries.map(async ({ entry, info }: SeasonEntry) => {
-      const meta = buildProjectMeta(entry.data, info, members);
-      const { Content } = await render(entry);
-      return { ...meta, Content };
-    }),
+const projects = seasonEntries
+  .map(({ entry, info }: SeasonEntry) =>
+    buildProjectMeta(entry.data, info, members),
   )
-).sort((a, b) => a.name.localeCompare(b.name));
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 const mentors = Array.from(
   new Set(projects.flatMap((p) => p.mentors).filter(Boolean)),
@@ -69,7 +60,6 @@ const sections = [
     <div class="gsoc-projects-grid">
       {projects.map((project) => <ProjectCard project={project} />)}
     </div>
-    {projects.map((project) => <ProjectDetail project={project} />)}
   </section>
 
   <PeopleSection
@@ -84,19 +74,4 @@ const sections = [
     intro="We are the admins for OpenAstronomy."
     handles={adminHandles}
   />
-
-  <script>
-    document
-      .querySelectorAll<HTMLButtonElement>(
-        ".gsoc-project-card-open[data-detail]",
-      )
-      .forEach((button) => {
-        const detailId = button.dataset.detail;
-        if (!detailId) return;
-        button.addEventListener("click", () => {
-          const dialog = document.getElementById(detailId);
-          if (dialog instanceof HTMLDialogElement) dialog.showModal();
-        });
-      });
-  </script>
 </BaseLayout>

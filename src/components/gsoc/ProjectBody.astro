@@ -1,25 +1,15 @@
 ---
-/*
- * Used inside <dialog> by ProjectDetail and as a standalone page section by
- * [...slug].astro; the slot receives the rendered markdown body.
- */
+/* A project's standalone page; the slot receives the rendered markdown body. */
 import type { ProjectMeta } from "../../lib/gsoc.ts";
 import { getProjectDetailRows } from "../../lib/gsoc.ts";
 import "../../styles/gsoc.css";
 
-type Props = { project: ProjectMeta; showOpenLink?: boolean };
-const { project, showOpenLink = true } = Astro.props as Props;
+type Props = { project: ProjectMeta };
+const { project } = Astro.props as Props;
 const rows = getProjectDetailRows(project);
 ---
 
-{
-  showOpenLink ? (
-    <p class="gsoc-project-detail-link">
-      <a href={project.href}>Open project page</a>
-    </p>
-  ) : null
-}
-<h3>{project.name}</h3>
+<h1>{project.name}</h1>
 {project.desc ? <p>{project.desc}</p> : null}
 
 {

@@ -1,12 +1,12 @@
 ---
-import { getProjectCardRows, type GsocProject } from "../../lib/gsoc.ts";
+import { getProjectCardRows, type ProjectMeta } from "../../lib/gsoc.ts";
 
-const { project } = Astro.props as { project: GsocProject };
+const { project } = Astro.props as { project: ProjectMeta };
 const rows = getProjectCardRows(project);
 ---
 
 <article class="gsoc-project-card">
-  <h3>{project.name}</h3>
+  <h3><a href={project.href}>{project.name}</a></h3>
   {project.desc ? <p class="gsoc-project-desc">{project.desc}</p> : null}
   {
     rows.map((row) => (
@@ -35,11 +35,4 @@ const rows = getProjectCardRows(project);
       </div>
     ) : null
   }
-  <button
-    class="gsoc-project-card-open"
-    type="button"
-    data-detail={`detail-${project.anchor}`}
-  >
-    View details
-  </button>
 </article>

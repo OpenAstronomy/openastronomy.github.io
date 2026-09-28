@@ -6,18 +6,15 @@
 
 import { slugify } from "./members.ts";
 
-export type AstroComponentFactory = (...args: unknown[]) => unknown;
-
 /** Link to a collaborating member project; `href` is null for non-members. */
 export type CollaboratorLink = {
   label: string;
   href: string | null;
 };
 
-/** Metadata used by both the dialog inside ProjectsLayout and the standalone page. */
+/** Metadata for a project's season-page card and its standalone page. */
 export type ProjectMeta = {
   name: string;
-  anchor: string;
   href: string;
   desc: string;
   difficulty: string;
@@ -29,9 +26,6 @@ export type ProjectMeta = {
   collaborators: CollaboratorLink[];
   issues: string[];
 };
-
-/** ProjectMeta plus the rendered markdown Content component. */
-export type GsocProject = ProjectMeta & { Content: AstroComponentFactory };
 
 export type ProjectMetadataRow = {
   label: string;
@@ -149,7 +143,6 @@ export const buildProjectMeta = (
       : pathInfo.fileSlug;
   return {
     name,
-    anchor: slugify(name),
     href: `/gsoc/${pathInfo.year}/${pathInfo.suborg}/${pathInfo.fileSlug}/`,
     desc: typeof data.desc === "string" ? data.desc : "",
     difficulty: normalizeArray(data.difficulty)[0] ?? "",
