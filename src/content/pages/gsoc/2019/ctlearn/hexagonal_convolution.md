@@ -27,7 +27,7 @@ collaborating_projects:
   - ctlearn
 ---
 
-#### Description
+## Description
 
 CTLearn is a Python package for using deep learning to perform analysis tasks on data from imaging atmospheric Cherenkov telescopes (IACTs). One of the most pressing challenges is processing raw IACT images captured by cameras made of hexagonal lattices of photo-multipliers. In order to feed the current deep convolutional neural network models, a transformation from hexagonal camera pixels to square image pixels has to be performed.
 
@@ -35,20 +35,20 @@ A different, more promising, approach is to implement hexagonal convolutional ke
 
 In this project, the student will first study the different packages like [IndexedConv](https://github.com/IndexedConv/IndexedConv) and [HexagDLy](https://github.com/ai4iacts/hexagdly). The require transformations to create the input images for these packages are already implemented. Then, they will transfer the PyTorch code to Tensorflow and make it compatible with CTLearn. Finally, the CTLearn default models will be tested on the new method and compared with the conventional conversion methods.
 
-#### Milestones
+## Milestones
 
-##### GSOC CODING STARTS
+### GSOC CODING STARTS
 
 - Install CTLearn and train a pre-existing benchmark model to verify that it runs correctly.
 - Understand the technical and scientific goals of the project.
 
-##### GSOC MIDTERM
+### GSOC MIDTERM
 
 - Implement hexagonal convolution and pooling methods in CTLearn.
 - Test/Train CTLearn default models using the new method.
 - Have all code and documentation in GitHub.
 
-##### GSOC FINAL
+### GSOC FINAL
 
 - Complete the training and optimize the performance of the neural network for hexagonal convolution.
 - Compare performance with previous benchmarks.

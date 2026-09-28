@@ -34,7 +34,7 @@ collaborating_projects:
   - einsteinpy
 ---
 
-#### Description
+## Description
 
 The EinsteinPy Codebase is currently in a beta state, where it can be used to play around with the data but, lacks the possibility of serious computations due to bad performance. We recently made some performance enhancements to accelerate the code upto 10-15X the current speed. But it is still not enough. Serious computations and research requires a very good performance along with ability to scale on multiple CPUs, GPUs. This can further facilitate the adoption of EinsteinPy in general relativity community. Moreover, the overall code structure, including coordinate conversions are little bit tricky as well as adding a new frame/coordinate system is a tiresome process in current model.
 
@@ -46,34 +46,34 @@ However the GPU backend is not a hard and fast requirement from this project as 
 
 Some modules like, shadow do not scale well. Also there are some theoretical issues which make the whole module slow. We would like to simulate black hole shadows of real sized black holes rather than M=1 Black holes which have no practical significance.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of
   the project.
 - Have set up a development environment and get familiar with einsteinpy dependencies.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Have done the profiling of the codebase, found the bottlenecks.
 - Fixed the ODE Solver as it is too slow.
 - Fixed the coordinate conversions.
 - Have all code, tests and documentation in GitHub.
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Work on shadow and hypersurface modules, find the reason why they do not scale well (possibly because of the integrator)
 - Publish the performance comparisons.
 - Have all code, tests and documentation in GitHub.
 
-##### Final
+### Final
 
 - Complete the Rust/C++ backend for the project and publish it on GitHub.
 - Complete the coordinate conversion issue and add an easy way to introduce new coordinate systems.
 - Have all code, tests and documentation in GitHub.
 
-#### Secondary goals
+## Secondary goals
 
 - Fix any bugs that might appear regarding visualization, symbolic module and so forth
 - Make the code work on GPU too.

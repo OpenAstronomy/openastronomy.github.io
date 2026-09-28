@@ -3,7 +3,7 @@ title: "GSoC Sub-organizations Guidelines"
 description: "Guidelines for OpenAstronomy member projects taking part in Google Summer of Code as sub-organisations."
 ---
 
-# GSoC Sub-organizations Guidelines
+<h1 id="gsoc-suborg-guidelines">GSoC Sub-organizations Guidelines</h1>
 
 OpenAstronomy has been accepted as an umbrella organisation since 2016.
 We will keep applying every year, but that doesn't mean we will always be selected.
@@ -19,7 +19,8 @@ You need to be an open-development organisation and be related with astronomy.
 Then make a pull-request to [our repository][OA repository] that adds your organization to [the `members.json` file][members file] (name, website, logo file name, short description, and links to your repositories, chat, and mailing lists, you can copy an existing entry as a starting point) and your logo image to [`src/assets/members/`][members logos].
 The logo can be a PNG, JPG, WebP, AVIF, SVG or GIF file.
 The description is printed right after the name, so write it as a continuation of the name (e.g., "is a Python package for ...").
-The supported `socials` keys are `x` and `mastodon` (as a full `@user@server` handle).
+The supported `socials` keys are `x` (the handle without `@`) and `mastodon` (as a full `@user@server` handle).
+Under `repositories`, `github` takes `owner/repo` (or just `owner`); any other host takes a full `https://` URL.
 The steering council will review your application and give you feedback.
 
 Once a member, you can start the path to participate on GSoC!

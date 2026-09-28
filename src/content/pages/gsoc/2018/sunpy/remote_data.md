@@ -20,7 +20,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 Some functionality in SunPy or in affiliated packages is going to need access to
 data files on remote (HTTP) servers. Examples of this include data provided by
@@ -36,23 +36,23 @@ are aware of changes on the remote server.
 
 See [issue #1939](https://github.com/sunpy/sunpy/issues/1939) for more details.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### Coding Starts
+### Coding Starts
 
 - Engaged with the community and understand the motivation and challenges of the project.
 
-##### Evaluation 1
+### Evaluation 1
 
 - Have evaluated and chosen the best approach for storing a local cache of data.
 - Have implemented a basic cache and download system, including tests and documentation.
 
-##### Evaluation 2
+### Evaluation 2
 
 - Have worked with your mentors and the community to design a simple and functional API.
 - Have a working prototype of this API, including tests.
 
-##### Final
+### Final
 
 - Have finished implementation, testing and documentation.
 - Have written examples for the gallery of how to use the functionality.

@@ -23,7 +23,7 @@ collaborating_projects:
   - poliastro
 ---
 
-#### Description
+## Description
 
 The problem of propagation, finding the position and velocity of an orbiting
 object after some amount of time, is fundamental to any orbit analysis.
@@ -42,33 +42,33 @@ out performance gains. This project aims to fix the current propagation
 issues, as well as adding other propagators to poliastro to let users
 choose the best that suits their needs.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of
   the project.
 - Have set up a development environment and reproduced the existing propagation
   issues.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Fix [convergence problems (#265)](https://github.com/poliastro/poliastro/issues/265),
   either with a new propagator or fixing the current one
 - Have all code, tests and documentation in GitHub
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Add time and accuracy benchmarks for the propagators that can be easily
   reproducible
 - Have all code, tests and documentation in GitHub
 
-##### Final
+### Final
 
 - Have at least two new propagators
 - Have all code, tests and documentation in GitHub
 
-#### Secondary goals
+## Secondary goals
 
 - Fix any bugs that might appear regarding propagation, hyperbolic orbits and so forth
 - Review pull requests from other poliastro contributors, including the mentor

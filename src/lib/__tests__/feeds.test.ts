@@ -96,9 +96,26 @@ describe("parseFeedXml", () => {
     expect(post.url).toBe("https://e.com/a");
     expect(
       parseFeedXml(
-        rssItem('<title>B</title><guid isPermaLink="false">tag:e.com,1</guid>'),
+        rssItem(
+          '<title>B</title><guid isPermaLink="false">https://e.com/p/1</guid>',
+        ),
       ),
     ).toEqual([]);
+  });
+
+  it("ignores a guid that is not a full URL", () => {
+    expect(
+      parseFeedXml(
+        rssItem("<title>A</title><guid>abc-123</guid>"),
+        "https://b.com/feed",
+      ),
+    ).toEqual([]);
+  });
+
+  it("rejects documents that are not RSS or Atom", () => {
+    expect(() => parseFeedXml("<html><body>Not found</body></html>")).toThrow(
+      "Not an RSS or Atom feed",
+    );
   });
 
   it("never uses an Atom rel=self link as the post URL", () => {

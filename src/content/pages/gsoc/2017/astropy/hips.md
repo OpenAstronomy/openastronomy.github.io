@@ -22,7 +22,7 @@ collaborating_projects:
   - astropy
 ---
 
-#### Description
+## Description
 
 The goal of the [HIPS to Py](https://www.youtube.com/watch?v=DUT5rEU6pqM) GSoC project is to create a
 new Python package to work with [Hierarchical Progressive Surveys (HIPS)](http://aladin.u-strasbg.fr/hips/).

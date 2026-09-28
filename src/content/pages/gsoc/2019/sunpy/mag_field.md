@@ -23,7 +23,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 This project aims to improve the `solarbextrapolation` (maybe renamed in the future) package by relaxing the small-angle approximation and allowing for extrapolation of global magnetic fields, i.e. 3D vector fields on a scale larger than an active region.
 Furthermore, we want to add support for other numerical models with the first one being Potential Field Source Surface ([PFSS](https://github.com/antyeates1983/pfss)).
@@ -37,31 +37,31 @@ It is expected that this new object will serve as a prototype for a first-class 
 More information may be added to the [wiki page](https://github.com/sunpy/sunpy/wiki/SOCIS-2019-Ideas-Information#expand-the-scope-of-solarbextrapolation).
 Though this idea is for SOCIS, [same GSOC rules apply](https://github.com/sunpy/sunpy/wiki/SOCIS-2019).
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of the project.
 - Have set up a development environment.
 - Some understanding of what `solarbextrapolation` does and how.
 
-##### To be completed by the Phase 1 Evaluation Deadline
+### To be completed by the Phase 1 Evaluation Deadline
 
 - Add PFSS modelling to the package.
 - Have all code, tests and documentation in GitHub.
 
-##### To be completed by the Phase 2 Evaluation Deadline
+### To be completed by the Phase 2 Evaluation Deadline
 
 - Develop a coordinate-aware 3D Map class
 - Have all code, tests and documentation in GitHub.
 
-##### To be completed by the end of GSoC
+### To be completed by the end of GSoC
 
 - Use 3D Map class for global field extrapolations
 - Have all code, tests and documentation in GitHub.
 - Improvements to the documentation and examples
 
-##### Additional Aims (time permitting)
+### Additional Aims (time permitting)
 
 - Performance improvements
 - Better visualization methods

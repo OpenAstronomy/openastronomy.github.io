@@ -30,12 +30,12 @@ collaborating_projects:
 
 Generate content used to demonstrate advanced functionality of Astropy
 
-#### Description
+## Description
 
 Create tutorials and/or guides which demonstrate more complex uses of astropy and affiliate package functionality. E.g., use of classes and object-oriented programming for astronomical data analysis with Astropy, usage of astroquery and ccdproc together to download and reduce an image, etc.
 Must would work closely with Astropy Tutorial Leads to identify tutorial topics, as well as a tutorial flow/narrative. The student will primarily be mostly responsible for writing the code, but not the pedagogy.
 
-#### Possible Milestones
+## Possible Milestones
 
 - Have a list of possible tutorials to develop
 - Have an outline of selected tutorial(s) for review by the Learn team and/or an astropy package maintainer.

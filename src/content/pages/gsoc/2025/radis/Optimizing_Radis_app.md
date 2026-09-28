@@ -35,7 +35,7 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 RADIS app is a web application for Radis high-resolution infrared molecular spectra.
 Instead of writing code, this project aims to create an intuitive user interface (UI).
@@ -51,9 +51,9 @@ The app has additional features and capabilities in newer versions.
 Our project is all about enhancing user experience to the next level!
 We're committed to bringing you cutting-edge features and fine-tuning these features for maximum performance and efficiency, and rigorous testing to ensure they meet the needs of our highly valued end users.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
@@ -61,7 +61,7 @@ We're committed to bringing you cutting-edge features and fine-tuning these feat
 
 - Get familiar with RADIS App's Frontend (how radis app interface works and simulates spectrum )and Backend System (how the app integrated with radis to produce a spectrum)
 
-##### 1st Evaluation
+### 1st Evaluation
 
 - Implement exomol database in radis app API
 
@@ -69,11 +69,11 @@ We're committed to bringing you cutting-edge features and fine-tuning these feat
 
 - UI improvements to modern standards
 
-##### 2nd Evaluation
+### 2nd Evaluation
 
 - Implementation of caching on the API side for faster response times using a in memory caching system.
 
-##### Final evaluation
+### Final evaluation
 
 - Improving code coverage and test all the basic features using vitetest and migrating old tests too.
 
@@ -81,6 +81,6 @@ We're committed to bringing you cutting-edge features and fine-tuning these feat
 
 - Have all code, tests, and documentation in GitHub.
 
-#### Secondary Goals
+## Secondary Goals
 
 - Review pull requests from other RADIS contributors, especially if there is a parallel GSoC student.

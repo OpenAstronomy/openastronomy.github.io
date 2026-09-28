@@ -19,7 +19,7 @@ collaborating_projects:
   - poliastro
 ---
 
-#### Description
+## Description
 
 _Validation is hard._ The current approach in poliastro is to add unit tests that check whether poliastro gives the same result as the solved examples of [popular Astrodynamics textbooks](http://docs.poliastro.space/en/latest/references.html#books-and-papers).
 
@@ -40,40 +40,40 @@ such as SPICE, GMAT, and STK. Our first target will be
 planetary reference frame transformations, but in the ideal case we would go
 much further than that.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of
   the project.
 - Have set up a development environment and get familiar with either SPICE, GMAT, STK, or all of them
 
-##### 1st evaluation
+### 1st evaluation
 
 - Have settled on one of the tools for reference frame validation
 - Have a basic understanding of reference frames
 - Have converted the `Body` rotational elements to proper reference frames
 - Have all code, tests and documentation in GitHub
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Have produced a table similar to [astropy's](http://www.astropy.org/coordinates-benchmark/summary.html) for our planetary reference frames
 - Have all code, tests and documentation in GitHub
 
-##### Final
+### Final
 
 - Have used a second method to validate the reference frames
 - Have started a conversation in Astropy to integrate our code upstream
 - Have all code, tests and documentation in GitHub
 
-#### Secondary goals
+## Secondary goals
 
 - Fix any bugs that might appear regarding visualization, hyperbolic orbits and so forth
 - Review pull requests from other poliastro contributors, including the mentor
 - Maintain [poliastro benchmarks](https://blog.poliastro.space/poliastro-benchmarks/)
 - Give a talk about the work at some Python event
 
-#### Additional resources
+## Additional resources
 
 - [Wiki page on Validation](https://github.com/poliastro/poliastro/wiki/Validation)
 - [SpiceyPy](http://spiceypy.readthedocs.io/) (Python wrappers for SPICE)

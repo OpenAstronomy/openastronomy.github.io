@@ -1,15 +1,16 @@
 ---
 import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import PageLayout from "../../layouts/PageLayout.astro";
 import { resolveProjectDisplay } from "../../lib/member-logos.ts";
-import { getSeasons } from "../../lib/seasons.ts";
 import {
   buildUniverseSeason,
+  sortSeasons,
   type UniverseStudent,
 } from "../../lib/universe.ts";
 
 // The newest season is the current one.
-const [current] = await getSeasons();
+const [current] = sortSeasons(await getCollection("seasons"));
 const season = await buildUniverseSeason(current);
 
 const dateFormatter = new Intl.DateTimeFormat("en-US", {

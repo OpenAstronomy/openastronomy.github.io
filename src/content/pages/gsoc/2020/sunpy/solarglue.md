@@ -20,7 +20,7 @@ collaborating_projects:
   - glue
 ---
 
-#### Description
+## Description
 
 The ability to interactively explore and quickly analyse large datasets is very important in solar physics.
 As datasets become larger (100Gb or more) and multiple different observations overlap there is a need for a tool which enables multi-instrument interactive visualisation.

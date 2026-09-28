@@ -20,7 +20,7 @@ collaborating_projects:
   - juliaastro
 ---
 
-#### Description
+## Description
 
 [Julia](http://julialang.org/) is a programming language designed for technical
 computing that combines ease-of-use of dynamical languages, like Python, and
@@ -42,7 +42,7 @@ and has very basic features, the goal of this project is to expand it and make
 it more useful. `AstroImages.jl` has not been officially registered yet, thus
 you will be able to freely make any breaking change.
 
-#### Expected Outcomes
+## Expected Outcomes
 
 - Design and implement the user interface
 - Support visualization of multiple extensions (e.g., three extensions combined
@@ -57,7 +57,7 @@ you will be able to freely make any breaking change.
   in place)
 - Write documentation and tests
 
-#### Additional resources
+## Additional resources
 
 - [Presentation of
   `AstroImages.jl`](https://giordano.github.io/blog/2018-03-22-astroimages/)

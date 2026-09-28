@@ -34,15 +34,15 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 RADIS app is a web app for high-resolution infrared molecular spectra using RADIS. The goal of this project is to provide an easy-to-use UI instead of writing code. Currently, the [RADIS app](https://www.radis.app/) has a simple interface with basic functionalities that helps create a nice spectral graph using certain parameters but there is a lot of scope for improvements.
 
 The goal of this project is to create a more responsive app while improving and implementing new features and fixing various issues.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
@@ -52,7 +52,7 @@ The goal of this project is to create a more responsive app while improving and 
 
 - Get familiar with [RADIS architecture](https://radis.readthedocs.io/en/latest/dev/developer.html#architecture) and [RADIS app Architecture](https://github.com/suzil/radis-app#architecture)
 
-##### 1st evaluation
+### 1st evaluation
 
 - Add an option to change the units of [spectral range](https://github.com/suzil/radis-app/issues/147) on the go, and generate an output similar to the [example output](https://github.com/suzil/radis-app/issues/147#issuecomment-1072872386)
 
@@ -60,7 +60,7 @@ The goal of this project is to create a more responsive app while improving and 
 
 - Migrate from native React to [react-hook-form](https://github.com/suzil/radis-app/issues/347) or any other library to simplify the codebase
 
-##### Final evaluation
+### Final evaluation
 
 - [Cache Hitran dataset](https://github.com/suzil/radis-app/issues/527) to remove download time to generate spectrum of any new molecule and possibly add Hitemp dataset also (molecules can be hardcoded). Data may be to attach to a persistent network file system like Amazon EFS or on a more available database like DynamoDB
 
@@ -70,7 +70,7 @@ The goal of this project is to create a more responsive app while improving and 
 
 - Have all code, tests and documentation in GitHub
 
-##### Secondary Goals
+### Secondary Goals
 
 - Upload your experimental spectrum and be able to fit it (to infer temperature or species)
 

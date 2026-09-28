@@ -26,7 +26,7 @@ collaborating_projects:
   - ctlearn
 ---
 
-#### Description
+## Description
 
 CTLearn is a Python package for using deep learning to perform
 analysis tasks on data from imaging atmospheric Cherenkov telescopes
@@ -50,20 +50,20 @@ searches as a basic optimization procedure. Finally, the student will
 run iterative, grid and random-search based optimizations for two of the
 currently implemented models.
 
-#### Milestones
+## Milestones
 
-##### GSOC CODING STARTS
+### GSOC CODING STARTS
 
 - Install CTLearn and train a pre-existing benchmark model to verify that it runs correctly.
 - Understand the technical and scientific goals of the project.
 
-##### GSOC MIDTERM
+### GSOC MIDTERM
 
 - Implement the calculation of useful metrics from a prediction file.
 - Implement iterative grid and random searches in (a)the hyperparameter (sub)space.
 - Have all code and documentation in GitHub.
 
-##### GSOC FINAL
+### GSOC FINAL
 
 - Complete coarse iterative grid and random searches for the single_tel model.
 - Complete coarse iterative grid and random searches for the cnn_rnn model.

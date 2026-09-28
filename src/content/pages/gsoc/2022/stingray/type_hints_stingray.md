@@ -29,25 +29,25 @@ collaborating_projects:
 
 Implementing type hints in the Stingray library
 
-#### Description
+## Description
 
 Despite being and remaining a dynamically-typed language, Python has
 now a [working infrastructure for type hints](https://www.python.org/dev/peps/pep-0484/).
 For a data analysis library, type hinting can be very useful to avoid explicit testing
 for data types and to facilitate debugging.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### Coding starts
+### Coding starts
 
 - Take confidence with the Stingray infrastructure.
 - Start implementing type hints in the core modules of Stingray
 
-##### 1st evaluation
+### 1st evaluation
 
 - Create tests to enforce type checking in selected methods
 - Extend the type hints infrastructure to most of the code base
 
-##### Final evaluation
+### Final evaluation
 
 - Finish up, polish, and document properly

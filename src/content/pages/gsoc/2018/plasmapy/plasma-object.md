@@ -18,7 +18,7 @@ collaborating_projects:
   - plasmapy
 ---
 
-#### Description
+## Description
 
 Plasma physics is an important and wide-ranging field of research with applications from astrophysics to fusion power, and PlasmaPy is a Python package which provides aims to provide tools for this research.
 Currently PlasmaPy uses a single basic `Plasma` class to represent plasmas.
@@ -29,17 +29,17 @@ The aim of this project would therefore be to implement a new `Plasma` metaclass
 These subclasses would handle respresenting and storing different kinds of plasmas using appropriate structures; for instance a `yt` data object would be ideal for 3D simulation data but not for a 1D observational timeseries.
 The `Plasma` metaclass itself would create the appropriate subclass when instantiated, and provide a single data-agnostic user interface.
 
-#### Milestones
+## Milestones
 
-##### To be completed by the GSOC 2018 Phase 1 Evaluation Deadline
+### To be completed by the GSOC 2018 Phase 1 Evaluation Deadline
 
 - Write appropriate tests and basic documentation for the a new `Plasma` metaclass
 
-##### To be completed by the GSOC 2018 Phase 2 Evaluation Deadline
+### To be completed by the GSOC 2018 Phase 2 Evaluation Deadline
 
 - Implement the `Plasma` metaclass
 
-##### To be completed by the GSOC 2018 Final Week
+### To be completed by the GSOC 2018 Final Week
 
 - Update tests and documentation as necessary
 - Remove any bugs in `Plasma` implementation

@@ -19,7 +19,7 @@ collaborating_projects:
   - timelab
 ---
 
-#### Description
+## Description
 
 Quasi-periodic oscillations are the "heart-beat" of black holes and neutron stars:
 oscillations with changing phase and frequency, probably due to the complicated motion of matter around these objects.
@@ -43,24 +43,24 @@ phase-resolved spectroscopy of quasi-periodic oscillations, in such a way that
 
 - Both methods can actually be used for pulsars too (it is the trivial case!).
 
-#### Deliverables
+## Deliverables
 
 Deliverables for this project will be
 
-##### To complete each milestone
+### To complete each milestone
 
 - Working unit tests for each piece of code
 
 - Documentation for each class, method and function implemented
 
-##### Milestone 1
+### Milestone 1
 
 - A semi-automated procedure to follow the frequency of oscillations as they vary
 
-##### Milestone 2
+### Milestone 2
 
 - The de-noising function that leads to the oscillation average profile ("heartbeat" shape) at different energies
 
-##### Final
+### Final
 
 - A suite of scripts outlining workflows useful to scientists in practice

@@ -19,7 +19,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 This project aims to design and implement an object that could be used to define a
 region of interest (ROI) in any physical dimension (such as spatial area,

@@ -17,7 +17,7 @@ collaborating_projects:
   - juliaastro
 ---
 
-#### Description
+## Description
 
 [Julia](http://julialang.org/) is a programming language designed for technical
 computing that combines ease-of-use of dynamical languages and high-performance

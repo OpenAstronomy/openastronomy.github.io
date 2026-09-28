@@ -18,7 +18,7 @@ collaborating_projects:
   - astropy
 ---
 
-#### Description
+## Description
 
 Processing astronomical images results in large catalogs of sources on the
 sky. These catalogs often come from repeated measurements of a patch of sky,

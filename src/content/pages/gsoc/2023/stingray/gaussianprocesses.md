@@ -30,7 +30,7 @@ collaborating_projects:
   - stingray
 ---
 
-#### Description
+## Description
 
 Stingray provides methods for analysing astronomical time series,
 in particular data from space telescopes observing some of the most
@@ -51,22 +51,22 @@ we will simplify the existing code, port it to the tinygp library,
 integrate it with stingray in a new submodule, and release it together
 with a tutorial.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-#### Community Bonding Period
+## Community Bonding Period
 
 - Familiarize with the QPOEstimation code from Huebner et al (2022) and stingray
 - Formulate design plan for the stingray submodule
 - Set up development environment
 
-##### Coding starts
+### Coding starts
 
 - Start implementation of QPOEstimation using tinygp as a stingray submodule
 
-##### 1st evaluation
+### 1st evaluation
 
 - Basic functionality implemented, docstrings and tests exist
 
-##### Final evaluation
+### Final evaluation
 
 - QPO search tool is fully functional, including a case study and a tutorial

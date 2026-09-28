@@ -30,7 +30,7 @@ collaborating_projects:
   - gnuastro
 ---
 
-#### Description
+## Description
 
 Astrometry is a critical component in the processing of astronomical data.
 In short, astrometry is the process of finding the transformation matrix (including distortions) to convert pixel coordinates in one image into sky coordinates (usually RA and Dec).
@@ -41,7 +41,7 @@ However, there are also non-linear (distortion) terms that need to be calculated
 
 To get started, check [our GSoC 2022 checklist](https://savannah.gnu.org/support/index.php?110613#comment0).
 
-#### Milestones (if any)
+## Milestones (if any)
 
 - Completing [our GSoC 2022 checklist](https://savannah.gnu.org/support/index.php?110613#comment0)
 
@@ -51,16 +51,16 @@ To get started, check [our GSoC 2022 checklist](https://savannah.gnu.org/support
 
 - Adding the remaining high-level components to complete astrometry.
 
-##### Coding starts
+### Coding starts
 
 - Actively start fixing/adding some minor bugs/tasks in Gnuastro to get a good feeling of the coding style and logic within Gnuastro (this can be independent of astrometry).
 
 - Study the basic concepts of Astrometry and learning/testing the existing low-level features that have already been written.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Adding tests to existing steps and start working on finding distortions.
 
-##### Final evaluation
+### Final evaluation
 
 - Library and program for writing the full WCS (including distortions) in the FITS format.

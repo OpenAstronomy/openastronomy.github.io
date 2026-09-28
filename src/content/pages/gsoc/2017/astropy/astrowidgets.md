@@ -18,7 +18,7 @@ collaborating_projects:
   - astrowidgets
 ---
 
-#### Description
+## Description
 
 The goal of this project is to develop a set of [widgets](https://github.com/ipython/ipywidgets) allowing easy use of functionality from astropy and its affiliated packages in [Jupyter](http://jupyter.org/) notebooks. While some work in this direction has been done in [reducer](https://github.com/mwcraig/reducer), a package that provides a widget-based interface to [ccdproc](https://github.com/astropy/ccdproc), the widgets in reducer are too tightly bound to the task of image reduction to be useful outside reducer.
 

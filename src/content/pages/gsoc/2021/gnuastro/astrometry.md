@@ -27,7 +27,7 @@ collaborating_projects:
   - gnuastro
 ---
 
-#### Description
+## Description
 
 Astrometry is a critical component in the processing of astronomical data.
 In short, astrometry is the process of finding the transformation matrix (including distortions) to convert pixel coordinates in one image into sky coordinates (usually RA and Dec).
@@ -36,7 +36,7 @@ Many of the low-level components of astrometry have already been added in Gnuast
 However some work still remains on stitching them together into a simple-to-use, high-level C library function that can later be used in several Gnuastro programs, as well as other programs and languages.
 To get started, check [our checklist](http://savannah.gnu.org/support/?110457#comment0)
 
-#### Milestones (if any)
+## Milestones (if any)
 
 - Learning basic concepts of Astrometry and existing functions.
 
@@ -44,20 +44,20 @@ To get started, check [our checklist](http://savannah.gnu.org/support/?110457#co
 
 - Adding the remaining high-level components to complete astrometry.
 
-##### Coding starts
+### Coding starts
 
 - Actively start fixing/adding some minor bugs/tasks in Gnuastro to get a good feeling of the coding style and logic within Gnuastro (this can be independent of astrometry).
 
 - Study the basic concepts of Astrometry and learning/testing the existing low-level features that have already been written.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Fixing bugs in existing components.
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Adding the remaining higher-level functions.
 
-##### Final
+### Final
 
 - Writing robust tests for the library, using data from several space-based and ground-based imaging surveys.

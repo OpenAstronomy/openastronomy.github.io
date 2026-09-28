@@ -24,7 +24,7 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available.
 
@@ -37,9 +37,9 @@ For low values of Rc, the legacy method would perform better. For large values o
 The first goal of the project is to confirm or adjust this number, by setting up benchmark cases under various simulation conditions.
 The second goal of the project is to automatically switch the lineshape algorithm used at runtime based on the value of the number.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
@@ -47,7 +47,7 @@ The second goal of the project is to automatically switch the lineshape algorith
 
 - Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and [RADIS architecture](https://radis.readthedocs.io/en/latest/dev/developer.html#architecture)
 
-##### 1st Evaluation
+### 1st Evaluation
 
 The goal is to confirm or adjust the critical number above. We only use RADIS and do not edit the codebase yet :
 
@@ -57,7 +57,7 @@ The goal is to confirm or adjust the critical number above. We only use RADIS an
 
 - Write a Jupyter Notebook to discuss the changes made to the R number formula, and the critical value obtained.
 
-##### Final
+### Final
 
 We now update the RADIS codebase to implement the automatic engine choice :
 
@@ -71,6 +71,6 @@ We now update the RADIS codebase to implement the automatic engine choice :
 
 - Have all code, tests and documentation in GitHub.
 
-##### Secondary Goals
+### Secondary Goals
 
 - For the math/algorithm-oriented student : set-up the code architecture to deal with large spectra composed of multiple spectral regions, some of which would have different `Rc` numbers, and use the appropriate algorithm for each spectral region before merging the spectra.

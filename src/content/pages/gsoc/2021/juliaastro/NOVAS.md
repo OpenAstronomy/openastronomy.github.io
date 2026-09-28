@@ -31,7 +31,7 @@ collaborating_projects:
 Implement a Julia version of the U.S. Naval Observatory Vector Astrometry
 Software (NOVAS) library and vectorize it to improve performance.
 
-#### Description
+## Description
 
 The U.S. Naval Observatory Vector Astrometry Software (NOVAS) library
 is used to accurately calculate the positions of celestial objects,
@@ -45,7 +45,7 @@ improvement with be to vectorize many of the algorithms so that they
 can be used to quickly calculate the positions of tens of millions of
 stars. The current C and FORTRAN versions do not have this feature.
 
-#### Milestones (if any)
+## Milestones (if any)
 
 - Initial implementation of the basic algorithms/functions.
 
@@ -53,18 +53,18 @@ stars. The current C and FORTRAN versions do not have this feature.
 
 - Modifications to the design to improve ease-of-use.
 
-##### Coding starts
+### Coding starts
 
 - Understand the astrometrc algorithms and the related functions.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Initial implementation of basic algorithms/functions
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Vectorize the basis algorithms/functions.
 
-##### Final
+### Final
 
 - Submit final implementation with improvements for ease-of-use.

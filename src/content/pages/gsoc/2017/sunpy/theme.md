@@ -22,7 +22,7 @@ not have a consistent theme. This project would design a new look for both the
 website and the documentation and then implement this as a general website theme
 and as a sphinx theme for the documentation.
 
-#### Description
+## Description
 
 This project will design a new look for the SunPy website, and implement this as
 a HTML/CSS theme which can be used by the current Jekyll website, and any future
@@ -47,16 +47,16 @@ those particular extensions were chosen. Also a good proposal will demonstrate
 that the applicant has the design and web development experience to successfully
 undertake the project to a high standard.
 
-#### Milestones
+## Milestones
 
-##### GSOC 2017 CODING STARTS
+### GSOC 2017 CODING STARTS
 
 - Have evaulated which tools will be used to undertake the project in collaboration with the mentors.
 
-##### GSOC 2017 MIDTERM
+### GSOC 2017 MIDTERM
 
 - Have designed and implemented the website theme.
 
-##### GSOC 2017 FINAL
+### GSOC 2017 FINAL
 
 - Have created the sphinx theme and finished any extensions to the base project.

@@ -27,7 +27,7 @@ collaborating_projects:
   - gnuastro
 ---
 
-#### Description
+## Description
 
 Gnuastro is primarily written in C because astronomical datasets are large and thus need to be efficient with few dependencies.
 Therefore, its most commonly used interface are Gnuastro's command-line programs (that are built on the Unix philosophy).
@@ -40,7 +40,7 @@ This will be a wonderful chance to master Python and Scipy/Numpy at a very funda
 Of course, in the meantime you will also working on many real-world astronomical data and science scenarios using ground-based and space-based data.
 To get started, check [our checklist](http://savannah.gnu.org/support/?110457#comment0).
 
-#### Milestones (if any)
+## Milestones (if any)
 
 - Mastering the C interface of Numpy and Gnuastro.
 
@@ -48,20 +48,20 @@ To get started, check [our checklist](http://savannah.gnu.org/support/?110457#co
 
 - Build and install the Python components as part of the Gnuastro's build.
 
-##### Coding starts
+### Coding starts
 
 - Learning the numpy C interface and writing small test usages on some basic operations (not necessarily involving Gnuastro).
 
 - Fixing small bugs in Gnuastro's library (as an excuse to learn the programming style and usage of Gnuastro's libraries).
 
-##### 1st evaluation
+### 1st evaluation
 
 - Having a working converter between Numpy's data structure and Gnuastro's data structure.
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Adding wrappers to the core lower-level Gnuastro libraries.
 
-##### Final
+### Final
 
 - Writing tests and build/install steps of the Python wrappers in Gnuastro's build system.

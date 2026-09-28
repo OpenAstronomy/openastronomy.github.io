@@ -24,7 +24,7 @@ collaborating_projects:
   - astroquery
 ---
 
-#### Description
+## Description
 
 [astroquery](http://astroquery.readthedocs.io/), an astropy
 affiliated package, is a package to place modules that access astronomical data

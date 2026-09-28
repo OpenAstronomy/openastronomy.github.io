@@ -39,7 +39,7 @@ collaborating_projects:
   - lincc-frameworks
 ---
 
-#### Description
+## Description
 
 Modern astronomical surveys produce catalogs containing billions of objects, each with associated time-series (light curves) and spectral measurements. Tools like [HATS (Hierarchical Adaptive Tiling Scheme)](https://hats.readthedocs.io/en/latest/), [LSDB](https://lsdb.io), and [nested-pandas](https://github.com/lincc-frameworks/nested-pandas) enable scalable analysis of these catalogs by storing variable-length nested data (light curves, spectra) directly in Parquet files using [pyarrow](https://github.com/apache/arrow)'s nested array types.
 
@@ -51,7 +51,7 @@ However, pyarrow currently lacks some functionality critical for astronomical wo
 
 This project will contribute improvements directly to Apache Arrow, benefiting both the astronomy community and the broader data science ecosystem.
 
-##### Expected Outcomes
+### Expected Outcomes
 
 - Implement missing compute kernels for nested array types
 - Enable sub-column selection for list-struct types in Parquet reader
@@ -59,21 +59,21 @@ This project will contribute improvements directly to Apache Arrow, benefiting b
 - Add comprehensive tests and documentation
 - Contribute upstream to Apache Arrow
 
-#### Project Milestones
+## Project Milestones
 
-##### Coding starts
+### Coding starts
 
 - Set up Arrow development environment and build from source
 - Familiarize with Arrow's C++ codebase, compute kernel architecture, and Parquet reader
 - Review linked issues and create detailed implementation plan
 
-##### 1st evaluation
+### 1st evaluation
 
 - Implement at least one new compute kernel or Parquet reader improvement
 - Write unit tests and benchmarks for new functionality
 - Submit initial PR to Apache Arrow
 
-##### Final evaluation
+### Final evaluation
 
 - Complete implementation of planned improvements
 - Address code review feedback and get PRs merged

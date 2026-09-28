@@ -20,7 +20,7 @@ collaborating_projects:
   - heliopy
 ---
 
-#### Description
+## Description
 
 HelioPy is a relatively new python package, whose aim is to automate the
 downloading and import of data used for space physics.
@@ -36,26 +36,26 @@ units system.
 Find more information about [HelioPy](http://docs.heliopy.org/en/stable/) and
 [astropy units](http://docs.astropy.org/en/stable/units/index.html)
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### GSOC 2018 CODING STARTS
+### GSOC 2018 CODING STARTS
 
 - Have installed HelioPy and used it to download and plot some data to get a
   feel of how it currently works.
 - Have read the documentation on astropy units and know how they work,
   and what their advantages are over using data without units.
 
-##### GSOC 2018 1ST EVALUATION
+### GSOC 2018 1ST EVALUATION
 
 - Have investigated a way of automatically extracting the correct units from
   raw data files.
 
-##### GSOC 2018 2ND EVALUATION
+### GSOC 2018 2ND EVALUATION
 
 - Have written code to make at least one data import function return data
   with units attached.
 
-##### GSOC 2018 FINAL EVALUATION
+### GSOC 2018 FINAL EVALUATION
 
 - Have expanded the new code to all of the data import functions, to make
   HelioPy fully compatible with the astropy units system.

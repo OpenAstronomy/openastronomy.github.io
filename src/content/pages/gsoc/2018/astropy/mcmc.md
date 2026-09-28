@@ -20,7 +20,7 @@ collaborating_projects:
   - astropy
 ---
 
-#### Description
+## Description
 
 [emcee](https://github.com/dfm/emcee) is one of the most sucessfull
 modern samplers extensively used by (but not limited to) the astronomical

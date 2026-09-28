@@ -20,7 +20,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 `sunpy` provides access to solar feature and event data held by the [Heliophysics Event Knowledgebase](https://www.lmsal.com/hek/).
 Descriptions of the properties of each feature and event are given in the [HEK VOEvent specification](https://www.lmsal.com/hek/VOEvent_Spec.html).
@@ -36,27 +36,27 @@ The design of the feature/event classes should be sufficiently general so as not
 
 More information is found on the linked issues.
 
-#### Milestones
+## Milestones
 
 1. Consultation with community on use cases and possible implementations.
 2. Design of HEK feature/event object completed.
 3. Functional HEK feature/event object completed that implements HEK-required attributes.
 4. Final HEK feature/event object completed that implements HEK-required and optional attributes.
 
-##### Community Bonding Period
+### Community Bonding Period
 
 - Understand the project and the API design.
 - Setup a development environment.
 
-##### Coding starts
+### Coding starts
 
 - Experimenting with the current representation of HEK feature and event data.
 - Consider parsing the html page for the specification.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Partial skeleton of the new HEK feature/event object written.
 
-##### Final evaluation
+### Final evaluation
 
 - Functional replacement ready for review and merging into `sunpy`.

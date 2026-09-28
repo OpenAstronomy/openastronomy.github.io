@@ -28,7 +28,7 @@ collaborating_projects:
   - gnuastro
 ---
 
-#### Description
+## Description
 
 GNU Astronomy Utilities (Gnuastro) is an astronomical data processing package containing a dynamically linked library as well as command-line programs for high-level access. Astronomical data can be large and most operations highly parallelizable. Until now, only CPU parallelization has been implemented in Gnuastro, but not yet on GPUs. GPUs are special hardware which are specifically designed for such operations and can significantly reduce the overall execution time significantly for specific tasks.
 
@@ -39,7 +39,7 @@ The goal for this summer is to solidify a mature and generic interface to that i
 
 To get started, check our [GSoC 2024 checklist](https://savannah.gnu.org/support/index.php?110827#comment0).
 
-#### Milestones (if any)
+## Milestones (if any)
 
 - Setting up the low-level wrapper infrastructure for calling OpenCL kernels from Gnuastro for parallel subroutines (with minimal requirements on the developer to know OpenCL; allowing them to focus on the algorithm and even test without having a GPU, not the OpenCL details).
 
@@ -47,7 +47,7 @@ To get started, check our [GSoC 2024 checklist](https://savannah.gnu.org/support
 
 - Allowing users to choose GPU execution from the Command line interface and user documentation.
 
-##### Coding starts
+### Coding starts
 
 - Reviewing the work in GSoC 2023 and understand the work that was done before to understand all its details.
 
@@ -55,13 +55,13 @@ To get started, check our [GSoC 2024 checklist](https://savannah.gnu.org/support
 
 - Testing and debugging the work in various scenarios.
 
-##### 1st evaluation
+### 1st evaluation
 
 - A robust and smooth low level integration of OpenCL with Gnuastro which allows developers to write high level kernels easily compatible and usable inside Gnuastro.
 
 - Have at least a few OpenCL optimised subroutines merged into the main branch of Gnuastro.
 
-##### Final evaluation
+### Final evaluation
 
 - Completing all the required OpenCL kernels alongside their testing, merged with the main branch of Gnuastro.
 

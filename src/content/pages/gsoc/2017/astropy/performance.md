@@ -18,7 +18,7 @@ collaborating_projects:
   - astropy
 ---
 
-#### Description
+## Description
 
 The Astropy core package was designed and implemented with priority placed on
 good code structure, long-term maintainability, and code correctness. Currently

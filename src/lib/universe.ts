@@ -4,7 +4,41 @@
  * content collection) and computes per-window blog status.
  */
 import { fetchFeed, getBlogUrl, type UniverseFeedPost } from "./feeds.ts";
-import type { Season } from "./seasons.ts";
+import type { CollectionEntry } from "astro:content";
+
+export type Season = CollectionEntry<"seasons">["data"] & { year: number };
+
+const FILE = "src/data/universe/seasons.yml";
+
+/**
+ * Seasons from the `seasons` collection, newest first. Fails the build on
+ * what the schema cannot see: the file's keys and whether the current
+ * season has posting periods.
+ */
+export const sortSeasons = (
+  entries: { id: string; data: CollectionEntry<"seasons">["data"] }[],
+): Season[] => {
+  // The file() loader only logs YAML errors, so fail loudly here instead.
+  if (!entries.length) {
+    throw new Error(
+      `No seasons loaded from ${FILE} (empty file, YAML syntax error or a repeated year).`,
+    );
+  }
+  const bad = entries.find((entry) => !/^\d{4}$/.test(entry.id));
+  if (bad) throw new Error(`${FILE}: key "${bad.id}" must be a 4-digit year.`);
+
+  const seasons = entries
+    .map((entry) => ({ year: Number(entry.id), ...entry.data }))
+    .sort((a, b) => b.year - a.year);
+  // Worded without "window": Astro adds a misleading browser-API hint to
+  // any error that mentions it.
+  if (!seasons[0].windows.length) {
+    throw new Error(
+      `${FILE}: the current season (${seasons[0].year}) has no posting periods.`,
+    );
+  }
+  return seasons;
+};
 
 export type UniverseDateRange = {
   start: Date;

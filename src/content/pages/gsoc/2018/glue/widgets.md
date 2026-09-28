@@ -20,7 +20,7 @@ collaborating_projects:
   - glue
 ---
 
-#### Description
+## Description
 
 This project is to develop new widgets/dialogs inside glue. Examples include:
 

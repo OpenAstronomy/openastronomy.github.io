@@ -23,7 +23,7 @@ issues:
   - https://github.com/radis/radis/issues/46
 ---
 
-#### Description
+## Description
 
 The presence and concentration of molecules in a gas can be measured by comparing absorption and emission experimental spectra to synthetic spectra. However, under high-temperature conditions, the synthetic spectra contain dozens of millions of lines. In any line-by-line code the bottleneck is the calculation of the lineshapes, which can require long computational times (up to several minutes).
 
@@ -34,9 +34,9 @@ The RADIS code was recently developed for the characterization of high-temperatu
 
 This performance would be beneficial for new applications such as exoplanet characterization.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community and understand the motivation of spectroscopy users
 - Training on emission & absorption spectroscopy
@@ -44,24 +44,24 @@ This performance would be beneficial for new applications such as exoplanet char
 - Get used with RADIS architecture: review the interface change to calculate multiple molecules at the same time ([#74](https://github.com/radis/radis/pull/74#issuecomment-585773087))
 - Learn about the details of the vectorized calculation of lineshapes in line-of-sight spectra.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Proof of concept GPU implementation example has been reproduced
 - GPU acceleration is implemented and working on your own Fork for at least one combination of lineshape broadening parameters.
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - GPU acceleration is implemented in the main project for all combinations of lineshape broadening parameters
 - Have all code, tests and documentation in GitHub.
 
-##### Final
+### Final
 
 - GPU acceleration is implemented in the main project and tested on many architectures
 - Write an iPython notebook to document the performance benchmark on [radis-benchmark](https://github.com/radis/radis-benchmark)
 - Have all code, tests and documentation in GitHub.
 - Proof of concept of the vectorized calculation of lineshapes in line-of-sight spectra is implemented
 
-#### Secondary goals
+## Secondary goals
 
 - Direct line-of-sight spectra technique is implemented in main project
 - Document architecture and developer guide when facing unclear points that may appear.

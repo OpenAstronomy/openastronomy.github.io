@@ -29,7 +29,7 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 The RADIS code was developed for the characterization of plasmas, flames and atmospheres.
 High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck.
@@ -43,21 +43,21 @@ To be as fast as possible, RADIS convert compressed databases into the HDF5 form
 This conversion also increases the size of the files which can take hours to be written in the hard drive (2-3 hours for HITEMP CO2 in its 2025 version).
 The objective of this project is to accelerate the parsing to HDF5 files.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
 - Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and [RADIS architecture](https://radis.readthedocs.io/en/latest/dev/developer.html#architecture)
 
-##### 1st Evaluation
+### 1st Evaluation
 
 - Based on the demonstration of @dcmvdbekerom, implement a C++ new parsing algorithm in RADIS. The demonstration can be found in the [RADIS issue comment](https://github.com/radis/radis/issues/510#issuecomment-2037688815), which includes a detailed explanation and code examples.
 
 - Add documentation and example. Add tests against other spectral codes.
 
-##### 2nd Evaluation
+### 2nd Evaluation
 
 - Propose a solution to save several HDF5 files instead of a large one in `.radisdb`. For example, save 10 files of 7 GB each instead of a single 70-GB file for HITEMP CO2
 
@@ -65,11 +65,11 @@ The objective of this project is to accelerate the parsing to HDF5 files.
 
 - Tackle some of the bottleneck by either modifying the code, leveraging numba, or writing a C++ code.
 
-##### Final evaluation
+### Final evaluation
 
 - Have all code, tests, and documentation in GitHub.
 
-#### Secondary Goals
+## Secondary Goals
 
 - Document architecture and developer guide when facing unclear points that may appear.
 

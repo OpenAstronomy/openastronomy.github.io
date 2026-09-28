@@ -56,15 +56,15 @@ The first posting window of each season is optional and should be marked with
 Projects listed in `EXTERNAL_PROJECTS` render their raw key with no logo.
 
 The build validates this file with the `seasons` schema in
-`src/content.config.ts` and `src/lib/seasons.ts`. It fails if a key is not a
-4-digit year or is repeated, if contributors, feed URLs, project keys or
-windows are malformed, or if the newest (current) season has no windows. In
-every season the first window must set `optional: true`; later windows must
-not.
+`src/content.config.ts` and `sortSeasons()` in `src/lib/universe.ts`. It fails
+if a key is not a 4-digit year or is repeated, if contributors, feed URLs,
+project keys or windows are malformed, or if the newest (current) season has no
+windows. In every season the first window must set `optional: true`; later
+windows must not.
 
-On the page each window shows ✓ complete, ✕ missing, ○ optional, · pending,
-or ? unknown when the contributor's feed could not be fetched during the
-build.
+On the page each window shows ✓ complete, ✕ missing, ○ optional, · pending, or
+? unknown when the contributor's feed could not be fetched (or was not an
+RSS/Atom feed) during the build.
 
 A YAML syntax error (including a repeated year) is logged as
 `[file-loader] Error reading data`. CI builds from scratch, so the build then

@@ -44,7 +44,7 @@ Contributor applications to OpenAstronomy projects follows the same rules as the
 </ul>
 </details>
 
-<h2 id="info-for-sub-organisations-admins">Info for sub-organisations' admins</h2>
+<h2 id="info-for-sub-organisations-admins">Info for sub-organisations’ admins</h2>
 
 Whether you have been participating for years or this is your first time [read our guide for sub-org admins.](./suborg_guidelines/)
 

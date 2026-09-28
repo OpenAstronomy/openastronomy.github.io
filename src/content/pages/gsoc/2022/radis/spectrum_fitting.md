@@ -30,7 +30,7 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available.
 
@@ -39,9 +39,9 @@ The efficiency of the fitting process depends on the RADIS calculation times as 
 
 The goal of this project is to compare and improve fitting algorithms to reduce the fitting time.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
@@ -49,13 +49,13 @@ The goal of this project is to compare and improve fitting algorithms to reduce 
 
 - Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and [RADIS architecture](https://radis.readthedocs.io/en/latest/dev/developer.html#architecture)
 
-##### 1st evaluation
+### 1st evaluation
 
 - Build many reference cases for fitting, under various conditions (narrow spectra, large spectra, one parameter, multiple parameters, etc.)
 
 - Select the best fitting algorithm to improve performances
 
-##### Final evaluation
+### Final evaluation
 
 - Use RADIS's special features (such as caching spectra & creating databases) to improve fitting times further
 

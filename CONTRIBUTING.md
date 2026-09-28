@@ -101,8 +101,8 @@ npm install
 
 Major-version bumps usually need migration steps; the error messages typically link the package's upgrade guide.
 
-TypeScript stays on 6.x until `@astrojs/check` and `typescript-eslint` accept 7.x (their peer ranges stop at 6).
+TypeScript stays on 6.x until `@astrojs/check` and `typescript-eslint` accept 7.x (their peer ranges stop at 6); `.ncurc.json` makes `npm-check-updates` skip it. Remove that file once they do.
 
 Commit both `package.json` and `package-lock.json` together. If `npm run build` or `npm test` fails after the update, check the changelog for the offending package and either fix the issue or pin that package back to the previous version.
 
-**Security alerts**: if GitHub raises a Dependabot security alert for a specific npm package, fix that immediately regardless of the regular update schedule. With "Dependabot security updates" enabled in the repository settings, Dependabot opens the fix PR itself (`.github/dependabot.yml`).
+**Security alerts**: if GitHub raises a Dependabot security alert for a specific npm package, fix that immediately regardless of the regular update schedule. With "Dependabot security updates" enabled in the repository settings (Settings → Code security), Dependabot opens the fix PR itself.

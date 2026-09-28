@@ -22,7 +22,7 @@ collaborating_projects:
   - timelab
 ---
 
-#### Description
+## Description
 
 This is a code performance project for
 [Stingray](https://github.com/StingraySoftware/stingray) with the aim of
@@ -33,13 +33,13 @@ go through GitHub issues to see where Stingray workflows are breaking down in
 practical use cases, make a thorough profiling of the code, single out
 bottlenecks, and find solutions.
 
-#### Deliverables
+## Deliverables
 
 Deliverables for this project will be profiling and developing solutions for
 code bottlenecks and other hindrances to using Stingray library tools on large
 datasets.
 
-##### To complete each milestone
+### To complete each milestone
 
 - Working unit tests for each piece of code
 

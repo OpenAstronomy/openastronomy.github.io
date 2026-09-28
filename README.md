@@ -9,7 +9,7 @@ guidance, see [CONTRIBUTING.md](CONTRIBUTING.md).
 ## Requirements
 
 - [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-  22.13 or newer (CI uses the version in `.nvmrc`)
+  22.22.3+, 24.16+ or 26.3+ (CI uses the version in `.nvmrc`)
 - npm
 
 ## Local Development

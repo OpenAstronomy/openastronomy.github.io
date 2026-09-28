@@ -20,7 +20,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 Space weather studies Sun-Earth interaction events. One of these, is the effect
 of solar flares have on our civilisation. The forecast of solar flares is not a
@@ -42,9 +42,9 @@ other libraries ([scikit-image](https://scikit-image.org/),
 Read more information at the [wiki page](https://github.com/sunpy/sunpy/wiki/SOCIS-2019-Ideas-Information#space-weather-forecasting-using-machine-learning).
 Though this idea is for SOCIS, [same GSOC rules apply](https://github.com/sunpy/sunpy/wiki/SOCIS-2019).
 
-#### Milestones
+## Milestones
 
-##### 1st Month
+### 1st Month
 
 - Familiarisation with the dataset. Read and visualise the different type of
   data (images, classifications, …)
@@ -56,17 +56,17 @@ Though this idea is for SOCIS, [same GSOC rules apply](https://github.com/sunpy/
 - Write up notebook for the sunpy gallery that exemplifies an analysis of this
   dataset
 
-##### 2nd Month
+### 2nd Month
 
 - Experiment with different linear algebra methods to find the best model.
 - Write up as blog posts the different attempts tried.
 
-##### 3rd Month
+### 3rd Month
 
 - Check the accuracy of the model with SDO/HMI images from HEK
 - Create notebook for the sunpy gallery explaining how to use the model
 
-#### Resources
+## Resources
 
 - [Predicting Coronal Mass Ejections Using Machine Learning Methods](https://doi.org/10.3847/0004-637X/821/2/127)
 - [Sunspotter: Using Citizen Science to Determine the Complexity of

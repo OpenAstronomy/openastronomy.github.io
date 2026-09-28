@@ -25,7 +25,7 @@ collaborating_projects:
   - regions
 ---
 
-#### Description
+## Description
 
 Astropy's [regions](https://github.com/astropy/regions/) affiliated package is being developed to handle description and manipulation of regions on the sky and in images.
 STC-S "Space-Time Coordinate (STC) Metadata" is a specification for a string representation of regions on the sky.
@@ -35,7 +35,7 @@ The complete project will involve writing input-output tools including a parser 
 It will include a suite of tests, including round-trip tests to and from the CRTF and ds9 region formats.
 There is a good deal of code [already written](https://github.com/at88mph/opencadc_stc/tree/master/opencadc_stc) that may be portable into astropy-regions.
 
-#### Milestones (if any)
+## Milestones (if any)
 
 1. Implementation of basic region reading
 2. Implementation of a writer

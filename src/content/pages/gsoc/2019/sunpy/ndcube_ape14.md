@@ -24,7 +24,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 ndcube is a SunPy-affiliated package for generalized handling,
 manipulating and visualizing N-dimensional astronomical data. The
@@ -44,7 +44,7 @@ this new feature ndcube will become better placed to serve a wider
 array of n-dimensional data analysis needs from multiple astronomical
 communities.
 
-#### Expected Outcomes
+## Expected Outcomes
 
 - Replace usage in NDCube of `.wcs`, `.pixel_to_world` and `.world_to_pixel`
   methods with APE 14 API.
@@ -54,10 +54,10 @@ communities.
   for both FITS-WCS and gWCS.
 - Reimplement the ndcube visualization mixins to use APE 14.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### GSOC CODING STARTS
+### GSOC CODING STARTS
 
-##### GSOC MIDTERM
+### GSOC MIDTERM
 
-##### GSOC FINAL
+### GSOC FINAL

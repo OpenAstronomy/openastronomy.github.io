@@ -17,7 +17,7 @@ collaborating_projects:
   - astropy
 ---
 
-#### Description
+## Description
 
 ds9 region files are the de facto standard way to specify regions on the sky for
 many astronomers. The [regions](https://github.com/astropy/regions) package has

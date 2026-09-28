@@ -21,7 +21,7 @@ collaborating_projects:
   - poliastro
 ---
 
-#### Description
+## Description
 
 One of the focuses of poliastro is having an easy to use API. That's why,
 for instance, when mixing quantities in meters and kilometers, poliastro
@@ -43,37 +43,37 @@ textbook examples anymore and more complex strategies have to be found,
 for instance using the SPICE toolkit by NASA. Check out
 [the example on how to run it from Python using the third party library SpiceyPy](https://gist.github.com/Juanlu001/3ba5f97928da923889b4201a94d1daa0).
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of
   the project.
 - Have set up a development environment and run a basic example using SPICE
   kernels.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Have all the current reference frames conversion validated against SpiceyPy
 - Have all code, tests and documentation in GitHub
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Have a working prototype on how to add reference frames to `Orbit` objects
 - Have all code, tests and documentation in GitHub
 
-##### Final
+### Final
 
 - Have finished the refactoring of `Orbit` objects to allow for reference frames,
   using a default one if appropriate
 - Have all code, tests and documentation in GitHub
 
-#### Secondary goals
+## Secondary goals
 
 - Fix any bugs that might appear regarding visualization, reference frames and so forth
 - Review pull requests from other poliastro contributors, including the mentor
 - Give a talk about the work at some Python event
 
-#### Additional resources
+## Additional resources
 
 - [USNO Circular 179](http://aa.usno.navy.mil/publications/docs/Circular_179.pdf)

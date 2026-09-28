@@ -20,7 +20,7 @@ collaborating_projects:
   - poliastro
 ---
 
-#### Description
+## Description
 
 Since 2017 [poliastro features 3d plotting using Plotly](http://docs.poliastro.space/en/latest/examples/Plotting%20in%203D.html).
 However, it would be nice to use other popular orbit visualization solutions
@@ -34,37 +34,37 @@ sampling capabilities have to be improved and the tricks described above
 have to be implemented, along with the creation of a Cesium app that can
 understand our output.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of
   the project.
 - Have set up a development environment and get familiar with the Cesium
   Sandcastle (see "Additional resources")
 
-##### 1st evaluation
+### 1st evaluation
 
 - Have basic export for an orbit around the Earth
 - Have all code, tests and documentation in GitHub
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Have complex export that includes attractors and target bodies, if any
 - Have all code, tests and documentation in GitHub
 
-##### Final
+### Final
 
 - Have created a Cesium application that understand the necessary metadata
 - Have all code, tests and documentation in GitHub
 
-#### Secondary goals
+## Secondary goals
 
 - Fix any bugs that might appear regarding visualization, hyperbolic orbits and so forth
 - Review pull requests from other poliastro contributors, including the mentor
 - Give a talk about the work at some Python event
 
-#### Additional resources
+## Additional resources
 
 - [Cesium Sandcastle](https://cesiumjs.org/Cesium/Build/Apps/Sandcastle/index.html?src=CZML.html&label=DataSources)
 - [Sample data](https://github.com/AnalyticalGraphicsInc/cesium/blob/master/Apps/SampleData/simple.czml)

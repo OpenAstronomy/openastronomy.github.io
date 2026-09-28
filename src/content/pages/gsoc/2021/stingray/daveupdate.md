@@ -23,16 +23,16 @@ collaborating_projects:
   - stingray
 ---
 
-#### Description
+## Description
 
 Generating periodograms for astronomical data is the core task of Stingray. Because periodograms are often noisy, several methods to denoise periodograms exist in the literature, among them the multi-taper periodogram
 Stingray aims to provide a comprehensive library of reliable, well-tested implementations of common algorithms for time series analysis in Astronomy.
 DAVE is an elegant GUI to the library, developed during a previous GSoC.
 Due to the fast evolving Python and Javascript landscape, this GUI is not compatible with the current versions of the dependencies.
 Also, Stingray has now new features that were not implemented in the original GUI.
-In this project, the student will refresh the GUI dependencies, update the package building infrastructure (see [APE 17](https://docs.astropy.org/projects/package-template/en/latest/ape17.html)), and add the new functionality introduced in recent versions of Stingray.
+In this project, the student will refresh the GUI dependencies, update the package building infrastructure (see [APE 17](https://github.com/astropy/astropy-APEs/blob/main/APE17.rst)), and add the new functionality introduced in recent versions of Stingray.
 
-#### Milestones (if any)
+## Milestones (if any)
 
 1. Package build working again
 
@@ -40,14 +40,14 @@ In this project, the student will refresh the GUI dependencies, update the packa
 
 3. Fully working interface
 
-##### Coding starts
+### Coding starts
 
 - Understand GUI functionality and have an overview of the individual components that need to be implemented.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Proof-of-concept implementation is complete (M1 and M2).
 
-##### Final
+### Final
 
 - Full implementation is complete (M3)

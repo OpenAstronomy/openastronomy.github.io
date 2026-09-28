@@ -22,7 +22,7 @@ collaborating_projects:
   - astrowidgets
 ---
 
-#### Description
+## Description
 
 The goal of this project is to further develop a set of astronomical image [widgets](https://github.com/ipython/ipywidgets) allowing easy use of functionality from astropy and its affiliated packages in [Jupyter](http://jupyter.org/) notebooks. Preliminary work on this has begun in the [astrowidgets](https://github.com/astropy/astrowidgets) package.
 

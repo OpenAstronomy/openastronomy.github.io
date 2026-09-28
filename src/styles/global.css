@@ -70,6 +70,10 @@ h5 a:hover {
   text-decoration: none;
 }
 
+.page-content li + li {
+  margin-top: 4px;
+}
+
 pre {
   padding: 12px 16px;
   border-radius: 6px;
@@ -170,6 +174,15 @@ blockquote {
 .page-content {
   overflow-wrap: anywhere;
   padding-bottom: 5px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .skip-link {
@@ -334,6 +347,25 @@ blockquote {
 
   .site-header .site-nav.is-open .trigger {
     display: flex;
+  }
+}
+
+/* Without JavaScript the phone menu cannot open, so show its links inline. */
+@media (max-width: 900px) and (scripting: none) {
+  .site-header .container {
+    flex-wrap: wrap;
+  }
+
+  .site-header .menu-icon {
+    display: none;
+  }
+
+  .site-header .trigger {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 0 10px;
   }
 }
 

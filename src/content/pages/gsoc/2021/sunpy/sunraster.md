@@ -28,7 +28,7 @@ collaborating_projects:
 
 This project will update the sunraster package to use the ndcube 2.0, a much more powerful version and lead to the next release of the sunraster package.
 
-#### Description
+## Description
 
 The sunraster package provides tools for reading and manipulating satellite-based
 observations from solar slit spectrometers such as NASA's IRIS satellite
@@ -46,22 +46,22 @@ This API is not backwards compatible and so requires upgrades to the sunraster
 so users of solar spectrograph observations can more easily perform their
 data analysis.
 
-#### Milestones (if any)
+## Milestones (if any)
 
 - sunraster code has been updated.
 - sunraster tests all pass.
 - sunraster has been released.
 
-##### Coding starts
+### Coding starts
 
 - Become familiar with ndcube and sunraster codebases.
 - Create a test environment for sunraster that uses ndcube 2.0.
 - List out parts of sunraster API that need updating.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Update sunraster code base to get all ndcube-2.0-base tests passing.
 
-##### Final
+### Final
 
 - sunraster is ready to be released to users.

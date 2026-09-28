@@ -19,7 +19,7 @@ collaborating_projects:
   - casacore
 ---
 
-#### Description
+## Description
 
 Python-casacore is a set of Python bindings for [casacore] (<https://github.com/casacore/casacore>), a c++ library used in radio astronomy. This python binding to casacore is now python 3 compatible, contains some unit tests, etc. But some work remains to be done:
 

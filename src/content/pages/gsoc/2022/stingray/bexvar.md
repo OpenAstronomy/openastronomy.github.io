@@ -30,7 +30,7 @@ collaborating_projects:
 
 Bayesian Excess Variance (bexvar) in Stingray
 
-#### Description
+## Description
 
 The Bayesian Excess Variance is a statistical measurement of variability
 in Poisson-distributed (e.g. X-ray or gamma-ray) data.
@@ -48,17 +48,17 @@ The contributor will work to implement this method in Stingray, a Python library
 for the analysis of astronomical time series.
 See [Buchner et al. 2021](https://arxiv.org/abs/2106.14529)
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### Coding starts
+### Coding starts
 
 - Take confidence with the Stingray infrastructure.
 - Creation of test cases for the Bexvar method, based on real observations.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Draft implementation of bexvar
 
-##### Final evaluation
+### Final evaluation
 
 - Polished implementation, working tests, documentation

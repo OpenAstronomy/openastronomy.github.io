@@ -73,6 +73,12 @@ const current = (href: string) =>
     nav.addEventListener("click", (event) => {
       if (event.target instanceof Element && event.target.closest("a")) close();
     });
+    nav.addEventListener("focusout", (event) => {
+      if (!(
+        event.relatedTarget instanceof Node && nav.contains(event.relatedTarget)
+      ))
+        close();
+    });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && nav.classList.contains("is-open")) {
         close();

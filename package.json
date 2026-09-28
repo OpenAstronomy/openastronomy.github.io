@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=22.13"
+    "node": "^22.22.3 || ^24.16.0 || >=26.3.0"
   },
   "scripts": {
     "test": "vitest run",
@@ -19,7 +19,7 @@
     "format:check": "prettier . --check",
     "astro:check": "astro check",
     "check": "npm run lint && npm run astro:check",
-    "linkcheck": "lychee --no-progress --root-dir \"$PWD/html\" --remap \"^https://openastronomy\\.org/(.*)$ file://$PWD/html/\\$1\" html"
+    "linkcheck": "lychee --no-progress --root-dir \"$PWD/html\" --remap \"^https://openastronomy\\.org/(.*)$ file://$(pwd | sed 's/ /%20/g')/html/\\$1\" html"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.4",

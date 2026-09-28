@@ -19,7 +19,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 The Interface Region Imaging Spectrograph (IRIS) is a UV spectrograph
 that observes the chromosphere and transition region of the Sun with
@@ -66,27 +66,27 @@ part of this project. This would include the following tasks:
 A good proposal would demonstrate that the student is familiar with
 the Xarray package.
 
-##### Expected Outcomes
+### Expected Outcomes
 
 - IRIS MapSequence class
 - IRISRaster class
 - IRISObservation class
 
-#### Milestones
+## Milestones
 
-##### GSOC 2017 CODING STARTS
+### GSOC 2017 CODING STARTS
 
 - Have familiarised yourself with the basics of IRIS data through the
   resources below and Python classes nd the Xarray package.
 - Have worked with the mentors to get the package repository setup on
   GitHub.
 
-##### GSOC 2017 MIDTERM
+### GSOC 2017 MIDTERM
 
 - Have developed an IRISMapSequence object and submitted a PR.
 - Have started work on an IRISRaster object.
 
-##### GSOC 2017 FINAL
+### GSOC 2017 FINAL
 
 - Have got IRISMapSequence PR accepted.
 - Have completed development of an IRISRaster object and have a PR
@@ -94,7 +94,7 @@ the Xarray package.
 - Have completed development of an IRISObservation object and have
   opened a PR.
 
-##### Additional Resources
+### Additional Resources
 
 - [IRIS website](http://iris.lmsal.com/)
 - [IRIS instrument paper](https://www.lmsal.com/iris_science/doc?cmd=dcur&proj_num=IS0196&file_type=pdf)

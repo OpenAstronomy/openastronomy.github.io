@@ -20,7 +20,7 @@ collaborating_projects:
   - regions
 ---
 
-#### Description
+## Description
 
 Astropy's [regions](https://github.com/astropy/regions/) affiliated package is being developed to handle description and manipulation of regions on the sky and in images.
 The current regions package has support for the most commonly used region specification, ds9 regions, but does not yet support the CASA CRTF format.

@@ -25,7 +25,7 @@ collaborating_projects:
   - ctlearn
 ---
 
-#### Description
+## Description
 
 CTLearn is a Python package for using deep learning to perform
 analysis tasks on data from imaging atmospheric Cherenkov telescopes
@@ -50,20 +50,20 @@ the student will enable the input of data in ROOT format and train
 some of the already existing deep learning models in CTLearn with data
 from current-generation IACTs.
 
-#### Milestones
+## Milestones
 
-##### GSOC CODING STARTS
+### GSOC CODING STARTS
 
 - Install CTLearn and train a pre-existing benchmark model to verify that it runs correctly.
 - Understand the technical and scientific goals of the project.
 
-##### GSOC MIDTERM
+### GSOC MIDTERM
 
 - Implement input of generic data in ROOT format using the packages uproot and Dl1-data-handler.
 - Enable input of data in ROOT format from a specific IACT using the packages uproot and Dl1-data-handler.
 - Have all code and documentation in GitHub.
 
-##### GSOC FINAL
+### GSOC FINAL
 
 - Enable input of data in ROOT format from a given collection of IACTs.
 - Train single_tel classification model on data from a specific IACT.

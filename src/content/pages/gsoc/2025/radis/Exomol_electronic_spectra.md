@@ -28,7 +28,7 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 The RADIS code was developed for the characterization of plasmas, flames and atmospheres.
 High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck.
@@ -46,15 +46,15 @@ Other codes allow to compute electronic spectra of diatomic molecules and can be
 - MassiveOES - <https://bitbucket.org/OES_muni/massiveoes> (with Radis/MassiveOES example in <https://github.com/radis/massiveOES-examples>)
 - ExoMol list - <https://www.exomol.com/software/>
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
 - Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and [RADIS architecture](https://radis.readthedocs.io/en/latest/dev/developer.html#architecture)
 
-##### 1st Evaluation
+### 1st Evaluation
 
 - Adapt how the EXOMOL database is currently employed to allow the computation of electronic spectra at **thermal equilibrium** (single temperature)
 
@@ -62,7 +62,7 @@ Other codes allow to compute electronic spectra of diatomic molecules and can be
 
 - To ease the understand of the physics behind the code, the contributor could start with non-equilibrium spectra of atomic species (see Secondary goals). This is entirely optional and up to the contributor.
 
-##### 2nd Evaluation
+### 2nd Evaluation
 
 - Add the possibility to compute electronic spectra at **thermal non-equilibrium** (electronic temperature != translational temperature)
 
@@ -70,11 +70,11 @@ Other codes allow to compute electronic spectra of diatomic molecules and can be
 
 - For diatomic species, start a new database based on MassiveOES sources.
 
-##### Final evaluation
+### Final evaluation
 
 - Have all code, tests, and documentation in GitHub.
 
-#### Secondary Goals
+## Secondary Goals
 
 - RADIS can compute atomic spectra thanks to the hard work of GSOC 2023 and 2024 contributors, see <https://github.com/radis/radis/pull/689>. An interesting approach would be to start with non-equilibrium spectra of atomic species as the physics is slighly easier than for molecule.
 

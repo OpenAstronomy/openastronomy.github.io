@@ -26,7 +26,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 Determining the 3D geometry of the tangled and dynamic coronal magnetic field is an open research problem in solar physics.
 A common technique for deriving the 3D vector field from a photospheric magnetogram is to assume a _potential_ field such that it can be derived by solving Laplace's equation.
@@ -40,19 +40,19 @@ The main challenge of this project will be creating a general 3D Map class simil
 Currently, the `solarbextrapolation` package uses a Map3D class that is limited to Cartesian coordinates and has no support for coordinate transformations. This new Map3D class will have support for 3D coordinates through the use of the [SunPy coordinates module](http://docs.sunpy.org/en/stable/guide/units-coordinates.html#physical-coordinates-in-sunpy)
 It is expected that this new object will serve as a prototype for a first-class data type in the core SunPy package.
 
-#### Primary Goals
+## Primary Goals
 
 - Develop a coordinate-aware 3D Map class
 - Use 3D Map class for global field extrapolations
 
-#### Possible Secondary Goals
+## Possible Secondary Goals
 
 - Performance improvements
 - Improvements to the documentation and examples
 - Better visualization methods
 - Addition of more advanced extrapolators, e.g. non-linear force-free field
 
-#### Additional Resources
+## Additional Resources
 
 - [`solarbextrapolation` package](https://github.com/sunpy/solarbextrapolation)
 - [Maps in SunPy](http://docs.sunpy.org/en/stable/code_ref/map.html)

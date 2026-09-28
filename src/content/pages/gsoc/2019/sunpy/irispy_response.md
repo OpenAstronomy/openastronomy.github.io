@@ -24,7 +24,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 The Interface Region Imaging Spectrograph (IRIS) is a NASA Small Explorer satellite designed
 to make spectroscopic and imaging observations of the solar chromosphere and transition region.
@@ -49,17 +49,17 @@ In this project, the following tasks must be performed:
 These new feaures will give scientists far greater power and abilty to perform IRIS data analysis in Python
 and make new discoveries regarding the energetics and dynamics of the solar chromosphere and transition region.
 
-#### Expected Outcomes
+## Expected Outcomes
 
 - A function for deriving the time-dependent IRIS reponse function.
 - Benchmarking and unit tests so this new software can be reliably maintained.
 - Updated intensity conversion methods between intrument and physical units that correct for
   the time observations were taken.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### GSOC CODING STARTS
+### GSOC CODING STARTS
 
-##### GSOC MIDTERM
+### GSOC MIDTERM
 
-##### GSOC FINAL
+### GSOC FINAL

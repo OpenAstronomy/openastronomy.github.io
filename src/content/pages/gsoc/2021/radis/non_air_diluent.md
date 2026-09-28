@@ -25,7 +25,7 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that makes it one of the fastest line-by-line spectral codes available.
 
@@ -33,9 +33,9 @@ Currently RADIS supports calculation of about every possible molecule, but assum
 
 No background in spectroscopy and collisional broadening is required, but the student is expected to want to learn about this topic ! First evaluation will focus on the physics, 2nd and Final will focus on implementation.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
@@ -43,7 +43,7 @@ No background in spectroscopy and collisional broadening is required, but the st
 
 - Have set up a development environment, be familiar with open-source tools (GitHub / Git / Tests) and get familiar with [RADIS architecture](https://radis.readthedocs.io/en/latest/dev/developer.html#architecture)
 
-##### 1st evaluation
+### 1st evaluation
 
 Learn the physics :
 
@@ -57,7 +57,7 @@ Implement :
 
 - Update the [pressure_broadening_HWMH](https://github.com/radis/radis/blob/develop/radis/lbl/broadening.py#L249) function to compute more than one diluent.
 
-##### Final
+### Final
 
 Make it user friendly :
 
@@ -69,6 +69,6 @@ Make it user friendly :
 
 - Have all code, tests and documentation in GitHub.
 
-##### Secondary goals
+### Secondary goals
 
 - allow user to specify their own collisional broadening formula.

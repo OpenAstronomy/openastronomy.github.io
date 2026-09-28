@@ -20,7 +20,7 @@ collaborating_projects:
   - astropy
 ---
 
-#### Description
+## Description
 
 Here is a common astronomical problem: I have a table with objects on the sky, each of which has a flux and an observation time. I match them with some other photometric catalog and them compute certain values (e.g. the mass, the age and the accretion rate). I store all that in the table. Astropy offers a lot of classes to make this easier, for example coordinates that know how to transform between different coordinate systems.
 Once I write my publication, I need to store that table as a fits file and print it out to LaTeX. This is where the problem comes: Each of the special objects (coordinates, times, units) has metadata that does not easily fit into the data column.

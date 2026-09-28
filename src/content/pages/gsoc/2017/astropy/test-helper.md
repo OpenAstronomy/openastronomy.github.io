@@ -21,7 +21,7 @@ collaborating_projects:
   - astropy
 ---
 
-#### Description
+## Description
 
 Astropy's test helper (inside `astropy.tests`) is very useful. There are some
 packages that do not want to use `astropy-helpers` submodule nor Astropy's

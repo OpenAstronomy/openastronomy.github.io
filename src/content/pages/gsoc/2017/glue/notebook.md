@@ -19,7 +19,7 @@ collaborating_projects:
   - glue
 ---
 
-#### Description
+## Description
 
 At the moment, the main way users use glue is via the Qt-based application.
 However, much of glue is in fact GUI-agnostic and can in principle be re-used

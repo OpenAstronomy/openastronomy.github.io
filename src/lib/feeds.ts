@@ -79,16 +79,21 @@ const permalinkGuid = (value: unknown): string =>
     ? ""
     : textValue(value);
 
-/** The post URL, resolved against the feed URL when it is relative. */
+/**
+ * The post URL: the item's link (resolved against the feed URL when
+ * relative), else a permalink <guid> that is already a full http(s) URL.
+ */
 const itemUrl = (item: Record<string, unknown>, feedUrl: string): string => {
-  const raw =
-    pickLink(item.link) || permalinkGuid(item.guid) || pickLink(item.id);
-  if (!raw) return "";
-  try {
-    return new URL(raw, feedUrl || undefined).href;
-  } catch {
-    return "";
+  const link = pickLink(item.link) || pickLink(item.id);
+  if (link) {
+    try {
+      return new URL(link, feedUrl || undefined).href;
+    } catch {
+      return "";
+    }
   }
+  const guid = permalinkGuid(item.guid);
+  return isHttpUrl(guid) ? guid : "";
 };
 
 const itemDate = (item: Record<string, unknown>) => {
@@ -107,9 +112,13 @@ const itemSummary = (item: Record<string, unknown>) => {
   return undefined;
 };
 
-/** Items of an RSS 2.0 channel or an Atom feed. */
+/**
+ * Items of an RSS 2.0 channel or an Atom feed. Throws for anything else (an
+ * HTML error page, a parked domain) so the feed counts as unavailable.
+ */
 const feedItemsFromXml = (xml: string): Record<string, unknown>[] => {
   const parsed = asRecord(xmlParser.parse(xml));
+  if (!parsed?.rss && !parsed?.feed) throw new Error("Not an RSS or Atom feed");
   const items =
     asRecord(asRecord(parsed?.rss)?.channel)?.item ??
     asRecord(parsed?.feed)?.entry;

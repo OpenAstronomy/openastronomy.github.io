@@ -43,15 +43,15 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 RADIS app is a web application for Radis high-resolution infrared molecular spectra. Instead of writing code, this project aims to create an intuitive user interface (UI).It use radis internally to produce spectrum, and the updated version and radis algorithm make it incredibly efficient to compute the millions of lines in only a few minutes.Radis app leverages React 18 to offer the user interface, and FastApi on the backend. We are using react-hook-form for the fastest user experience and to maintain performance on the client slide. In the backend, we use FastApi to offer the fastest response.We created this app with the intention of giving both researchers and non-researchers access to the most valuable elements of Radis via a straightforward online application. Our team and contributors are always trying to make the app better. The app has additional features and capabilities in newer versions.
 
 Our project is all about enhancing user experience to the next level! We're committed to bringing you cutting-edge features and fine-tuning these features for maximum performance and efficiency, and rigorous testing to ensure they meet the needs of our highly valued end users.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
@@ -59,7 +59,7 @@ Our project is all about enhancing user experience to the next level! We're comm
 
 - Get familiar with RADIS App's Frontend (how radis app interface works and simulates spectrum )and Backend System (how the app integrated with radis to produce spectrum)
 
-##### 1st Evaluation
+### 1st Evaluation
 
 - Implement exomol database in radis app api
 
@@ -67,13 +67,13 @@ Our project is all about enhancing user experience to the next level! We're comm
 
 - Ui improvements (you need the improve the ui in modern standards)
 
-##### 2nd Evaluation
+### 2nd Evaluation
 
 - Implementation of caching is api side for more faster response time using in memory caching system .
 
 - Implement StoryBook for the app
 
-##### Final evaluation
+### Final evaluation
 
 - Improving code coverage and test all the basic features using vitetest && migrating old test too.
 
@@ -81,6 +81,6 @@ Our project is all about enhancing user experience to the next level! We're comm
 
 - Have all code, tests, and documentation in GitHub.
 
-#### Secondary Goals
+## Secondary Goals
 
 - Review pull requests from other RADIS contributors, especially parallel GSoC mentee

@@ -25,7 +25,7 @@ In this project you would create the foundations of the 'sunkit-image' SunPy
 affiliated package, a package to contain image processing routines and
 functionality specific to the analysis of solar physics data.
 
-#### Description
+## Description
 
 There have been various proposals for adding image processing and manipulation
 code to the SunPy library. SunPy has decided that this functionality will
@@ -47,23 +47,23 @@ Optional extras:
 2. Refactor and write a Python wrapper for [FLCT](https://arxiv.org/abs/0712.4289) [code](http://solarmuri.ssl.berkeley.edu/overview/publicdownloads/software.html).
 3. Implement image alignment using feature detection and tracking. [Example](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_brief.html)
 
-#### Milestones
+## Milestones
 
-##### GSOC 2018 Official Coding Start
+### GSOC 2018 Official Coding Start
 
 - Have familiarised yourself with the algorithms and with Python packaging. Have worked with the mentors to get the package repository setup on GitHub and the CI and documentation running.
 
-##### To be completed by the GSOC 2018 Phase 1 Evaluation Deadline
+### To be completed by the GSOC 2018 Phase 1 Evaluation Deadline
 
 - Have implemented, tested and documented the NRGF code.
 - Have implemented, tested and documented the MGN code.
 
-##### To be completed by the GSOC 2018 Phase 2 Evaluation Deadline
+### To be completed by the GSOC 2018 Phase 2 Evaluation Deadline
 
 - Have successfully merged the NRGF and MGN code.
 - Have implemented OCCULT-2.
 
-##### To be completed by the end of the GSOC 2018 Final Week
+### To be completed by the end of the GSOC 2018 Final Week
 
 - Have tested, documented and merged the OCCULT-2 code.
 - Have developed an outline of the implementation of the image resampling code in the context of the Astropy reproject module.

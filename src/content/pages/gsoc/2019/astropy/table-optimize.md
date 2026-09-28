@@ -26,7 +26,7 @@ collaborating_projects:
 
 Improving astropy Table performance
 
-#### Description
+## Description
 
 The astropy table sub-package defines a core Table class that is
 used to store and manipulate tabular data within astropy. This class
@@ -41,15 +41,15 @@ and then developing code to improve the performance. It is possible that
 some fixes will require the use of Cython so previous experience is
 desirable though not absolutely required.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### GSOC 2019 CODING STARTS
+### GSOC 2019 CODING STARTS
 
 - Perform developer install of `astropy`.
 - Install Python profiling tools.
 - Study astropy and the table package capabilities.
 
-##### GSOC 2019 MIDTERM
+### GSOC 2019 MIDTERM
 
 - Install and run `asv`.
 - Examine existing `asv` benchmarks and identify areas for improved benchmarking.
@@ -57,7 +57,7 @@ desirable though not absolutely required.
 - Identify strategies for improved speed performance.
 - Implement initial performance improvements.
 
-##### GSOC 2019 FINAL
+### GSOC 2019 FINAL
 
 - Continue and finalize implementation of performance improvements.
 - Contine and finalize additional `asv` benchmark tests.

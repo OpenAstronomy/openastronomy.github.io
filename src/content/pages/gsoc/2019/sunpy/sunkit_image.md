@@ -28,7 +28,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 There have been various proposals for adding image processing and manipulation code to the SunPy library.
 SunPy has decided that this functionality will instead reside in an affiliated package, named [sunkit-image.](https://github.com/sunpy/sunkit-image/)
@@ -49,25 +49,25 @@ There are more complex features we would like but will only be looked at once th
 2. Implement image alignment using feature detection and tracking. [Example](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_brief.html)
 3. Implement image re-sampling as described in [this resampling paper](https://link.springer.com/content/pdf/10.1023/B:SOLA.0000021743.24248.b0.pdf) through updating [this pull request](https://github.com/astropy/reproject/pull/52) to the Astropy [image resampling](https://reproject.readthedocs.io/en/stable/) repository.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Have familiarized yourself with the algorithms.
 - Have set up a development environment.
 - Understand of what is currently in `sunkit-image`.
 
-##### To be completed by the Phase 1 Evaluation Deadline
+### To be completed by the Phase 1 Evaluation Deadline
 
 - Have implemented, tested and documented the NRGF code.
 - Have implemented, tested and documented the MGN code.
 
-##### To be completed by the Phase 2 Evaluation Deadline
+### To be completed by the Phase 2 Evaluation Deadline
 
 - Have successfully merged the NRGF and MGN code.
 - Have implemented OCCULT-2.
 
-##### To be completed by the end of GSoC
+### To be completed by the end of GSoC
 
 - Have implemented, tested and documented soft morphological filtering code.
 - Have tested, documented and merged the OCCULT-2 code.

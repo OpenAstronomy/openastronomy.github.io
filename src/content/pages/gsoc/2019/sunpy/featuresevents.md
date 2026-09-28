@@ -21,7 +21,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 The Sun displays many different features and events (FEs). These are
 detected and described either automatically by algorithm, or by visual
@@ -42,14 +42,14 @@ be simple for a FE with a spatial extent property to be overplotted
 on SunPy map; similarly, it should be simple for a FE with a temporal
 duration to be overplotted on a SunPy timeseries.
 
-#### Milestones
+## Milestones
 
-##### Coding Starts
+### Coding Starts
 
 - Engaged with the community and understand the motivation and
   challenges of the project.
 
-##### Evaluation 1
+### Evaluation 1
 
 - Have understood what a FE is in the context of solar physics
   research and why their interaction with existing SunPy objects is
@@ -58,7 +58,7 @@ duration to be overplotted on a SunPy timeseries.
   object.
 - Have implemented a basic SunPy FE object.
 
-##### Evaluation 2
+### Evaluation 2
 
 - Have worked with your mentors and the community to design a simple
   and functional API.
@@ -66,7 +66,7 @@ duration to be overplotted on a SunPy timeseries.
   input from both the HEK and HEC.
 - Have tests for the working prototype.
 
-##### Final
+### Final
 
 - Have finished implementation, testing and documentation.
 - Have written examples for the gallery of how to use the functionality.

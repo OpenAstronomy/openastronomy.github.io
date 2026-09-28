@@ -17,7 +17,7 @@ collaborating_projects:
   - poliastro
 ---
 
-#### Description
+## Description
 
 Since 2017 poliastro features Near Earth Objects (NEOs) data
 retrieval and 3D plotting, as can be seen in these notebooks:
@@ -43,33 +43,33 @@ Due to the fact that poliastro already uses Plotly to display 3D orbits,
 the most natural choice for a web app would be [Dash](https://plot.ly/dash/),
 which recently became a NumFOCUS affiliated project.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of
   the project.
 - Have set up a development environment and tried to build some basic Dash
   application
 
-##### 1st evaluation
+### 1st evaluation
 
 - Have a basic web application to display the 3D trajectory of one NEO of choice
 - Have all code, tests and documentation in GitHub
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Allow the user to change the epoch and/or select a time period
 - Add examples of popular NEOs and showcase some approaches from the news
 - Have all code, tests and documentation in GitHub
 
-##### Final
+### Final
 
 - Allow the user to display more than one NEO in the application
 - Allow the user to export the result as a Python script
 - Have all code, tests and documentation in GitHub
 
-#### Secondary goals
+## Secondary goals
 
 - Fix any bugs that might appear regarding visualization, hyperbolic orbits and so forth
 - Review pull requests from other poliastro contributors, including the mentor

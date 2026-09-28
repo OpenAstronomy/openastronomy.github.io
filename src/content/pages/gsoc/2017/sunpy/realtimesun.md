@@ -22,7 +22,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 The project requires the combination of multiple parts of the sunpy
 library to combine them all and together with a flask (or similar) application

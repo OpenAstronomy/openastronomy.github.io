@@ -23,7 +23,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 SunPy provides a Python interface to many different sources of solar data.
 These data are generally of two forms, file based downloads where observations are downloaded as FITS files or other files, and metadata only searches such as event lists or spatial location of features.

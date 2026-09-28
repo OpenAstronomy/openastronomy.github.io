@@ -18,7 +18,7 @@ collaborating_projects:
   - timelab
 ---
 
-#### Description
+## Description
 
 X-ray spectroscopy (measuring and understanding how the brightness of a black
 hole source varies with wavelength of the light) is one of the most important
@@ -50,25 +50,25 @@ would be a big step forward for the entire field of X-ray astrophysics.
 For a test of this project by one of our Stingray leads, see
 [(dhuppenkothen/clarsach)](https://github.com/dhuppenkothen/clarsach).
 
-#### Deliverables
+## Deliverables
 
 Deliverables for this project will be:
 
-##### To complete each milestone
+### To complete each milestone
 
 - Working unit tests for each piece of code
 
 - Documentation for each class, method and function implemented
 
-##### Milestone 1
+### Milestone 1
 
 - Python bindings to the XSPEC models and an API for access
 
-##### Milestone 2
+### Milestone 2
 
 - Installation files for the XSPEC models (fortran/C++) and the Python library
 
-##### Final
+### Final
 
 - [Example/tutorial notebooks](https://github.com/StingraySoftware/notebooks)
   connecting the models to the

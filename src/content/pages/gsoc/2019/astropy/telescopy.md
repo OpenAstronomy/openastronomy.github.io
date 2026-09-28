@@ -21,7 +21,7 @@ collaborating_projects:
 
 Specify some telescope, filter, imager, and target properties, and estimate the photons or counts you’d measure
 
-#### Description
+## Description
 
 The goal of this project is to create a simple API for performing signal-to-noise calculations
 for telescopic observations using astropy. Users will specify an input source spectrum (e.g. a blackbody),
@@ -30,20 +30,20 @@ properties of the source (e.g. magnitude in one band, or a distance), properties
 the expected photon flux and count rate. If time allows, the applicant will also develop a submodule for
 signal-to-noise calculations of spectroscopic observations.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### GSOC CODING STARTS
+### GSOC CODING STARTS
 
 - Get to know the existing API, design strawman API
 - Generalize the input spectrum object for objects other than blackbodies
 - Work out scaling of magnitudes from one band to another
 
-##### GSOC MIDTERM
+### GSOC MIDTERM
 
 - Write tests which will validate predictions against real data
 - Write documentation which explains how to construct your own S/N calculations
 
-##### GSOC FINAL
+### GSOC FINAL
 
 - Have _passing_ tests which validate the API for real observations
 - Handle spectroscopic observations at arbitrary spectral resolution

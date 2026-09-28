@@ -31,15 +31,15 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 The RADIS code was developed for the characterization of plasmas, flames and atmospheres. High-temperature spectral calculations require to resolve the shape of tens of millions of lines, which is the usual performance bottleneck. RADIS implements a new algorithm to compute these lineshapes, and is already one of the fastest line-by-line spectral codes available. It can also compute many different types of spectra (absorption / emission / equilibrium / nonequilibrium).
 
 However, although the algorithm is very CPU/GPU efficient, the RADIS code is still memory-hungry. Databases are currently loaded in RADIS using the VAEX package, but the operations to calculate the spectra are performed using the PANDAS library. VAEX is a similar table management tool than PANDAS but uses memory mapping, a zero memory copy policy, and lazy computations for the best performance. **The main goal of the current project is to refactor RADIS so that dataframes are only manipulated via the VAEX format**. Potentially, this work would make it possible to compute spectral databases of up to billions of lines (hundred of GB or terabyte-scale databases).
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
@@ -49,11 +49,11 @@ However, although the algorithm is very CPU/GPU efficient, the RADIS code is sti
 
 - Get familiar with RADIS architecture
 
-##### 1st Evaluation
+### 1st Evaluation
 
 - Create a standalone spectroscopy code working with Out-of-core Vaex calculations (with minimum features: absorption code under equilibrium)
 
-##### 2nd Evaluation
+### 2nd Evaluation
 
 - Create a standalone spectroscopy code working with Out-of-core Vaex calculations (with minimum features: absorption code under equilibrium)
 
@@ -61,13 +61,13 @@ However, although the algorithm is very CPU/GPU efficient, the RADIS code is sti
 
 - Implement tests to verify that the implementation of VAEX will not have different output than the current PANDAS implementation
 
-##### Final evaluation
+### Final evaluation
 
 - Implement VAEX out-of-core calculations directly in all othe other RADIS calculation paths (nonequilibrium, all lineshape calculations routine), replacing PANDAS
 
 - Have all code, tests, and documentation in GitHub.
 
-#### Secondary Goals
+## Secondary Goals
 
 - Document architecture and developer guide when facing unclear points that may appear.
 

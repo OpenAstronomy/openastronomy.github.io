@@ -24,7 +24,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 This project will provide a new functionality to the ndcube package,
 namely resampling data using the NDCube data class. The NDCube class
@@ -51,18 +51,18 @@ analysis less prone to errors.
 Therefore this project will be of great benefit to the wider astronomical
 community.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### Coding starts
+### Coding starts
 
 - Become familiar with ndcube and astropy WCS codebase.
 - Begin work on a resampling framework
 
-##### 1st evaluation
+### 1st evaluation
 
 - Complete working draft prototype of resampling framework.
 - Seek feedback from the ndcube-using community.
 
-##### Final
+### Final
 
 - Release new version of ndcube including resampling capability

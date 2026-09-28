@@ -19,7 +19,7 @@ collaborating_projects:
   - astropy
 ---
 
-#### Description
+## Description
 
 The coordinates subpackage currently only supports transforming positional coordinates, but it would be useful to develop a consistent framework for also transforming velocities (e.g., proper motion to proper motion, or proper motion to cartesian) with full support for barycentric, galactocentric, and LSR motion. This project could be:
 

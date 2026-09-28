@@ -26,7 +26,7 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 The RADIS code was developed to characterize the radiation of plasmas, flames and atmospheres. It calculates high-temperature infrared spectra from databases of tens of millions of lines, with a new algorithm that already makes it one of the fastest line-by-line spectral codes available. This performance makes it very suitable to compute high-temperature atmospheres.
 
@@ -38,9 +38,9 @@ The goal of this project is to simplify the user interface to compute atmosphere
 
 - if interested in the radiative transfer-physics, add a plane-parallel model for multiple-layers-atmospheres.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
@@ -50,7 +50,7 @@ The goal of this project is to simplify the user interface to compute atmosphere
 
 - Get familiar with [RADIS architecture](https://radis.readthedocs.io/en/latest/dev/developer.html#architecture) : in particular, review the interface change to calculate multiple molecules at the same time ([#74](https://github.com/radis/radis/pull/74))
 
-##### 1st evaluation
+### 1st evaluation
 
 - Write interface to read standard atmosphere input files (mole fractions, temperature profile, pressure profile)
 
@@ -58,7 +58,7 @@ The goal of this project is to simplify the user interface to compute atmosphere
 
 - Add integration to more line databases, like ExoMol or GEISA ([#34](https://github.com/radis/radis/issues/34))
 
-##### Final
+### Final
 
 - Improve how these databases are downloaded automatically and converted to RADIS standard format (see [#210](https://github.com/radis/radis/issues/210))
 
@@ -66,6 +66,6 @@ The goal of this project is to simplify the user interface to compute atmosphere
 
 - Have all code, tests and documentation in GitHub.
 
-##### Secondary Goals
+### Secondary Goals
 
 - If the student is interested in the radiative-transfer physics, set-up a plane-parallel model to compute multiple-layers atmospheres ([#189](https://github.com/radis/radis/issues/189))

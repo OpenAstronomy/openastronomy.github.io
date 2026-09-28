@@ -32,7 +32,7 @@ collaborating_projects:
 
 Spectral timing in Julia
 
-#### Description
+## Description
 
 The analysis of time series from astronomical observations in the X-rays is an
 excellent tool to test advanced physical theories.
@@ -46,19 +46,19 @@ This project is about the implementation of a basic set of X-ray timing analysis
 operations in Julia, starting from the porting of the core operations from the
 `stingray` Python package.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### Coding starts
+### Coding starts
 
 - Implement a series of tests in Julia that the new code will have to pass
 - Start the porting
 
-##### 1st evaluation
+### 1st evaluation
 
 - Basic operations (periodograms and cross spectra) implemented for at least
   one kind of input data
 
-##### Final evaluation
+### Final evaluation
 
 - Properly tested periodogram, cross spectra, time lags, and coherence
 - Optional: a working framework for variability vs energy spectra

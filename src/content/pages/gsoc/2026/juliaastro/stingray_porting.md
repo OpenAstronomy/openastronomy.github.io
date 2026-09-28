@@ -30,7 +30,7 @@ collaborating_projects:
   - juliaastro
 ---
 
-#### Description
+## Description
 
 The analysis of time series from astronomical observations in the X-rays is an
 excellent tool to test advanced physical theories.
@@ -45,20 +45,20 @@ operations in Julia, continuing the porting of the core operations from the
 `stingray` Python package [initiated during Google Summer of Code 2022 and 2025]
 (<https://github.com/StingraySoftware/Stingray.jl>)
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Gain familiarity with the codebase
 - Apply existing analysis to simulated datasets
 - Implement I/O operation on FITS files
 
-##### 1st evaluation
+### 1st evaluation
 
 - Implement a series of tests in Julia that the new code will have to pass
 - Extend basic operations (periodograms and cross spectra) to event lists and light curves
 - Time lags and coherence spectra
 
-##### Final evaluation
+### Final evaluation
 
 - A working framework for variability vs energy spectra (covariance spectra, time lags)

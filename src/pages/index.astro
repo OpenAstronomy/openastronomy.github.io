@@ -5,12 +5,14 @@ import logo from "../assets/logoOA.png";
 ---
 
 <BaseLayout title="OpenAstronomy">
+  <h1 class="visually-hidden">OpenAstronomy</h1>
   <Image
     class="large-logo"
     src={logo}
-    alt="Open Astronomy Logo"
+    alt=""
     width={960}
-    loading="lazy"
+    loading="eager"
+    fetchpriority="high"
   />
 
   <p>

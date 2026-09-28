@@ -34,7 +34,7 @@ collaborating_projects:
   - radis
 ---
 
-#### Description
+## Description
 
 The RADIS code was developed for the characterization of plasmas, flames, and atmospheres.
 High-temperature spectral calculations require resolving the shape of tens of millions of lines, which is the usual performance bottleneck.
@@ -48,15 +48,15 @@ To be as fast as possible, RADIS converts compressed databases into the HDF5 for
 
 The selected solution should maintain or improve upon Vaex's memory efficiency while providing better long-term maintainability. The project will involve comprehensive benchmarking, refactoring the codebase to use the new library, and optimizing database I/O operations to reduce the current 3+ hour parsing time for large HITEMP files.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engage with the community on [💬 RADIS Slack](https://github.com/radis/slack-invite)
 
 - Set up a development environment, become familiar with open-source tools (GitHub/Git/Tests) and [RADIS architecture](https://radis.readthedocs.io/en/latest/dev/developer.html#architecture)
 
-##### 1st Evaluation
+### 1st Evaluation
 
 - Research and benchmark alternatives: Conduct systematic performance evaluation comparing Polars, DuckDB, and Dask against current Vaex implementation
 
@@ -72,7 +72,7 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
   - Ensure backward compatibility with existing HDF5 files
   - Implement lazy loading for HITEMP CO2 and H2O databases
 
-##### 2nd Evaluation
+### 2nd Evaluation
 
 - Implement configurable size limits and an LRU cache system for HITEMP CO2 caches using parameters in `radis.json` to control cache persistence
 
@@ -82,7 +82,7 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
 
 - Document migration strategy and API changes
 
-##### Final Evaluation
+### Final Evaluation
 
 - Complete integration with production-ready code:
   - Add new package to fully replace Vaex dependencies with user-selectable backend via `DATAFRAME_ENGINE` parameter in `radis.json`
@@ -96,7 +96,7 @@ The selected solution should maintain or improve upon Vaex's memory efficiency w
 
 - All code merged to main branch with passing CI/CD tests
 
-#### Secondary Goals
+## Secondary Goals
 
 - Explore file format alternatives to HDF5 (e.g., Parquet with better compression ratios and faster I/O)
 

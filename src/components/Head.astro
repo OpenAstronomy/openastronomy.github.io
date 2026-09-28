@@ -29,10 +29,12 @@ const pagePath = Astro.url.pathname;
 const canonicalUrl = new URL(pagePath, Astro.site).href;
 const ogImageUrl = new URL("/og/openastronomy-og.jpg", Astro.site).href;
 const favicon = await getImage({ src: faviconAsset, width: 32, format: "png" });
+// iOS shows transparent touch-icon pixels as black, so flatten onto white.
 const touchIcon = await getImage({
   src: faviconAsset,
   width: 180,
   format: "png",
+  background: "#ffffff",
 });
 
 // Pick one background per page (stable per URL length, no FOUC).
@@ -60,7 +62,7 @@ const publishedIso = publishedAt?.toISOString();
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content={ogTitle} />
   <meta property="og:description" content={description} />
-  <meta property="og:url" content={canonicalUrl} />
+  {!noindex && <meta property="og:url" content={canonicalUrl} />}
   <meta property="og:site_name" content="OpenAstronomy" />
   <meta property="og:image" content={ogImageUrl} />
   <meta property="og:image:type" content="image/jpeg" />
@@ -87,20 +89,4 @@ const publishedIso = publishedAt?.toISOString();
   />
 
   <style set:html={`:root{--page-bg:url("${backgroundHref}")}`}></style>
-  <!-- Without JavaScript the phone menu cannot open, so show the links. -->
-  <noscript>
-    <style>
-      @media (max-width: 900px) {
-        .site-header .menu-icon {
-          display: none;
-        }
-        .site-header .trigger {
-          display: flex;
-          position: static;
-          flex-direction: row;
-          padding: 0;
-        }
-      }
-    </style>
-  </noscript>
 </head>

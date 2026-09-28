@@ -26,7 +26,7 @@ In this project you would create the foundations of the 'sunkit-image' SunPy
 affiliated package, a package to contain image processing routines and
 functionality specific to the analysis of solar physics data.
 
-#### Description
+## Description
 
 There have been various proposals for adding image processing and manipulation
 code to the SunPy library. SunPy has decided that this functionality will
@@ -48,19 +48,19 @@ optional extras:
 1. Refactor and write a Python wrapper for [FLCT](https://arxiv.org/abs/0712.4289) [code](http://solarmuri.ssl.berkeley.edu/overview/publicdownloads/software.html).
 2. Implement image alignment using feature detection and tracking. [Example](http://scikit-image.org/docs/dev/auto_examples/features_detection/plot_brief.html)
 
-#### Milestones
+## Milestones
 
-##### GSOC 2017 CODING STARTS
+### GSOC 2017 CODING STARTS
 
 - Have familiarised yourself with the algorithms and with Python packaging. Have worked with the mentors to get the package repository setup on GitHub and the CI and documentation running.
 
-##### GSOC 2017 MIDTERM
+### GSOC 2017 MIDTERM
 
 - Have copied in and documented and tested the MGN code.
 - Have opened a PR to SunPy to convert the `sunpy.physics` module to use `sunpy.coordinates`.
 - Have implemented the Map warping code.
 
-##### GSOC 2017 FINAL
+### GSOC 2017 FINAL
 
 - Have got the SunPy PR for coordinates in `sunpy.physics` merged.
 - Have implemented OCCULT-2.

@@ -16,7 +16,7 @@ collaborating_projects:
   - poliastro
 ---
 
-#### Description
+## Description
 
 poliastro has lots of interesting features for users analyzing interplanetary trajectories, some
 of which are only present in commercial-off-the-shelf alternatives, such as
@@ -41,30 +41,30 @@ Earth-bound trajectory analysis. This includes:
 
 The goal of the project is open-ended and involves improving poliastro for some or all of the above use cases.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of
   the project.
 - Have set up a development environment
 
-##### 1st evaluation
+### 1st evaluation
 
 - TBD
 - Have all code, tests and documentation in GitHub
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - TBD
 - Have all code, tests and documentation in GitHub
 
-##### Final
+### Final
 
 - TBD
 - Have all code, tests and documentation in GitHub
 
-#### Secondary goals
+## Secondary goals
 
 - Fix any bugs that might appear regarding visualization, hyperbolic orbits and so forth
 - Review pull requests from other poliastro contributors, including the mentor

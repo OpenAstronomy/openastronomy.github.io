@@ -23,7 +23,7 @@ collaborating_projects:
   - sunpy
 ---
 
-#### Description
+## Description
 
 SunPy currently uses `datetime.datetime` objects as it's internal representation
 of time. The goal of this project is to transition every part of the SunPy
@@ -46,21 +46,21 @@ project will have done substantial research on the use of `parse_time` in the
 SunPy code and will appreciate the requirements for changes to this part of
 SunPy.
 
-#### Milestones (if any)
+## Milestones (if any)
 
-##### Coding Starts
+### Coding Starts
 
 - Engaged with the community and understand the motivation and challenges of the project, especially the desired changes to `parse_time`.
 
-##### Evaluation 1
+### Evaluation 1
 
 - Have implemented a new version of `parse_time` including, tests and documentation.
 
-##### Evaluation 2
+### Evaluation 2
 
 - Have transitioned `sunpy.net` to use `astropy.time.Time`
 
-##### Final
+### Final
 
 - Have finished transitioning to `Time`, including increasing test coverage where required.
 - Have written some narrative documentation to assist users in making the transition.

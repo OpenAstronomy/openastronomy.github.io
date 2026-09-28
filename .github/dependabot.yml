@@ -4,11 +4,3 @@ updates:
     directory: /
     schedule:
       interval: monthly
-  # npm is updated by hand once per GSoC cycle (see CONTRIBUTING.md). A zero
-  # limit disables version-update PRs but keeps security-fix PRs, which need
-  # "Dependabot security updates" enabled in the repository settings.
-  - package-ecosystem: npm
-    directory: /
-    schedule:
-      interval: monthly
-    open-pull-requests-limit: 0

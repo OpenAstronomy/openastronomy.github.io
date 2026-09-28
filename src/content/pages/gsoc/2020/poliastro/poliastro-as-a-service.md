@@ -22,7 +22,7 @@ collaborating_projects:
   - poliastro
 ---
 
-#### Description
+## Description
 
 poliastro is already a useful tool for people with Python knowledge who know how to use a third party
 library. However, to reach a wider range of users we should be able to create web applications
@@ -39,32 +39,32 @@ some dependencies optional, creating recipes to deploy poliastro in cloud servic
 (Amazon, Google, Heroku) using open standards (Docker, Kubernetes), actually deploy it,
 and if time permits create a demo REST API.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of
   the project.
 - Have set up a development environment and get familiar with poliastro dependencies and usage of external data
 
-##### 1st evaluation
+### 1st evaluation
 
 - Identified poliastro heaviest dependencies (probably SciPy) and implemented proper alternatives, warnings and error messages when they are not installed
 - Have all code, tests and documentation in GitHub
 
-##### 2nd evaluation
+### 2nd evaluation
 
 - Created a Dockerfile for poliastro
 - Deployed poliastro in Amazon Web Services Lambda
 - Have all code, tests and documentation in GitHub
 
-##### Final
+### Final
 
 - Deployed poliastro in a second cloud or PaaS
 - Created a demo REST API covering some basic functionality
 - Have all code, tests and documentation in GitHub
 
-#### Secondary goals
+## Secondary goals
 
 - Fix any bugs that might appear regarding visualization, hyperbolic orbits and so forth
 - Review pull requests from other poliastro contributors, including the mentor

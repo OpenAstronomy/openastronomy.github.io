@@ -19,7 +19,7 @@ collaborating_projects:
   - astroplan
 ---
 
-#### Description
+## Description
 
 You want to schedule observations of one thousand targets over the next month. You are given one hour. Can you help us make astroplan the tool that's up to the task?
 

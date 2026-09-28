@@ -9,7 +9,17 @@ const memberSchema = z.object({
   url: z.url(),
   logo: z.string(),
   description: z.string().optional(),
-  repositories: z.record(z.string(), z.string()).optional(),
+  // `github` takes "owner/repo"; any other host needs a full URL.
+  repositories: z
+    .record(z.string(), z.string())
+    .refine(
+      (repos) =>
+        Object.entries(repos).every(
+          ([host, value]) => host === "github" || URL.canParse(value),
+        ),
+      "non-GitHub repositories need a full https:// URL",
+    )
+    .optional(),
   mailinglists: z.record(z.string(), z.string()).optional(),
   chats: z.record(z.string(), z.string()).optional(),
   // Only these social networks are rendered; others fail the build.

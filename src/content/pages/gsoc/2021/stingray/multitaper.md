@@ -22,26 +22,26 @@ collaborating_projects:
   - stingray
 ---
 
-#### Description
+## Description
 
 Generating periodograms for astronomical data is the core task of Stingray. Because periodograms are often noisy, several methods to denoise periodograms exist in the literature, among them the multi-taper periodogram
 Stingray aims to provide a comprehensive library of reliable, well-tested implementations of common algorithms for time series analysis in Astronomy. In this project, the student will add the multi-taper periodogram to the existing code base in order to allow astronomers build periodograms with better noise properties.
 
-#### Milestones (if any)
+## Milestones (if any)
 
 1. Proof-of-concept implementation of the multi-taper algorithm
 
 2. Full implementation of the algorithm in the Stingray framework, including tests and relevant documentation
 
-##### Coding starts
+### Coding starts
 
 - Understand algorithm and have an overview of the individual components that need to be implemented.
 
-##### 1st evaluation
+### 1st evaluation
 
 - Proof-of-concept implementation is complete.
 
-##### Final
+### Final
 
 - Full implementation is complete
 - Wrap up connecting the new implementation to existing Stingray classes, finish documentation and associated tutorial in a Jupyter notebook.

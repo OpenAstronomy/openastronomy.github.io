@@ -22,7 +22,7 @@ collaborating_projects:
   - parfive
 ---
 
-#### Description
+## Description
 
 This project aims to design and implement a new database sub-package within `sunpy`.
 Currently, there is a `sunpy.database` that was created to manage locally data files stored locally or on a remote server with direct access. This allows someone to manage the files, to add missing files, to remove them and to search based on specific metadata stored in the file.
@@ -41,20 +41,20 @@ Overall, the code will new but we hope that parts of the original database modul
 
 More technical details can be found on the linked issue.
 
-#### Milestones
+## Milestones
 
-##### Coding starts
+### Coding starts
 
 - Engaged with the community and understand the motivation and challenges of the project.
 - Have set up a development environment.
 - Familiar with the database module
 
-##### 1st evaluation
+### 1st evaluation
 
 - Working prototype of a database "client"
 - Have all code, tests and documentation in GitHub.
 
-##### Final evaluation
+### Final evaluation
 
 - Finished database "client"
 - Have all code, tests and documentation in GitHub.

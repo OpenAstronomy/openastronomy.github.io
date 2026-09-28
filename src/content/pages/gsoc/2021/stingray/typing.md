@@ -22,26 +22,26 @@ collaborating_projects:
   - stingray
 ---
 
-#### Description
+## Description
 
 Generating periodograms for astronomical data is the core task of Stingray. Because periodograms are often noisy, several methods to denoise periodograms exist in the literature, among them the multi-taper periodogram
 Stingray aims to provide a comprehensive library of reliable, well-tested implementations of common algorithms for time series analysis in Astronomy.
 In this project, the student will introduce type hints in the code, in order to make debugging easier and, possibly, use runtime checks to ensure the consistency of results.
 
-#### Milestones (if any)
+## Milestones (if any)
 
 1. Introduction of type hints everywhere in the code
 
 2. Thorough testing of the consistency of type hints in typical use cases
 
-##### Coding starts
+### Coding starts
 
 - Understand the general structure of Stingray, the testing environment, the notebooks used to document the library
 
-##### 1st evaluation
+### 1st evaluation
 
 - Type hints implementation is complete.
 
-##### Final
+### Final
 
 - Through tests through external libraries such as [enforce-typing](https://pypi.org/project/enforce-typing/).
