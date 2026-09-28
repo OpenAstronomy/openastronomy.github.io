@@ -58,7 +58,8 @@ Format the codebase:
 npm run format
 ```
 
-Check formatting without writing changes:
+Check formatting without writing changes (Markdown is checked by
+`npm run lint:md` instead):
 
 ```shell
 npm run format:check
