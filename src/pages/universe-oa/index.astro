@@ -37,9 +37,6 @@ const timeFormatter = new Intl.DateTimeFormat("en-US", {
   timeZoneName: "short",
 });
 
-const formatDate = (date: Date | null) =>
-  date ? dateFormatter.format(date) : "No posts found";
-
 const formatRange = (start: Date, end: Date) =>
   `${dateFormatter.format(start)} - ${dateFormatter.format(end)}`;
 
@@ -136,7 +133,7 @@ const feedErrorMessage = (student: UniverseStudent) =>
                         {student.posts[0].title}
                       </a>
                       <span class="universe-date">
-                        {formatDate(student.posts[0].publishedAt)}
+                        {dateFormatter.format(student.posts[0].publishedAt)}
                       </span>
                     </>
                   ) : student.feedStatus === "unavailable" ? (
@@ -144,7 +141,7 @@ const feedErrorMessage = (student: UniverseStudent) =>
                       {feedErrorMessage(student)}
                     </span>
                   ) : (
-                    <span>{formatDate(student.latestPostAt)}</span>
+                    <span>No posts found</span>
                   )}
                 </td>
                 <td>

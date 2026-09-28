@@ -18,7 +18,6 @@ export type UniverseFeedPost = {
   title: string;
   url: string;
   publishedAt: Date;
-  summary?: string;
 };
 
 export type ParsedFeed = {
@@ -27,7 +26,7 @@ export type ParsedFeed = {
   error?: string;
 };
 
-export const DEFAULT_TIMEOUT_MS = 6000;
+const TIMEOUT_MS = 6000;
 const FEED_ACCEPT_HEADER = "application/rss+xml, application/xml, text/xml";
 
 const xmlParser = new XMLParser({
@@ -97,36 +96,17 @@ const itemSummary = (item: Record<string, unknown>) => {
   return undefined;
 };
 
+/** Items of an RSS 2.0 channel, an Atom feed or an RSS 1.0 (RDF) document. */
 const feedItemsFromXml = (xml: string): Record<string, unknown>[] => {
   const parsed = asRecord(xmlParser.parse(xml));
-  if (!parsed) return [];
-
-  const rss = asRecord(parsed.rss);
-  const channel = asRecord(rss?.channel);
-  if (channel?.item) {
-    return asArray(channel.item).flatMap((item) => {
-      const record = asRecord(item);
-      return record ? [record] : [];
-    });
-  }
-
-  const atomFeed = asRecord(parsed.feed);
-  if (atomFeed?.entry) {
-    return asArray(atomFeed.entry).flatMap((item) => {
-      const record = asRecord(item);
-      return record ? [record] : [];
-    });
-  }
-
-  const rdf = asRecord(parsed["rdf:RDF"] ?? parsed.RDF);
-  if (rdf?.item) {
-    return asArray(rdf.item).flatMap((item) => {
-      const record = asRecord(item);
-      return record ? [record] : [];
-    });
-  }
-
-  return [];
+  const items =
+    asRecord(asRecord(parsed?.rss)?.channel)?.item ??
+    asRecord(parsed?.feed)?.entry ??
+    asRecord(parsed?.["rdf:RDF"] ?? parsed?.RDF)?.item;
+  return asArray(items).flatMap((item) => {
+    const record = asRecord(item);
+    return record ? [record] : [];
+  });
 };
 
 export const parseFeedXml = (xml: string, feedUrl = ""): UniverseFeedPost[] => {
@@ -147,30 +127,19 @@ export const parseFeedXml = (xml: string, feedUrl = ""): UniverseFeedPost[] => {
         itemSummary(item)?.slice(0, 60) ||
         "Untitled post";
 
-      return [
-        {
-          title,
-          url,
-          publishedAt,
-          summary: itemSummary(item),
-        },
-      ];
+      return [{ title, url, publishedAt }];
     })
     .sort(
       (left, right) => right.publishedAt.getTime() - left.publishedAt.getTime(),
     );
 };
 
-export const fetchFeed = async (
-  feedUrl: string,
-  fetcher: typeof fetch,
-  timeoutMs: number,
-): Promise<ParsedFeed> => {
+export const fetchFeed = async (feedUrl: string): Promise<ParsedFeed> => {
   const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+  const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
   try {
-    const response = await fetcher(feedUrl, {
+    const response = await fetch(feedUrl, {
       headers: { Accept: FEED_ACCEPT_HEADER },
       signal: controller.signal,
     });

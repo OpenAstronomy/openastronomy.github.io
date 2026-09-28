@@ -3,13 +3,7 @@
  * contributor's feed (`feeds.ts`) against a season's windows (the `seasons`
  * content collection) and computes per-window blog status.
  */
-import {
-  DEFAULT_TIMEOUT_MS,
-  fetchFeed,
-  getBlogUrl,
-  type ParsedFeed,
-  type UniverseFeedPost,
-} from "./feeds.ts";
+import { fetchFeed, getBlogUrl, type UniverseFeedPost } from "./feeds.ts";
 
 export type UniverseDateRange = {
   start: Date;
@@ -31,34 +25,11 @@ export type UniverseWindowStatus = UniverseDateRange & {
 export type UniverseStudent = {
   name: string;
   project: string;
-  feedUrl: string;
   blogUrl: string | null;
   feedStatus: "ok" | "empty" | "unavailable";
   feedError?: string;
-  latestPostAt: Date | null;
   posts: UniverseFeedPost[];
   windows: UniverseWindowStatus[];
-};
-
-export type UniverseSeason = {
-  year: number;
-  generatedAt: Date;
-  students: UniverseStudent[];
-  dateRanges: UniverseDateRange[];
-  totals: {
-    complete: number;
-    missing: number;
-    optional: number;
-    pending: number;
-    feedsOk: number;
-    feedsUnavailable: number;
-  };
-};
-
-type BuildUniverseSeasonOptions = {
-  now?: Date;
-  fetcher?: typeof fetch;
-  timeoutMs?: number;
 };
 
 export const computeWindowStatuses = (
@@ -81,37 +52,19 @@ export const computeWindowStatuses = (
     return { ...range, status };
   });
 
-export const buildUniverseSeason = async (
-  season: UniverseSeasonConfig,
-  {
-    now = new Date(),
-    fetcher = fetch,
-    timeoutMs = DEFAULT_TIMEOUT_MS,
-  }: BuildUniverseSeasonOptions = {},
-): Promise<UniverseSeason> => {
-  const ranges = season.windows;
-
-  const students = await Promise.all(
-    season.contributors.map(async (contributor) => {
-      const { name, feed: feedUrl, project } = contributor;
-      const feed: ParsedFeed = feedUrl
-        ? await fetchFeed(feedUrl, fetcher, timeoutMs)
-        : {
-            status: "unavailable",
-            posts: [],
-            error: "Missing RSS feed URL",
-          };
-
+export const buildUniverseSeason = async (season: UniverseSeasonConfig) => {
+  const now = new Date();
+  const students: UniverseStudent[] = await Promise.all(
+    season.contributors.map(async ({ name, feed: feedUrl, project }) => {
+      const feed = await fetchFeed(feedUrl);
       return {
         name,
         project,
-        feedUrl,
-        blogUrl: feedUrl ? getBlogUrl(feedUrl, feed.posts) : null,
+        blogUrl: getBlogUrl(feedUrl, feed.posts),
         feedStatus: feed.status,
         feedError: feed.error,
-        latestPostAt: feed.posts[0]?.publishedAt ?? null,
         posts: feed.posts,
-        windows: computeWindowStatuses(ranges, feed.posts, now),
+        windows: computeWindowStatuses(season.windows, feed.posts, now),
       };
     }),
   );
@@ -120,25 +73,5 @@ export const buildUniverseSeason = async (
     left.name.localeCompare(right.name, undefined, { sensitivity: "base" }),
   );
 
-  const totals: UniverseSeason["totals"] = {
-    complete: 0,
-    missing: 0,
-    optional: 0,
-    pending: 0,
-    feedsOk: 0,
-    feedsUnavailable: 0,
-  };
-  for (const student of students) {
-    if (student.feedStatus === "ok") totals.feedsOk += 1;
-    if (student.feedStatus === "unavailable") totals.feedsUnavailable += 1;
-    for (const window of student.windows) totals[window.status] += 1;
-  }
-
-  return {
-    year: season.year,
-    generatedAt: now,
-    students,
-    dateRanges: ranges,
-    totals,
-  };
+  return { year: season.year, generatedAt: now, students };
 };

@@ -27,7 +27,6 @@ describe("parseFeedXml", () => {
       "Newer post",
       "Older post",
     ]);
-    expect(posts[1].summary).toBe("Older summary");
   });
 
   it("parses Atom entries with alternate links", () => {
