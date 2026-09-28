@@ -11,15 +11,15 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "lint": "eslint \"src/**/*.{astro,js,ts}\" \"scripts/**/*.{js,mjs}\"",
-    "lint:fix": "eslint \"src/**/*.{astro,js,ts}\" \"scripts/**/*.{js,mjs}\" --fix",
+    "lint": "eslint \"src/**/*.{astro,js,ts}\"",
+    "lint:fix": "eslint \"src/**/*.{astro,js,ts}\" --fix",
     "lint:md": "markdownlint-cli2",
     "lint:md:fix": "markdownlint-cli2 --fix",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
     "astro:check": "astro check",
     "check": "npm run lint && npm run astro:check",
-    "linkcheck": "node scripts/linkcheck.mjs"
+    "linkcheck": "lychee --no-progress --root-dir \"$PWD/html\" html"
   },
   "dependencies": {
     "astro": "^6.4.5",

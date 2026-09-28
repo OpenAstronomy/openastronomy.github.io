@@ -20,7 +20,6 @@ This document captures the conventions used in this codebase. When adding or rev
 
 - Aim for **≤ 40 lines** per function.
 - If a function grows beyond that, look for a named helper to extract.
-- Long functions in `scripts/` are acceptable when they represent a single sequential workflow (e.g., the link-check crawl loop).
 
 ---
 
@@ -44,11 +43,6 @@ Internal helpers (not exported) should have at least a brief inline comment if t
 
 Prefer self-explanatory component names, prop names, and helper functions over file-level comments.
 Add a short comment only when the component has a non-obvious contract, security assumption, or cross-component relationship.
-
-### `scripts/` (`.mjs` files)
-
-Scripts should expose testable helpers where practical.
-Use comments for non-obvious parsing or process behavior, not for restating function names.
 
 ### Tests (`src/lib/__tests__/`)
 
@@ -105,14 +99,14 @@ When updating the Node.js version or build command, update both CI configs.
 
 GitHub Actions (`.github/workflows/ci.yml`) runs on every push and pull request. Jobs run in parallel where possible:
 
-| Job         | What it checks                                              |
-| ----------- | ----------------------------------------------------------- |
-| `format`    | Prettier format                                             |
-| `lint`      | ESLint (warnings treated as errors) + Markdownlint          |
-| `typecheck` | Astro type/content checks (`astro:check`)                   |
-| `test`      | Unit tests (`npm test`)                                     |
-| `build`     | Production build; output uploaded as a shared artifact      |
-| `linkcheck` | Internal links and anchors, using the shared build artifact |
+| Job         | What it checks                                                       |
+| ----------- | -------------------------------------------------------------------- |
+| `format`    | Prettier format                                                      |
+| `lint`      | ESLint (warnings treated as errors) + Markdownlint                   |
+| `typecheck` | Astro type/content checks (`astro:check`)                            |
+| `test`      | Unit tests (`npm test`)                                              |
+| `build`     | Production build; output uploaded as a shared artifact               |
+| `linkcheck` | Internal links and anchors (lychee), using the shared build artifact |
 
 All jobs must pass before merging. The `linkcheck` job waits for `build` and all quality jobs.
 

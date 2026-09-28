@@ -108,20 +108,15 @@ Build the site before running the link check:
 npm run build
 ```
 
-Check internal links and anchors:
+Check internal links and anchors with [lychee](https://lychee.cli.rs/)
+(install it separately, e.g. `brew install lychee`):
 
 ```shell
 npm run linkcheck
 ```
 
-The link checker intentionally ignores external URLs. It only validates local
-generated files and fragment anchors, which keeps CI deterministic and avoids
-checking third-party services such as fonts, social sites, and redirect-heavy
-documentation hosts.
-
-Supported environment variable:
-
-- `LINKCHECK_ROOT=...` points at a different build folder.
+The options live in `lychee.toml`. External URLs are skipped, so only local
+files and fragment anchors are checked, which keeps CI deterministic.
 
 ## CI
 
@@ -170,4 +165,4 @@ artifact for pull-request preview.
 - `src/pages/` contains Astro routes.
 - `src/styles/` contains site-wide CSS (`global.css`) and per-page stylesheets
   for the GSoC and universe-oa pages.
-- `scripts/` contains maintenance scripts such as the link checker.
+- `scripts/` contains the CircleCI preview link rewriter.
