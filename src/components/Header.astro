@@ -4,10 +4,14 @@ import site from "../data/site.json";
 import icons from "../data/icons.json";
 import logoWhite from "../assets/logoOA_white.png";
 
-const navLinks = [
-  ...site.page_links,
-  ...Object.entries(site.nav_links).map(([title, href]) => ({ title, href })),
-];
+// "page" on the current page, "true" anywhere inside that section.
+const path = Astro.url.pathname;
+const current = (href: string) =>
+  path === href
+    ? "page"
+    : href.startsWith("/") && path.startsWith(href)
+      ? "true"
+      : undefined;
 ---
 
 <header class="site-header">
@@ -17,13 +21,12 @@ const navLinks = [
         class="logo"
         src={logoWhite}
         alt={site.title}
-        width={1308}
-        height={629}
+        width={250}
         loading="eager"
       />
     </a>
 
-    <nav class="site-nav" data-site-nav>
+    <nav class="site-nav" aria-label="Main" data-site-nav>
       <button
         type="button"
         class="menu-icon"
@@ -42,8 +45,10 @@ const navLinks = [
         </svg>
       </button>
       <div class="trigger" id="site-nav-links">
-        {navLinks.map((link) => (
-          <a href={link.href}>{link.title}</a>
+        {site.nav.map((link) => (
+          <a href={link.href} aria-current={current(link.href)}>
+            {link.title}
+          </a>
         ))}
       </div>
     </nav>
@@ -67,6 +72,12 @@ const navLinks = [
     });
     nav.addEventListener("click", (event) => {
       if (event.target instanceof Element && event.target.closest("a")) close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        close();
+        toggle.focus();
+      }
     });
   }
 </script>

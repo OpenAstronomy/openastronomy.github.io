@@ -1,16 +1,19 @@
 {
   "title": "OpenAstronomy",
   "description": "Where all about the combined force of different open source projects in astronomy and astrophysics takes place.",
-  "url": "https://openastronomy.org",
-  "nav_links": {
-    "Contributor Blogs": "/universe-oa/",
-    "PyAstro Conference": "https://openastronomy.org/pyastro/",
-    "Events Calendar": "https://calendar.google.com/calendar/embed?src=blhg7t0osn8lrntd709qhg1mis%40group.calendar.google.com"
-  },
-  "page_links": [
+  "nav": [
     { "title": "Members", "href": "/members/" },
     { "title": "News and Events", "href": "/news/" },
-    { "title": "Google Summer of Code", "href": "/gsoc/" }
+    { "title": "GSoC", "href": "/gsoc/" },
+    { "title": "Contributor Blogs", "href": "/universe-oa/" },
+    {
+      "title": "PyAstro Conference",
+      "href": "https://openastronomy.org/pyastro/"
+    },
+    {
+      "title": "Events Calendar",
+      "href": "https://calendar.google.com/calendar/embed?src=blhg7t0osn8lrntd709qhg1mis%40group.calendar.google.com"
+    }
   ],
   "social_links": [
     {
@@ -22,7 +25,7 @@
       "icon": "mastodon",
       "href": "https://floss.social/@OpenAstronomy",
       "label": "OpenAstronomy on Mastodon",
-      "rel": "me noopener noreferrer"
+      "rel": "me"
     },
     {
       "icon": "rss",

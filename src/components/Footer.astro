@@ -10,11 +10,7 @@ import site from "../data/site.json";
       astrophysics projects to empower science.
     </p>
     {site.social_links.map((link) => (
-      <a
-        href={link.href}
-        aria-label={link.label}
-        rel={link.rel ?? "noopener noreferrer"}
-      >
+      <a href={link.href} aria-label={link.label} rel={link.rel}>
         <Icon name={link.icon} fill="#f9f9f9" />
       </a>
     ))}
