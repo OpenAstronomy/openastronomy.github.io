@@ -22,21 +22,21 @@
     "linkcheck": "lychee --no-progress --root-dir \"$PWD/html\" --remap \"^https://openastronomy\\.org/(.*)$ file://$(pwd | sed 's/ /%20/g')/html/\\$1\" html"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.4",
-    "astro": "^7.3.5",
-    "fast-xml-parser": "^5.11.1"
+    "@astrojs/sitemap": "^3.7.6",
+    "astro": "^7.4.13",
+    "fast-xml-parser": "^5.12.1"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
+    "@astrojs/check": "^0.9.12",
     "@eslint/js": "^10.0.1",
-    "eslint": "^10.11.0",
+    "eslint": "^10.15.0",
     "eslint-plugin-astro": "^3.2.1",
-    "markdownlint-cli2": "^0.23.3",
-    "prettier": "^3.9.9",
-    "prettier-plugin-astro": "^1.1.0",
+    "markdownlint-cli2": "^0.24.1",
+    "prettier": "^3.10.1",
+    "prettier-plugin-astro": "^1.1.2",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.70.1",
-    "vitest": "^5.0.2"
+    "typescript-eslint": "^8.73.0",
+    "vitest": "^5.1.1"
   },
   "prettier": {
     "plugins": [
