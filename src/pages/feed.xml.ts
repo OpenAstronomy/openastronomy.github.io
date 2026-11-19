@@ -2,14 +2,6 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
 import site from "../data/site.json";
-import redirects from "../data/legacy-redirects.json";
-
-// Posts from the Jekyll site keep their old .html URL as the GUID, so feed
-// readers do not show them as new again.
-const legacyUrlFor = (url: string) =>
-  Object.entries(redirects).find(
-    ([from, to]) => to === url && from.endsWith(".html"),
-  )?.[0];
 
 const escapeXml = (value: string): string =>
   value
@@ -23,18 +15,13 @@ export const GET: APIRoute = async ({ site: siteUrl }) => {
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
     .slice(0, 10);
   const items = posts.map((post) => {
-    const url = `/news/${post.id}/`;
-    const link = new URL(url, siteUrl).href;
-    const legacy = legacyUrlFor(url);
-    const guid = legacy
-      ? `<guid isPermaLink="false">${new URL(legacy, siteUrl).href}</guid>`
-      : `<guid isPermaLink="true">${link}</guid>`;
+    const link = new URL(`/news/${post.id}/`, siteUrl).href;
     return `    <item>
       <title>${escapeXml(post.data.title)}</title>
       <description>${escapeXml(post.rendered?.html ?? "")}</description>
       <pubDate>${post.data.date.toUTCString()}</pubDate>
       <link>${link}</link>
-      ${guid}
+      <guid isPermaLink="true">${link}</guid>
     </item>`;
   });
   return new Response(
