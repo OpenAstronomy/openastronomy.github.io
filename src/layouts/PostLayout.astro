@@ -3,7 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 
 type Props = { title: string; date: Date; description?: string };
 
-const { title, date, description } = Astro.props as Props;
+const { title, date, description } = Astro.props;
 const formattedDate = new Intl.DateTimeFormat("en-US", {
   month: "short",
   day: "numeric",

@@ -1,10 +1,9 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
-type Post = CollectionEntry<"posts">;
 const posts = (await getCollection("posts")).sort(
-  (a: Post, b: Post) => b.data.date.getTime() - a.data.date.getTime(),
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
 );
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -19,7 +18,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
   description="News and event announcements from OpenAstronomy."
 >
   <div>
-    {posts.map((post: Post) => (
+    {posts.map((post) => (
       <article>
         <h2>
           <a href={`/news/${post.id}/`}>{post.data.title}</a>

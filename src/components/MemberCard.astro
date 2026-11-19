@@ -14,7 +14,7 @@ import {
 import { memberLogoMap } from "../lib/member-logos.ts";
 
 type Props = { details: MemberDetails; eager?: boolean };
-const { details, eager = false } = Astro.props as Props;
+const { details, eager = false } = Astro.props;
 
 const links = buildMemberLinks(details);
 const anchorId = slugify(details.name);

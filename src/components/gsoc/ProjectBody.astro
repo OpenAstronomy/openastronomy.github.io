@@ -4,7 +4,7 @@ import type { ProjectMeta } from "../../lib/gsoc.ts";
 import { getProjectDetailRows } from "../../lib/gsoc.ts";
 
 type Props = { project: ProjectMeta };
-const { project } = Astro.props as Props;
+const { project } = Astro.props;
 const rows = getProjectDetailRows(project);
 ---
 

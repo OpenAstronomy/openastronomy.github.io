@@ -1,7 +1,8 @@
 ---
 import { getProjectCardRows, type ProjectMeta } from "../../lib/gsoc.ts";
 
-const { project } = Astro.props as { project: ProjectMeta };
+type Props = { project: ProjectMeta };
+const { project } = Astro.props;
 const rows = getProjectCardRows(project);
 ---
 
