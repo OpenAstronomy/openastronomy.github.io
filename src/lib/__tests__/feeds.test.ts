@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { formatFeedHttpError, getBlogUrl, parseFeedXml } from "../feeds.ts";
+import {
+  describeFetchError,
+  formatFeedHttpError,
+  getBlogUrl,
+  parseFeedXml,
+} from "../feeds.ts";
 
 const date = (value: string) => new Date(value);
 
@@ -193,6 +198,44 @@ describe("formatFeedHttpError", () => {
     expect(formatFeedHttpError(response)).toBe(
       "HTTP 403 (Cloudflare challenge)",
     );
+  });
+});
+
+describe("describeFetchError", () => {
+  // The shape Node's fetch throws for any network failure.
+  const fetchFailed = (code: string, message: string) =>
+    new TypeError("fetch failed", {
+      cause: Object.assign(new Error(message), { code }),
+    });
+
+  it("names the network failure behind Node's 'fetch failed'", () => {
+    const error = fetchFailed(
+      "ENOTFOUND",
+      "getaddrinfo ENOTFOUND gone.example.com",
+    );
+
+    expect(describeFetchError(error)).toBe("Host not found");
+  });
+
+  it("uses the cause's own message for less common failures", () => {
+    const error = fetchFailed("CERT_HAS_EXPIRED", "certificate has expired");
+
+    expect(describeFetchError(error)).toBe("certificate has expired");
+  });
+
+  it("says when the request ran out of time", () => {
+    const error = new DOMException(
+      "The operation was aborted due to timeout",
+      "TimeoutError",
+    );
+
+    expect(describeFetchError(error)).toBe("Timed out after 6 s");
+  });
+
+  it("keeps the message of an error that has no cause", () => {
+    const error = new Error("Not an RSS or Atom feed");
+
+    expect(describeFetchError(error)).toBe("Not an RSS or Atom feed");
   });
 });
 

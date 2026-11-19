@@ -45,6 +45,27 @@ export const formatFeedHttpError = (response: Response) => {
   return `HTTP ${response.status}${cloudflareChallenge ? " (Cloudflare challenge)" : ""}`;
 };
 
+// Node reports every network failure as "fetch failed" and keeps the reason
+// on `error.cause`. The codes a dead blog usually produces get plain wording.
+const NETWORK_ERRORS: Record<string, string> = {
+  ENOTFOUND: "Host not found",
+  ECONNREFUSED: "Connection refused",
+  ECONNRESET: "Connection reset",
+};
+
+/** Why a feed request threw, specific enough to tell which kind of fix it needs. */
+export const describeFetchError = (error: unknown): string => {
+  if (!(error instanceof Error)) return String(error);
+  if (error.name === "TimeoutError") {
+    return `Timed out after ${TIMEOUT_MS / 1000} s`;
+  }
+  const cause = asRecord(error.cause);
+  const code = textValue(cause?.code);
+  return (
+    NETWORK_ERRORS[code] || textValue(cause?.message) || code || error.message
+  );
+};
+
 const GSOC_PATTERN =
   /\b(?:gsoc\d*|google\s+summer\s+of\s+code|openastronomy)\b/i;
 
@@ -154,13 +175,11 @@ export const parseFeedXml = (xml: string, feedUrl = ""): UniverseFeedPost[] => {
 };
 
 export const fetchFeed = async (feedUrl: string): Promise<ParsedFeed> => {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), TIMEOUT_MS);
-
   try {
     const response = await fetch(feedUrl, {
       headers: { Accept: FEED_ACCEPT_HEADER },
-      signal: controller.signal,
+      // Covers reading the body too, and fails with a "TimeoutError".
+      signal: AbortSignal.timeout(TIMEOUT_MS),
     });
 
     if (!response.ok) {
@@ -180,10 +199,8 @@ export const fetchFeed = async (feedUrl: string): Promise<ParsedFeed> => {
     return {
       status: "unavailable",
       posts: [],
-      error: error instanceof Error ? error.message : String(error),
+      error: describeFetchError(error),
     };
-  } finally {
-    clearTimeout(timeout);
   }
 };
 
