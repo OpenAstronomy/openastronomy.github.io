@@ -5,7 +5,7 @@ description: "OpenAstronomy in Google Summer of Code: current project ideas, pre
 
 # Google Summer of Code
 
-<h2 id="new-to-gsoc">New to Google Summer of Code (GSoC)?</h2>
+## New to Google Summer of Code (GSoC)?
 
 [We provide some background on GSoC right here!](./background/)
 
@@ -23,7 +23,7 @@ Contributor applications to OpenAstronomy projects follows the same rules as the
 - [Now You Know It!: Getting selected in Outreachy by Kriti Singh]
 - [OpenAstronomy Universe] - blogs from current GSoC contributors
 
-<h2 id="current-projects">Current Project ideas for GSoC 2026</h2>
+## Current project ideas
 
 - [2026](./2026/)
 
@@ -44,7 +44,7 @@ Contributor applications to OpenAstronomy projects follows the same rules as the
 </ul>
 </details>
 
-<h2 id="info-for-sub-organisations-admins">Info for sub-organisations’ admins</h2>
+## Info for sub-organisations’ admins
 
 Whether you have been participating for years or this is your first time [read our guide for sub-org admins.](./suborg_guidelines/)
 

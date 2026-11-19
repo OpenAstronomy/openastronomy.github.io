@@ -49,7 +49,7 @@ To add a new project idea:
 For a new season, also:
 
 1. Add the season admins to `src/data/gsoc-admins.json`. This also creates the season page at `/gsoc/<year>/`.
-2. Update the current-year heading and the previous-editions list in `src/content/pages/gsoc/index.md`.
+2. Update the current-year link and the previous-editions list in `src/content/pages/gsoc/index.md`.
 3. Update `src/data/universe/seasons.yml` with the season's posting windows and contributor feeds once contributors are selected (see `src/data/universe/README.md`).
 
 Project cards, project pages, and the mentors list are generated automatically from the project files; no route or layout changes are needed.

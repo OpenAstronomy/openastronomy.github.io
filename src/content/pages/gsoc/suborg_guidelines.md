@@ -3,7 +3,7 @@ title: "GSoC Sub-organizations Guidelines"
 description: "Guidelines for OpenAstronomy member projects taking part in Google Summer of Code as sub-organisations."
 ---
 
-<h1 id="gsoc-suborg-guidelines">GSoC Sub-organizations Guidelines</h1>
+# GSoC Sub-organizations Guidelines
 
 OpenAstronomy has been accepted as an umbrella organisation since 2016.
 We will keep applying every year, but that doesn't mean we will always be selected.
@@ -46,7 +46,7 @@ Besides these deadlines, as a sub-org admin, you will have to keep track of all 
 ### Ideas
 
 Normally organisations provide a list of ideas that can be done by a contributor in approximately three months (working full-time).
-Take a look at what [Google says on how to define a project](https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list), then look at [other ideas OpenAstronomy's members have proposed this or previous years.](../#current-projects).
+Take a look at what [Google says on how to define a project](https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list), then look at [other ideas OpenAstronomy's members have proposed this or previous years.](../#current-project-ideas).
 
 To add your own, copy the [project template] to `src/content/projects/<year>/<suborg>/<name>.md` in [our repository][OA repository] (one file per idea), fill it in, and open a pull-request.
 Ideas saved anywhere else will not show up on the season page.
