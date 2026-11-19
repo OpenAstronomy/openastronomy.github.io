@@ -2,6 +2,10 @@
  * Redirect stubs for URLs from the old Jekyll site (frozen list in
  * `src/data/legacy-redirects.json`). An endpoint rather than Astro's
  * `redirects` config so `/news.html` is emitted as a file, not a directory.
+ *
+ * Build-only: `astro dev` matches this route with a trailing slash
+ * (`/news.html/`), so the real URLs return 404 there. Test the stubs with
+ * `npm run build && npm run preview`.
  */
 import type { APIRoute } from "astro";
 import redirects from "../data/legacy-redirects.json";

@@ -153,6 +153,15 @@ the GSoC guide `*.html` pages, `/news.html`, the old post URLs and
 list in `src/data/legacy-redirects.json`. Other old URLs (such as the
 `/projects/*.html` fragments the old ideas app loaded) are not kept.
 
+The redirect stubs only exist in the built site. Check them with
+`npm run build && npm run preview`; `npm run dev` answers those URLs with 404.
+
+`/Universe_OA/` is also published by the Universe_OA repository's own Pages
+site, and a repository's site conflicts with a folder of the same name here.
+The two redirects for that path are only reliably served once that site is
+unpublished (**Settings → Pages** in that repository). After retiring it,
+check that `/Universe_OA/` lands on `/universe-oa/`.
+
 CircleCI (`.circleci/config.yml`) builds the site and publishes the `html/`
 artifact for pull-request preview.
 
