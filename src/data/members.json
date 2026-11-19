@@ -143,7 +143,7 @@
     "chats": {
       "slack": "https://join.slack.com/t/stingraysoftware/shared_invite/zt-49kv4kba-mD1Y~s~rlrOOmvqM7mZugQ"
     },
-    "description": ": we are a team of astrophysicists and software developers working together to build a variability analysis software to study black holes and fundamental physics under extreme conditions."
+    "description": "is a team of astrophysicists and software developers working together to build a variability analysis software to study black holes and fundamental physics under extreme conditions."
   },
   "casacore": {
     "name": "Casacore",
@@ -237,7 +237,7 @@
     "socials": {
       "x": "radis_radiation"
     },
-    "description": "A fast line-by-line code for high-resolution infrared molecular spectra. RADIS can compute spectra of millions of lines within seconds. Also includes a post-processing tools to compare experimental spectra with spectra calculated in RADIS or other spectral codes."
+    "description": "is a fast line-by-line code for high-resolution infrared molecular spectra. RADIS can compute spectra of millions of lines within seconds. It also includes post-processing tools to compare experimental spectra with spectra calculated in RADIS or other spectral codes."
   },
   "sherpa": {
     "name": "Sherpa",
@@ -289,6 +289,6 @@
     "chats": {
       "slack": "https://join.slack.com/t/reltrans-workspace/shared_invite/zt-3p234fciq-lD12LDPTCCPf0DTT1ZocmQ"
     },
-    "description": "Reltrans (Relativistic transfer functions) is a publicly available, semi-analytical model for X-ray reverberation mapping of accreting black holes in both AGN and X-ray binaries. It can be used to compute both time-averaged spectra and energy-dependent, Fourier domain cross spectra."
+    "description": "(Relativistic transfer functions) is a publicly available, semi-analytical model for X-ray reverberation mapping of accreting black holes in both AGN and X-ray binaries. It can be used to compute both time-averaged spectra and energy-dependent, Fourier domain cross spectra."
   }
 }
