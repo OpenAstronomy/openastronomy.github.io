@@ -31,7 +31,10 @@ const projects = seasonEntries
   .map(({ entry, info }: SeasonEntry) => buildProjectMeta(entry.data, info))
   .sort((a, b) => a.name.localeCompare(b.name));
 
-const mentors = Array.from(new Set(projects.flatMap((p) => p.mentors))).sort();
+// Ignore case, or handles starting with a capital would all sort first.
+const mentors = Array.from(new Set(projects.flatMap((p) => p.mentors))).sort(
+  (a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }),
+);
 const adminHandles = adminLookup[seasonKey];
 
 const sections = [
