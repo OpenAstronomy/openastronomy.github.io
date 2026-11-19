@@ -56,7 +56,6 @@ const window = z
   .object({
     start: z.coerce.date(),
     end: z.coerce.date(),
-    optional: z.boolean().default(false),
   })
   .strict()
   .refine((w) => w.end > w.start, "end must be after start");
@@ -82,11 +81,13 @@ const seasons = defineCollection({
   loader: file("src/data/universe/seasons.yml"),
   schema: z
     .object({
+      // The first window is the optional one, so the order matters.
       windows: z
         .array(window)
         .refine(
-          (windows) => windows.every((w, i) => w.optional === (i === 0)),
-          "the first window, and only the first, must set optional: true",
+          (windows) =>
+            windows.every((w, i) => i === 0 || w.start >= windows[i - 1].end),
+          "windows must be in date order and must not overlap",
         ),
       contributors: z.array(contributor).min(1),
     })

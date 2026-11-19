@@ -43,7 +43,6 @@ export const sortSeasons = (
 export type UniverseDateRange = {
   start: Date;
   end: Date;
-  optional?: boolean;
 };
 
 export type UniverseWindowStatus = UniverseDateRange & {
@@ -61,12 +60,16 @@ export type UniverseStudent = {
   windows: UniverseWindowStatus[];
 };
 
+/**
+ * One status per posting window. A season's first window is optional: with
+ * no post it is "optional" rather than "missing".
+ */
 export const computeWindowStatuses = (
   ranges: UniverseDateRange[],
   posts: UniverseFeedPost[],
   now = new Date(),
 ): UniverseWindowStatus[] =>
-  ranges.map((range) => {
+  ranges.map((range, index) => {
     const hasPost = posts.some(
       (post) =>
         post.publishedAt.getTime() > range.start.getTime() &&
@@ -75,7 +78,7 @@ export const computeWindowStatuses = (
 
     let status: UniverseWindowStatus["status"] = "missing";
     if (hasPost) status = "complete";
-    else if (range.optional) status = "optional";
+    else if (index === 0) status = "optional";
     else if (now.getTime() <= range.end.getTime()) status = "pending";
 
     return { ...range, status };

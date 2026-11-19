@@ -8,7 +8,6 @@
   windows:
     - start: 2026-05-01
       end: 2026-05-25
-      optional: true
     - start: 2026-05-25
       end: 2026-06-08
     - start: 2026-06-08
@@ -41,7 +40,6 @@
   windows:
     - start: 2025-05-01
       end: 2025-06-02
-      optional: true
     - start: 2025-06-02
       end: 2025-06-16
     - start: 2025-06-16
@@ -74,7 +72,6 @@
   windows:
     - start: 2024-05-27
       end: 2024-06-10
-      optional: true
     - start: 2024-06-10
       end: 2024-06-24
     - start: 2024-06-24
@@ -114,7 +111,6 @@
   windows:
     - start: 2023-05-29
       end: 2023-06-12
-      optional: true
     - start: 2023-06-12
       end: 2023-06-26
     - start: 2023-06-26
@@ -151,7 +147,6 @@
   windows:
     - start: 2022-06-13
       end: 2022-07-01
-      optional: true
     - start: 2022-07-01
       end: 2022-08-01
     - start: 2022-08-01
@@ -191,7 +186,6 @@
   windows:
     - start: 2021-05-01
       end: 2021-06-08
-      optional: true
     - start: 2021-06-08
       end: 2021-06-22
     - start: 2021-06-22

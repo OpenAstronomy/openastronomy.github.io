@@ -11,11 +11,7 @@ const date = (value: string) => new Date(value);
 
 describe("computeWindowStatuses", () => {
   const ranges: UniverseDateRange[] = [
-    {
-      start: date("2026-05-01T00:00:00Z"),
-      end: date("2026-05-15T00:00:00Z"),
-      optional: true,
-    },
+    { start: date("2026-05-01T00:00:00Z"), end: date("2026-05-15T00:00:00Z") },
     { start: date("2026-05-15T00:00:00Z"), end: date("2026-06-01T00:00:00Z") },
     { start: date("2026-06-01T00:00:00Z"), end: date("2026-06-15T00:00:00Z") },
   ];
@@ -41,7 +37,7 @@ describe("computeWindowStatuses", () => {
     ]);
   });
 
-  it("marks a missing optional window as optional", () => {
+  it("marks the first window as optional when it has no post", () => {
     const statuses = computeWindowStatuses(
       ranges,
       [],
@@ -59,6 +55,7 @@ describe("computeWindowStatuses", () => {
 describe("contributorWindows", () => {
   const ranges: UniverseDateRange[] = [
     { start: date("2026-05-01T00:00:00Z"), end: date("2026-05-15T00:00:00Z") },
+    { start: date("2026-05-15T00:00:00Z"), end: date("2026-06-01T00:00:00Z") },
   ];
 
   it("marks every window unknown when the feed could not be fetched", () => {
@@ -66,7 +63,7 @@ describe("contributorWindows", () => {
       contributorWindows(ranges, { status: "unavailable", posts: [] }).map(
         (window) => window.status,
       ),
-    ).toEqual(["unknown"]);
+    ).toEqual(["unknown", "unknown"]);
   });
 
   it("computes statuses from posts when the feed was fetched", () => {
@@ -74,19 +71,15 @@ describe("contributorWindows", () => {
       contributorWindows(
         ranges,
         { status: "empty", posts: [] },
-        date("2026-06-01T00:00:00Z"),
+        date("2026-06-08T00:00:00Z"),
       ).map((window) => window.status),
-    ).toEqual(["missing"]);
+    ).toEqual(["optional", "missing"]);
   });
 });
 
 describe("sortSeasons", () => {
   const windows = [
-    {
-      start: date("2026-05-01T00:00:00Z"),
-      end: date("2026-05-15T00:00:00Z"),
-      optional: true,
-    },
+    { start: date("2026-05-01T00:00:00Z"), end: date("2026-05-15T00:00:00Z") },
   ];
   const season = (id: string, withWindows = true) => ({
     id,

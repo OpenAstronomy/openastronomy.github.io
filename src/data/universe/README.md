@@ -29,15 +29,14 @@ Each contributor has:
   projects listed in `EXTERNAL_PROJECTS` in `src/content.config.ts`.
 - `feed`: RSS or Atom feed URL.
 
-The first posting window of each season is optional and should be marked with
-`optional: true`.
+The first posting window of each season is optional: a contributor with no
+post in it is shown as ○ optional instead of ✕ missing.
 
 ```yaml
 2026:
   windows:
     - start: 2026-05-01
       end: 2026-05-25
-      optional: true
     - start: 2026-05-25
       end: 2026-06-08
   contributors:
@@ -49,7 +48,7 @@ The first posting window of each season is optional and should be marked with
 ## Updating For A New Season
 
 1. Add a new year at the top of `seasons.yml`.
-2. Add the posting windows, marking the first one as optional.
+2. Add the posting windows in date order (the first one is the optional one).
 3. Add each contributor with their project key and feed URL.
 4. Run `npm run build` to verify the page can fetch and render the feeds.
 
@@ -59,8 +58,7 @@ The build validates this file with the `seasons` schema in
 `src/content.config.ts` and `sortSeasons()` in `src/lib/universe.ts`. It fails
 if a key is not a 4-digit year or is repeated, if contributors, feed URLs,
 project keys or windows are malformed, or if the newest (current) season has no
-windows. In every season the first window must set `optional: true`; later
-windows must not.
+windows.
 
 On the page each window shows ✓ complete, ✕ missing, ○ optional, · pending, or
 ? unknown when the contributor's feed could not be fetched (or was not an
