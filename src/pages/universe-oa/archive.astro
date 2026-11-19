@@ -8,9 +8,6 @@ import { sortSeasons } from "../../lib/universe.ts";
 
 // Every season except the newest (shown on /universe-oa/).
 const [, ...archived] = sortSeasons(await getCollection("seasons"));
-
-const projectArchiveHref = (year: number) =>
-  year >= 2017 ? `/gsoc/${year}/` : `/gsoc/${year}/ideas/`;
 ---
 
 <PageLayout
@@ -34,7 +31,7 @@ const projectArchiveHref = (year: number) =>
         <section class="universe-archive-season">
           <h2>GSoC {year}</h2>
           <p class="universe-archive-actions">
-            <a href={projectArchiveHref(year)}>Project archive</a>
+            <a href={`/gsoc/${year}/`}>Project archive</a>
           </p>
           <div class="universe-table-wrap">
             <table class="universe-table">
