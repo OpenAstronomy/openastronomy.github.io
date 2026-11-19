@@ -14,24 +14,36 @@ const posts = defineCollection({
     .strict(),
 });
 
-// A key left empty in frontmatter (e.g. `issues:`) parses as null.
-const stringList = z.array(z.string()).nullish();
-
+// Prose pages (the GSoC guides and the 2015/2016 ideas pages), served at
+// their file path by src/pages/[...slug].astro.
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/pages" }),
+  schema: z.object({ title: z.string(), description: z.string() }).strict(),
+});
+
+// Optional list; a key left empty in frontmatter (e.g. `issues:`) is null.
+const stringList = z.array(z.string()).nullish();
+const filledList = z.array(z.string()).min(1);
+
+// GSoC project ideas, one file per idea at <year>/<suborg>/<file>.md. The
+// required fields are the ones every season card shows. `_template.md` is
+// the file to copy, not a project.
+const projects = defineCollection({
+  loader: glob({
+    pattern: ["**/*.md", "!**/_*.md"],
+    base: "./src/content/projects",
+  }),
   schema: z
     .object({
-      title: z.string().optional(),
-      name: z.string().optional(),
-      description: z.string().optional(),
-      desc: z.string().nullish(),
-      difficulty: z.string().optional(),
+      name: z.string(),
+      desc: z.string(),
+      difficulty: z.string(),
+      mentors: filledList,
+      collaborating_projects: filledList,
       requirements: stringList,
-      mentors: stringList,
       initiatives: stringList,
       project_size: stringList,
       tags: stringList,
-      collaborating_projects: stringList,
       issues: stringList,
     })
     .strict(),
@@ -81,4 +93,4 @@ const seasons = defineCollection({
     .strict(),
 });
 
-export const collections = { posts, pages, seasons };
+export const collections = { posts, pages, projects, seasons };

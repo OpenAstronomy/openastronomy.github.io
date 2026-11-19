@@ -3,11 +3,23 @@ import {
   formatMemberLink,
   getProjectCardRows,
   getProjectDetailRows,
-  parseProjectId,
   buildProjectMeta,
 } from "../gsoc.ts";
 
-const pathInfo = { year: "2026", suborg: "sunpy", fileSlug: "radiospectra" };
+type ProjectEntry = Parameters<typeof buildProjectMeta>[0];
+
+// A `projects` collection entry with the required fields filled in.
+const project = (data: Partial<ProjectEntry["data"]> = {}): ProjectEntry => ({
+  id: "2026/sunpy/radiospectra",
+  data: {
+    name: "Radio Spectra",
+    desc: "Improve radiospectra",
+    difficulty: "medium",
+    mentors: ["alice"],
+    collaborating_projects: ["sunpy"],
+    ...data,
+  },
+});
 
 describe("formatMemberLink", () => {
   it("returns the member name and a slugified anchor href for a known key", () => {
@@ -28,57 +40,31 @@ describe("formatMemberLink", () => {
   });
 });
 
-describe("parseProjectId", () => {
-  it("parses a 4-segment project id", () => {
-    expect(parseProjectId("gsoc/2026/sunpy/radiospectra")).toEqual({
-      year: "2026",
-      suborg: "sunpy",
-      fileSlug: "radiospectra",
-    });
-  });
-
-  it("returns null for a season id", () => {
-    expect(parseProjectId("gsoc/2025")).toBeNull();
-  });
-
-  it("returns null for a top-level gsoc page", () => {
-    expect(parseProjectId("gsoc/background")).toBeNull();
-  });
-
-  it("returns null for a non-gsoc id", () => {
-    expect(parseProjectId("about/team")).toBeNull();
-  });
-});
-
 describe("buildProjectMeta", () => {
-  it("uses the `name` field when set", () => {
-    const meta = buildProjectMeta({ name: "Radio Spectra" }, pathInfo);
-    expect(meta.name).toBe("Radio Spectra");
-  });
-
-  it("falls back to the file slug when `name` missing", () => {
-    const meta = buildProjectMeta({}, pathInfo);
-    expect(meta.name).toBe("radiospectra");
-  });
-
-  it("builds the href to the standalone project page", () => {
-    const meta = buildProjectMeta({}, pathInfo);
+  it("takes the year and the page href from the entry id", () => {
+    const meta = buildProjectMeta(project());
+    expect(meta.year).toBe("2026");
     expect(meta.href).toBe("/gsoc/2026/sunpy/radiospectra/");
+  });
+
+  it("copies the required fields", () => {
+    const meta = buildProjectMeta(project());
+    expect(meta.name).toBe("Radio Spectra");
+    expect(meta.desc).toBe("Improve radiospectra");
+    expect(meta.difficulty).toBe("medium");
+    expect(meta.mentors).toEqual(["alice"]);
   });
 
   it("copies list fields and resolves collaborators", () => {
     const meta = buildProjectMeta(
-      {
-        mentors: ["alice"],
+      project({
         initiatives: ["GSOC"],
         project_size: ["350 h (Large)"],
         tags: ["python"],
         collaborating_projects: ["sunpy", "unknown"],
         issues: ["https://github.com/x/y/issues/1"],
-      },
-      pathInfo,
+      }),
     );
-    expect(meta.mentors).toEqual(["alice"]);
     expect(meta.initiatives).toEqual(["GSOC"]);
     expect(meta.projectSize).toEqual(["350 h (Large)"]);
     expect(meta.tags).toEqual(["python"]);
@@ -89,22 +75,17 @@ describe("buildProjectMeta", () => {
     expect(meta.issues).toEqual(["https://github.com/x/y/issues/1"]);
   });
 
-  it("adds difficulty when present", () => {
-    const meta = buildProjectMeta({ difficulty: "medium" }, pathInfo);
-    expect(meta.difficulty).toBe("medium");
+  it("turns optional lists that are missing or left empty into []", () => {
+    const meta = buildProjectMeta(project({ issues: null }));
+    expect(meta.issues).toEqual([]);
+    expect(meta.requirements).toEqual([]);
+    expect(meta.projectSize).toEqual([]);
   });
 });
 
 describe("getProjectCardRows", () => {
   it("returns only filled summary rows", () => {
-    const meta = buildProjectMeta(
-      {
-        mentors: ["alice"],
-        difficulty: "medium",
-        tags: [],
-      },
-      pathInfo,
-    );
+    const meta = buildProjectMeta(project({ tags: [] }));
     expect(getProjectCardRows(meta)).toEqual([
       { label: "Mentors", values: ["alice"] },
       { label: "Difficulty", values: ["medium"] },
@@ -115,13 +96,12 @@ describe("getProjectCardRows", () => {
 describe("getProjectDetailRows", () => {
   it("uses the shared detail field ordering", () => {
     const meta = buildProjectMeta(
-      {
+      project({
         difficulty: "high",
         initiatives: ["GSOC"],
         project_size: ["350 h"],
         tags: ["python"],
-      },
-      pathInfo,
+      }),
     );
     expect(getProjectDetailRows(meta)).toEqual([
       { label: "Difficulty", values: ["high"] },

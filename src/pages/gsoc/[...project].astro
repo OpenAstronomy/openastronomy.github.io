@@ -1,0 +1,38 @@
+---
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectBody from "../../components/gsoc/ProjectBody.astro";
+import admins from "../../data/gsoc-admins.json";
+import { buildProjectMeta } from "../../lib/gsoc.ts";
+
+// One page per project idea in src/content/projects/, at
+// /gsoc/<year>/<suborg>/<file>/.
+export async function getStaticPaths() {
+  const entries = await getCollection("projects");
+  return entries.map((entry) => {
+    // Season pages come from gsoc-admins.json; without an entry a project
+    // would build but nothing would link to it.
+    const [year] = entry.id.split("/");
+    if (!(year in admins)) {
+      throw new Error(
+        `src/content/projects/${entry.id}: project files go in <year>/<suborg>/, and "${year}" needs an entry in src/data/gsoc-admins.json so the season page exists`,
+      );
+    }
+    return { params: { project: entry.id }, props: { entry } };
+  });
+}
+
+type Props = { entry: CollectionEntry<"projects"> };
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const project = buildProjectMeta(entry);
+---
+
+<BaseLayout
+  title={`${project.name} (GSoC ${project.year})`}
+  description={`GSoC ${project.year}: ${project.desc}`}
+>
+  <ProjectBody project={project}>
+    <Content />
+  </ProjectBody>
+</BaseLayout>

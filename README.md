@@ -175,8 +175,8 @@ artifact for pull-request preview.
 - `src/assets/` contains assets processed by Astro, including member logos and
   backgrounds.
 - `src/components/` contains shared Astro components.
-- `src/content/` contains posts and Markdown page content, including GSoC pages
-  and projects.
+- `src/content/` contains the Markdown content: news `posts/`, prose `pages/`
+  (the GSoC guides) and GSoC `projects/` (one file per project idea).
 - `src/data/` contains JSON data used by pages and components.
   `src/data/universe/` configures the `/universe-oa/` contributor blog feed
   checker and archive.

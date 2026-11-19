@@ -39,12 +39,12 @@ GitHub Actions (`.github/workflows/ci.yml`) runs on pull requests and pushes to 
 
 ## Adding GSoC content
 
-GSoC project ideas live in `src/content/pages/gsoc/<year>/<suborg>/<file>.md`.
+GSoC project ideas live in `src/content/projects/<year>/<suborg>/<file>.md` and are published at `/gsoc/<year>/<suborg>/<file>/`.
 
 To add a new project idea:
 
-1. Copy the template at `src/content/pages/gsoc/_project_template.md` to `src/content/pages/gsoc/<year>/<suborg>/<file>.md`.
-2. Fill in the frontmatter. The schema is defined and validated in `src/content.config.ts` — the build fails on malformed fields.
+1. Copy the template at `src/content/projects/_template.md` to `src/content/projects/<year>/<suborg>/<file>.md`.
+2. Fill in the frontmatter. The schema is defined and validated in `src/content.config.ts` — the build fails on malformed fields, and on a missing `name`, `desc`, `difficulty`, `mentors` or `collaborating_projects`.
 
 For a new season, also:
 

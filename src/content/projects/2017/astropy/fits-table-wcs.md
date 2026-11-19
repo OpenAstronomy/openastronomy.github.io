@@ -1,6 +1,6 @@
 ---
 name: Seamless Combination of SkyCoord, Table, WCS, and FITS
-desc:
+desc: Keep coordinate, time and unit metadata intact when tables are combined and written to FITS
 requirements:
   - Python
   - Some familiarity with FITS files

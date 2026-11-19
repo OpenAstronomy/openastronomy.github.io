@@ -15,6 +15,7 @@ export type CollaboratorLink = {
 /** Metadata for a project's season-page card and its standalone page. */
 export type ProjectMeta = {
   name: string;
+  year: string;
   href: string;
   desc: string;
   difficulty: string;
@@ -55,7 +56,7 @@ export const getProjectCardRows = (
 ): ProjectMetadataRow[] =>
   filledRows([
     row("Mentors", project.mentors),
-    row("Difficulty", project.difficulty ? [project.difficulty] : []),
+    row("Difficulty", [project.difficulty]),
     row("Initiatives", project.initiatives),
     row("Project size", project.projectSize),
     row("Tags", project.tags),
@@ -65,41 +66,31 @@ export const getProjectDetailRows = (
   project: ProjectMeta,
 ): ProjectMetadataRow[] =>
   filledRows([
-    row("Difficulty", project.difficulty ? [project.difficulty] : []),
+    row("Difficulty", [project.difficulty]),
     row("Initiatives", project.initiatives),
     row("Project size", project.projectSize),
     row("Tags", project.tags),
   ]);
 
 /**
- * Returns `{ year, suborg, fileSlug }` when an entry id looks like
- * `gsoc/<YYYY>/<suborg>/<file>`, otherwise `null`. Used by both the season
- * layout filter and the standalone `[...slug]` project case.
+ * Render-ready metadata for one entry of the `projects` collection. The
+ * entry id is the file's path under src/content/projects/
+ * (`<year>/<suborg>/<file>`), which is also the page's path under /gsoc/.
  */
-export const parseProjectId = (
-  id: string,
-): { year: string; suborg: string; fileSlug: string } | null => {
-  const match = id.match(/^gsoc\/(\d{4})\/([^/]+)\/(.+)$/);
-  if (!match) return null;
-  return { year: match[1], suborg: match[2], fileSlug: match[3] };
-};
-
-/**
- * Build the rendered metadata for one project from its parsed frontmatter.
- */
-export const buildProjectMeta = (
-  data: CollectionEntry<"pages">["data"],
-  pathInfo: { year: string; suborg: string; fileSlug: string },
-): ProjectMeta => ({
-  name: data.name || pathInfo.fileSlug,
-  href: `/gsoc/${pathInfo.year}/${pathInfo.suborg}/${pathInfo.fileSlug}/`,
-  desc: data.desc ?? "",
-  difficulty: data.difficulty ?? "",
+export const buildProjectMeta = ({
+  id,
+  data,
+}: Pick<CollectionEntry<"projects">, "id" | "data">): ProjectMeta => ({
+  name: data.name,
+  year: id.split("/")[0],
+  href: `/gsoc/${id}/`,
+  desc: data.desc,
+  difficulty: data.difficulty,
   requirements: data.requirements ?? [],
-  mentors: data.mentors ?? [],
+  mentors: data.mentors,
   initiatives: data.initiatives ?? [],
   projectSize: data.project_size ?? [],
   tags: data.tags ?? [],
-  collaborators: (data.collaborating_projects ?? []).map(formatMemberLink),
+  collaborators: data.collaborating_projects.map(formatMemberLink),
   issues: data.issues ?? [],
 });

@@ -48,7 +48,7 @@ Besides these deadlines, as a sub-org admin, you will have to keep track of all 
 Normally organisations provide a list of ideas that can be done by a contributor in approximately three months (working full-time).
 Take a look at what [Google says on how to define a project](https://google.github.io/gsocguides/mentor/defining-a-project-ideas-list), then look at [other ideas OpenAstronomy's members have proposed this or previous years.](../#current-projects).
 
-To add your own, copy the [project template] to `src/content/pages/gsoc/<year>/<suborg>/<name>.md` in [our repository][OA repository] (one file per idea), fill it in, and open a pull-request.
+To add your own, copy the [project template] to `src/content/projects/<year>/<suborg>/<name>.md` in [our repository][OA repository] (one file per idea), fill it in, and open a pull-request.
 Ideas saved anywhere else will not show up on the season page.
 Take a look at [an existing idea][example idea] to see how others have done it before.
 The admins and other members will review your ideas and provide feedback.
@@ -156,7 +156,7 @@ If they are not followed the administrators will fail the contributors.
 
 [OA repository]: https://github.com/OpenAstronomy/openastronomy.github.io
 [contributor guidelines]: ../contributor_guidelines/
-[project template]: https://github.com/OpenAstronomy/openastronomy.github.io/blob/main/src/content/pages/gsoc/_project_template.md
+[project template]: https://github.com/OpenAstronomy/openastronomy.github.io/blob/main/src/content/projects/_template.md
 [Google's mentor guide]: https://google.github.io/gsocguides/mentor/
 [GSOC]: https://summerofcode.withgoogle.com/
 [members file]: https://github.com/OpenAstronomy/openastronomy.github.io/blob/main/src/data/members.json
@@ -164,6 +164,6 @@ If they are not followed the administrators will fail the contributors.
 [ESA-SOCIS]: https://www.esa.int/Enabling_Support/Space_Engineering_Technology/SOCIS_The_ESA_Summer_of_Code_in_Space
 [Google-notes]: https://google.github.io/gsocguides/mentor/notes-for-first-year-organizations
 [PSF-sub-orgs]: https://python-gsoc.org/mentors.html#sub-orgs
-[example idea]: https://github.com/OpenAstronomy/openastronomy.github.io/blob/main/src/content/pages/gsoc/2026/sunpy/radiospectra.md
+[example idea]: https://github.com/OpenAstronomy/openastronomy.github.io/blob/main/src/content/projects/2026/sunpy/radiospectra.md
 [gsoc-proposals]: https://github.com/OpenAstronomy/gsoc-proposals
 [application-template]: https://github.com/OpenAstronomy/gsoc-proposals/blob/main/template.md

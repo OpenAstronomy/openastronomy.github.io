@@ -1,13 +1,13 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import ProjectCard from "../../components/gsoc/ProjectCard.astro";
 import PeopleSection from "../../components/gsoc/PeopleSection.astro";
 import admins from "../../data/gsoc-admins.json";
-import { buildProjectMeta, parseProjectId } from "../../lib/gsoc.ts";
+import { buildProjectMeta } from "../../lib/gsoc.ts";
 
 // One season page per year in gsoc-admins.json; projects come from
-// src/content/pages/gsoc/<year>/.
+// src/content/projects/<year>/.
 export const getStaticPaths = () =>
   Object.keys(admins).map((year) => ({ params: { year } }));
 
@@ -15,20 +15,9 @@ const seasonKey = Astro.params.year;
 const pageTitle = `Ideas page for Google Summer of Code ${seasonKey}`;
 
 const adminLookup = admins as Record<string, string[]>;
-const pageEntries = await getCollection("pages");
-type SeasonEntry = {
-  entry: CollectionEntry<"pages">;
-  info: NonNullable<ReturnType<typeof parseProjectId>>;
-};
-const seasonEntries: SeasonEntry[] = pageEntries.flatMap(
-  (entry: CollectionEntry<"pages">) => {
-    const info = parseProjectId(entry.id);
-    return info?.year === seasonKey ? [{ entry, info }] : [];
-  },
-);
-
-const projects = seasonEntries
-  .map(({ entry, info }: SeasonEntry) => buildProjectMeta(entry.data, info))
+const projects = (await getCollection("projects"))
+  .map(buildProjectMeta)
+  .filter((project) => project.year === seasonKey)
   .sort((a, b) => a.name.localeCompare(b.name));
 
 // Ignore case, or handles starting with a capital would all sort first.

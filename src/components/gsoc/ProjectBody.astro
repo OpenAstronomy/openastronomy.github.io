@@ -9,7 +9,7 @@ const rows = getProjectDetailRows(project);
 ---
 
 <h1>{project.name}</h1>
-{project.desc ? <p>{project.desc}</p> : null}
+<p>{project.desc}</p>
 
 {project.requirements.length > 0 ? (
   <div>
@@ -28,23 +28,21 @@ const rows = getProjectDetailRows(project);
   </div>
 ))}
 
-{project.mentors.length > 0 ? (
-  <div>
-    <strong>Mentors:</strong>{" "}
-    {project.mentors.map((mentor, index) => (
-      <>
-        {index > 0 ? ", " : ""}
-        <a
-          href={`https://github.com/${mentor}`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @{mentor}
-        </a>
-      </>
-    ))}
-  </div>
-) : null}
+<div>
+  <strong>Mentors:</strong>{" "}
+  {project.mentors.map((mentor, index) => (
+    <>
+      {index > 0 ? ", " : ""}
+      <a
+        href={`https://github.com/${mentor}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @{mentor}
+      </a>
+    </>
+  ))}
+</div>
 
 {project.issues.length > 0 ? (
   <div>
@@ -61,21 +59,19 @@ const rows = getProjectDetailRows(project);
   </div>
 ) : null}
 
-{project.collaborators.length > 0 ? (
-  <div>
-    <strong>Collaborating projects:</strong>{" "}
-    {project.collaborators.map((collaborator, index) => (
-      <>
-        {index > 0 ? ", " : ""}
-        {collaborator.href ? (
-          <a href={collaborator.href}>{collaborator.label}</a>
-        ) : (
-          collaborator.label
-        )}
-      </>
-    ))}
-  </div>
-) : null}
+<div>
+  <strong>Collaborating projects:</strong>{" "}
+  {project.collaborators.map((collaborator, index) => (
+    <>
+      {index > 0 ? ", " : ""}
+      {collaborator.href ? (
+        <a href={collaborator.href}>{collaborator.label}</a>
+      ) : (
+        collaborator.label
+      )}
+    </>
+  ))}
+</div>
 
 <div class="gsoc-project-body">
   <slot />

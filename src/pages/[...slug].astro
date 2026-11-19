@@ -1,53 +1,18 @@
 ---
 import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ProjectBody from "../components/gsoc/ProjectBody.astro";
-import admins from "../data/gsoc-admins.json";
-import { buildProjectMeta, parseProjectId } from "../lib/gsoc.ts";
 
+// Prose pages from src/content/pages/, served at their file path.
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
-  return pages
-    .filter(
-      (page: CollectionEntry<"pages">) => page.id !== "gsoc/_project_template",
-    )
-    .map((page: CollectionEntry<"pages">) => {
-      // Season pages come from gsoc-admins.json; without an entry a project
-      // would build but nothing would link to it.
-      const year = parseProjectId(page.id)?.year;
-      if (year && !(year in admins)) {
-        throw new Error(
-          `${page.id}: add "${year}" to src/data/gsoc-admins.json so the season page exists`,
-        );
-      }
-      return { params: { slug: page.id }, props: { page } };
-    });
+  return pages.map((page) => ({ params: { slug: page.id }, props: { page } }));
 }
 
 type Props = { page: CollectionEntry<"pages"> };
-const { page } = Astro.props as Props;
+const { page } = Astro.props;
 const { Content } = await render(page);
-
-const { title, description } = page.data;
-const projectInfo = parseProjectId(page.id);
-const projectMeta = projectInfo
-  ? buildProjectMeta(page.data, projectInfo)
-  : null;
 ---
 
-{projectMeta ? (
-  <BaseLayout
-    title={`${projectMeta.name} (GSoC ${projectInfo?.year})`}
-    description={`GSoC ${projectInfo?.year}: ${
-      projectMeta.desc || "OpenAstronomy project idea."
-    }`}
-  >
-    <ProjectBody project={projectMeta}>
-      <Content />
-    </ProjectBody>
-  </BaseLayout>
-) : (
-  <BaseLayout title={title} description={description}>
-    <Content />
-  </BaseLayout>
-)}
+<BaseLayout title={page.data.title} description={page.data.description}>
+  <Content />
+</BaseLayout>
