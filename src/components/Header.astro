@@ -1,0 +1,89 @@
+---
+import { Image } from "astro:assets";
+import site from "../data/site.json";
+import icons from "../data/icons.json";
+import logoWhite from "../assets/logoOA_white.png";
+
+// "page" on the current page, "true" anywhere inside that section.
+const path = Astro.url.pathname;
+const current = (href: string) =>
+  path === href
+    ? "page"
+    : href.startsWith("/") && path.startsWith(href)
+      ? "true"
+      : undefined;
+---
+
+<header class="site-header">
+  <div class="container">
+    <a class="site-title" href="/">
+      <Image
+        class="logo"
+        src={logoWhite}
+        alt={site.title}
+        width={250}
+        loading="eager"
+      />
+    </a>
+
+    <nav class="site-nav" aria-label="Main" data-site-nav>
+      <button
+        type="button"
+        class="menu-icon"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="site-nav-links"
+      >
+        <svg
+          viewBox={icons.hamburger.viewBox}
+          width="18"
+          height="15"
+          aria-hidden="true"
+          focusable="false"
+        >
+          <path fill="#ffffff" d={icons.hamburger.d}></path>
+        </svg>
+      </button>
+      <div class="trigger" id="site-nav-links">
+        {site.nav.map((link) => (
+          <a href={link.href} aria-current={current(link.href)}>
+            {link.title}
+          </a>
+        ))}
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const nav = document.querySelector<HTMLElement>("[data-site-nav]");
+  const toggle = nav?.querySelector<HTMLButtonElement>(".menu-icon");
+  if (nav && toggle) {
+    const close = () => {
+      nav.classList.remove("is-open");
+      toggle.setAttribute("aria-expanded", "false");
+    };
+    toggle.addEventListener("click", () => {
+      const open = nav.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", (event) => {
+      if (event.target instanceof Node && !nav.contains(event.target)) close();
+    });
+    nav.addEventListener("click", (event) => {
+      if (event.target instanceof Element && event.target.closest("a")) close();
+    });
+    nav.addEventListener("focusout", (event) => {
+      if (!(
+        event.relatedTarget instanceof Node && nav.contains(event.relatedTarget)
+      ))
+        close();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        close();
+        toggle.focus();
+      }
+    });
+  }
+</script>

@@ -1,0 +1,91 @@
+---
+import { Font, getImage } from "astro:assets";
+import site from "../data/site.json";
+import faviconAsset from "../assets/favicon.png";
+import backgroundAp from "../assets/background/background_ap.jpg";
+import backgroundSp from "../assets/background/background_sp.jpg";
+
+type Props = {
+  pageTitle?: string;
+  description?: string;
+  pageType?: "website" | "article";
+  publishedAt?: Date;
+  noindex?: boolean;
+};
+
+const {
+  pageTitle,
+  description = site.description,
+  pageType = "website",
+  publishedAt,
+  noindex = false,
+} = Astro.props;
+
+const ogTitle = pageTitle ?? site.title;
+// Browser/search titles carry the site name: "Members | OpenAstronomy".
+const title =
+  ogTitle === site.title ? site.title : `${ogTitle} | ${site.title}`;
+const pagePath = Astro.url.pathname;
+const canonicalUrl = new URL(pagePath, Astro.site).href;
+const ogImageUrl = new URL("/og/openastronomy-og.jpg", Astro.site).href;
+const favicon = await getImage({ src: faviconAsset, width: 32, format: "png" });
+// iOS shows transparent touch-icon pixels as black, so flatten onto white.
+const touchIcon = await getImage({
+  src: faviconAsset,
+  width: 180,
+  format: "png",
+  background: "#ffffff",
+});
+
+// Pick one background per page (stable per URL length, no FOUC).
+const backgroundOptions = [backgroundAp, backgroundSp];
+const backgroundAsset =
+  backgroundOptions[pagePath.length % backgroundOptions.length];
+// WebP at full width is about 18 kB instead of the 134 kB JPEG.
+const backgroundHref = (
+  await getImage({ src: backgroundAsset, format: "webp" })
+).src;
+
+const publishedIso = publishedAt?.toISOString();
+---
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <link rel="icon" type="image/png" sizes="32x32" href={favicon.src} />
+  <link rel="apple-touch-icon" href={touchIcon.src} />
+  <meta name="description" content={description} />
+  {noindex && <meta name="robots" content="noindex" />}
+  <meta name="author" content="OpenAstronomy" />
+  <meta property="og:type" content={pageType} />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:title" content={ogTitle} />
+  <meta property="og:description" content={description} />
+  {!noindex && <meta property="og:url" content={canonicalUrl} />}
+  <meta property="og:site_name" content="OpenAstronomy" />
+  <meta property="og:image" content={ogImageUrl} />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="OpenAstronomy logo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  {pageType === "article" && publishedIso ? (
+    <meta property="article:published_time" content={publishedIso} />
+  ) : null}
+  {!noindex && <link rel="canonical" href={canonicalUrl} />}
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title={site.title}
+    href="/feed.xml"
+  />
+
+  {/* Fira Sans, configured in astro.config.mjs; preload the body text face. */}
+  <Font
+    cssVariable="--font-fira-sans"
+    preload={[{ weight: 400, style: "normal", subset: "latin" }]}
+  />
+
+  <style set:html={`:root{--page-bg:url("${backgroundHref}")}`}></style>
+</head>

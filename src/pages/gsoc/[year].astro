@@ -1,0 +1,67 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/gsoc/ProjectCard.astro";
+import PeopleSection from "../../components/gsoc/PeopleSection.astro";
+import admins from "../../data/gsoc-admins.json";
+import { buildProjectMeta } from "../../lib/gsoc.ts";
+
+// One season page per year in gsoc-admins.json; projects come from
+// src/content/projects/<year>/.
+export const getStaticPaths = () =>
+  Object.keys(admins).map((year) => ({ params: { year } }));
+
+const seasonKey = Astro.params.year;
+const pageTitle = `Ideas page for Google Summer of Code ${seasonKey}`;
+
+const adminLookup = admins as Record<string, string[]>;
+const projects = (await getCollection("projects"))
+  .map(buildProjectMeta)
+  .filter((project) => project.year === seasonKey)
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+// Ignore case, or handles starting with a capital would all sort first.
+const mentors = Array.from(new Set(projects.flatMap((p) => p.mentors))).sort(
+  (a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }),
+);
+const adminHandles = adminLookup[seasonKey];
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={`Project ideas, mentors and admins for OpenAstronomy in Google Summer of Code ${seasonKey}.`}
+>
+  <h1>{pageTitle}</h1>
+  <nav class="gsoc-tabs" aria-label="Sections">
+    <a href="#projects">Projects</a>
+    <a href="#mentors">Mentors</a>
+    <a href="#admins">Admins</a>
+  </nav>
+
+  <section id="projects">
+    <h2>
+      <a class="gsoc-section-link" href="#projects">
+        {`GSoC Projects for ${seasonKey}`}
+      </a>
+    </h2>
+    {projects.length === 0 ? <p>No projects listed yet.</p> : null}
+    <div class="gsoc-projects-grid">
+      {projects.map((project) => (
+        <ProjectCard project={project} />
+      ))}
+    </div>
+  </section>
+
+  <PeopleSection
+    id="mentors"
+    heading={`Mentors for ${seasonKey}`}
+    intro={`We are the mentors for OpenAstronomy in GSoC ${seasonKey}.`}
+    handles={mentors}
+  />
+  <PeopleSection
+    id="admins"
+    heading={`Admins for ${seasonKey}`}
+    intro="We are the admins for OpenAstronomy."
+    handles={adminHandles}
+  />
+</BaseLayout>

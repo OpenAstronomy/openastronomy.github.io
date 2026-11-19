@@ -1,0 +1,19 @@
+---
+import icons from "../data/icons.json";
+
+type Props = { name: string; fill?: string };
+const { name, fill = "currentColor" } = Astro.props;
+const icon = (icons as Record<string, { d: string; viewBox: string }>)[name];
+if (!icon) throw new Error(`Unknown icon: ${name}`);
+---
+
+<svg
+  class="icon"
+  width="16"
+  height="16"
+  viewBox={icon.viewBox}
+  aria-hidden="true"
+  focusable="false"
+>
+  <path fill={fill} d={icon.d}></path>
+</svg>

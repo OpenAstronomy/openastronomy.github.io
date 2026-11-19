@@ -1,0 +1,41 @@
+{
+  "title": "OpenAstronomy",
+  "description": "Where all about the combined force of different open source projects in astronomy and astrophysics takes place.",
+  "nav": [
+    { "title": "Members", "href": "/members/" },
+    { "title": "News and Events", "href": "/news/" },
+    { "title": "GSoC", "href": "/gsoc/" },
+    { "title": "Contributor Blogs", "href": "/universe-oa/" },
+    {
+      "title": "PyAstro",
+      "href": "https://openastronomy.org/pyastro/"
+    },
+    {
+      "title": "Events Calendar",
+      "href": "https://calendar.google.com/calendar/embed?src=blhg7t0osn8lrntd709qhg1mis%40group.calendar.google.com"
+    }
+  ],
+  "social_links": [
+    {
+      "icon": "discourse",
+      "href": "https://community.openastronomy.org",
+      "label": "OpenAstronomy Discourse"
+    },
+    {
+      "icon": "mastodon",
+      "href": "https://floss.social/@OpenAstronomy",
+      "label": "OpenAstronomy on Mastodon",
+      "rel": "me"
+    },
+    {
+      "icon": "rss",
+      "href": "/feed.xml",
+      "label": "OpenAstronomy news RSS feed"
+    },
+    {
+      "icon": "github",
+      "href": "https://github.com/openastronomy",
+      "label": "OpenAstronomy on GitHub"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+---
+import CollaboratorList from "./CollaboratorList.astro";
+import { getProjectCardRows, type ProjectMeta } from "../../lib/gsoc.ts";
+
+type Props = { project: ProjectMeta };
+const { project } = Astro.props;
+const rows = getProjectCardRows(project);
+---
+
+<article class="gsoc-project-card">
+  <h3>
+    <a href={project.href}>{project.name}</a>
+  </h3>
+  <p class="gsoc-project-desc">{project.desc}</p>
+  {rows.map((row) => (
+    <div class="gsoc-card-row">
+      <span class="gsoc-card-label">{row.label}:</span>{" "}
+      <span>{row.values.join(", ")}</span>
+    </div>
+  ))}
+  <div class="gsoc-card-row">
+    <span class="gsoc-card-label">Project:</span>{" "}
+    <span>
+      <CollaboratorList collaborators={project.collaborators} />
+    </span>
+  </div>
+</article>

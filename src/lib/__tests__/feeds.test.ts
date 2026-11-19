@@ -1,0 +1,272 @@
+import { describe, expect, it } from "vitest";
+import {
+  describeFetchError,
+  formatFeedHttpError,
+  getBlogUrl,
+  parseFeedXml,
+} from "../feeds.ts";
+
+const date = (value: string) => new Date(value);
+
+describe("parseFeedXml", () => {
+  it("parses RSS items into newest-first posts", () => {
+    const posts = parseFeedXml(`
+      <rss>
+        <channel>
+          <item>
+            <title>Older post</title>
+            <link>https://example.com/blog/older</link>
+            <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[<p>Older summary</p>]]></description>
+          </item>
+          <item>
+            <title>Newer post</title>
+            <link>https://example.com/blog/newer</link>
+            <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+          </item>
+        </channel>
+      </rss>
+    `);
+
+    expect(posts.map((post) => post.title)).toEqual([
+      "Newer post",
+      "Older post",
+    ]);
+  });
+
+  it("parses Atom entries with alternate links", () => {
+    const posts = parseFeedXml(`
+      <feed>
+        <entry>
+          <title>Atom post</title>
+          <link rel="alternate" href="https://example.com/atom-post" />
+          <published>2026-06-01T00:00:00Z</published>
+        </entry>
+      </feed>
+    `);
+
+    expect(posts).toHaveLength(1);
+    expect(posts[0].url).toBe("https://example.com/atom-post");
+  });
+
+  it("drops posts whose link is not an http(s) URL", () => {
+    const posts = parseFeedXml(`
+      <rss>
+        <channel>
+          <item>
+            <title>Malicious post</title>
+            <link>javascript:alert(1)</link>
+            <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+          </item>
+          <item>
+            <title>Safe post</title>
+            <link>https://example.com/safe</link>
+            <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
+          </item>
+        </channel>
+      </rss>
+    `);
+
+    expect(posts.map((post) => post.url)).toEqual(["https://example.com/safe"]);
+  });
+
+  const rssItem = (inner: string) => `
+    <rss><channel><item>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>${inner}
+    </item></channel></rss>`;
+
+  it("decodes numeric HTML entities in titles", () => {
+    const [post] = parseFeedXml(
+      rssItem(
+        "<title>GSoC&#8217;26 &#8211; done</title><link>https://e.com/a</link>",
+      ),
+    );
+    expect(post.title).toBe("GSoC’26 – done");
+  });
+
+  it("resolves relative item links against the feed URL", () => {
+    const [post] = parseFeedXml(
+      rssItem("<title>A</title><link>/posts/a</link>"),
+      "https://blog.example.com/feed.xml",
+    );
+    expect(post.url).toBe("https://blog.example.com/posts/a");
+  });
+
+  it("falls back to a permalink guid when an RSS item has no link", () => {
+    const [post] = parseFeedXml(
+      rssItem(
+        '<title>A</title><guid isPermaLink="true">https://e.com/a</guid>',
+      ),
+    );
+    expect(post.url).toBe("https://e.com/a");
+    expect(
+      parseFeedXml(
+        rssItem(
+          '<title>B</title><guid isPermaLink="false">https://e.com/p/1</guid>',
+        ),
+      ),
+    ).toEqual([]);
+  });
+
+  it("ignores a guid that is not a full URL", () => {
+    expect(
+      parseFeedXml(
+        rssItem("<title>A</title><guid>abc-123</guid>"),
+        "https://b.com/feed",
+      ),
+    ).toEqual([]);
+  });
+
+  it("rejects documents that are not RSS or Atom", () => {
+    expect(() => parseFeedXml("<html><body>Not found</body></html>")).toThrow(
+      "Not an RSS or Atom feed",
+    );
+  });
+
+  it("never uses an Atom rel=self link as the post URL", () => {
+    const posts = parseFeedXml(`
+      <feed><entry>
+        <title>Self only</title>
+        <updated>2026-06-01T00:00:00Z</updated>
+        <link rel="self" href="https://api.example.com/entry/1"/>
+      </entry></feed>`);
+    expect(posts).toEqual([]);
+  });
+
+  it("keeps only GSoC-tagged Medium posts", () => {
+    const posts = parseFeedXml(
+      `
+        <rss>
+          <channel>
+            <item>
+              <title>GSoC post</title>
+              <link>https://medium.com/@student/gsoc-post</link>
+              <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+              <category>GSoC</category>
+            </item>
+            <item>
+              <title>Other post</title>
+              <link>https://medium.com/@student/other-post</link>
+              <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+              <category>personal</category>
+            </item>
+          </channel>
+        </rss>
+      `,
+      "https://medium.com/feed/@student",
+    );
+
+    expect(posts.map((post) => post.title)).toEqual(["GSoC post"]);
+  });
+
+  it("keeps Medium posts with GSoC in the title even without a GSoC tag", () => {
+    const posts = parseFeedXml(
+      `
+        <rss>
+          <channel>
+            <item>
+              <title>GSoC 2026 at OpenAstronomy</title>
+              <link>https://medium.com/@student/gsoc-post</link>
+              <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+              <category>astronomy</category>
+            </item>
+            <item>
+              <title>Other post</title>
+              <link>https://medium.com/@student/other-post</link>
+              <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+              <category>personal</category>
+            </item>
+          </channel>
+        </rss>
+      `,
+      "https://medium.com/feed/@student",
+    );
+
+    expect(posts.map((post) => post.title)).toEqual([
+      "GSoC 2026 at OpenAstronomy",
+    ]);
+  });
+});
+
+describe("formatFeedHttpError", () => {
+  it("includes Cloudflare challenge details when present", () => {
+    const response = new Response("", {
+      status: 403,
+      headers: { "cf-mitigated": "challenge" },
+    });
+
+    expect(formatFeedHttpError(response)).toBe(
+      "HTTP 403 (Cloudflare challenge)",
+    );
+  });
+});
+
+describe("describeFetchError", () => {
+  // The shape Node's fetch throws for any network failure.
+  const fetchFailed = (code: string, message: string) =>
+    new TypeError("fetch failed", {
+      cause: Object.assign(new Error(message), { code }),
+    });
+
+  it("names the network failure behind Node's 'fetch failed'", () => {
+    const error = fetchFailed(
+      "ENOTFOUND",
+      "getaddrinfo ENOTFOUND gone.example.com",
+    );
+
+    expect(describeFetchError(error)).toBe("Host not found");
+  });
+
+  it("uses the cause's own message for less common failures", () => {
+    const error = fetchFailed("CERT_HAS_EXPIRED", "certificate has expired");
+
+    expect(describeFetchError(error)).toBe("certificate has expired");
+  });
+
+  it("says when the request ran out of time", () => {
+    const error = new DOMException(
+      "The operation was aborted due to timeout",
+      "TimeoutError",
+    );
+
+    expect(describeFetchError(error)).toBe("Timed out after 6 s");
+  });
+
+  it("keeps the message of an error that has no cause", () => {
+    const error = new Error("Not an RSS or Atom feed");
+
+    expect(describeFetchError(error)).toBe("Not an RSS or Atom feed");
+  });
+});
+
+describe("getBlogUrl", () => {
+  it("derives a Medium profile URL from a post URL", () => {
+    expect(
+      getBlogUrl("https://medium.com/feed/@student", [
+        {
+          title: "Post",
+          url: "https://medium.com/@student/post-title",
+          publishedAt: date("2026-06-01T00:00:00Z"),
+        },
+      ]),
+    ).toBe("https://medium.com/@student");
+  });
+
+  it("derives a Medium profile URL from a feed URL", () => {
+    expect(getBlogUrl("https://medium.com/feed/@student", [])).toBe(
+      "https://medium.com/@student",
+    );
+  });
+
+  it("derives a dev.to profile URL from a feed URL", () => {
+    expect(getBlogUrl("https://dev.to/feed/student", [])).toBe(
+      "https://dev.to/student",
+    );
+  });
+
+  it("keeps blog path prefixes for custom blogs", () => {
+    expect(getBlogUrl("https://example.com/blog/feed.xml", [])).toBe(
+      "https://example.com/blog/",
+    );
+  });
+});

@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+import ProjectLabel from "../../components/ProjectLabel.astro";
+import { getBlogUrl } from "../../lib/feeds.ts";
+import { sortSeasons } from "../../lib/universe.ts";
+
+// Every season except the newest (shown on /universe-oa/).
+const [, ...archived] = sortSeasons(await getCollection("seasons"));
+---
+
+<PageLayout
+  title="Contributor Blog Archive"
+  description="Previous OpenAstronomy contributor blog seasons and project archives."
+>
+  <div class="universe-heading">
+    <p>
+      Previous contributor blog seasons. Project archive links point to the
+      matching Google Summer of Code pages in this site.
+    </p>
+    <p>
+      <a href="/universe-oa/"> Current contributor blogs </a>
+    </p>
+  </div>
+
+  <div class="universe-archive-list">
+    {archived.map((season) => {
+      const year = season.year;
+      return (
+        <section class="universe-archive-season">
+          <h2>GSoC {year}</h2>
+          <p class="universe-archive-actions">
+            <a href={`/gsoc/${year}/`}>Project archive</a>
+          </p>
+          <div class="universe-table-wrap">
+            <table class="universe-table">
+              <thead>
+                <tr>
+                  <th scope="col">Contributor</th>
+                  <th scope="col">Project</th>
+                  <th scope="col">Feed</th>
+                </tr>
+              </thead>
+              <tbody>
+                {season.contributors.map((contributor) => {
+                  const blogUrl = getBlogUrl(contributor.feed, []);
+                  return (
+                    <tr>
+                      <th scope="row">
+                        {blogUrl ? (
+                          <a href={blogUrl}>{contributor.name}</a>
+                        ) : (
+                          <span>{contributor.name}</span>
+                        )}
+                      </th>
+                      <td>
+                        <ProjectLabel project={contributor.project} />
+                      </td>
+                      <td>
+                        <a href={contributor.feed}>RSS feed</a>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      );
+    })}
+  </div>
+</PageLayout>

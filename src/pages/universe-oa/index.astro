@@ -1,0 +1,150 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "../../layouts/PageLayout.astro";
+import ProjectLabel from "../../components/ProjectLabel.astro";
+import { formatDate } from "../../lib/dates.ts";
+import {
+  buildUniverseSeason,
+  sortSeasons,
+  type UniverseStudent,
+} from "../../lib/universe.ts";
+
+// The newest season is the current one.
+const [current] = sortSeasons(await getCollection("seasons"));
+const season = await buildUniverseSeason(current);
+
+const timeFormatter = new Intl.DateTimeFormat("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  hour: "numeric",
+  minute: "2-digit",
+  timeZone: "UTC",
+  timeZoneName: "short",
+});
+
+const formatRange = (start: Date, end: Date) =>
+  `${formatDate(start)} - ${formatDate(end)}`;
+
+const statusLabel = (status: string) =>
+  status === "unknown"
+    ? "Unknown (feed failed)"
+    : status.charAt(0).toUpperCase() + status.slice(1);
+
+// Shape-coded status so it does not rely on colour alone.
+const statusGlyph: Record<string, string> = {
+  complete: "✓",
+  missing: "✕",
+  optional: "○",
+  pending: "·",
+  unknown: "?",
+};
+
+const feedLabel = (student: UniverseStudent) => {
+  if (student.feedStatus === "ok") return "Feed available";
+  if (student.feedStatus === "empty") return "No posts found";
+  return "Feed failed";
+};
+
+const feedTitle = (student: UniverseStudent) => {
+  const label = feedLabel(student);
+  return student.feedError ? `${label}: ${student.feedError}` : label;
+};
+---
+
+<PageLayout
+  title="Contributor Blogs"
+  description={`GSoC ${season.year} contributor blog feed status for OpenAstronomy.`}
+>
+  <div class="universe-heading">
+    <p>
+      GSoC {season.year} contributor blog feeds, checked from the RSS sources
+      configured in this repository.
+    </p>
+    <p class="universe-updated">
+      Last checked {timeFormatter.format(season.generatedAt)}
+    </p>
+    <p>
+      <a href="/universe-oa/archive/"> View previous seasons </a>
+    </p>
+    <p>Each mark under “Blog updates” is one posting period:</p>
+    <ul class="universe-legend">
+      {Object.entries(statusGlyph).map(([status, glyph]) => (
+        <li>
+          <span
+            class={`universe-window universe-window-${status}`}
+            aria-hidden="true"
+          >
+            {glyph}
+          </span>
+          {statusLabel(status)}
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="universe-table-wrap">
+    <table class="universe-table">
+      <thead>
+        <tr>
+          <th scope="col">Contributor</th>
+          <th scope="col">Project</th>
+          <th scope="col">Latest post</th>
+          <th scope="col">Blog updates</th>
+        </tr>
+      </thead>
+      <tbody>
+        {season.students.map((student) => (
+          <tr>
+            <th scope="row">
+              {student.blogUrl ? (
+                <a href={student.blogUrl}>{student.name}</a>
+              ) : (
+                <span>{student.name}</span>
+              )}
+              <span
+                class={`universe-feed universe-feed-${student.feedStatus}`}
+                title={feedTitle(student)}
+              >
+                {feedLabel(student)}
+              </span>
+            </th>
+            <td>
+              <ProjectLabel project={student.project} />
+            </td>
+            <td>
+              {student.posts[0] ? (
+                <>
+                  <a href={student.posts[0].url}>{student.posts[0].title}</a>
+                  <span class="universe-date">
+                    {formatDate(student.posts[0].publishedAt)}
+                  </span>
+                </>
+              ) : student.feedStatus === "unavailable" ? (
+                <span class="universe-feed-error">{feedTitle(student)}</span>
+              ) : (
+                <span>No posts found</span>
+              )}
+            </td>
+            <td>
+              <div class="universe-windows">
+                {student.windows.map((window, index) => (
+                  <span
+                    role="img"
+                    class={`universe-window universe-window-${window.status}`}
+                    title={`${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}
+                    aria-label={`Window ${index + 1}, ${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}
+                  >
+                    <span aria-hidden="true">
+                      {statusGlyph[window.status] ?? index + 1}
+                    </span>
+                  </span>
+                ))}
+              </div>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</PageLayout>

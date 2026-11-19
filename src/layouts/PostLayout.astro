@@ -1,0 +1,22 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { formatDate } from "../lib/dates.ts";
+
+type Props = { title: string; date: Date; description?: string };
+const { title, date, description } = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  pageType="article"
+  publishedAt={date}
+>
+  <article>
+    <header>
+      <h1>{title}</h1>
+      <p class="post-meta">{formatDate(date)}</p>
+    </header>
+    <slot />
+  </article>
+</BaseLayout>

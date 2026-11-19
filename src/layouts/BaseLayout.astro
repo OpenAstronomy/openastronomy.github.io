@@ -1,0 +1,39 @@
+---
+import Head from "../components/Head.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+type Props = {
+  title?: string;
+  description?: string;
+  pageType?: "website" | "article";
+  publishedAt?: Date;
+  noindex?: boolean;
+};
+
+const { title, description, pageType, publishedAt, noindex } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <Head
+    pageTitle={title}
+    description={description}
+    pageType={pageType}
+    publishedAt={publishedAt}
+    noindex={noindex}
+  />
+  <body>
+    <a class="skip-link" href="#main">
+      Skip to content
+    </a>
+    <Header />
+    <main id="main" class="page-content">
+      <div class="container">
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

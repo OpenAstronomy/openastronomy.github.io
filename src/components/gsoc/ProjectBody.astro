@@ -1,0 +1,69 @@
+---
+/* A project's standalone page; the slot receives the rendered markdown body. */
+import CollaboratorList from "./CollaboratorList.astro";
+import { getProjectDetailRows, type ProjectMeta } from "../../lib/gsoc.ts";
+
+type Props = { project: ProjectMeta };
+const { project } = Astro.props;
+const rows = getProjectDetailRows(project);
+---
+
+<h1>{project.name}</h1>
+<p>{project.desc}</p>
+
+{project.requirements.length > 0 ? (
+  <div>
+    <strong>Requirements:</strong>
+    <ul>
+      {project.requirements.map((req) => (
+        <li>{req}</li>
+      ))}
+    </ul>
+  </div>
+) : null}
+
+{rows.map((row) => (
+  <div>
+    <strong>{row.label}:</strong> {row.values.join(", ")}
+  </div>
+))}
+
+<div>
+  <strong>Mentors:</strong>{" "}
+  {project.mentors.map((mentor, index) => (
+    <>
+      {index > 0 ? ", " : ""}
+      <a
+        href={`https://github.com/${mentor}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        @{mentor}
+      </a>
+    </>
+  ))}
+</div>
+
+{project.issues.length > 0 ? (
+  <div>
+    <strong>Related issues:</strong>
+    <ul>
+      {project.issues.map((issue) => (
+        <li>
+          <a href={issue} target="_blank" rel="noopener noreferrer">
+            {issue}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+) : null}
+
+<div>
+  <strong>Collaborating projects:</strong>{" "}
+  <CollaboratorList collaborators={project.collaborators} />
+</div>
+
+<div class="gsoc-project-body">
+  <slot />
+</div>

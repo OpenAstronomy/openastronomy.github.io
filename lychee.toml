@@ -1,0 +1,5 @@
+# Internal link and anchor check for the built site (`npm run linkcheck`).
+# External URLs are skipped so the check is deterministic.
+offline = true
+include_fragments = "full"
+index_files = ["index.html"]

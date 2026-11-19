@@ -1,0 +1,26 @@
+---
+import PageLayout from "../layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+import { formatDate } from "../lib/dates.ts";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<PageLayout
+  title="News and Events"
+  description="News and event announcements from OpenAstronomy."
+>
+  <div>
+    {posts.map((post) => (
+      <article>
+        <h2>
+          <a href={`/news/${post.id}/`}>{post.data.title}</a>
+        </h2>
+        <p class="post-meta">{formatDate(post.data.date)}</p>
+        {post.data.summary && <p>{post.data.summary}</p>}
+      </article>
+    ))}
+  </div>
+</PageLayout>
