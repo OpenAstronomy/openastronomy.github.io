@@ -77,6 +77,22 @@ loads the page.
 The GitHub Actions CI workflow rebuilds and deploys the site daily, which
 refreshes the feed statuses.
 
+The page keeps no record between builds: each build judges every window from
+the posts the feed lists at that moment. Feeds list only a blog's newest posts
+(10 on WordPress.com and Medium, 25 on Blogger), so once a contributor has
+published more than that, their earliest posts drop out and a ✓ window turns
+into ✕.
+
+Two ways to make that less likely:
+
+- Use a feed for one tag or label, such as
+  `https://example.wordpress.com/tag/gsoc/feed/`. It lists only those posts,
+  so unrelated posts cannot push the GSoC ones out.
+- Add `max-results=100` to a Blogger feed URL to list up to 100 posts.
+
+If a contributor moves to a new blog, update `feed`. The old feed usually
+still loads, so the page shows ✕ for the windows after the move, not an error.
+
 ## Archive
 
 `/universe-oa/` shows the newest configured season.
