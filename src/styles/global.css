@@ -23,6 +23,11 @@ body {
   background-image: var(--page-bg);
   background-size: 100%;
   background-repeat: no-repeat;
+  /* A column that fills the window, so the footer sits at the bottom of
+     short pages instead of floating mid-screen. */
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
 .icon {
@@ -172,6 +177,7 @@ blockquote {
 
 /* Long URLs and inline code in project text must not widen the page. */
 .page-content {
+  flex: 1;
   overflow-wrap: anywhere;
   padding-bottom: 5px;
 }
@@ -239,6 +245,12 @@ blockquote {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 12px;
+}
+
+/* Spacing comes from the flex gap; the prose `li + li` margin would push
+   every link but the first one down. */
+.member-links li + li {
+  margin-top: 0;
 }
 
 .member-links a {
@@ -483,7 +495,9 @@ blockquote {
 
 .gsoc-people-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  /* Wide columns and slightly smaller text keep an @handle on one line. */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  font-size: 0.9rem;
   gap: 16px;
   margin-top: 16px;
 }
