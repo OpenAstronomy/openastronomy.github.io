@@ -305,14 +305,6 @@ blockquote {
   color: var(--color-light);
 }
 
-.rounded-circle {
-  border-radius: 50%;
-}
-
-.text-center {
-  text-align: center;
-}
-
 @media (max-width: 900px) {
   .site-header .container {
     justify-content: space-between;
@@ -494,8 +486,13 @@ blockquote {
   /* Wide columns and slightly smaller text keep an @handle on one line. */
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   font-size: 0.9rem;
+  text-align: center;
   gap: 16px;
   margin-top: 16px;
+}
+
+.gsoc-people-grid img {
+  border-radius: 50%;
 }
 
 /* Contributor blog (universe-oa) pages */

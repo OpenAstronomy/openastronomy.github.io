@@ -50,9 +50,6 @@ const feedTitle = (student: UniverseStudent) => {
   const label = feedLabel(student);
   return student.feedError ? `${label}: ${student.feedError}` : label;
 };
-
-const feedErrorMessage = (student: UniverseStudent) =>
-  student.feedError ? `Feed failed: ${student.feedError}` : "Feed failed";
 ---
 
 <PageLayout
@@ -124,9 +121,7 @@ const feedErrorMessage = (student: UniverseStudent) =>
                   </span>
                 </>
               ) : student.feedStatus === "unavailable" ? (
-                <span class="universe-feed-error">
-                  {feedErrorMessage(student)}
-                </span>
+                <span class="universe-feed-error">{feedTitle(student)}</span>
               ) : (
                 <span>No posts found</span>
               )}

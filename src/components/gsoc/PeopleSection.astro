@@ -18,9 +18,8 @@ const { id, heading, intro, handles } = Astro.props;
   <p>{intro}</p>
   <div class="gsoc-people-grid">
     {handles.map((handle) => (
-      <div class="text-center">
+      <div>
         <img
-          class="rounded-circle"
           src={`https://avatars.githubusercontent.com/${handle}?s=160`}
           alt=""
           height="80"
