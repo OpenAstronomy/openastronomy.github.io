@@ -75,7 +75,9 @@ h5 a:hover {
   text-decoration: none;
 }
 
-.page-content li + li {
+/* Spacing for prose lists only: lists with a class are interface elements
+   (member links, the blog status key) that lay themselves out. */
+.page-content :is(ul, ol):not([class]) > li + li {
   margin-top: 4px;
 }
 
@@ -245,12 +247,6 @@ blockquote {
   display: flex;
   flex-wrap: wrap;
   gap: 4px 12px;
-}
-
-/* Spacing comes from the flex gap; the prose `li + li` margin would push
-   every link but the first one down. */
-.member-links li + li {
-  margin-top: 0;
 }
 
 .member-links a {
@@ -537,9 +533,8 @@ blockquote {
 
 .universe-table {
   width: 100%;
-  min-width: 760px;
   border-collapse: collapse;
-  /* The table scrolls sideways instead, so keep words whole. */
+  /* Keep words whole; the wrapper scrolls sideways if one does not fit. */
   overflow-wrap: normal;
 }
 
@@ -647,4 +642,52 @@ blockquote {
   background: #fff4d6;
   border-color: #e0bf62;
   color: #6b4f00;
+}
+
+/* Key to the status marks, shown above the current season's table. */
+.universe-legend {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.universe-legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* On phones each contributor becomes a stacked block, so nothing scrolls
+   sideways. Every cell reads on its own, so the column headings can go. */
+@media (max-width: 700px) {
+  .universe-table,
+  .universe-table tbody,
+  .universe-table tr,
+  .universe-table th,
+  .universe-table td {
+    display: block;
+  }
+
+  .universe-table thead {
+    display: none;
+  }
+
+  .universe-table tr {
+    padding: 12px 0;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  .universe-table tr:first-child {
+    border-top: 1px solid #dddddd;
+  }
+
+  .universe-table th,
+  .universe-table td {
+    border: 0;
+    padding: 3px 0;
+  }
 }

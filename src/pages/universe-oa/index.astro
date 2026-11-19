@@ -70,6 +70,20 @@ const feedErrorMessage = (student: UniverseStudent) =>
     <p>
       <a href="/universe-oa/archive/"> View previous seasons </a>
     </p>
+    <p>Each mark under “Blog updates” is one posting period:</p>
+    <ul class="universe-legend">
+      {Object.entries(statusGlyph).map(([status, glyph]) => (
+        <li>
+          <span
+            class={`universe-window universe-window-${status}`}
+            aria-hidden="true"
+          >
+            {glyph}
+          </span>
+          {statusLabel(status)}
+        </li>
+      ))}
+    </ul>
   </div>
 
   <div class="universe-table-wrap">
