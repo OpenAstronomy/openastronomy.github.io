@@ -2,7 +2,8 @@ version: 2.1
 jobs:
   build_website:
     docker:
-      - image: cimg/node:lts
+      # Keep on the same Node major as .nvmrc, which GitHub Actions uses.
+      - image: cimg/node:24
     steps:
       - checkout
       - run:

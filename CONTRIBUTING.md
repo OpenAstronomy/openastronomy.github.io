@@ -29,7 +29,7 @@ This project uses **two CI systems intentionally** — they serve different purp
 - **GitHub Actions** (`.github/workflows/ci.yml`) — quality gate for pull requests and pushes to `main`, and the deploy to GitHub Pages.
 - **CircleCI** (`.circleci/config.yml`) — generates a preview URL for pull requests via the CircleCI artifact viewer. It runs `npm run build` and rewrites links so the built HTML is browsable at the artifact URL. It does not run tests or linting.
 
-When changing the build command, update both CI configs. GitHub Actions reads the Node.js version from `.nvmrc`; CircleCI uses the `cimg/node:lts` image.
+When changing the build command, update both CI configs. GitHub Actions reads the Node.js version from `.nvmrc`; CircleCI uses the `cimg/node:24` image, so change both together when moving to a new Node.js major.
 
 ### GitHub Actions jobs
 
