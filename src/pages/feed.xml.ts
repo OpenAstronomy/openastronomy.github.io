@@ -10,6 +10,14 @@ const escapeXml = (value: string): string =>
     .replaceAll(">", "&gt;")
     .replaceAll('"', "&quot;");
 
+// Feed readers show a post outside this site, where a root-relative link or
+// image path (`/gsoc/`) has nothing to resolve against.
+const absoluteUrls = (html: string, base: URL | undefined) =>
+  html.replace(
+    /(href|src)="(\/[^"]*)"/g,
+    (_match, attribute, path) => `${attribute}="${new URL(path, base).href}"`,
+  );
+
 export const GET: APIRoute = async ({ site: siteUrl }) => {
   const posts = (await getCollection("posts"))
     .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
@@ -18,7 +26,7 @@ export const GET: APIRoute = async ({ site: siteUrl }) => {
     const link = new URL(`/news/${post.id}/`, siteUrl).href;
     return `    <item>
       <title>${escapeXml(post.data.title)}</title>
-      <description>${escapeXml(post.rendered?.html ?? "")}</description>
+      <description>${escapeXml(absoluteUrls(post.rendered?.html ?? "", siteUrl))}</description>
       <pubDate>${post.data.date.toUTCString()}</pubDate>
       <link>${link}</link>
       <guid isPermaLink="true">${link}</guid>
