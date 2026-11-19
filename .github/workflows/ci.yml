@@ -41,6 +41,10 @@ jobs:
         run: npm run build
       - name: Check Matrix discovery files are in the build
         run: test -f html/.well-known/matrix/server && test -f html/.well-known/matrix/client
+      # The build only warns when Google Fonts cannot be reached, and would
+      # publish the site in its fallback font.
+      - name: Check the web font is in the build
+        run: ls html/_astro/fonts/*.woff2
       - name: Check internal links and anchors
         uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
         with:

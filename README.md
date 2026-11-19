@@ -148,6 +148,11 @@ repository. If `/universe-oa/` stops updating, re-enable the CI workflow under
 The build must keep `.well-known/matrix/` (Matrix server discovery for
 `openastronomy.org`); CI fails if it is missing.
 
+The Fira Sans font files are downloaded from Google Fonts during the build
+(`fonts` in `astro.config.mjs`) and served from the site itself. If the
+download fails the build only warns and falls back to system fonts, so CI
+also fails when `html/_astro/fonts/` has no font files; re-run the job.
+
 The old Jekyll URLs that other sites link to (`/gsoc/gsoc2026/` season pages,
 the GSoC guide `*.html` pages, `/news.html`, the old post URLs and
 `/Universe_OA/`) redirect through `src/pages/[...legacy].ts`, using the frozen

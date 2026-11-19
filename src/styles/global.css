@@ -16,7 +16,7 @@
 }
 
 body {
-  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  font-family: var(--font-fira-sans);
   font-size: 1.05rem;
   color: var(--color-text);
   margin: 0;

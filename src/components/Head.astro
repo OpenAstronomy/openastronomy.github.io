@@ -1,5 +1,5 @@
 ---
-import { getImage } from "astro:assets";
+import { Font, getImage } from "astro:assets";
 import site from "../data/site.json";
 import faviconAsset from "../assets/favicon.png";
 import backgroundAp from "../assets/background/background_ap.jpg";
@@ -81,11 +81,10 @@ const publishedIso = publishedAt?.toISOString();
     href="/feed.xml"
   />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-    rel="stylesheet"
+  {/* Fira Sans, configured in astro.config.mjs; preload the body text face. */}
+  <Font
+    cssVariable="--font-fira-sans"
+    preload={[{ weight: 400, style: "normal", subset: "latin" }]}
   />
 
   <style set:html={`:root{--page-bg:url("${backgroundHref}")}`}></style>
