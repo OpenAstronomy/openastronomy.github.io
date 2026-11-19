@@ -25,16 +25,6 @@ const mentors = Array.from(new Set(projects.flatMap((p) => p.mentors))).sort(
   (a, b) => a.localeCompare(b, undefined, { sensitivity: "base" }),
 );
 const adminHandles = adminLookup[seasonKey];
-
-const sections = [
-  {
-    id: "projects",
-    label: "Projects",
-    heading: `GSoC Projects for ${seasonKey}`,
-  },
-  { id: "mentors", label: "Mentors", heading: `Mentors for ${seasonKey}` },
-  { id: "admins", label: "Admins", heading: `Admins for ${seasonKey}` },
-];
 ---
 
 <BaseLayout
@@ -43,15 +33,15 @@ const sections = [
 >
   <h1>{pageTitle}</h1>
   <nav class="gsoc-tabs" aria-label="Sections">
-    {sections.map((s) => (
-      <a href={`#${s.id}`}>{s.label}</a>
-    ))}
+    <a href="#projects">Projects</a>
+    <a href="#mentors">Mentors</a>
+    <a href="#admins">Admins</a>
   </nav>
 
   <section id="projects">
     <h2>
       <a class="gsoc-section-link" href="#projects">
-        {sections[0].heading}
+        {`GSoC Projects for ${seasonKey}`}
       </a>
     </h2>
     {projects.length === 0 ? <p>No projects listed yet.</p> : null}
@@ -64,13 +54,13 @@ const sections = [
 
   <PeopleSection
     id="mentors"
-    heading={sections[1].heading}
+    heading={`Mentors for ${seasonKey}`}
     intro={`We are the mentors for OpenAstronomy in GSoC ${seasonKey}.`}
     handles={mentors}
   />
   <PeopleSection
     id="admins"
-    heading={sections[2].heading}
+    heading={`Admins for ${seasonKey}`}
     intro="We are the admins for OpenAstronomy."
     handles={adminHandles}
   />

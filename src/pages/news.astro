@@ -1,16 +1,11 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
 import { getCollection } from "astro:content";
+import { formatDate } from "../lib/dates.ts";
 
 const posts = (await getCollection("posts")).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime(),
 );
-const dateFormatter = new Intl.DateTimeFormat("en-US", {
-  month: "short",
-  day: "numeric",
-  year: "numeric",
-  timeZone: "UTC",
-});
 ---
 
 <PageLayout
@@ -23,7 +18,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
         <h2>
           <a href={`/news/${post.id}/`}>{post.data.title}</a>
         </h2>
-        <p class="post-meta">{dateFormatter.format(post.data.date)}</p>
+        <p class="post-meta">{formatDate(post.data.date)}</p>
         {post.data.summary && <p>{post.data.summary}</p>}
       </article>
     ))}

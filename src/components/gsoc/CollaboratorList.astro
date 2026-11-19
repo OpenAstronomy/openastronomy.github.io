@@ -1,0 +1,18 @@
+---
+/* A project's collaborating projects, comma separated; members are linked. */
+import type { CollaboratorLink } from "../../lib/gsoc.ts";
+
+type Props = { collaborators: CollaboratorLink[] };
+const { collaborators } = Astro.props;
+---
+
+{collaborators.map((collaborator, index) => (
+  <>
+    {index > 0 ? ", " : ""}
+    {collaborator.href ? (
+      <a href={collaborator.href}>{collaborator.label}</a>
+    ) : (
+      collaborator.label
+    )}
+  </>
+))}

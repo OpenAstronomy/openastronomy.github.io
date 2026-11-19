@@ -1,15 +1,9 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import { formatDate } from "../lib/dates.ts";
 
 type Props = { title: string; date: Date; description?: string };
-
 const { title, date, description } = Astro.props;
-const formattedDate = new Intl.DateTimeFormat("en-US", {
-  month: "short",
-  day: "numeric",
-  year: "numeric",
-  timeZone: "UTC",
-}).format(date);
 ---
 
 <BaseLayout
@@ -21,7 +15,7 @@ const formattedDate = new Intl.DateTimeFormat("en-US", {
   <article>
     <header>
       <h1>{title}</h1>
-      <p class="post-meta">{formattedDate}</p>
+      <p class="post-meta">{formatDate(date)}</p>
     </header>
     <slot />
   </article>

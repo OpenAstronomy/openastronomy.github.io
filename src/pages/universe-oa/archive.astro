@@ -1,8 +1,7 @@
 ---
-import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import PageLayout from "../../layouts/PageLayout.astro";
-import { resolveProjectDisplay } from "../../lib/member-logos.ts";
+import ProjectLabel from "../../components/ProjectLabel.astro";
 import { getBlogUrl } from "../../lib/feeds.ts";
 import { sortSeasons } from "../../lib/universe.ts";
 
@@ -44,7 +43,6 @@ const [, ...archived] = sortSeasons(await getCollection("seasons"));
               </thead>
               <tbody>
                 {season.contributors.map((contributor) => {
-                  const project = resolveProjectDisplay(contributor.project);
                   const blogUrl = getBlogUrl(contributor.feed, []);
                   return (
                     <tr>
@@ -56,18 +54,7 @@ const [, ...archived] = sortSeasons(await getCollection("seasons"));
                         )}
                       </th>
                       <td>
-                        <span class="universe-project">
-                          {project.logo && (
-                            <Image
-                              src={project.logo}
-                              alt=""
-                              width={24}
-                              height={24}
-                              loading="lazy"
-                            />
-                          )}
-                          {project.name}
-                        </span>
+                        <ProjectLabel project={contributor.project} />
                       </td>
                       <td>
                         <a href={contributor.feed}>RSS feed</a>

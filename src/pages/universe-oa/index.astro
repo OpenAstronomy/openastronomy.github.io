@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import PageLayout from "../../layouts/PageLayout.astro";
-import { resolveProjectDisplay } from "../../lib/member-logos.ts";
+import ProjectLabel from "../../components/ProjectLabel.astro";
+import { formatDate } from "../../lib/dates.ts";
 import {
   buildUniverseSeason,
   sortSeasons,
@@ -12,13 +12,6 @@ import {
 // The newest season is the current one.
 const [current] = sortSeasons(await getCollection("seasons"));
 const season = await buildUniverseSeason(current);
-
-const dateFormatter = new Intl.DateTimeFormat("en-US", {
-  month: "short",
-  day: "numeric",
-  year: "numeric",
-  timeZone: "UTC",
-});
 
 const timeFormatter = new Intl.DateTimeFormat("en-US", {
   month: "short",
@@ -31,7 +24,7 @@ const timeFormatter = new Intl.DateTimeFormat("en-US", {
 });
 
 const formatRange = (start: Date, end: Date) =>
-  `${dateFormatter.format(start)} - ${dateFormatter.format(end)}`;
+  `${formatDate(start)} - ${formatDate(end)}`;
 
 const statusLabel = (status: string) =>
   status === "unknown"
@@ -90,72 +83,58 @@ const feedErrorMessage = (student: UniverseStudent) =>
         </tr>
       </thead>
       <tbody>
-        {season.students.map((student) => {
-          const project = resolveProjectDisplay(student.project);
-          return (
-            <tr>
-              <th scope="row">
-                {student.blogUrl ? (
-                  <a href={student.blogUrl}>{student.name}</a>
-                ) : (
-                  <span>{student.name}</span>
-                )}
-                <span
-                  class={`universe-feed universe-feed-${student.feedStatus}`}
-                  title={feedTitle(student)}
-                >
-                  {feedLabel(student)}
-                </span>
-              </th>
-              <td>
-                <span class="universe-project">
-                  {project.logo && (
-                    <Image
-                      src={project.logo}
-                      alt=""
-                      width={24}
-                      height={24}
-                      loading="lazy"
-                    />
-                  )}
-                  {project.name}
-                </span>
-              </td>
-              <td>
-                {student.posts[0] ? (
-                  <>
-                    <a href={student.posts[0].url}>{student.posts[0].title}</a>
-                    <span class="universe-date">
-                      {dateFormatter.format(student.posts[0].publishedAt)}
-                    </span>
-                  </>
-                ) : student.feedStatus === "unavailable" ? (
-                  <span class="universe-feed-error">
-                    {feedErrorMessage(student)}
+        {season.students.map((student) => (
+          <tr>
+            <th scope="row">
+              {student.blogUrl ? (
+                <a href={student.blogUrl}>{student.name}</a>
+              ) : (
+                <span>{student.name}</span>
+              )}
+              <span
+                class={`universe-feed universe-feed-${student.feedStatus}`}
+                title={feedTitle(student)}
+              >
+                {feedLabel(student)}
+              </span>
+            </th>
+            <td>
+              <ProjectLabel project={student.project} />
+            </td>
+            <td>
+              {student.posts[0] ? (
+                <>
+                  <a href={student.posts[0].url}>{student.posts[0].title}</a>
+                  <span class="universe-date">
+                    {formatDate(student.posts[0].publishedAt)}
                   </span>
-                ) : (
-                  <span>No posts found</span>
-                )}
-              </td>
-              <td>
-                <div class="universe-windows">
-                  {student.windows.map((window, index) => (
-                    <span
-                      role="img"
-                      class={`universe-window universe-window-${window.status}`}
-                      title={`${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}
-                      aria-label={`Window ${index + 1}, ${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}
-                    >
-                      <span aria-hidden="true">
-                        {statusGlyph[window.status] ?? index + 1}
-                      </span>
+                </>
+              ) : student.feedStatus === "unavailable" ? (
+                <span class="universe-feed-error">
+                  {feedErrorMessage(student)}
+                </span>
+              ) : (
+                <span>No posts found</span>
+              )}
+            </td>
+            <td>
+              <div class="universe-windows">
+                {student.windows.map((window, index) => (
+                  <span
+                    role="img"
+                    class={`universe-window universe-window-${window.status}`}
+                    title={`${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}
+                    aria-label={`Window ${index + 1}, ${formatRange(window.start, window.end)}: ${statusLabel(window.status)}`}
+                  >
+                    <span aria-hidden="true">
+                      {statusGlyph[window.status] ?? index + 1}
                     </span>
-                  ))}
-                </div>
-              </td>
-            </tr>
-          );
-        })}
+                  </span>
+                ))}
+              </div>
+            </td>
+          </tr>
+        ))}
       </tbody>
     </table>
   </div>

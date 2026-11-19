@@ -48,29 +48,24 @@ const row = (label: string, values: string[]): ProjectMetadataRow => ({
   values,
 });
 
-const filledRows = (rows: ProjectMetadataRow[]) =>
-  rows.filter((item) => item.values.length > 0);
-
-export const getProjectCardRows = (
-  project: ProjectMeta,
-): ProjectMetadataRow[] =>
-  filledRows([
-    row("Mentors", project.mentors),
-    row("Difficulty", [project.difficulty]),
-    row("Initiatives", project.initiatives),
-    row("Project size", project.projectSize),
-    row("Tags", project.tags),
-  ]);
-
+/** The labelled rows on a project's own page; empty lists are left out. */
 export const getProjectDetailRows = (
   project: ProjectMeta,
 ): ProjectMetadataRow[] =>
-  filledRows([
+  [
     row("Difficulty", [project.difficulty]),
     row("Initiatives", project.initiatives),
     row("Project size", project.projectSize),
     row("Tags", project.tags),
-  ]);
+  ].filter((item) => item.values.length > 0);
+
+/** The same rows for a season-page card, led by the mentors. */
+export const getProjectCardRows = (
+  project: ProjectMeta,
+): ProjectMetadataRow[] => [
+  row("Mentors", project.mentors),
+  ...getProjectDetailRows(project),
+];
 
 /**
  * Render-ready metadata for one entry of the `projects` collection. The

@@ -1,4 +1,5 @@
 ---
+import CollaboratorList from "./CollaboratorList.astro";
 import { getProjectCardRows, type ProjectMeta } from "../../lib/gsoc.ts";
 
 type Props = { project: ProjectMeta };
@@ -20,16 +21,7 @@ const rows = getProjectCardRows(project);
   <div class="gsoc-card-row">
     <span class="gsoc-card-label">Project:</span>{" "}
     <span>
-      {project.collaborators.map((collaborator, index) => (
-        <>
-          {index > 0 ? ", " : ""}
-          {collaborator.href ? (
-            <a href={collaborator.href}>{collaborator.label}</a>
-          ) : (
-            collaborator.label
-          )}
-        </>
-      ))}
+      <CollaboratorList collaborators={project.collaborators} />
     </span>
   </div>
 </article>

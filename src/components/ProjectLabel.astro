@@ -1,0 +1,19 @@
+---
+/*
+ * A contributor's project in the blog tables: the member's logo and name, or
+ * the raw key with no logo for a project that is not a member.
+ */
+import { Image } from "astro:assets";
+import { members } from "../lib/members.ts";
+import { memberLogoMap } from "../lib/member-logos.ts";
+
+type Props = { project: string };
+const { project } = Astro.props;
+const member = Object.hasOwn(members, project) ? members[project] : null;
+const logo = member && memberLogoMap[member.logo];
+---
+
+<span class="universe-project">
+  {logo && <Image src={logo} alt="" width={24} height={24} loading="lazy" />}
+  {member?.name ?? project}
+</span>
