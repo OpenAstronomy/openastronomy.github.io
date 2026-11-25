@@ -8,10 +8,10 @@ permalink: /gsoc/
 
 [Background on GSoC: Start Here!](./background.html)
 
-## GSoC & Open Astronomy 2026
+## GSoC & Open Astronomy 2027
 
 OpenAstronomy is an umbrella organisation which collects project ideas from any of its members.
-OpenAstronomy has been a GSOC mentoring organisation since 2016 and it's applying to participate in 2026.
+OpenAstronomy has been a GSOC mentoring organisation since 2016 and it's applying to participate in 2027.
 
 Contributors applications to OpenAstronomy projects follows the same rules as the [Python Software Foundation] and the [GSoC Contributor Guide].
 We have [also our own guide to a good application for OpenAstronomy][OpenAstronomy Contributor Guide].
@@ -26,11 +26,12 @@ All contributors blogs are collected on the [OpenAstronomy Universe] site.
 
 ## Current Project ideas offered by mentors {#current-projects}
 
-* [2026](./gsoc2026/)
+* [2027](./gsoc2027/)
 
 <!-- as provided in https://github.com/gettalong/kramdown/issues/155#issuecomment-339793629 -->
 <details markdown="1"><summary markdown='span'>Previous editions</summary>
 
+* [2026](./gsoc2026/)
 * [2025](./gsoc2025/)
 * [2024](./gsoc2024/)
 * [2023](./gsoc2023/)
